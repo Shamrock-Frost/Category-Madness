@@ -1,0 +1,25 @@
+\title{D-UP-06 · Witness discipline}
+\taxon{Decision}
+\meta{id}{D-UP-06}
+\meta{area}{universal properties}
+\meta{origin}{design/03-universal-properties.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:up}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Theorems about universal objects quantify over witnesses: \code{∀ (L : Limit F), …}. \code{Classical.choose} appears only in the bridge lemmas \code{Nonempty (Limit F) → Limit F} and in choosing \em{sections} of the trivial fibrations of \ref{dec-up-0001} (global lifts, functorial \code{cosk_n}, coherent families of limits over a diagram of diagrams); both live in one file. No \code{limit F} constant exists. Any construction \code{Φ} that takes a witness must come with its functoriality in the witness (a map between the contractible witness spaces induces a canonical equivalence \code{Φ L ≃ Φ L'}), and the \code{witness_transport} tactic (→ \ref{dec-tl-0004}) discharges the routine cases.}
+}
+\subtree{
+  \title{Rationale}
+  \p{→ \ref{dec-ch-0002}. The functoriality requirement is the categorical replacement for definitional uniqueness; choosing sections rather than points is what makes chosen lifts coherent along diagrams without any coherence bookkeeping.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen.}
+}

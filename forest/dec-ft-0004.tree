@@ -1,0 +1,25 @@
+\title{D-FT-04 · The set-level track in \code{hP}}
+\taxon{Decision}
+\meta{id}{D-FT-04}
+\meta{area}{formal theory}
+\meta{origin}{design/04-formal-theory.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen at M5.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:ft}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{\code{hP} (→ \ref{dec-rt-0005}) is an augmented virtual equipment when \code{P} is (\ref{at-ft-0008}). Riehl–Verity-style arguments — proofs in the homotopy 2-category and in the set-level equipment of modules — are carried out in \code{hP} and lifted to \code{P} by truncation lemmas where the ∞-statement is a \code{π₀}-statement. This is the cheap track: many (∞,1)-theorems (adjunctions, absolute liftings, limits as absolute liftings) are set-level statements about \code{hP}.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Coherence lives in \code{P}; the formal layer is set-level. Banking these results early is low-risk and validates \ref{dec-ft-0003} before the coherent versions are built.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen at \ref{ms-0005}.}
+}

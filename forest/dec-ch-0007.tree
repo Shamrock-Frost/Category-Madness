@@ -1,0 +1,21 @@
+\title{D-CH-07 · Layering}
+\taxon{Decision}
+\meta{id}{D-CH-07}
+\meta{area}{charter}
+\meta{origin}{design/00-charter.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:ch}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Agent-native artifacts (Lean sources, generated forest nodes, acceptance tests, decision registry) are primary. Human-facing documentation and human-facing APIs (notation, \code{abbrev} wrappers, prose) are generated layers over them and are never hand-maintained against the primary. What "agent-native" means is deliberately left undefined (→ \ref{dec-tl-0001}).}
+}
+\subtree{
+  \title{Status}
+  \p{frozen.}
+}

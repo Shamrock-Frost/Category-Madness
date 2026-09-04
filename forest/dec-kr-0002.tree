@@ -1,0 +1,25 @@
+\title{D-KR-02 · Mathlib inventory (M0 task, AT-KR-0)}
+\taxon{Decision}
+\meta{id}{D-KR-02}
+\meta{area}{kernel}
+\meta{origin}{design/01-kernel.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:kr}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Before \ref{ms-0001}, produce a verified inventory of what Mathlib (pinned version) provides, with exact names. Expected candidates, none assumed: \code{CategoryTheory.{Category, Functor, NatTrans, Limits, Comma, Grothendieck, MorphismProperty}}, lifting properties and the small object argument (Riou), \code{SimplexCategory}, \code{SimplicialObject}, \code{SSet} with \code{boundary}/\code{horn}, \code{SSet.KanComplex}, \code{Nerve}, truncations and skeleta, \code{Quasicategory}, joins/slices if present, any Kan–Quillen model structure material, \code{Fin} combinatorics and \code{omega}. Record for each: name, statement as we need it, gaps. The inventory is a forest node and is updated at each Mathlib bump.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Every earlier plan in this design assumed Mathlib content that had to be hedged. The inventory converts hedges into tasks.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen.}
+}

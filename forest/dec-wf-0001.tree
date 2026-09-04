@@ -1,0 +1,35 @@
+\title{D-WF-01 · Generated nodes}
+\taxon{Decision}
+\meta{id}{D-WF-01}
+\meta{area}{forest and workflow}
+\meta{origin}{design/07-forest-workflow.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen (fields provisional).}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:wf}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{A Lean program (\code{lake exe forest-export}) walks the environment for every module under \code{Kernel/}, \code{Root/}, \code{Interface/}, \code{Theory/} and emits one \code{.tree} per non-private declaration into \code{build/forest/} (gitignored, rebuilt in CI). Each node has:}
+  \ul{
+    \li{title: fully qualified name; taxon from the declaration kind (\code{Definition}, \code{Theorem}, \code{Lemma}, \code{Structure}, \code{Class}, \code{Instance}, \code{Opaque});}
+    \li{the statement (pretty-printed signature in a code block) and the docstring;}
+    \li{status: \code{proved} / \code{sorry} (from \code{collectAxioms}), plus \code{sealed} if in \code{Interface/}, \code{kernel} if in \code{Kernel/};}
+    \li{dependencies: nodes for each constant used in the type and, for theorems, in the proof (from \code{Expr.getUsedConstants}), split into "in statement" and "in proof";}
+    \li{dependents (reverse index, computed after the walk);}
+    \li{source link with line range (from \code{declaration_ranges});}
+    \li{the decisions it cites (from a \code{@[decision D-RT-03]}-style attribute or a docstring tag).}
+  }
+  \p{Addresses are deterministic from the name (hash-suffixed) so links survive renames of the file layout but not of the declaration.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Agents will navigate by dependency and status, not by file. Humans will read prose that transcludes these.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen (fields provisional).}
+}

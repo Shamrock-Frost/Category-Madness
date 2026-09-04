@@ -1,0 +1,13 @@
+\title{AT-FT-4 · With composites, an equipment is a Ruit ∞-equipment}
+\taxon{Acceptance test}
+\meta{id}{AT-FT-4}
+\meta{area}{formal theory}
+\meta{origin}{design/04-formal-theory.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:ft}
+\tag{status:unstated}
+
+\p{With composites, an equipment is a Ruit ∞-equipment.}
+\p{Named by: \ref{dec-ft-0002}.}
+\p{\em{Lean declaration(s):} none yet.}

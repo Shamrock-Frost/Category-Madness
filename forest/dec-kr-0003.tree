@@ -1,0 +1,41 @@
+\title{D-KR-03 · One recipe: monads with arities}
+\taxon{Decision}
+\meta{id}{D-KR-03}
+\meta{area}{kernel}
+\meta{origin}{design/01-kernel.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen for Δ, Ω_p, Θ^aug_fc; provisional for Ω (pending the BMW check).}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:kr}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Shape categories are defined uniformly as Weber's \code{Θ_T}: for a monad \code{T} with arities (Berger–Melliès–Weber) on a presheaf category \code{PSh(G)}, \code{Θ_T} is the full subcategory of \code{T}-algebras on the free algebras \code{T(E_t)} over the arities \code{E_t} (equivalently, the full subcategory of the Kleisli category on the arities). Weber's generic/free factorization on \code{Θ_T} is the active/inert factorization; the elementary objects are the free algebras on the representables of \code{G}. The nerve theorem (BMW) is formalized \strong{once}: the nerve \code{T-Alg → PSh(Θ_T)} is fully faithful, with essential image the presheaves satisfying the Segal condition (→ \ref{dec-kr-0004}). Each shape's nerve theorem is an instance.}
+  \table{
+    \tr{\th{Shape}\th{\code{G} (generating shapes)}\th{\code{T}}\th{Expected \code{Θ_T}}}
+    \tr{\td{Δ}\td{graphs (vertex, edge)}\td{free category}\td{Δ (identified with \code{SimplexCategory}, \ref{at-kr-0001})}}
+    \tr{\td{Ω_p}\td{planar multigraphs}\td{free planar (non-symmetric) coloured operad}\td{planar dendroidal category (Moerdijk–Weiss \code{Ω_p})}}
+    \tr{\td{Ω}\td{symmetric multigraphs}\td{free symmetric coloured operad}\td{dendroidal category \code{Ω} \strong{(verify BMW applies; fallback: Moerdijk–Weiss's definition directly)}}}
+    \tr{\td{Θ^aug_fc}\td{double graphs \code{G_fc}}\td{free augmented VDC}\td{trees with vertical sides (\ref{dec-kr-0006})}}
+    \tr{\td{Θ_n}\td{—}\td{—}\td{defined by Berger's wreath product \code{Δ ≀ Θ_{n−1}} (→ \ref{dec-kr-0008}); identification with \code{Θ_T} for the free strict \code{n}-category monad is optional}}
+  }
+}
+\subtree{
+  \title{Rationale}
+  \p{One theorem, five shapes. The recipe also fixes \em{what the shapes are} without any tree combinatorics being taken on faith: the explicit tree descriptions are theorems (\ref{at-kr-0003}), needed for Reedy structures but not for correctness.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Ad hoc inductive tree categories as definitions. Rejected as definitions, retained as presentations.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-kr-0001} (Δ ≅ \code{SimplexCategory}), \ref{at-kr-0002} (BMW nerve theorem, general), \ref{at-kr-0003} (explicit presentations), \ref{at-kr-0004} (\code{Θ_1 ≅ Δ}, \code{Θ_2 ≅ Δ ≀ Δ}).}
+}
+\subtree{
+  \title{Status}
+  \p{frozen for Δ, Ω_p, Θ^aug_fc; provisional for Ω (pending the BMW check).}
+}

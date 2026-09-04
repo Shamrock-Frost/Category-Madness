@@ -1,0 +1,12 @@
+\title{OQ-UP-1}
+\taxon{Open question}
+\meta{id}{OQ-UP-1}
+\meta{area}{universal properties}
+\meta{origin}{design/03-universal-properties.md}
+\meta{status}{open}
+\tag{open-question}
+\tag{area:up}
+\tag{status:open}
+
+\p{Comma shapes: use the simplicial join throughout, or a dedicated comma shape in the kernel? Default: join.}
+\p{\em{Resolution:} open. Decided by the human; record the answer as a decision node that this node then cites.}

@@ -1,0 +1,25 @@
+\title{D-RT-11 · Discrete embedding and the self-hosting theorem}
+\taxon{Decision}
+\meta{id}{D-RT-11}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen at M3.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:rt}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{A set-level augmented VDC \code{V} (kernel) has a nerve \code{N V : Θᵒᵖ → Set ⊂ sSet} (→ \ref{at-kr-0008}); \code{N V} is a discrete VDC∞ (\ref{at-rt-0003}). Conversely a VDC∞ whose values are discrete is \code{N} of its \code{hP}. \strong{Self-hosting theorem (\ref{at-rt-0001}):} this is an equivalence between the kernel's category of augmented VDCs and the full subcategory of discrete VDC∞s, under which \code{Category A} (\ref{dec-rt-0010}) corresponds to Mathlib's \code{Category A} up to the evident equivalence. After the seal, "set-level VDC" \em{means} "discrete VDC∞", and the kernel's definition is invisible.}
+}
+\subtree{
+  \title{Rationale}
+  \p{This is the theorem that licenses hiding the kernel: everything the kernel knew about set-level structures is recoverable from the root.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen at \ref{ms-0003}.}
+}

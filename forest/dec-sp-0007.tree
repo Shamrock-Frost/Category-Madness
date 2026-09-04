@@ -1,0 +1,21 @@
+\title{D-SP-07 · General E1 enrichment (later)}
+\taxon{Decision}
+\meta{id}{D-SP-07}
+\meta{area}{spaces and enrichment}
+\meta{origin}{design/05-spaces-enrichment.md}
+\meta{status}{later}
+\meta{status-text}{later (M7).}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:sp}
+\tag{status:later}
+
+\subtree{
+  \title{Decision}
+  \p{An E1-monoidal Segal category is a Segal presheaf on Δ (unlabelled, one object) valued in Segal categories; \code{Mat(V)} for such \code{V} has cells as maps out of unbiased tensors; Gepner–Haugseng's comparison is the acceptance test.}
+}
+\subtree{
+  \title{Status}
+  \p{later (\ref{ms-0007}).}
+}

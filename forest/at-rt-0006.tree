@@ -1,0 +1,13 @@
+\title{AT-RT-6 · \code{Map} independent of the replacement}
+\taxon{Acceptance test}
+\meta{id}{AT-RT-6}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:rt}
+\tag{status:unstated}
+
+\p{\code{Map} independent of the replacement; discrete case.}
+\p{Named by: \ref{dec-rt-0008}.}
+\p{\em{Lean declaration(s):} none yet.}

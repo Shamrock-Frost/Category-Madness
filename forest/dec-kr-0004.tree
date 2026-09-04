@@ -1,0 +1,29 @@
+\title{D-KR-04 · Patterns and Segal cores}
+\taxon{Decision}
+\meta{id}{D-KR-04}
+\meta{area}{kernel}
+\meta{origin}{design/01-kernel.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:kr}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Every shape category carries an \em{algebraic pattern} structure in the sense of Chu–Haugseng: an inert/active factorization system (\code{Θ⁻} degeneracies are separate, see \ref{dec-kr-0005}) and a class of elementary objects. For a shape \code{θ}, the Segal core \code{Sc(θ)} is the diagram of elementary inert sub-shapes of \code{θ}. A presheaf \code{P} (in sets or in \code{sSet}) satisfies the \strong{Segal condition} at \code{θ} when the canonical map \code{P(θ) → lim_{Sc(θ)} P} is an isomorphism (sets) or a homotopy equivalence (spaces, → \ref{dec-rt-0001} for the precise form). For \code{Θ_T} the inert maps are Weber's free maps and the Segal core is the canonical presentation of the arity \code{E_t} as a colimit of representables.}
+}
+\subtree{
+  \title{Rationale}
+  \p{This is exactly the hypothesis of the BMW nerve theorem in the discrete case and of Chu–Haugseng's Segal-space machinery in the homotopical case; using their vocabulary keeps our comparisons honest.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-kr-0005}: for Δ, inert = interval inclusions, active = endpoint-preserving, elementary = \code{[0],[1]}, and the Segal condition is the usual one.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen.}
+}

@@ -1,0 +1,13 @@
+\title{AT-SP-4 · \code{Span(S)} is a VDC∞, fibrant when \code{S} is}
+\taxon{Acceptance test}
+\meta{id}{AT-SP-4}
+\meta{area}{spaces and enrichment}
+\meta{origin}{design/05-spaces-enrichment.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:sp}
+\tag{status:unstated}
+
+\p{\code{Span(S)} is a VDC∞, fibrant when \code{S} is.}
+\p{Named by: \ref{dec-sp-0005}.}
+\p{\em{Lean declaration(s):} none yet.}

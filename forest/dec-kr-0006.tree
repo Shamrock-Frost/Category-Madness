@@ -1,0 +1,29 @@
+\title{D-KR-06 · \code{G_fc} and \code{Θ^aug_fc}}
+\taxon{Decision}
+\meta{id}{D-KR-06}
+\meta{area}{kernel}
+\meta{origin}{design/01-kernel.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen (the exact list of incidence relations is provisional until formalized).}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:kr}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{The category of double graphs is \code{PSh(G_fc)} where \code{G_fc} has objects \code{pt}, \code{v} (vertical edge), \code{h} (horizontal edge), \code{c_n} (cell with \code{n ≥ 0} inputs and one output), \code{c_n^∅} (cell with \code{n ≥ 0} inputs and empty output, the augmented cells), and generating maps \code{s,t : pt → v}, \code{s,t : pt → h}, \code{in_i : h → c_n} (\code{1 ≤ i ≤ n}), \code{out : h → c_n}, \code{l, r : v → c_n} (left and right sides), the same for \code{c_n^∅} without \code{out}, subject to the incidence relations (input \code{i} ends where input \code{i+1} starts; the left side runs from the start of input 1 to the start of the output; the right side from the end of input \code{n} to the end of the output; for \code{n = 0} the single input object is shared by both sides; for \code{c_n^∅} both sides end at the same object). A set-level augmented VDC is a double graph with vertical composition of vertical edges, multicategorical composition of cells (including Koudenburg's rule for cells with empty target), unit vertical edges, unit cells, and the associativity/unit laws. The free augmented VDC on a double graph is constructed explicitly (cells are planar trees of generating cells with vertical paths along the sides, modulo unit laws). \code{Θ^aug_fc := Θ_T} for this \code{T}. Expected description (\ref{at-kr-0003}): objects are vertical paths, horizontal paths, and planar trees of cells with vertical sides; faces are sub-shape inclusions and composite-selecting maps; degeneracies collapse a cell to a unit cell of its input/output or a vertical edge to an identity.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Cells have ordered inputs and one (or no) output, so the shapes are planar trees; vertical composition is grafting along the root. This is the honest shape category behind "virtual double"; the simplicial encoding of style A is avoided.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-kr-0008}: the nerve theorem for augmented VDCs is an instance of \ref{at-kr-0002} and its essential image is characterized by the Segal condition of \ref{dec-kr-0004}.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen (the exact list of incidence relations is provisional until formalized).}
+}

@@ -1,0 +1,21 @@
+\title{D-WF-03 · Acceptance-test nodes}
+\taxon{Decision}
+\meta{id}{D-WF-03}
+\meta{area}{forest and workflow}
+\meta{origin}{design/07-forest-workflow.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:wf}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Every \code{AT-<AREA>-<n>} becomes a tree with the informal statement, the Lean declaration(s) once stated, and a status derived from \ref{dec-wf-0001} (\code{unstated} / \code{stated} / \code{proved}). A definition-level decision is \code{validated} when all its acceptance tests are \code{proved}; the registry shows this.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen.}
+}

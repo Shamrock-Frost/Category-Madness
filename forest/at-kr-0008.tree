@@ -1,0 +1,13 @@
+\title{AT-KR-8 · Nerve theorem for augmented VDCs with Segal characterization}
+\taxon{Acceptance test}
+\meta{id}{AT-KR-8}
+\meta{area}{kernel}
+\meta{origin}{design/01-kernel.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:kr}
+\tag{status:unstated}
+
+\p{Nerve theorem for augmented VDCs with Segal characterization.}
+\p{Named by: \ref{dec-kr-0006}, \ref{dec-rt-0011}.}
+\p{\em{Lean declaration(s):} none yet.}

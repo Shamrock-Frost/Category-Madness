@@ -1,0 +1,12 @@
+\title{OQ-UP-2}
+\taxon{Open question}
+\meta{id}{OQ-UP-2}
+\meta{area}{universal properties}
+\meta{origin}{design/03-universal-properties.md}
+\meta{status}{open}
+\tag{open-question}
+\tag{area:up}
+\tag{status:open}
+
+\p{Do we want \code{HasLimitsOfShape J C} as a Prop-class for instance search, or always explicit hypotheses? Default: Prop-classes are allowed (they are propositions), never data-classes.}
+\p{\em{Resolution:} open. Decided by the human; record the answer as a decision node that this node then cites.}

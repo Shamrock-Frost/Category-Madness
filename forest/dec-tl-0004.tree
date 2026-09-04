@@ -1,0 +1,21 @@
+\title{D-TL-04 · \code{witness_transport}}
+\taxon{Decision}
+\meta{id}{D-TL-04}
+\meta{area}{tooling}
+\meta{origin}{design/06-tooling.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen (existence), provisional (interface).}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:tl}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{A tactic that, given a goal mentioning a witness \code{L : Limit F} (or any \code{Terminal K}) and a second witness \code{L'}, rewrites along the canonical equivalence \code{L ≃ L'} using the functoriality lemmas registered by the \code{@[witness_functorial]} attribute (→ \ref{dec-up-0006}). Failure is loud: if no functoriality lemma is registered for a construction, the tactic reports which one is missing.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen (existence), provisional (interface).}
+}

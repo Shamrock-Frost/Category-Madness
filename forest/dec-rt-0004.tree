@@ -1,0 +1,21 @@
+\title{D-RT-04 · Vertical and horizontal parts}
+\taxon{Decision}
+\meta{id}{D-RT-04}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen at M3.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:rt}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{\code{Vert P} is the Segal category with object set \code{X} obtained by restricting \code{P} to the vertical-path shapes (the copy of \code{Δ_X} inside \code{Θ}); it is an ∞-category in the sense of → \ref{dec-sp-0004} and is the "underlying ∞-category of objects and functors". For \code{x, y : X}, \code{Hor P (x,y)} is the space \code{P(h(x,y))} of horizontal morphisms, and unary cells with identity vertical boundary give the Segal category \code{Hor P} fibred over \code{X × X}.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen at \ref{ms-0003}.}
+}

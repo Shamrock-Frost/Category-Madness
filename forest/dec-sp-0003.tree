@@ -1,0 +1,21 @@
+\title{D-SP-03 · Enrichment over cartesian \code{V}}
+\taxon{Decision}
+\meta{id}{D-SP-03}
+\meta{area}{spaces and enrichment}
+\meta{origin}{design/05-spaces-enrichment.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:sp}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Before general monoidal enrichment, only \em{cartesian} value categories are supported: \code{V = Set} (discrete) and \code{V = Kan}. Cells in \code{Mat(V)} are families of maps out of products. General E1-monoidal \code{V} is → \ref{dec-sp-0007}.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen.}
+}

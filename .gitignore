@@ -1,0 +1,18 @@
+# Lean / Lake
+.lake/
+*.olean
+*.ilean
+*.trace
+*.hash
+
+# Forest build artifacts (D-WF-01: build/forest/ is rebuilt in CI, never checked in)
+build/
+output/
+forest/.forester-cache/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+__pycache__/
+*.pyc

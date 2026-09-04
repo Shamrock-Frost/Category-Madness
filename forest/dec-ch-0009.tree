@@ -1,0 +1,25 @@
+\title{D-CH-09 · Hard seal}
+\taxon{Decision}
+\meta{id}{D-CH-09}
+\meta{area}{charter}
+\meta{origin}{design/00-charter.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:ch}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{CI rejects any file under \code{Theory/} importing \code{Mathlib.CategoryTheory.*}, \code{Mathlib.AlgebraicTopology.*}, \code{Kernel.*}, or \code{Root.*}. Anything needed is copied or ported into \code{Interface/} through the seal mechanism (→ \ref{dec-rt-0013}). Mathlib \em{tactics} (\code{Mathlib.Tactic.*}, \code{Aesop}, \code{omega}, \code{decide}, \code{positivity}, etc.) are allowed everywhere.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Tactics are not definitions; they cannot leak defeq about our objects except through unfolding, which the linter forbids independently.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen.}
+}

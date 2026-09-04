@@ -1,0 +1,13 @@
+\title{AT-FT-1 · Discrete case of D-FT-01 and D-FT-03 is Koudenburg / Cruttwell–Shulman}
+\taxon{Acceptance test}
+\meta{id}{AT-FT-1}
+\meta{area}{formal theory}
+\meta{origin}{design/04-formal-theory.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:ft}
+\tag{status:unstated}
+
+\p{Discrete case of \ref{dec-ft-0001} and \ref{dec-ft-0003} is Koudenburg / Cruttwell–Shulman.}
+\p{Named by: \ref{dec-ft-0001}, \ref{dec-ft-0003}.}
+\p{\em{Lean declaration(s):} none yet.}

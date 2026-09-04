@@ -1,0 +1,51 @@
+\title{01 · Kernel (stage 0)}
+\taxon{Chapter}
+\meta{origin}{design/01-kernel.md}
+\meta{layer}{human}
+\tag{chapter}
+
+\p{The kernel builds the combinatorial raw material — shape categories, presheaves, simplicial sets, Kan machinery — on top of Mathlib. It is scaffolding: defeq is allowed, Mathlib's \code{CategoryTheory} is used freely, and nothing here is visible past the seal. The kernel is judged only by whether \code{Root/} can be built on it and whether the acceptance tests below are proved.}
+\subtree{
+  \title{Rules}
+
+  \transclude{dec-kr-0001}
+  \transclude{dec-kr-0002}
+}
+\subtree{
+  \title{Shapes}
+
+  \transclude{dec-kr-0003}
+  \transclude{dec-kr-0004}
+  \transclude{dec-kr-0005}
+  \transclude{dec-kr-0006}
+  \transclude{dec-kr-0007}
+  \transclude{dec-kr-0008}
+  \transclude{dec-kr-0009}
+}
+\subtree{
+  \title{Kan machinery}
+
+  \transclude{dec-kr-0010}
+  \transclude{dec-kr-0011}
+}
+\subtree{
+  \title{Acceptance tests (summary)}
+  \transclude{at-kr-0000}
+  \transclude{at-kr-0001}
+  \transclude{at-kr-0002}
+  \transclude{at-kr-0003}
+  \transclude{at-kr-0004}
+  \transclude{at-kr-0005}
+  \transclude{at-kr-0006}
+  \transclude{at-kr-0007}
+  \transclude{at-kr-0008}
+  \transclude{at-kr-0009}
+  \transclude{at-kr-0010}
+  \transclude{at-kr-0011}
+}
+\subtree{
+  \title{Open questions}
+  \transclude{oq-kr-0001}
+  \transclude{oq-kr-0002}
+  \transclude{oq-kr-0003}
+}

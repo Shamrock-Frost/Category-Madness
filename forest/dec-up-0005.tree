@@ -1,0 +1,25 @@
+\title{D-UP-05 · Duality}
+\taxon{Decision}
+\meta{id}{D-UP-05}
+\meta{area}{universal properties}
+\meta{origin}{design/03-universal-properties.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen (scope clause provisional).}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:up}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Within Segal categories (this document), colimits, initial objects, left Kan extensions, left adjoints are obtained by the \code{to_dual} attribute (→ \ref{dec-tl-0003}), which acts by \code{op} on shapes and on the ambient Segal category. No dual notion at this layer is defined by hand. Scope: \code{to_dual} is total on Segal categories and on the \em{horizontal} op of VDC∞s (reversal of inputs); the vertical op is not available for augmented VDC∞s (nullary-target cells have no nullary-source dual) and transpose is not available for virtual ones, so in → \ref{ft-0000} some dual statements will be proved by hand and the attribute records that they are duals rather than generating them. \code{Cᵒᵖᵒᵖ ≃ C} is an equivalence, never an identity, past the seal; \code{to_dual}'s transport lemmas along it are part of the attribute's output.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-up-0005}: \code{to_dual} of \code{Limit} is a colimit in the classical sense for discrete \code{C}.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen (scope clause provisional).}
+}

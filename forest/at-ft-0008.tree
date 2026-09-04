@@ -1,0 +1,13 @@
+\title{AT-FT-8 · \code{hP} is an augmented virtual equipment}
+\taxon{Acceptance test}
+\meta{id}{AT-FT-8}
+\meta{area}{formal theory}
+\meta{origin}{design/04-formal-theory.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:ft}
+\tag{status:unstated}
+
+\p{\code{hP} is an augmented virtual equipment.}
+\p{Named by: \ref{dec-ft-0004}.}
+\p{\em{Lean declaration(s):} none yet.}

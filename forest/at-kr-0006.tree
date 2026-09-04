@@ -1,0 +1,13 @@
+\title{AT-KR-6 · Elegance of Δ, Ω_p, Θ^aug_fc}
+\taxon{Acceptance test}
+\meta{id}{AT-KR-6}
+\meta{area}{kernel}
+\meta{origin}{design/01-kernel.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:kr}
+\tag{status:unstated}
+
+\p{Elegance of Δ, Ω_p, Θ^aug_fc.}
+\p{Named by: \ref{dec-kr-0005}.}
+\p{\em{Lean declaration(s):} none yet.}

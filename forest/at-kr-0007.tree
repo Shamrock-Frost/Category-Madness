@@ -1,0 +1,13 @@
+\title{AT-KR-7 · Ω is EZ generalized Reedy}
+\taxon{Acceptance test}
+\meta{id}{AT-KR-7}
+\meta{area}{kernel}
+\meta{origin}{design/01-kernel.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:kr}
+\tag{status:unstated}
+
+\p{Ω is EZ generalized Reedy.}
+\p{Named by: \ref{dec-kr-0005}.}
+\p{\em{Lean declaration(s):} none yet.}

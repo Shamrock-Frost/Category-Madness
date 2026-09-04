@@ -1,0 +1,33 @@
+\title{10 · Adversarial review (phase −1) and disposition}
+\taxon{Chapter}
+\meta{origin}{design/10-adversarial-review.md}
+\meta{layer}{human}
+\tag{chapter}
+
+\p{A record of the adversarial pass on the VDC∞ design and what changed because of it. Kept because the \em{rejected framings} are the part agents will otherwise re-derive. Each item: what the library will want, why the design as first drafted made it hard, disposition.}
+\subtree{
+  \title{Reframing that governs the whole list}
+  \p{The first draft of item 1 said an ∞-category modelled as a point of \code{Map(N Mnd, R(Mat Kan))} was "uncomputable". That conflated \em{cannot unfold} (true and intended, → \ref{dec-ch-0001}) with \em{cannot work with} (false if the interface is right). Nobody writes down a simplex of \code{Fun(Δ[n], N(Kan))} either; quasi-category theory is usable because its interface — horn filling, \code{Fun}, joins, mapping spaces — is closed under the constructions it uses, and rectification theorems populate it from strict models. The corrected criterion is → \ref{dec-ch-0013}: fibrancy exported as a property, closure theorems for every exported construction, rectification. Items below are read through that lens.}
+}
+\subtree{
+  \title{Items}
+  \ol{
+    \li{\strong{Usable ∞-categories.} Want: to write down and compute with an ∞-category through its interface. Cost: closure and rectification theorems, not a design change. Disposition: \ref{dec-ch-0013} (new); \ref{dec-rt-0007} and \ref{dec-rt-0013} amended (fibrancy exported, closure package in Interface v1, two-tier extension); \ref{dec-sp-0002}/04 amended (fibrant \code{Kan}, \code{Mat(Kan)}; rectification \ref{at-sp-0008}; construction route is \ref{oq-sp-0003}).}
+    \li{\strong{The 2-category \code{Cat}.} Want: natural transformations, lax notions. Problem: \code{Vert} restricts to vertical paths and forgets cells. Disposition: \ref{dec-up-0009} rewritten; (∞,1)-universal properties in \code{Vert} scoped to products/exponentials/cotensors; lax notions go to the equipment; \ref{at-up-0008}.}
+    \li{\strong{Large objects, small homs.} Want: \code{Set}, \code{Kan}, \code{Cat} as objects. Problem: single universe at the root. Disposition: \ref{dec-rt-0012} rewritten; label and value universes independent; \code{Category.{u,v}}.}
+    \li{\strong{Coherent lifts.} Want: lifts along diagrams, functorial \code{cosk₀}. Problem: pointwise contractibility gives points, not sections. Disposition: \ref{dec-up-0001} and \ref{dec-up-0006} amended; trivial-fibration form; \code{Classical.choose} on sections.}
+    \li{\strong{Colimits in \code{Kan}.} Want: \code{PSh(C)} cocomplete, coends, composites, \code{SymSeq}. Problem: unscheduled mountain. Disposition: \ref{dec-sp-0008} names it (\ref{at-sp-0012}), Simpson's route, \ref{ms-0006}, risk register.}
+    \li{\strong{\code{Span(S)}.} Want: internal categories, Segal spaces. Problem: compatible choices of pullbacks. Disposition: \ref{dec-sp-0005} rewritten via \code{Tw(θ)} shapes (Barwick, Haugseng); \ref{dec-kr-0008} amended.}
+    \li{\strong{Invariance.} Want: DK-invariance of every construction. Problem: nothing invariant by construction in a strict-model design. Disposition: folded into \ref{dec-ch-0013} (b); every exported construction ships an invariance theorem; a constraint on definitions in 02–05.}
+    \li{\strong{Duality.} Want: \code{to_dual} everywhere. Problem: vertical op broken by augmentation, transpose unavailable for virtual, \code{Cᵒᵖᵒᵖ ≃ C} never \code{rfl}. Disposition: \ref{dec-up-0005} scoped; hand-proved duals recorded by the attribute rather than generated.}
+    \li{\strong{Interface growth.} Want: kernel facts as API after \ref{ms-0003}. Problem: every lemma a decision makes the human the bottleneck. Disposition: two-tier extension policy in \ref{dec-rt-0013}; closure package in \ref{dec-kr-0010}.}
+    \li{\strong{Symmetric structures.} Want: symmetric operads, \code{E_n}, symmetric monoidal ∞-categories. First-draft problem: "E1-only excludes them." Corrected: symmetric operads are monoids in symmetric sequences under the (non-symmetric) composition product, an E1 notion; \code{E_1}/\code{E_2}/\code{E_∞} are the contractible monoids in non-symmetric/braided/symmetric sequences; \code{E_n} (\code{3 ≤ n < ∞}) via Berger's complete-graph operads. What is \em{not} viable: \code{E_n} (\code{n ≥ 2}) as non-symmetric operads — forgetting equivariance turns \code{E_∞} into \code{E_1} and \code{E_2} into \code{E_1} plus pure-braid actions; the braiding is the equivariance. Disposition: \ref{dec-sp-0009} (new); \ref{dec-ch-0005} note; \ref{ms-0007}.}
+    \li{\strong{Augmentation at ∞.} Want: Koudenburg's formal theory at ∞. Problem: nullary-target cells have no output face; elegance and Segal cores of \code{Θ^aug_fc} are new. Disposition: unchanged (already \ref{at-kr-0006} with generalized-Reedy fallback in the risk register).}
+    \li{\strong{Inverting DK-equivalences.} Want: canonical inverses. Problem: discrete object sets, Bergner's cylinder nontrivial. Disposition: an interface theorem once fibrancy is exported (\ref{dec-ch-0013}); \ref{at-rt-0005} extended at \ref{ms-0006}.}
+    \li{\strong{Strict layer.} Want: strict ω-categories, computads. Problem: nothing strict past the seal. Disposition: recorded as a non-goal in the charter.}
+  }
+}
+\subtree{
+  \title{What could still sink it}
+  \p{Items 1 and 5. Item 1 is now a checklist (the closure and rectification theorems of \ref{dec-rt-0013} and \ref{dec-ch-0013}) that can be verified at \ref{ms-0003} and \ref{ms-0006}. Item 5 is a scheduled theorem with a named route and a fallback.}
+}

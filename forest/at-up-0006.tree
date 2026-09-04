@@ -1,0 +1,13 @@
+\title{AT-UP-6 · Čech nerve}
+\taxon{Acceptance test}
+\meta{id}{AT-UP-6}
+\meta{area}{universal properties}
+\meta{origin}{design/03-universal-properties.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:up}
+\tag{status:unstated}
+
+\p{Čech nerve: the Čech nerve of \code{f : x → s} is \code{cosk₀} in augmented simplicial objects over \code{s}; its \code{n}-th term is a limit over the appropriate shape; it exists when the relevant limits do; it is unique up to contractible choice; it is functorial in \code{f} (→ \ref{dec-up-0007})}
+\p{Named by: \ref{dec-up-0007}.}
+\p{\em{Lean declaration(s):} none yet.}

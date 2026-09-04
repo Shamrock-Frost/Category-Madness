@@ -1,0 +1,21 @@
+\title{D-RT-07 · Fibrant objects and replacement}
+\taxon{Decision}
+\meta{id}{D-RT-07}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen at M3.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:rt}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{\code{P} is \em{fibrant} when it is Reedy fibrant for the elegant Reedy structure on \code{Θ} (→ \ref{dec-kr-0005}). Theorem (from → \ref{dec-kr-0011}): every VDC∞ admits a fibrant replacement \code{P → RP}, a DK-equivalence that is the identity on labels. A fibrant replacement is a witness (→ \ref{dec-ch-0002}): theorems never depend on which one. Fibrancy is an \em{exported property}: standard objects (\code{Mat Set}, later \code{Mat Kan}, \code{Mod} of fibrant objects, slices, functor objects) are exported together with proofs that they are fibrant, so that \code{R} is invoked in \code{Theory/} only for user-built objects. Whether a standard object is fibrant by construction or by replacement in the kernel is invisible past the seal (→ \ref{dec-ch-0013}, \ref{oq-sp-0003}).}
+}
+\subtree{
+  \title{Status}
+  \p{frozen at \ref{ms-0003}.}
+}

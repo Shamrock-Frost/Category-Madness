@@ -1,0 +1,21 @@
+\title{D-UP-02 · Diagrams}
+\taxon{Decision}
+\meta{id}{D-UP-02}
+\meta{area}{universal properties}
+\meta{origin}{design/03-universal-properties.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:up}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{For a category \code{J} (discrete, i.e. \code{J : Category}) and a Segal category \code{C}, a \code{J}-diagram in \code{C} is a point of \code{Map(N J, C)} (→ \ref{dec-rt-0008} applied to the Segal categories \code{N J} and \code{C} viewed inside \code{Mat(Kan)}; before \ref{ms-0006}, inside \code{Vert} of the ambient VDC∞). Diagrams of shape a Segal category \code{K} are points of \code{Map(K, C)}.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen.}
+}

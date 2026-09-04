@@ -1,0 +1,13 @@
+\title{AT-KR-2 · BMW nerve theorem, general form}
+\taxon{Acceptance test}
+\meta{id}{AT-KR-2}
+\meta{area}{kernel}
+\meta{origin}{design/01-kernel.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:kr}
+\tag{status:unstated}
+
+\p{BMW nerve theorem, general form.}
+\p{Named by: \ref{dec-kr-0003}, \ref{dec-kr-0006}, \ref{dec-sp-0006}.}
+\p{\em{Lean declaration(s):} none yet.}

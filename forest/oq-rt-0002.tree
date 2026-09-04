@@ -1,0 +1,12 @@
+\title{OQ-RT-2}
+\taxon{Open question}
+\meta{id}{OQ-RT-2}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{open}
+\tag{open-question}
+\tag{area:rt}
+\tag{status:open}
+
+\p{Should \code{Monads(P)} (the label set of \code{Mod(P)}) be the set of \em{points} of \code{Map(N Mnd, RP)} (depends on \code{R}) or the set of strict maps \code{N Mnd → P} (may be too small for non-fibrant \code{P})? Default: points of \code{Map(N Mnd, RP)} for a chosen \code{R}, with the theorem that different choices give DK-equivalent \code{Mod(P)}.}
+\p{\em{Resolution:} open. Decided by the human; record the answer as a decision node that this node then cites.}

@@ -1,0 +1,13 @@
+\title{AT-SP-1 · \code{U} is a Kan complex}
+\taxon{Acceptance test}
+\meta{id}{AT-SP-1}
+\meta{area}{spaces and enrichment}
+\meta{origin}{design/05-spaces-enrichment.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:sp}
+\tag{status:unstated}
+
+\p{\code{U} is a Kan complex.}
+\p{Named by: \ref{dec-sp-0001}.}
+\p{\em{Lean declaration(s):} none yet.}

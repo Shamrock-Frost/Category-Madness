@@ -1,0 +1,6325 @@
+{
+  "address-scheme": {
+    "decision": "D-<AREA>-<nn> -> dec-<area>-<nnnn>",
+    "acceptance-test": "AT-<AREA>-<n> -> at-<area>-<nnnn>",
+    "open-question": "OQ-<AREA>-<n> -> oq-<area>-<nnnn>",
+    "milestone": "M<n> -> ms-<nnnn>; phase -1 -> ms-design",
+    "chapter": "<area>-0000 (ch, krn, rt, up, ft, sp, tl, wf, rm, bib, rev)",
+    "reference": "bib-<nnnn> in document order",
+    "workflow-notes": "wf-<nnnn> (wf-0001 is the porting report)",
+    "generated-declaration": "lean-<hash8> (D-WF-01, not yet produced)"
+  },
+  "id-to-address": {
+    "AT-FT-1": "at-ft-0001",
+    "AT-FT-2": "at-ft-0002",
+    "AT-FT-3": "at-ft-0003",
+    "AT-FT-4": "at-ft-0004",
+    "AT-FT-5": "at-ft-0005",
+    "AT-FT-6": "at-ft-0006",
+    "AT-FT-7": "at-ft-0007",
+    "AT-FT-8": "at-ft-0008",
+    "AT-FT-9": "at-ft-0009",
+    "AT-KR-0": "at-kr-0000",
+    "AT-KR-1": "at-kr-0001",
+    "AT-KR-10": "at-kr-0010",
+    "AT-KR-11": "at-kr-0011",
+    "AT-KR-2": "at-kr-0002",
+    "AT-KR-3": "at-kr-0003",
+    "AT-KR-4": "at-kr-0004",
+    "AT-KR-5": "at-kr-0005",
+    "AT-KR-6": "at-kr-0006",
+    "AT-KR-7": "at-kr-0007",
+    "AT-KR-8": "at-kr-0008",
+    "AT-KR-9": "at-kr-0009",
+    "AT-RT-1": "at-rt-0001",
+    "AT-RT-10": "at-rt-0010",
+    "AT-RT-11": "at-rt-0011",
+    "AT-RT-2": "at-rt-0002",
+    "AT-RT-3": "at-rt-0003",
+    "AT-RT-4": "at-rt-0004",
+    "AT-RT-5": "at-rt-0005",
+    "AT-RT-6": "at-rt-0006",
+    "AT-RT-7": "at-rt-0007",
+    "AT-RT-8": "at-rt-0008",
+    "AT-RT-9": "at-rt-0009",
+    "AT-SP-1": "at-sp-0001",
+    "AT-SP-10": "at-sp-0010",
+    "AT-SP-11": "at-sp-0011",
+    "AT-SP-12": "at-sp-0012",
+    "AT-SP-13": "at-sp-0013",
+    "AT-SP-2": "at-sp-0002",
+    "AT-SP-3": "at-sp-0003",
+    "AT-SP-4": "at-sp-0004",
+    "AT-SP-5": "at-sp-0005",
+    "AT-SP-6": "at-sp-0006",
+    "AT-SP-7": "at-sp-0007",
+    "AT-SP-8": "at-sp-0008",
+    "AT-SP-9": "at-sp-0009",
+    "AT-UP-1": "at-up-0001",
+    "AT-UP-2": "at-up-0002",
+    "AT-UP-3": "at-up-0003",
+    "AT-UP-4": "at-up-0004",
+    "AT-UP-5": "at-up-0005",
+    "AT-UP-6": "at-up-0006",
+    "AT-UP-7": "at-up-0007",
+    "AT-UP-8": "at-up-0008",
+    "D-CH-01": "dec-ch-0001",
+    "D-CH-02": "dec-ch-0002",
+    "D-CH-03": "dec-ch-0003",
+    "D-CH-04": "dec-ch-0004",
+    "D-CH-05": "dec-ch-0005",
+    "D-CH-06": "dec-ch-0006",
+    "D-CH-07": "dec-ch-0007",
+    "D-CH-08": "dec-ch-0008",
+    "D-CH-09": "dec-ch-0009",
+    "D-CH-10": "dec-ch-0010",
+    "D-CH-11": "dec-ch-0011",
+    "D-CH-12": "dec-ch-0012",
+    "D-CH-13": "dec-ch-0013",
+    "D-FT-01": "dec-ft-0001",
+    "D-FT-02": "dec-ft-0002",
+    "D-FT-03": "dec-ft-0003",
+    "D-FT-04": "dec-ft-0004",
+    "D-FT-05": "dec-ft-0005",
+    "D-KR-01": "dec-kr-0001",
+    "D-KR-02": "dec-kr-0002",
+    "D-KR-03": "dec-kr-0003",
+    "D-KR-04": "dec-kr-0004",
+    "D-KR-05": "dec-kr-0005",
+    "D-KR-06": "dec-kr-0006",
+    "D-KR-07": "dec-kr-0007",
+    "D-KR-08": "dec-kr-0008",
+    "D-KR-09": "dec-kr-0009",
+    "D-KR-10": "dec-kr-0010",
+    "D-KR-11": "dec-kr-0011",
+    "D-RT-01": "dec-rt-0001",
+    "D-RT-02": "dec-rt-0002",
+    "D-RT-03": "dec-rt-0003",
+    "D-RT-04": "dec-rt-0004",
+    "D-RT-05": "dec-rt-0005",
+    "D-RT-06": "dec-rt-0006",
+    "D-RT-07": "dec-rt-0007",
+    "D-RT-08": "dec-rt-0008",
+    "D-RT-09": "dec-rt-0009",
+    "D-RT-10": "dec-rt-0010",
+    "D-RT-11": "dec-rt-0011",
+    "D-RT-12": "dec-rt-0012",
+    "D-RT-13": "dec-rt-0013",
+    "D-RT-14": "dec-rt-0014",
+    "D-SP-01": "dec-sp-0001",
+    "D-SP-02": "dec-sp-0002",
+    "D-SP-03": "dec-sp-0003",
+    "D-SP-04": "dec-sp-0004",
+    "D-SP-05": "dec-sp-0005",
+    "D-SP-06": "dec-sp-0006",
+    "D-SP-07": "dec-sp-0007",
+    "D-SP-08": "dec-sp-0008",
+    "D-SP-09": "dec-sp-0009",
+    "D-TL-01": "dec-tl-0001",
+    "D-TL-02": "dec-tl-0002",
+    "D-TL-03": "dec-tl-0003",
+    "D-TL-04": "dec-tl-0004",
+    "D-TL-05": "dec-tl-0005",
+    "D-TL-06": "dec-tl-0006",
+    "D-TL-07": "dec-tl-0007",
+    "D-TL-08": "dec-tl-0008",
+    "D-UP-01": "dec-up-0001",
+    "D-UP-02": "dec-up-0002",
+    "D-UP-03": "dec-up-0003",
+    "D-UP-04": "dec-up-0004",
+    "D-UP-05": "dec-up-0005",
+    "D-UP-06": "dec-up-0006",
+    "D-UP-07": "dec-up-0007",
+    "D-UP-08": "dec-up-0008",
+    "D-UP-09": "dec-up-0009",
+    "D-WF-01": "dec-wf-0001",
+    "D-WF-02": "dec-wf-0002",
+    "D-WF-03": "dec-wf-0003",
+    "D-WF-04": "dec-wf-0004",
+    "D-WF-05": "dec-wf-0005",
+    "D-WF-06": "dec-wf-0006",
+    "D-WF-07": "dec-wf-0007",
+    "M0": "ms-0000",
+    "M1": "ms-0001",
+    "M2": "ms-0002",
+    "M3": "ms-0003",
+    "M4": "ms-0004",
+    "M5": "ms-0005",
+    "M6": "ms-0006",
+    "M7": "ms-0007",
+    "OQ-FT-1": "oq-ft-0001",
+    "OQ-FT-2": "oq-ft-0002",
+    "OQ-KR-1": "oq-kr-0001",
+    "OQ-KR-2": "oq-kr-0002",
+    "OQ-KR-3": "oq-kr-0003",
+    "OQ-RT-1": "oq-rt-0001",
+    "OQ-RT-2": "oq-rt-0002",
+    "OQ-RT-3": "oq-rt-0003",
+    "OQ-SP-1": "oq-sp-0001",
+    "OQ-SP-2": "oq-sp-0002",
+    "OQ-SP-3": "oq-sp-0003",
+    "OQ-UP-1": "oq-up-0001",
+    "OQ-UP-2": "oq-up-0002",
+    "Phase −1": "ms-design"
+  },
+  "nodes": {
+    "at-ft-0001": {
+      "id": "AT-FT-1",
+      "taxon": "Acceptance test",
+      "title": "AT-FT-1 · Discrete case of D-FT-01 and D-FT-03 is Koudenburg / Cruttwell–Shulman",
+      "tags": [
+        "acceptance-test",
+        "area:ft",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-FT-1",
+        "area": "formal theory",
+        "origin": "design/04-formal-theory.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-ft-0001",
+        "dec-ft-0003"
+      ],
+      "file": "forest/at-ft-0001.tree",
+      "backlinks": [
+        "ch-0000",
+        "dec-ft-0001",
+        "dec-ft-0003",
+        "ft-0000",
+        "ms-0005",
+        "rm-0000"
+      ]
+    },
+    "at-ft-0002": {
+      "id": "AT-FT-2",
+      "taxon": "Acceptance test",
+      "title": "AT-FT-2 · Mat(Set) and Cat are augmented virtual equipments",
+      "tags": [
+        "acceptance-test",
+        "area:ft",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-FT-2",
+        "area": "formal theory",
+        "origin": "design/04-formal-theory.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-ft-0001"
+      ],
+      "file": "forest/at-ft-0002.tree",
+      "backlinks": [
+        "dec-ft-0001",
+        "ft-0000"
+      ]
+    },
+    "at-ft-0003": {
+      "id": "AT-FT-3",
+      "taxon": "Acceptance test",
+      "title": "AT-FT-3 · Mod preserves augmented virtual (∞-)equipments",
+      "tags": [
+        "acceptance-test",
+        "area:ft",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-FT-3",
+        "area": "formal theory",
+        "origin": "design/04-formal-theory.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-rt-0009"
+      ],
+      "file": "forest/at-ft-0003.tree",
+      "backlinks": [
+        "dec-rt-0009",
+        "ft-0000",
+        "ms-0005"
+      ]
+    },
+    "at-ft-0004": {
+      "id": "AT-FT-4",
+      "taxon": "Acceptance test",
+      "title": "AT-FT-4 · With composites, an equipment is a Ruit ∞-equipment",
+      "tags": [
+        "acceptance-test",
+        "area:ft",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-FT-4",
+        "area": "formal theory",
+        "origin": "design/04-formal-theory.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-ft-0002"
+      ],
+      "file": "forest/at-ft-0004.tree",
+      "backlinks": [
+        "dec-ft-0002",
+        "ft-0000",
+        "ms-0005",
+        "ms-0006"
+      ]
+    },
+    "at-ft-0005": {
+      "id": "AT-FT-5",
+      "taxon": "Acceptance test",
+      "title": "AT-FT-5 · Cat has composites",
+      "tags": [
+        "acceptance-test",
+        "area:ft",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-FT-5",
+        "area": "formal theory",
+        "origin": "design/04-formal-theory.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-ft-0002"
+      ],
+      "file": "forest/at-ft-0005.tree",
+      "backlinks": [
+        "dec-ft-0002",
+        "ft-0000"
+      ]
+    },
+    "at-ft-0006": {
+      "id": "AT-FT-6",
+      "taxon": "Acceptance test",
+      "title": "AT-FT-6 · Weighted limits with unit weight are the limits of → D-UP-04",
+      "tags": [
+        "acceptance-test",
+        "area:ft",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-FT-6",
+        "area": "formal theory",
+        "origin": "design/04-formal-theory.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-ft-0003",
+        "dec-up-0004"
+      ],
+      "file": "forest/at-ft-0006.tree",
+      "backlinks": [
+        "dec-ft-0003",
+        "ft-0000"
+      ]
+    },
+    "at-ft-0007": {
+      "id": "AT-FT-7",
+      "taxon": "Acceptance test",
+      "title": "AT-FT-7 · Absolute-lifting limits agree with slice-terminal limits",
+      "tags": [
+        "acceptance-test",
+        "area:ft",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-FT-7",
+        "area": "formal theory",
+        "origin": "design/04-formal-theory.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-ft-0003"
+      ],
+      "file": "forest/at-ft-0007.tree",
+      "backlinks": [
+        "dec-ft-0003",
+        "ft-0000"
+      ]
+    },
+    "at-ft-0008": {
+      "id": "AT-FT-8",
+      "taxon": "Acceptance test",
+      "title": "AT-FT-8 · hP is an augmented virtual equipment",
+      "tags": [
+        "acceptance-test",
+        "area:ft",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-FT-8",
+        "area": "formal theory",
+        "origin": "design/04-formal-theory.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-ft-0004"
+      ],
+      "file": "forest/at-ft-0008.tree",
+      "backlinks": [
+        "dec-ft-0004",
+        "ft-0000"
+      ]
+    },
+    "at-ft-0009": {
+      "id": "AT-FT-9",
+      "taxon": "Acceptance test",
+      "title": "AT-FT-9 · Cosmos comparison (M7)",
+      "tags": [
+        "acceptance-test",
+        "area:ft",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-FT-9",
+        "area": "formal theory",
+        "origin": "design/04-formal-theory.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-ft-0005",
+        "ms-0007"
+      ],
+      "file": "forest/at-ft-0009.tree",
+      "backlinks": [
+        "dec-ft-0005",
+        "ft-0000",
+        "ms-0007"
+      ]
+    },
+    "at-kr-0000": {
+      "id": "AT-KR-0",
+      "taxon": "Acceptance test",
+      "title": "AT-KR-0 · Mathlib inventory node exists and is verified",
+      "tags": [
+        "acceptance-test",
+        "area:kr",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-KR-0",
+        "area": "kernel",
+        "origin": "design/01-kernel.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [],
+      "file": "forest/at-kr-0000.tree",
+      "backlinks": [
+        "krn-0000",
+        "ms-0000",
+        "wf-0001"
+      ]
+    },
+    "at-kr-0001": {
+      "id": "AT-KR-1",
+      "taxon": "Acceptance test",
+      "title": "AT-KR-1 · Θ_T(free category) ≅ SimplexCategory",
+      "tags": [
+        "acceptance-test",
+        "area:kr",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-KR-1",
+        "area": "kernel",
+        "origin": "design/01-kernel.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-kr-0003"
+      ],
+      "file": "forest/at-kr-0001.tree",
+      "backlinks": [
+        "dec-kr-0003",
+        "krn-0000",
+        "ms-0001"
+      ]
+    },
+    "at-kr-0002": {
+      "id": "AT-KR-2",
+      "taxon": "Acceptance test",
+      "title": "AT-KR-2 · BMW nerve theorem, general form",
+      "tags": [
+        "acceptance-test",
+        "area:kr",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-KR-2",
+        "area": "kernel",
+        "origin": "design/01-kernel.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-kr-0003",
+        "dec-kr-0006",
+        "dec-sp-0006"
+      ],
+      "file": "forest/at-kr-0002.tree",
+      "backlinks": [
+        "dec-kr-0003",
+        "dec-kr-0006",
+        "dec-sp-0006",
+        "krn-0000",
+        "ms-0001",
+        "wf-0001"
+      ]
+    },
+    "at-kr-0003": {
+      "id": "AT-KR-3",
+      "taxon": "Acceptance test",
+      "title": "AT-KR-3 · Explicit presentations of Δ, Ω_p, Θ^aug_fc as tree/path categories",
+      "tags": [
+        "acceptance-test",
+        "area:kr",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-KR-3",
+        "area": "kernel",
+        "origin": "design/01-kernel.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-kr-0003",
+        "dec-kr-0006",
+        "dec-tl-0007"
+      ],
+      "file": "forest/at-kr-0003.tree",
+      "backlinks": [
+        "dec-kr-0003",
+        "dec-kr-0006",
+        "dec-tl-0007",
+        "krn-0000",
+        "ms-0001"
+      ]
+    },
+    "at-kr-0004": {
+      "id": "AT-KR-4",
+      "taxon": "Acceptance test",
+      "title": "AT-KR-4 · Θ_1 ≅ Δ, Θ_2 ≅ Δ ≀ Δ",
+      "tags": [
+        "acceptance-test",
+        "area:kr",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-KR-4",
+        "area": "kernel",
+        "origin": "design/01-kernel.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-kr-0003"
+      ],
+      "file": "forest/at-kr-0004.tree",
+      "backlinks": [
+        "dec-kr-0003",
+        "krn-0000",
+        "ms-0001"
+      ]
+    },
+    "at-kr-0005": {
+      "id": "AT-KR-5",
+      "taxon": "Acceptance test",
+      "title": "AT-KR-5 · Pattern structure on Δ is the classical one",
+      "tags": [
+        "acceptance-test",
+        "area:kr",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-KR-5",
+        "area": "kernel",
+        "origin": "design/01-kernel.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-kr-0004"
+      ],
+      "file": "forest/at-kr-0005.tree",
+      "backlinks": [
+        "dec-kr-0004",
+        "krn-0000",
+        "ms-0001"
+      ]
+    },
+    "at-kr-0006": {
+      "id": "AT-KR-6",
+      "taxon": "Acceptance test",
+      "title": "AT-KR-6 · Elegance of Δ, Ω_p, Θ^aug_fc",
+      "tags": [
+        "acceptance-test",
+        "area:kr",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-KR-6",
+        "area": "kernel",
+        "origin": "design/01-kernel.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-kr-0005"
+      ],
+      "file": "forest/at-kr-0006.tree",
+      "backlinks": [
+        "dec-kr-0005",
+        "krn-0000",
+        "ms-0001",
+        "rev-0000",
+        "rm-0000"
+      ]
+    },
+    "at-kr-0007": {
+      "id": "AT-KR-7",
+      "taxon": "Acceptance test",
+      "title": "AT-KR-7 · Ω is EZ generalized Reedy",
+      "tags": [
+        "acceptance-test",
+        "area:kr",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-KR-7",
+        "area": "kernel",
+        "origin": "design/01-kernel.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-kr-0005"
+      ],
+      "file": "forest/at-kr-0007.tree",
+      "backlinks": [
+        "dec-kr-0005",
+        "krn-0000",
+        "ms-0001"
+      ]
+    },
+    "at-kr-0008": {
+      "id": "AT-KR-8",
+      "taxon": "Acceptance test",
+      "title": "AT-KR-8 · Nerve theorem for augmented VDCs with Segal characterization",
+      "tags": [
+        "acceptance-test",
+        "area:kr",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-KR-8",
+        "area": "kernel",
+        "origin": "design/01-kernel.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-kr-0006",
+        "dec-rt-0011"
+      ],
+      "file": "forest/at-kr-0008.tree",
+      "backlinks": [
+        "dec-kr-0006",
+        "dec-rt-0011",
+        "krn-0000",
+        "ms-0001"
+      ]
+    },
+    "at-kr-0009": {
+      "id": "AT-KR-9",
+      "taxon": "Acceptance test",
+      "title": "AT-KR-9 · Labelled Δ characterizes categories with a given object set",
+      "tags": [
+        "acceptance-test",
+        "area:kr",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-KR-9",
+        "area": "kernel",
+        "origin": "design/01-kernel.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-kr-0007",
+        "dec-rt-0010"
+      ],
+      "file": "forest/at-kr-0009.tree",
+      "backlinks": [
+        "dec-kr-0007",
+        "dec-rt-0010",
+        "krn-0000",
+        "ms-0001"
+      ]
+    },
+    "at-kr-0010": {
+      "id": "AT-KR-10",
+      "taxon": "Acceptance test",
+      "title": "AT-KR-10 · Closure properties of Kan/trivial fibrations",
+      "tags": [
+        "acceptance-test",
+        "area:kr",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-KR-10",
+        "area": "kernel",
+        "origin": "design/01-kernel.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-kr-0010"
+      ],
+      "file": "forest/at-kr-0010.tree",
+      "backlinks": [
+        "dec-kr-0010",
+        "krn-0000",
+        "ms-0002"
+      ]
+    },
+    "at-kr-0011": {
+      "id": "AT-KR-11",
+      "taxon": "Acceptance test",
+      "title": "AT-KR-11 · Fibrant replacement",
+      "tags": [
+        "acceptance-test",
+        "area:kr",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-KR-11",
+        "area": "kernel",
+        "origin": "design/01-kernel.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-kr-0011",
+        "dec-sp-0008"
+      ],
+      "file": "forest/at-kr-0011.tree",
+      "backlinks": [
+        "dec-kr-0011",
+        "dec-sp-0008",
+        "krn-0000",
+        "ms-0002",
+        "oq-sp-0003",
+        "rm-0000"
+      ]
+    },
+    "at-rt-0001": {
+      "id": "AT-RT-1",
+      "taxon": "Acceptance test",
+      "title": "AT-RT-1 · Self-hosting theorem",
+      "tags": [
+        "acceptance-test",
+        "area:rt",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-RT-1",
+        "area": "root",
+        "origin": "design/02-root.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-ch-0008",
+        "dec-rt-0001",
+        "dec-rt-0011"
+      ],
+      "file": "forest/at-rt-0001.tree",
+      "backlinks": [
+        "ch-0000",
+        "dec-ch-0008",
+        "dec-rt-0001",
+        "dec-rt-0011",
+        "ms-0003",
+        "rt-0000"
+      ]
+    },
+    "at-rt-0002": {
+      "id": "AT-RT-2",
+      "taxon": "Acceptance test",
+      "title": "AT-RT-2 · Mat(Set) is a VDC∞",
+      "tags": [
+        "acceptance-test",
+        "area:rt",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-RT-2",
+        "area": "root",
+        "origin": "design/02-root.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-rt-0001",
+        "dec-rt-0010"
+      ],
+      "file": "forest/at-rt-0002.tree",
+      "backlinks": [
+        "dec-rt-0001",
+        "dec-rt-0010",
+        "ms-0003",
+        "rt-0000"
+      ]
+    },
+    "at-rt-0003": {
+      "id": "AT-RT-3",
+      "taxon": "Acceptance test",
+      "title": "AT-RT-3 · Nerves of set-level augmented VDCs are VDC∞s",
+      "tags": [
+        "acceptance-test",
+        "area:rt",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-RT-3",
+        "area": "root",
+        "origin": "design/02-root.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-rt-0001",
+        "dec-rt-0011"
+      ],
+      "file": "forest/at-rt-0003.tree",
+      "backlinks": [
+        "dec-rt-0001",
+        "dec-rt-0011",
+        "rt-0000"
+      ]
+    },
+    "at-rt-0004": {
+      "id": "AT-RT-4",
+      "taxon": "Acceptance test",
+      "title": "AT-RT-4 · hP is an augmented VDC",
+      "tags": [
+        "acceptance-test",
+        "area:rt",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-RT-4",
+        "area": "root",
+        "origin": "design/02-root.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-rt-0005"
+      ],
+      "file": "forest/at-rt-0004.tree",
+      "backlinks": [
+        "dec-rt-0005",
+        "rt-0000"
+      ]
+    },
+    "at-rt-0005": {
+      "id": "AT-RT-5",
+      "taxon": "Acceptance test",
+      "title": "AT-RT-5 · DK-equivalences",
+      "tags": [
+        "acceptance-test",
+        "area:rt",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-RT-5",
+        "area": "root",
+        "origin": "design/02-root.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-rt-0006"
+      ],
+      "file": "forest/at-rt-0005.tree",
+      "backlinks": [
+        "dec-rt-0006",
+        "rev-0000",
+        "rm-0000",
+        "rt-0000"
+      ]
+    },
+    "at-rt-0006": {
+      "id": "AT-RT-6",
+      "taxon": "Acceptance test",
+      "title": "AT-RT-6 · Map independent of the replacement",
+      "tags": [
+        "acceptance-test",
+        "area:rt",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-RT-6",
+        "area": "root",
+        "origin": "design/02-root.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-rt-0008"
+      ],
+      "file": "forest/at-rt-0006.tree",
+      "backlinks": [
+        "dec-rt-0008",
+        "rt-0000"
+      ]
+    },
+    "at-rt-0007": {
+      "id": "AT-RT-7",
+      "taxon": "Acceptance test",
+      "title": "AT-RT-7 · Mod(P) is a VDC∞",
+      "tags": [
+        "acceptance-test",
+        "area:rt",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-RT-7",
+        "area": "root",
+        "origin": "design/02-root.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-rt-0009"
+      ],
+      "file": "forest/at-rt-0007.tree",
+      "backlinks": [
+        "dec-rt-0009",
+        "ms-0003",
+        "rt-0000"
+      ]
+    },
+    "at-rt-0008": {
+      "id": "AT-RT-8",
+      "taxon": "Acceptance test",
+      "title": "AT-RT-8 · Mat(Kan) is a VDC∞ (M6)",
+      "tags": [
+        "acceptance-test",
+        "area:rt",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-RT-8",
+        "area": "root",
+        "origin": "design/02-root.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-rt-0001",
+        "dec-sp-0004",
+        "ms-0006"
+      ],
+      "file": "forest/at-rt-0008.tree",
+      "backlinks": [
+        "dec-rt-0001",
+        "dec-sp-0004",
+        "ms-0006",
+        "rt-0000"
+      ]
+    },
+    "at-rt-0009": {
+      "id": "AT-RT-9",
+      "taxon": "Acceptance test",
+      "title": "AT-RT-9 · Comparison with style A (M6+, optional)",
+      "tags": [
+        "acceptance-test",
+        "area:rt",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-RT-9",
+        "area": "root",
+        "origin": "design/02-root.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-rt-0002",
+        "dec-rt-0006",
+        "dec-sp-0008",
+        "ms-0006"
+      ],
+      "file": "forest/at-rt-0009.tree",
+      "backlinks": [
+        "dec-rt-0002",
+        "dec-rt-0006",
+        "dec-sp-0008",
+        "rt-0000"
+      ]
+    },
+    "at-rt-0010": {
+      "id": "AT-RT-10",
+      "taxon": "Acceptance test",
+      "title": "AT-RT-10 · Category A ≃ classical structure ≃ Segal presheaves on Δ_A",
+      "tags": [
+        "acceptance-test",
+        "area:rt",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-RT-10",
+        "area": "root",
+        "origin": "design/02-root.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-rt-0010"
+      ],
+      "file": "forest/at-rt-0010.tree",
+      "backlinks": [
+        "dec-rt-0010",
+        "ms-0003",
+        "rt-0000"
+      ]
+    },
+    "at-rt-0011": {
+      "id": "AT-RT-11",
+      "taxon": "Acceptance test",
+      "title": "AT-RT-11 · Vertical 2-category of Cat is the classical one",
+      "tags": [
+        "acceptance-test",
+        "area:rt",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-RT-11",
+        "area": "root",
+        "origin": "design/02-root.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-rt-0010"
+      ],
+      "file": "forest/at-rt-0011.tree",
+      "backlinks": [
+        "dec-rt-0010",
+        "ms-0003",
+        "rt-0000"
+      ]
+    },
+    "at-sp-0001": {
+      "id": "AT-SP-1",
+      "taxon": "Acceptance test",
+      "title": "AT-SP-1 · U is a Kan complex",
+      "tags": [
+        "acceptance-test",
+        "area:sp",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-SP-1",
+        "area": "spaces and enrichment",
+        "origin": "design/05-spaces-enrichment.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-sp-0001"
+      ],
+      "file": "forest/at-sp-0001.tree",
+      "backlinks": [
+        "dec-sp-0001",
+        "ms-0006",
+        "oq-sp-0002",
+        "sp-0000"
+      ]
+    },
+    "at-sp-0002": {
+      "id": "AT-SP-2",
+      "taxon": "Acceptance test",
+      "title": "AT-SP-2 · Kan is an ∞-category in the library's sense",
+      "tags": [
+        "acceptance-test",
+        "area:sp",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-SP-2",
+        "area": "spaces and enrichment",
+        "origin": "design/05-spaces-enrichment.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-sp-0002"
+      ],
+      "file": "forest/at-sp-0002.tree",
+      "backlinks": [
+        "ch-0000",
+        "dec-sp-0002",
+        "sp-0000"
+      ]
+    },
+    "at-sp-0003": {
+      "id": "AT-SP-3",
+      "taxon": "Acceptance test",
+      "title": "AT-SP-3 · Monads in Mat(Kan) at A are Segal categories with object set A",
+      "tags": [
+        "acceptance-test",
+        "area:sp",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-SP-3",
+        "area": "spaces and enrichment",
+        "origin": "design/05-spaces-enrichment.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-sp-0004"
+      ],
+      "file": "forest/at-sp-0003.tree",
+      "backlinks": [
+        "dec-sp-0004",
+        "sp-0000"
+      ]
+    },
+    "at-sp-0004": {
+      "id": "AT-SP-4",
+      "taxon": "Acceptance test",
+      "title": "AT-SP-4 · Span(S) is a VDC∞, fibrant when S is",
+      "tags": [
+        "acceptance-test",
+        "area:sp",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-SP-4",
+        "area": "spaces and enrichment",
+        "origin": "design/05-spaces-enrichment.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-sp-0005"
+      ],
+      "file": "forest/at-sp-0004.tree",
+      "backlinks": [
+        "dec-sp-0005",
+        "ms-0005",
+        "ms-0006",
+        "sp-0000"
+      ]
+    },
+    "at-sp-0005": {
+      "id": "AT-SP-5",
+      "taxon": "Acceptance test",
+      "title": "AT-SP-5 · Mod(Mat Kan) ≃ Mod(Span Kan)",
+      "tags": [
+        "acceptance-test",
+        "area:sp",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-SP-5",
+        "area": "spaces and enrichment",
+        "origin": "design/05-spaces-enrichment.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-sp-0005",
+        "dec-sp-0008"
+      ],
+      "file": "forest/at-sp-0005.tree",
+      "backlinks": [
+        "dec-sp-0005",
+        "dec-sp-0008",
+        "ms-0006",
+        "sp-0000"
+      ]
+    },
+    "at-sp-0006": {
+      "id": "AT-SP-6",
+      "taxon": "Acceptance test",
+      "title": "AT-SP-6 · Discrete ∞-operads are coloured operads",
+      "tags": [
+        "acceptance-test",
+        "area:sp",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-SP-6",
+        "area": "spaces and enrichment",
+        "origin": "design/05-spaces-enrichment.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-sp-0006"
+      ],
+      "file": "forest/at-sp-0006.tree",
+      "backlinks": [
+        "dec-sp-0006",
+        "sp-0000"
+      ]
+    },
+    "at-sp-0007": {
+      "id": "AT-SP-7",
+      "taxon": "Acceptance test",
+      "title": "AT-SP-7 · Planar ∞-operads as monads in a multimatrix VDC∞",
+      "tags": [
+        "acceptance-test",
+        "area:sp",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-SP-7",
+        "area": "spaces and enrichment",
+        "origin": "design/05-spaces-enrichment.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-sp-0006"
+      ],
+      "file": "forest/at-sp-0007.tree",
+      "backlinks": [
+        "dec-sp-0006",
+        "sp-0000"
+      ]
+    },
+    "at-sp-0008": {
+      "id": "AT-SP-8",
+      "taxon": "Acceptance test",
+      "title": "AT-SP-8 · Rectification",
+      "tags": [
+        "acceptance-test",
+        "area:sp",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-SP-8",
+        "area": "spaces and enrichment",
+        "origin": "design/05-spaces-enrichment.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-sp-0004"
+      ],
+      "file": "forest/at-sp-0008.tree",
+      "backlinks": [
+        "dec-sp-0004",
+        "ms-0006",
+        "rev-0000",
+        "rm-0000",
+        "sp-0000"
+      ]
+    },
+    "at-sp-0009": {
+      "id": "AT-SP-9",
+      "taxon": "Acceptance test",
+      "title": "AT-SP-9 · Mod(H-Kl(T_Σ, Mat Set)) is the classical equipment of coloured symmetric operads",
+      "tags": [
+        "acceptance-test",
+        "area:sp",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-SP-9",
+        "area": "spaces and enrichment",
+        "origin": "design/05-spaces-enrichment.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-sp-0009"
+      ],
+      "file": "forest/at-sp-0009.tree",
+      "backlinks": [
+        "dec-sp-0009",
+        "ms-0007",
+        "sp-0000"
+      ]
+    },
+    "at-sp-0010": {
+      "id": "AT-SP-10",
+      "taxon": "Acceptance test",
+      "title": "AT-SP-10 · Monads in H-Kl(T_Σ, Mat Kan) present Lurie's ∞-operads (Haugseng",
+      "tags": [
+        "acceptance-test",
+        "area:sp",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-SP-10",
+        "area": "spaces and enrichment",
+        "origin": "design/05-spaces-enrichment.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-sp-0009"
+      ],
+      "file": "forest/at-sp-0010.tree",
+      "backlinks": [
+        "dec-sp-0009",
+        "sp-0000"
+      ]
+    },
+    "at-sp-0011": {
+      "id": "AT-SP-11",
+      "taxon": "Acceptance test",
+      "title": "AT-SP-11 · Contractible monads in the T_ℕ/T_𝔹/T_Σ Kleisli VDC∞s are E_1/E_2/E_∞",
+      "tags": [
+        "acceptance-test",
+        "area:sp",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-SP-11",
+        "area": "spaces and enrichment",
+        "origin": "design/05-spaces-enrichment.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-sp-0009"
+      ],
+      "file": "forest/at-sp-0011.tree",
+      "backlinks": [
+        "dec-sp-0009",
+        "ms-0007",
+        "sp-0000"
+      ]
+    },
+    "at-sp-0012": {
+      "id": "AT-SP-12",
+      "taxon": "Acceptance test",
+      "title": "AT-SP-12 · HasColimits Kan (the mountain)",
+      "tags": [
+        "acceptance-test",
+        "area:sp",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-SP-12",
+        "area": "spaces and enrichment",
+        "origin": "design/05-spaces-enrichment.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [],
+      "file": "forest/at-sp-0012.tree",
+      "backlinks": [
+        "ms-0006",
+        "rev-0000",
+        "rm-0000",
+        "sp-0000"
+      ]
+    },
+    "at-sp-0013": {
+      "id": "AT-SP-13",
+      "taxon": "Acceptance test",
+      "title": "AT-SP-13 · H-Kl(T, X) is a VDC∞ and Mod(H-Kl(T, X)) is an equipment (Cruttwell–Shulman at ∞)",
+      "tags": [
+        "acceptance-test",
+        "area:sp",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-SP-13",
+        "area": "spaces and enrichment",
+        "origin": "design/05-spaces-enrichment.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-sp-0009"
+      ],
+      "file": "forest/at-sp-0013.tree",
+      "backlinks": [
+        "dec-sp-0009",
+        "ms-0007",
+        "sp-0000"
+      ]
+    },
+    "at-up-0001": {
+      "id": "AT-UP-1",
+      "taxon": "Acceptance test",
+      "title": "AT-UP-1 · for discrete C, IsTerminal is the classical definition and the uniqueness theorem…",
+      "tags": [
+        "acceptance-test",
+        "area:up",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-UP-1",
+        "area": "universal properties",
+        "origin": "design/03-universal-properties.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-up-0001",
+        "dec-up-0008"
+      ],
+      "file": "forest/at-up-0001.tree",
+      "backlinks": [
+        "dec-up-0001",
+        "dec-up-0008",
+        "ms-0004"
+      ]
+    },
+    "at-up-0002": {
+      "id": "AT-UP-2",
+      "taxon": "Acceptance test",
+      "title": "AT-UP-2 · for discrete C and J, \\code{C_{/F}} is the classical slice/cone category",
+      "tags": [
+        "acceptance-test",
+        "area:up",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-UP-2",
+        "area": "universal properties",
+        "origin": "design/03-universal-properties.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-up-0003"
+      ],
+      "file": "forest/at-up-0002.tree",
+      "backlinks": [
+        "dec-up-0003"
+      ]
+    },
+    "at-up-0003": {
+      "id": "AT-UP-3",
+      "taxon": "Acceptance test",
+      "title": "AT-UP-3 · \\code{C_{/F}} is a Segal category (Segal condition holds)",
+      "tags": [
+        "acceptance-test",
+        "area:up",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-UP-3",
+        "area": "universal properties",
+        "origin": "design/03-universal-properties.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-up-0003"
+      ],
+      "file": "forest/at-up-0003.tree",
+      "backlinks": [
+        "dec-up-0003"
+      ]
+    },
+    "at-up-0004": {
+      "id": "AT-UP-4",
+      "taxon": "Acceptance test",
+      "title": "AT-UP-4 · each specializes to the classical notion for discrete C",
+      "tags": [
+        "acceptance-test",
+        "area:up",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-UP-4",
+        "area": "universal properties",
+        "origin": "design/03-universal-properties.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-up-0004"
+      ],
+      "file": "forest/at-up-0004.tree",
+      "backlinks": [
+        "dec-up-0004"
+      ]
+    },
+    "at-up-0005": {
+      "id": "AT-UP-5",
+      "taxon": "Acceptance test",
+      "title": "AT-UP-5 · to_dual of Limit is a colimit in the classical sense for discrete C",
+      "tags": [
+        "acceptance-test",
+        "area:up",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-UP-5",
+        "area": "universal properties",
+        "origin": "design/03-universal-properties.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-up-0005"
+      ],
+      "file": "forest/at-up-0005.tree",
+      "backlinks": [
+        "dec-up-0005"
+      ]
+    },
+    "at-up-0006": {
+      "id": "AT-UP-6",
+      "taxon": "Acceptance test",
+      "title": "AT-UP-6 · Čech nerve",
+      "tags": [
+        "acceptance-test",
+        "area:up",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-UP-6",
+        "area": "universal properties",
+        "origin": "design/03-universal-properties.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-up-0007"
+      ],
+      "file": "forest/at-up-0006.tree",
+      "backlinks": [
+        "dec-up-0007",
+        "ms-0004",
+        "wf-0001"
+      ]
+    },
+    "at-up-0007": {
+      "id": "AT-UP-7",
+      "taxon": "Acceptance test",
+      "title": "AT-UP-7 · cosk_n ⊣ sk_n-style adjunction statements as terminal-object statements",
+      "tags": [
+        "acceptance-test",
+        "area:up",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-UP-7",
+        "area": "universal properties",
+        "origin": "design/03-universal-properties.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-up-0007",
+        "dec-up-0008"
+      ],
+      "file": "forest/at-up-0007.tree",
+      "backlinks": [
+        "dec-up-0007",
+        "dec-up-0008",
+        "ms-0004"
+      ]
+    },
+    "at-up-0008": {
+      "id": "AT-UP-8",
+      "taxon": "Acceptance test",
+      "title": "AT-UP-8 · for discrete C, D, the exponential in Vert(Cat) is the functor category and its…",
+      "tags": [
+        "acceptance-test",
+        "area:up",
+        "status:unstated"
+      ],
+      "meta": {
+        "id": "AT-UP-8",
+        "area": "universal properties",
+        "origin": "design/03-universal-properties.md",
+        "status": "unstated"
+      },
+      "status": "unstated",
+      "refs": [
+        "dec-up-0009"
+      ],
+      "file": "forest/at-up-0008.tree",
+      "backlinks": [
+        "dec-up-0009",
+        "rev-0000",
+        "rm-0000"
+      ]
+    },
+    "bib-0000": {
+      "id": "bib-0000",
+      "taxon": "Chapter",
+      "title": "09 · Bibliography (annotated, keyed to decisions)",
+      "tags": [
+        "chapter"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "layer": "human"
+      },
+      "status": null,
+      "refs": [
+        "bib-0001",
+        "bib-0002",
+        "bib-0003",
+        "bib-0004",
+        "bib-0005",
+        "bib-0006",
+        "bib-0007",
+        "bib-0008",
+        "bib-0009",
+        "bib-0010",
+        "bib-0011",
+        "bib-0012",
+        "bib-0013",
+        "bib-0014",
+        "bib-0015",
+        "bib-0016",
+        "bib-0017",
+        "bib-0018",
+        "bib-0019",
+        "bib-0020",
+        "bib-0021",
+        "bib-0022",
+        "bib-0023",
+        "bib-0024",
+        "bib-0025",
+        "bib-0026",
+        "bib-0027",
+        "bib-0028",
+        "bib-0029",
+        "bib-0030",
+        "bib-0031",
+        "bib-0032",
+        "bib-0033",
+        "bib-0034",
+        "bib-0035",
+        "bib-0036",
+        "bib-0037",
+        "bib-0038",
+        "bib-0039",
+        "bib-0040",
+        "bib-0041",
+        "bib-0042",
+        "bib-0043",
+        "bib-0044",
+        "bib-0045",
+        "bib-0046",
+        "bib-0047",
+        "ms-0000"
+      ],
+      "file": "forest/bib-0000.tree",
+      "backlinks": [
+        "index",
+        "wf-0001"
+      ]
+    },
+    "bib-0001": {
+      "id": "bib-0001",
+      "taxon": "Reference",
+      "title": "Cruttwell, Shulman — A unified framework for generalized multicategories",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Virtual double categories and formal category theory"
+      },
+      "status": null,
+      "refs": [],
+      "file": "forest/bib-0001.tree",
+      "backlinks": [
+        "bib-0000",
+        "wf-0001"
+      ]
+    },
+    "bib-0002": {
+      "id": "bib-0002",
+      "taxon": "Reference",
+      "title": "Koudenburg — Augmented virtual double categories",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Virtual double categories and formal category theory"
+      },
+      "status": null,
+      "refs": [],
+      "file": "forest/bib-0002.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0003": {
+      "id": "bib-0003",
+      "taxon": "Reference",
+      "title": "Leinster — Higher Operads, Higher Categories",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Virtual double categories and formal category theory"
+      },
+      "status": null,
+      "refs": [],
+      "file": "forest/bib-0003.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0004": {
+      "id": "bib-0004",
+      "taxon": "Reference",
+      "title": "Riehl, Verity — Elements of ∞-Category Theory",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Virtual double categories and formal category theory"
+      },
+      "status": null,
+      "refs": [],
+      "file": "forest/bib-0004.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0005": {
+      "id": "bib-0005",
+      "taxon": "Reference",
+      "title": "Ruit — Formal category theory in ∞-equipments I, II",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Virtual double categories and formal category theory"
+      },
+      "status": null,
+      "refs": [],
+      "file": "forest/bib-0005.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0006": {
+      "id": "bib-0006",
+      "taxon": "Reference",
+      "title": "Haugseng — Bimodules and natural transformations for enriched ∞-categories",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Virtual double categories and formal category theory"
+      },
+      "status": null,
+      "refs": [],
+      "file": "forest/bib-0006.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0007": {
+      "id": "bib-0007",
+      "taxon": "Reference",
+      "title": "Street, Walters — Yoneda structures on 2-categories",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Virtual double categories and formal category theory"
+      },
+      "status": null,
+      "refs": [],
+      "file": "forest/bib-0007.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0008": {
+      "id": "bib-0008",
+      "taxon": "Reference",
+      "title": "Hermida — Representable multicategories",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Virtual double categories and formal category theory"
+      },
+      "status": null,
+      "refs": [
+        "dec-ch-0003"
+      ],
+      "file": "forest/bib-0008.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0009": {
+      "id": "bib-0009",
+      "taxon": "Reference",
+      "title": "Weber — Familial 2-functors and parametric right adjoints",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Shapes, nerves, patterns"
+      },
+      "status": null,
+      "refs": [],
+      "file": "forest/bib-0009.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0010": {
+      "id": "bib-0010",
+      "taxon": "Reference",
+      "title": "Berger, Melliès, Weber — Monads with arities and their associated theories",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Shapes, nerves, patterns"
+      },
+      "status": null,
+      "refs": [],
+      "file": "forest/bib-0010.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0011": {
+      "id": "bib-0011",
+      "taxon": "Reference",
+      "title": "Chu, Haugseng — Homotopy-coherent algebra via Segal conditions",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Shapes, nerves, patterns"
+      },
+      "status": null,
+      "refs": [],
+      "file": "forest/bib-0011.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0012": {
+      "id": "bib-0012",
+      "taxon": "Reference",
+      "title": "Gepner, Haugseng — Enriched ∞-categories via non-symmetric ∞-operads",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Shapes, nerves, patterns"
+      },
+      "status": null,
+      "refs": [],
+      "file": "forest/bib-0012.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0013": {
+      "id": "bib-0013",
+      "taxon": "Reference",
+      "title": "Moerdijk, Weiss — Dendroidal sets",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Shapes, nerves, patterns"
+      },
+      "status": null,
+      "refs": [
+        "dec-kr-0003"
+      ],
+      "file": "forest/bib-0013.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0014": {
+      "id": "bib-0014",
+      "taxon": "Reference",
+      "title": "Kock — Polynomial functors and trees",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Shapes, nerves, patterns"
+      },
+      "status": null,
+      "refs": [
+        "dec-kr-0003"
+      ],
+      "file": "forest/bib-0014.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0015": {
+      "id": "bib-0015",
+      "taxon": "Reference",
+      "title": "Cisinski, Moerdijk — Dendroidal Segal spaces and ∞-operads",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Shapes, nerves, patterns"
+      },
+      "status": null,
+      "refs": [
+        "dec-sp-0006"
+      ],
+      "file": "forest/bib-0015.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0016": {
+      "id": "bib-0016",
+      "taxon": "Reference",
+      "title": "Ara, Cisinski, Moerdijk — The dendroidal category is a test category",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Shapes, nerves, patterns"
+      },
+      "status": null,
+      "refs": [
+        "ms-0007"
+      ],
+      "file": "forest/bib-0016.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0017": {
+      "id": "bib-0017",
+      "taxon": "Reference",
+      "title": "Heuts, Hinich, Moerdijk",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Shapes, nerves, patterns"
+      },
+      "status": null,
+      "refs": [],
+      "file": "forest/bib-0017.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0018": {
+      "id": "bib-0018",
+      "taxon": "Reference",
+      "title": "Berger",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Shapes, nerves, patterns"
+      },
+      "status": null,
+      "refs": [],
+      "file": "forest/bib-0018.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0019": {
+      "id": "bib-0019",
+      "taxon": "Reference",
+      "title": "Bergner, Rezk — Reedy categories and the Θ-construction",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Shapes, nerves, patterns"
+      },
+      "status": null,
+      "refs": [],
+      "file": "forest/bib-0019.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0020": {
+      "id": "bib-0020",
+      "taxon": "Reference",
+      "title": "Berger, Moerdijk — On an extension of the notion of Reedy category",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Shapes, nerves, patterns"
+      },
+      "status": null,
+      "refs": [],
+      "file": "forest/bib-0020.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0021": {
+      "id": "bib-0021",
+      "taxon": "Reference",
+      "title": "Grandis, Mauri — Cubical sets and their site",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Shapes, nerves, patterns"
+      },
+      "status": null,
+      "refs": [
+        "dec-kr-0009"
+      ],
+      "file": "forest/bib-0021.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0022": {
+      "id": "bib-0022",
+      "taxon": "Reference",
+      "title": "Brown, Higgins — On the algebra of cubes",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Shapes, nerves, patterns"
+      },
+      "status": null,
+      "refs": [],
+      "file": "forest/bib-0022.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0023": {
+      "id": "bib-0023",
+      "taxon": "Reference",
+      "title": "Simpson — Homotopy Theory of Higher Categories",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Homotopy theory and models"
+      },
+      "status": null,
+      "refs": [],
+      "file": "forest/bib-0023.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0024": {
+      "id": "bib-0024",
+      "taxon": "Reference",
+      "title": "Dwyer, Kan — Simplicial localizations of categories",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Homotopy theory and models"
+      },
+      "status": null,
+      "refs": [],
+      "file": "forest/bib-0024.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0025": {
+      "id": "bib-0025",
+      "taxon": "Reference",
+      "title": "Hirschhorn — Model Categories and Their Localizations",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Homotopy theory and models"
+      },
+      "status": null,
+      "refs": [],
+      "file": "forest/bib-0025.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0026": {
+      "id": "bib-0026",
+      "taxon": "Reference",
+      "title": "Barwick — Spectral Mackey functors and equivariant algebraic K-theory (I)",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Homotopy theory and models"
+      },
+      "status": null,
+      "refs": [],
+      "file": "forest/bib-0026.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0027": {
+      "id": "bib-0027",
+      "taxon": "Reference",
+      "title": "Rasekh — Yoneda lemma for simplicial spaces",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Homotopy theory and models"
+      },
+      "status": null,
+      "refs": [],
+      "file": "forest/bib-0027.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0028": {
+      "id": "bib-0028",
+      "taxon": "Reference",
+      "title": "Rezk — A model for the homotopy theory of homotopy theory",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Homotopy theory and models"
+      },
+      "status": null,
+      "refs": [],
+      "file": "forest/bib-0028.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0029": {
+      "id": "bib-0029",
+      "taxon": "Reference",
+      "title": "Hirschowitz, Simpson — Descente pour les n-champs",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Homotopy theory and models"
+      },
+      "status": null,
+      "refs": [
+        "dec-ch-0005"
+      ],
+      "file": "forest/bib-0029.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0030": {
+      "id": "bib-0030",
+      "taxon": "Reference",
+      "title": "Bergner — A model category structure on the category of simplicial categories",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Homotopy theory and models"
+      },
+      "status": null,
+      "refs": [],
+      "file": "forest/bib-0030.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0031": {
+      "id": "bib-0031",
+      "taxon": "Reference",
+      "title": "Joyal, Tierney — Quasi-categories vs Segal spaces",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Homotopy theory and models"
+      },
+      "status": null,
+      "refs": [
+        "dec-sp-0008"
+      ],
+      "file": "forest/bib-0031.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0032": {
+      "id": "bib-0032",
+      "taxon": "Reference",
+      "title": "Cisinski — Higher Categories and Homotopical Algebra",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Homotopy theory and models"
+      },
+      "status": null,
+      "refs": [],
+      "file": "forest/bib-0032.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0033": {
+      "id": "bib-0033",
+      "taxon": "Reference",
+      "title": "Kapulkin, Lumsdaine",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Homotopy theory and models"
+      },
+      "status": null,
+      "refs": [],
+      "file": "forest/bib-0033.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0034": {
+      "id": "bib-0034",
+      "taxon": "Reference",
+      "title": "Sattler — The equivalence extension property and model structures",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Homotopy theory and models"
+      },
+      "status": null,
+      "refs": [],
+      "file": "forest/bib-0034.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0035": {
+      "id": "bib-0035",
+      "taxon": "Reference",
+      "title": "Doherty, Kapulkin, Lindsey, Sattler — Cubical models of (∞,1)-categories",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Homotopy theory and models"
+      },
+      "status": null,
+      "refs": [],
+      "file": "forest/bib-0035.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0036": {
+      "id": "bib-0036",
+      "taxon": "Reference",
+      "title": "Lurie — Higher Topos Theory",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Homotopy theory and models"
+      },
+      "status": null,
+      "refs": [],
+      "file": "forest/bib-0036.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0037": {
+      "id": "bib-0037",
+      "taxon": "Reference",
+      "title": "Garner — Understanding the small object argument",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Homotopy theory and models"
+      },
+      "status": null,
+      "refs": [],
+      "file": "forest/bib-0037.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0038": {
+      "id": "bib-0038",
+      "taxon": "Reference",
+      "title": "Haugseng — ∞-operads via symmetric sequences",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Operads and `E_n`"
+      },
+      "status": null,
+      "refs": [],
+      "file": "forest/bib-0038.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0039": {
+      "id": "bib-0039",
+      "taxon": "Reference",
+      "title": "Fiedorowicz — The symmetric bar construction",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Operads and `E_n`"
+      },
+      "status": null,
+      "refs": [],
+      "file": "forest/bib-0039.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0040": {
+      "id": "bib-0040",
+      "taxon": "Reference",
+      "title": "Berger — Combinatorial models for real configuration spaces and E_n-operads",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Operads and `E_n`"
+      },
+      "status": null,
+      "refs": [],
+      "file": "forest/bib-0040.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0041": {
+      "id": "bib-0041",
+      "taxon": "Reference",
+      "title": "Smith — Simplicial group models for Ω^n S^n X",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Operads and `E_n`"
+      },
+      "status": null,
+      "refs": [],
+      "file": "forest/bib-0041.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0042": {
+      "id": "bib-0042",
+      "taxon": "Reference",
+      "title": "Zhang — Group operads and homotopy theory",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Operads and `E_n`"
+      },
+      "status": null,
+      "refs": [],
+      "file": "forest/bib-0042.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0043": {
+      "id": "bib-0043",
+      "taxon": "Reference",
+      "title": "May — The Geometry of Iterated Loop Spaces",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Operads and `E_n`"
+      },
+      "status": null,
+      "refs": [],
+      "file": "forest/bib-0043.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0044": {
+      "id": "bib-0044",
+      "taxon": "Reference",
+      "title": "Ahrens, Lumsdaine — Displayed categories",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Type theory and displayed structures"
+      },
+      "status": null,
+      "refs": [],
+      "file": "forest/bib-0044.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0045": {
+      "id": "bib-0045",
+      "taxon": "Reference",
+      "title": "New, Licata — A formal logic for formal category theory",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Type theory and displayed structures"
+      },
+      "status": null,
+      "refs": [],
+      "file": "forest/bib-0045.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0046": {
+      "id": "bib-0046",
+      "taxon": "Reference",
+      "title": "Sterling — forester",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Tooling"
+      },
+      "status": null,
+      "refs": [
+        "dec-wf-0001",
+        "dec-wf-0007"
+      ],
+      "file": "forest/bib-0046.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "bib-0047": {
+      "id": "bib-0047",
+      "taxon": "Reference",
+      "title": "Mathlib",
+      "tags": [
+        "reference"
+      ],
+      "meta": {
+        "origin": "design/09-bibliography.md",
+        "section": "Tooling"
+      },
+      "status": null,
+      "refs": [
+        "dec-kr-0002"
+      ],
+      "file": "forest/bib-0047.tree",
+      "backlinks": [
+        "bib-0000"
+      ]
+    },
+    "ch-0000": {
+      "id": "ch-0000",
+      "taxon": "Chapter",
+      "title": "00 · Charter",
+      "tags": [
+        "chapter"
+      ],
+      "meta": {
+        "origin": "design/00-charter.md",
+        "layer": "human"
+      },
+      "status": null,
+      "refs": [
+        "at-ft-0001",
+        "at-rt-0001",
+        "at-sp-0002",
+        "dec-ch-0001",
+        "dec-ch-0002",
+        "dec-ch-0003",
+        "dec-ch-0004",
+        "dec-ch-0005",
+        "dec-ch-0006",
+        "dec-ch-0007",
+        "dec-ch-0008",
+        "dec-ch-0009",
+        "dec-ch-0010",
+        "dec-ch-0011",
+        "dec-ch-0012",
+        "dec-ch-0013",
+        "dec-rt-0001",
+        "dec-rt-0006",
+        "dec-tl-0006",
+        "ft-0000"
+      ],
+      "file": "forest/ch-0000.tree",
+      "backlinks": [
+        "index",
+        "wf-0001"
+      ]
+    },
+    "dec-ch-0001": {
+      "id": "D-CH-01",
+      "taxon": "Decision",
+      "title": "D-CH-01 · Interface over implementation",
+      "tags": [
+        "decision",
+        "area:ch",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-CH-01",
+        "area": "charter",
+        "origin": "design/00-charter.md",
+        "status": "frozen",
+        "status-text": "frozen.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "dec-rt-0013",
+        "dec-tl-0006"
+      ],
+      "file": "forest/dec-ch-0001.tree",
+      "acceptance": [],
+      "backlinks": [
+        "ch-0000",
+        "index",
+        "rev-0000"
+      ]
+    },
+    "dec-ch-0002": {
+      "id": "D-CH-02",
+      "taxon": "Decision",
+      "title": "D-CH-02 · \"A, not the\"",
+      "tags": [
+        "decision",
+        "area:ch",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-CH-02",
+        "area": "charter",
+        "origin": "design/00-charter.md",
+        "status": "frozen",
+        "status-text": "frozen.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [],
+      "file": "forest/dec-ch-0002.tree",
+      "acceptance": [],
+      "backlinks": [
+        "ch-0000",
+        "dec-ft-0002",
+        "dec-rt-0007",
+        "dec-up-0006"
+      ]
+    },
+    "dec-ch-0003": {
+      "id": "D-CH-03",
+      "taxon": "Decision",
+      "title": "D-CH-03 · Unbiased and shape-indexed",
+      "tags": [
+        "decision",
+        "area:ch",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-CH-03",
+        "area": "charter",
+        "origin": "design/00-charter.md",
+        "status": "frozen",
+        "status-text": "frozen.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "dec-tl-0005"
+      ],
+      "file": "forest/dec-ch-0003.tree",
+      "acceptance": [],
+      "backlinks": [
+        "bib-0008",
+        "ch-0000",
+        "dec-rt-0010",
+        "dec-tl-0005",
+        "dec-up-0007"
+      ]
+    },
+    "dec-ch-0004": {
+      "id": "D-CH-04",
+      "taxon": "Decision",
+      "title": "D-CH-04 · Nothing special-cased",
+      "tags": [
+        "decision",
+        "area:ch",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-CH-04",
+        "area": "charter",
+        "origin": "design/00-charter.md",
+        "status": "frozen",
+        "status-text": "frozen.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "dec-rt-0001",
+        "dec-rt-0010",
+        "dec-sp-0004",
+        "ft-0000"
+      ],
+      "file": "forest/dec-ch-0004.tree",
+      "acceptance": [],
+      "backlinks": [
+        "ch-0000",
+        "dec-sp-0004"
+      ]
+    },
+    "dec-ch-0005": {
+      "id": "D-CH-05",
+      "taxon": "Decision",
+      "title": "D-CH-05 · ∞ first, Segal style, labelled, E1, augmented",
+      "tags": [
+        "decision",
+        "area:ch",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-CH-05",
+        "area": "charter",
+        "origin": "design/00-charter.md",
+        "status": "frozen",
+        "status-text": "frozen.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "dec-kr-0009",
+        "dec-rt-0001",
+        "dec-rt-0012",
+        "dec-sp-0009"
+      ],
+      "file": "forest/dec-ch-0005.tree",
+      "acceptance": [],
+      "backlinks": [
+        "bib-0029",
+        "ch-0000",
+        "rev-0000"
+      ]
+    },
+    "dec-ch-0006": {
+      "id": "D-CH-06",
+      "taxon": "Decision",
+      "title": "D-CH-06 · Definitions are the product",
+      "tags": [
+        "decision",
+        "area:ch",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-CH-06",
+        "area": "charter",
+        "origin": "design/00-charter.md",
+        "status": "frozen",
+        "status-text": "frozen.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [],
+      "file": "forest/dec-ch-0006.tree",
+      "acceptance": [],
+      "backlinks": [
+        "ch-0000",
+        "ft-0000"
+      ]
+    },
+    "dec-ch-0007": {
+      "id": "D-CH-07",
+      "taxon": "Decision",
+      "title": "D-CH-07 · Layering",
+      "tags": [
+        "decision",
+        "area:ch",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-CH-07",
+        "area": "charter",
+        "origin": "design/00-charter.md",
+        "status": "frozen",
+        "status-text": "frozen.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "dec-tl-0001"
+      ],
+      "file": "forest/dec-ch-0007.tree",
+      "acceptance": [],
+      "backlinks": [
+        "ch-0000",
+        "dec-tl-0001",
+        "dec-tl-0002",
+        "wf-0000"
+      ]
+    },
+    "dec-ch-0008": {
+      "id": "D-CH-08",
+      "taxon": "Decision",
+      "title": "D-CH-08 · Three stages",
+      "tags": [
+        "decision",
+        "area:ch",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-CH-08",
+        "area": "charter",
+        "origin": "design/00-charter.md",
+        "status": "frozen",
+        "status-text": "frozen.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "at-rt-0001",
+        "dec-ch-0012"
+      ],
+      "file": "forest/dec-ch-0008.tree",
+      "acceptance": [
+        "at-rt-0001"
+      ],
+      "backlinks": [
+        "at-rt-0001",
+        "ch-0000"
+      ]
+    },
+    "dec-ch-0009": {
+      "id": "D-CH-09",
+      "taxon": "Decision",
+      "title": "D-CH-09 · Hard seal",
+      "tags": [
+        "decision",
+        "area:ch",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-CH-09",
+        "area": "charter",
+        "origin": "design/00-charter.md",
+        "status": "frozen",
+        "status-text": "frozen.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "dec-rt-0013"
+      ],
+      "file": "forest/dec-ch-0009.tree",
+      "acceptance": [],
+      "backlinks": [
+        "ch-0000"
+      ]
+    },
+    "dec-ch-0010": {
+      "id": "D-CH-10",
+      "taxon": "Decision",
+      "title": "D-CH-10 · Full universe polymorphism",
+      "tags": [
+        "decision",
+        "area:ch",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-CH-10",
+        "area": "charter",
+        "origin": "design/00-charter.md",
+        "status": "frozen",
+        "status-text": "frozen (policy details provisional).",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "dec-rt-0012"
+      ],
+      "file": "forest/dec-ch-0010.tree",
+      "acceptance": [],
+      "backlinks": [
+        "ch-0000"
+      ]
+    },
+    "dec-ch-0011": {
+      "id": "D-CH-11",
+      "taxon": "Decision",
+      "title": "D-CH-11 · Dependencies",
+      "tags": [
+        "decision",
+        "area:ch",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-CH-11",
+        "area": "charter",
+        "origin": "design/00-charter.md",
+        "status": "frozen",
+        "status-text": "frozen.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [],
+      "file": "forest/dec-ch-0011.tree",
+      "acceptance": [],
+      "backlinks": [
+        "ch-0000"
+      ]
+    },
+    "dec-ch-0012": {
+      "id": "D-CH-12",
+      "taxon": "Decision",
+      "title": "D-CH-12 · Self-hosting and axiom-wlog",
+      "tags": [
+        "decision",
+        "area:ch",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-CH-12",
+        "area": "charter",
+        "origin": "design/00-charter.md",
+        "status": "frozen",
+        "status-text": "frozen.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "ms-0007"
+      ],
+      "file": "forest/dec-ch-0012.tree",
+      "acceptance": [],
+      "backlinks": [
+        "ch-0000",
+        "dec-ch-0008",
+        "dec-rt-0013",
+        "dec-tl-0006",
+        "ms-0007"
+      ]
+    },
+    "dec-ch-0013": {
+      "id": "D-CH-13",
+      "taxon": "Decision",
+      "title": "D-CH-13 · Closure and invariance",
+      "tags": [
+        "decision",
+        "area:ch",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-CH-13",
+        "area": "charter",
+        "origin": "design/00-charter.md",
+        "status": "frozen",
+        "status-text": "frozen.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [],
+      "file": "forest/dec-ch-0013.tree",
+      "acceptance": [],
+      "backlinks": [
+        "ch-0000",
+        "dec-kr-0010",
+        "dec-rt-0007",
+        "dec-rt-0013",
+        "dec-sp-0002",
+        "dec-sp-0004",
+        "rev-0000",
+        "rm-0000"
+      ]
+    },
+    "dec-ft-0001": {
+      "id": "D-FT-01",
+      "taxon": "Decision",
+      "title": "D-FT-01 · Augmented virtual ∞-equipment",
+      "tags": [
+        "decision",
+        "area:ft",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-FT-01",
+        "area": "formal theory",
+        "origin": "design/04-formal-theory.md",
+        "status": "frozen",
+        "status-text": "frozen at M5 (axiom transcription provisional).",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "at-ft-0001",
+        "at-ft-0002",
+        "dec-up-0001",
+        "ms-0005",
+        "up-0000"
+      ],
+      "file": "forest/dec-ft-0001.tree",
+      "acceptance": [
+        "at-ft-0001",
+        "at-ft-0002"
+      ],
+      "backlinks": [
+        "at-ft-0001",
+        "at-ft-0002",
+        "dec-rt-0012",
+        "ft-0000",
+        "ms-0005",
+        "rm-0000"
+      ]
+    },
+    "dec-ft-0002": {
+      "id": "D-FT-02",
+      "taxon": "Decision",
+      "title": "D-FT-02 · When composites exist",
+      "tags": [
+        "decision",
+        "area:ft",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-FT-02",
+        "area": "formal theory",
+        "origin": "design/04-formal-theory.md",
+        "status": "frozen",
+        "status-text": "frozen at M5.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "at-ft-0004",
+        "at-ft-0005",
+        "dec-ch-0002",
+        "dec-kr-0008",
+        "ms-0005"
+      ],
+      "file": "forest/dec-ft-0002.tree",
+      "acceptance": [
+        "at-ft-0004",
+        "at-ft-0005"
+      ],
+      "backlinks": [
+        "at-ft-0004",
+        "at-ft-0005",
+        "dec-kr-0008",
+        "dec-rt-0002",
+        "dec-sp-0008",
+        "ft-0000"
+      ]
+    },
+    "dec-ft-0003": {
+      "id": "D-FT-03",
+      "taxon": "Decision",
+      "title": "D-FT-03 · Theorem list, stated once",
+      "tags": [
+        "decision",
+        "area:ft",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-FT-03",
+        "area": "formal theory",
+        "origin": "design/04-formal-theory.md",
+        "status": "frozen",
+        "status-text": "frozen list; each item provisional until stated in Lean.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "at-ft-0001",
+        "at-ft-0006",
+        "at-ft-0007",
+        "dec-rt-0009",
+        "dec-rt-0012",
+        "dec-up-0004"
+      ],
+      "file": "forest/dec-ft-0003.tree",
+      "acceptance": [
+        "at-ft-0001",
+        "at-ft-0006",
+        "at-ft-0007"
+      ],
+      "backlinks": [
+        "at-ft-0001",
+        "at-ft-0006",
+        "at-ft-0007",
+        "dec-ft-0004",
+        "dec-up-0004",
+        "ft-0000",
+        "ms-0005",
+        "oq-ft-0002",
+        "rm-0000"
+      ]
+    },
+    "dec-ft-0004": {
+      "id": "D-FT-04",
+      "taxon": "Decision",
+      "title": "D-FT-04 · The set-level track in hP",
+      "tags": [
+        "decision",
+        "area:ft",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-FT-04",
+        "area": "formal theory",
+        "origin": "design/04-formal-theory.md",
+        "status": "frozen",
+        "status-text": "frozen at M5.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "at-ft-0008",
+        "dec-ft-0003",
+        "dec-rt-0005",
+        "ms-0005"
+      ],
+      "file": "forest/dec-ft-0004.tree",
+      "acceptance": [
+        "at-ft-0008"
+      ],
+      "backlinks": [
+        "at-ft-0008",
+        "dec-rt-0005",
+        "ft-0000",
+        "ms-0005",
+        "oq-ft-0002"
+      ]
+    },
+    "dec-ft-0005": {
+      "id": "D-FT-05",
+      "taxon": "Decision",
+      "title": "D-FT-05 · Cosmoi (later)",
+      "tags": [
+        "decision",
+        "area:ft",
+        "status:later"
+      ],
+      "meta": {
+        "id": "D-FT-05",
+        "area": "formal theory",
+        "origin": "design/04-formal-theory.md",
+        "status": "later",
+        "status-text": "later (M7).",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "later",
+      "refs": [
+        "at-ft-0009",
+        "dec-sp-0002",
+        "ms-0007"
+      ],
+      "file": "forest/dec-ft-0005.tree",
+      "acceptance": [
+        "at-ft-0009"
+      ],
+      "backlinks": [
+        "at-ft-0009",
+        "ft-0000",
+        "ms-0007"
+      ]
+    },
+    "dec-kr-0001": {
+      "id": "D-KR-01",
+      "taxon": "Decision",
+      "title": "D-KR-01 · What the kernel may contain",
+      "tags": [
+        "decision",
+        "area:kr",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-KR-01",
+        "area": "kernel",
+        "origin": "design/01-kernel.md",
+        "status": "frozen",
+        "status-text": "frozen.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "dec-kr-0003",
+        "dec-rt-0011"
+      ],
+      "file": "forest/dec-kr-0001.tree",
+      "acceptance": [],
+      "backlinks": [
+        "krn-0000",
+        "ms-0000"
+      ]
+    },
+    "dec-kr-0002": {
+      "id": "D-KR-02",
+      "taxon": "Decision",
+      "title": "D-KR-02 · Mathlib inventory (M0 task, AT-KR-0)",
+      "tags": [
+        "decision",
+        "area:kr",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-KR-02",
+        "area": "kernel",
+        "origin": "design/01-kernel.md",
+        "status": "frozen",
+        "status-text": "frozen.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "ms-0001"
+      ],
+      "file": "forest/dec-kr-0002.tree",
+      "acceptance": [],
+      "backlinks": [
+        "bib-0047",
+        "dec-kr-0010",
+        "krn-0000"
+      ]
+    },
+    "dec-kr-0003": {
+      "id": "D-KR-03",
+      "taxon": "Decision",
+      "title": "D-KR-03 · One recipe: monads with arities",
+      "tags": [
+        "decision",
+        "area:kr",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-KR-03",
+        "area": "kernel",
+        "origin": "design/01-kernel.md",
+        "status": "frozen",
+        "status-text": "frozen for Δ, Ω_p, Θ^aug_fc; provisional for Ω (pending the BMW check).",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "at-kr-0001",
+        "at-kr-0002",
+        "at-kr-0003",
+        "at-kr-0004",
+        "dec-kr-0004",
+        "dec-kr-0006",
+        "dec-kr-0008"
+      ],
+      "file": "forest/dec-kr-0003.tree",
+      "acceptance": [
+        "at-kr-0001",
+        "at-kr-0002",
+        "at-kr-0003",
+        "at-kr-0004"
+      ],
+      "backlinks": [
+        "at-kr-0001",
+        "at-kr-0002",
+        "at-kr-0003",
+        "at-kr-0004",
+        "bib-0013",
+        "bib-0014",
+        "dec-kr-0001",
+        "krn-0000",
+        "ms-0001",
+        "wf-0001"
+      ]
+    },
+    "dec-kr-0004": {
+      "id": "D-KR-04",
+      "taxon": "Decision",
+      "title": "D-KR-04 · Patterns and Segal cores",
+      "tags": [
+        "decision",
+        "area:kr",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-KR-04",
+        "area": "kernel",
+        "origin": "design/01-kernel.md",
+        "status": "frozen",
+        "status-text": "frozen.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "at-kr-0005",
+        "dec-kr-0005",
+        "dec-rt-0001"
+      ],
+      "file": "forest/dec-kr-0004.tree",
+      "acceptance": [
+        "at-kr-0005"
+      ],
+      "backlinks": [
+        "at-kr-0005",
+        "dec-kr-0003",
+        "dec-kr-0006",
+        "dec-rt-0001",
+        "krn-0000",
+        "ms-0001"
+      ]
+    },
+    "dec-kr-0005": {
+      "id": "D-KR-05",
+      "taxon": "Decision",
+      "title": "D-KR-05 · Reedy, elegant, generalized Reedy",
+      "tags": [
+        "decision",
+        "area:kr",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-KR-05",
+        "area": "kernel",
+        "origin": "design/01-kernel.md",
+        "status": "frozen",
+        "status-text": "frozen (the list of which shapes are elegant is provisional until AT-KR-6).",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "at-kr-0006",
+        "at-kr-0007",
+        "dec-kr-0007",
+        "dec-rt-0007"
+      ],
+      "file": "forest/dec-kr-0005.tree",
+      "acceptance": [
+        "at-kr-0006",
+        "at-kr-0007"
+      ],
+      "backlinks": [
+        "at-kr-0006",
+        "at-kr-0007",
+        "dec-kr-0004",
+        "dec-kr-0010",
+        "dec-rt-0007",
+        "dec-sp-0006",
+        "krn-0000",
+        "ms-0001"
+      ]
+    },
+    "dec-kr-0006": {
+      "id": "D-KR-06",
+      "taxon": "Decision",
+      "title": "D-KR-06 · G_fc and Θ^aug_fc",
+      "tags": [
+        "decision",
+        "area:kr",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-KR-06",
+        "area": "kernel",
+        "origin": "design/01-kernel.md",
+        "status": "frozen",
+        "status-text": "frozen (the exact list of incidence relations is provisional until formalized).",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "at-kr-0002",
+        "at-kr-0003",
+        "at-kr-0008",
+        "dec-kr-0004"
+      ],
+      "file": "forest/dec-kr-0006.tree",
+      "acceptance": [
+        "at-kr-0002",
+        "at-kr-0003",
+        "at-kr-0008"
+      ],
+      "backlinks": [
+        "at-kr-0002",
+        "at-kr-0003",
+        "at-kr-0008",
+        "dec-kr-0003",
+        "krn-0000",
+        "ms-0001",
+        "oq-kr-0002",
+        "rt-0000"
+      ]
+    },
+    "dec-kr-0007": {
+      "id": "D-KR-07",
+      "taxon": "Decision",
+      "title": "D-KR-07 · Labelled shapes \\code{Θ_{T,X}}",
+      "tags": [
+        "decision",
+        "area:kr",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-KR-07",
+        "area": "kernel",
+        "origin": "design/01-kernel.md",
+        "status": "frozen",
+        "status-text": "frozen.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "at-kr-0009"
+      ],
+      "file": "forest/dec-kr-0007.tree",
+      "acceptance": [
+        "at-kr-0009"
+      ],
+      "backlinks": [
+        "at-kr-0009",
+        "dec-kr-0005",
+        "krn-0000",
+        "rt-0000"
+      ]
+    },
+    "dec-kr-0008": {
+      "id": "D-KR-08",
+      "taxon": "Decision",
+      "title": "D-KR-08 · Other shapes",
+      "tags": [
+        "decision",
+        "area:kr",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-KR-08",
+        "area": "kernel",
+        "origin": "design/01-kernel.md",
+        "status": "frozen",
+        "status-text": "frozen.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "dec-ft-0002",
+        "dec-sp-0005",
+        "dec-sp-0009",
+        "dec-up-0003",
+        "ms-0001",
+        "ms-0006"
+      ],
+      "file": "forest/dec-kr-0008.tree",
+      "acceptance": [],
+      "backlinks": [
+        "dec-ft-0002",
+        "dec-kr-0003",
+        "dec-up-0003",
+        "krn-0000",
+        "rev-0000"
+      ]
+    },
+    "dec-kr-0009": {
+      "id": "D-KR-09",
+      "taxon": "Decision",
+      "title": "D-KR-09 · Cubes",
+      "tags": [
+        "decision",
+        "area:kr",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-KR-09",
+        "area": "kernel",
+        "origin": "design/01-kernel.md",
+        "status": "frozen",
+        "status-text": "frozen; later for any use beyond definition.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [],
+      "file": "forest/dec-kr-0009.tree",
+      "acceptance": [],
+      "backlinks": [
+        "bib-0021",
+        "dec-ch-0005",
+        "krn-0000",
+        "ms-0001"
+      ]
+    },
+    "dec-kr-0010": {
+      "id": "D-KR-10",
+      "taxon": "Decision",
+      "title": "D-KR-10 · Spaces are Kan complexes",
+      "tags": [
+        "decision",
+        "area:kr",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-KR-10",
+        "area": "kernel",
+        "origin": "design/01-kernel.md",
+        "status": "frozen",
+        "status-text": "frozen.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "at-kr-0010",
+        "dec-ch-0013",
+        "dec-kr-0002",
+        "dec-kr-0005",
+        "dec-sp-0001",
+        "dec-sp-0008"
+      ],
+      "file": "forest/dec-kr-0010.tree",
+      "acceptance": [
+        "at-kr-0010"
+      ],
+      "backlinks": [
+        "at-kr-0010",
+        "dec-rt-0001",
+        "dec-sp-0001",
+        "krn-0000",
+        "ms-0002",
+        "rev-0000"
+      ]
+    },
+    "dec-kr-0011": {
+      "id": "D-KR-11",
+      "taxon": "Decision",
+      "title": "D-KR-11 · Fibrant replacement (statement here, proof at M2)",
+      "tags": [
+        "decision",
+        "area:kr",
+        "status:provisional"
+      ],
+      "meta": {
+        "id": "D-KR-11",
+        "area": "kernel",
+        "origin": "design/01-kernel.md",
+        "status": "provisional",
+        "status-text": "provisional (proof strategy to be chosen at M2: Bergner-style small object argument along the elementary boundary inclusions is the default).",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "provisional",
+      "refs": [
+        "at-kr-0011",
+        "dec-rt-0006",
+        "dec-rt-0007",
+        "ms-0002"
+      ],
+      "file": "forest/dec-kr-0011.tree",
+      "acceptance": [
+        "at-kr-0011"
+      ],
+      "backlinks": [
+        "at-kr-0011",
+        "dec-rt-0007",
+        "krn-0000",
+        "ms-0002"
+      ]
+    },
+    "dec-rt-0001": {
+      "id": "D-RT-01",
+      "taxon": "Decision",
+      "title": "D-RT-01 · Virtual double ∞-category",
+      "tags": [
+        "decision",
+        "area:rt",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-RT-01",
+        "area": "root",
+        "origin": "design/02-root.md",
+        "status": "frozen",
+        "status-text": "frozen at M3.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "at-rt-0001",
+        "at-rt-0002",
+        "at-rt-0003",
+        "at-rt-0008",
+        "dec-kr-0004",
+        "dec-kr-0010",
+        "dec-rt-0007",
+        "dec-rt-0011",
+        "ms-0003",
+        "ms-0006"
+      ],
+      "file": "forest/dec-rt-0001.tree",
+      "acceptance": [
+        "at-rt-0001",
+        "at-rt-0002",
+        "at-rt-0003",
+        "at-rt-0008"
+      ],
+      "backlinks": [
+        "at-rt-0001",
+        "at-rt-0002",
+        "at-rt-0003",
+        "at-rt-0008",
+        "ch-0000",
+        "dec-ch-0004",
+        "dec-ch-0005",
+        "dec-kr-0004",
+        "dec-sp-0001",
+        "dec-up-0001",
+        "index",
+        "ms-0003",
+        "rt-0000",
+        "wf-0001"
+      ]
+    },
+    "dec-rt-0002": {
+      "id": "D-RT-02",
+      "taxon": "Decision",
+      "title": "D-RT-02 · Non-definition: what a VDC∞ is not",
+      "tags": [
+        "decision",
+        "area:rt",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-RT-02",
+        "area": "root",
+        "origin": "design/02-root.md",
+        "status": "frozen",
+        "status-text": "not stated in the source; frozen with D-RT-01 (port judgment call).",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "at-rt-0009",
+        "dec-ft-0002",
+        "ms-0006"
+      ],
+      "file": "forest/dec-rt-0002.tree",
+      "acceptance": [
+        "at-rt-0009"
+      ],
+      "backlinks": [
+        "at-rt-0009",
+        "rt-0000",
+        "wf-0001"
+      ]
+    },
+    "dec-rt-0003": {
+      "id": "D-RT-03",
+      "taxon": "Decision",
+      "title": "D-RT-03 · Maps and the 1-category VDC∞",
+      "tags": [
+        "decision",
+        "area:rt",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-RT-03",
+        "area": "root",
+        "origin": "design/02-root.md",
+        "status": "frozen",
+        "status-text": "frozen at M3.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "dec-rt-0008",
+        "ms-0003"
+      ],
+      "file": "forest/dec-rt-0003.tree",
+      "acceptance": [],
+      "backlinks": [
+        "rt-0000",
+        "wf-0001"
+      ]
+    },
+    "dec-rt-0004": {
+      "id": "D-RT-04",
+      "taxon": "Decision",
+      "title": "D-RT-04 · Vertical and horizontal parts",
+      "tags": [
+        "decision",
+        "area:rt",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-RT-04",
+        "area": "root",
+        "origin": "design/02-root.md",
+        "status": "frozen",
+        "status-text": "frozen at M3.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "dec-sp-0004",
+        "ms-0003"
+      ],
+      "file": "forest/dec-rt-0004.tree",
+      "acceptance": [],
+      "backlinks": [
+        "rt-0000"
+      ]
+    },
+    "dec-rt-0005": {
+      "id": "D-RT-05",
+      "taxon": "Decision",
+      "title": "D-RT-05 · The homotopy VDC hP",
+      "tags": [
+        "decision",
+        "area:rt",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-RT-05",
+        "area": "root",
+        "origin": "design/02-root.md",
+        "status": "frozen",
+        "status-text": "frozen at M3.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "at-rt-0004",
+        "dec-ft-0004",
+        "ms-0003"
+      ],
+      "file": "forest/dec-rt-0005.tree",
+      "acceptance": [
+        "at-rt-0004"
+      ],
+      "backlinks": [
+        "at-rt-0004",
+        "dec-ft-0004",
+        "rt-0000"
+      ]
+    },
+    "dec-rt-0006": {
+      "id": "D-RT-06",
+      "taxon": "Decision",
+      "title": "D-RT-06 · DK-equivalence",
+      "tags": [
+        "decision",
+        "area:rt",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-RT-06",
+        "area": "root",
+        "origin": "design/02-root.md",
+        "status": "frozen",
+        "status-text": "frozen at M3 (the clause list is provisional until AT-RT-5 is proved).",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "at-rt-0005",
+        "at-rt-0009",
+        "ms-0003",
+        "ms-0006"
+      ],
+      "file": "forest/dec-rt-0006.tree",
+      "acceptance": [
+        "at-rt-0005",
+        "at-rt-0009"
+      ],
+      "backlinks": [
+        "at-rt-0005",
+        "at-rt-0009",
+        "ch-0000",
+        "dec-kr-0011",
+        "rt-0000"
+      ]
+    },
+    "dec-rt-0007": {
+      "id": "D-RT-07",
+      "taxon": "Decision",
+      "title": "D-RT-07 · Fibrant objects and replacement",
+      "tags": [
+        "decision",
+        "area:rt",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-RT-07",
+        "area": "root",
+        "origin": "design/02-root.md",
+        "status": "frozen",
+        "status-text": "frozen at M3.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "dec-ch-0002",
+        "dec-ch-0013",
+        "dec-kr-0005",
+        "dec-kr-0011",
+        "ms-0003",
+        "oq-sp-0003"
+      ],
+      "file": "forest/dec-rt-0007.tree",
+      "acceptance": [],
+      "backlinks": [
+        "dec-kr-0005",
+        "dec-kr-0011",
+        "dec-rt-0001",
+        "dec-sp-0004",
+        "rev-0000",
+        "rt-0000"
+      ]
+    },
+    "dec-rt-0008": {
+      "id": "D-RT-08",
+      "taxon": "Decision",
+      "title": "D-RT-08 · Derived mapping spaces",
+      "tags": [
+        "decision",
+        "area:rt",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-RT-08",
+        "area": "root",
+        "origin": "design/02-root.md",
+        "status": "frozen",
+        "status-text": "frozen at M3.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "at-rt-0006",
+        "ms-0003"
+      ],
+      "file": "forest/dec-rt-0008.tree",
+      "acceptance": [
+        "at-rt-0006"
+      ],
+      "backlinks": [
+        "at-rt-0006",
+        "dec-rt-0003",
+        "dec-up-0002",
+        "rt-0000"
+      ]
+    },
+    "dec-rt-0009": {
+      "id": "D-RT-09",
+      "taxon": "Decision",
+      "title": "D-RT-09 · Walking structures and Mod",
+      "tags": [
+        "decision",
+        "area:rt",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-RT-09",
+        "area": "root",
+        "origin": "design/02-root.md",
+        "status": "frozen",
+        "status-text": "frozen at M3.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "at-ft-0003",
+        "at-rt-0007",
+        "dec-rt-0011",
+        "ms-0003"
+      ],
+      "file": "forest/dec-rt-0009.tree",
+      "acceptance": [
+        "at-ft-0003",
+        "at-rt-0007"
+      ],
+      "backlinks": [
+        "at-ft-0003",
+        "at-rt-0007",
+        "dec-ft-0003",
+        "rt-0000"
+      ]
+    },
+    "dec-rt-0010": {
+      "id": "D-RT-10",
+      "taxon": "Decision",
+      "title": "D-RT-10 · Mat(Set) and Category",
+      "tags": [
+        "decision",
+        "area:rt",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-RT-10",
+        "area": "root",
+        "origin": "design/02-root.md",
+        "status": "frozen",
+        "status-text": "frozen at M3.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "at-kr-0009",
+        "at-rt-0002",
+        "at-rt-0010",
+        "at-rt-0011",
+        "dec-ch-0003",
+        "dec-sp-0005",
+        "ms-0003"
+      ],
+      "file": "forest/dec-rt-0010.tree",
+      "acceptance": [
+        "at-kr-0009",
+        "at-rt-0002",
+        "at-rt-0010",
+        "at-rt-0011"
+      ],
+      "backlinks": [
+        "at-kr-0009",
+        "at-rt-0002",
+        "at-rt-0010",
+        "at-rt-0011",
+        "dec-ch-0004",
+        "dec-rt-0011",
+        "dec-rt-0013",
+        "dec-sp-0004",
+        "oq-rt-0003",
+        "rt-0000"
+      ]
+    },
+    "dec-rt-0011": {
+      "id": "D-RT-11",
+      "taxon": "Decision",
+      "title": "D-RT-11 · Discrete embedding and the self-hosting theorem",
+      "tags": [
+        "decision",
+        "area:rt",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-RT-11",
+        "area": "root",
+        "origin": "design/02-root.md",
+        "status": "frozen",
+        "status-text": "frozen at M3.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "at-kr-0008",
+        "at-rt-0001",
+        "at-rt-0003",
+        "dec-rt-0010",
+        "ms-0003"
+      ],
+      "file": "forest/dec-rt-0011.tree",
+      "acceptance": [
+        "at-kr-0008",
+        "at-rt-0001",
+        "at-rt-0003"
+      ],
+      "backlinks": [
+        "at-kr-0008",
+        "at-rt-0001",
+        "at-rt-0003",
+        "dec-kr-0001",
+        "dec-rt-0001",
+        "dec-rt-0009",
+        "rt-0000"
+      ]
+    },
+    "dec-rt-0012": {
+      "id": "D-RT-12",
+      "taxon": "Decision",
+      "title": "D-RT-12 · Universe policy",
+      "tags": [
+        "decision",
+        "area:rt",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-RT-12",
+        "area": "root",
+        "origin": "design/02-root.md",
+        "status": "frozen",
+        "status-text": "frozen (rules provisional).",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "dec-ft-0001",
+        "dec-sp-0001",
+        "ms-0006"
+      ],
+      "file": "forest/dec-rt-0012.tree",
+      "acceptance": [],
+      "backlinks": [
+        "dec-ch-0005",
+        "dec-ch-0010",
+        "dec-ft-0003",
+        "ms-0003",
+        "oq-sp-0001",
+        "rev-0000",
+        "rt-0000",
+        "wf-0001"
+      ]
+    },
+    "dec-rt-0013": {
+      "id": "D-RT-13",
+      "taxon": "Decision",
+      "title": "D-RT-13 · Interface and mechanism",
+      "tags": [
+        "decision",
+        "area:rt",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-RT-13",
+        "area": "root",
+        "origin": "design/02-root.md",
+        "status": "frozen",
+        "status-text": "frozen; the interface list is frozen at M3 (\"Interface v1\") and extended only by superseding decisions.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "dec-ch-0012",
+        "dec-ch-0013",
+        "dec-rt-0010",
+        "dec-sp-0004",
+        "dec-tl-0006",
+        "ms-0003"
+      ],
+      "file": "forest/dec-rt-0013.tree",
+      "acceptance": [],
+      "backlinks": [
+        "dec-ch-0001",
+        "dec-ch-0009",
+        "dec-tl-0007",
+        "dec-wf-0004",
+        "index",
+        "ms-0003",
+        "rev-0000",
+        "rm-0000",
+        "rt-0000",
+        "sp-0000"
+      ]
+    },
+    "dec-rt-0014": {
+      "id": "D-RT-14",
+      "taxon": "Decision",
+      "title": "D-RT-14 · Generated thin API for Category",
+      "tags": [
+        "decision",
+        "area:rt",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-RT-14",
+        "area": "root",
+        "origin": "design/02-root.md",
+        "status": "frozen",
+        "status-text": "frozen at M3 (contents provisional).",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "dec-tl-0002",
+        "ms-0003"
+      ],
+      "file": "forest/dec-rt-0014.tree",
+      "acceptance": [],
+      "backlinks": [
+        "ms-0003",
+        "rm-0000",
+        "rt-0000"
+      ]
+    },
+    "dec-sp-0001": {
+      "id": "D-SP-01",
+      "taxon": "Decision",
+      "title": "D-SP-01 · The universe",
+      "tags": [
+        "decision",
+        "area:sp",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-SP-01",
+        "area": "spaces and enrichment",
+        "origin": "design/05-spaces-enrichment.md",
+        "status": "frozen",
+        "status-text": "frozen at M6.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "at-sp-0001",
+        "dec-kr-0010",
+        "dec-rt-0001",
+        "ms-0006"
+      ],
+      "file": "forest/dec-sp-0001.tree",
+      "acceptance": [
+        "at-sp-0001"
+      ],
+      "backlinks": [
+        "at-sp-0001",
+        "dec-kr-0010",
+        "dec-rt-0012",
+        "dec-sp-0002",
+        "ms-0006",
+        "sp-0000"
+      ]
+    },
+    "dec-sp-0002": {
+      "id": "D-SP-02",
+      "taxon": "Decision",
+      "title": "D-SP-02 · The Segal category Kan",
+      "tags": [
+        "decision",
+        "area:sp",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-SP-02",
+        "area": "spaces and enrichment",
+        "origin": "design/05-spaces-enrichment.md",
+        "status": "frozen",
+        "status-text": "frozen at M6.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "at-sp-0002",
+        "dec-ch-0013",
+        "dec-sp-0001",
+        "dec-sp-0008",
+        "ms-0006",
+        "oq-sp-0003"
+      ],
+      "file": "forest/dec-sp-0002.tree",
+      "acceptance": [
+        "at-sp-0002"
+      ],
+      "backlinks": [
+        "at-sp-0002",
+        "dec-ft-0005",
+        "dec-sp-0004",
+        "rev-0000",
+        "sp-0000"
+      ]
+    },
+    "dec-sp-0003": {
+      "id": "D-SP-03",
+      "taxon": "Decision",
+      "title": "D-SP-03 · Enrichment over cartesian V",
+      "tags": [
+        "decision",
+        "area:sp",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-SP-03",
+        "area": "spaces and enrichment",
+        "origin": "design/05-spaces-enrichment.md",
+        "status": "frozen",
+        "status-text": "frozen.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "dec-sp-0007"
+      ],
+      "file": "forest/dec-sp-0003.tree",
+      "acceptance": [],
+      "backlinks": [
+        "sp-0000"
+      ]
+    },
+    "dec-sp-0004": {
+      "id": "D-SP-04",
+      "taxon": "Decision",
+      "title": "D-SP-04 · Mat(Kan) and ∞-categories",
+      "tags": [
+        "decision",
+        "area:sp",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-SP-04",
+        "area": "spaces and enrichment",
+        "origin": "design/05-spaces-enrichment.md",
+        "status": "frozen",
+        "status-text": "frozen at M6.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "at-rt-0008",
+        "at-sp-0003",
+        "at-sp-0008",
+        "dec-ch-0004",
+        "dec-ch-0013",
+        "dec-rt-0007",
+        "dec-rt-0010",
+        "dec-sp-0002",
+        "dec-up-0009",
+        "ms-0006",
+        "oq-sp-0003"
+      ],
+      "file": "forest/dec-sp-0004.tree",
+      "acceptance": [
+        "at-rt-0008",
+        "at-sp-0003",
+        "at-sp-0008"
+      ],
+      "backlinks": [
+        "at-rt-0008",
+        "at-sp-0003",
+        "at-sp-0008",
+        "dec-ch-0004",
+        "dec-rt-0004",
+        "dec-rt-0013",
+        "dec-sp-0006",
+        "sp-0000",
+        "up-0000"
+      ]
+    },
+    "dec-sp-0005": {
+      "id": "D-SP-05",
+      "taxon": "Decision",
+      "title": "D-SP-05 · Span(S) and Segal spaces",
+      "tags": [
+        "decision",
+        "area:sp",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-SP-05",
+        "area": "spaces and enrichment",
+        "origin": "design/05-spaces-enrichment.md",
+        "status": "frozen",
+        "status-text": "frozen at M6 (AT-SP-5 is a milestone, not a prerequisite).",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "at-sp-0004",
+        "at-sp-0005",
+        "dec-up-0004",
+        "dec-up-0006",
+        "ms-0006"
+      ],
+      "file": "forest/dec-sp-0005.tree",
+      "acceptance": [
+        "at-sp-0004",
+        "at-sp-0005"
+      ],
+      "backlinks": [
+        "at-sp-0004",
+        "at-sp-0005",
+        "dec-kr-0008",
+        "dec-rt-0010",
+        "ms-0005",
+        "rev-0000",
+        "sp-0000"
+      ]
+    },
+    "dec-sp-0006": {
+      "id": "D-SP-06",
+      "taxon": "Decision",
+      "title": "D-SP-06 · ∞-operads via Ω",
+      "tags": [
+        "decision",
+        "area:sp",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-SP-06",
+        "area": "spaces and enrichment",
+        "origin": "design/05-spaces-enrichment.md",
+        "status": "frozen",
+        "status-text": "frozen at M6.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "at-kr-0002",
+        "at-sp-0006",
+        "at-sp-0007",
+        "dec-kr-0005",
+        "dec-sp-0004",
+        "dec-sp-0009",
+        "ms-0006"
+      ],
+      "file": "forest/dec-sp-0006.tree",
+      "acceptance": [
+        "at-kr-0002",
+        "at-sp-0006",
+        "at-sp-0007"
+      ],
+      "backlinks": [
+        "at-kr-0002",
+        "at-sp-0006",
+        "at-sp-0007",
+        "bib-0015",
+        "dec-sp-0009",
+        "ms-0006",
+        "sp-0000"
+      ]
+    },
+    "dec-sp-0007": {
+      "id": "D-SP-07",
+      "taxon": "Decision",
+      "title": "D-SP-07 · General E1 enrichment (later)",
+      "tags": [
+        "decision",
+        "area:sp",
+        "status:later"
+      ],
+      "meta": {
+        "id": "D-SP-07",
+        "area": "spaces and enrichment",
+        "origin": "design/05-spaces-enrichment.md",
+        "status": "later",
+        "status-text": "later (M7).",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "later",
+      "refs": [
+        "ms-0007"
+      ],
+      "file": "forest/dec-sp-0007.tree",
+      "acceptance": [],
+      "backlinks": [
+        "dec-sp-0003",
+        "ms-0007",
+        "sp-0000"
+      ]
+    },
+    "dec-sp-0008": {
+      "id": "D-SP-08",
+      "taxon": "Decision",
+      "title": "D-SP-08 · The named mountain, comparisons, model structures",
+      "tags": [
+        "decision",
+        "area:sp",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-SP-08",
+        "area": "spaces and enrichment",
+        "origin": "design/05-spaces-enrichment.md",
+        "status": "frozen",
+        "status-text": "frozen list; the mountain and the first two are M6, the rest later.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "at-kr-0011",
+        "at-rt-0009",
+        "at-sp-0005",
+        "dec-ft-0002",
+        "dec-sp-0009",
+        "dec-up-0004",
+        "ms-0006",
+        "rm-0000"
+      ],
+      "file": "forest/dec-sp-0008.tree",
+      "acceptance": [
+        "at-kr-0011",
+        "at-rt-0009",
+        "at-sp-0005"
+      ],
+      "backlinks": [
+        "at-kr-0011",
+        "at-rt-0009",
+        "at-sp-0005",
+        "bib-0031",
+        "dec-kr-0010",
+        "dec-sp-0002",
+        "dec-sp-0009",
+        "ms-0007",
+        "rev-0000",
+        "sp-0000"
+      ]
+    },
+    "dec-sp-0009": {
+      "id": "D-SP-09",
+      "taxon": "Decision",
+      "title": "D-SP-09 · Symmetry via monads on the ambient: the horizontal Kleisli construction",
+      "tags": [
+        "decision",
+        "area:sp",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-SP-09",
+        "area": "spaces and enrichment",
+        "origin": "design/05-spaces-enrichment.md",
+        "status": "frozen",
+        "status-text": "frozen at M7 (definition), later (E_n for finite n ≥ 3).",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "at-sp-0009",
+        "at-sp-0010",
+        "at-sp-0011",
+        "at-sp-0013",
+        "dec-sp-0006",
+        "dec-sp-0008",
+        "ft-0000",
+        "ms-0007"
+      ],
+      "file": "forest/dec-sp-0009.tree",
+      "acceptance": [
+        "at-sp-0009",
+        "at-sp-0010",
+        "at-sp-0011",
+        "at-sp-0013"
+      ],
+      "backlinks": [
+        "at-sp-0009",
+        "at-sp-0010",
+        "at-sp-0011",
+        "at-sp-0013",
+        "dec-ch-0005",
+        "dec-kr-0008",
+        "dec-sp-0006",
+        "dec-sp-0008",
+        "ms-0007",
+        "rev-0000",
+        "sp-0000"
+      ]
+    },
+    "dec-tl-0001": {
+      "id": "D-TL-01",
+      "taxon": "Decision",
+      "title": "D-TL-01 · \"Agent-native\" is undefined",
+      "tags": [
+        "decision",
+        "area:tl",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-TL-01",
+        "area": "tooling",
+        "origin": "design/06-tooling.md",
+        "status": "frozen",
+        "status-text": "frozen (the meta-rule), everything it governs provisional.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "dec-ch-0007"
+      ],
+      "file": "forest/dec-tl-0001.tree",
+      "acceptance": [],
+      "backlinks": [
+        "dec-ch-0007",
+        "dec-tl-0008",
+        "dec-wf-0004",
+        "index",
+        "tl-0000",
+        "wf-0001"
+      ]
+    },
+    "dec-tl-0002": {
+      "id": "D-TL-02",
+      "taxon": "Decision",
+      "title": "D-TL-02 · The generated human layer",
+      "tags": [
+        "decision",
+        "area:tl",
+        "status:provisional"
+      ],
+      "meta": {
+        "id": "D-TL-02",
+        "area": "tooling",
+        "origin": "design/06-tooling.md",
+        "status": "provisional",
+        "status-text": "provisional (mechanism frozen, contents provisional).",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "provisional",
+      "refs": [
+        "dec-ch-0007",
+        "dec-wf-0001"
+      ],
+      "file": "forest/dec-tl-0002.tree",
+      "acceptance": [],
+      "backlinks": [
+        "dec-rt-0014",
+        "dec-up-0004",
+        "ms-0003",
+        "tl-0000"
+      ]
+    },
+    "dec-tl-0003": {
+      "id": "D-TL-03",
+      "taxon": "Decision",
+      "title": "D-TL-03 · to_dual",
+      "tags": [
+        "decision",
+        "area:tl",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-TL-03",
+        "area": "tooling",
+        "origin": "design/06-tooling.md",
+        "status": "frozen",
+        "status-text": "frozen (existence), provisional (translation table).",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "dec-up-0005",
+        "ms-0000",
+        "ms-0001",
+        "ms-0004"
+      ],
+      "file": "forest/dec-tl-0003.tree",
+      "acceptance": [],
+      "backlinks": [
+        "dec-up-0005",
+        "ms-0000",
+        "tl-0000",
+        "wf-0001"
+      ]
+    },
+    "dec-tl-0004": {
+      "id": "D-TL-04",
+      "taxon": "Decision",
+      "title": "D-TL-04 · witness_transport",
+      "tags": [
+        "decision",
+        "area:tl",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-TL-04",
+        "area": "tooling",
+        "origin": "design/06-tooling.md",
+        "status": "frozen",
+        "status-text": "frozen (existence), provisional (interface).",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "dec-up-0006"
+      ],
+      "file": "forest/dec-tl-0004.tree",
+      "acceptance": [],
+      "backlinks": [
+        "dec-up-0006",
+        "ms-0004",
+        "tl-0000"
+      ]
+    },
+    "dec-tl-0005": {
+      "id": "D-TL-05",
+      "taxon": "Decision",
+      "title": "D-TL-05 · extend",
+      "tags": [
+        "decision",
+        "area:tl",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-TL-05",
+        "area": "tooling",
+        "origin": "design/06-tooling.md",
+        "status": "frozen",
+        "status-text": "frozen (existence), provisional (interface).",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "dec-ch-0003",
+        "dec-up-0007"
+      ],
+      "file": "forest/dec-tl-0005.tree",
+      "acceptance": [],
+      "backlinks": [
+        "dec-ch-0003",
+        "ms-0004",
+        "tl-0000"
+      ]
+    },
+    "dec-tl-0006": {
+      "id": "D-TL-06",
+      "taxon": "Decision",
+      "title": "D-TL-06 · The seal linter and CI",
+      "tags": [
+        "decision",
+        "area:tl",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-TL-06",
+        "area": "tooling",
+        "origin": "design/06-tooling.md",
+        "status": "frozen",
+        "status-text": "frozen.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "dec-ch-0012",
+        "dec-wf-0001"
+      ],
+      "file": "forest/dec-tl-0006.tree",
+      "acceptance": [],
+      "backlinks": [
+        "ch-0000",
+        "dec-ch-0001",
+        "dec-rt-0013",
+        "ms-0000",
+        "tl-0000",
+        "wf-0001"
+      ]
+    },
+    "dec-tl-0007": {
+      "id": "D-TL-07",
+      "taxon": "Decision",
+      "title": "D-TL-07 · Performance rules",
+      "tags": [
+        "decision",
+        "area:tl",
+        "status:provisional"
+      ],
+      "meta": {
+        "id": "D-TL-07",
+        "area": "tooling",
+        "origin": "design/06-tooling.md",
+        "status": "provisional",
+        "status-text": "provisional.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "provisional",
+      "refs": [
+        "at-kr-0003",
+        "dec-rt-0013"
+      ],
+      "file": "forest/dec-tl-0007.tree",
+      "acceptance": [
+        "at-kr-0003"
+      ],
+      "backlinks": [
+        "at-kr-0003",
+        "rm-0000",
+        "tl-0000"
+      ]
+    },
+    "dec-tl-0008": {
+      "id": "D-TL-08",
+      "taxon": "Decision",
+      "title": "D-TL-08 · Naming and layout (provisional)",
+      "tags": [
+        "decision",
+        "area:tl",
+        "status:provisional"
+      ],
+      "meta": {
+        "id": "D-TL-08",
+        "area": "tooling",
+        "origin": "design/06-tooling.md",
+        "status": "provisional",
+        "status-text": "provisional.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "provisional",
+      "refs": [
+        "dec-tl-0001"
+      ],
+      "file": "forest/dec-tl-0008.tree",
+      "acceptance": [],
+      "backlinks": [
+        "ms-0000",
+        "tl-0000",
+        "wf-0001"
+      ]
+    },
+    "dec-up-0001": {
+      "id": "D-UP-01",
+      "taxon": "Decision",
+      "title": "D-UP-01 · Terminal objects",
+      "tags": [
+        "decision",
+        "area:up",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-UP-01",
+        "area": "universal properties",
+        "origin": "design/03-universal-properties.md",
+        "status": "frozen",
+        "status-text": "frozen.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "at-up-0001",
+        "dec-rt-0001",
+        "dec-up-0005",
+        "dec-up-0006"
+      ],
+      "file": "forest/dec-up-0001.tree",
+      "acceptance": [
+        "at-up-0001"
+      ],
+      "backlinks": [
+        "at-up-0001",
+        "dec-ft-0001",
+        "dec-up-0004",
+        "dec-up-0006",
+        "ms-0004",
+        "rev-0000",
+        "up-0000"
+      ]
+    },
+    "dec-up-0002": {
+      "id": "D-UP-02",
+      "taxon": "Decision",
+      "title": "D-UP-02 · Diagrams",
+      "tags": [
+        "decision",
+        "area:up",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-UP-02",
+        "area": "universal properties",
+        "origin": "design/03-universal-properties.md",
+        "status": "frozen",
+        "status-text": "frozen.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "dec-rt-0008",
+        "ms-0006"
+      ],
+      "file": "forest/dec-up-0002.tree",
+      "acceptance": [],
+      "backlinks": [
+        "up-0000"
+      ]
+    },
+    "dec-up-0003": {
+      "id": "D-UP-03",
+      "taxon": "Decision",
+      "title": "D-UP-03 · Joins and slices",
+      "tags": [
+        "decision",
+        "area:up",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-UP-03",
+        "area": "universal properties",
+        "origin": "design/03-universal-properties.md",
+        "status": "frozen",
+        "status-text": "frozen (the exact join used for commas is provisional).",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "at-up-0002",
+        "at-up-0003",
+        "dec-kr-0008"
+      ],
+      "file": "forest/dec-up-0003.tree",
+      "acceptance": [
+        "at-up-0002",
+        "at-up-0003"
+      ],
+      "backlinks": [
+        "at-up-0002",
+        "at-up-0003",
+        "dec-kr-0008",
+        "up-0000"
+      ]
+    },
+    "dec-up-0004": {
+      "id": "D-UP-04",
+      "taxon": "Decision",
+      "title": "D-UP-04 · Limits, and everything else, as terminal objects",
+      "tags": [
+        "decision",
+        "area:up",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-UP-04",
+        "area": "universal properties",
+        "origin": "design/03-universal-properties.md",
+        "status": "frozen",
+        "status-text": "frozen.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "at-up-0004",
+        "dec-ft-0003",
+        "dec-tl-0002",
+        "dec-up-0001"
+      ],
+      "file": "forest/dec-up-0004.tree",
+      "acceptance": [
+        "at-up-0004"
+      ],
+      "backlinks": [
+        "at-ft-0006",
+        "at-up-0004",
+        "dec-ft-0003",
+        "dec-sp-0005",
+        "dec-sp-0008",
+        "up-0000"
+      ]
+    },
+    "dec-up-0005": {
+      "id": "D-UP-05",
+      "taxon": "Decision",
+      "title": "D-UP-05 · Duality",
+      "tags": [
+        "decision",
+        "area:up",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-UP-05",
+        "area": "universal properties",
+        "origin": "design/03-universal-properties.md",
+        "status": "frozen",
+        "status-text": "frozen (scope clause provisional).",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "at-up-0005",
+        "dec-tl-0003",
+        "ft-0000"
+      ],
+      "file": "forest/dec-up-0005.tree",
+      "acceptance": [
+        "at-up-0005"
+      ],
+      "backlinks": [
+        "at-up-0005",
+        "dec-tl-0003",
+        "dec-up-0001",
+        "rev-0000",
+        "up-0000"
+      ]
+    },
+    "dec-up-0006": {
+      "id": "D-UP-06",
+      "taxon": "Decision",
+      "title": "D-UP-06 · Witness discipline",
+      "tags": [
+        "decision",
+        "area:up",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-UP-06",
+        "area": "universal properties",
+        "origin": "design/03-universal-properties.md",
+        "status": "frozen",
+        "status-text": "frozen.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "dec-ch-0002",
+        "dec-tl-0004",
+        "dec-up-0001"
+      ],
+      "file": "forest/dec-up-0006.tree",
+      "acceptance": [],
+      "backlinks": [
+        "dec-sp-0005",
+        "dec-tl-0004",
+        "dec-up-0001",
+        "rev-0000",
+        "up-0000"
+      ]
+    },
+    "dec-up-0007": {
+      "id": "D-UP-07",
+      "taxon": "Decision",
+      "title": "D-UP-07 · Extend along a shape inclusion",
+      "tags": [
+        "decision",
+        "area:up",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-UP-07",
+        "area": "universal properties",
+        "origin": "design/03-universal-properties.md",
+        "status": "frozen",
+        "status-text": "frozen.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "at-up-0006",
+        "at-up-0007",
+        "dec-ch-0003"
+      ],
+      "file": "forest/dec-up-0007.tree",
+      "acceptance": [
+        "at-up-0006",
+        "at-up-0007"
+      ],
+      "backlinks": [
+        "at-up-0006",
+        "at-up-0007",
+        "dec-tl-0005",
+        "up-0000",
+        "wf-0001"
+      ]
+    },
+    "dec-up-0008": {
+      "id": "D-UP-08",
+      "taxon": "Decision",
+      "title": "D-UP-08 · 1-level instances",
+      "tags": [
+        "decision",
+        "area:up",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-UP-08",
+        "area": "universal properties",
+        "origin": "design/03-universal-properties.md",
+        "status": "frozen",
+        "status-text": "frozen.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "at-up-0001",
+        "at-up-0007"
+      ],
+      "file": "forest/dec-up-0008.tree",
+      "acceptance": [
+        "at-up-0001",
+        "at-up-0007"
+      ],
+      "backlinks": [
+        "at-up-0001",
+        "at-up-0007",
+        "up-0000"
+      ]
+    },
+    "dec-up-0009": {
+      "id": "D-UP-09",
+      "taxon": "Decision",
+      "title": "D-UP-09 · 2-level: universal properties in Cat",
+      "tags": [
+        "decision",
+        "area:up",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-UP-09",
+        "area": "universal properties",
+        "origin": "design/03-universal-properties.md",
+        "status": "frozen",
+        "status-text": "frozen.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "at-up-0008",
+        "ft-0000"
+      ],
+      "file": "forest/dec-up-0009.tree",
+      "acceptance": [
+        "at-up-0008"
+      ],
+      "backlinks": [
+        "at-up-0008",
+        "dec-sp-0004",
+        "ms-0004",
+        "rev-0000",
+        "rm-0000",
+        "up-0000"
+      ]
+    },
+    "dec-wf-0001": {
+      "id": "D-WF-01",
+      "taxon": "Decision",
+      "title": "D-WF-01 · Generated nodes",
+      "tags": [
+        "decision",
+        "area:wf",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-WF-01",
+        "area": "forest and workflow",
+        "origin": "design/07-forest-workflow.md",
+        "status": "frozen",
+        "status-text": "frozen (fields provisional).",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [],
+      "file": "forest/dec-wf-0001.tree",
+      "acceptance": [],
+      "backlinks": [
+        "bib-0046",
+        "dec-tl-0002",
+        "dec-tl-0006",
+        "dec-wf-0002",
+        "dec-wf-0003",
+        "index",
+        "ms-0000",
+        "wf-0000",
+        "wf-0001"
+      ]
+    },
+    "dec-wf-0002": {
+      "id": "D-WF-02",
+      "taxon": "Decision",
+      "title": "D-WF-02 · Decision registry",
+      "tags": [
+        "decision",
+        "area:wf",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-WF-02",
+        "area": "forest and workflow",
+        "origin": "design/07-forest-workflow.md",
+        "status": "frozen",
+        "status-text": "frozen.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "dec-wf-0001"
+      ],
+      "file": "forest/dec-wf-0002.tree",
+      "acceptance": [],
+      "backlinks": [
+        "wf-0000",
+        "wf-0001"
+      ]
+    },
+    "dec-wf-0003": {
+      "id": "D-WF-03",
+      "taxon": "Decision",
+      "title": "D-WF-03 · Acceptance-test nodes",
+      "tags": [
+        "decision",
+        "area:wf",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-WF-03",
+        "area": "forest and workflow",
+        "origin": "design/07-forest-workflow.md",
+        "status": "frozen",
+        "status-text": "frozen.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "dec-wf-0001"
+      ],
+      "file": "forest/dec-wf-0003.tree",
+      "acceptance": [],
+      "backlinks": [
+        "index",
+        "wf-0000",
+        "wf-0001"
+      ]
+    },
+    "dec-wf-0004": {
+      "id": "D-WF-04",
+      "taxon": "Decision",
+      "title": "D-WF-04 · The agent loop",
+      "tags": [
+        "decision",
+        "area:wf",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-WF-04",
+        "area": "forest and workflow",
+        "origin": "design/07-forest-workflow.md",
+        "status": "frozen",
+        "status-text": "frozen.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [
+        "dec-rt-0013",
+        "dec-tl-0001",
+        "rm-0000"
+      ],
+      "file": "forest/dec-wf-0004.tree",
+      "acceptance": [],
+      "backlinks": [
+        "wf-0000"
+      ]
+    },
+    "dec-wf-0005": {
+      "id": "D-WF-05",
+      "taxon": "Decision",
+      "title": "D-WF-05 · Retrieval MCP",
+      "tags": [
+        "decision",
+        "area:wf",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-WF-05",
+        "area": "forest and workflow",
+        "origin": "design/07-forest-workflow.md",
+        "status": "frozen",
+        "status-text": "frozen (MVP tool list provisional).",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [],
+      "file": "forest/dec-wf-0005.tree",
+      "acceptance": [],
+      "backlinks": [
+        "ms-0000",
+        "rm-0000",
+        "wf-0000",
+        "wf-0001"
+      ]
+    },
+    "dec-wf-0006": {
+      "id": "D-WF-06",
+      "taxon": "Decision",
+      "title": "D-WF-06 · Human prose as a layer",
+      "tags": [
+        "decision",
+        "area:wf",
+        "status:frozen"
+      ],
+      "meta": {
+        "id": "D-WF-06",
+        "area": "forest and workflow",
+        "origin": "design/07-forest-workflow.md",
+        "status": "frozen",
+        "status-text": "frozen.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "frozen",
+      "refs": [],
+      "file": "forest/dec-wf-0006.tree",
+      "acceptance": [],
+      "backlinks": [
+        "ms-0000",
+        "wf-0000",
+        "wf-0001"
+      ]
+    },
+    "dec-wf-0007": {
+      "id": "D-WF-07",
+      "taxon": "Decision",
+      "title": "D-WF-07 · Addresses",
+      "tags": [
+        "decision",
+        "area:wf",
+        "status:provisional"
+      ],
+      "meta": {
+        "id": "D-WF-07",
+        "area": "forest and workflow",
+        "origin": "design/07-forest-workflow.md",
+        "status": "provisional",
+        "status-text": "provisional.",
+        "supersedes": "none",
+        "superseded-by": "none"
+      },
+      "status": "provisional",
+      "refs": [
+        "ms-0000"
+      ],
+      "file": "forest/dec-wf-0007.tree",
+      "acceptance": [],
+      "backlinks": [
+        "bib-0046",
+        "index",
+        "wf-0000",
+        "wf-0001"
+      ]
+    },
+    "ft-0000": {
+      "id": "ft-0000",
+      "taxon": "Chapter",
+      "title": "04 · Formal category theory (stage 2, ms-0005)",
+      "tags": [
+        "chapter"
+      ],
+      "meta": {
+        "origin": "design/04-formal-theory.md",
+        "layer": "human"
+      },
+      "status": null,
+      "refs": [
+        "at-ft-0001",
+        "at-ft-0002",
+        "at-ft-0003",
+        "at-ft-0004",
+        "at-ft-0005",
+        "at-ft-0006",
+        "at-ft-0007",
+        "at-ft-0008",
+        "at-ft-0009",
+        "dec-ch-0006",
+        "dec-ft-0001",
+        "dec-ft-0002",
+        "dec-ft-0003",
+        "dec-ft-0004",
+        "dec-ft-0005",
+        "ms-0005",
+        "ms-0006",
+        "oq-ft-0001",
+        "oq-ft-0002"
+      ],
+      "file": "forest/ft-0000.tree",
+      "backlinks": [
+        "ch-0000",
+        "dec-ch-0004",
+        "dec-sp-0009",
+        "dec-up-0005",
+        "dec-up-0009",
+        "index",
+        "wf-0001"
+      ]
+    },
+    "index": {
+      "id": "index",
+      "taxon": "Root",
+      "title": "Category Madness",
+      "tags": [
+        "index"
+      ],
+      "meta": {
+        "layer": "human"
+      },
+      "status": null,
+      "refs": [
+        "bib-0000",
+        "ch-0000",
+        "dec-ch-0001",
+        "dec-rt-0001",
+        "dec-rt-0013",
+        "dec-tl-0001",
+        "dec-wf-0001",
+        "dec-wf-0003",
+        "dec-wf-0007",
+        "ft-0000",
+        "krn-0000",
+        "ms-0000",
+        "ms-0001",
+        "ms-0002",
+        "ms-0003",
+        "ms-0004",
+        "ms-0005",
+        "ms-0006",
+        "ms-0007",
+        "ms-design",
+        "rev-0000",
+        "rm-0000",
+        "rt-0000",
+        "sp-0000",
+        "tl-0000",
+        "up-0000",
+        "wf-0000",
+        "wf-0001"
+      ],
+      "file": "forest/index.tree",
+      "backlinks": []
+    },
+    "krn-0000": {
+      "id": "krn-0000",
+      "taxon": "Chapter",
+      "title": "01 · Kernel (stage 0)",
+      "tags": [
+        "chapter"
+      ],
+      "meta": {
+        "origin": "design/01-kernel.md",
+        "layer": "human"
+      },
+      "status": null,
+      "refs": [
+        "at-kr-0000",
+        "at-kr-0001",
+        "at-kr-0002",
+        "at-kr-0003",
+        "at-kr-0004",
+        "at-kr-0005",
+        "at-kr-0006",
+        "at-kr-0007",
+        "at-kr-0008",
+        "at-kr-0009",
+        "at-kr-0010",
+        "at-kr-0011",
+        "dec-kr-0001",
+        "dec-kr-0002",
+        "dec-kr-0003",
+        "dec-kr-0004",
+        "dec-kr-0005",
+        "dec-kr-0006",
+        "dec-kr-0007",
+        "dec-kr-0008",
+        "dec-kr-0009",
+        "dec-kr-0010",
+        "dec-kr-0011",
+        "oq-kr-0001",
+        "oq-kr-0002",
+        "oq-kr-0003"
+      ],
+      "file": "forest/krn-0000.tree",
+      "backlinks": [
+        "index",
+        "wf-0001"
+      ]
+    },
+    "ms-0000": {
+      "id": "M0",
+      "taxon": "Milestone",
+      "title": "M0 · Skeleton",
+      "tags": [
+        "milestone"
+      ],
+      "meta": {
+        "id": "M0",
+        "origin": "design/08-roadmap.md",
+        "status": "planned"
+      },
+      "status": "planned",
+      "refs": [
+        "at-kr-0000",
+        "dec-kr-0001",
+        "dec-tl-0003",
+        "dec-tl-0006",
+        "dec-tl-0008",
+        "dec-wf-0001",
+        "dec-wf-0005",
+        "dec-wf-0006",
+        "wf-0000"
+      ],
+      "file": "forest/ms-0000.tree",
+      "backlinks": [
+        "bib-0000",
+        "dec-tl-0003",
+        "dec-wf-0007",
+        "index",
+        "rm-0000",
+        "wf-0000"
+      ]
+    },
+    "ms-0001": {
+      "id": "M1",
+      "taxon": "Milestone",
+      "title": "M1 · Shapes and patterns",
+      "tags": [
+        "milestone"
+      ],
+      "meta": {
+        "id": "M1",
+        "origin": "design/08-roadmap.md",
+        "status": "planned"
+      },
+      "status": "planned",
+      "refs": [
+        "at-kr-0001",
+        "at-kr-0002",
+        "at-kr-0003",
+        "at-kr-0004",
+        "at-kr-0005",
+        "at-kr-0006",
+        "at-kr-0007",
+        "at-kr-0008",
+        "at-kr-0009",
+        "dec-kr-0003",
+        "dec-kr-0004",
+        "dec-kr-0005",
+        "dec-kr-0006",
+        "dec-kr-0009",
+        "oq-kr-0001"
+      ],
+      "file": "forest/ms-0001.tree",
+      "backlinks": [
+        "dec-kr-0002",
+        "dec-kr-0008",
+        "dec-tl-0003",
+        "index",
+        "oq-kr-0001",
+        "rm-0000"
+      ]
+    },
+    "ms-0002": {
+      "id": "M2",
+      "taxon": "Milestone",
+      "title": "M2 · Kan machinery",
+      "tags": [
+        "milestone"
+      ],
+      "meta": {
+        "id": "M2",
+        "origin": "design/08-roadmap.md",
+        "status": "planned"
+      },
+      "status": "planned",
+      "refs": [
+        "at-kr-0010",
+        "at-kr-0011",
+        "dec-kr-0010",
+        "dec-kr-0011"
+      ],
+      "file": "forest/ms-0002.tree",
+      "backlinks": [
+        "dec-kr-0011",
+        "index",
+        "rm-0000"
+      ]
+    },
+    "ms-0003": {
+      "id": "M3",
+      "taxon": "Milestone",
+      "title": "M3 · The root and the seal",
+      "tags": [
+        "milestone"
+      ],
+      "meta": {
+        "id": "M3",
+        "origin": "design/08-roadmap.md",
+        "status": "planned"
+      },
+      "status": "planned",
+      "refs": [
+        "at-rt-0001",
+        "at-rt-0002",
+        "at-rt-0007",
+        "at-rt-0010",
+        "at-rt-0011",
+        "dec-rt-0001",
+        "dec-rt-0012",
+        "dec-rt-0013",
+        "dec-rt-0014",
+        "dec-tl-0002",
+        "ms-0006"
+      ],
+      "file": "forest/ms-0003.tree",
+      "backlinks": [
+        "dec-rt-0001",
+        "dec-rt-0003",
+        "dec-rt-0004",
+        "dec-rt-0005",
+        "dec-rt-0006",
+        "dec-rt-0007",
+        "dec-rt-0008",
+        "dec-rt-0009",
+        "dec-rt-0010",
+        "dec-rt-0011",
+        "dec-rt-0013",
+        "dec-rt-0014",
+        "index",
+        "rev-0000",
+        "rm-0000",
+        "wf-0001"
+      ]
+    },
+    "ms-0004": {
+      "id": "M4",
+      "taxon": "Milestone",
+      "title": "M4 · Universal properties",
+      "tags": [
+        "milestone"
+      ],
+      "meta": {
+        "id": "M4",
+        "origin": "design/08-roadmap.md",
+        "status": "planned"
+      },
+      "status": "planned",
+      "refs": [
+        "at-up-0001",
+        "at-up-0006",
+        "at-up-0007",
+        "dec-tl-0004",
+        "dec-tl-0005",
+        "dec-up-0001",
+        "dec-up-0009"
+      ],
+      "file": "forest/ms-0004.tree",
+      "backlinks": [
+        "dec-tl-0003",
+        "index",
+        "rm-0000",
+        "up-0000"
+      ]
+    },
+    "ms-0005": {
+      "id": "M5",
+      "taxon": "Milestone",
+      "title": "M5 · Formal theory",
+      "tags": [
+        "milestone"
+      ],
+      "meta": {
+        "id": "M5",
+        "origin": "design/08-roadmap.md",
+        "status": "planned"
+      },
+      "status": "planned",
+      "refs": [
+        "at-ft-0001",
+        "at-ft-0003",
+        "at-ft-0004",
+        "at-sp-0004",
+        "dec-ft-0001",
+        "dec-ft-0003",
+        "dec-ft-0004",
+        "dec-sp-0005",
+        "oq-ft-0002"
+      ],
+      "file": "forest/ms-0005.tree",
+      "backlinks": [
+        "dec-ft-0001",
+        "dec-ft-0002",
+        "dec-ft-0004",
+        "ft-0000",
+        "index",
+        "rm-0000"
+      ]
+    },
+    "ms-0006": {
+      "id": "M6",
+      "taxon": "Milestone",
+      "title": "M6 · Spaces and enrichment",
+      "tags": [
+        "milestone"
+      ],
+      "meta": {
+        "id": "M6",
+        "origin": "design/08-roadmap.md",
+        "status": "planned"
+      },
+      "status": "planned",
+      "refs": [
+        "at-ft-0004",
+        "at-rt-0008",
+        "at-sp-0001",
+        "at-sp-0004",
+        "at-sp-0005",
+        "at-sp-0008",
+        "at-sp-0012",
+        "dec-sp-0001",
+        "dec-sp-0006",
+        "oq-sp-0003"
+      ],
+      "file": "forest/ms-0006.tree",
+      "backlinks": [
+        "at-rt-0008",
+        "at-rt-0009",
+        "dec-kr-0008",
+        "dec-rt-0001",
+        "dec-rt-0002",
+        "dec-rt-0006",
+        "dec-rt-0012",
+        "dec-sp-0001",
+        "dec-sp-0002",
+        "dec-sp-0004",
+        "dec-sp-0005",
+        "dec-sp-0006",
+        "dec-sp-0008",
+        "dec-up-0002",
+        "ft-0000",
+        "index",
+        "ms-0003",
+        "rev-0000",
+        "rm-0000",
+        "sp-0000"
+      ]
+    },
+    "ms-0007": {
+      "id": "M7",
+      "taxon": "Milestone",
+      "title": "M7 · Later",
+      "tags": [
+        "milestone"
+      ],
+      "meta": {
+        "id": "M7",
+        "origin": "design/08-roadmap.md",
+        "status": "planned"
+      },
+      "status": "planned",
+      "refs": [
+        "at-ft-0009",
+        "at-sp-0009",
+        "at-sp-0011",
+        "at-sp-0013",
+        "dec-ch-0012",
+        "dec-ft-0005",
+        "dec-sp-0007",
+        "dec-sp-0008",
+        "dec-sp-0009"
+      ],
+      "file": "forest/ms-0007.tree",
+      "backlinks": [
+        "at-ft-0009",
+        "bib-0016",
+        "dec-ch-0012",
+        "dec-ft-0005",
+        "dec-sp-0007",
+        "dec-sp-0009",
+        "index",
+        "rev-0000",
+        "rm-0000"
+      ]
+    },
+    "ms-design": {
+      "id": "Phase −1",
+      "taxon": "Milestone",
+      "title": "Phase −1 · These documents",
+      "tags": [
+        "milestone"
+      ],
+      "meta": {
+        "id": "Phase −1",
+        "origin": "design/08-roadmap.md",
+        "status": "planned"
+      },
+      "status": "planned",
+      "refs": [],
+      "file": "forest/ms-design.tree",
+      "backlinks": [
+        "index",
+        "rm-0000",
+        "wf-0001"
+      ]
+    },
+    "oq-ft-0001": {
+      "id": "OQ-FT-1",
+      "taxon": "Open question",
+      "title": "OQ-FT-1",
+      "tags": [
+        "open-question",
+        "area:ft",
+        "status:open"
+      ],
+      "meta": {
+        "id": "OQ-FT-1",
+        "area": "formal theory",
+        "origin": "design/04-formal-theory.md",
+        "status": "open"
+      },
+      "status": "open",
+      "refs": [],
+      "file": "forest/oq-ft-0001.tree",
+      "backlinks": [
+        "ft-0000"
+      ]
+    },
+    "oq-ft-0002": {
+      "id": "OQ-FT-2",
+      "taxon": "Open question",
+      "title": "OQ-FT-2",
+      "tags": [
+        "open-question",
+        "area:ft",
+        "status:open"
+      ],
+      "meta": {
+        "id": "OQ-FT-2",
+        "area": "formal theory",
+        "origin": "design/04-formal-theory.md",
+        "status": "open"
+      },
+      "status": "open",
+      "refs": [
+        "dec-ft-0003",
+        "dec-ft-0004"
+      ],
+      "file": "forest/oq-ft-0002.tree",
+      "backlinks": [
+        "ft-0000",
+        "ms-0005"
+      ]
+    },
+    "oq-kr-0001": {
+      "id": "OQ-KR-1",
+      "taxon": "Open question",
+      "title": "OQ-KR-1",
+      "tags": [
+        "open-question",
+        "area:kr",
+        "status:open"
+      ],
+      "meta": {
+        "id": "OQ-KR-1",
+        "area": "kernel",
+        "origin": "design/01-kernel.md",
+        "status": "open"
+      },
+      "status": "open",
+      "refs": [
+        "ms-0001"
+      ],
+      "file": "forest/oq-kr-0001.tree",
+      "backlinks": [
+        "krn-0000",
+        "ms-0001"
+      ]
+    },
+    "oq-kr-0002": {
+      "id": "OQ-KR-2",
+      "taxon": "Open question",
+      "title": "OQ-KR-2",
+      "tags": [
+        "open-question",
+        "area:kr",
+        "status:open"
+      ],
+      "meta": {
+        "id": "OQ-KR-2",
+        "area": "kernel",
+        "origin": "design/01-kernel.md",
+        "status": "open"
+      },
+      "status": "open",
+      "refs": [
+        "dec-kr-0006"
+      ],
+      "file": "forest/oq-kr-0002.tree",
+      "backlinks": [
+        "krn-0000"
+      ]
+    },
+    "oq-kr-0003": {
+      "id": "OQ-KR-3",
+      "taxon": "Open question",
+      "title": "OQ-KR-3",
+      "tags": [
+        "open-question",
+        "area:kr",
+        "status:open"
+      ],
+      "meta": {
+        "id": "OQ-KR-3",
+        "area": "kernel",
+        "origin": "design/01-kernel.md",
+        "status": "open"
+      },
+      "status": "open",
+      "refs": [],
+      "file": "forest/oq-kr-0003.tree",
+      "backlinks": [
+        "krn-0000"
+      ]
+    },
+    "oq-rt-0001": {
+      "id": "OQ-RT-1",
+      "taxon": "Open question",
+      "title": "OQ-RT-1",
+      "tags": [
+        "open-question",
+        "area:rt",
+        "status:open"
+      ],
+      "meta": {
+        "id": "OQ-RT-1",
+        "area": "root",
+        "origin": "design/02-root.md",
+        "status": "open"
+      },
+      "status": "open",
+      "refs": [],
+      "file": "forest/oq-rt-0001.tree",
+      "backlinks": [
+        "rm-0000",
+        "rt-0000"
+      ]
+    },
+    "oq-rt-0002": {
+      "id": "OQ-RT-2",
+      "taxon": "Open question",
+      "title": "OQ-RT-2",
+      "tags": [
+        "open-question",
+        "area:rt",
+        "status:open"
+      ],
+      "meta": {
+        "id": "OQ-RT-2",
+        "area": "root",
+        "origin": "design/02-root.md",
+        "status": "open"
+      },
+      "status": "open",
+      "refs": [],
+      "file": "forest/oq-rt-0002.tree",
+      "backlinks": [
+        "rt-0000"
+      ]
+    },
+    "oq-rt-0003": {
+      "id": "OQ-RT-3",
+      "taxon": "Open question",
+      "title": "OQ-RT-3",
+      "tags": [
+        "open-question",
+        "area:rt",
+        "status:open"
+      ],
+      "meta": {
+        "id": "OQ-RT-3",
+        "area": "root",
+        "origin": "design/02-root.md",
+        "status": "open"
+      },
+      "status": "open",
+      "refs": [
+        "dec-rt-0010"
+      ],
+      "file": "forest/oq-rt-0003.tree",
+      "backlinks": [
+        "rt-0000"
+      ]
+    },
+    "oq-sp-0001": {
+      "id": "OQ-SP-1",
+      "taxon": "Open question",
+      "title": "OQ-SP-1",
+      "tags": [
+        "open-question",
+        "area:sp",
+        "status:open"
+      ],
+      "meta": {
+        "id": "OQ-SP-1",
+        "area": "spaces and enrichment",
+        "origin": "design/05-spaces-enrichment.md",
+        "status": "open"
+      },
+      "status": "open",
+      "refs": [
+        "dec-rt-0012"
+      ],
+      "file": "forest/oq-sp-0001.tree",
+      "backlinks": [
+        "sp-0000",
+        "wf-0001"
+      ]
+    },
+    "oq-sp-0002": {
+      "id": "OQ-SP-2",
+      "taxon": "Open question",
+      "title": "OQ-SP-2",
+      "tags": [
+        "open-question",
+        "area:sp",
+        "status:open"
+      ],
+      "meta": {
+        "id": "OQ-SP-2",
+        "area": "spaces and enrichment",
+        "origin": "design/05-spaces-enrichment.md",
+        "status": "open"
+      },
+      "status": "open",
+      "refs": [
+        "at-sp-0001"
+      ],
+      "file": "forest/oq-sp-0002.tree",
+      "backlinks": [
+        "sp-0000"
+      ]
+    },
+    "oq-sp-0003": {
+      "id": "OQ-SP-3",
+      "taxon": "Open question",
+      "title": "OQ-SP-3",
+      "tags": [
+        "open-question",
+        "area:sp",
+        "status:open"
+      ],
+      "meta": {
+        "id": "OQ-SP-3",
+        "area": "spaces and enrichment",
+        "origin": "design/05-spaces-enrichment.md",
+        "status": "open"
+      },
+      "status": "open",
+      "refs": [
+        "at-kr-0011"
+      ],
+      "file": "forest/oq-sp-0003.tree",
+      "backlinks": [
+        "dec-rt-0007",
+        "dec-sp-0002",
+        "dec-sp-0004",
+        "ms-0006",
+        "rev-0000",
+        "sp-0000"
+      ]
+    },
+    "oq-up-0001": {
+      "id": "OQ-UP-1",
+      "taxon": "Open question",
+      "title": "OQ-UP-1",
+      "tags": [
+        "open-question",
+        "area:up",
+        "status:open"
+      ],
+      "meta": {
+        "id": "OQ-UP-1",
+        "area": "universal properties",
+        "origin": "design/03-universal-properties.md",
+        "status": "open"
+      },
+      "status": "open",
+      "refs": [],
+      "file": "forest/oq-up-0001.tree",
+      "backlinks": [
+        "up-0000"
+      ]
+    },
+    "oq-up-0002": {
+      "id": "OQ-UP-2",
+      "taxon": "Open question",
+      "title": "OQ-UP-2",
+      "tags": [
+        "open-question",
+        "area:up",
+        "status:open"
+      ],
+      "meta": {
+        "id": "OQ-UP-2",
+        "area": "universal properties",
+        "origin": "design/03-universal-properties.md",
+        "status": "open"
+      },
+      "status": "open",
+      "refs": [],
+      "file": "forest/oq-up-0002.tree",
+      "backlinks": [
+        "up-0000"
+      ]
+    },
+    "rev-0000": {
+      "id": "rev-0000",
+      "taxon": "Chapter",
+      "title": "10 · Adversarial review (phase −1) and disposition",
+      "tags": [
+        "chapter"
+      ],
+      "meta": {
+        "origin": "design/10-adversarial-review.md",
+        "layer": "human"
+      },
+      "status": null,
+      "refs": [
+        "at-kr-0006",
+        "at-rt-0005",
+        "at-sp-0008",
+        "at-sp-0012",
+        "at-up-0008",
+        "dec-ch-0001",
+        "dec-ch-0005",
+        "dec-ch-0013",
+        "dec-kr-0008",
+        "dec-kr-0010",
+        "dec-rt-0007",
+        "dec-rt-0012",
+        "dec-rt-0013",
+        "dec-sp-0002",
+        "dec-sp-0005",
+        "dec-sp-0008",
+        "dec-sp-0009",
+        "dec-up-0001",
+        "dec-up-0005",
+        "dec-up-0006",
+        "dec-up-0009",
+        "ms-0003",
+        "ms-0006",
+        "ms-0007",
+        "oq-sp-0003"
+      ],
+      "file": "forest/rev-0000.tree",
+      "backlinks": [
+        "index",
+        "wf-0001"
+      ]
+    },
+    "rm-0000": {
+      "id": "rm-0000",
+      "taxon": "Chapter",
+      "title": "08 · Roadmap",
+      "tags": [
+        "chapter"
+      ],
+      "meta": {
+        "origin": "design/08-roadmap.md",
+        "layer": "human"
+      },
+      "status": null,
+      "refs": [
+        "at-ft-0001",
+        "at-kr-0006",
+        "at-kr-0011",
+        "at-rt-0005",
+        "at-sp-0008",
+        "at-sp-0012",
+        "at-up-0008",
+        "dec-ch-0013",
+        "dec-ft-0001",
+        "dec-ft-0003",
+        "dec-rt-0013",
+        "dec-rt-0014",
+        "dec-tl-0007",
+        "dec-up-0009",
+        "dec-wf-0005",
+        "ms-0000",
+        "ms-0001",
+        "ms-0002",
+        "ms-0003",
+        "ms-0004",
+        "ms-0005",
+        "ms-0006",
+        "ms-0007",
+        "ms-design",
+        "oq-rt-0001"
+      ],
+      "file": "forest/rm-0000.tree",
+      "backlinks": [
+        "dec-sp-0008",
+        "dec-wf-0004",
+        "index",
+        "wf-0000",
+        "wf-0001"
+      ]
+    },
+    "rt-0000": {
+      "id": "rt-0000",
+      "taxon": "Chapter",
+      "title": "02 · Root (stage 1)",
+      "tags": [
+        "chapter"
+      ],
+      "meta": {
+        "origin": "design/02-root.md",
+        "layer": "human"
+      },
+      "status": null,
+      "refs": [
+        "at-rt-0001",
+        "at-rt-0002",
+        "at-rt-0003",
+        "at-rt-0004",
+        "at-rt-0005",
+        "at-rt-0006",
+        "at-rt-0007",
+        "at-rt-0008",
+        "at-rt-0009",
+        "at-rt-0010",
+        "at-rt-0011",
+        "dec-kr-0006",
+        "dec-kr-0007",
+        "dec-rt-0001",
+        "dec-rt-0002",
+        "dec-rt-0003",
+        "dec-rt-0004",
+        "dec-rt-0005",
+        "dec-rt-0006",
+        "dec-rt-0007",
+        "dec-rt-0008",
+        "dec-rt-0009",
+        "dec-rt-0010",
+        "dec-rt-0011",
+        "dec-rt-0012",
+        "dec-rt-0013",
+        "dec-rt-0014",
+        "oq-rt-0001",
+        "oq-rt-0002",
+        "oq-rt-0003"
+      ],
+      "file": "forest/rt-0000.tree",
+      "backlinks": [
+        "index",
+        "wf-0001"
+      ]
+    },
+    "sp-0000": {
+      "id": "sp-0000",
+      "taxon": "Chapter",
+      "title": "05 · Spaces and enrichment (stage 2, ms-0006)",
+      "tags": [
+        "chapter"
+      ],
+      "meta": {
+        "origin": "design/05-spaces-enrichment.md",
+        "layer": "human"
+      },
+      "status": null,
+      "refs": [
+        "at-sp-0001",
+        "at-sp-0002",
+        "at-sp-0003",
+        "at-sp-0004",
+        "at-sp-0005",
+        "at-sp-0006",
+        "at-sp-0007",
+        "at-sp-0008",
+        "at-sp-0009",
+        "at-sp-0010",
+        "at-sp-0011",
+        "at-sp-0012",
+        "at-sp-0013",
+        "dec-rt-0013",
+        "dec-sp-0001",
+        "dec-sp-0002",
+        "dec-sp-0003",
+        "dec-sp-0004",
+        "dec-sp-0005",
+        "dec-sp-0006",
+        "dec-sp-0007",
+        "dec-sp-0008",
+        "dec-sp-0009",
+        "ms-0006",
+        "oq-sp-0001",
+        "oq-sp-0002",
+        "oq-sp-0003"
+      ],
+      "file": "forest/sp-0000.tree",
+      "backlinks": [
+        "index",
+        "wf-0001"
+      ]
+    },
+    "tl-0000": {
+      "id": "tl-0000",
+      "taxon": "Chapter",
+      "title": "06 · Tooling",
+      "tags": [
+        "chapter"
+      ],
+      "meta": {
+        "origin": "design/06-tooling.md",
+        "layer": "human"
+      },
+      "status": null,
+      "refs": [
+        "dec-tl-0001",
+        "dec-tl-0002",
+        "dec-tl-0003",
+        "dec-tl-0004",
+        "dec-tl-0005",
+        "dec-tl-0006",
+        "dec-tl-0007",
+        "dec-tl-0008"
+      ],
+      "file": "forest/tl-0000.tree",
+      "backlinks": [
+        "index",
+        "wf-0001"
+      ]
+    },
+    "up-0000": {
+      "id": "up-0000",
+      "taxon": "Chapter",
+      "title": "03 · Universal properties (stage 2, ms-0004)",
+      "tags": [
+        "chapter"
+      ],
+      "meta": {
+        "origin": "design/03-universal-properties.md",
+        "layer": "human"
+      },
+      "status": null,
+      "refs": [
+        "dec-sp-0004",
+        "dec-up-0001",
+        "dec-up-0002",
+        "dec-up-0003",
+        "dec-up-0004",
+        "dec-up-0005",
+        "dec-up-0006",
+        "dec-up-0007",
+        "dec-up-0008",
+        "dec-up-0009",
+        "ms-0004",
+        "oq-up-0001",
+        "oq-up-0002"
+      ],
+      "file": "forest/up-0000.tree",
+      "backlinks": [
+        "dec-ft-0001",
+        "index",
+        "wf-0001"
+      ]
+    },
+    "wf-0000": {
+      "id": "wf-0000",
+      "taxon": "Chapter",
+      "title": "07 · Forest and workflow",
+      "tags": [
+        "chapter"
+      ],
+      "meta": {
+        "origin": "design/07-forest-workflow.md",
+        "layer": "human"
+      },
+      "status": null,
+      "refs": [
+        "dec-ch-0007",
+        "dec-wf-0001",
+        "dec-wf-0002",
+        "dec-wf-0003",
+        "dec-wf-0004",
+        "dec-wf-0005",
+        "dec-wf-0006",
+        "dec-wf-0007",
+        "ms-0000",
+        "rm-0000"
+      ],
+      "file": "forest/wf-0000.tree",
+      "backlinks": [
+        "index",
+        "ms-0000",
+        "wf-0001"
+      ]
+    },
+    "wf-0001": {
+      "id": "wf-0001",
+      "taxon": "Report",
+      "title": "Porting report: phase −1 documents → forest (M0)",
+      "tags": [
+        "workflow",
+        "port"
+      ],
+      "meta": {
+        "origin": "scripts/port_design.py",
+        "milestone": "M0",
+        "layer": "human"
+      },
+      "status": null,
+      "refs": [
+        "at-kr-0000",
+        "at-kr-0002",
+        "at-up-0006",
+        "bib-0000",
+        "bib-0001",
+        "ch-0000",
+        "dec-kr-0003",
+        "dec-rt-0001",
+        "dec-rt-0002",
+        "dec-rt-0003",
+        "dec-rt-0012",
+        "dec-tl-0001",
+        "dec-tl-0003",
+        "dec-tl-0006",
+        "dec-tl-0008",
+        "dec-up-0007",
+        "dec-wf-0001",
+        "dec-wf-0002",
+        "dec-wf-0003",
+        "dec-wf-0005",
+        "dec-wf-0006",
+        "dec-wf-0007",
+        "ft-0000",
+        "krn-0000",
+        "ms-0003",
+        "ms-design",
+        "oq-sp-0001",
+        "rev-0000",
+        "rm-0000",
+        "rt-0000",
+        "sp-0000",
+        "tl-0000",
+        "up-0000",
+        "wf-0000"
+      ],
+      "file": "forest/wf-0001.tree",
+      "backlinks": [
+        "index"
+      ]
+    }
+  }
+}

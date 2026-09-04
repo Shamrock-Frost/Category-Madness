@@ -1,0 +1,13 @@
+\title{AT-FT-6 · Weighted limits with unit weight are the limits of → D-UP-04}
+\taxon{Acceptance test}
+\meta{id}{AT-FT-6}
+\meta{area}{formal theory}
+\meta{origin}{design/04-formal-theory.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:ft}
+\tag{status:unstated}
+
+\p{Weighted limits with unit weight are the limits of → \ref{dec-up-0004}.}
+\p{Named by: \ref{dec-ft-0003}.}
+\p{\em{Lean declaration(s):} none yet.}

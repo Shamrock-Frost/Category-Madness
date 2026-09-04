@@ -1,0 +1,46 @@
+\title{D-RT-13 · Interface and mechanism}
+\taxon{Decision}
+\meta{id}{D-RT-13}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen; the interface \em{list} is frozen at M3 ("Interface v1") and extended only by superseding decisions.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:rt}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{\code{Interface/} exports, and \code{Theory/} may use, exactly:}
+  \ul{
+    \li{\strong{Shapes as categories}: Δ, Δ₊, Ω_p, Ω, Θ^aug_fc, Θ_n, Δ×Δ, □ as \code{Category}s in the sense of \ref{dec-rt-0010}, with their generating morphisms, relations, inert/active factorization, degrees, Segal cores, and labelled variants — as sealed constants plus API lemmas.}
+    \li{\strong{Spaces}: \code{Space} (Kan complexes), maps, homotopy, homotopy equivalence, \code{π₀}, contractibility, fibrations and fibre products, mapping spaces — sealed.}
+    \li{\strong{Root}: \code{VDC∞}, maps, \code{Vert}, \code{Hor}, \code{hP}, DK-equivalence, fibrant, fibrant replacement (existence), \code{Map}.}
+    \li{\strong{Constructions}: \code{N} (discrete embedding), walking structures, \code{Monad}, \code{Bimodule}, \code{Mod}, \code{Mat Set}, \code{Category}, \code{Cat}, the self-hosting theorem.}
+    \li{\strong{Closure and rectification} (→ \ref{dec-ch-0013}), as theorems: \code{Mat Set} is fibrant (trivially); \code{Mod} preserves fibrancy; slices, functor objects (mapping Segal categories), and fibre products along fibrations preserve fibrancy; exponentials of fibrant objects by cofibrant ones are fibrant; the pushout-product and Reedy lemmas needed to prove such statements in \code{Theory/}; DK-invariance of \code{Mod}, \code{Vert}, \code{Hor}, \code{hP}; rectification: for a strict (Segal, not necessarily fibrant) \code{P}, strict maps \code{N W → P} composed with \code{P → RP} hit every component of \code{Map(N W, P)} (Dwyer–Kan/Bergner rigidification in the case \code{P = Mat Kan}, → \ref{dec-sp-0004}). Later interface versions add the same package for \code{Mat Kan}, \code{Span}, and limits.}
+    \li{\strong{Nothing else.} No \code{SSet}, no \code{SimplexCategory}, no Mathlib \code{Functor}.}
+  }
+  \p{Extension policy, two tiers:}
+  \ul{
+    \li{\strong{Constants} (new sealed data or new shapes) are frozen-tier: a superseding decision.}
+    \li{\strong{Lemmas} statable in interface vocabulary and provable in \code{Root/} are provisional-tier: an agent may add them by PR without a decision, subject to the statement-hygiene check (3). This is expected to be the dominant kind of change after \ref{ms-0003}, and making it cheap is what keeps the seal from making the human the bottleneck.}
+  }
+  \p{Mechanism:}
+  \ol{
+    \li{Data whose definitional equations are never needed in \code{Theory/} are \code{opaque} constants with their kernel implementation as the inhabitation witness.}
+    \li{Data whose equations \em{are} needed as API are \code{@[irreducible]} definitions with equation lemmas \code{foo_def} that are \code{private} to \code{Root/}; the exported API consists of theorems proved in \code{Root/} using those lemmas.}
+    \li{Every exported theorem is stated purely in interface vocabulary. A CI grep enforces that \code{Interface/} mentions no kernel or Mathlib category-theory names in statements.}
+    \li{The \strong{swap test} (→ \ref{dec-tl-0006}): a second \code{Interface-Stub/} in which every constant is a bodiless \code{axiom} with the same statement; \code{Theory/} must build against it.}
+    \li{A build variant that uses the stub instead of the kernel for speed; the kernel build is the consistency witness and runs nightly.}
+  }
+}
+\subtree{
+  \title{Rationale}
+  \p{\code{opaque} is the hard seal; \code{@[irreducible]} + private equations is the soft seal that still allows API lemmas to be proved once; the swap test is the proof that no leak exists, and it is what "axiom wlog" (→ \ref{dec-ch-0012}) means operationally.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen; the interface \em{list} is frozen at \ref{ms-0003} ("Interface v1") and extended only by superseding decisions.}
+}

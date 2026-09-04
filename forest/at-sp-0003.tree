@@ -1,0 +1,13 @@
+\title{AT-SP-3 · Monads in \code{Mat(Kan)} at \code{A} are Segal categories with object set \code{A}}
+\taxon{Acceptance test}
+\meta{id}{AT-SP-3}
+\meta{area}{spaces and enrichment}
+\meta{origin}{design/05-spaces-enrichment.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:sp}
+\tag{status:unstated}
+
+\p{Monads in \code{Mat(Kan)} at \code{A} are Segal categories with object set \code{A}.}
+\p{Named by: \ref{dec-sp-0004}.}
+\p{\em{Lean declaration(s):} none yet.}

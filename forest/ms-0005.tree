@@ -1,0 +1,20 @@
+\title{M5 · Formal theory}
+\taxon{Milestone}
+\meta{id}{M5}
+\meta{origin}{design/08-roadmap.md}
+\meta{status}{planned}
+\tag{milestone}
+
+\ul{
+  \li{\ref{dec-ft-0001}…\ref{dec-ft-0004} stated; \ref{dec-ft-0003} items proved first in \code{hP}, then coherently (\ref{oq-ft-0002}).}
+  \li{\code{Span(S)} for Segal categories with finite limits (\ref{dec-sp-0005} statement, \ref{at-sp-0004}).}
+  \li{\ref{at-ft-0001}…\ref{at-ft-0003}, 5…8 proved; \ref{at-ft-0004} stated.}
+}
+\subtree{
+  \title{Freeze}
+  \p{Augmented virtual ∞-equipment definition; the theorem list \ref{dec-ft-0003}.}
+}
+\subtree{
+  \title{Exit}
+  \p{The formal theory instantiates to classical statements in \code{Cat} with no separate proofs.}
+}

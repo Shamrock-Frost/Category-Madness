@@ -1,0 +1,23 @@
+\title{M1 · Shapes and patterns}
+\taxon{Milestone}
+\meta{id}{M1}
+\meta{origin}{design/08-roadmap.md}
+\meta{status}{planned}
+\tag{milestone}
+
+\ul{
+  \li{BMW "monads with arities" and the general nerve theorem (\ref{at-kr-0002}).}
+  \li{Δ ≅ \code{SimplexCategory} (\ref{at-kr-0001}); Δ₊ and joins; \code{Δ_X} (\ref{at-kr-0009}).}
+  \li{\code{G_fc}, set-level augmented VDCs, free augmented VDCs, \code{Θ^aug_fc}, \code{Θ_{fc,X}} (\ref{dec-kr-0006}/07), explicit presentation (\ref{at-kr-0003}), nerve theorem instance (\ref{at-kr-0008}).}
+  \li{Ω_p, Ω (\ref{dec-kr-0003}; \ref{oq-kr-0001} resolved), Δ×Δ, Θ_n (\ref{at-kr-0004}), □ (\ref{dec-kr-0009}).}
+  \li{Pattern structures and Segal cores (\ref{dec-kr-0004}, \ref{at-kr-0005}).}
+  \li{Reedy/elegance/EZ (\ref{dec-kr-0005}, \ref{at-kr-0006}, \ref{at-kr-0007}).}
+}
+\subtree{
+  \title{Freeze}
+  \p{Shape definitions and their pattern structures; the shape part of the interface list.}
+}
+\subtree{
+  \title{Exit}
+  \p{\ref{at-kr-0001}…\ref{at-kr-0009} proved.}
+}

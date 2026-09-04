@@ -1,0 +1,21 @@
+\title{D-WF-07 · Addresses}
+\taxon{Decision}
+\meta{id}{D-WF-07}
+\meta{area}{forest and workflow}
+\meta{origin}{design/07-forest-workflow.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:wf}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{Nested address scheme by area and sub-area, e.g. \code{krn-shp-0012} (kernel/shapes), \code{rt-vdc-0003} (root/vdc), \code{up-lim-0007}, \code{ft-yon-0002}, \code{sp-univ-0001}, \code{tl-lint-0004}, \code{wf-mcp-0001}, \code{dec-0031} (decisions), \code{at-0044} (acceptance tests), \code{ms-0003} (milestones), \code{oq-0012} (open questions); generated declaration nodes \code{lean-<hash8>}. The \ref{ms-0000} porting agent adapts this to forester v5's addressing and records the mapping from the \code{D-}/\code{AT-}/\code{OQ-} IDs used here.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional.}
+}

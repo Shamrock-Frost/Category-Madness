@@ -1,0 +1,21 @@
+\title{D-FT-05 · Cosmoi (later)}
+\taxon{Decision}
+\meta{id}{D-FT-05}
+\meta{area}{formal theory}
+\meta{origin}{design/04-formal-theory.md}
+\meta{status}{later}
+\meta{status-text}{later (M7).}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:ft}
+\tag{status:later}
+
+\subtree{
+  \title{Decision}
+  \p{An ∞-cosmos is defined as a category enriched in Segal categories (through the strict simplicial-category model, → \ref{dec-sp-0002}) with the Riehl–Verity limits and isofibrations, adapted to the Segal-category model; its homotopy 2-category and its virtual equipment of modules are compared with \code{hP} for \code{P = Mod(Mat Kan)} (\ref{at-ft-0009}).}
+}
+\subtree{
+  \title{Status}
+  \p{later (\ref{ms-0007}).}
+}

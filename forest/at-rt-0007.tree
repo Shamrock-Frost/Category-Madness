@@ -1,0 +1,13 @@
+\title{AT-RT-7 · \code{Mod(P)} is a VDC∞}
+\taxon{Acceptance test}
+\meta{id}{AT-RT-7}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:rt}
+\tag{status:unstated}
+
+\p{\code{Mod(P)} is a VDC∞.}
+\p{Named by: \ref{dec-rt-0009}.}
+\p{\em{Lean declaration(s):} none yet.}

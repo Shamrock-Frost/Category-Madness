@@ -1,0 +1,35 @@
+\title{D-UP-04 · Limits, and everything else, as terminal objects}
+\taxon{Decision}
+\meta{id}{D-UP-04}
+\meta{area}{universal properties}
+\meta{origin}{design/03-universal-properties.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:up}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \ul{
+    \li{\code{Limit F := Terminal (C_{/F})}; \code{HasLimit F : Prop := Nonempty (Limit F)}.}
+    \li{\code{Product (x_i)_{i ∈ I}} for a set \code{I} is \code{Limit} of the discrete diagram; there is no binary-product API at this layer (binary is an \code{abbrev} in the human layer, → \ref{dec-tl-0002}).}
+    \li{\code{Representation P := Terminal (El P)} for a presheaf \code{P} (a profunctor \code{C ⇸ 1}; the profunctor form is → \ref{dec-ft-0003}).}
+    \li{\code{RightAdjointAt F y := Terminal (F ↓ y)}; an adjunction is a family of these together with the induced functor, and in the formal theory it is \code{companion ≃ conjoint} (→ \ref{dec-ft-0003}).}
+    \li{Right Kan extension along \code{i : J → J'} of \code{F : N J → C} at \code{j'}: \code{Limit} of the restriction of \code{F} to the slice \code{(j' ↓ i)}; pointwise by definition; existence propositions as \code{Nonempty}.}
+  }
+}
+\subtree{
+  \title{Rationale}
+  \p{One universal property, many witness categories. Uniqueness, transport and the contractibility of witnesses are inherited from \ref{dec-up-0001} in every case.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-up-0004}: each specializes to the classical notion for discrete \code{C}.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen.}
+}

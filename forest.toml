@@ -1,0 +1,7 @@
+# forester (v5) configuration — D-WF-01…07.
+# Handwritten trees live in forest/; generated declaration nodes (lake exe forest-export,
+# D-WF-01) will be emitted into build/forest/ and are never checked in.
+[forest]
+trees = ["forest", "build/forest"]
+assets = ["forest/assets"]
+theme = "theme"          # a forester theme checked out separately; see forest/index.tree

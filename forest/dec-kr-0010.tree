@@ -1,0 +1,29 @@
+\title{D-KR-10 · Spaces are Kan complexes}
+\taxon{Decision}
+\meta{id}{D-KR-10}
+\meta{area}{kernel}
+\meta{origin}{design/01-kernel.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:kr}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{The kernel provides: Kan complexes; Kan fibrations and trivial fibrations as lifting properties; anodyne maps; simplicial homotopy (an equivalence relation on maps into Kan complexes); homotopy equivalences; \code{π₀}; contractibility; mapping spaces \code{L^K} and the exponential law; the pushout-product lemma (needed for \code{U^{Δ[1]} → U × U} fibrations, → \ref{dec-sp-0001}); homotopy fibre products via path spaces and the lemma that a strict fibre product along a fibration is a homotopy fibre product; Reedy fibrancy for \code{sSet}-valued presheaves on the shapes of \ref{dec-kr-0005}; the fact that discrete presheaves are Reedy fibrant and every map of discrete simplicial sets is a Kan fibration. Sourced from Mathlib wherever the inventory (\ref{dec-kr-0002}) finds it. The \strong{closure package} (→ \ref{dec-ch-0013}), proved here and exported through the interface: mapping spaces of presheaves \code{Map(A, P)} for \code{A ↪ B} a monomorphism and \code{P} Reedy fibrant give Kan fibrations \code{Map(B,P) → Map(A,P)}; exponentials of Reedy fibrant objects by cofibrant ones are Reedy fibrant; fibre products along Reedy fibrations are Reedy fibrant; a Kan fibration with contractible fibres over every vertex is a trivial fibration; homotopy invariance of \code{Map} in both variables among cofibrant sources and fibrant targets.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Every definition in \code{Root/} is stated with these words and nothing heavier. Model structures are not needed for definitions and appear only as theorems (→ \ref{dec-sp-0008}). The closure package is what lets \code{Theory/} prove that its own constructions preserve fibrancy without seeing the kernel.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-kr-0010}: the standard closure properties (composition, pullback, retract, exponentials) for Kan and trivial fibrations, as a Lean theorem list.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen.}
+}

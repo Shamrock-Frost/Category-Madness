@@ -1,0 +1,13 @@
+\title{AT-RT-2 · \code{Mat(Set)} is a VDC∞}
+\taxon{Acceptance test}
+\meta{id}{AT-RT-2}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:rt}
+\tag{status:unstated}
+
+\p{\code{Mat(Set)} is a VDC∞.}
+\p{Named by: \ref{dec-rt-0001}, \ref{dec-rt-0010}.}
+\p{\em{Lean declaration(s):} none yet.}

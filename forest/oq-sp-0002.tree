@@ -1,0 +1,12 @@
+\title{OQ-SP-2}
+\taxon{Open question}
+\meta{id}{OQ-SP-2}
+\meta{area}{spaces and enrichment}
+\meta{origin}{design/05-spaces-enrichment.md}
+\meta{status}{open}
+\tag{open-question}
+\tag{area:sp}
+\tag{status:open}
+
+\p{Whether to prove \ref{at-sp-0001} via Cisinski, Sattler, or minimal fibrations.}
+\p{\em{Resolution:} open. Decided by the human; record the answer as a decision node that this node then cites.}

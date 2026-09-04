@@ -1,0 +1,60 @@
+\title{Porting report: phase −1 documents → forest (M0)}
+\taxon{Report}
+\meta{origin}{scripts/port_design.py}
+\meta{milestone}{M0}
+\meta{layer}{human}
+\tag{workflow}
+\tag{port}
+
+\p{This node records how the phase −1 design documents (\code{design/*.md}, now frozen as history) were ported into this forest, per the porting instructions in \ref{wf-0000} and \ref{dec-wf-0007}. The port was done by \code{scripts/port_design.py}, a deterministic one-shot script kept as the audit trail; it is \em{not} run in CI, because provisional nodes are amended in place (\ref{dec-tl-0001}) and regenerating from the frozen markdown would clobber those amendments.}
+
+\subtree{
+  \title{Address scheme (adaptation of D-WF-07)}
+  \p{\ref{dec-wf-0007} proposes flat sequential numbering (\code{dec-0031}) with a recorded mapping. The port instead embeds the identifier in the address, so that a citation in a PR or a commit message resolves to a node with no lookup table:}
+  \table{
+    \tr{\th{Identifier}\th{Address}\th{Example}}
+    \tr{\td{\code{D-<AREA>-<nn>}}\td{\code{dec-<area>-<nnnn>}}\td{\code{D-RT-03} → \ref{dec-rt-0003}}}
+    \tr{\td{\code{AT-<AREA>-<n>}}\td{\code{at-<area>-<nnnn>}}\td{\code{AT-KR-2} → \ref{at-kr-0002}}}
+    \tr{\td{\code{OQ-<AREA>-<n>}}\td{\code{oq-<area>-<nnnn>}}\td{\code{OQ-SP-1} → \ref{oq-sp-0001}}}
+    \tr{\td{\code{M<n>}}\td{\code{ms-<nnnn>}}\td{\code{M3} → \ref{ms-0003}; phase −1 → \ref{ms-design}}}
+    \tr{\td{chapter (one per design document)}\td{\code{<area>-0000}}\td{\ref{ch-0000}, \ref{krn-0000}, \ref{rt-0000}, \ref{up-0000}, \ref{ft-0000}, \ref{sp-0000}, \ref{tl-0000}, \ref{wf-0000}, \ref{rm-0000}, \ref{bib-0000}, \ref{rev-0000}}}
+    \tr{\td{bibliography entry}\td{\code{bib-<nnnn>}}\td{document order, \ref{bib-0001} onwards}}
+    \tr{\td{generated Lean declaration}\td{\code{lean-<hash8>}}\td{not yet produced (\ref{dec-wf-0001})}}
+  }
+  \p{The sub-area addresses of \ref{dec-wf-0007} (\code{krn-shp-0012}, \code{up-lim-0007}, …) are reserved for handwritten prose nodes below chapter level and are unused at M0. The mapping is also in \code{forest/registry.json} under \code{id-to-address}. \ref{dec-wf-0007} is provisional; this report is the amendment it anticipates.}
+}
+
+\subtree{
+  \title{What each node carries}
+  \ul{
+    \li{\strong{Decision} nodes (\ref{dec-wf-0002} fields): \code{meta} entries \code{id}, \code{area}, \code{origin} (source file), \code{status} (\code{frozen} / \code{provisional} / \code{later} / \code{superseded}), \code{status-text} (the full status sentence, e.g. "frozen at M3"), \code{supersedes}, \code{superseded-by}; subtrees \em{Decision}, \em{Rationale}, \em{Rejected}, \em{Acceptance}, \em{Status} and any extra field the source had (\em{Consequence}, \em{Theorem targets}, \em{Note on E1}, \em{Not viable, and why}). Rationale and Rejected are verbatim: inline markup was translated, words were not changed. Acceptance-test references are links; "affected declarations" (backlinks from generated nodes) arrive with \ref{dec-wf-0001}.}
+    \li{\strong{Acceptance test} nodes (\ref{dec-wf-0003}): the informal statement, the decisions that name it, a placeholder for the Lean declaration(s), status \code{unstated}.}
+    \li{\strong{Open question} nodes: the question, status \code{open}, and the rule that the human's answer becomes a decision node which the question then cites.}
+    \li{\strong{Milestone} nodes: the deliverable list, \em{Freeze}, \em{Exit}.}
+    \li{\strong{Chapter} nodes: the prose of each design document with every decision, acceptance test and open question transcluded in place (\ref{dec-wf-0006}).}
+  }
+}
+
+\subtree{
+  \title{Gaps and judgment calls (for the human)}
+  \ul{
+    \li{\strong{Frozen status vs. "frozen at M<n>".} The documents freeze many decisions at a future milestone ("frozen at M3"). The port records \code{status = frozen} with the full sentence in \code{status-text}. Reading: the decision is frozen \em{now} for its content and its acceptance tests, and the milestone is when the Lean statement is frozen. If the intended reading is "provisional until M3", flip those nodes' \code{status} to \code{provisional}; \code{status-text} identifies them.}
+    \li{\strong{Decision status "frozen (X provisional)".} Several decisions are frozen as a whole with a provisional part (e.g. \ref{dec-kr-0003}, \ref{dec-rt-0012}, \ref{dec-tl-0003}). The port records the head word \code{frozen}; the parenthetical stays in \code{status-text}. Amendments to the provisional part go through \ref{dec-tl-0001} without a superseding decision.}
+    \li{\strong{Acceptance tests with no summary entry.} \code{AT-UP-1…8} and \code{AT-KR-0} appear only inside decision text. Their informal statements were extracted from the \em{Acceptance} fields naming them; \ref{at-up-0006} was spelled out from \ref{dec-up-0007} because the source only said "Čech nerve as above".}
+    \li{\strong{Acceptance tests named in more than one document.} An acceptance test's \code{origin} is the document of its area, not every document that mentions it; the "named by" list on the node is complete.}
+    \li{\strong{\code{D-KR-01/02}, \code{D-SP-02/04}} style abbreviations were linked on their first identifier only; the second is plain text.}
+    \li{\strong{\ref{dec-rt-0002} has no Status in the source.} It is the "non-definition" clarifying \ref{dec-rt-0001} and was recorded as \code{frozen} with a \code{status-text} saying so.}
+    \li{\strong{Bibliography venues} are as in the source; the instruction to complete uncertain venues (\ref{bib-0000}) is still open.}
+    \li{\strong{Backslash in \ref{dec-wf-0006}.} The source wrote the forester command \code{transclude} with its leading backslash inside a code span; the backslash was dropped in the port to avoid it being read as a command.}
+    \li{\strong{Working name.} The design left the name TBD; this forest and the Lean package use \em{Category Madness} / \code{CategoryMadness} after the repository. Rename is a find-and-replace in \code{lakefile.toml}, \code{forest/index.tree}, \code{README.md}.}
+  }
+}
+
+\subtree{
+  \title{M0 status after the port}
+  \ul{
+    \li{Done without Lean: repo layout (\ref{dec-tl-0008}); Mathlib pinned at \code{v4.33.1} in \code{lakefile.toml} / \code{lean-toolchain}; CI with the import ban, the syntax-level unfolding ban, statement hygiene, the swap-test script and the forest checks (\ref{dec-tl-0006}, \ref{dec-wf-0002}); this forest; the decision registry; the retrieval MCP MVP with lexical search (\ref{dec-wf-0005}).}
+    \li{Needs Lean, deferred: \code{forest-export} (\ref{dec-wf-0001}), the Mathlib inventory (\ref{at-kr-0000}, needs a Mathlib checkout), the \code{to_dual} skeleton (\ref{dec-tl-0003}), the Expr-level half of the unfolding ban, \code{type_search} and embedding search in the MCP.}
+    \li{Not verified in this environment: forester itself was not available, so the trees were checked structurally (balanced braces, resolving references, required fields) but not built. First \code{forester build} may surface syntax the checker does not model.}
+  }
+}

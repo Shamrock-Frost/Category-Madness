@@ -1,0 +1,21 @@
+\title{D-WF-02 · Decision registry}
+\taxon{Decision}
+\meta{id}{D-WF-02}
+\meta{area}{forest and workflow}
+\meta{origin}{design/07-forest-workflow.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:wf}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Every \code{D-<AREA>-<nn>} in these documents becomes a tree with fields \em{decision, rationale, rejected alternatives, acceptance tests (refs), affected declarations (backlinks from \ref{dec-wf-0001}), status, supersedes/superseded-by, origin}. Statuses: \code{frozen}, \code{provisional}, \code{later}, \code{superseded}. Changing a \code{frozen} decision requires a new decision node that supersedes it; the old node is never edited. PRs must cite the decision nodes they rely on; CI checks that cited nodes exist and are not \code{superseded}.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen.}
+}

@@ -1,0 +1,12 @@
+\title{AT-SP-12 · \code{HasColimits Kan} (the mountain)}
+\taxon{Acceptance test}
+\meta{id}{AT-SP-12}
+\meta{area}{spaces and enrichment}
+\meta{origin}{design/05-spaces-enrichment.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:sp}
+\tag{status:unstated}
+
+\p{\code{HasColimits Kan} (the mountain).}
+\p{\em{Lean declaration(s):} none yet.}

@@ -1,0 +1,54 @@
+\title{02 · Root (stage 1)}
+\taxon{Chapter}
+\meta{origin}{design/02-root.md}
+\meta{layer}{human}
+\tag{chapter}
+
+\p{The root is the single definition everything else instantiates, together with the constructions that must be made before the seal because they need the kernel: maps, equivalences, fibrant replacement, derived mapping spaces, walking structures and \code{Mod}, \code{Mat(Set)}, \code{Category}, the discrete embedding, and the interface itself.}
+\p{Throughout, \code{X : Type u} is a label set and \code{Θ := Θ^aug_{fc,X}} (→ \ref{dec-kr-0006}, \ref{dec-kr-0007}). Elementary shapes: \code{pt(x)}, \code{v(x,y)}, \code{h(x,y)}, \code{c_n(x₀…x_n; y₀,y₁)}, \code{c_n^∅(x₀…x_n; y)}.}
+\subtree{
+  \title{The definition}
+
+  \transclude{dec-rt-0001}
+  \transclude{dec-rt-0002}
+  \transclude{dec-rt-0003}
+  \transclude{dec-rt-0004}
+  \transclude{dec-rt-0005}
+  \transclude{dec-rt-0006}
+  \transclude{dec-rt-0007}
+  \transclude{dec-rt-0008}
+}
+\subtree{
+  \title{Constructions}
+
+  \transclude{dec-rt-0009}
+  \transclude{dec-rt-0010}
+  \transclude{dec-rt-0011}
+  \transclude{dec-rt-0012}
+}
+\subtree{
+  \title{The seal}
+
+  \transclude{dec-rt-0013}
+  \transclude{dec-rt-0014}
+}
+\subtree{
+  \title{Acceptance tests (summary)}
+  \transclude{at-rt-0001}
+  \transclude{at-rt-0002}
+  \transclude{at-rt-0003}
+  \transclude{at-rt-0004}
+  \transclude{at-rt-0005}
+  \transclude{at-rt-0006}
+  \transclude{at-rt-0007}
+  \transclude{at-rt-0008}
+  \transclude{at-rt-0009}
+  \transclude{at-rt-0010}
+  \transclude{at-rt-0011}
+}
+\subtree{
+  \title{Open questions}
+  \transclude{oq-rt-0001}
+  \transclude{oq-rt-0002}
+  \transclude{oq-rt-0003}
+}

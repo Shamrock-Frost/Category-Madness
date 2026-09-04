@@ -1,0 +1,25 @@
+\title{D-TL-01 · "Agent-native" is undefined}
+\taxon{Decision}
+\meta{id}{D-TL-01}
+\meta{area}{tooling}
+\meta{origin}{design/06-tooling.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen (the meta-rule), everything it governs \code{provisional}.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:tl}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{The library does not define what agent-native artifacts or APIs look like. Conventions in this document are \code{provisional} and are expected to be replaced by whatever the agents converge on. Mechanism: every convention is a decision node with status \code{provisional}; an agent may propose an amendment as a PR that (a) edits the node, (b) applies the change mechanically across the codebase, (c) leaves the human layer to be regenerated. Human review is of the \em{decision}, not the diff. Frozen decisions (the charter, the root, the seal, the interface list) are out of scope for this mechanism.}
+}
+\subtree{
+  \title{Rationale}
+  \p{→ \ref{dec-ch-0007}. Pinning down agent-native conventions now would encode 2026 guesses about 2027 agents.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen (the meta-rule), everything it governs \code{provisional}.}
+}

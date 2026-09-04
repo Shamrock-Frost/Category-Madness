@@ -1,0 +1,29 @@
+\title{D-UP-01 · Terminal objects}
+\taxon{Decision}
+\meta{id}{D-UP-01}
+\meta{area}{universal properties}
+\meta{origin}{design/03-universal-properties.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:up}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{\code{IsTerminal t : Prop := ∀ x, Contractible (C(x, t))}, with the theorem, proved immediately after, that this is equivalent to the \em{global} form: for every Segal category \code{K}, restriction \code{Map(K ⋆ Δ[0], C)_{t} → Map(K, C)} (cones with vertex \code{t}) is a trivial fibration. The global form is the one used downstream: it is what makes lifts along a diagram of problems coherent, and \code{Classical.choose} is applied to a \em{section} of it, never to the fibres one at a time (→ \ref{dec-up-0006}). The equivalence of the two forms uses boundary fibrancy (→ \ref{dec-rt-0001} (2)): a Kan fibration with contractible fibres over every vertex is a trivial fibration. \code{Terminal C := { t // IsTerminal t }}. Theorem: the full sub-Segal-category of \code{C} on terminal objects is a contractible ∞-groupoid (any two terminal objects are connected by a contractible space of equivalences). Initial objects are dual (→ \ref{dec-up-0005}).}
+}
+\subtree{
+  \title{Rationale}
+  \p{This is the one universal property. It is a proposition, it survives every level (1-categories: singleton hom-sets; ∞: contractible mapping spaces), and it needs no data beyond the mapping spaces. The trivial-fibration form is the same statement with the coherence of lifts built in.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-up-0001}: for discrete \code{C}, \code{IsTerminal} is the classical definition and the uniqueness theorem is unique-up-to-unique-iso.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen.}
+}

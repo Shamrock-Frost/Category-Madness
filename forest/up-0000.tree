@@ -1,0 +1,33 @@
+\title{03 · Universal properties (stage 2, \ref{ms-0004})}
+\taxon{Chapter}
+\meta{origin}{design/03-universal-properties.md}
+\meta{layer}{human}
+\tag{chapter}
+
+\p{Everything here is stated for a Segal category \code{C} with object set \code{X} — i.e. a monad in \code{Mat(Kan)} once that exists (→ \ref{dec-sp-0004}), and before that for \code{Vert P} of any VDC∞ and for discrete \code{C : Category A}. Only interface vocabulary is used: mapping spaces, homotopy equivalence, contractibility, derived maps, joins.}
+\subtree{
+  \title{The root notion}
+
+  \transclude{dec-up-0001}
+  \transclude{dec-up-0002}
+  \transclude{dec-up-0003}
+  \transclude{dec-up-0004}
+  \transclude{dec-up-0005}
+}
+\subtree{
+  \title{Witnesses}
+
+  \transclude{dec-up-0006}
+  \transclude{dec-up-0007}
+}
+\subtree{
+  \title{Specializations}
+
+  \transclude{dec-up-0008}
+  \transclude{dec-up-0009}
+}
+\subtree{
+  \title{Open questions}
+  \transclude{oq-up-0001}
+  \transclude{oq-up-0002}
+}

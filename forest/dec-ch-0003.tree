@@ -1,0 +1,29 @@
+\title{D-CH-03 · Unbiased and shape-indexed}
+\taxon{Decision}
+\meta{id}{D-CH-03}
+\meta{area}{charter}
+\meta{origin}{design/00-charter.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:ch}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Limits are indexed by shapes, never iterated binary operations. Products are limits over finite sets; towers are diagrams over Δ. Where classical treatments have coherence (associators, pentagons), this library has functoriality in a shape category and Kan extension along shape inclusions. The paradigm operation is "extend to the Amitsur/Čech diagram": \code{cosk₀} in augmented simplicial objects over a base. Monoidal structure, when it arrives, is representability of multimaps, not a tensor with axioms.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Coherence problems are artifacts of biased presentations. The unbiased presentation makes them theorems proved once (Mac Lane, Hermida) rather than normal forms maintained forever.}
+}
+\subtree{
+  \title{Consequence}
+  \p{No coherence tactic on the critical path. "Extend along a shape inclusion" tooling is on it (→ \ref{dec-tl-0005}).}
+}
+\subtree{
+  \title{Status}
+  \p{frozen.}
+}

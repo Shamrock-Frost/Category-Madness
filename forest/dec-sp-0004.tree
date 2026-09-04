@@ -1,0 +1,29 @@
+\title{D-SP-04 · \code{Mat(Kan)} and ∞-categories}
+\taxon{Decision}
+\meta{id}{D-SP-04}
+\meta{area}{spaces and enrichment}
+\meta{origin}{design/05-spaces-enrichment.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen at M6.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:sp}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{\code{Mat(Kan.{v})} is the VDC∞ with label set \code{Type v}, vertical morphisms functions, horizontal morphisms \code{A ⇸ B} the space \code{∏_{A×B} U} of families of small Kan complexes, and cells \code{(M₁,…,M_n) ⇒ N} over \code{(f,g)} the spaces of families of maps \code{M₁(a₀,a₁) × ⋯ × M_n(a_{n−1},a_n) → N(f a₀, g a_n)}, built from the universal fibration so that boundary maps are Kan fibrations; nullary-target cells as in → \ref{dec-rt-0010} (verify). \code{Mat(Kan)} is exported \em{fibrant} (→ \ref{dec-rt-0007}, \ref{dec-ch-0013}) with the same two options as \ref{dec-sp-0002} for how (\ref{oq-sp-0003}), and with its elementary values characterized up to homotopy equivalence (\code{Mat(Kan)(h(A,B)) ≃ ∏_{A×B} U}, cell spaces ≃ products of mapping spaces). \code{InfCategory A := Monad (Mat Kan) A} for a set \code{A}; \code{Cat_∞ := Mod(Mat Kan)}.}
+}
+\subtree{
+  \title{Theorem targets}
+  \p{\code{Mat(Kan)} is a VDC∞ and fibrant (\ref{at-rt-0008}). Monads in \code{Mat(Kan)} at \code{A} are exactly Segal categories with object set \code{A} (\ref{at-sp-0003}, the Gepner–Haugseng categorical algebra statement in Segal-category form); since \code{Mat(Kan)} is fibrant, this is an equivalence between strict maps \code{N Mnd → Mat(Kan)} at \code{A} and labelled Segal presheaves on \code{Δ_A} up to DK-equivalence, and either side may be used as the working form of "∞-category with object set \code{A}". Rectification (Dwyer–Kan, Bergner): strict simplicial categories with object set \code{A} present every such Segal category (\ref{at-sp-0008}). \code{Vert(Cat_∞)} is the ∞-category of ∞-categories, functors, and natural equivalences; natural transformations are cells (→ \ref{dec-up-0009}).}
+}
+\subtree{
+  \title{Rationale}
+  \p{→ \ref{dec-ch-0004}: ∞-categories are not defined; they are monads in one VDC∞. The rectification theorem is what lets anyone write one down.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen at \ref{ms-0006}.}
+}

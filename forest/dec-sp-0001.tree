@@ -1,0 +1,29 @@
+\title{D-SP-01 · The universe}
+\taxon{Decision}
+\meta{id}{D-SP-01}
+\meta{area}{spaces and enrichment}
+\meta{origin}{design/05-spaces-enrichment.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen at M6.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:sp}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{\code{U.{v}} is the Kan complex of small Kan fibrations (Kapulkin–Lumsdaine– Voevodsky; Cisinski's construction): \code{U_n} is the set of small Kan fibrations over \code{Δ[n]} with a set-theoretic normalization making it a set, and the universal small Kan fibration \code{Ũ → U}. Theorem: \code{U} is a Kan complex. Consequence: \code{U^{Δ[1]} → U × U} and the higher \code{U^{Δ[n]} → U^{∂Δ[n]}} are Kan fibrations (exponential/pushout-product, → \ref{dec-kr-0010}). Univalence is optional and out of scope until needed.}
+}
+\subtree{
+  \title{Rationale}
+  \p{The universe is the space of objects of \code{Kan} and the source of the boundary fibrancy of \code{Mat(Kan)} (→ \ref{dec-rt-0001} (2)). It replaces the homotopy coherent nerve on the critical path.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-sp-0001}: \code{U} is a Kan complex (proof strategy chosen at \ref{ms-0006}: Cisinski's argument or Sattler's equivalence extension property; minimal fibrations are the fallback).}
+}
+\subtree{
+  \title{Status}
+  \p{frozen at \ref{ms-0006}.}
+}

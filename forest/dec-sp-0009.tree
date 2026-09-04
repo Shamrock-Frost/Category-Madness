@@ -1,0 +1,39 @@
+\title{D-SP-09 · Symmetry via monads on the ambient: the horizontal Kleisli construction}
+\taxon{Decision}
+\meta{id}{D-SP-09}
+\meta{area}{spaces and enrichment}
+\meta{origin}{design/05-spaces-enrichment.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen at M7 (definition), \code{later} (\code{E_n} for finite \code{n ≥ 3}).}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:sp}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Symmetry is never baked into the root shapes. It enters, as in Cruttwell–Shulman, as a \em{monad on the ambient equipment}. For a strict monad \code{T} on a VDC∞ \code{X} (a map \code{T : X → X} with unit and multiplication satisfying the laws on the nose), the \strong{horizontal Kleisli} VDC∞ \code{H-Kl(T, X)} has the objects and vertical morphisms of \code{X}, horizontal morphisms \code{A ⇸ B} the \code{X}-horizontals \code{A ⇸ TB}, and cells with inputs \code{(M₁,…,Mₙ)} and target \code{N} the \code{X}-cells \code{(M₁, TM₂, T²M₃, …, Tⁿ⁻¹Mₙ) ⇒ N} over the vertical boundary obtained by collapsing with the multiplication. \code{T}-monoids in \code{X} are monads in \code{H-Kl(T, X)}, and \code{Mod(H-Kl(T, X))} is Cruttwell–Shulman's \code{KMod(T, X)}: the equipment of \code{T}-monoids, their functors, and their bimodules. The monads used are strict and explicit on \code{Mat(Kan)}: \code{T_ℕ} (free monoidal category: finite sequences), \code{T_𝔹} (free braided monoidal category), \code{T_Σ} (free symmetric monoidal category: finite families with bijections), and more generally \code{T_G} for an action operad \code{G} (Zhang, Gurski). Then, with a set of colours as labels:}
+  \ul{
+    \li{planar coloured ∞-operads are monads in \code{H-Kl(T_ℕ, Mat Kan)},}
+    \li{braided ones are monads in \code{H-Kl(T_𝔹, Mat Kan)},}
+    \li{symmetric ones are monads in \code{H-Kl(T_Σ, Mat Kan)},}
+  }
+  \p{and Lawvere theories, PROPs, and other generalized multicategories are the same construction with other \code{T}. The formal theory of → \ref{ft-0000} applies to each \code{KMod(T, X)} with no new definitions. Symmetric sequences are the one-object corollary: \code{Mat(Kan)(1, T_Σ 1)} is families over finite sets and bijections, and Kleisli composition is the composition product; likewise braided and non-symmetric sequences. Construction of the composition product, and of the Kleisli VDC∞ in general, needs colimits in \code{Kan} (→ \ref{dec-sp-0008}). \code{E_1}, \code{E_2}, \code{E_∞} are the \em{contractible} single-coloured monads in the three Kleisli VDC∞s (Fiedorowicz for the braided case: braided operads with contractible components and free \code{Bₙ}-actions present \code{E_2}; equivalently the symmetric operad in groupoids with \code{n}-th groupoid having objects \code{Σₙ} and morphisms braids, whose realizations are ordered configuration spaces of the plane). \code{E_n} for \code{3 ≤ n < ∞} has no action-operad model — configuration spaces of \code{ℝⁿ} are simply connected but not aspherical (\code{Conf₂(ℝ³) ≃ S²}) — and is a specific monad in \code{H-Kl(T_Σ, Mat Kan)} given by a combinatorial symmetric operad in finite posets: Berger's complete-graph operad \code{Kₙ} with \code{|Kₙ(k)| ≃ Conf_k(ℝⁿ)}, or Smith's filtration of the Barratt–Eccles operad. Algebras over a symmetric operad \code{P} in a cartesian \code{V} with colimits (\code{Kan}, \code{Cat_∞}) are algebras for the monad \code{A ↦ ⨆ₙ P(n) ×_{hΣₙ} Aⁿ}; symmetric monoidal ∞-categories are \code{E_∞}-algebras in \code{Cat_∞} in this sense. Shapes with symmetry reappear on the \em{nerve} side only: Ω is Weber's arity category for the free \code{T_Σ}-multicategory monad, so Segal presheaves on Ω (→ \ref{dec-sp-0006}) are the nerves of monads in \code{H-Kl(T_Σ, Mat Kan)}, and the comparison is the nerve theorem at ∞.}
+}
+\subtree{
+  \title{Rejected}
+  \p{A "symmetric Θ_fc". The inputs of a cell form a path ordered by composability, so permuting them does not typecheck except for endomorphisms of one object; and any automorphisms in the root shape category would make the root generalized Reedy (normal monomorphisms, \code{Aut}-equivariant fibrancy, elegance lost), a permanent tax on \code{Category} for a benefit only operads want.}
+}
+\subtree{
+  \title{Not viable, and why}
+  \p{Presenting \code{E_n} (\code{n ≥ 2}) as \em{non-symmetric} operads (monads in \code{H-Kl(T_ℕ, −)}). The underlying non-symmetric operad of a symmetric operad \code{P} has algebras for the monad \code{⨆ P(n) × Aⁿ} instead of \code{⨆ P(n) ×_{hΣₙ} Aⁿ}; for \code{E_∞} this is \code{E_1}, and for \code{E_2} it is \code{E_1} together with pure-braid-group actions on iterated products — the braiding \code{a ⊗ b → b ⊗ a} is exactly the equivariance that was forgotten. Braided operads are not non-symmetric operads; they are \code{T_𝔹}-monoids.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-sp-0009}: for \code{X = Mat(Set)}, \code{Mod(H-Kl(T_Σ, X))} is the classical equipment of coloured symmetric operads, functors, and bimodules, and \code{T}-monoids agree with the discrete case of \ref{dec-sp-0006}; \ref{at-sp-0010} (comparison, Haugseng's \em{∞-operads via symmetric sequences}, and the nerve theorem at ∞): monads in \code{H-Kl(T_Σ, Mat Kan)} present Lurie's ∞-operads / dendroidal Segal spaces; \ref{at-sp-0011}: the three contractible monads are \code{E_1}, \code{E_2}, \code{E_∞} (discrete cases: monoids, braided monoidal, symmetric monoidal categories as algebras in \code{Cat}); \ref{at-sp-0013}: \code{H-Kl(T, X)} is a VDC∞, fibrant when \code{X} is, and \code{Mod(H-Kl(T, X))} is an augmented virtual ∞-equipment when \code{X} is (Cruttwell–Shulman's theorem, transposed; the conditions on \code{T} are part of the task).}
+}
+\subtree{
+  \title{Status}
+  \p{frozen at \ref{ms-0007} (definition), \code{later} (\code{E_n} for finite \code{n ≥ 3}).}
+}

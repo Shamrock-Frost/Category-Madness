@@ -1,0 +1,25 @@
+\title{D-UP-07 · Extend along a shape inclusion}
+\taxon{Decision}
+\meta{id}{D-UP-07}
+\meta{area}{universal properties}
+\meta{origin}{design/03-universal-properties.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:up}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{The primary \em{operation} of this layer is Kan extension along inclusions of shape categories: \code{sk_n}, \code{cosk_n}, restriction/extension along \code{Δ_{≤n} → Δ}, \code{Δ₊,≤0 → Δ₊}, \code{Ω_p → Ω}, and along inert inclusions of sub-shapes. Worked example and acceptance test: the Čech nerve of \code{f : x → s} is \code{cosk₀} in augmented simplicial objects over \code{s}; its \code{n}-th term is a limit over the appropriate shape; it exists when the relevant limits do; it is unique up to contractible choice; it is functorial in \code{f}. This is the "extend to the Amitsur diagram" of → \ref{dec-ch-0003}.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-up-0006} (Čech nerve as above); \ref{at-up-0007}: \code{cosk_n ⊣ sk_n}-style adjunction statements as terminal-object statements.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen.}
+}

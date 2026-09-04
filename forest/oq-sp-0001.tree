@@ -1,0 +1,12 @@
+\title{OQ-SP-1}
+\taxon{Open question}
+\meta{id}{OQ-SP-1}
+\meta{area}{spaces and enrichment}
+\meta{origin}{design/05-spaces-enrichment.md}
+\meta{status}{open}
+\tag{open-question}
+\tag{area:sp}
+\tag{status:open}
+
+\p{Universe size bookkeeping: \code{Mat(Kan.{v})} has values built from \code{U.{v} : sSet.{v+1}} and labels in an independent \code{Type u} (→ \ref{dec-rt-0012}); confirm the universe pattern and that nothing forces a third universe.}
+\p{\em{Resolution:} open. Decided by the human; record the answer as a decision node that this node then cites.}

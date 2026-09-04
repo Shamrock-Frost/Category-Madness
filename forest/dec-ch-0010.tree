@@ -1,0 +1,21 @@
+\title{D-CH-10 · Full universe polymorphism}
+\taxon{Decision}
+\meta{id}{D-CH-10}
+\meta{area}{charter}
+\meta{origin}{design/00-charter.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen (policy details provisional).}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:ch}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Everything is universe-polymorphic from the start; no fixed hierarchy. Detailed policy → \ref{dec-rt-0012}.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen (policy details provisional).}
+}

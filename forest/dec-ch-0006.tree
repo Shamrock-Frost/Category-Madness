@@ -1,0 +1,25 @@
+\title{D-CH-06 · Definitions are the product}
+\taxon{Decision}
+\meta{id}{D-CH-06}
+\meta{area}{charter}
+\meta{origin}{design/00-charter.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:ch}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Every definition-level decision ships with acceptance tests: Lean statements whose proofs are the evidence that the definition is the intended one. Where the literature has the notion (discrete case, non-virtual case), the acceptance test is a comparison theorem. Where it does not, the acceptance test is the truncation or restriction to a case where it does.}
+}
+\subtree{
+  \title{Rationale}
+  \p{The FLT formalization shows that once definitions and a blueprint exist, the coherence grind scales to millions of lines. It does not show that definitional judgment in unexplored territory scales. FLT had Wiles as an oracle; here the oracle must be built in.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen.}
+}
