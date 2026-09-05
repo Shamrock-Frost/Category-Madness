@@ -1,0 +1,7 @@
+\title{Mathlib}
+\taxon{Reference}
+\meta{origin}{design/09-bibliography.md}
+\meta{section}{Tooling}
+\tag{reference}
+
+\p{\strong{Mathlib} — \code{CategoryTheory}, \code{AlgebraicTopology}, \code{Tactic}. \ref{dec-kr-0002} inventory.}

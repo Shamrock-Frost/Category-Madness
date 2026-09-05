@@ -21,6 +21,7 @@
   \transclude{dec-kr-0007}
   \transclude{dec-kr-0008}
   \transclude{dec-kr-0009}
+  \transclude{dec-kr-0012}
 }
 \subtree{
   \title{Kan machinery}
@@ -42,6 +43,9 @@
   \transclude{at-kr-0009}
   \transclude{at-kr-0010}
   \transclude{at-kr-0011}
+  \transclude{at-kr-0012}
+  \transclude{at-kr-0013}
+  \transclude{at-kr-0014}
 }
 \subtree{
   \title{Open questions}

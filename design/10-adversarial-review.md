@@ -65,6 +65,23 @@ every exported construction, rectification. Items below are read through that le
 13. **Strict layer.** Want: strict ω-categories, computads. Problem: nothing strict past
     the seal. Disposition: recorded as a non-goal in the charter.
 
+## Post-review findings (pasting and shapes)
+
+14. **Pasting diagrams.** Want: to state and prove pasting composites. Finding: pasting
+    schemes *are* the shapes; the pasting theorem is the nerve theorem (discrete) and the
+    Segal condition (∞); 2-categorical pasting needs units and was scheduled too late.
+    Disposition: D-RT-15 (`Vert₂` at M3); D-TL-09 (`paste` = decidable shape-map
+    equality); D-RT-13 amended so shapes are exported transparently.
+15. **The shapes are leveled.** Finding: the shared-sides rule of virtual composition
+    forces arities of the free-VDC monad to be leveled grids, i.e. chains of active maps
+    in Δ, not trees with sides. Disposition: D-KR-06 rewritten; "dendroidal" struck from
+    the charter; the canonical format is rows (D-TL-10); elegance more plausible.
+16. **General shape theory.** Want: a uniform, formalizable theory of pasting shapes,
+    joins, Gray products, and duals, including for the (∞,2) layer. Disposition: D-KR-12
+    adopts the core of Hadzihasanovic's book as the kernel's geometric substrate,
+    presenting the algebraically defined shapes; molecules rejected as the root's shape
+    category (no canonical names, filler-style composition, no double variant).
+
 ## What could still sink it
 Items 1 and 5. Item 1 is now a checklist (the closure and rectification theorems of
 D-RT-13 and D-CH-13) that can be verified at M3 and M6. Item 5 is a scheduled theorem

@@ -30,6 +30,7 @@
   \title{The seal}
 
   \transclude{dec-rt-0013}
+  \transclude{dec-rt-0015}
   \transclude{dec-rt-0014}
 }
 \subtree{
@@ -45,6 +46,7 @@
   \transclude{at-rt-0009}
   \transclude{at-rt-0010}
   \transclude{at-rt-0011}
+  \transclude{at-rt-0012}
 }
 \subtree{
   \title{Open questions}

@@ -187,9 +187,16 @@ would absorb size; it does not absorb "large objects, small homs," which is the 
 
 ### D-RT-13 · Interface and mechanism
 **Decision.** `Interface/` exports, and `Theory/` may use, exactly:
-- **Shapes as categories**: Δ, Δ₊, Ω_p, Ω, Θ^aug_fc, Θ_n, Δ×Δ, □ as `Category`s in the
-  sense of D-RT-10, with their generating morphisms, relations, inert/active
-  factorization, degrees, Segal cores, and labelled variants — as sealed constants plus API lemmas.
+- **Shapes, transparently**: the objects and morphisms of Δ, Δ₊, Ω_p, Ω, Θ^aug_fc, Θ_n,
+  Δ×Δ, □, `Tw(θ)` are exported as *transparent* inductive types with `DecidableEq` and
+  computable composition (→ D-TL-10): rows of block sizes for `Θ^aug_fc`, monotone `Fin`
+  maps for Δ, nested lists for Ω_p and Θ_n, and so on. What is sealed is their
+  `Category` structure in the sense of D-RT-10 (with generating morphisms, inert/active
+  factorization, degrees, Segal cores, labelled variants as API) and the bridge lemma
+  identifying the transparent hom-types with the sealed ones. This is the one deliberate
+  exposure of computation past the seal: a pasting proof is a tree-map equality decided
+  on finite data (→ D-TL-09), not a fact about how a categorical notion unfolds, so
+  D-CH-01 is not violated; the linter's `decide` ban (→ D-TL-06) exempts these types.
 - **Spaces**: `Space` (Kan complexes), maps, homotopy, homotopy equivalence, `π₀`,
   contractibility, fibrations and fibre products, mapping spaces — sealed.
 - **Root**: `VDC∞`, maps, `Vert`, `Hor`, `hP`, DK-equivalence, fibrant, fibrant
@@ -232,6 +239,20 @@ no leak exists, and it is what "axiom wlog" (→ D-CH-12) means operationally.
 **Status.** frozen; the interface *list* is frozen at M3 ("Interface v1") and extended
 only by superseding decisions.
 
+### D-RT-15 · `Vert₂`, unit factorization, and 2-categorical pasting (M3)
+**Decision.** For a VDC∞ `P` with units (every `Mod(P)` has them), `Vert₂(P)` is the
+(∞,2)-categorical structure with objects, vertical morphisms, and 2-cells the nullary
+cells `() ⇒ U_b` over `(f, g)`; horizontal composition of 2-cells goes through the
+opcartesian unit cell (a nullary cell with a gap at `b` factors uniquely through it).
+The 2-categorical pasting theorem for `Vert₂(P)` is a corollary of the nerve theorem
+(AT-KR-8) plus unit factorization; mates and whiskering are instances. This is built at
+M3 for `Cat = Mod(Mat Set)` rather than waiting for the formal theory at M5.
+**Rationale.** Natural transformations exist at M3 as cells, but pasting them needs the
+unit's universal property; without `Vert₂` at M3, `Cat` is usable only as a 1-category.
+**Acceptance.** AT-RT-12: `Vert₂(Cat)` is the classical 2-category of categories,
+functors, and natural transformations, and its pasting theorem is Power's.
+**Status.** frozen at M3.
+
 ### D-RT-14 · Generated thin API for `Category`
 **Decision.** From the monad structure, a metaprogram generates for `Category A`:
 `Hom`, `id`, `comp` (binary, as an `abbrev` of the 2-ary composite), `compN` (unbiased),
@@ -256,6 +277,7 @@ in sync with the root.
 - AT-RT-9 Comparison with style A (M6+, optional).
 - AT-RT-10 `Category A` ≃ classical structure ≃ Segal presheaves on `Δ_A`.
 - AT-RT-11 Vertical 2-category of `Cat` is the classical one.
+- AT-RT-12 `Vert₂(Cat)` with its pasting theorem is the classical 2-category.
 
 ## Open questions
 

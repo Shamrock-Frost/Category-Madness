@@ -62,6 +62,6 @@
     \li{\strong{Sealed} — visible only through \code{Interface/}; unfolding forbidden by mechanism.}
     \li{\strong{Witness} — an inhabitant of \code{{x // universalProperty x}}.}
     \li{\strong{Acceptance test} — a Lean statement whose proof is evidence a definition is right.}
-    \li{\strong{Shape} — an object of one of the kernel's shape categories (Δ, Ω_p, Θ_fc, …).}
+    \li{\strong{Shape} — an object of one of the kernel's shape categories (Δ, Ω_p, Θ_fc, …). For \code{Θ_fc}, a pasting scheme: a leveled grid of cells, i.e. a chain of active maps in Δ.}
   }
 }

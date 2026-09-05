@@ -1,0 +1,21 @@
+\title{D-TL-10 · Shape formats}
+\taxon{Decision}
+\meta{id}{D-TL-10}
+\meta{area}{tooling}
+\meta{origin}{design/06-tooling.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen (the two-level scheme), provisional (encodings).}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:tl}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{The format is the datatype: each shape category's objects and morphisms are Lean inductives with \code{deriving DecidableEq, ToJson, FromJson}, exported transparently (→ \ref{dec-rt-0013}). Canonical forms: \code{Θ^aug_fc} as rows of block sizes with output flags (\code{{"rows": [[2,0,3],[1,2],[2]]}}, augmented blocks \code{"out": false}; \code{pt}, \code{h}, \code{v^n} separately), equivalently chains of active simplicial operators reusing Mathlib's \code{SimplexCategory} morphisms; Δ as monotone \code{Fin} maps; Ω_p and Θ_n as nested lists; Ω as a planar representative plus symmetry, with Kock's polynomial encoding as the honest form; □ as words over faces, degeneracies, and connections. General shapes (anything from the geometric substrate, → \ref{dec-kr-0012}) use the oriented-graded-poset serialization of \code{rewalt} (elements per dimension with input/output face lists), with the embedding of each canonical form into it as a function and a theorem (\ref{at-kr-0012}, \ref{at-kr-0013}). ACSet JSON (Catlab) is the interoperability form for presheaf data such as double graphs on \code{G_fc}, never a canonical form (isomorphic ACSets are not equal). Forest nodes render grids as Myers-style string diagrams (SVG) generated from the rows.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen (the two-level scheme), provisional (encodings).}
+}

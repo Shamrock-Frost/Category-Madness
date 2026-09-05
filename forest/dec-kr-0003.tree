@@ -19,7 +19,7 @@
     \tr{\td{Δ}\td{graphs (vertex, edge)}\td{free category}\td{Δ (identified with \code{SimplexCategory}, \ref{at-kr-0001})}}
     \tr{\td{Ω_p}\td{planar multigraphs}\td{free planar (non-symmetric) coloured operad}\td{planar dendroidal category (Moerdijk–Weiss \code{Ω_p})}}
     \tr{\td{Ω}\td{symmetric multigraphs}\td{free symmetric coloured operad}\td{dendroidal category \code{Ω} \strong{(verify BMW applies; fallback: Moerdijk–Weiss's definition directly)}}}
-    \tr{\td{Θ^aug_fc}\td{double graphs \code{G_fc}}\td{free augmented VDC}\td{trees with vertical sides (\ref{dec-kr-0006})}}
+    \tr{\td{Θ^aug_fc}\td{double graphs \code{G_fc}}\td{free augmented VDC}\td{leveled grids = chains of active maps in Δ (\ref{dec-kr-0006})}}
     \tr{\td{Θ_n}\td{—}\td{—}\td{defined by Berger's wreath product \code{Δ ≀ Θ_{n−1}} (→ \ref{dec-kr-0008}); identification with \code{Θ_T} for the free strict \code{n}-category monad is optional}}
   }
 }

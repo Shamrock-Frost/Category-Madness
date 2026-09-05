@@ -28,6 +28,14 @@
   }
 }
 \subtree{
+  \title{Post-review findings (pasting and shapes)}
+  \ol{
+    \li{\strong{Pasting diagrams.} Want: to state and prove pasting composites. Finding: pasting schemes \em{are} the shapes; the pasting theorem is the nerve theorem (discrete) and the Segal condition (∞); 2-categorical pasting needs units and was scheduled too late. Disposition: \ref{dec-rt-0015} (\code{Vert₂} at \ref{ms-0003}); \ref{dec-tl-0009} (\code{paste} = decidable shape-map equality); \ref{dec-rt-0013} amended so shapes are exported transparently.}
+    \li{\strong{The shapes are leveled.} Finding: the shared-sides rule of virtual composition forces arities of the free-VDC monad to be leveled grids, i.e. chains of active maps in Δ, not trees with sides. Disposition: \ref{dec-kr-0006} rewritten; "dendroidal" struck from the charter; the canonical format is rows (\ref{dec-tl-0010}); elegance more plausible.}
+    \li{\strong{General shape theory.} Want: a uniform, formalizable theory of pasting shapes, joins, Gray products, and duals, including for the (∞,2) layer. Disposition: \ref{dec-kr-0012} adopts the core of Hadzihasanovic's book as the kernel's geometric substrate, presenting the algebraically defined shapes; molecules rejected as the root's shape category (no canonical names, filler-style composition, no double variant).}
+  }
+}
+\subtree{
   \title{What could still sink it}
   \p{Items 1 and 5. Item 1 is now a checklist (the closure and rectification theorems of \ref{dec-rt-0013} and \ref{dec-ch-0013}) that can be verified at \ref{ms-0003} and \ref{ms-0006}. Item 5 is a scheduled theorem with a named route and a fallback.}
 }

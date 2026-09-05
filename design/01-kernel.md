@@ -51,7 +51,7 @@ theorem is an instance.
 | Δ | graphs (vertex, edge) | free category | Δ (identified with `SimplexCategory`, AT-KR-1) |
 | Ω_p | planar multigraphs | free planar (non-symmetric) coloured operad | planar dendroidal category (Moerdijk–Weiss `Ω_p`) |
 | Ω | symmetric multigraphs | free symmetric coloured operad | dendroidal category `Ω` **(verify BMW applies; fallback: Moerdijk–Weiss's definition directly)** |
-| Θ^aug_fc | double graphs `G_fc` | free augmented VDC | trees with vertical sides (D-KR-06) |
+| Θ^aug_fc | double graphs `G_fc` | free augmented VDC | leveled grids = chains of active maps in Δ (D-KR-06) |
 | Θ_n | — | — | defined by Berger's wreath product `Δ ≀ Θ_{n−1}` (→ D-KR-08); identification with `Θ_T` for the free strict `n`-category monad is optional |
 
 **Rationale.** One theorem, five shapes. The recipe also fixes *what the shapes are*
@@ -109,18 +109,38 @@ shared by both sides; for `c_n^∅` both sides end at the same object).
 A set-level augmented VDC is a double graph with vertical composition of vertical edges,
 multicategorical composition of cells (including Koudenburg's rule for cells with empty
 target), unit vertical edges, unit cells, and the associativity/unit laws. The free
-augmented VDC on a double graph is constructed explicitly (cells are planar trees of
-generating cells with vertical paths along the sides, modulo unit laws).
-`Θ^aug_fc := Θ_T` for this `T`. Expected description (AT-KR-3): objects are vertical
-paths, horizontal paths, and planar trees of cells with vertical sides; faces are
-sub-shape inclusions and composite-selecting maps; degeneracies collapse a cell to a
-unit cell of its input/output or a vertical edge to an identity.
-**Rationale.** Cells have ordered inputs and one (or no) output, so the shapes are
-planar trees; vertical composition is grafting along the root. This is the honest shape
-category behind "virtual double"; the simplicial encoding of style A is avoided.
+augmented VDC on a double graph is constructed explicitly.
+`Θ^aug_fc := Θ_T` for this `T`.
+
+**Expected description (AT-KR-3): leveled grids, not trees.** Composition of cells
+requires adjacent children to *share* vertical sides (`α_i`'s right side is `α_{i+1}`'s
+left side). In a free VDC a generating cell has generating sides, so it can never sit
+next to an identity cell (identity sides) or next to a composite (sides of length ≥ 2).
+Hence in the arities every node has all inputs filled or none, all leaves are at the same
+depth, and a pasting scheme is a stack of **rows**: a path of `n` horizontal edges,
+partitioned into consecutive blocks with one cell per block, producing the next path,
+down to a single output (or, augmented, no output). A block of size 0 is a nullary-input
+cell in a gap; a block without output is a Koudenburg cell. The vertical data is
+determined: one vertical edge per block boundary per row. Equivalently a cell shape is a
+composable chain of *active* maps in Δ (a row with `k` blocks on a path of length `n` is
+an endpoint-preserving monotone `[k] → [n]`), which is why style A lives over `Δᵒᵖ`.
+Objects of `Θ^aug_fc`: `pt`, `v^n` (`n ≥ 1`), `h`, and grids. Faces: sub-grids (a row
+interval times a column interval closed under blocks; inert) and merging of consecutive
+rows (active); degeneracies: inserting identity rows and collapsing vertical edges.
+Everything is Δ-data with no automorphisms, which makes elegance (AT-KR-6) expected
+rather than hoped. **(verify: the shared-sides argument is Cruttwell–Shulman's
+definition read literally; the exact face/degeneracy description is a task.)**
+Note that `Ω_p` trees are *not* leveled: multicategory cells have no sides. The earlier
+draft's "planar trees of cells with vertical sides" was wrong for exactly this reason.
+**Rationale.** The shapes are what the algebra says they are. Their simplicity is a
+feature: the canonical form is a list of rows of block sizes (→ D-TL-10), and the
+pasting calculus is decidable equality of such data (→ D-TL-09).
 **Acceptance.** AT-KR-8: the nerve theorem for augmented VDCs is an instance of AT-KR-2
-and its essential image is characterized by the Segal condition of D-KR-04.
-**Status.** frozen (the exact list of incidence relations is provisional until formalized).
+and its essential image is characterized by the Segal condition of D-KR-04. AT-KR-12:
+typed leveled 2-molecules of the geometric substrate (→ D-KR-12) are exactly the grids
+(both directions).
+**Status.** frozen (the exact list of incidence relations and the face/degeneracy
+description are provisional until formalized).
 
 ### D-KR-07 · Labelled shapes `Θ_{T,X}`
 **Decision.** For `X : Type u`, `Θ_{T,X} := ∫_{Θ_T} X^{ob(−)}`, the category of elements
@@ -141,7 +161,8 @@ Segal condition on `Δ_X` characterizes categories with object set `X` (unbiased
 - Θ_n by Berger's wreath product, defined in M1 and unused until (∞,n) work.
 - Twisted-arrow-type shapes `Tw(θ)` for each `θ ∈ Θ_fc` (Barwick, Haugseng), in which
   the pullbacks of composable spans are objects; needed for `Span(S)` (→ D-SP-05).
-  Defined at M1 with the others; their Segal theory is M6.
+  Defined at M1 with the others; their Segal theory is M6. Joins and the shapes of
+  slices come from the geometric substrate's join operation (→ D-KR-12).
 - The groupoids `Σ_A`, `𝔹_A`, `ℕ_A` of finite `A`-coloured sets with bijections, braids,
   and identities, as the indexing categories of symmetric, braided, and non-symmetric
   sequences (→ D-SP-09).
@@ -158,6 +179,39 @@ no Segal-style structure because it has no spines.
 (`[2] ⊃ [1] ∨ [1]`); cubes only have `I^n`. The library's root is Segal-style, so cubes
 are auxiliary.
 **Status.** frozen; `later` for any use beyond definition.
+
+### D-KR-12 · Geometric substrate: regular directed complexes
+**Decision.** Alongside Weber's algebraic recipe (→ D-KR-03) the kernel formalizes the
+core of Hadzihasanovic's *Combinatorics of Higher-Categorical Diagrams*: oriented graded
+posets, molecules (generated inductively by pasting and the atom construction), regular
+directed complexes, the pasting theorem proved once for all regular molecules (Power's
+theorem is the 2-dimensional case), and joins, Gray products, and duals as operations on
+shapes. Shape categories are *defined* algebraically (Weber) and *presented*
+geometrically, with the presentation theorems as acceptance tests: Δ as iterated joins of
+the point, □ as Gray powers of the interval, globes and positive opetopes as atoms,
+`Θ^aug_fc` as typed leveled 2-molecules (AT-KR-12), joins for `Tw(θ)` and slices.
+A VDC cell is a 2-atom with input boundary `M₁…Mₙ g` and output boundary `f N` in a
+2-coloured directed complex; VDC pasting schemes are the 2-molecules all of whose
+intermediate composites are well-typed (horizontal path, vertical) ⇒ (vertical,
+horizontal), which is exactly the leveling of D-KR-06. When composites exist
+(→ D-FT-02) the same typing is the Dawson–Paré theory of double-categorical pasting,
+where the pinwheel is a valid 2-molecule that is not a double-categorical composite.
+**Rationale.** One geometric theory for every shape we have and every shape the (∞,2)
+layer will need (Gray products and duals for lax structures and modifications), written
+to be formalized, with finite decidable data throughout; and a rendering and
+serialization precedent (`rewalt`, → D-TL-10).
+**Rejected.** Making molecules the root's shape category. Molecules are shapes up to
+isomorphism with no canonical names, whereas the root needs normal forms with decidable
+equality (→ D-TL-09); diagrammatic-set composition is filler-style rather than
+Segal-style, and the active maps come from the algebra, not from shape maps; and there is
+no double or virtual-double variant of diagrammatic sets to build on. Chanavat–
+Hadzihasanovic's model structures for diagrammatic (∞,n)-categories are a comparison
+target for the (∞,2) layer, not a foundation.
+**Acceptance.** AT-KR-12 (grids ≅ typed leveled 2-molecules); AT-KR-13 (Δ ≅ joins of
+the point, □ ≅ Gray powers of the interval, as categories); AT-KR-14 (the general pasting
+theorem restricts to the nerve-theorem composites on `Θ^aug_fc`).
+**Status.** frozen (scope of the formalized core provisional: definitions through the
+pasting theorem and the three operations; the rest of the book is `later`).
 
 ## Kan machinery
 
@@ -211,6 +265,9 @@ argument along the elementary boundary inclusions is the default).
 - AT-KR-9 Labelled Δ characterizes categories with a given object set.
 - AT-KR-10 Closure properties of Kan/trivial fibrations.
 - AT-KR-11 Fibrant replacement.
+- AT-KR-12 Grids ≅ typed leveled 2-molecules.
+- AT-KR-13 Δ and □ as joins and Gray powers in the geometric substrate.
+- AT-KR-14 The general pasting theorem restricts to nerve-theorem composites on `Θ^aug_fc`.
 
 ## Open questions
 

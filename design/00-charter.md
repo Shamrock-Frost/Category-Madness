@@ -80,9 +80,9 @@ augmented shape category `Θ^aug_{fc,X}` satisfying a Segal condition (→ D-RT-
 Objects form a *set* (labels); vertical morphisms, horizontal morphisms, and cells form
 spaces. Cells have ordered inputs (E1/planar); there is no symmetric variant at the root.
 Cells may have empty target (augmented, after Koudenburg).
-**Rationale.** Style B has honest shapes (dendroidal in the input direction, simplicial in
-the composition direction), strict maps as the right maps, and levelwise-combinatorial
-equivalences; it plugs directly into the Reedy/EZ machinery of the kernel. Labels make
+**Rationale.** Style B has honest shapes (leveled grids: chains of active maps in Δ, once
+the shared-sides rule of virtual composition is taken seriously, → D-KR-06), strict maps
+as the right maps, and levelwise-combinatorial equivalences; it plugs directly into the Reedy/EZ machinery of the kernel. Labels make
 Segal conditions over objects into products and remove the need for a completeness
 condition (Segal-category style, Hirschowitz–Simpson/Bergner). Augmentation makes
 Yoneda for large objects a structural fact rather than a universe hack (→ D-RT-12).
@@ -201,4 +201,5 @@ depend on it.
 - **Sealed** — visible only through `Interface/`; unfolding forbidden by mechanism.
 - **Witness** — an inhabitant of `{x // universalProperty x}`.
 - **Acceptance test** — a Lean statement whose proof is evidence a definition is right.
-- **Shape** — an object of one of the kernel's shape categories (Δ, Ω_p, Θ_fc, …).
+- **Shape** — an object of one of the kernel's shape categories (Δ, Ω_p, Θ_fc, …). For
+  `Θ_fc`, a pasting scheme: a leveled grid of cells, i.e. a chain of active maps in Δ.

@@ -1,0 +1,25 @@
+\title{D-TL-11 · Drawing and importing diagrams (not core)}
+\taxon{Decision}
+\meta{id}{D-TL-11}
+\meta{area}{tooling}
+\meta{origin}{design/06-tooling.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional; \code{later} beyond (1) and rendering.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:tl}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{An import pipeline, in increasing order of effort: (1) a text DSL for rows and for the other canonical forms, parsed into the Lean inductives; (2) import from \code{rewalt} (oriented graded posets), validated by the typing/leveling check of \ref{dec-kr-0012} and normalized to rows when the shape is a VDC scheme, rejected with the failing composite otherwise; (3) a minimal grid editor (rows of boxes, since VDC schemes are grids) that emits the DSL; (4) ACSet import for presheaf data. Diagrams of cells \em{in} a given \code{P} (points of \code{P(θ)}) are imported as the shape plus a labelling of its cells by names of declared cells, producing a Lean term whose typechecking is the boundary check. Rendering is the reverse direction and is the part the forest needs first.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Cheap because the shapes are simple; not core because the library's pasting proofs are generated, not drawn. A homotopy.io-style editor is out of scope.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional; \code{later} beyond (1) and rendering.}
+}

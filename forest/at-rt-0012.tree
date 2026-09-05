@@ -1,0 +1,13 @@
+\title{AT-RT-12 · \code{Vert₂(Cat)} with its pasting theorem is the classical 2-category}
+\taxon{Acceptance test}
+\meta{id}{AT-RT-12}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:rt}
+\tag{status:unstated}
+
+\p{\code{Vert₂(Cat)} with its pasting theorem is the classical 2-category.}
+\p{Named by: \ref{dec-rt-0015}.}
+\p{\em{Lean declaration(s):} none yet.}

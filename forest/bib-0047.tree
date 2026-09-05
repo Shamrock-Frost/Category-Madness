@@ -1,7 +1,7 @@
-\title{Mathlib}
+\title{Power — A 2-categorical pasting theorem}
 \taxon{Reference}
 \meta{origin}{design/09-bibliography.md}
-\meta{section}{Tooling}
+\meta{section}{Pasting diagrams and shapes}
 \tag{reference}
 
-\p{\strong{Mathlib} — \code{CategoryTheory}, \code{AlgebraicTopology}, \code{Tactic}. \ref{dec-kr-0002} inventory.}
+\p{\strong{Power} — \em{A 2-categorical pasting theorem} (J. Algebra 1990). The 2-dimensional}

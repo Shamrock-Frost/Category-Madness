@@ -61,12 +61,22 @@
   \transclude{bib-0043}
 }
 \subtree{
-  \title{Type theory and displayed structures}
+  \title{Pasting diagrams and shapes}
   \transclude{bib-0044}
   \transclude{bib-0045}
+  \transclude{bib-0046}
+  \transclude{bib-0047}
+  \transclude{bib-0048}
+  \transclude{bib-0049}
+  \transclude{bib-0050}
+}
+\subtree{
+  \title{Type theory and displayed structures}
+  \transclude{bib-0051}
+  \transclude{bib-0052}
 }
 \subtree{
   \title{Tooling}
-  \transclude{bib-0046}
-  \transclude{bib-0047}
+  \transclude{bib-0053}
+  \transclude{bib-0054}
 }

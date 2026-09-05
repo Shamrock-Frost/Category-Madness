@@ -46,6 +46,47 @@ extension statement (limits over slices `(j' ↓ i)`), discharges existence from
 Čech (→ D-UP-07). This replaces the coherence tactic of biased designs (→ D-CH-03).
 **Status.** frozen (existence), provisional (interface).
 
+### D-TL-09 · `paste`
+**Decision.** A tactic for equality of pasting composites. Both sides are normalized to
+`P(σ)(d)` — the diagram `d` restricted along a shape map `σ` — using functoriality of
+`P` and the Segal/active-map lemmas; the goal reduces to `σ = σ'` in the transparent
+hom-type of the shape category (→ D-TL-10), which is decided by `decide` on finite data
+(for `Θ^aug_fc`, EZ normal forms: degeneracy part then sub-grid). For `Vert₂` the tactic
+first rewrites 2-cell pastings through unit factorization (→ D-RT-15). This occupies the
+slot the coherence tactic vacated (→ D-CH-03): coherence is shape-map equality.
+**Status.** frozen (existence), provisional (interface).
+
+### D-TL-10 · Shape formats
+**Decision.** The format is the datatype: each shape category's objects and morphisms
+are Lean inductives with `deriving DecidableEq, ToJson, FromJson`, exported transparently
+(→ D-RT-13). Canonical forms: `Θ^aug_fc` as rows of block sizes with output flags
+(`{"rows": [[2,0,3],[1,2],[2]]}`, augmented blocks `"out": false`; `pt`, `h`, `v^n`
+separately), equivalently chains of active simplicial operators reusing Mathlib's
+`SimplexCategory` morphisms; Δ as monotone `Fin` maps; Ω_p and Θ_n as nested lists; Ω
+as a planar representative plus symmetry, with Kock's polynomial encoding as the honest
+form; □ as words over faces, degeneracies, and connections. General shapes (anything
+from the geometric substrate, → D-KR-12) use the oriented-graded-poset serialization of
+`rewalt` (elements per dimension with input/output face lists), with the embedding of
+each canonical form into it as a function and a theorem (AT-KR-12, AT-KR-13). ACSet JSON
+(Catlab) is the interoperability form for presheaf data such as double graphs on `G_fc`,
+never a canonical form (isomorphic ACSets are not equal). Forest nodes render grids as
+Myers-style string diagrams (SVG) generated from the rows.
+**Status.** frozen (the two-level scheme), provisional (encodings).
+
+### D-TL-11 · Drawing and importing diagrams (not core)
+**Decision.** An import pipeline, in increasing order of effort: (1) a text DSL for rows
+and for the other canonical forms, parsed into the Lean inductives; (2) import from
+`rewalt` (oriented graded posets), validated by the typing/leveling check of D-KR-12 and
+normalized to rows when the shape is a VDC scheme, rejected with the failing composite
+otherwise; (3) a minimal grid editor (rows of boxes, since VDC schemes are grids) that
+emits the DSL; (4) ACSet import for presheaf data. Diagrams of cells *in* a given `P`
+(points of `P(θ)`) are imported as the shape plus a labelling of its cells by names of
+declared cells, producing a Lean term whose typechecking is the boundary check.
+Rendering is the reverse direction and is the part the forest needs first.
+**Rationale.** Cheap because the shapes are simple; not core because the library's
+pasting proofs are generated, not drawn. A homotopy.io-style editor is out of scope.
+**Status.** provisional; `later` beyond (1) and rendering.
+
 ### D-TL-06 · The seal linter and CI
 **Decision.** CI jobs, all blocking:
 1. **Import ban.** No file under `Theory/` imports `Mathlib.CategoryTheory.*`,
@@ -53,7 +94,7 @@ extension statement (limits over slices `(j' ↓ i)`), discharges existence from
 2. **Unfolding ban.** In `Theory/`: no `unseal`, `with_unfolding_all`, `delta`,
    `unfold <sealed>`, `simp [<sealed>]`, `dsimp only [<sealed>]`, `rw [<x>_def]`,
    `show` that changes a sealed head symbol, `cast`/`▸`/`HEq` on sealed types, `decide`
-   on sealed props, `rfl`/`Eq.refl`-closed goals whose sides differ syntactically at a
+   on sealed props (the transparent shape types of D-TL-10 are exempt), `rfl`/`Eq.refl`-closed goals whose sides differ syntactically at a
    sealed head. Implementation: a Lean linter over syntax plus an `Expr`-level check
    that no proof term in `Theory/` references a `_def` lemma or a kernel constant.
 3. **Statement hygiene.** `Interface/` statements mention only interface constants.

@@ -109,6 +109,27 @@ certain; the M0 agent should complete them in the forest.
 - **May** — *The Geometry of Iterated Loop Spaces* (1972). Little cubes; the reference
   meaning of `E_n`. D-SP-09.
 
+## Pasting diagrams and shapes
+- **Hadzihasanovic** — *Combinatorics of Higher-Categorical Diagrams* (2024). Oriented
+  graded posets, molecules, regular directed complexes, the general pasting theorem,
+  joins, Gray products, duals; written to be formalized. D-KR-12, AT-KR-12…14.
+- **Hadzihasanovic, Kessler** — *Data structures for topologically sound
+  higher-categorical rewriting* (2022); the `rewalt` library. Serialization precedent
+  for general shapes. D-TL-10, D-TL-11.
+- **Chanavat, Hadzihasanovic** — *Model structures for diagrammatic (∞,n)-categories*
+  (2024). Diagrammatic sets as a shape-based model; comparison target for the (∞,2)
+  layer, rejected as a root (D-KR-12).
+- **Power** — *A 2-categorical pasting theorem* (J. Algebra 1990). The 2-dimensional
+  case; AT-RT-12.
+- **Dawson, Paré** — *General associativity and general composition for double
+  categories* (CTGDC 1993). The pinwheel; double-categorical pasting when composites
+  exist. D-KR-12, D-FT-02.
+- **Myers** — *String diagrams for double categories and equipments* (2016). Rendering
+  conventions for grids. D-TL-10.
+- **Ho Thanh** — *The equivalence between opetopes and many-to-one polygraphs*;
+  `opetopy`. Opetopic syntax; not adopted (opetopes are not leveled and have no second
+  direction). D-KR-12.
+
 ## Type theory and displayed structures
 - **Ahrens, Lumsdaine** — *Displayed categories* (LMCS 2019). Families over spans; the
   1-level precedent for D-RT-10's "families" choice.

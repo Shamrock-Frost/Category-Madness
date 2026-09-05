@@ -8,6 +8,7 @@
 \ul{
   \li{\ref{dec-rt-0001}…\ref{dec-rt-0012} stated and proved: VDC∞, maps, \code{Vert}/\code{Hor}, \code{hP}, DK-equivalence, fibrancy, \code{Map}, walking structures, \code{Mod}, \code{Mat(Set)}, \code{Category}, \code{Cat}, discrete embedding.}
   \li{\ref{at-rt-0001} (self-hosting), \ref{at-rt-0002}…\ref{at-rt-0007}, \ref{at-rt-0010}, \ref{at-rt-0011} proved.}
+  \li{\code{Vert₂}, unit factorization, and 2-categorical pasting for \code{Mod(P)} (\ref{dec-rt-0015}, \ref{at-rt-0012}); the \code{paste} tactic (\ref{dec-tl-0009}) usable for discrete \code{P}.}
   \li{The closure and rectification package of \ref{dec-rt-0013} for the \ref{ms-0003} objects: \code{Mod} preserves fibrancy, slices and functor objects preserve fibrancy, DK-invariance of \code{Mod}/\code{Vert}/ \code{Hor}/\code{hP}, rectification for discrete targets (trivial) with the general statement stated for \ref{ms-0006}.}
   \li{\code{Interface/} v1 written (\ref{dec-rt-0013}), \code{Interface-Stub/} generated, swap test green, thin API generator (\ref{dec-rt-0014}) running, human notation layer generated (\ref{dec-tl-0002}).}
 }

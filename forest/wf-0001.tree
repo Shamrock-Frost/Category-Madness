@@ -9,6 +9,11 @@
 \p{This node records how the phase −1 design documents (\code{design/*.md}, now frozen as history) were ported into this forest, per the porting instructions in \ref{wf-0000} and \ref{dec-wf-0007}. The port was done by \code{scripts/port_design.py}, a deterministic one-shot script kept as the audit trail; it is \em{not} run in CI, because provisional nodes are amended in place (\ref{dec-tl-0001}) and regenerating from the frozen markdown would clobber those amendments.}
 
 \subtree{
+  \title{Revision history of the source}
+  \p{The port was run twice at M0. The first run used the initial phase −1 tarball. A revised tarball then arrived with the post-review findings on pasting and shapes (\ref{rev-0000}, items 14–16): \ref{dec-kr-0006} rewritten (leveled grids, not trees), new decisions \ref{dec-kr-0012}, \ref{dec-rt-0015}, \ref{dec-tl-0009}, \ref{dec-tl-0010}, \ref{dec-tl-0011}, new acceptance tests \ref{at-kr-0012}, \ref{at-kr-0013}, \ref{at-kr-0014}, \ref{at-rt-0012}, amendments to \ref{dec-ch-0005}, \ref{dec-kr-0003}, \ref{dec-kr-0008}, \ref{dec-rt-0013}, \ref{dec-tl-0006}, \ref{ms-0001}, \ref{ms-0003}, and a bibliography section on pasting diagrams and shapes. Since no tree had been amended by hand in between, \code{design/} was replaced and the port re-run from scratch; the exact textual diff is the git history of \code{design/}. Bibliography addresses \code{bib-NNNN} are assigned in document order, so entries after the inserted section moved; nothing outside the bibliography chapter refers to them by address.}
+}
+
+\subtree{
   \title{Address scheme (adaptation of D-WF-07)}
   \p{\ref{dec-wf-0007} proposes flat sequential numbering (\code{dec-0031}) with a recorded mapping. The port instead embeds the identifier in the address, so that a citation in a PR or a commit message resolves to a node with no lookup table:}
   \table{

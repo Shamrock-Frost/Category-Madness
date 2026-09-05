@@ -12,12 +12,14 @@
   \li{Ω_p, Ω (\ref{dec-kr-0003}; \ref{oq-kr-0001} resolved), Δ×Δ, Θ_n (\ref{at-kr-0004}), □ (\ref{dec-kr-0009}).}
   \li{Pattern structures and Segal cores (\ref{dec-kr-0004}, \ref{at-kr-0005}).}
   \li{Reedy/elegance/EZ (\ref{dec-kr-0005}, \ref{at-kr-0006}, \ref{at-kr-0007}).}
+  \li{Geometric substrate core (\ref{dec-kr-0012}): oriented graded posets, molecules, regular directed complexes, the pasting theorem, joins/Gray/duals; presentations \ref{at-kr-0012}…\ref{at-kr-0014}.}
+  \li{Shape formats and the rows DSL (\ref{dec-tl-0010}, \ref{dec-tl-0011} (1)); rendering for the forest.}
 }
 \subtree{
   \title{Freeze}
-  \p{Shape definitions and their pattern structures; the shape part of the interface list.}
+  \p{Shape definitions and their pattern structures; the shape part of the interface list; the canonical shape formats.}
 }
 \subtree{
   \title{Exit}
-  \p{\ref{at-kr-0001}…\ref{at-kr-0009} proved.}
+  \p{\ref{at-kr-0001}…\ref{at-kr-0009} and \ref{at-kr-0012}…\ref{at-kr-0014} proved.}
 }

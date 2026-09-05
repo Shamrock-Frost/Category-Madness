@@ -25,8 +25,12 @@ Deliverable: this tarball. Exit: human sign-off on the outline and the frozen de
 - Ω_p, Ω (D-KR-03; OQ-KR-1 resolved), Δ×Δ, Θ_n (AT-KR-4), □ (D-KR-09).
 - Pattern structures and Segal cores (D-KR-04, AT-KR-5).
 - Reedy/elegance/EZ (D-KR-05, AT-KR-6, AT-KR-7).
-**Freeze.** Shape definitions and their pattern structures; the shape part of the interface list.
-**Exit.** AT-KR-1…9 proved.
+- Geometric substrate core (D-KR-12): oriented graded posets, molecules, regular directed
+  complexes, the pasting theorem, joins/Gray/duals; presentations AT-KR-12…14.
+- Shape formats and the rows DSL (D-TL-10, D-TL-11 (1)); rendering for the forest.
+**Freeze.** Shape definitions and their pattern structures; the shape part of the interface
+list; the canonical shape formats.
+**Exit.** AT-KR-1…9 and AT-KR-12…14 proved.
 
 ### M2 · Kan machinery
 - Everything in D-KR-10 (AT-KR-10), Reedy fibrancy for `sSet`-presheaves on the shapes,
@@ -39,6 +43,8 @@ Deliverable: this tarball. Exit: human sign-off on the outline and the frozen de
 - D-RT-01…12 stated and proved: VDC∞, maps, `Vert`/`Hor`, `hP`, DK-equivalence,
   fibrancy, `Map`, walking structures, `Mod`, `Mat(Set)`, `Category`, `Cat`, discrete embedding.
 - AT-RT-1 (self-hosting), AT-RT-2…7, AT-RT-10, AT-RT-11 proved.
+- `Vert₂`, unit factorization, and 2-categorical pasting for `Mod(P)` (D-RT-15, AT-RT-12);
+  the `paste` tactic (D-TL-09) usable for discrete `P`.
 - The closure and rectification package of D-RT-13 for the M3 objects: `Mod` preserves
   fibrancy, slices and functor objects preserve fibrancy, DK-invariance of `Mod`/`Vert`/
   `Hor`/`hP`, rectification for discrete targets (trivial) with the general statement
