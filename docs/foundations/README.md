@@ -112,7 +112,9 @@ The current task is the augmented algebra/shapes and required diagram-model
 lemmas under AT-FD-7. Its [current implementation](../augmented/README.md)
 adds incidence, the equation families, a lawful additive-label algebra, shape/label
 separation, explicit boundary transport and strict 2-category extraction to the same
-compiled inventory and axiom audit. Reverse operation data and its substitution
-formula are checked; reverse algebra laws, comparison round trips and the discrete
-nerve remain open before the free/arity work. The complete gate, M-F milestone and
+compiled inventory and axiom audit. The reverse algebra laws, cell/hom round trips,
+arbitrary substitution compatibility and discrete hom nerves are now checked.
+The relative free cell algebra now has proved quotient laws, a universal mapping
+equivalence and finite raw-term support. The global free/arity presentation and
+augmented nerve remain open. The complete gate, M-F milestone and
 root/interface freeze remain open.

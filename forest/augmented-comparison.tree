@@ -1,0 +1,25 @@
+\title{Augmented comparison · reconstruction and discrete hom nerves}
+\taxon{Development}
+\meta{layer}{human}
+\meta{source}{Kernel/Augmented/TwoCategorySubstitution.lean}
+\tag{foundation}
+\tag{augmented}
+
+\p{This continues \ref{augmented-transport} under \ref{at-fd-0007}, \ref{dec-kr-0018} and \ref{dec-rt-0030}. The gate statement and version are unchanged.}
+
+\subtree{
+  \title{Reverse algebra}
+  \p{\code{Kernel.Augmented.FromTwoCategory.algebra} constructs a lawful augmented algebra from any supplied strict 2-category. All five equation families are proved. \code{NoHorizontal.nestedViewFrom} exposes arbitrary two-band incident rows as vertical rows, preserving their inner, outer and composite rows. \code{rowFold_composite} applies interchange to the complete nested row; stacking associativity finishes the algebra equation.}
+}
+
+\subtree{
+  \title{Comparison round trips}
+  \p{\code{FromTwoCategory.homEquivalence} recovers each supplied hom category by inverse functors. In the other direction, \code{NoHorizontal.cellEquiv}, \code{toOriginal_fromOriginal} and \code{fromOriginal_toOriginal} recover the complete incident cell family. \code{reconstructed_verticalIdentity}, \code{reconstructed_verticalAlongRow} and \code{reconstructed_verticalStack} recover both binary compositions and identities.}
+  \p{\code{NoHorizontal.substitute_roundtrip} proves compatibility for every incident nonempty row, not only binary operations. Its statement uses ordinary equality and the central input transport. The internal proof first uses \code{rowView}, then \code{Vertical.substitute_cast} and \code{reconstructed_substitute}.}
+}
+
+\subtree{
+  \title{Discrete hom nerves and current frontier}
+  \p{\code{FromTwoCategory.homNerveIso} identifies the recovered and supplied hom nerves in every simplicial degree. \code{homNerve_strictSegal} supplies their discrete Segal structure from the pinned Mathlib theorem. These are hom nerves; the augmented arity nerve requires the free/arity construction and its recognition theorem.}
+  \p{The free augmented algebra, global arity presentation, density/recognition hypotheses, and required labelled diagram model remain open. \ref{augmented-free-cells} proves the relative free cell algebra over fixed vertical/horizontal incidence, including quotient laws and its universal property. This does not discharge the global arity obligations. No canonical arity theorem or root freeze is claimed. Cites: \ref{dec-kr-0014}, \ref{dec-kr-0015}, \ref{dec-tl-0021}, \ref{dec-wf-0008}, \ref{dec-wf-0010}.}
+}

@@ -101,9 +101,12 @@ The equation families and their dependent incidence proofs are encoded in
 `Kernel/Augmented/Algebra.lean`; `AdditiveModel.algebra` supplies a nontrivial lawful
 model. `forest/augmented-algebra.tree` and `forest/augmented-transport.tree` index
 the revised API, renewed model evidence, strict 2-category extraction and reverse
-operation data. Provisional status is retained because the reverse algebra laws,
-comparison round trips and discrete nerve, free/arity presentation and labelled
-diagram model required by AT-FD-7 remain open.
+operation data. `forest/augmented-comparison.tree` adds the reverse algebra laws,
+cell/hom round trips, arbitrary substitution compatibility and discrete hom nerves.
+`forest/augmented-free-cells.tree` records the relative free cell algebra, its
+proved quotient laws and universal property over fixed vertical/horizontal incidence.
+Provisional status is retained because the global free/arity presentation, augmented nerve
+and labelled diagram model required by AT-FD-7 remain open.
 
 ### D-KR-19 · Labels and reduction
 **Decision.** Once object positions are defined functorially, labelled shapes are the

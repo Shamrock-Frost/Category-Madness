@@ -7,23 +7,44 @@
     "Kernel/Augmented/AdditiveModel.lean": "a7416d85ebc2a9ae54f2c818680433993533f037031fcca606b2bf8e81b68658",
     "Kernel/Augmented/Algebra.lean": "0972cbac26837865ddcb03385972d4e760c67a7e547327dabc35331e6d188308",
     "Kernel/Augmented/AlgebraExamples.lean": "2d04a60158fcecd6a0f974f91d9ee166c9557c6846f8ec88c9b05a28f8ee7177",
+    "Kernel/Augmented/AlgebraMaps.lean": "d14e4438a3489e1d71b42636e04cd4e5a68a25582f527574c8ab96bfb1824e3a",
+    "Kernel/Augmented/CellMapSections.lean": "1aea8bf234a5bda7a908823be73aaccc8f63e23cad8e292ad055ea437b2f1e80",
+    "Kernel/Augmented/CellMaps.lean": "6bc8e33b8160184dd63a8da873f7c1552dcd6a4d96b8acd540d8620f46365fc2",
+    "Kernel/Augmented/CellQuotient.lean": "f91ce15cd89b0a291203e3ce548da5492f94f45640565cb34bfcff9b155ef221",
+    "Kernel/Augmented/CellTermEvaluation.lean": "d4b5bc30846391a07651bfde1f39d7083d6fd6ca2cf05faec3f20ab9132d4f8f",
+    "Kernel/Augmented/CellTermOperations.lean": "4121397d4442676d9842ecf9e9ba63a5817a4ffdaf033b7c2217aa5ac1372660",
+    "Kernel/Augmented/CellTermRelations.lean": "25037717f9daf3886fc6f918d60f8c510fbd71e3ae9baf1ee2b4fedb62be5cce",
+    "Kernel/Augmented/CellTermSoundness.lean": "7074dcbcfe4bb2e6bc2e469729852d1c8c507f9e034c9bb371d63126ce505d48",
+    "Kernel/Augmented/CellTerms.lean": "3b3454f3df46ebebe9235b55eff20cb9d16fcf3421050ad3984b0623de7ffe8f",
     "Kernel/Augmented/ComparisonTransport.lean": "6eb7e5372e2e4e37a580e6551271d4cc98b01d70e677b3fd5c10ce2536c919b9",
     "Kernel/Augmented/EquationRows.lean": "889d306df4ffc42b0579ec1f5ba0a0b211e1a4e36b2a4902ca81e78dee550086",
     "Kernel/Augmented/Examples.lean": "17859c29ec1d96ded93f4aa277d4e1a830ee365039718c3a73ff593f74411da2",
+    "Kernel/Augmented/FreeCellUniversal.lean": "43bca2f0b85b60740672a4bfe0af5fb6c127a48081bec01aff9cfd3becba3423",
+    "Kernel/Augmented/FreeCells.lean": "d33ca47d705c6a8db14c272278cfac736765916a7ebbe62d117c83c0f6df121d",
     "Kernel/Augmented/FromCat.lean": "ee06fc92abe002c88b9948f6d9978b2989bdcac38104063bb74d2254dd8ceb2f",
     "Kernel/Augmented/FromTwoCategory.lean": "fcf2cb109b22a5265056f323375c73716aaa2e41954160469f1cf7737a3186d2",
     "Kernel/Augmented/FromTwoCategoryAlgebra.lean": "702d514262c8a0a8800cdf67c49ba0cdc213d0c2f9f97e3722cf13632abc379b",
+    "Kernel/Augmented/FromTwoCategoryLaws.lean": "c93e7ac39ada419bf57015818e5a074e24f9bbf2433f748440d4535667ccdb27",
     "Kernel/Augmented/Incidence.lean": "d68f03e1b362d13c21f52624a5c9b839e8782a7b7b0f7ccbee683fc888f02528",
     "Kernel/Augmented/NestedRows.lean": "65ff7daf7a56526796c572da3f6b92dad86bdb6194dfa882b7cecef858b5296c",
-    "Kernel/Augmented/NoHorizontalRows.lean": "3d0b502b14f3321c96cf118146d11dff51bbb1098317edd9b9e039b5a03cf0c9",
+    "Kernel/Augmented/NoHorizontalNested.lean": "c5c69fe0e3e5eff9eaa2d6846cc7f6b55b4ccdeb65ee5ed794278b14b05b8fe2",
+    "Kernel/Augmented/NoHorizontalRows.lean": "79603cd71f0887bb3b496ce60232315e90f259126bb7bb1efa25978cb65a3337",
+    "Kernel/Augmented/OperationMaps.lean": "06e2e0ef13bbbce8c943e9da9de35698a4f086efe0812b4ea9f6c3cbdedc3bfa",
+    "Kernel/Augmented/OperationSignature.lean": "5bbec17bebb2eba2a1dcdf02326f5b8cbd8054108a061c3d339c5123ab54b5fb",
     "Kernel/Augmented/Operations.lean": "75cf8d39d0804c914f53a15c6f2662aa2fcdee782bceb83157f1103df1c5f514",
-    "Kernel/Augmented/RowShapes.lean": "1d610468c4af4e6ab7b105cbbea5811162c3d43c85b83cd10f7a7d725d25460f",
+    "Kernel/Augmented/RowPositions.lean": "750c5c9d57be9ead5090df67ddcce8f9e67c5868c63d803360e8bbd303f18b1c",
+    "Kernel/Augmented/RowShapes.lean": "f034c6a963cd98c8f6ed1ee6b8a4641b88ebf208a5617585c852a173c5a04b3d",
     "Kernel/Augmented/Rows.lean": "7ba976a94ba4990b9a2a810b5ea799f4b56acadf59327652d29d2b38a17e5ce6",
+    "Kernel/Augmented/SignatureOperations.lean": "6a7a40018e66a611e023def2779ba085b8d81703cccdf47d11b9dc89f8591f25",
     "Kernel/Augmented/SimplexObstruction.lean": "29aa462d17a0550c6065afcd8726dbdf358086c846cfc5ab50a75034bb672c98",
-    "Kernel/Augmented/Substitution.lean": "d9eed5c3784f19c0e6e1eb99ed119c8036031224761e81e0b9197a2ab97b204b",
+    "Kernel/Augmented/Substitution.lean": "8fad8666b2238abbe3fab7e71e0886b21bce1599454ec9f4b65212e4726c448a",
     "Kernel/Augmented/SubstitutionExamples.lean": "999c2851e38fb167d6f39e1de1424be2601fe35cae90f99b50c4ca23c68dfddf",
+    "Kernel/Augmented/TermSupport.lean": "00d577eab883a039c06c71dae6446149a477cfb54b7aaed669eab82c886d9f06",
     "Kernel/Augmented/Transport.lean": "6b1d223390cf027c33303e5f0ceec1068eb841c8b45408309824654ac280c683",
-    "Kernel/Augmented/Vertical.lean": "dea7bd802fa57d797abfa7c4f5385bc959680361f37f50b0d550356abbd9d115",
+    "Kernel/Augmented/TwoCategoryComparison.lean": "62675bb8bbfc8a6d80b8099671833235f7ebeeb39f1a867b3adfd4d0d50ac578",
+    "Kernel/Augmented/TwoCategoryNerve.lean": "c5ac31702ded76d32208ccf40f6b14bb9372e0456a8ed8d59ed34c686c64a7da",
+    "Kernel/Augmented/TwoCategorySubstitution.lean": "87196eb425826dd6651985fb15fdfe28fb2e878f7a8cbff904866692614df089",
+    "Kernel/Augmented/Vertical.lean": "21abba90bfa5a643883d8ceaeb7ca57ee425120b3a35bf08482831d585f86013",
     "Kernel/Augmented/VerticalTwoCategory.lean": "24092a2f8fda4cb9994163748ac7ff906dfc2aac3ade9a0aaa47af860743ace2",
     "Kernel/Foundations/Examples.lean": "8120870258faedd230ba6fb29a1d6ac238e75a2af382b2faf4f957e833fc059a",
     "Kernel/Foundations/Inventory.lean": "e3ce4c8a960d16010852822218d9d4f49c94353dca4dfc83283ec9b6db2dcf52",
@@ -51,79 +72,79 @@
   "checks": [
     {
       "check": "real-build",
-      "seconds": 1.49,
+      "seconds": 1.474,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "real-audit",
-      "seconds": 2.053,
+      "seconds": 2.233,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "real-opaque-equation",
-      "seconds": 0.272,
+      "seconds": 0.326,
       "exit_code": 1,
       "expected_rejection": "Type mismatch"
     },
     {
       "check": "stub-build",
-      "seconds": 0.943,
+      "seconds": 1.148,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "stub-audit",
-      "seconds": 2.263,
+      "seconds": 2.029,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "stub-opaque-equation",
-      "seconds": 0.278,
+      "seconds": 0.251,
       "exit_code": 1,
       "expected_rejection": "Type mismatch"
     },
     {
       "check": "stub-in-real-audit",
-      "seconds": 1.915,
+      "seconds": 1.868,
       "exit_code": 1,
       "expected_rejection": "AXIOM_REJECTED"
     },
     {
       "check": "ProjectAxiom-compile",
-      "seconds": 0.275,
+      "seconds": 0.238,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "ProjectAxiom-audit",
-      "seconds": 2.061,
+      "seconds": 2.001,
       "exit_code": 1,
       "expected_rejection": "AXIOM_REJECTED"
     },
     {
       "check": "Sorry-compile",
-      "seconds": 0.258,
+      "seconds": 0.262,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "Sorry-audit",
-      "seconds": 2.248,
+      "seconds": 2.132,
       "exit_code": 1,
       "expected_rejection": "AXIOM_REJECTED"
     },
     {
       "check": "PrivateLeak-compile",
-      "seconds": 0.259,
+      "seconds": 0.294,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "PrivateLeak-audit",
-      "seconds": 1.865,
+      "seconds": 1.941,
       "exit_code": 1,
       "expected_rejection": "SEAL_LEAK"
     }

@@ -556,6 +556,8 @@
         "at-fd-0003",
         "at-fd-0008",
         "augmented-algebra",
+        "augmented-comparison",
+        "augmented-free-cells",
         "augmented-transport",
         "dec-ch-0018",
         "dec-kr-0015",
@@ -573,6 +575,8 @@
         "at-kr-0001",
         "at-rt-0012",
         "augmented-algebra",
+        "augmented-comparison",
+        "augmented-free-cells",
         "augmented-transport",
         "dec-ch-0018",
         "dec-kr-0015",
@@ -2481,6 +2485,7 @@
       "status": null,
       "refs": [
         "at-fd-0007",
+        "augmented-comparison",
         "augmented-transport",
         "dec-kr-0018",
         "dec-rt-0030",
@@ -2491,6 +2496,73 @@
       "file": "forest/augmented-algebra.tree",
       "backlinks": [
         "at-fd-0007",
+        "dec-kr-0018",
+        "ms-foundation"
+      ]
+    },
+    "augmented-comparison": {
+      "id": "augmented-comparison",
+      "taxon": "Development",
+      "title": "Augmented comparison · reconstruction and discrete hom nerves",
+      "tags": [
+        "foundation",
+        "augmented"
+      ],
+      "meta": {
+        "layer": "human",
+        "source": "Kernel/Augmented/TwoCategorySubstitution.lean"
+      },
+      "status": null,
+      "refs": [
+        "at-fd-0007",
+        "augmented-free-cells",
+        "augmented-transport",
+        "dec-kr-0014",
+        "dec-kr-0015",
+        "dec-kr-0018",
+        "dec-rt-0030",
+        "dec-tl-0021",
+        "dec-wf-0008",
+        "dec-wf-0010"
+      ],
+      "file": "forest/augmented-comparison.tree",
+      "backlinks": [
+        "at-fd-0007",
+        "augmented-algebra",
+        "augmented-free-cells",
+        "augmented-transport",
+        "dec-kr-0018",
+        "ms-foundation"
+      ]
+    },
+    "augmented-free-cells": {
+      "id": "augmented-free-cells",
+      "taxon": "Development",
+      "title": "Augmented free cells · relative construction and its scope",
+      "tags": [
+        "foundation",
+        "augmented"
+      ],
+      "meta": {
+        "layer": "human",
+        "source": "Kernel/Augmented/FreeCellUniversal.lean"
+      },
+      "status": null,
+      "refs": [
+        "at-fd-0007",
+        "augmented-comparison",
+        "dec-kr-0014",
+        "dec-kr-0015",
+        "dec-kr-0018",
+        "dec-rt-0030",
+        "dec-tl-0021",
+        "dec-wf-0008",
+        "dec-wf-0010"
+      ],
+      "file": "forest/augmented-free-cells.tree",
+      "backlinks": [
+        "at-fd-0007",
+        "augmented-comparison",
         "dec-kr-0018",
         "ms-foundation"
       ]
@@ -2510,6 +2582,7 @@
       "status": null,
       "refs": [
         "at-fd-0007",
+        "augmented-comparison",
         "dec-kr-0018",
         "dec-rt-0030",
         "dec-tl-0021",
@@ -2520,6 +2593,7 @@
       "backlinks": [
         "at-fd-0007",
         "augmented-algebra",
+        "augmented-comparison",
         "dec-kr-0018",
         "ms-foundation"
       ]
@@ -4534,6 +4608,8 @@
       ],
       "backlinks": [
         "at-kr-0000",
+        "augmented-comparison",
+        "augmented-free-cells",
         "krn-0000"
       ]
     },
@@ -4577,6 +4653,8 @@
         "at-kr-0002",
         "at-kr-0003",
         "at-kr-0008",
+        "augmented-comparison",
+        "augmented-free-cells",
         "bib-0000",
         "krn-0000"
       ]
@@ -4683,6 +4761,8 @@
         "at-kr-0003",
         "at-kr-0008",
         "augmented-algebra",
+        "augmented-comparison",
+        "augmented-free-cells",
         "augmented-transport"
       ],
       "file": "forest/dec-kr-0018.tree",
@@ -4696,6 +4776,8 @@
         "at-kr-0003",
         "at-kr-0008",
         "augmented-algebra",
+        "augmented-comparison",
+        "augmented-free-cells",
         "augmented-transport",
         "bib-0000",
         "krn-0000"
@@ -5973,6 +6055,8 @@
         "at-fd-0010",
         "at-rt-0012",
         "augmented-algebra",
+        "augmented-comparison",
+        "augmented-free-cells",
         "augmented-transport",
         "rt-0000"
       ]
@@ -7295,6 +7379,8 @@
         "at-fd-0007",
         "at-kr-0003",
         "augmented-algebra",
+        "augmented-comparison",
+        "augmented-free-cells",
         "augmented-transport",
         "tl-0000"
       ]
@@ -8136,6 +8222,8 @@
       "acceptance": [],
       "backlinks": [
         "augmented-algebra",
+        "augmented-comparison",
+        "augmented-free-cells",
         "augmented-transport",
         "index",
         "lean-theory-unproved-0a649efa",
@@ -8199,6 +8287,8 @@
       "acceptance": [],
       "backlinks": [
         "augmented-algebra",
+        "augmented-comparison",
+        "augmented-free-cells",
         "augmented-transport",
         "dec-ch-0019",
         "index",
@@ -8858,6 +8948,8 @@
         "at-fd-0011",
         "at-kr-0000",
         "augmented-algebra",
+        "augmented-comparison",
+        "augmented-free-cells",
         "augmented-transport",
         "ms-0003"
       ],

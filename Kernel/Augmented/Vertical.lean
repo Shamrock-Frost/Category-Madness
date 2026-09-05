@@ -88,6 +88,18 @@ theorem substitute_heq_raw {a b d : C} {f g : a ⟶ b} (r : Row (G := G) f g)
         (CellGraph.castInput (Row.embed_output r).symm β)) :=
   CellGraph.castInput_heq _ _
 
+theorem substitute_cast {a b d : C} {f g : a ⟶ b} (r : Row (G := G) f g)
+    (hr : 0 < r.length) (h k : b ⟶ d)
+    (β : G.Cell (CellGraph.Row.outerBoundary (Row.nonempty r hr) h k (ShortPath.empty d))) :
+    CellGraph.castInput (G := G) (f := ⟨a, d, f ≫ h⟩) (g := ⟨a, d, g ≫ k⟩)
+      (L := ShortPath.empty d) (Row.embed_input r)
+      (O.substitute (Row.nonempty r hr) h k (ShortPath.empty d) β) =
+    substitute O r hr (CellGraph.castInput (G := G)
+      (f := ⟨b, d, h⟩) (g := ⟨b, d, k⟩) (L := ShortPath.empty d) (Row.embed_output r) β) := by
+  unfold substitute
+  erw [CellGraph.castInput_trans]
+  rfl
+
 theorem outer_boundary {a b d : C} {f g : a ⟶ b} (r : Row (G := G) f g)
     (hr : 0 < r.length) (h k : b ⟶ d) :
     CellGraph.Row.outerBoundary (Row.nonempty r hr) h k (ShortPath.empty d) =
@@ -374,5 +386,24 @@ theorem interchange {a b d : C} {f₀ f₁ f₂ : a ⟶ b} {g₀ g₁ g₂ : b �
   id_comp := identity_alongRow A
   comp_id := alongRow_identity A
   assoc := alongRow_assoc A
+
+/-- Along-row composition, including the empty row. -/
+def fold {a b : C} {f : a ⟶ b} : {g : a ⟶ b} → Row (G := G) f g → Cell (G := G) f g
+  | _, .nil => A.verticalIdentity f
+  | _, .cons r φ => A.verticalAlongRow (fold r) φ
+
+theorem compose_eq_fold {a b : C} {f g : a ⟶ b} (r : Row (G := G) f g)
+    (hr : 0 < r.length) : compose A.toOperations r hr = fold A r := by
+  induction r with
+  | nil => exact False.elim (Nat.not_lt_zero _ hr)
+  | @cons g k r φ ih =>
+    cases r with
+    | nil => exact (compose_single A φ).trans (identity_alongRow A φ).symm
+    | @cons h _ r ψ =>
+      let p : Row (G := G) f g := Quiver.Path.cons (V := Hom G a b) r ψ
+      have hp : 0 < p.length := Nat.zero_lt_succ _
+      have E := compose_comp A p ((.nil : Row (G := G) g g).cons φ)
+        hp (Nat.zero_lt_succ _)
+      exact E.symm.trans (congrArg₂ A.verticalAlongRow (ih hp) (compose_single A φ))
 
 end Kernel.Augmented.Vertical

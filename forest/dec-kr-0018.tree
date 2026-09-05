@@ -33,5 +33,7 @@
 \subtree{
   \title{Status}
   \p{provisional algebra presentation; arity and diagram-model results remain open.}
-  \p{\ref{augmented-algebra} records the equation families, their dependent incidence proofs and a nontrivial lawful additive-label model. \ref{augmented-transport} records the revised API, renewed model evidence, strict 2-category extraction, and reverse operation data. The reverse algebra laws, comparison round trips and discrete nerve, free/arity presentation and labelled diagram model remain open under \ref{at-fd-0007}. Rationale for retaining provisional status: this checked slice does not supply the full comparison, arity or homotopical model the root requires.}
+  \p{\ref{augmented-algebra} records the equation families, their dependent incidence proofs and a nontrivial lawful additive-label model. \ref{augmented-transport} records the revised API, renewed model evidence, strict 2-category extraction, and reverse operation data. \ref{augmented-comparison} adds the reverse algebra, cell/hom round trips, arbitrary substitution compatibility and discrete hom nerves. The free/arity presentation, augmented nerve and labelled diagram model remain open under \ref{at-fd-0007}. Rationale for retaining provisional status: this checked slice does not supply the full comparison, arity or homotopical model the root requires.}
 }
+
+\p{\strong{Relative free-cell evidence:} \ref{augmented-free-cells} proves the generated-congruence quotient laws and universal mapping property over a fixed vertical category and horizontal graph, with finite raw-term support. The global free/arity construction and augmented nerve hypotheses remain open.}
