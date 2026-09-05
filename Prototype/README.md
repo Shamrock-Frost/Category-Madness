@@ -7,3 +7,7 @@ kernel-backed and stub builds.
 
 Keep negative fixtures outside certified imports. Cite the active decision and acceptance-test
 nodes for every experiment.
+
+The first experiment is `Universes/Matrix.lean`, with explicit universe examples in
+`Universes/Examples.lean`. See `Universes/README.md` for its universe table, validation
+commands, and remaining AT-FD-1 work. `lake build` includes both modules.

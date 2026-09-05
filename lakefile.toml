@@ -1,13 +1,19 @@
-# Lake configuration (TOML, not Lean: no Lean is written before M1).
-# Mathlib is pinned to the release tag matching lean-toolchain (D-CH-08, D-CH-11).
+# Lake configuration. M-F permits foundation prototypes before M1 (D-FD-01).
+# Mathlib is pinned to the release tag matching lean-toolchain (D-CH-24).
 # Bumping the pin is a deliberate act: update both files together and refresh the
 # Mathlib inventory node (AT-KR-0, D-KR-02) in the same PR.
 name = "CategoryMadness"
-defaultTargets = ["Kernel", "Root", "Interface", "Theory"]
+# The planned layer targets below have no Lean modules yet.
+defaultTargets = ["Prototype"]
 
 [leanOptions]
 autoImplicit = false          # D-TL-06 (6): universe test
 relaxedAutoImplicit = false
+
+# M-F experiments are checked without exporting a sealed interface (D-FD-01).
+[[lean_lib]]
+name = "Prototype"
+roots = ["Prototype"]
 
 [[require]]
 name = "mathlib"

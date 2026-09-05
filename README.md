@@ -6,8 +6,9 @@ a reduced augmented virtual double ∞-category. Design revision 1 keeps that ro
 provisional until a focused foundation-feasibility milestone tests its semantics and
 implementation boundary.
 
-**Status: M0 complete; M-F proposed.** The repository and validation pipeline exist, but
-no Lean proof or foundation gate is marked complete.
+**Status: M0 complete; M-F started.** The first Lean prototype covers matrix-family
+universes and entry lifts. See `Prototype/Universes/README.md` for its scope and check
+record. No complete foundation gate is marked proved.
 
 ## Start here
 
@@ -53,5 +54,6 @@ python3 scripts/build_registry.py
 python3 scripts/forest_check.py
 ```
 
-The Lean toolchain remains pinned in `lean-toolchain` and `lakefile.toml`. CI runs on
-`prima-materia`; Lean build and swap-test steps activate when Lean sources appear.
+The Lean toolchain remains pinned in `lean-toolchain` and `lakefile.toml`. Run
+`lake build` to check the default targets, including `Prototype`. CI runs on
+`prima-materia`; its source detection includes M-F prototypes.

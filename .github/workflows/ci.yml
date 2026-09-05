@@ -72,7 +72,7 @@ jobs:
       - uses: actions/checkout@v4
       - id: sources
         run: |
-          if find Kernel Root Interface Theory -name '*.lean' | grep -q .; then
+          if find Kernel Root Interface Theory Prototype -name '*.lean' | grep -q .; then
             echo "present=true" >> "$GITHUB_OUTPUT"
           else
             echo "present=false" >> "$GITHUB_OUTPUT"

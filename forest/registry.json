@@ -287,7 +287,8 @@
         "area": "foundation feasibility",
         "origin": "design/11-foundation-feasibility.md",
         "status": "proposed",
-        "statement-version": "1"
+        "statement-version": "1",
+        "evidence": "Prototype/Universes/README.md"
       },
       "status": "proposed",
       "refs": [
