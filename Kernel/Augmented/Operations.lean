@@ -4,8 +4,8 @@ import Kernel.Augmented.Rows
 Reference: Koudenburg, arXiv:1910.11189v4, Definition 1.2.
 Cites: D-KR-18, D-RT-30, AT-FD-7.
 
-This record is operation data, not an augmented-VDC algebra: the complete
-associativity and identity-insertion equations remain to be formalized.
+This record is operation data. The complete equation families are recorded
+separately by `Laws` and bundled with these operations in `Algebra.lean`.
 No free monad, canonical arity, or nerve theorem is inferred from it.
 -/
 

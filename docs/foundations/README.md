@@ -109,7 +109,7 @@ No certified target imports it.
 ## Next work item
 
 The current task is the augmented algebra/shapes and required diagram-model
-lemmas under AT-FD-7. Its [first implementation slice](../augmented/README.md)
-adds incidence, operation types and binary cell models to the same compiled
-inventory and axiom audit. The complete gate, M-F milestone and root/interface
-freeze remain open.
+lemmas under AT-FD-7. Its [current implementation](../augmented/README.md)
+adds incidence, the equation families, a lawful additive-label algebra and binary
+cell comparisons to the same compiled inventory and axiom audit. The complete
+gate, M-F milestone and root/interface freeze remain open.

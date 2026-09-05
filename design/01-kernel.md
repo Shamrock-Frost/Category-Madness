@@ -90,7 +90,13 @@ shared-side compositions, and mixed rows. The no-horizontal fragment must recove
 **Rejected.** The previous assertion that all augmented arities are chains of active
 maps in ordinary Δ; inferring a general pasting theorem from a row picture.
 **Acceptance.** AT-FD-7, AT-KR-8; AT-KR-3 only after the explicit presentation exists.
-**Status.** provisional research definition, not frozen pending an omitted relation list.
+**Status.** provisional algebra presentation; arity and diagram-model results remain open.
+The equation families and their dependent incidence proofs are encoded in
+`Kernel/Augmented/Algebra.lean`; `AdditiveModel.algebra` supplies a nontrivial lawful
+model. Current evidence is indexed by `forest/augmented-algebra.tree`. Provisional
+status is retained because this set-level model does not supply the no-horizontal
+algebra/discrete-nerve comparison, free/arity presentation or labelled diagram model
+required by AT-FD-7.
 
 ### D-KR-19 · Labels and reduction
 **Decision.** Once object positions are defined functorially, labelled shapes are the

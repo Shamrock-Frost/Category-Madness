@@ -555,6 +555,7 @@
       "refs": [
         "at-fd-0003",
         "at-fd-0008",
+        "augmented-algebra",
         "dec-ch-0018",
         "dec-kr-0015",
         "dec-kr-0016",
@@ -570,6 +571,7 @@
         "at-fd-0005",
         "at-kr-0001",
         "at-rt-0012",
+        "augmented-algebra",
         "dec-ch-0018",
         "dec-kr-0015",
         "dec-kr-0016",
@@ -2460,6 +2462,34 @@
         "dec-up-0018",
         "ms-0004",
         "rev-0001"
+      ]
+    },
+    "augmented-algebra": {
+      "id": "augmented-algebra",
+      "taxon": "Development",
+      "title": "Augmented algebra · equations and a checked model",
+      "tags": [
+        "foundation",
+        "augmented"
+      ],
+      "meta": {
+        "layer": "human",
+        "source": "Kernel/Augmented/Algebra.lean"
+      },
+      "status": null,
+      "refs": [
+        "at-fd-0007",
+        "dec-kr-0018",
+        "dec-rt-0030",
+        "dec-tl-0021",
+        "dec-wf-0008",
+        "dec-wf-0010"
+      ],
+      "file": "forest/augmented-algebra.tree",
+      "backlinks": [
+        "at-fd-0007",
+        "dec-kr-0018",
+        "ms-foundation"
       ]
     },
     "bib-0000": {
@@ -4611,7 +4641,7 @@
         "area": "kernel",
         "origin": "design/01-kernel.md",
         "status": "provisional",
-        "status-text": "provisional research definition, not frozen pending an omitted relation list.",
+        "status-text": "provisional algebra presentation; arity and diagram-model results remain open.",
         "supersedes": "dec-kr-0006",
         "superseded-by": "none"
       },
@@ -4619,7 +4649,8 @@
       "refs": [
         "at-fd-0007",
         "at-kr-0003",
-        "at-kr-0008"
+        "at-kr-0008",
+        "augmented-algebra"
       ],
       "file": "forest/dec-kr-0018.tree",
       "acceptance": [
@@ -4631,6 +4662,7 @@
         "at-fd-0007",
         "at-kr-0003",
         "at-kr-0008",
+        "augmented-algebra",
         "bib-0000",
         "krn-0000"
       ]
@@ -5906,6 +5938,7 @@
         "at-fd-0007",
         "at-fd-0010",
         "at-rt-0012",
+        "augmented-algebra",
         "rt-0000"
       ]
     },
@@ -7226,6 +7259,7 @@
       "backlinks": [
         "at-fd-0007",
         "at-kr-0003",
+        "augmented-algebra",
         "tl-0000"
       ]
     },
@@ -8065,6 +8099,7 @@
       "file": "forest/dec-wf-0008.tree",
       "acceptance": [],
       "backlinks": [
+        "augmented-algebra",
         "index",
         "lean-theory-unproved-0a649efa",
         "wf-0000"
@@ -8126,6 +8161,7 @@
       "file": "forest/dec-wf-0010.tree",
       "acceptance": [],
       "backlinks": [
+        "augmented-algebra",
         "dec-ch-0019",
         "index",
         "lean-theory-unproved-0a649efa",
@@ -8783,6 +8819,7 @@
         "at-fd-0007",
         "at-fd-0011",
         "at-kr-0000",
+        "augmented-algebra",
         "ms-0003"
       ],
       "file": "forest/ms-foundation.tree",

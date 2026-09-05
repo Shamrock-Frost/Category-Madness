@@ -6,8 +6,9 @@ Reference: Koudenburg, arXiv:1910.11189v4, Example 1.5.
 Cites: D-KR-18, D-RT-30, AT-FD-7.
 
 This constructs the cell model for a bicategory; strictness gives strict
-associativity and units after endpoint transport. The general augmented substitution
-algebra and its nerve recognition theorem are separate obligations.
+associativity and units after endpoint transport. Extending this supplied binary
+model to the full augmented substitution algebra and proving the discrete nerve
+comparison are separate obligations.
 -/
 
 open CategoryTheory Bicategory

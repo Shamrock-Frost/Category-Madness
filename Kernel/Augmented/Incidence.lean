@@ -13,7 +13,7 @@ additional structure. No row encoding is asserted to be a canonical arity.
 open CategoryTheory
 
 namespace Kernel.Augmented
-universe u v h c
+universe u v h c w
 
 -- A type synonym keeps the two quiver instances distinct during elaboration.
 def Horizontal {C : Type u} (_H : C → C → Type h) := C
@@ -48,8 +48,8 @@ def single (j : H a b) : ShortPath H a b := ⟨HPath.single j, Nat.le_refl _⟩
 theorem endpoints_eq (p : ShortPath H a b) (hp : p.val.length = 0) : a = b :=
   Quiver.Path.eq_of_length_zero (V := Horizontal H) p.val hp
 
-/-- There are precisely the two incident forms specified in Definition 1.2. -/
-theorem cases_on (P : {a b : C} → ShortPath H a b → Prop)
+/-- Dependent elimination into either incident form, including data-valued motives. -/
+def elim (P : {a b : C} → ShortPath H a b → Sort w)
     (hnil : ∀ a, P (empty a)) (hone : ∀ {a b} (j : H a b), P (single j))
     {a b : C} (p : ShortPath H a b) : P p := by
   rcases p with ⟨p, hp⟩
@@ -63,6 +63,11 @@ theorem cases_on (P : {a b : C} → ShortPath H a b → Prop)
     have he := Quiver.Path.eq_nil_of_length_zero (V := Horizontal H) p hz
     subst p
     exact hone j
+
+/-- There are precisely the two incident forms specified in Definition 1.2. -/
+theorem cases_on (P : {a b : C} → ShortPath H a b → Prop)
+    (hnil : ∀ a, P (empty a)) (hone : ∀ {a b} (j : H a b), P (single j))
+    {a b : C} (p : ShortPath H a b) : P p := elim P hnil hone p
 end ShortPath
 
 /-- A row endpoint remembers the complete vertical arrow, not just its objects. -/

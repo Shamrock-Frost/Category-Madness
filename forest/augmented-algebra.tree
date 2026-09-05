@@ -1,0 +1,40 @@
+\title{Augmented algebra · equations and a checked model}
+\taxon{Development}
+\meta{layer}{human}
+\meta{source}{Kernel/Augmented/Algebra.lean}
+\tag{foundation}
+\tag{augmented}
+
+\p{This records the current set-level algebra work under \ref{at-fd-0007}, \ref{dec-kr-0018} and \ref{dec-rt-0030}. The definition is pinned to Koudenburg, arXiv:1910.11189v4, Definition 1.2. The full gate remains open at statement-version 1.}
+
+\subtree{
+  \title{Equation families}
+  \p{\code{Kernel.Augmented.Algebra} bundles the existing \code{Operations} with the proposition-valued \code{Laws} record. The latter has all five equation families below. These are obligations on the supplied operations; their presence as fields does not prove that arbitrary operation data satisfy them.}
+  \table{
+    \tr{\th{Family}\th{Lean field}\th{Incident domain}}
+    \tr{\td{Preserve vertical identities under stacking}\td{\code{Kernel.Augmented.Laws.verticalIdentity_stack}}\td{Composable vertical arrows.}}
+    \tr{\td{Left unit}\td{\code{Kernel.Augmented.Laws.leftUnit}}\td{Zero or one output, by dependent elimination on the output path.}}
+    \tr{\td{Right unit}\td{\code{Kernel.Augmented.Laws.rightUnit}}\td{A vertical identity for empty input, or one horizontal identity per input edge.}}
+    \tr{\td{Identity insertion/removal}\td{\code{Kernel.Augmented.Laws.insertion}}\td{Any shared side, including the endpoints; the original row remains nonempty.}}
+    \tr{\td{Nested associativity}\td{\code{Kernel.Augmented.Laws.assoc}}\td{Both bands share their complete vertical arrows and each inner row is nonempty.}}
+  }
+}
+
+\subtree{
+  \title{Boundary proofs before assuming the equations}
+  \p{\code{Kernel.Augmented.Nested.Row.inner_output}, \code{composite_input} and \code{composite_output} identify the paths needed by both substitution orders. Nonemptiness is preserved. The \code{Kernel.Augmented.Operations} theorems \code{leftUnit_boundary}, \code{rightUnit_boundary}, \code{inserted_boundary} and \code{assoc_boundary} prove equality of the complete boundaries, including their sides. The equation fields use \code{HEq} only to retain these dependent transports. These incidence proofs do not assume \code{Laws}.}
+  \p{This is the domain of the displayed associativity equation, not a canonical encoding theorem for arbitrary pastings. The limits in \ref{dec-tl-0021} remain in force.}
+}
+
+\subtree{
+  \title{Nontrivial checked model}
+  \p{\code{Kernel.Augmented.AdditiveModel.algebra} supplies a lawful augmented algebra over any given vertical category, horizontal graph and additive commutative monoid of cell labels. Identity cells have label zero and substitution adds the row labels and the outer label. All five families are proved without assuming a \code{Laws} instance. \code{nested_composite_sum} proves the two-level summation formula used for associativity.}
+  \p{\code{Kernel.Augmented.AlgebraExamples.nested_associativity} instantiates that law on a mixed nested diagram with empty outputs and a final nullary-input cell. \code{nested_value} checks label 36 in both orders; the outside vertical arrows have labels 9 and 14. \code{cells_distinct} checks that labels 2 and 3 at the same boundary remain different. Endpoint identity insertion preserves label 9.}
+  \p{Positive controls accompany rejected rows with an empty inner row or mismatched intermediate factorizations. In the latter case \code{equal_composites} holds while \code{different_upper_sides} and \code{different_lower_sides} show why the displayed associativity domain is unavailable.}
+}
+
+\subtree{
+  \title{Current frontier and evidence}
+  \p{The next comparison must extend the supplied \code{FromTwoCategory} binary model to a lawful augmented algebra and identify the no-horizontal algebra fragment with strict 2-categories, including its discrete nerve. The free/arity construction, actual nerve hypotheses, and required labelled diagram-model results remain open. This model does not settle any of those obligations.}
+  \p{Reproduce with \code{lake build Augmented} and \code{python3 scripts/check_foundations.py}. Exact types, universes, source hashes, dependencies and transitive axiom closures are recorded in \code{docs/foundations/inventory.json}; \code{docs/augmented/README.md} maps the source equations to the implementation. The audit permits only \code{propext}, \code{Classical.choice} and \code{Quot.sound}, and checks that every augmented implementation module contributes declarations. Cites: \ref{dec-wf-0008}, \ref{dec-wf-0010}.}
+}

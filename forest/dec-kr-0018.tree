@@ -4,7 +4,7 @@
 \meta{area}{kernel}
 \meta{origin}{design/01-kernel.md}
 \meta{status}{provisional}
-\meta{status-text}{provisional research definition, not frozen pending an omitted relation list.}
+\meta{status-text}{provisional algebra presentation; arity and diagram-model results remain open.}
 \meta{supersedes}{dec-kr-0006}
 \meta{superseded-by}{none}
 \tag{decision}
@@ -31,6 +31,6 @@
 }
 \subtree{
   \title{Status}
-  \p{provisional research definition, not frozen pending an omitted relation list.}
-  \p{The first implementation slice is in \code{Kernel/Augmented/}, with source and equation obligations recorded in \code{docs/augmented/README.md}. It checks incidence, operation types, ordinary-active obstruction and a supplied 2-category's binary cell laws. The complete algebra, arity presentation, no-horizontal discrete-nerve comparison and diagram model remain open under \ref{at-fd-0007}; this does not freeze the decision.}
+  \p{provisional algebra presentation; arity and diagram-model results remain open.}
+  \p{\ref{augmented-algebra} records the equation families, their dependent incidence proofs and a nontrivial lawful additive-label model. The previous missing-equation task is now encoded and model-checked. The no-horizontal algebra/discrete-nerve comparison, free/arity presentation and labelled diagram model remain open under \ref{at-fd-0007}. Rationale for retaining provisional status: a lawful set-level algebra model does not supply the arity or homotopical model the root requires.}
 }
