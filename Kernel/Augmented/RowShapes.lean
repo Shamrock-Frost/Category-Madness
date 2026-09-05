@@ -96,5 +96,8 @@ def rowEquiv (f g : Side C) : G.Row f g ≃ (Σ s : RowShape H f g, Labels G s) 
   left_inv := CellGraph.Row.join_shape_labels
   right_inv s := split_join s.1 s.2
 
+@[simp] theorem shape_join {f g : Side C} (s : RowShape H f g) (x : Labels G s) :
+    CellGraph.Row.shape (join s x) = s := congrArg Sigma.fst (split_join s x)
+
 end RowShape
 end Kernel.Augmented

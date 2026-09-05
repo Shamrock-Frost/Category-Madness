@@ -59,6 +59,40 @@ def Inputs.transport {s t : SubstitutionShape C H} (e : s = t) (x : Inputs G s) 
   cases e; cases e'
   rfl
 
+def joinedRow (s : SubstitutionShape C H) (x : s.Inputs G) : G.NonemptyRow s.left s.right :=
+  ⟨RowShape.join s.row x.1, by simpa only [RowShape.join_length] using s.nonempty⟩
+
+theorem ofRow_join (s : SubstitutionShape C H) (x : s.Inputs G) :
+    ofRow (joinedRow s x) s.lowerLeft s.lowerRight s.output = s := by
+  rcases s with ⟨f, g, r, hr, a, b, h, k, L⟩
+  have e : (⟨CellGraph.Row.shape (RowShape.join r x.1),
+      by simpa only [CellGraph.Row.shape_length, RowShape.join_length] using hr⟩ :
+      {r : RowShape H f g // 0 < r.length}) = ⟨r, hr⟩ :=
+    Subtype.ext (RowShape.shape_join r x.1)
+  exact congrArg
+    (fun t : {r : RowShape H f g // 0 < r.length} =>
+      (⟨f, g, t.val, t.property, a, b, h, k, L⟩ : SubstitutionShape C H))
+    e
+
+theorem inputs_split_join (s : SubstitutionShape C H) (x : s.Inputs G) :
+    Inputs.transport (ofRow_join s x)
+      (rowInputs (joinedRow s x) s.lowerLeft s.lowerRight s.output
+        (CellGraph.castInput (RowShape.join_output s.row x.1).symm x.2)) = x := by
+  have snd_heq : ∀ {a b : Σ r : RowShape H s.left s.right, RowShape.Labels G r},
+      a = b → HEq a.2 b.2 := by
+    intro a b e
+    cases e
+    rfl
+  have pair_heq : ∀ {α β α' β' : Type c} {a : α} {b : β} {a' : α'} {b' : β'},
+      HEq a a' → HEq b b' → HEq (a, b) (a', b') := by
+    intro α β α' β' a b a' b' ha hb
+    cases ha; cases hb
+    rfl
+  apply eq_of_heq
+  apply (cast_heq _ _).trans
+  exact pair_heq (snd_heq (RowShape.split_join s.row x.1))
+    ((CellGraph.castInput_heq _ _).trans (CellGraph.castInput_heq _ _))
+
 end SubstitutionShape
 
 namespace Operations

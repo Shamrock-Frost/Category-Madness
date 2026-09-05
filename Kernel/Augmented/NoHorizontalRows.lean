@@ -61,4 +61,16 @@ theorem rowView_length {f g : Side C} (r : G.Row f g) :
   have h := congrArg (Quiver.Path.length (V := G.Vertex)) (eq_of_heq hr)
   exact (Vertical.Row.embed_length p).symm.trans h.symm
 
+/-- A row view that retains its given left boundary definitionally. -/
+structure RowViewFrom (f : Side C) {g : Side C} (r : G.Row f g) where
+  right : f.source ⟶ f.target
+  row : Vertical.Row (G := G) f.arrow right
+  right_eq : g = ⟨f.source, f.target, right⟩
+  embed_heq : HEq r row.embed
+
+def rowViewFrom {f g : Side C} (r : G.Row f g) : RowViewFrom f r := by
+  rcases rowView r with ⟨a, b, f', g', p, hf, hg, hr⟩
+  cases hf
+  exact ⟨g', p, hg, hr⟩
+
 end Kernel.Augmented.NoHorizontal
