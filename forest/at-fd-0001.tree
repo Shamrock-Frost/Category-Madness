@@ -12,4 +12,4 @@
 \p{State the Lean universes of the root, labelled shapes, matrix families, walking structures, monad collection, \code{Mod}, and projected category API. Check the intended matrix signature from \ref{dec-rt-0027} and the individual entry/collection levels. Compile examples with object/entry levels \code{(0,1)}, \code{(1,1)}, and \code{(1,0)}, plus the intended \code{Set}, small-space, and category collections. Provide necessary lifts and prove their comparison lemmas; no universe-lowering axiom is allowed.}
 \p{\strong{Depends on:} \ref{ms-0000} toolchain; minimal types only. \strong{Evidence:} actual declarations, compiled examples, universe table. \strong{Failure response:} increase collection universes or separate parameters; do not weaken the category API by silently forcing \code{u=v}.}
 \p{Named by: \ref{dec-ch-0023}, \ref{dec-fd-0001}, \ref{dec-rt-0025}, \ref{dec-rt-0027}, \ref{dec-sp-0010}.}
-\p{\em{Lean declaration(s):} none yet.}
+\p{\em{Implementation evidence:} Preliminary data signatures and lift round trips: Prototype/Universes.lean. Root, shapes, walking structures, monad/Mod and space collections remain unimplemented; this gate remains proposed.}

@@ -3,13 +3,13 @@
 \meta{id}{AT-FD-2}
 \meta{area}{foundation feasibility}
 \meta{origin}{design/11-foundation-feasibility.md}
-\meta{status}{proposed}
+\meta{status}{stated}
 \meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:fd}
-\tag{status:proposed}
+\tag{status:stated}
 
 \p{Build one dependent specification containing a carrier, nontrivial operations, and laws; provide its kernel-backed inhabitant. Expose an opaque package with transparent logical projections, or the precisely audited alternative from \ref{dec-rt-0028}. Prove a client theorem that uses the laws. Build the identical client against a stub package. Also supply a client depending on an implementation equation and show the checking pipeline rejects it. Confirm both builds use the same public signatures and record a small performance measurement. The prototype does not need the whole root.}
 \p{\strong{Depends on:} \ref{ms-0000}; \ref{at-fd-0001} if universes are shared. \strong{Evidence:} both successful builds, negative-test failure, dependency audit, and timing. \strong{Failure response:} revise the seal packaging before creating broad Theory clients.}
 \p{Named by: \ref{dec-ch-0014}, \ref{dec-ch-0021}, \ref{dec-ch-0022}, \ref{dec-ch-0025}, \ref{dec-rt-0028}, \ref{dec-tl-0017}, \ref{dec-tl-0018}.}
-\p{\em{Lean declaration(s):} none yet.}
+\p{\em{Implementation evidence:} Specification and implementation: Interface.Prototype.MonoidSpec, Kernel.Prototype.natMonoid, Interface.Prototype.monoid. Clients: Theory.Prototype.product_append, right_identity_unique, product_generator_ne_one. Reproduce build, swap, signature, axiom and dependency checks with scripts/swap_test.sh; validation pending.}

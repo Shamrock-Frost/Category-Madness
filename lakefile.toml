@@ -1,12 +1,12 @@
-# Lake configuration (TOML, not Lean: no Lean is written before M1).
-# Mathlib is pinned to the release tag matching lean-toolchain (D-CH-08, D-CH-11).
+# M-F foundation slice (D-CH-21, D-CH-24, D-RT-28, AT-FD-2).
+# Mathlib is pinned to the release tag matching lean-toolchain.
 # Bumping the pin is a deliberate act: update both files together and refresh the
-# Mathlib inventory node (AT-KR-0, D-KR-02) in the same PR.
+# Mathlib inventory node (AT-KR-0, D-KR-14) in the same PR.
 name = "CategoryMadness"
-defaultTargets = ["Kernel", "Root", "Interface", "Theory"]
+defaultTargets = ["Kernel", "Interface", "Theory", "Foundation"]
 
 [leanOptions]
-autoImplicit = false          # D-TL-06 (6): universe test
+autoImplicit = false          # D-TL-17: explicit universes
 relaxedAutoImplicit = false
 
 [[require]]
@@ -14,7 +14,7 @@ name = "mathlib"
 scope = "leanprover-community"
 rev = "v4.33.1"
 
-# Stage 0 (D-CH-08): scaffolding on Mathlib. Hidden after the seal.
+# Stage 0 (D-CH-21): scaffolding. Hidden after the seal.
 [[lean_lib]]
 name = "Kernel"
 
@@ -22,13 +22,21 @@ name = "Kernel"
 [[lean_lib]]
 name = "Root"
 
-# The seal (D-RT-13): the only thing Theory/ may see.
+# The seal (D-RT-28): the only thing Theory/ may see.
 [[lean_lib]]
 name = "Interface"
 
-# Stage 2: everything else, in interface terms only (D-CH-09).
+# Stage 2: clients in interface terms only (D-CH-22).
 [[lean_lib]]
 name = "Theory"
 
-# Interface-Stub/ is not a library target: the swap test (D-TL-06 (4)) swaps it into
-# place of Interface/ and rebuilds Theory — see scripts/swap_test.sh.
+# Only positive experiments are library targets. Negative fixtures are never imported.
+[[lean_lib]]
+name = "Foundation"
+roots = ["Prototype.Universes"]
+
+[[lean_lib]]
+name = "Audit"
+roots = ["Prototype.Audit"]
+
+# Interface-Stub/ supplies replacement modules in an isolated swap-test checkout.

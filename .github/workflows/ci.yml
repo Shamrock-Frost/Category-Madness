@@ -68,6 +68,9 @@ jobs:
     name: lake build + swap test
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    env:
+      # The first seal uses only Lean's pinned core; avoid downloading all Mathlib oleans.
+      MATHLIB_NO_CACHE_ON_UPDATE: "1"
     steps:
       - uses: actions/checkout@v4
       - id: sources
@@ -81,7 +84,14 @@ jobs:
       - if: steps.sources.outputs.present == 'true'
         uses: leanprover/lean-action@v1
         with:
-          use-mathlib-cache: true
+          use-mathlib-cache: false
           build: true
       - if: steps.sources.outputs.present == 'true'
         run: bash scripts/swap_test.sh
+      - name: preserve seal evidence
+        if: always() && steps.sources.outputs.present == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: seal-evidence
+          path: build/seal/
+          if-no-files-found: ignore

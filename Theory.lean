@@ -1,0 +1,1 @@
+import Theory.Prototype.Monoid

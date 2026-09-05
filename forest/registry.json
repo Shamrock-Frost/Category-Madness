@@ -321,16 +321,16 @@
       "tags": [
         "acceptance-test",
         "area:fd",
-        "status:proposed"
+        "status:stated"
       ],
       "meta": {
         "id": "AT-FD-2",
         "area": "foundation feasibility",
         "origin": "design/11-foundation-feasibility.md",
-        "status": "proposed",
+        "status": "stated",
         "statement-version": "1"
       },
-      "status": "proposed",
+      "status": "stated",
       "refs": [
         "at-fd-0001",
         "dec-ch-0014",
