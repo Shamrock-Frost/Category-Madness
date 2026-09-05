@@ -1,4 +1,5 @@
 import Kernel.Augmented.Rows
+import Kernel.Augmented.Transport
 
 /-! Primitive operations with their full incidence types.
 Reference: Koudenburg, arXiv:1910.11189v4, Definition 1.2.
@@ -33,6 +34,20 @@ structure Operations {C : Type u} [Category.{v} C] {H : C → C → Type h}
 namespace Operations
 variable {C : Type u} [Category.{v} C] {H : C → C → Type h}
   {G : CellGraph.{u,v,h,c} C H}
+
+/-- Reindexing a row commutes with substitution, including the outer cell's input. -/
+theorem substitute_transport (O : Operations G) {f g : Side C}
+    {r r' : G.NonemptyRow f g} (e : r = r') {a b : C}
+    (h : f.target ⟶ a) (k : g.target ⟶ b) (L : ShortPath H a b)
+    (ψ : G.Cell (CellGraph.Row.outerBoundary r h k L)) :
+    CellGraph.castInput (G := G) (f := f.post h) (g := g.post k) (L := L)
+      (congrArg (fun r : G.NonemptyRow f g => CellGraph.Row.input r.val) e)
+      (O.substitute r h k L ψ) =
+    O.substitute r' h k L
+      (CellGraph.castInput
+        (congrArg (fun r : G.NonemptyRow f g => CellGraph.Row.output r.val) e) ψ) := by
+  cases e
+  rfl
 
 /-- Stacking two (0,0)-cells is a special case of nonempty-row substitution. -/
 def verticalStack (O : Operations G) {a b d : C} {f g : a ⟶ b} {h k : b ⟶ d}

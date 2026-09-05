@@ -20,6 +20,7 @@
 \subtree{
   \title{Rationale}
   \p{Augmentation changes the combinatorics; serialization cannot establish it.}
+  \p{The current presentation separates incident row shapes from cell labels and centralizes transport along equality of complete boundaries. The algebra equations use ordinary equality after that transport. Rationale for this provisional refinement: substitution incidence must be independent of labels, and clients should not repeatedly reconstruct dependent reindexing. Checked round trips preserve the existing rows; this does not establish canonical arities.}
 }
 \subtree{
   \title{Rejected}
@@ -32,5 +33,5 @@
 \subtree{
   \title{Status}
   \p{provisional algebra presentation; arity and diagram-model results remain open.}
-  \p{\ref{augmented-algebra} records the equation families, their dependent incidence proofs and a nontrivial lawful additive-label model. The previous missing-equation task is now encoded and model-checked. The no-horizontal algebra/discrete-nerve comparison, free/arity presentation and labelled diagram model remain open under \ref{at-fd-0007}. Rationale for retaining provisional status: a lawful set-level algebra model does not supply the arity or homotopical model the root requires.}
+  \p{\ref{augmented-algebra} records the equation families, their dependent incidence proofs and a nontrivial lawful additive-label model. \ref{augmented-transport} records the revised API, renewed model evidence, strict 2-category extraction, and reverse operation data. The reverse algebra laws, comparison round trips and discrete nerve, free/arity presentation and labelled diagram model remain open under \ref{at-fd-0007}. Rationale for retaining provisional status: this checked slice does not supply the full comparison, arity or homotopical model the root requires.}
 }

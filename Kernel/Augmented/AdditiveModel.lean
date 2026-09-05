@@ -100,23 +100,19 @@ def algebra : Algebra (graph C H M) where
       simp
     leftUnit := by
       intro f g b φ
-      apply heq_of_eq
       change rowSum (CellGraph.Row.single φ).val + (operations (M := M)).shortIdentity b.output = φ
       rw [rowSum_single, shortIdentity_zero, add_zero]
     rightUnit := by
       intro f g b φ
-      apply heq_of_eq
       change rowSum ((operations (M := M)).identityRow b.input).val + (φ : M) = φ
       rw [identityRow_sum, zero_add]
     insertion := by
       intro f g k p q hn a b h l L ψ
-      apply heq_of_eq
       change rowSum ((operations (M := M)).insertedRow p q).val + (ψ : M) =
         rowSum (p.comp q) + (ψ : M)
       rw [insertedRow_sum]
     assoc := by
       intro s t r a b p q L χ
-      apply heq_of_eq
       change rowSum (Nested.Row.composite operations r.val) + (χ : M) =
         rowSum (Nested.Row.inner r.val) + (rowSum (Nested.Row.outer r.val) + (χ : M))
       rw [nested_composite_sum, add_assoc]

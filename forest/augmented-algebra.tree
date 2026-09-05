@@ -22,7 +22,7 @@
 
 \subtree{
   \title{Boundary proofs before assuming the equations}
-  \p{\code{Kernel.Augmented.Nested.Row.inner_output}, \code{composite_input} and \code{composite_output} identify the paths needed by both substitution orders. Nonemptiness is preserved. The \code{Kernel.Augmented.Operations} theorems \code{leftUnit_boundary}, \code{rightUnit_boundary}, \code{inserted_boundary} and \code{assoc_boundary} prove equality of the complete boundaries, including their sides. The equation fields use \code{HEq} only to retain these dependent transports. These incidence proofs do not assume \code{Laws}.}
+  \p{\code{Kernel.Augmented.Nested.Row.inner_output}, \code{composite_input} and \code{composite_output} identify the paths needed by both substitution orders. Nonemptiness is preserved. The \code{Kernel.Augmented.Operations} theorems \code{leftUnit_boundary}, \code{rightUnit_boundary}, \code{inserted_boundary} and \code{assoc_boundary} prove equality of the complete boundaries, including their sides. The equation fields now use ordinary equality after \code{CellGraph.transport} along these proofs; \ref{augmented-transport} records the shape/label split and compatibility API. These incidence proofs do not assume \code{Laws}.}
   \p{This is the domain of the displayed associativity equation, not a canonical encoding theorem for arbitrary pastings. The limits in \ref{dec-tl-0021} remain in force.}
 }
 
@@ -35,6 +35,6 @@
 
 \subtree{
   \title{Current frontier and evidence}
-  \p{The next comparison must extend the supplied \code{FromTwoCategory} binary model to a lawful augmented algebra and identify the no-horizontal algebra fragment with strict 2-categories, including its discrete nerve. The free/arity construction, actual nerve hypotheses, and required labelled diagram-model results remain open. This model does not settle any of those obligations.}
+  \p{\ref{augmented-transport} adds the checked extraction of a strict 2-category from an augmented algebra, derived composition laws, and reverse operation data with its vertical substitution formula. The reverse algebra laws, comparison round trips and discrete nerve remain open. The free/arity construction, actual nerve hypotheses, and required labelled diagram-model results also remain open.}
   \p{Reproduce with \code{lake build Augmented} and \code{python3 scripts/check_foundations.py}. Exact types, universes, source hashes, dependencies and transitive axiom closures are recorded in \code{docs/foundations/inventory.json}; \code{docs/augmented/README.md} maps the source equations to the implementation. The audit permits only \code{propext}, \code{Classical.choice} and \code{Quot.sound}, and checks that every augmented implementation module contributes declarations. Cites: \ref{dec-wf-0008}, \ref{dec-wf-0010}.}
 }

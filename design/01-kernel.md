@@ -87,16 +87,23 @@ The early examples include `c₁^∅`, `(0,0)` cells and both compositions, null
 shared-side compositions, and mixed rows. The no-horizontal fragment must recover
 2-categories by the discrete nerve comparison.
 **Rationale.** Augmentation changes the combinatorics; serialization cannot establish it.
+The current presentation separates incident row shapes from cell labels and
+centralizes transport along equality of complete boundaries. Algebra equations use
+ordinary equality after that transport. This provisional refinement keeps substitution
+incidence independent of labels and avoids reconstructing dependent reindexing in
+clients. Checked round trips preserve the existing rows; they do not establish
+canonical arities.
 **Rejected.** The previous assertion that all augmented arities are chains of active
 maps in ordinary Δ; inferring a general pasting theorem from a row picture.
 **Acceptance.** AT-FD-7, AT-KR-8; AT-KR-3 only after the explicit presentation exists.
 **Status.** provisional algebra presentation; arity and diagram-model results remain open.
 The equation families and their dependent incidence proofs are encoded in
 `Kernel/Augmented/Algebra.lean`; `AdditiveModel.algebra` supplies a nontrivial lawful
-model. Current evidence is indexed by `forest/augmented-algebra.tree`. Provisional
-status is retained because this set-level model does not supply the no-horizontal
-algebra/discrete-nerve comparison, free/arity presentation or labelled diagram model
-required by AT-FD-7.
+model. `forest/augmented-algebra.tree` and `forest/augmented-transport.tree` index
+the revised API, renewed model evidence, strict 2-category extraction and reverse
+operation data. Provisional status is retained because the reverse algebra laws,
+comparison round trips and discrete nerve, free/arity presentation and labelled
+diagram model required by AT-FD-7 remain open.
 
 ### D-KR-19 · Labels and reduction
 **Decision.** Once object positions are defined functorially, labelled shapes are the

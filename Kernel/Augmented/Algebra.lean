@@ -4,9 +4,8 @@ import Kernel.Augmented.NestedRows
 Reference: Koudenburg, arXiv:1910.11189v4, Definition 1.2.
 Cites: D-KR-18, D-RT-30, D-TL-21, AT-FD-7.
 
-Equation instances retain every incident path and vertical side. Heterogeneous
-equality handles the explicit endpoint/path transports; the boundary lemmas
-below prove that the two sides describe the same complete boundary. This is
+Equation instances retain every incident path and vertical side. Each equation uses the central cell transport along a proved equality of
+complete boundaries. Boundary proofs are independent of the algebra laws. This is
 an algebra presentation, not a free/arity or nerve theorem.
 -/
 
@@ -14,24 +13,6 @@ open CategoryTheory
 namespace Kernel.Augmented
 universe u v h c
 
-namespace Boundary
-variable {C : Type u} [Quiver.{v} C] {H : C → C → Type h}
-
-/-- Bundle the sides too when comparing dependent boundaries. -/
-def frame {f g : Side C} (b : Boundary H f g) :
-    Σ f : Side C, Σ g : Side C, Boundary H f g := ⟨f, g, b⟩
-
-theorem frame_eq {f g f' g' : Side C} {b : Boundary H f g} {b' : Boundary H f' g'}
-    (hf : f = f') (hg : g = g') (hi : HEq b.input b'.input)
-    (ho : HEq b.output b'.output) : b.frame = b'.frame := by
-  cases hf
-  cases hg
-  cases b
-  cases b'
-  cases eq_of_heq hi
-  cases eq_of_heq ho
-  rfl
-end Boundary
 
 namespace Operations
 variable {C : Type u} [Category.{v} C] {H : C → C → Type h}
@@ -113,17 +94,19 @@ class Laws {C : Type u} [Category.{v} C] {H : C → C → Type h}
   verticalIdentity_stack : ∀ {a b d : C} (f : a ⟶ b) (g : b ⟶ d),
     O.verticalStack (O.verticalIdentity f) (O.verticalIdentity g) = O.verticalIdentity (f ≫ g)
   leftUnit : ∀ {f g : Side C} {b : Boundary H f g} (φ : G.Cell b),
-    HEq (O.leftUnitComposite φ) φ
+    CellGraph.transport (Operations.leftUnit_boundary φ) (O.leftUnitComposite φ) = φ
   rightUnit : ∀ {f g : Side C} {b : Boundary H f g} (φ : G.Cell b),
-    HEq (O.rightUnitComposite φ) φ
+    CellGraph.transport (O.rightUnit_boundary b) (O.rightUnitComposite φ) = φ
   insertion : ∀ {f g k : Side C} (p : G.Row f g) (q : G.Row g k)
     (hn : 0 < (p.comp q).length) {a b : C} (h : f.target ⟶ a) (l : k.target ⟶ b)
     (L : ShortPath H a b) (ψ : G.Cell (CellGraph.Row.outerBoundary ⟨p.comp q, hn⟩ h l L)),
-    HEq (O.insertedComposite p q hn h l L ψ) (O.substitute ⟨p.comp q, hn⟩ h l L ψ)
+    CellGraph.transport (O.inserted_boundary p q hn h l L)
+      (O.insertedComposite p q hn h l L ψ) = O.substitute ⟨p.comp q, hn⟩ h l L ψ
   assoc : ∀ {s t : Nested.Side C} (r : Nested.NonemptyRow G s t)
     {a b : C} (p : s.bottom ⟶ a) (q : t.bottom ⟶ b) (L : ShortPath H a b)
     (χ : G.Cell (CellGraph.Row.outerBoundary r.outer p q L)),
-    HEq (O.assocLeft r p q L χ) (O.assocRight r p q L χ)
+    CellGraph.transport (O.assoc_boundary r p q L) (O.assocLeft r p q L χ) =
+      O.assocRight r p q L χ
 
 /-- Set-level augmented operation data satisfying all the displayed equation families. -/
 structure Algebra {C : Type u} [Category.{v} C] {H : C → C → Type h}

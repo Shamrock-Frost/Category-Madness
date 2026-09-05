@@ -38,7 +38,7 @@ these operations. `Algebra` combines this data with the proposition-valued
 | Vertical boundaries | `Boundary.vertical_parallel`, `empty_horizontal_arity` | `(0,0)` cells have parallel sides; the empty horizontal graph permits only this arity. |
 | Shared sides and mixed rows | `Examples.mixed_counts`, `mixed_horizontal_boundary`, shared-side negative example | Includes `cOneEmpty` followed by a one-output cell; equal objects with different intermediate arrows are rejected. |
 | Nullary input and substitution | `Examples.nullaryInput_arity`, `mixedComposite`, `stacked_right_side` | Includes `(0,1)` input and a mixed substitution with nonidentity outside arrows. |
-| Both vertical-cell operations | `Operations.verticalStack`, `Operations.verticalAlongRow` | Derived definitions; the general 2-category comparison from `Laws` remains pending. |
+| Both vertical-cell operations | `Operations.verticalStack`, `Operations.verticalAlongRow` | Derived definitions; `Vertical.bicategory` and `Vertical.bicategory_strict` prove the extraction from a lawful algebra. |
 | Ordinary active-map obstruction | `Simplex.active_from_zero_target_zero`, `no_active_zero_to_one`, `no_active_encoding` | A positive-input, zero-output row cannot have the proposed ordinary active map from its output length to its input length. `active_to_zero` checks the opposite direction. |
 | Supplied 2-category's cells | `FromTwoCategory.cellEquiv` | Empty-path elimination identifies cells with the supplied 2-morphisms. |
 | Binary 2-cell laws | `alongRow_assoc`, `stack_assoc`, `identity_stack`, `stack_identity_object`, `stack_identity`, `interchange` in `FromTwoCategory` | Stacking associativity and object units use strictness and endpoint transport (`HEq`); the other laws hold in a bicategory. |
@@ -74,15 +74,74 @@ flattened inner row into the composite outer cell. `composite_input` and
 preserve nonemptiness. Consequently both sides of `Laws.assoc` are actual cells,
 with no assumed incidence equality or hidden existence hypothesis.
 
-The equation fields use `HEq` to retain the explicit path and vertical-arrow
-transports. The separate `Operations.leftUnit_boundary`, `rightUnit_boundary`,
-`inserted_boundary` and `assoc_boundary` theorems prove equality of the complete
-boundaries, including their sides. These proofs use only the operation types and
-row constructions, before assuming `Laws`.
+The equation fields are ordinary equalities after `CellGraph.transport` along
+`Operations.leftUnit_boundary`, `rightUnit_boundary`, `inserted_boundary` or
+`assoc_boundary`. Each proof compares the complete boundaries, including their
+sides, and uses only the operation types and row constructions, before assuming
+`Laws`. The vertical-identity field already has one common boundary.
+`transport_eq_iff_heq` proves equivalence with the previous equation form **given
+that boundary equality**. Internal Mathlib comparison adapters use this lemma;
+`Laws` no longer asks clients to supply bare heterogeneous equalities.
 
 The nested-row construction is the domain of this displayed equation. It does
 not assert that arbitrary augmented pastings have a unique encoding or that
 incident rows already form a canonical arity presentation.
+
+## Shapes, labels and transport
+
+`RowShape` contains the ordered boundaries and shared vertical arrows.
+`RowShape.Labels G s` supplies a cell at each boundary. `rowEquiv` proves both
+round trips between a labelled row and its shape/labels pair. Cell count, input
+and output are preserved. The implementation of `Row.input` and `Row.output`
+now computes through the erased shape, without inspecting the labels.
+This equivalence presents existing incident rows; it is not a canonical arity
+or arbitrary-pasting theorem.
+
+`SubstitutionShape` packages a nonempty row shape, lower sides and output.
+Its `outer` and `result` boundaries do not depend on the cell graph or labels.
+`Operations.apply` accepts that shape and `SubstitutionShape.Inputs G s`.
+`apply_row` proves agreement with the existing incident-row substitution API.
+The latter remains available for row constructors and comparison adapters.
+
+`CellGraph.transport` takes an equality of full boundary frames. It has checked
+identity, composition, inverse and injectivity laws. `castInput` is a restricted
+wrapper around the same transport. `Operations.substitute_transport` handles
+row reindexing including the outer cell; `apply_transport` handles equality of
+complete substitution shapes. Thus a client can move a whole substitution
+through its incidence equality instead of rewriting dependent arguments one by
+one.
+
+`SubstitutionExamples.shape_independent` and `labels_matter` check that changing
+labels preserves the shape but can change the answer. `cannot_transport_label`
+rejects transport between distinct boundaries even when the underlying label
+values happen to be heterogeneously equal. This checks the explicit boundary
+requirement; it does not claim that the previous checked algebra laws were
+unsound.
+
+## Vertical 2-category extraction
+
+`Vertical` derives both unit laws, stacking associativity, along-row
+associativity, and interchange from the augmented algebra equations. Its
+`substitute_eq_stack_compose` identifies vertical substitution with row
+composition followed by stacking. `homCategory`, `bicategory`, and
+`bicategory_strict` construct Mathlib's actual categories and strict bicategory,
+including coherence. These are derived structures, not additional algebra
+axioms. Client associativity and interchange statements use ordinary equality.
+
+Some internal dependent equality remains in `Vertical`, `ComparisonTransport`
+and the Mathlib bridge: strict associativity of the underlying arrows is
+propositional. The refactor centralizes transport and gives the shape-facing
+API explicit equality laws; it does not claim to eliminate every heterogeneous
+comparison in the implementation.
+
+`NoHorizontal.rowView` eliminates empty horizontal paths to an ordinary chain
+of parallel vertical cells. `rowView_embed` and `rowView_length` prove its
+round trip on embedded chains and preservation of length.
+`FromTwoCategory.operations` now defines all substitutions of a supplied strict
+2-category, and `substitute_vertical` proves their row-fold/stack computation.
+The reverse construction's full `Laws` record and the comparison round trips
+remain open; the file name `FromTwoCategoryAlgebra` denotes that work area, not a
+claim that the reverse algebra has already been proved.
 
 ## A nontrivial lawful model
 
@@ -107,11 +166,10 @@ An empty inner substitution row is also rejected, alongside positive controls.
 
 ## Remaining AT-FD-7 work
 
-The full gate statement is unchanged. Next, extend the supplied no-horizontal
-binary model to an augmented algebra and prove the general comparison
-with strict 2-categories, including the discrete nerve comparison. The current
-`FromTwoCategory` and `FromCat` results establish the cell and binary-operation
-part of this comparison, not an equivalence with `Algebra`.
+The full gate statement is unchanged. Next, prove all algebra equations for the
+supplied strict 2-category's substitutions, then the comparison round trips and
+discrete nerve comparison. The extraction in the other direction is checked;
+no equivalence with `Algebra` or nerve theorem is asserted yet.
 
 The free construction, arity category and nerve hypotheses remain to be proved.
 `Row` is incident syntax, not a

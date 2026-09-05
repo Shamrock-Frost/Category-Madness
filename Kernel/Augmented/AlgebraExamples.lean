@@ -52,8 +52,8 @@ def compositeRight := O.assocRight nested
   (6 : (.c : Point) ⟶ .a) (7 : (.c : Point) ⟶ .b) (ShortPath.single Unit.unit) (13 : ℕ)
 
 theorem nested_associativity : compositeLeft = compositeRight :=
-  eq_of_heq (algebra.laws.assoc nested
-    (6 : (.c : Point) ⟶ .a) (7 : (.c : Point) ⟶ .b) (ShortPath.single Unit.unit) (13 : ℕ))
+  algebra.laws.assoc nested
+    (6 : (.c : Point) ⟶ .a) (7 : (.c : Point) ⟶ .b) (ShortPath.single Unit.unit) (13 : ℕ)
 
 theorem nested_value : compositeLeft = 36 ∧ compositeRight = 36 := by decide
 
