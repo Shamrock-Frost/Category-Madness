@@ -98,7 +98,8 @@ run_cmd do
     "CategoryTheory.Bicategory", "CategoryTheory.Bicategory.Strict",
     "CategoryTheory.Bicategory.whisker_exchange",
     "CategoryTheory.Bicategory.Strict.associator_eqToIso",
-    "CategoryTheory.conj_eqToHom_iff_heq"] : Array String).map String.toName
+    "CategoryTheory.conj_eqToHom_iff_heq",
+    "AddCommMonoid", "add_assoc", "add_add_add_comm"] : Array String).map String.toName
   let project := (← getEnv).constants.toList.filterMap fun (n, _) =>
     if FoundationExport.foundationName n then some n else none
   for n in project do

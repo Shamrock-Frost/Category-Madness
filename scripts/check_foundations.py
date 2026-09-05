@@ -118,7 +118,7 @@ def gap_records() -> list[dict]:
         {"id": "relative-derived-mapping", "status": "project-obligation",
          "consequence": "SSet.RelativeMorphism is a strict relative map with a homotopy-class API. It is not the fixed-label derived MapRel or categorical MapCat required by D-RT-23. Available restriction fibrations require an explicit mono and Kan target."},
         {"id": "augmented-arities", "status": "project-obligation",
-         "consequence": "Category-of-elements machinery is available. Kernel.Augmented implements generating incidence, operation types, an active-map obstruction, and a supplied 2-category's cell/composition model. The full augmented algebra equations, comparison with that algebra, free/arity and nerve presentation, labelled diagram model, walking nerves, coherent Mod, and small-space classifier laws remain construction obligations (AT-FD-7 and dependent gates)."},
+         "consequence": "Category-of-elements machinery is available. Kernel.Augmented implements incidence, the set-level equation families, a lawful additive-label algebra, an active-map obstruction, and a supplied 2-category's binary cell model. Extending that binary model to an augmented algebra and proving the general 2-category/discrete-nerve comparison, free/arity and nerve presentation, labelled diagram model, walking nerves, coherent Mod, and small-space classifier laws remain construction obligations (AT-FD-7 and dependent gates)."},
     ]
     return records
 
@@ -236,10 +236,10 @@ def main() -> None:
         "dependencySourceSha256": dep_hashes, "declarations": rows,
         "gaps": gap_records(), "sourceScan": source_scan(),
         "exportRoundtrip": fixture_roundtrip(args.write),
-        "checks": ["compiled foundational signatures, augmented incidence and examples", "scoped transitive axiom audit",
+        "checks": ["compiled foundational signatures, augmented algebra equations and models", "scoped transitive axiom audit",
                    "exact declaration names and types from environment", "dependency pins and source hashes",
                    "bounded upstream gap evidence", "stated theorem export/parse round-trip"],
-        "scope": "Initial foundation work and the first AT-FD-7 implementation slice. Augmented incidence and operation types do not establish the full algebra, arity/nerve presentation or diagram model. Root/walking/Mod/classifier records remain minimal type contracts with explicit inputs.",
+        "scope": "Initial foundation work and the early set-level part of AT-FD-7. The augmented equation families and a nontrivial lawful model are checked; the general 2-category/discrete-nerve comparison, free/arity presentation and labelled diagram model remain open. Root/walking/Mod/classifier records remain minimal type contracts with explicit inputs.",
     }
     compare_or_write(SNAPSHOT, serialized(evidence), args.write)
     signature_names = {
