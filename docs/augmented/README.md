@@ -224,11 +224,16 @@ The forgetful functor and `generatingComparison` are faithful.
 `comparisonHomEquiv` characterizes comparison morphisms as graph maps that
 commute with evaluation of all free expressions. This condition yields the
 vertical functor, complete-boundary cell map, graph-map round trip, evaluation
-factorization and preservation of both identity cells.
+factorization and preservation of both identity cells. `generatorCell`,
+`generatorRow` and `generatorOuter` choose free representatives of whole
+substitution inputs, preserving shared sides. Their evaluation laws prove
+`comparisonCells_substitute`, so `comparisonMap` preserves arbitrary
+substitution as well. The concrete comparison is fully faithful, and the
+generating forgetful functor reflects isomorphisms.
 
-Monadicity still requires arbitrary substitution preservation for this
-reconstructed map and reconstruction of an augmented algebra from every
-generating-monad algebra. Neither finite raw-term leaves nor the adjunction
+Monadicity still requires reconstruction of an augmented algebra from every
+generating-monad algebra, proving essential surjectivity of the comparison.
+Neither finite raw-term leaves nor the adjunction
 establishes arity density or nerve recognition.
 
 ## Reusable nerve recognition step
