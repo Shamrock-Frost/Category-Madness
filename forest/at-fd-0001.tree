@@ -6,6 +6,7 @@
 \meta{status}{proposed}
 \meta{statement-version}{1}
 \meta{evidence}{Prototype/Universes/README.md}
+\meta{lean-modules}{Prototype.Universes.Matrix, Prototype.Universes.Reindex, Prototype.Universes.Examples}
 \tag{acceptance-test}
 \tag{area:fd}
 \tag{status:proposed}
@@ -14,4 +15,5 @@
 \p{\strong{Depends on:} \ref{ms-0000} toolchain; minimal types only. \strong{Evidence:} actual declarations, compiled examples, universe table. \strong{Failure response:} increase collection universes or separate parameters; do not weaken the category API by silently forcing \code{u=v}.}
 \p{Named by: \ref{dec-ch-0023}, \ref{dec-fd-0001}, \ref{dec-rt-0025}, \ref{dec-rt-0027}, \ref{dec-sp-0010}.}
 \p{\em{Partial Lean declarations:} \code{Prototype.Universes.Matrix}, its \code{Map}, \code{liftEntries}, \code{liftMap}, and \code{lowerMap} operations, and the seven laws in \code{Prototype/Universes/Matrix.lean}. Explicit matrix universe examples and theorem axiom reports are in \code{Prototype/Universes/Examples.lean}.}
-\p{\em{Evidence and scope:} \code{Prototype/Universes/README.md} records the universe table and validation results. This covers only matrix families and entry lifts; the remaining root, shape, walking, monad, \code{Mod}, space, and category signatures and necessary comparisons are still outstanding. The complete statement is unchanged at version 1 and remains proposed.}
+\p{\em{Object-label comparisons:} \code{Prototype/Universes/Reindex.lean} defines \code{reindex}, \code{reindexMap}, \code{liftLabels}, \code{lowerLabels}, \code{liftLabelsMap}, and \code{lowerLabelsMap} in the same matrix namespace, with twelve laws for reindexing, inverse comparisons, and commutation with entry lifting. The examples include all three object/entry orderings and a mixed lift at four distinct levels.}
+\p{\em{Evidence and scope:} \code{Prototype/Universes/README.md} records the universe table and validation results. This covers matrix families, reindexing, and object/entry lifts; the remaining root, shape, walking, monad, \code{Mod}, space, and category signatures and necessary comparisons are still outstanding. The complete statement is unchanged at version 1 and remains proposed.}

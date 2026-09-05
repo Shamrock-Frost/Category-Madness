@@ -7,7 +7,8 @@ provisional until a focused foundation-feasibility milestone tests its semantics
 implementation boundary.
 
 **Status: M0 complete; M-F started.** The first Lean prototype covers matrix-family
-universes and entry lifts. See `Prototype/Universes/README.md` for its scope and check
+universes, reindexing, and independent object and entry lifts. See
+`Prototype/Universes/README.md` for its scope and check
 record. No complete foundation gate is marked proved.
 
 ## Start here

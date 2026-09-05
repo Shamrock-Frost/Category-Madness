@@ -288,7 +288,8 @@
         "origin": "design/11-foundation-feasibility.md",
         "status": "proposed",
         "statement-version": "1",
-        "evidence": "Prototype/Universes/README.md"
+        "evidence": "Prototype/Universes/README.md",
+        "lean-modules": "Prototype.Universes.Matrix, Prototype.Universes.Reindex, Prototype.Universes.Examples"
       },
       "status": "proposed",
       "refs": [
