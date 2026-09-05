@@ -4,7 +4,7 @@
 \meta{area}{root}
 \meta{origin}{design/02-root.md}
 \meta{status}{provisional}
-\meta{status-text}{corrected proposal; signatures not yet compiled.}
+\meta{status-text}{minimal universe signatures compiled under AT-FD-1; semantic constructions remain provisional.}
 \meta{supersedes}{dec-rt-0012}
 \meta{superseded-by}{none}
 \tag{decision}
@@ -31,5 +31,7 @@
 }
 \subtree{
   \title{Status}
-  \p{corrected proposal; signatures not yet compiled.}
+  \p{minimal universe signatures compiled under AT-FD-1; semantic constructions remain provisional.}
 }
+
+\p{\em{Evidence update:} the minimal type contracts and generated universe table in \code{docs/foundations/} verify \ref{at-fd-0001}. The declaration uses explicit shape and proposition-valued-condition inputs; no root or interface is frozen by this size check.}

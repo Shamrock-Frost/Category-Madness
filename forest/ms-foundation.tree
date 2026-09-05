@@ -2,7 +2,7 @@
 \taxon{Milestone}
 \meta{id}{M-F}
 \meta{origin}{design/08-roadmap.md}
-\meta{status}{planned}
+\meta{status}{in-progress}
 \tag{milestone}
 
 \p{See \code{11-foundation-feasibility.md} for the exact tests and dependencies.}
@@ -16,5 +16,7 @@
   \li{Construct relative monads/modules and one small nondiscrete matrix/Mod example, including whole-object fibres and the natural-equivalence extraction.}
   \li{Check the corrected symmetry ambient on a discrete action example; scope pasting and rectification accurately; pass the compiled-dependency and axiom audits.}
 }
-\p{\strong{Exit:} \ref{at-fd-0001} through \ref{at-fd-0011} passed: mathematical components have checked proofs of their current statements with approved axioms, and tooling components have reproducible check records. No blocked prerequisite is hidden behind a later milestone. A gate may be revised only with a decision explaining the change and its impact. Failed gates keep the dependent foundation provisional. There is no “all gates passed” status in this document revision: the tests are currently proposed.}
+\p{\strong{Exit:} \ref{at-fd-0001} through \ref{at-fd-0011} passed: mathematical components have checked proofs of their current statements with approved axioms, and tooling components have reproducible check records. No blocked prerequisite is hidden behind a later milestone. A gate may be revised only with a decision explaining the change and its impact. Failed gates keep the dependent foundation provisional. There is no “all gates passed” status in this document revision: the remaining gates are open.}
 \p{\strong{Freeze:} only the successfully validated minimal presentation/API fragment. Full root and interface freeze remains \ref{ms-0003}, with the required \ref{ms-foundation} results as prerequisites.}
+
+\p{\em{Current evidence:} the first work item is checked: \ref{at-kr-0000}, minimal universe signatures under \ref{at-fd-0001}, the scoped nonempty seal under \ref{at-fd-0002}, and small ordinary category/groupoid examples. Next are augmented algebra/shapes and the diagram-model lemmas under \ref{at-fd-0007}. No full foundation completion or root freeze is claimed.}

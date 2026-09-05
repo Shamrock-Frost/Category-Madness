@@ -1,0 +1,14 @@
+\title{Theory.unproved · quarantined exporter fixture}
+\taxon{Lean declaration}
+\meta{lean-name}{Theory.unproved}
+\meta{status}{stated}
+\meta{kind}{theorem}
+\meta{type}{False}
+\meta{axioms}{sorryAx}
+\meta{quarantined}{true}
+\meta{source}{Prototype/Negative/Sorry.lean}
+\meta{generator}{scripts/check_foundations.py}
+\tag{generated}
+\tag{negative-fixture}
+\p{Generated from the Lean environment for the minimal export round-trip. This unfinished statement is rejected by the axiom audit and is never imported by certified targets. It is not a mathematical result.}
+\p{Cites: \ref{dec-wf-0008}, \ref{dec-wf-0010}, \ref{at-kr-0000}.}

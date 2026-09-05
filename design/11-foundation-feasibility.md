@@ -1,7 +1,7 @@
 # 11 · M-F: foundation feasibility
 
-**Position:** after M0, before M1. **Current state:** proposed; no Lean implementation or
-proof was added by this document revision. **Purpose:** establish a viable small path
+**Position:** after M0, before M1. **Current state:** in progress; the initial inventory, minimal universe, seal, and small ordinary
+example work is checked. The remaining gates are open. **Purpose:** establish a viable small path
 through the foundation before expanding the library or freezing its conjectural root.
 
 This milestone can be substantial. “Small” means one root, a few decisive examples,

@@ -84,4 +84,6 @@ jobs:
           use-mathlib-cache: true
           build: true
       - if: steps.sources.outputs.present == 'true'
+        run: python3 scripts/check_foundations.py
+      - if: steps.sources.outputs.present == 'true'
         run: bash scripts/swap_test.sh

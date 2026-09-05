@@ -4,7 +4,7 @@
 \meta{layer}{human}
 \tag{chapter}
 
-\p{\strong{Position:} after \ref{ms-0000}, before \ref{ms-0001}. \strong{Current state:} proposed; no Lean implementation or proof was added by this document revision. \strong{Purpose:} establish a viable small path through the foundation before expanding the library or freezing its conjectural root.}
+\p{\strong{Position:} after \ref{ms-0000}, before \ref{ms-0001}. \strong{Current state:} in progress; the initial inventory, minimal universe, seal, and small ordinary example work is checked. The remaining gates are open. \strong{Purpose:} establish a viable small path through the foundation before expanding the library or freezing its conjectural root.}
 \p{This milestone can be substantial. “Small” means one root, a few decisive examples, and only their necessary machinery; it does not mean a finite checklist magically proves a new ∞-categorical nerve theorem. Definitions of shapes, diagrams, and replacement needed by these gates are pulled forward from \ref{ms-0001}/\ref{ms-0002}.}
 \transclude{dec-fd-0001}
 \subtree{

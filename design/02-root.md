@@ -193,7 +193,7 @@ are stated explicitly and are not solved by augmentation.
 **Rationale.** Entry size and collection size are different.
 **Rejected.** The former `Mat.{u,v} : VDC∞.{u,v}` signature with labels `Type u`.
 **Acceptance.** AT-FD-1, including `u<v`, `u=v`, `u>v`, and category-size examples.
-**Status.** corrected proposal; signatures not yet compiled.
+**Status.** minimal universe signatures compiled under AT-FD-1; semantic constructions remain provisional.
 
 ## Seal and API
 

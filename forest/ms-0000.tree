@@ -2,8 +2,10 @@
 \taxon{Milestone}
 \meta{id}{M0}
 \meta{origin}{design/08-roadmap.md}
-\meta{status}{planned}
+\meta{status}{complete}
 \tag{milestone}
 
 \p{Pin Lean/Mathlib and inventory \ref{at-kr-0000}. Create the repository/Prototype layout, minimal registry, test statuses, and CI scaffolding. Round-trip one stated WIP theorem through the minimal exporter. A full retrieval MCP and broad API generators are not exit gates. Freeze workflow/trust policies, not the conjectural mathematical foundation.}
 \p{\strong{Exit:} \ref{at-kr-0000} verified and the minimal registry/toolchain operates.}
+
+\p{\em{Checked exit evidence:} \ref{at-kr-0000} is proved as a tooling gate. The pinned toolchain, environment exporter, unfinished-theorem forest round-trip, registry checks, and retrieval self-test operate. Reproduction and dependency gaps are recorded in \code{docs/foundations/README.md}.}

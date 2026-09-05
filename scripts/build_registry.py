@@ -33,7 +33,7 @@ ADDRESS_SCHEME = {
     "chapter": "<area>-0000 (ch, krn, rt, up, ft, sp, tl, wf, rm, bib, rev, fd)",
     "reference": "bib-<nnnn> in document order",
     "workflow-notes": "wf-<nnnn> (wf-0001 is the porting report)",
-    "generated-declaration": "lean-<hash8> (D-WF-08, not yet produced)",
+    "generated-declaration": "lean-<name-slug>-<hash8> (D-WF-08 minimal exporter)",
     "history": "forest/history/<revision>/ (excluded from the active registry)",
 }
 
