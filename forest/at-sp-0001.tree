@@ -1,13 +1,14 @@
-\title{AT-SP-1 · \code{U} is a Kan complex}
+\title{AT-SP-1 · \\code{U} is a Kan complex}
 \taxon{Acceptance test}
 \meta{id}{AT-SP-1}
 \meta{area}{spaces and enrichment}
 \meta{origin}{design/05-spaces-enrichment.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:sp}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{\code{U} is a Kan complex.}
-\p{Named by: \ref{dec-sp-0001}.}
+\p{classifier, universality, size, Kan properties, and the exact equivalence comparison used by Mat}
+\p{Named by: \ref{dec-sp-0010}.}
 \p{\em{Lean declaration(s):} none yet.}

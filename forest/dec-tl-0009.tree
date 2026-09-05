@@ -3,17 +3,17 @@
 \meta{id}{D-TL-09}
 \meta{area}{tooling}
 \meta{origin}{design/06-tooling.md}
-\meta{status}{frozen}
+\meta{status}{superseded}
 \meta{status-text}{frozen (existence), provisional (interface).}
 \meta{supersedes}{none}
-\meta{superseded-by}{none}
+\meta{superseded-by}{dec-tl-0020}
 \tag{decision}
 \tag{area:tl}
-\tag{status:frozen}
+\tag{status:superseded}
 
 \subtree{
   \title{Decision}
-  \p{A tactic for equality of pasting composites. Both sides are normalized to \code{P(σ)(d)} — the diagram \code{d} restricted along a shape map \code{σ} — using functoriality of \code{P} and the Segal/active-map lemmas; the goal reduces to \code{σ = σ'} in the transparent hom-type of the shape category (→ \ref{dec-tl-0010}), which is decided by \code{decide} on finite data (for \code{Θ^aug_fc}, EZ normal forms: degeneracy part then sub-grid). For \code{Vert₂} the tactic first rewrites 2-cell pastings through unit factorization (→ \ref{dec-rt-0015}). This occupies the slot the coherence tactic vacated (→ \ref{dec-ch-0003}): coherence is shape-map equality.}
+  \p{A tactic for equality of pasting composites. Both sides are normalized to \code{P(σ)(d)} — the diagram \code{d} restricted along a shape map \code{σ} — using functoriality of \code{P} and the Segal/active-map lemmas; the goal reduces to \code{σ = σ'} in the transparent hom-type of the shape category (→ \ref{dec-tl-0010}), which is decided by \code{decide} on finite data (for \code{Θ^aug_fc}, EZ normal forms: degeneracy part then sub-grid). For \code{Vert₂} the tactic first rewrites 2-cell pastings through unit factorization (→ D-RT-15). This occupies the slot the coherence tactic vacated (→ D-CH-03): coherence is shape-map equality.}
 }
 \subtree{
   \title{Status}

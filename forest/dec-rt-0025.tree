@@ -1,0 +1,33 @@
+\title{D-RT-25 · \code{Mat(Set)} and \code{Category}}
+\taxon{Decision}
+\meta{id}{D-RT-25}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional until M-F's discrete prototype and the complete M3 comparison.}
+\meta{supersedes}{dec-rt-0010}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:rt}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{For object types \code{A B : Type u} and entries in \code{Type v}, horizontals are families \code{A → B → Type v}. Vertical arrows are functions. Multicells are families of functions from input products to the target family. Empty-target cells have target \code{f a₀ = g a_n}, corresponding to cells into the equality matrix. This augmentation is checked against the unital-to-augmented construction, including all unit laws. \code{Category.{u,v} A := Monad (Mat(Set.{v};u)) A}. Export its classical hom, identity, composition, and laws by the discrete comparison. \code{Cat := Mod(Mat Set)} includes functors, profunctors, and augmented transformation cells. Its different vertical extractions are those of \ref{dec-rt-0019}.}
+}
+\subtree{
+  \title{Rationale}
+  \p{The matrix example provides a small exact test of the entire discrete path.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Identifying natural transformations with paths of strict functor maps.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-fd-0001}, \ref{at-rt-0002}, \ref{at-rt-0010}, \ref{at-rt-0011}, \ref{at-rt-0012}.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional until \ref{ms-foundation}'s discrete prototype and the complete \ref{ms-0003} comparison.}
+}

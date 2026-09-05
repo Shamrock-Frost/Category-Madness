@@ -1,0 +1,15 @@
+\title{AT-FD-6 · Boundary monodromy and the direct coherent route}
+\taxon{Acceptance test}
+\meta{id}{AT-FD-6}
+\meta{area}{foundation feasibility}
+\meta{origin}{design/11-foundation-feasibility.md}
+\meta{status}{proposed}
+\meta{statement-version}{1}
+\tag{acceptance-test}
+\tag{area:fd}
+\tag{status:proposed}
+
+\p{Construct the fibration over \code{BC₂} associated with its transposition action on two points and compute the nontrivial action on fibre components. Demonstrate that the constant and generating loops give different transport maps. The public signature contains no generic representative-based \code{hP} construction. For a small cell-space example, retain the boundary data and prove the composition or universal-cell fact needed by the selected prototype directly, without such a truncation. If a homotopy-level intermediate is used, state and prove its precise comparison for that example. This gate does not demand a repaired general \code{hP}.}
+\p{\strong{Depends on:} small groupoid/Kan and cell-space machinery. \strong{Evidence:} the monodromy calculation, an interface dependency audit, and the direct coherent example. \strong{Failure response:} retain more boundary information or revise the proof route; quotienting away monodromy is not justified by choosing representatives.}
+\p{Named by: \ref{dec-ch-0026}, \ref{dec-ft-0009}, \ref{dec-kr-0022}, \ref{dec-rt-0020}.}
+\p{\em{Lean declaration(s):} none yet.}

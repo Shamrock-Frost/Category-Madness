@@ -1,0 +1,20 @@
+\title{AT-FD-5 · The root equivalence relation}
+\taxon{Acceptance test}
+\meta{id}{AT-FD-5}
+\meta{area}{foundation feasibility}
+\meta{origin}{design/11-foundation-feasibility.md}
+\meta{status}{proposed}
+\meta{statement-version}{1}
+\tag{acceptance-test}
+\tag{area:fd}
+\tag{status:proposed}
+
+\ol{
+  \li{In the discrete case use the chaotic strict monoidal category on \code{C₂}, with tensor given by group addition and exactly one morphism between each pair. Its full monoidal subcategory on the unit induces an equivalence of augmented VDCs despite having fewer horizontal arrows. Prove that the revised predicate accepts it.}
+  \li{Include isomorphic object representatives with horizontals at transported endpoints. Check the simultaneous endpoint/horizontal choices, not only literal image endpoints.}
+  \li{Prove equivalence with the exact classical augmented-VDC notion for discrete roots.}
+  \li{State the full proposed ∞-predicate without the deleted \code{hP}; prove composition, 2-out-of-3, and compatibility with the local examples used by \ref{at-fd-0008}. Relate it to the chosen unary-cell/categorical model on this required fragment. A full comparison with another VDC∞ theory is \ref{at-rt-0009}; these foundational local results are mandatory now.}
+}
+\p{\strong{Depends on:} the minimal augmented nerve and cell constructions, \ref{at-fd-0007} and the needed \ref{at-fd-0003} machinery. \strong{Evidence:} the four groups of results, with the ∞-predicate actually stated. \strong{Failure response:} revise the predicate or root model; do not restore bijectivity of horizontal-object spaces merely to simplify the proof.}
+\p{Named by: \ref{dec-ch-0026}, \ref{dec-rt-0017}, \ref{dec-rt-0021}.}
+\p{\em{Lean declaration(s):} none yet.}

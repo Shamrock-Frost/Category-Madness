@@ -1,13 +1,14 @@
-\title{AT-UP-3 · \code{C_{/F}} is a Segal category (Segal condition holds)}
+\title{AT-UP-3 · \\code{C_{/F}} is a Segal category (Segal condition holds)}
 \taxon{Acceptance test}
 \meta{id}{AT-UP-3}
 \meta{area}{universal properties}
 \meta{origin}{design/03-universal-properties.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:up}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{\code{C_{/F}} is a Segal category (Segal condition holds)}
-\p{Named by: \ref{dec-up-0003}.}
+\p{reduction, fibrancy, Segal condition, and categorical invariance; the point/edge calculation in \ref{at-fd-0008}}
+\p{Named by: \ref{dec-up-0012}.}
 \p{\em{Lean declaration(s):} none yet.}

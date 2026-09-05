@@ -1,0 +1,33 @@
+\title{D-KR-19 · Labels and reduction}
+\taxon{Decision}
+\meta{id}{D-KR-19}
+\meta{area}{kernel}
+\meta{origin}{design/01-kernel.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional until the underlying arity category and reduction are checked.}
+\meta{supersedes}{dec-kr-0007}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:kr}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{Once object positions are defined functorially, labelled shapes are the category of elements of \code{θ ↦ (ob θ → X)}. Label reindexing and inherited structural properties are proved. A reduced presheaf has terminal values at labelled object positions; the category-of-elements construction alone imposes no such condition.}
+}
+\subtree{
+  \title{Rationale}
+  \p{External labels do not force a presheaf's object values to be discrete.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Contractibility as sufficient justification for strict object gluing.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-kr-0009} for Δ_X, \ref{at-fd-0003} for root boundaries and label reindexing.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional until the underlying arity category and reduction are checked.}
+}

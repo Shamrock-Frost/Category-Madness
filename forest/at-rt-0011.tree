@@ -1,13 +1,14 @@
-\title{AT-RT-11 · Vertical 2-category of \code{Cat} is the classical one}
+\title{AT-RT-11 · Vertical 2-category of \\code{Cat} is the classical one}
 \taxon{Acceptance test}
 \meta{id}{AT-RT-11}
 \meta{area}{root}
 \meta{origin}{design/02-root.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:rt}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{Vertical 2-category of \code{Cat} is the classical one.}
-\p{Named by: \ref{dec-rt-0010}.}
+\p{Current proposed scope is specified by the active decisions that name this test.}
+\p{Named by: \ref{dec-rt-0019}, \ref{dec-rt-0025}.}
 \p{\em{Lean declaration(s):} none yet.}

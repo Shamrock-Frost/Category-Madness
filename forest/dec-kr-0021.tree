@@ -1,0 +1,33 @@
+\title{D-KR-21 · Cubes}
+\taxon{Decision}
+\meta{id}{D-KR-21}
+\meta{area}{kernel}
+\meta{origin}{design/01-kernel.md}
+\meta{status}{later}
+\meta{status-text}{later (M7+).}
+\meta{supersedes}{dec-kr-0009}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:kr}
+\tag{status:later}
+
+\subtree{
+  \title{Decision}
+  \p{Cubical shapes and comparison models are optional later work. Their presentation, equations, decidable equality, and connection conventions are stated before any cubical construction is exported. No claim about all possible cubical Segal formalisms is needed for the current root choice.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Cubes do not resolve the identified root feasibility questions.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Putting a cubical theory on the immediate critical path.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{A new client-specific acceptance test is required before implementation.}
+}
+\subtree{
+  \title{Status}
+  \p{later (\ref{ms-0007}+).}
+}

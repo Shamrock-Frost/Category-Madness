@@ -1,0 +1,33 @@
+\title{D-UP-15 · Witness discipline}
+\taxon{Decision}
+\meta{id}{D-UP-15}
+\meta{area}{universal properties}
+\meta{origin}{design/03-universal-properties.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen policy; instances proved individually.}
+\meta{supersedes}{dec-up-0006}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:up}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Quantify over witnesses. An operation using a universal witness provides functoriality on its witness category, and equivalences between outputs follow from that functoriality. Choice bridges may choose an object from proved nonemptiness or a section from proved lifting. Coherence across a diagram of problems is established in the parameterized construction before choice is applied; it is not inferred from one independently chosen section for each parameter.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Contractibility controls choices only in the correctly constructed space.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Global chosen-limit constants and hidden data typeclass choices.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-up-0001}, \ref{at-up-0006}; the witness-transport client at \ref{ms-0004}.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen policy; instances proved individually.}
+}

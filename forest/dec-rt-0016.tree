@@ -1,0 +1,40 @@
+\title{D-RT-16 · Reduced augmented Segal presentation}
+\taxon{Decision}
+\meta{id}{D-RT-16}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional; freeze only after M-F and the full M3 comparisons.}
+\meta{supersedes}{dec-rt-0001}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:rt}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{For \code{X : Type ℓ}, use the labelled augmented arity category \code{Θ^aug_{fc,X}} once its arity and Segal-core theorems have been established. A candidate \code{VDC∞.{ℓ,s}} is a presheaf into \code{sSet.{s}} with:}
+  \ol{
+    \li{a specified reduced presentation: every \code{P(pt x)} is the terminal simplicial set;}
+    \li{Kan values;}
+    \li{Kan fibrations from elementary cell values to their full boundary limits;}
+    \li{Segal comparison equivalences from \code{P(θ)} to the homotopy limit of its elementary inert subshape diagram.}
+  }
+  \p{The edge-to-object endpoint maps also occur in boundary diagrams; reduced object values make their targets terminal. Strict Segal-core limits may implement (4) only after the comparison with the homotopy limits is proved. No strict-limit assertion is inferred from contractibility of object values.}
+}
+\subtree{
+  \title{Rationale}
+  \p{This supplies genuinely discrete object data and preserves the intended cell fibres. It leaves room to correct the shape or fibrancy hypotheses at \ref{ms-foundation}.}
+}
+\subtree{
+  \title{Rejected}
+  \p{The earlier contractible-object axiom and its strict-gluing justification.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-fd-0003}, \ref{at-fd-0007}, \ref{at-rt-0001}, \ref{at-rt-0003}; \ref{at-fd-0008} for a nondiscrete example.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional; freeze only after \ref{ms-foundation} and the full \ref{ms-0003} comparisons.}
+}

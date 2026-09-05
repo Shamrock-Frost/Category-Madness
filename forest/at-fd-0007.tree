@@ -1,0 +1,15 @@
+\title{AT-FD-7 · Actual augmented shapes and their diagram model}
+\taxon{Acceptance test}
+\meta{id}{AT-FD-7}
+\meta{area}{foundation feasibility}
+\meta{origin}{design/11-foundation-feasibility.md}
+\meta{status}{proposed}
+\meta{statement-version}{1}
+\tag{acceptance-test}
+\tag{area:fd}
+\tag{status:proposed}
+
+\p{Define the exact generating incidence data, operations, and equations of the set-level augmented VDC. Build the free/arity presentation with the hypotheses actually used by its nerve theorem. Validate \code{c₁^∅}, \code{(0,0)} cells and both their compositions, nullary inputs, mixed rows, and shared sides. Prove the no-horizontal fragment recovers 2-categories, including composition laws. Reject the attempted ordinary active \code{[0] → [1]} encoding of a one-input/empty-output transition. Supply the diagram model required by \code{MapRel} and \code{Mod}: Reedy/elegance if that route works, or a concrete alternative with the necessary cofibrant-source, relative restriction, and replacement results. A fallback is accepted only with those results. Prove any canonical encoding used by the prototype; flags or drawings alone are not an arity or normalization theorem.}
+\p{\strong{Depends on:} minimal category/arity theory from the inventory. This gate supplies the shape prerequisites for \ref{at-fd-0003} and \ref{at-fd-0008}; it is not allowed to rely on them for the definition of its own category. \strong{Evidence:} algebra, shape presentation, nerve hypotheses, fragment comparison, and actual model lemmas. \strong{Failure response:} revise the presentation; if no workable augmented shape/model route exists, stop the current root track and produce a model-change decision.}
+\p{Named by: \ref{dec-ch-0018}, \ref{dec-kr-0015}, \ref{dec-kr-0016}, \ref{dec-kr-0017}, \ref{dec-kr-0018}, \ref{dec-rt-0016}, \ref{dec-rt-0030}, \ref{dec-tl-0021}.}
+\p{\em{Lean declaration(s):} none yet.}

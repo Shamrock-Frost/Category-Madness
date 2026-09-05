@@ -1,0 +1,33 @@
+\title{D-SP-12 · Initial enrichment scope}
+\taxon{Decision}
+\meta{id}{D-SP-12}
+\meta{area}{spaces and enrichment}
+\meta{origin}{design/05-spaces-enrichment.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen initial scope.}
+\meta{supersedes}{dec-sp-0003}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:sp}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Start with cartesian Set and Kan; matrix multicells use products and maps. General monoidal enrichment is later. Theories are exported only with universe bounds, existence hypotheses, and the appropriate comparison proofs.}
+}
+\subtree{
+  \title{Rationale}
+  \p{The matrix examples test the central reuse claim with limited extra structure.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Requiring every monoidal base before testing the root.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-rt-0002}, \ref{at-fd-0008}, \ref{at-rt-0008}.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen initial scope.}
+}

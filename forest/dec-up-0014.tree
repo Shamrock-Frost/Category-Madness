@@ -1,0 +1,33 @@
+\title{D-UP-14 · Duality}
+\taxon{Decision}
+\meta{id}{D-UP-14}
+\meta{area}{universal properties}
+\meta{origin}{design/03-universal-properties.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional tool scope; mathematical domains explicit.}
+\meta{supersedes}{dec-up-0005}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:up}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{Generate dual statements for Segal categories where the registered \code{op} and transport lemmas apply. Horizontal opposite is available for the augmented planar root once its shape operation is proved. Vertical opposite and transpose are not assumed to preserve the augmented virtual presentation. Hand-proved dual results in the equipment theory may be registered as corresponding statements.}
+}
+\subtree{
+  \title{Rationale}
+  \p{A translation tool needs a mathematical duality with proved laws.}
+}
+\subtree{
+  \title{Rejected}
+  \p{A total automatic duality for structures whose shapes are not closed under it.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-up-0005}: generated classical colimit comparison and involution transport.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional tool scope; mathematical domains explicit.}
+}

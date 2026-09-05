@@ -1,0 +1,33 @@
+\title{D-KR-13 · Allowed scaffolding}
+\taxon{Decision}
+\meta{id}{D-KR-13}
+\meta{area}{kernel}
+\meta{origin}{design/01-kernel.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen policy.}
+\meta{supersedes}{dec-kr-0001}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:kr}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Set-level augmented VDCs and their free constructions may be defined in Kernel/ to build arities and state comparison theorems. They are not a second public notion. Their discrete nerve is compared with the root before the seal.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Explicit algebraic scaffolding makes the intended nerve testable.}
+}
+\subtree{
+  \title{Rejected}
+  \p{An ad hoc shape category with no discrete recognition theorem.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-kr-0008}, \ref{at-rt-0001}.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen policy.}
+}

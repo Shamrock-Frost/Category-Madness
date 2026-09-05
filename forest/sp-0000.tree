@@ -1,38 +1,20 @@
-\title{05 · Spaces and enrichment (stage 2, \ref{ms-0006})}
+\title{05 · Spaces and enrichment — revision 1}
 \taxon{Chapter}
 \meta{origin}{design/05-spaces-enrichment.md}
 \meta{layer}{human}
 \tag{chapter}
 
-\p{Post-seal homotopy theory: the ∞-category of spaces, \code{Mat(Kan)}, ∞-categories as monads in it, Segal spaces via \code{Span(Kan)}, ∞-operads via \code{Ω}, and the comparison milestones. Only the interface \code{Space} API (→ \ref{dec-rt-0013}) and the root are used.}
-\transclude{dec-sp-0001}
-\transclude{dec-sp-0002}
-\transclude{dec-sp-0003}
-\transclude{dec-sp-0004}
-\transclude{dec-sp-0005}
-\transclude{dec-sp-0006}
-\transclude{dec-sp-0009}
-\transclude{dec-sp-0007}
-\transclude{dec-sp-0008}
+\p{A small nondiscrete matrix example is required at \ref{ms-foundation}. The full universe of spaces, all needed limits/colimits, and general enrichment are \ref{ms-0006} work. These are comparison and construction targets, not results established by revising the prose.}
+\transclude{dec-sp-0010}
+\transclude{dec-sp-0011}
+\transclude{dec-sp-0012}
+\transclude{dec-sp-0013}
+\transclude{dec-sp-0014}
+\transclude{dec-sp-0015}
+\transclude{dec-sp-0018}
+\transclude{dec-sp-0016}
+\transclude{dec-sp-0017}
 \subtree{
-  \title{Acceptance tests (summary)}
-  \transclude{at-sp-0001}
-  \transclude{at-sp-0002}
-  \transclude{at-sp-0003}
-  \transclude{at-sp-0004}
-  \transclude{at-sp-0005}
-  \transclude{at-sp-0006}
-  \transclude{at-sp-0007}
-  \transclude{at-sp-0008}
-  \transclude{at-sp-0009}
-  \transclude{at-sp-0010}
-  \transclude{at-sp-0011}
-  \transclude{at-sp-0013}
-  \transclude{at-sp-0012}
-}
-\subtree{
-  \title{Open questions}
-  \transclude{oq-sp-0001}
-  \transclude{oq-sp-0002}
-  \transclude{oq-sp-0003}
+  \title{Status and open questions}
+  \p{All AT-SP tests are proposed, not proved in this revision. The test numbers retain their subjects but their changed scopes are recorded in \code{12-revision-notes.md}. \ref{oq-sp-0001}: compile classifier/matrix/monad universe signatures, including new collection levels. \ref{oq-sp-0002}: select a precise universe construction at \ref{ms-0006}. \ref{oq-sp-0003}: choose the full coherent matrix presentation; the small \ref{ms-foundation} example is mandatory first. \ref{oq-sp-0004}: establish the stronger span/profunctor VDC comparison beyond the categorical object comparison. \ref{oq-sp-0005}: determine the exact monad/preservation hypotheses for the ∞-Kleisli construction on the corrected profunctor ambient.}
 }

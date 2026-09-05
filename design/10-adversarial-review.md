@@ -1,88 +1,34 @@
-# 10 · Adversarial review (phase −1) and disposition
+# 10 · Adversarial review and current disposition — revision 1
 
-A record of the adversarial pass on the VDC∞ design and what changed because of it.
-Kept because the *rejected framings* are the part agents will otherwise re-derive.
-Each item: what the library will want, why the design as first drafted made it hard,
-disposition.
+The original review and dispositions remain verbatim in `history/v0/10-adversarial-review.md`.
+This revision responds to the subsequent twelve-finding design review. A disposition
+below records a design change, not a proved Lean theorem. Required evidence is in M-F.
 
-## Reframing that governs the whole list
-The first draft of item 1 said an ∞-category modelled as a point of
-`Map(N Mnd, R(Mat Kan))` was "uncomputable". That conflated *cannot unfold* (true and
-intended, → D-CH-01) with *cannot work with* (false if the interface is right). Nobody
-writes down a simplex of `Fun(Δ[n], N(Kan))` either; quasi-category theory is usable
-because its interface — horn filling, `Fun`, joins, mapping spaces — is closed under the
-constructions it uses, and rectification theorems populate it from strict models. The
-corrected criterion is → D-CH-13: fibrancy exported as a property, closure theorems for
-every exported construction, rectification. Items below are read through that lens.
+| Finding | Current design response | Remaining evidence |
+|---|---|---|
+| R1: horizontal bijectivity in DK clauses | Remove that condition; require fixed-boundary cell faithfulness and simultaneous essential surjectivity | AT-FD-5; ∞-predicate and comparisons remain provisional |
+| R2: relative maps lose natural equivalences | Separate `MapRel`/`MapCat` and `VertRaw`/`VertCore`; retain vertical 2-cells | AT-FD-4 and AT-FD-8 |
+| R3: boundary monodromy invalidates hP | Remove generic hP and its mandatory proof route; work coherently | AT-FD-6; optional specific truncations later |
+| R4: contractible object values | Require a reduced presentation and prove actual boundary/core lemmas | AT-FD-3 |
+| R5: Mat universes | Raise collection universes; keep category object/hom parameters separate | AT-FD-1, no signatures compiled in this revision |
+| R6: walking/slice fibres omit structure labels | Fix entire selected monads/cones through relative diagram fibres | AT-FD-8, full AT-UP-3 |
+| R7: augmented active-chain encoding | Replace the universal active-chain assertion with explicit augmented algebra/arity work | AT-FD-7, a material research risk |
+| R8: BMW hypotheses conflated | Separate arity recognition, pattern, and Reedy theorems | AT-FD-7 and AT-KR-2 |
+| R9: symmetric/braided monads on Mat | Move to the profunctor ambient and retain permutation/braid morphisms | AT-FD-9; full ∞-construction M7 |
+| R10: independently opaque data and laws | Bundle the specification with its laws, or prove an audited alternative | AT-FD-2 |
+| R11: broad rectification and paste promises | State model changes and fixed-target scope separately; distinguish equality from coherent comparisons | AT-FD-10 |
+| R12: freeze before decisive tests | Add M-F; move speculative infrastructure later; audit all axioms and both builds before merge | AT-FD-11 and M-F exit |
 
-## Items
+The review's R3 claim is intentionally addressed conservatively: the faulty canonical
+transport argument is removed, without claiming that no useful homotopy equipment can
+exist. R4 identifies an invalid gluing justification; the proposed reduced replacement
+still needs a proof. R7 rejects a complete encoding by ordinary active chains; flagged
+augmented rows remain a possible richer presentation if their theorem is established.
+R10 does not say opaque interfaces are impossible: the revision uses data and laws in
+one specification, which is the appropriate prototype to test.
 
-1. **Usable ∞-categories.** Want: to write down and compute with an ∞-category through
-   its interface. Cost: closure and rectification theorems, not a design change.
-   Disposition: D-CH-13 (new); D-RT-07 and D-RT-13 amended (fibrancy exported, closure
-   package in Interface v1, two-tier extension); D-SP-02/04 amended (fibrant `Kan`,
-   `Mat(Kan)`; rectification AT-SP-8; construction route is OQ-SP-3).
-2. **The 2-category `Cat`.** Want: natural transformations, lax notions. Problem: `Vert`
-   restricts to vertical paths and forgets cells. Disposition: D-UP-09 rewritten;
-   (∞,1)-universal properties in `Vert` scoped to products/exponentials/cotensors; lax
-   notions go to the equipment; AT-UP-8.
-3. **Large objects, small homs.** Want: `Set`, `Kan`, `Cat` as objects. Problem: single
-   universe at the root. Disposition: D-RT-12 rewritten; label and value universes
-   independent; `Category.{u,v}`.
-4. **Coherent lifts.** Want: lifts along diagrams, functorial `cosk₀`. Problem: pointwise
-   contractibility gives points, not sections. Disposition: D-UP-01 and D-UP-06 amended;
-   trivial-fibration form; `Classical.choose` on sections.
-5. **Colimits in `Kan`.** Want: `PSh(C)` cocomplete, coends, composites, `SymSeq`.
-   Problem: unscheduled mountain. Disposition: D-SP-08 names it (AT-SP-12), Simpson's
-   route, M6, risk register.
-6. **`Span(S)`.** Want: internal categories, Segal spaces. Problem: compatible choices of
-   pullbacks. Disposition: D-SP-05 rewritten via `Tw(θ)` shapes (Barwick, Haugseng);
-   D-KR-08 amended.
-7. **Invariance.** Want: DK-invariance of every construction. Problem: nothing invariant
-   by construction in a strict-model design. Disposition: folded into D-CH-13 (b); every
-   exported construction ships an invariance theorem; a constraint on definitions in 02–05.
-8. **Duality.** Want: `to_dual` everywhere. Problem: vertical op broken by augmentation,
-   transpose unavailable for virtual, `Cᵒᵖᵒᵖ ≃ C` never `rfl`. Disposition: D-UP-05
-   scoped; hand-proved duals recorded by the attribute rather than generated.
-9. **Interface growth.** Want: kernel facts as API after M3. Problem: every lemma a
-   decision makes the human the bottleneck. Disposition: two-tier extension policy in
-   D-RT-13; closure package in D-KR-10.
-10. **Symmetric structures.** Want: symmetric operads, `E_n`, symmetric monoidal
-    ∞-categories. First-draft problem: "E1-only excludes them." Corrected: symmetric
-    operads are monoids in symmetric sequences under the (non-symmetric) composition
-    product, an E1 notion; `E_1`/`E_2`/`E_∞` are the contractible monoids in
-    non-symmetric/braided/symmetric sequences; `E_n` (`3 ≤ n < ∞`) via Berger's
-    complete-graph operads. What is *not* viable: `E_n` (`n ≥ 2`) as non-symmetric
-    operads — forgetting equivariance turns `E_∞` into `E_1` and `E_2` into `E_1` plus
-    pure-braid actions; the braiding is the equivariance. Disposition: D-SP-09 (new);
-    D-CH-05 note; M7.
-11. **Augmentation at ∞.** Want: Koudenburg's formal theory at ∞. Problem: nullary-target
-    cells have no output face; elegance and Segal cores of `Θ^aug_fc` are new. Disposition:
-    unchanged (already AT-KR-6 with generalized-Reedy fallback in the risk register).
-12. **Inverting DK-equivalences.** Want: canonical inverses. Problem: discrete object sets,
-    Bergner's cylinder nontrivial. Disposition: an interface theorem once fibrancy is
-    exported (D-CH-13); AT-RT-5 extended at M6.
-13. **Strict layer.** Want: strict ω-categories, computads. Problem: nothing strict past
-    the seal. Disposition: recorded as a non-goal in the charter.
-
-## Post-review findings (pasting and shapes)
-
-14. **Pasting diagrams.** Want: to state and prove pasting composites. Finding: pasting
-    schemes *are* the shapes; the pasting theorem is the nerve theorem (discrete) and the
-    Segal condition (∞); 2-categorical pasting needs units and was scheduled too late.
-    Disposition: D-RT-15 (`Vert₂` at M3); D-TL-09 (`paste` = decidable shape-map
-    equality); D-RT-13 amended so shapes are exported transparently.
-15. **The shapes are leveled.** Finding: the shared-sides rule of virtual composition
-    forces arities of the free-VDC monad to be leveled grids, i.e. chains of active maps
-    in Δ, not trees with sides. Disposition: D-KR-06 rewritten; "dendroidal" struck from
-    the charter; the canonical format is rows (D-TL-10); elegance more plausible.
-16. **General shape theory.** Want: a uniform, formalizable theory of pasting shapes,
-    joins, Gray products, and duals, including for the (∞,2) layer. Disposition: D-KR-12
-    adopts the core of Hadzihasanovic's book as the kernel's geometric substrate,
-    presenting the algebraically defined shapes; molecules rejected as the root's shape
-    category (no canonical names, filler-style composition, no double variant).
-
-## What could still sink it
-Items 1 and 5. Item 1 is now a checklist (the closure and rectification theorems of
-D-RT-13 and D-CH-13) that can be verified at M3 and M6. Item 5 is a scheduled theorem
-with a named route and a fallback.
+Earlier review findings about usable APIs, size, coherent choices, limits/colimits,
+span diagrams, invariance, duality, and interface growth remain relevant. Their prior
+“disposed” labels do not mean that the necessary ∞-theorems were proved. The current
+charter requires construction-specific certificates and treats failed gates as reasons
+to revise the mathematics.

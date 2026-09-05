@@ -1,13 +1,14 @@
-\title{AT-SP-10 · Monads in \code{H-Kl(T_Σ, Mat Kan)} present Lurie's ∞-operads (Haugseng}
+\title{AT-SP-10 · Monads in \\code{H-Kl(T_Σ, Mat Kan)} present Lurie's ∞-operads (Haugseng}
 \taxon{Acceptance test}
 \meta{id}{AT-SP-10}
 \meta{area}{spaces and enrichment}
 \meta{origin}{design/05-spaces-enrichment.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:sp}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{Monads in \code{H-Kl(T_Σ, Mat Kan)} present Lurie's ∞-operads (Haugseng; nerve theorem at ∞).}
-\p{Named by: \ref{dec-sp-0009}.}
+\p{for the full symmetric comparison when proved}
+\p{Named by: \ref{dec-sp-0015}, \ref{dec-sp-0018}.}
 \p{\em{Lean declaration(s):} none yet.}

@@ -1,0 +1,14 @@
+\title{D-RT-02 · Non-definition: what a VDC∞ is not}
+\taxon{Decision}
+\meta{id}{D-RT-02}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{frozen}
+\meta{status-text}{not stated in the source; frozen with D-RT-01 (port judgment call).}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:rt}
+\tag{status:frozen}
+
+\p{A VDC∞ is not Reedy fibrant, not a fibration over \code{N(Δᵒᵖ)}, not a double ∞-category (no horizontal composites), not symmetric. Each of those is either a class inside the definition (fibrant), a comparison target (style A, → \ref{at-rt-0009} at \ref{ms-0006}+), or a derived structure when extra properties hold (composites, → \ref{dec-ft-0002}).}

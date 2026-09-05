@@ -1,25 +1,9 @@
-\title{M1 · Shapes and patterns}
+\title{M1 · Generalize the validated shape work}
 \taxon{Milestone}
 \meta{id}{M1}
 \meta{origin}{design/08-roadmap.md}
 \meta{status}{planned}
 \tag{milestone}
 
-\ul{
-  \li{BMW "monads with arities" and the general nerve theorem (\ref{at-kr-0002}).}
-  \li{Δ ≅ \code{SimplexCategory} (\ref{at-kr-0001}); Δ₊ and joins; \code{Δ_X} (\ref{at-kr-0009}).}
-  \li{\code{G_fc}, set-level augmented VDCs, free augmented VDCs, \code{Θ^aug_fc}, \code{Θ_{fc,X}} (\ref{dec-kr-0006}/07), explicit presentation (\ref{at-kr-0003}), nerve theorem instance (\ref{at-kr-0008}).}
-  \li{Ω_p, Ω (\ref{dec-kr-0003}; \ref{oq-kr-0001} resolved), Δ×Δ, Θ_n (\ref{at-kr-0004}), □ (\ref{dec-kr-0009}).}
-  \li{Pattern structures and Segal cores (\ref{dec-kr-0004}, \ref{at-kr-0005}).}
-  \li{Reedy/elegance/EZ (\ref{dec-kr-0005}, \ref{at-kr-0006}, \ref{at-kr-0007}).}
-  \li{Geometric substrate core (\ref{dec-kr-0012}): oriented graded posets, molecules, regular directed complexes, the pasting theorem, joins/Gray/duals; presentations \ref{at-kr-0012}…\ref{at-kr-0014}.}
-  \li{Shape formats and the rows DSL (\ref{dec-tl-0010}, \ref{dec-tl-0011} (1)); rendering for the forest.}
-}
-\subtree{
-  \title{Freeze}
-  \p{Shape definitions and their pattern structures; the shape part of the interface list; the canonical shape formats.}
-}
-\subtree{
-  \title{Exit}
-  \p{\ref{at-kr-0001}…\ref{at-kr-0009} and \ref{at-kr-0012}…\ref{at-kr-0014} proved.}
-}
+\p{Package the arity and nerve results into the general reusable theory (\ref{at-kr-0001}/2/5/8/9), complete the root presentations needed by the public interface, and implement validated shape syntax/rendering. Add a shape family only when a scheduled client needs it. Expand the forest exporter and retrieval against the now nonempty environment.}
+\p{\strong{Exit:} the named shape/arity/core tests required for \ref{ms-0003} are proved. Ω, Θ_n, cubes, and geometric presentations have their own later exits and do not block this one. \strong{Freeze:} those adopted shapes and formats whose presentation proofs have passed.}

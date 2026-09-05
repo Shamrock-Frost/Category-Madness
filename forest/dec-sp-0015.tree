@@ -1,0 +1,33 @@
+\title{D-SP-15 · Operadic nerve comparisons}
+\taxon{Decision}
+\meta{id}{D-SP-15}
+\meta{area}{spaces and enrichment}
+\meta{origin}{design/05-spaces-enrichment.md}
+\meta{status}{later}
+\meta{status-text}{later than M-F; staged with the relevant operad construction.}
+\meta{supersedes}{dec-sp-0006}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:sp}
+\tag{status:later}
+
+\subtree{
+  \title{Decision}
+  \p{Planar and symmetric Segal-operadic presentations are comparison models in Root/ until connected to the root algebra construction. Specify reduced colour values or the required completeness/localization, homotopy Segal limits, and the actual equivariant/cofibrancy conventions for Ω. Their discrete nerves recover the ordinary operads. These are not imposed as a second permanent public definition.}
+}
+\subtree{
+  \title{Rationale}
+  \p{A meaningful comparison includes morphisms and equivalences as well as objects.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Unqualified strict Segal limits for arbitrary space-valued Ω-presheaves.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-sp-0006} for discrete nerves; \ref{at-sp-0007} for planar root algebras; \ref{at-sp-0010} for the full symmetric comparison when proved.}
+}
+\subtree{
+  \title{Status}
+  \p{later than \ref{ms-foundation}; staged with the relevant operad construction.}
+}

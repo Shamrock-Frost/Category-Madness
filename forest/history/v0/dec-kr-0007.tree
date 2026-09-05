@@ -1,0 +1,29 @@
+\title{D-KR-07 · Labelled shapes \code{Θ_{T,X}}}
+\taxon{Decision}
+\meta{id}{D-KR-07}
+\meta{area}{kernel}
+\meta{origin}{design/01-kernel.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:kr}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{For \code{X : Type u}, \code{Θ_{T,X} := ∫_{Θ_T} X^{ob(−)}}, the category of elements of the presheaf \code{θ ↦ (ob θ → X)} where \code{ob : Θ_T → Set} gives the object positions of a shape. Objects are labelled shapes, morphisms are shape maps preserving labels. A function \code{X → Y} induces \code{Θ_{T,X} → Θ_{T,Y}}.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Gepner–Haugseng's \code{Δ_X} generalized. Labels discretize objects: Segal conditions over object positions become products.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-kr-0009}: \code{Δ_X} agrees with the labelled simplex construction; the Segal condition on \code{Δ_X} characterizes categories with object set \code{X} (unbiased form).}
+}
+\subtree{
+  \title{Status}
+  \p{frozen.}
+}

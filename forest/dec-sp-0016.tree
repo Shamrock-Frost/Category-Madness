@@ -1,0 +1,33 @@
+\title{D-SP-16 · General monoidal enrichment}
+\taxon{Decision}
+\meta{id}{D-SP-16}
+\meta{area}{spaces and enrichment}
+\meta{origin}{design/05-spaces-enrichment.md}
+\meta{status}{later}
+\meta{status-text}{later (M7+).}
+\meta{supersedes}{dec-sp-0007}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:sp}
+\tag{status:later}
+
+\subtree{
+  \title{Decision}
+  \p{Define a monoidal Segal-category presentation and its unbiased tensor multimaps through the chosen categorical interface. Construct Mat(V) with its explicit size, coherence, and map comparisons; identify its monads with enriched categories.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Cartesian examples should validate the shared infrastructure first.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Treating a weak tensor presentation as a strict functor without comparison.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{A precisely stated Gepner–Haugseng comparison, assigned an acceptance ID when this later track is activated.}
+}
+\subtree{
+  \title{Status}
+  \p{later (\ref{ms-0007}+).}
+}

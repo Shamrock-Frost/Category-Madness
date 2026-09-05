@@ -1,0 +1,33 @@
+\title{D-TL-21 · Shape representations}
+\taxon{Decision}
+\meta{id}{D-TL-21}
+\meta{area}{tooling}
+\meta{origin}{design/06-tooling.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional; exact formats are not frozen before the mathematics.}
+\meta{supersedes}{dec-tl-0010}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:tl}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{Use transparent finite data for shape syntax and morphisms after proving its presentation theorem. Input/output incidence data handles augmented cases; flagged rows are only a candidate encoding. Derived \code{DecidableEq} for syntax is not equality of quotient morphisms: a normal-form theorem or another decision procedure is needed. JSON formats, validation, and renderers follow the proved datatype. Transparent shape computation is allowed in Theory; its categorical interpretation uses sealed bridge laws.}
+}
+\subtree{
+  \title{Rationale}
+  \p{A serialization is an implementation of a proved presentation.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Advertising row, cube-word, or symmetry syntax as canonical without proving that the relations are respected and equality is decided correctly.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-fd-0007}; later \ref{at-kr-0003} and any client-specific shape presentation.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional; exact formats are not frozen before the mathematics.}
+}

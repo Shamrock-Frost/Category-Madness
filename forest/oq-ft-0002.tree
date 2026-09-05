@@ -8,5 +8,5 @@
 \tag{area:ft}
 \tag{status:open}
 
-\p{How much of \ref{dec-ft-0003} should be attempted in \code{hP} first (\ref{dec-ft-0004}) versus directly in \code{P}? Default: every item first in \code{hP}, then coherently.}
+\p{How much of \ref{dec-ft-0008} should be attempted in \code{hP} first (\ref{dec-ft-0009}) versus directly in \code{P}? Default: every item first in \code{hP}, then coherently.}
 \p{\em{Resolution:} open. Decided by the human; record the answer as a decision node that this node then cites.}

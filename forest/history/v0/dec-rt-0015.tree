@@ -1,0 +1,29 @@
+\title{D-RT-15 · \code{Vert₂}, unit factorization, and 2-categorical pasting (M3)}
+\taxon{Decision}
+\meta{id}{D-RT-15}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen at M3.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:rt}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{For a VDC∞ \code{P} with units (every \code{Mod(P)} has them), \code{Vert₂(P)} is the (∞,2)-categorical structure with objects, vertical morphisms, and 2-cells the nullary cells \code{() ⇒ U_b} over \code{(f, g)}; horizontal composition of 2-cells goes through the opcartesian unit cell (a nullary cell with a gap at \code{b} factors uniquely through it). The 2-categorical pasting theorem for \code{Vert₂(P)} is a corollary of the nerve theorem (\ref{at-kr-0008}) plus unit factorization; mates and whiskering are instances. This is built at \ref{ms-0003} for \code{Cat = Mod(Mat Set)} rather than waiting for the formal theory at \ref{ms-0005}.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Natural transformations exist at \ref{ms-0003} as cells, but pasting them needs the unit's universal property; without \code{Vert₂} at \ref{ms-0003}, \code{Cat} is usable only as a 1-category.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-rt-0012}: \code{Vert₂(Cat)} is the classical 2-category of categories, functors, and natural transformations, and its pasting theorem is Power's.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen at \ref{ms-0003}.}
+}

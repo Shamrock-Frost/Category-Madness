@@ -1,0 +1,13 @@
+\title{AT-FT-9 · Cosmos comparison (M7)}
+\taxon{Acceptance test}
+\meta{id}{AT-FT-9}
+\meta{area}{formal theory}
+\meta{origin}{design/04-formal-theory.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:ft}
+\tag{status:unstated}
+
+\p{Cosmos comparison (\ref{ms-0007}).}
+\p{Named by: \ref{dec-ft-0005}.}
+\p{\em{Lean declaration(s):} none yet.}

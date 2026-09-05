@@ -3,17 +3,17 @@
 \meta{id}{D-KR-11}
 \meta{area}{kernel}
 \meta{origin}{design/01-kernel.md}
-\meta{status}{provisional}
+\meta{status}{superseded}
 \meta{status-text}{provisional (proof strategy to be chosen at M2: Bergner-style small object argument along the elementary boundary inclusions is the default).}
 \meta{supersedes}{none}
-\meta{superseded-by}{none}
+\meta{superseded-by}{dec-kr-0023}
 \tag{decision}
 \tag{area:kr}
-\tag{status:provisional}
+\tag{status:superseded}
 
 \subtree{
   \title{Decision}
-  \p{For elegant shapes, there is a functorial Reedy-fibrant replacement of Segal presheaves that preserves the label set and is a levelwise homotopy equivalence on elementary values; for \code{Δ_X} this is Bergner's fibrant replacement for Segal categories. The kernel proves the version needed by → \ref{dec-rt-0007}.}
+  \p{For elegant shapes, there is a functorial Reedy-fibrant replacement of Segal presheaves that preserves the label set and is a levelwise homotopy equivalence on elementary values; for \code{Δ_X} this is Bergner's fibrant replacement for Segal categories. The kernel proves the version needed by → D-RT-07.}
 }
 \subtree{
   \title{Rationale}
@@ -21,7 +21,7 @@
 }
 \subtree{
   \title{Acceptance}
-  \p{\ref{at-kr-0011}: replacement exists and is a DK-equivalence (→ \ref{dec-rt-0006}).}
+  \p{\ref{at-kr-0011}: replacement exists and is a DK-equivalence (→ D-RT-06).}
 }
 \subtree{
   \title{Status}

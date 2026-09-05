@@ -1,13 +1,14 @@
-\title{AT-RT-7 · \code{Mod(P)} is a VDC∞}
+\title{AT-RT-7 · \\code{Mod(P)} is a VDC∞}
 \taxon{Acceptance test}
 \meta{id}{AT-RT-7}
 \meta{area}{root}
 \meta{origin}{design/02-root.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:rt}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{\code{Mod(P)} is a VDC∞.}
-\p{Named by: \ref{dec-rt-0009}.}
+\p{Current proposed scope is specified by the active decisions that name this test.}
+\p{Named by: \ref{dec-rt-0024}.}
 \p{\em{Lean declaration(s):} none yet.}

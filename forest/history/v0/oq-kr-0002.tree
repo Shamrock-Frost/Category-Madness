@@ -1,0 +1,12 @@
+\title{OQ-KR-2}
+\taxon{Open question}
+\meta{id}{OQ-KR-2}
+\meta{area}{kernel}
+\meta{origin}{design/01-kernel.md}
+\meta{status}{open}
+\tag{open-question}
+\tag{area:kr}
+\tag{status:open}
+
+\p{Should \code{G_fc} include a separate \code{c_n^∅} for each \code{n}, or is augmentation better encoded as an extra object "empty target" with cells targeting it? (Affects the explicit tree presentation; decide when formalizing \ref{dec-kr-0006}.)}
+\p{\em{Resolution:} open. Decided by the human; record the answer as a decision node that this node then cites.}

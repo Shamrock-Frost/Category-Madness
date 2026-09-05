@@ -3,13 +3,13 @@
 \meta{id}{D-RT-14}
 \meta{area}{root}
 \meta{origin}{design/02-root.md}
-\meta{status}{frozen}
+\meta{status}{superseded}
 \meta{status-text}{frozen at M3 (contents provisional).}
 \meta{supersedes}{none}
-\meta{superseded-by}{none}
+\meta{superseded-by}{dec-rt-0029}
 \tag{decision}
 \tag{area:rt}
-\tag{status:frozen}
+\tag{status:superseded}
 
 \subtree{
   \title{Decision}

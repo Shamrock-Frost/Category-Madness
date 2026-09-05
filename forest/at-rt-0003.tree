@@ -3,11 +3,12 @@
 \meta{id}{AT-RT-3}
 \meta{area}{root}
 \meta{origin}{design/02-root.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:rt}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{Nerves of set-level augmented VDCs are VDC∞s.}
-\p{Named by: \ref{dec-rt-0001}, \ref{dec-rt-0011}.}
+\p{Current proposed scope is specified by the active decisions that name this test.}
+\p{Named by: \ref{dec-rt-0016}, \ref{dec-rt-0026}.}
 \p{\em{Lean declaration(s):} none yet.}

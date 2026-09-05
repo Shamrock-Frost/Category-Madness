@@ -1,39 +1,35 @@
 \title{Category Madness}
 \taxon{Root}
 \meta{layer}{human}
+\meta{revision}{1}
 \tag{index}
 
-\p{A Lean 4 library of category theory whose only primitive is the virtual double ∞-category (\ref{dec-rt-0001}): ordinary categories, ∞-categories, enriched and internal categories, and equipments are instances of one definition, and every theorem is proved once against a sealed interface (\ref{dec-ch-0001}, \ref{dec-rt-0013}). Working name \em{Category Madness}, after the repository; the design documents left the name TBD.}
+\p{Category Madness is a Lean 4 research library whose candidate common primitive is a reduced augmented virtual double ∞-category (\ref{dec-rt-0016}). The design now treats that root as provisional until the foundation-feasibility evidence passes. Public mathematics targets the bundled specification seal in \ref{dec-rt-0028} and the interface policy in \ref{dec-ch-0014}.}
 
-\p{This forest is the primary human-facing document and the bookkeeping system (\ref{dec-wf-0001}…\ref{dec-wf-0007}). The phase −1 design documents were ported into it at \ref{ms-0000} and are frozen as history under \code{design/}; the port is described in \ref{wf-0001}. Every decision, acceptance test, open question and milestone is a node; generated nodes for Lean declarations (\ref{dec-wf-0001}) will join them under \code{build/forest/} once there is Lean.}
+\p{This forest is the active human and machine index under \ref{dec-wf-0008} and \ref{dec-wf-0009}. Design revision 1 is recorded in \ref{wf-0002}; superseded nodes remain available for exact lookup but are excluded from normal work and rejected as active citations.}
 
 \subtree{
   \title{How to read}
   \ul{
-    \li{\ref{ch-0000} — principles, the three-stage bootstrap, the seal, layering. Read first.}
-    \li{\ref{krn-0000} — stage 0: mathlib scaffolding, shape categories, patterns, Reedy/EZ, Kan machinery.}
-    \li{\ref{rt-0000} — stage 1: the VDC∞ definition, \code{Mod}/\code{Mat}, \code{Category} as an instance, the seal.}
-    \li{\ref{up-0000} — terminal objects, slices, limits, Kan extensions, witnesses.}
-    \li{\ref{ft-0000} — augmented virtual ∞-equipments and formal category theory.}
-    \li{\ref{sp-0000} — universe, the Segal category of spaces, \code{Mat(Kan)}, ∞-operads.}
-    \li{\ref{tl-0000} — generated APIs, attributes, tactics, the seal linter.}
-    \li{\ref{wf-0000} — forest, generated nodes, decision registry, retrieval MCP, agent loop.}
-    \li{\ref{rm-0000} — milestones, freezes, acceptance criteria, risk register.}
-    \li{\ref{bib-0000} — annotated references keyed to decisions.}
-    \li{\ref{rev-0000} — the adversarial pass on the design and how each item was disposed into decisions.}
+    \li{\ref{fd-0000} — start here: the eleven M-F foundation gates, dependencies, evidence, and failure responses.}
+    \li{\ref{rev-0001} — revision rationale, acceptance changes, and the decision crosswalk.}
+    \li{\ref{ch-0000} — charter, validation policy, bootstrap, and scope.}
+    \li{\ref{krn-0000} — kernel shapes, arity hypotheses, and homotopy machinery.}
+    \li{\ref{rt-0000} — candidate root, relative and categorical maps, \code{Mod}, examples, and seal.}
+    \li{\ref{up-0000} — categorical diagrams, slices, witnesses, and extensions.}
+    \li{\ref{ft-0000} — coherent formal category theory.}
+    \li{\ref{sp-0000} — spaces, matrices, spans, and the profunctor symmetry track.}
+    \li{\ref{tl-0000} — scoped generation, swap builds, and trust checks.}
+    \li{\ref{wf-0000} — registry, versioned evidence, retrieval, and agent workflow.}
+    \li{\ref{rm-0000} — milestones and risk register.}
+    \li{\ref{bib-0000} — proof routes and limits of the cited literature.}
+    \li{\ref{rev-0000} — adversarial findings and their current disposition.}
   }
 }
 
 \subtree{
-  \title{Conventions}
-  \ul{
-    \li{\strong{Decisions} carry IDs \code{D-<AREA>-<nn>} (CH charter, KR kernel, RT root, UP universal properties, FT formal theory, SP spaces, TL tooling, WF workflow, RM roadmap) and live at \code{dec-<area>-<nnnn>}. Each has \em{Decision / Rationale / Rejected / Acceptance / Status}.}
-    \li{\strong{Status} is \code{frozen} (changes require a superseding decision), \code{provisional} (agents may propose amendments, see \ref{dec-tl-0001}), or \code{later} (not before the stated milestone). A superseded decision is never edited; it gets \code{superseded-by}.}
-    \li{\strong{Acceptance tests} carry IDs \code{AT-<AREA>-<n>} at \code{at-<area>-<nnnn>}. An acceptance test is a Lean statement (or a small family of them) whose proof is the evidence that a definition is right. Status \code{unstated} / \code{stated} / \code{proved} (\ref{dec-wf-0003}).}
-    \li{\strong{Open questions} for the human carry IDs \code{OQ-<AREA>-<n>} at \code{oq-<area>-<nnnn>}.}
-    \li{\strong{Milestones} \code{M0}…\code{M7} live at \code{ms-0000}…\code{ms-0007}; phase −1 is \ref{ms-design}.}
-    \li{Mathematical claims marked \strong{(verify)} are expected but not yet checked against the literature or by proof; they are tasks, not facts.}
-  }
+  \title{Acceptance lifecycle}
+  \p{Acceptance tests use \code{proposed}, \code{stated}, \code{proved}, \code{failed}, \code{blocked}, \code{deferred}, or \code{retired} under \ref{dec-wf-0010}. Only a checked proof of the current statement with approved axioms gives proved status.}
 }
 
 \subtree{
@@ -41,6 +37,7 @@
   \ul{
     \li{\ref{ms-design}}
     \li{\ref{ms-0000}}
+    \li{\ref{ms-foundation}}
     \li{\ref{ms-0001}}
     \li{\ref{ms-0002}}
     \li{\ref{ms-0003}}
@@ -49,9 +46,4 @@
     \li{\ref{ms-0006}}
     \li{\ref{ms-0007}}
   }
-}
-
-\subtree{
-  \title{Building the forest}
-  \p{The forest is built with forester v5 from \code{forest.toml} at the repository root; the theme directory named there is checked out separately (not vendored). Structural checks that do not need forester run in CI: \code{scripts/forest_check.py} (references resolve, decision fields present, no citation of a superseded decision) and \code{scripts/build_registry.py} (the machine-readable registry \code{forest/registry.json} used by the retrieval MCP in \code{mcp/}).}
 }

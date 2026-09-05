@@ -1,0 +1,13 @@
+\title{AT-SP-6 · Discrete ∞-operads are coloured operads}
+\taxon{Acceptance test}
+\meta{id}{AT-SP-6}
+\meta{area}{spaces and enrichment}
+\meta{origin}{design/05-spaces-enrichment.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:sp}
+\tag{status:unstated}
+
+\p{Discrete ∞-operads are coloured operads.}
+\p{Named by: \ref{dec-sp-0006}.}
+\p{\em{Lean declaration(s):} none yet.}

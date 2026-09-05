@@ -1,0 +1,12 @@
+\title{OQ-SP-3}
+\taxon{Open question}
+\meta{id}{OQ-SP-3}
+\meta{area}{spaces and enrichment}
+\meta{origin}{design/05-spaces-enrichment.md}
+\meta{status}{open}
+\tag{open-question}
+\tag{area:sp}
+\tag{status:open}
+
+\p{Whether \code{Kan} and \code{Mat(Kan)} are made fibrant by replacement or by construction from the universe (left fibrations over \code{Δ[n] × Δ[m]}). Kernel choice; invisible past the seal; the by-construction route avoids proving that the replacement preserves the elementary values up to equivalence, the by-replacement route reuses \ref{at-kr-0011}.}
+\p{\em{Resolution:} open. Decided by the human; record the answer as a decision node that this node then cites.}

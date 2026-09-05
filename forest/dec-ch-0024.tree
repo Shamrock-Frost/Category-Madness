@@ -1,0 +1,33 @@
+\title{D-CH-24 · Dependencies}
+\taxon{Decision}
+\meta{id}{D-CH-24}
+\meta{area}{charter}
+\meta{origin}{design/00-charter.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen policy.}
+\meta{supersedes}{dec-ch-0011}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:ch}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Lean and pinned Mathlib are the mathematical dependencies. Other library constructions may be ported with attribution. Documentation tooling has separately pinned dependencies. No new foundation axiom is introduced by a port.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Keep the proof trust base and version inventory explicit.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Treating an imported theorem statement as a proved port.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-kr-0000}, \ref{at-fd-0011}.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen policy.}
+}

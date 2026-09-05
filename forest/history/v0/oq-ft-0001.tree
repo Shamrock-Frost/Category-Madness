@@ -1,0 +1,12 @@
+\title{OQ-FT-1}
+\taxon{Open question}
+\meta{id}{OQ-FT-1}
+\meta{area}{formal theory}
+\meta{origin}{design/04-formal-theory.md}
+\meta{status}{open}
+\tag{open-question}
+\tag{area:ft}
+\tag{status:open}
+
+\p{Do we transcribe Koudenburg's \em{augmented} axioms literally, or the Cruttwell–Shulman axioms plus his augmentation as a separate structure? Default: literal transcription, then a theorem that it restricts to Cruttwell–Shulman on the unaugmented part.}
+\p{\em{Resolution:} open. Decided by the human; record the answer as a decision node that this node then cites.}

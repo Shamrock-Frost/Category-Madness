@@ -1,55 +1,24 @@
-\title{01 · Kernel (stage 0)}
+\title{01 · Kernel — revision 1}
 \taxon{Chapter}
 \meta{origin}{design/01-kernel.md}
 \meta{layer}{human}
 \tag{chapter}
 
-\p{The kernel builds the combinatorial raw material — shape categories, presheaves, simplicial sets, Kan machinery — on top of Mathlib. It is scaffolding: defeq is allowed, Mathlib's \code{CategoryTheory} is used freely, and nothing here is visible past the seal. The kernel is judged only by whether \code{Root/} can be built on it and whether the acceptance tests below are proved.}
+\p{Kernel/ may use Mathlib and definitional equality. Prototype/ pulls forward only the prerequisites needed for \ref{ms-foundation}; the general machinery follows after the foundation gates.}
+\transclude{dec-kr-0013}
+\transclude{dec-kr-0014}
+\transclude{dec-kr-0015}
+\transclude{dec-kr-0016}
+\transclude{dec-kr-0017}
+\transclude{dec-kr-0018}
+\transclude{dec-kr-0019}
+\transclude{dec-kr-0020}
+\transclude{dec-kr-0021}
+\transclude{dec-kr-0024}
+\transclude{dec-kr-0022}
+\transclude{dec-kr-0023}
 \subtree{
-  \title{Rules}
-
-  \transclude{dec-kr-0001}
-  \transclude{dec-kr-0002}
-}
-\subtree{
-  \title{Shapes}
-
-  \transclude{dec-kr-0003}
-  \transclude{dec-kr-0004}
-  \transclude{dec-kr-0005}
-  \transclude{dec-kr-0006}
-  \transclude{dec-kr-0007}
-  \transclude{dec-kr-0008}
-  \transclude{dec-kr-0009}
-  \transclude{dec-kr-0012}
-}
-\subtree{
-  \title{Kan machinery}
-
-  \transclude{dec-kr-0010}
-  \transclude{dec-kr-0011}
-}
-\subtree{
-  \title{Acceptance tests (summary)}
-  \transclude{at-kr-0000}
-  \transclude{at-kr-0001}
-  \transclude{at-kr-0002}
-  \transclude{at-kr-0003}
-  \transclude{at-kr-0004}
-  \transclude{at-kr-0005}
-  \transclude{at-kr-0006}
-  \transclude{at-kr-0007}
-  \transclude{at-kr-0008}
-  \transclude{at-kr-0009}
-  \transclude{at-kr-0010}
-  \transclude{at-kr-0011}
-  \transclude{at-kr-0012}
-  \transclude{at-kr-0013}
-  \transclude{at-kr-0014}
-}
-\subtree{
-  \title{Open questions}
-  \transclude{oq-kr-0001}
-  \transclude{oq-kr-0002}
-  \transclude{oq-kr-0003}
+  \title{Acceptance catalogue and open questions}
+  \p{\ref{at-kr-0000} is the inventory; 1 is Δ comparison; 2 is the general nerve theorem with its hypotheses; 3 is explicit presentations; 4 is Θ_n; 5 is Δ's pattern; 6 is elegance for named adopted shapes; 7 is Ω's generalized-Reedy structure; 8 is the augmented discrete nerve theorem; 9 is labelled Δ; 10 is the exact Kan closure list; 11 is reduced Reedy replacement; 12/13/14 are deferred geometric comparisons. All are proposed until linked to Lean statements and proofs. \ref{ms-foundation} gates specify the subset needed early.}
+  \p{\ref{oq-kr-0001}: choose the symmetric-operad arity proof when Ω is needed. \ref{oq-kr-0002}: establish an augmented arity presentation that handles empty outputs and vertical 2-cells; do not freeze the row encoding in advance. \ref{oq-kr-0003}: choose the Ω equivariant model separately from the root diagram model. \ref{oq-kr-0004}: if root elegance fails, identify an actual alternative with sufficient cofibrancy/replacement theorems, or revise the root model at \ref{ms-foundation}.}
 }

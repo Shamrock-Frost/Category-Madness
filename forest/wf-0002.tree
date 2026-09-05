@@ -1,0 +1,26 @@
+\title{Porting report: design revision 1 → active forest}
+\taxon{Report}
+\meta{id}{revision-1-port}
+\meta{origin}{scripts/port_design.py}
+\meta{revision}{1}
+\meta{status}{current}
+\tag{workflow}
+\tag{port}
+\tag{revision:1}
+
+\p{Design revision 1 was ported as the active specification under \ref{dec-wf-0013}. The source is \code{design/}; the byte-for-byte original Markdown is \code{design/history/v0/}, and the pre-revision forest is \code{forest/history/v0/}. Historical directories are excluded from the active registry.}
+
+\subtree{
+  \title{Lineage}
+  \p{The machine-readable crosswalk is \code{design/decision-supersession.json}. It maps 81 historical decisions to fresh current IDs. Historical decision nodes remain addressable with status \code{superseded}; active citations resolve to the current nodes and CI rejects stale decision citations under \ref{dec-wf-0009}. \ref{dec-fd-0001} is new in this revision.}
+}
+
+\subtree{
+  \title{Milestone and acceptance state}
+  \p{The new \ref{ms-foundation} milestone sits between \ref{ms-0000} and \ref{ms-0001}. Its eleven gates, \ref{at-fd-0001} through \ref{at-fd-0011}, are proposed. All retained acceptance subjects were reset to statement version 1 and proposed status; \ref{at-rt-0004} and \ref{at-ft-0008} are retired. No Lean proof or implementation is claimed by this port.}
+}
+
+\subtree{
+  \title{Reproduction}
+  \p{Run \code{python3 scripts/port_design.py}, then \code{python3 scripts/build_registry.py} and \code{python3 scripts/forest_check.py}. The port regenerates active chapters, current decisions, acceptance records, milestones, references, and decision lineage while leaving historical snapshots outside active indexing.}
+}

@@ -1,0 +1,13 @@
+\title{AT-UP-8 · for discrete \code{C, D}, the exponential in \code{Vert(Cat)} is the functor category and its…}
+\taxon{Acceptance test}
+\meta{id}{AT-UP-8}
+\meta{area}{universal properties}
+\meta{origin}{design/03-universal-properties.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:up}
+\tag{status:unstated}
+
+\p{for discrete \code{C, D}, the exponential in \code{Vert(Cat)} is the functor category and its universal property is the classical one on cores}
+\p{Named by: \ref{dec-up-0009}.}
+\p{\em{Lean declaration(s):} none yet.}

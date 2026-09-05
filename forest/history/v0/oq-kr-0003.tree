@@ -1,0 +1,12 @@
+\title{OQ-KR-3}
+\taxon{Open question}
+\meta{id}{OQ-KR-3}
+\meta{area}{kernel}
+\meta{origin}{design/01-kernel.md}
+\meta{status}{open}
+\tag{open-question}
+\tag{area:kr}
+\tag{status:open}
+
+\p{Which Reedy-fibrancy convention for Ω (Berger–Moerdijk projective on \code{Aut}-objects is the default).}
+\p{\em{Resolution:} open. Decided by the human; record the answer as a decision node that this node then cites.}

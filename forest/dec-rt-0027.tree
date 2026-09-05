@@ -1,0 +1,35 @@
+\title{D-RT-27 · Universe policy}
+\taxon{Decision}
+\meta{id}{D-RT-27}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{provisional}
+\meta{status-text}{corrected proposal; signatures not yet compiled.}
+\meta{supersedes}{dec-rt-0012}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:rt}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{In \code{VDC∞.{ℓ,s}}, \code{ℓ} measures the type of labels and \code{s} the simplex sets of presheaf values. A matrix ambient for \code{A : Type u} and entries in \code{Type v} uses labels \code{Type u : Type (u+1)} and matrix values in \code{Type (max u (v+1))}:}
+  \p{\code{Mat(Set.{v};u) : VDC∞.{u+1, max u (v+1)}}.}
+  \p{This is an intended elaboratable signature, to be tested in Lean. Its category projection still has \code{A : Type u} and \code{Hom : A → A → Type v}. The analogous spaces ambient has a classifier of small spaces in \code{sSet.{v+1}} and family collections at least \code{max u (v+1)}. Constructions involving all objects, monads, or diagrams explicitly compute any additional maxima or successors. No ban on necessary \code{max} expressions; \code{ULift} only raises universes. Yoneda's presheaf target and the allowable diagram sizes are stated explicitly and are not solved by augmentation.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Entry size and collection size are different.}
+}
+\subtree{
+  \title{Rejected}
+  \p{The former \code{Mat.{u,v} : VDC∞.{u,v}} signature with labels \code{Type u}.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-fd-0001}, including \code{u<v}, \code{u=v}, \code{u>v}, and category-size examples.}
+}
+\subtree{
+  \title{Status}
+  \p{corrected proposal; signatures not yet compiled.}
+}

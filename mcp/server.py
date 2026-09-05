@@ -8,7 +8,7 @@ embeddings and the Lean-environment `type_search` arrive with forest-export at M
   search(query, k, filter)      lexical search over node titles, bodies, tags
   get(address)                  full node (metadata + tree source)
   neighbors(address, direction) refs / backlinks / cited decisions
-  open_tasks(area, kind)        unstated/stated acceptance tests, open questions,
+  open_tasks(area, kind)        proposed/stated/failed/blocked tests, open questions,
                                 (later) sorry nodes — sorted by number of dependents
   decision(id)                  registry lookup by D-<AREA>-<nn>
   acceptance(id)                registry lookup by AT-<AREA>-<n>
@@ -30,7 +30,7 @@ ROOT = Path(__file__).resolve().parent.parent
 FOREST = ROOT / "forest"
 REGISTRY = FOREST / "registry.json"
 
-AREAS = {"ch", "kr", "rt", "up", "ft", "sp", "tl", "wf", "rm"}
+AREAS = {"ch", "kr", "rt", "up", "ft", "sp", "tl", "wf", "fd", "rm"}
 
 
 class Forest:
@@ -66,6 +66,8 @@ class Forest:
             kind, area, n = m.groups()
             norm = f"{kind}-{area}-{int(n):02d}" if kind == "D" else f"{kind}-{area}-{int(n)}"
             return self.by_id.get(norm)
+        if key.strip() == "M-F":
+            return "ms-foundation"
         m = re.fullmatch(r"M([0-7])", key.strip())
         if m:
             return f"ms-{int(m.group(1)):04d}"
@@ -81,6 +83,8 @@ class Forest:
         filter = filter or {}
         scored = []
         for addr, n in self.nodes.items():
+            if n["status"] == "superseded" and filter.get("status") != "superseded":
+                continue
             if filter.get("taxon") and n["taxon"] != filter["taxon"]:
                 continue
             if filter.get("status") and n["status"] != filter["status"]:
@@ -127,7 +131,7 @@ class Forest:
         for addr, n in self.nodes.items():
             if area and self.area_of(addr) != area.lower():
                 continue
-            is_at = n["taxon"] == "Acceptance test" and n["status"] in ("unstated", "stated")
+            is_at = n["taxon"] == "Acceptance test" and n["status"] in ("proposed", "stated", "failed", "blocked")
             is_oq = n["taxon"] == "Open question" and n["status"] == "open"
             is_sorry = n["taxon"] not in ("Acceptance test", "Open question") and n["status"] == "sorry"
             if kind == "acceptance" and not is_at:
@@ -169,7 +173,7 @@ TOOLS = [
      "inputSchema": {"type": "object", "properties": {"address": {"type": "string"}}, "required": ["address"]}},
     {"name": "neighbors", "description": "Nodes linked from/to a node. direction: refs | backlinks | decisions.",
      "inputSchema": {"type": "object", "properties": {"address": {"type": "string"}, "direction": {"type": "string", "default": "refs"}}, "required": ["address"]}},
-    {"name": "open_tasks", "description": "Unstated/stated acceptance tests, open questions and sorry nodes, sorted by number of dependents. kind: acceptance | question | sorry.",
+    {"name": "open_tasks", "description": "Actionable acceptance tests, open questions and sorry nodes, sorted by number of dependents. kind: acceptance | question | sorry.",
      "inputSchema": {"type": "object", "properties": {"area": {"type": "string"}, "kind": {"type": "string"}}}},
     {"name": "decision", "description": "Decision registry lookup by D-<AREA>-<nn>.",
      "inputSchema": {"type": "object", "properties": {"id": {"type": "string"}}, "required": ["id"]}},
@@ -223,16 +227,16 @@ def serve() -> None:
 def selftest() -> int:
     f = Forest()
     assert f.search("Segal condition")[0]["address"], "search returns nothing"
-    assert f.get("D-RT-01")["address"] == "dec-rt-0001"
-    assert f.get("dec-rt-0001")["id"] == "D-RT-01"
-    assert any(n["address"] == "at-rt-0001" for n in f.neighbors("D-RT-11", "refs"))
-    assert any(n["address"] == "dec-rt-0001" for n in f.neighbors("AT-RT-1", "backlinks"))
-    tasks = f.open_tasks(area="kr", kind="acceptance")
+    assert f.get("D-RT-16")["address"] == "dec-rt-0016"
+    assert f.get("M-F")["address"] == "ms-foundation"
+    assert any(n["address"] == "at-fd-0001" for n in f.neighbors("D-FD-01", "refs"))
+    assert any(n["address"] == "dec-fd-0001" for n in f.neighbors("AT-FD-1", "backlinks"))
+    tasks = f.open_tasks(area="fd", kind="acceptance")
     assert tasks and all(t["taxon"] == "Acceptance test" for t in tasks)
-    d = f.decision("D-CH-01")
+    d = f.decision("D-CH-14")
     assert d["status"] == "frozen" and "Rationale" in d["text"]
-    a = f.acceptance("AT-KR-2")
-    assert "dec-kr-0003" in a["named_by"]
+    a = f.acceptance("AT-FD-1")
+    assert "dec-fd-0001" in a["named_by"]
     print(f"mcp selftest ok: {len(f.nodes)} nodes, {len(f.open_tasks())} open tasks")
     return 0
 

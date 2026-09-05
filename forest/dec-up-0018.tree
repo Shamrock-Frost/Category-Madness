@@ -1,0 +1,34 @@
+\title{D-UP-18 · Universal properties involving categories}
+\taxon{Decision}
+\meta{id}{D-UP-18}
+\meta{area}{universal properties}
+\meta{origin}{design/03-universal-properties.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional until M4; AT-UP-8 is mandatory in its exit criteria.  OQ-UP-1: choose the concrete derived comma/framing construction and prove its discrete comparison. OQ-UP-2: Prop-valued existence classes are allowed; chosen witnesses are passed explicitly. No data-valued chosen-limit instance is introduced.}
+\meta{supersedes}{dec-up-0009}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:up}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{Use \code{VertCore(Cat)} and later \code{VertCore(Cat_∞)} for categorical mapping spaces and (∞,1)-universal properties. For ordinary categories these mapping spaces are cores of functor categories. Construct exponentials/functor objects and verify their core-valued universal property; use their full functor categories when 2-dimensional information is required. Products and homotopy pullbacks here are understood in the (∞,1)-sense. A lax comma object is a separate 2-dimensional construction in \code{Vert₂} or the equipment. Do not identify it with a strict or homotopy pullback by terminology.}
+}
+\subtree{
+  \title{Rationale}
+  \p{The ambient dimension determines the universal property being asserted.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Calling \code{VertRaw(Cat)} mapping spaces functor cores.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-up-0008}: for ordinary C,D the chosen exponential is the functor category and \code{MapCat(E,Fun(C,D)) ≃ MapCat(E×C,D)}, naturally in E; \ref{at-fd-0004}'s walking-isomorphism test.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional until \ref{ms-0004}; \ref{at-up-0008} is mandatory in its exit criteria.}
+  \p{\ref{oq-up-0001}: choose the concrete derived comma/framing construction and prove its discrete comparison. \ref{oq-up-0002}: Prop-valued existence classes are allowed; chosen witnesses are passed explicitly. No data-valued chosen-limit instance is introduced.}
+}

@@ -3,13 +3,13 @@
 \meta{id}{D-FT-01}
 \meta{area}{formal theory}
 \meta{origin}{design/04-formal-theory.md}
-\meta{status}{frozen}
+\meta{status}{superseded}
 \meta{status-text}{frozen at M5 (axiom transcription provisional).}
 \meta{supersedes}{none}
-\meta{superseded-by}{none}
+\meta{superseded-by}{dec-ft-0006}
 \tag{decision}
 \tag{area:ft}
-\tag{status:frozen}
+\tag{status:superseded}
 
 \subtree{
   \title{Decision}

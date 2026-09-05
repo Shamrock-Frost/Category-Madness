@@ -1,41 +1,24 @@
-\title{10 · Adversarial review (phase −1) and disposition}
+\title{10 · Adversarial review and current disposition — revision 1}
 \taxon{Chapter}
 \meta{origin}{design/10-adversarial-review.md}
 \meta{layer}{human}
 \tag{chapter}
 
-\p{A record of the adversarial pass on the VDC∞ design and what changed because of it. Kept because the \em{rejected framings} are the part agents will otherwise re-derive. Each item: what the library will want, why the design as first drafted made it hard, disposition.}
-\subtree{
-  \title{Reframing that governs the whole list}
-  \p{The first draft of item 1 said an ∞-category modelled as a point of \code{Map(N Mnd, R(Mat Kan))} was "uncomputable". That conflated \em{cannot unfold} (true and intended, → \ref{dec-ch-0001}) with \em{cannot work with} (false if the interface is right). Nobody writes down a simplex of \code{Fun(Δ[n], N(Kan))} either; quasi-category theory is usable because its interface — horn filling, \code{Fun}, joins, mapping spaces — is closed under the constructions it uses, and rectification theorems populate it from strict models. The corrected criterion is → \ref{dec-ch-0013}: fibrancy exported as a property, closure theorems for every exported construction, rectification. Items below are read through that lens.}
+\p{The original review and dispositions remain verbatim in \code{history/v0/10-adversarial-review.md}. This revision responds to the subsequent twelve-finding design review. A disposition below records a design change, not a proved Lean theorem. Required evidence is in \ref{ms-foundation}.}
+\table{
+  \tr{\th{Finding}\th{Current design response}\th{Remaining evidence}}
+  \tr{\td{R1: horizontal bijectivity in DK clauses}\td{Remove that condition; require fixed-boundary cell faithfulness and simultaneous essential surjectivity}\td{\ref{at-fd-0005}; ∞-predicate and comparisons remain provisional}}
+  \tr{\td{R2: relative maps lose natural equivalences}\td{Separate \code{MapRel}/\code{MapCat} and \code{VertRaw}/\code{VertCore}; retain vertical 2-cells}\td{\ref{at-fd-0004} and \ref{at-fd-0008}}}
+  \tr{\td{R3: boundary monodromy invalidates hP}\td{Remove generic hP and its mandatory proof route; work coherently}\td{\ref{at-fd-0006}; optional specific truncations later}}
+  \tr{\td{R4: contractible object values}\td{Require a reduced presentation and prove actual boundary/core lemmas}\td{\ref{at-fd-0003}}}
+  \tr{\td{R5: Mat universes}\td{Raise collection universes; keep category object/hom parameters separate}\td{\ref{at-fd-0001}, no signatures compiled in this revision}}
+  \tr{\td{R6: walking/slice fibres omit structure labels}\td{Fix entire selected monads/cones through relative diagram fibres}\td{\ref{at-fd-0008}, full \ref{at-up-0003}}}
+  \tr{\td{R7: augmented active-chain encoding}\td{Replace the universal active-chain assertion with explicit augmented algebra/arity work}\td{\ref{at-fd-0007}, a material research risk}}
+  \tr{\td{R8: BMW hypotheses conflated}\td{Separate arity recognition, pattern, and Reedy theorems}\td{\ref{at-fd-0007} and \ref{at-kr-0002}}}
+  \tr{\td{R9: symmetric/braided monads on Mat}\td{Move to the profunctor ambient and retain permutation/braid morphisms}\td{\ref{at-fd-0009}; full ∞-construction \ref{ms-0007}}}
+  \tr{\td{R10: independently opaque data and laws}\td{Bundle the specification with its laws, or prove an audited alternative}\td{\ref{at-fd-0002}}}
+  \tr{\td{R11: broad rectification and paste promises}\td{State model changes and fixed-target scope separately; distinguish equality from coherent comparisons}\td{\ref{at-fd-0010}}}
+  \tr{\td{R12: freeze before decisive tests}\td{Add \ref{ms-foundation}; move speculative infrastructure later; audit all axioms and both builds before merge}\td{\ref{at-fd-0011} and \ref{ms-foundation} exit}}
 }
-\subtree{
-  \title{Items}
-  \ol{
-    \li{\strong{Usable ∞-categories.} Want: to write down and compute with an ∞-category through its interface. Cost: closure and rectification theorems, not a design change. Disposition: \ref{dec-ch-0013} (new); \ref{dec-rt-0007} and \ref{dec-rt-0013} amended (fibrancy exported, closure package in Interface v1, two-tier extension); \ref{dec-sp-0002}/04 amended (fibrant \code{Kan}, \code{Mat(Kan)}; rectification \ref{at-sp-0008}; construction route is \ref{oq-sp-0003}).}
-    \li{\strong{The 2-category \code{Cat}.} Want: natural transformations, lax notions. Problem: \code{Vert} restricts to vertical paths and forgets cells. Disposition: \ref{dec-up-0009} rewritten; (∞,1)-universal properties in \code{Vert} scoped to products/exponentials/cotensors; lax notions go to the equipment; \ref{at-up-0008}.}
-    \li{\strong{Large objects, small homs.} Want: \code{Set}, \code{Kan}, \code{Cat} as objects. Problem: single universe at the root. Disposition: \ref{dec-rt-0012} rewritten; label and value universes independent; \code{Category.{u,v}}.}
-    \li{\strong{Coherent lifts.} Want: lifts along diagrams, functorial \code{cosk₀}. Problem: pointwise contractibility gives points, not sections. Disposition: \ref{dec-up-0001} and \ref{dec-up-0006} amended; trivial-fibration form; \code{Classical.choose} on sections.}
-    \li{\strong{Colimits in \code{Kan}.} Want: \code{PSh(C)} cocomplete, coends, composites, \code{SymSeq}. Problem: unscheduled mountain. Disposition: \ref{dec-sp-0008} names it (\ref{at-sp-0012}), Simpson's route, \ref{ms-0006}, risk register.}
-    \li{\strong{\code{Span(S)}.} Want: internal categories, Segal spaces. Problem: compatible choices of pullbacks. Disposition: \ref{dec-sp-0005} rewritten via \code{Tw(θ)} shapes (Barwick, Haugseng); \ref{dec-kr-0008} amended.}
-    \li{\strong{Invariance.} Want: DK-invariance of every construction. Problem: nothing invariant by construction in a strict-model design. Disposition: folded into \ref{dec-ch-0013} (b); every exported construction ships an invariance theorem; a constraint on definitions in 02–05.}
-    \li{\strong{Duality.} Want: \code{to_dual} everywhere. Problem: vertical op broken by augmentation, transpose unavailable for virtual, \code{Cᵒᵖᵒᵖ ≃ C} never \code{rfl}. Disposition: \ref{dec-up-0005} scoped; hand-proved duals recorded by the attribute rather than generated.}
-    \li{\strong{Interface growth.} Want: kernel facts as API after \ref{ms-0003}. Problem: every lemma a decision makes the human the bottleneck. Disposition: two-tier extension policy in \ref{dec-rt-0013}; closure package in \ref{dec-kr-0010}.}
-    \li{\strong{Symmetric structures.} Want: symmetric operads, \code{E_n}, symmetric monoidal ∞-categories. First-draft problem: "E1-only excludes them." Corrected: symmetric operads are monoids in symmetric sequences under the (non-symmetric) composition product, an E1 notion; \code{E_1}/\code{E_2}/\code{E_∞} are the contractible monoids in non-symmetric/braided/symmetric sequences; \code{E_n} (\code{3 ≤ n < ∞}) via Berger's complete-graph operads. What is \em{not} viable: \code{E_n} (\code{n ≥ 2}) as non-symmetric operads — forgetting equivariance turns \code{E_∞} into \code{E_1} and \code{E_2} into \code{E_1} plus pure-braid actions; the braiding is the equivariance. Disposition: \ref{dec-sp-0009} (new); \ref{dec-ch-0005} note; \ref{ms-0007}.}
-    \li{\strong{Augmentation at ∞.} Want: Koudenburg's formal theory at ∞. Problem: nullary-target cells have no output face; elegance and Segal cores of \code{Θ^aug_fc} are new. Disposition: unchanged (already \ref{at-kr-0006} with generalized-Reedy fallback in the risk register).}
-    \li{\strong{Inverting DK-equivalences.} Want: canonical inverses. Problem: discrete object sets, Bergner's cylinder nontrivial. Disposition: an interface theorem once fibrancy is exported (\ref{dec-ch-0013}); \ref{at-rt-0005} extended at \ref{ms-0006}.}
-    \li{\strong{Strict layer.} Want: strict ω-categories, computads. Problem: nothing strict past the seal. Disposition: recorded as a non-goal in the charter.}
-  }
-}
-\subtree{
-  \title{Post-review findings (pasting and shapes)}
-  \ol{
-    \li{\strong{Pasting diagrams.} Want: to state and prove pasting composites. Finding: pasting schemes \em{are} the shapes; the pasting theorem is the nerve theorem (discrete) and the Segal condition (∞); 2-categorical pasting needs units and was scheduled too late. Disposition: \ref{dec-rt-0015} (\code{Vert₂} at \ref{ms-0003}); \ref{dec-tl-0009} (\code{paste} = decidable shape-map equality); \ref{dec-rt-0013} amended so shapes are exported transparently.}
-    \li{\strong{The shapes are leveled.} Finding: the shared-sides rule of virtual composition forces arities of the free-VDC monad to be leveled grids, i.e. chains of active maps in Δ, not trees with sides. Disposition: \ref{dec-kr-0006} rewritten; "dendroidal" struck from the charter; the canonical format is rows (\ref{dec-tl-0010}); elegance more plausible.}
-    \li{\strong{General shape theory.} Want: a uniform, formalizable theory of pasting shapes, joins, Gray products, and duals, including for the (∞,2) layer. Disposition: \ref{dec-kr-0012} adopts the core of Hadzihasanovic's book as the kernel's geometric substrate, presenting the algebraically defined shapes; molecules rejected as the root's shape category (no canonical names, filler-style composition, no double variant).}
-  }
-}
-\subtree{
-  \title{What could still sink it}
-  \p{Items 1 and 5. Item 1 is now a checklist (the closure and rectification theorems of \ref{dec-rt-0013} and \ref{dec-ch-0013}) that can be verified at \ref{ms-0003} and \ref{ms-0006}. Item 5 is a scheduled theorem with a named route and a fallback.}
-}
+\p{The review's R3 claim is intentionally addressed conservatively: the faulty canonical transport argument is removed, without claiming that no useful homotopy equipment can exist. R4 identifies an invalid gluing justification; the proposed reduced replacement still needs a proof. R7 rejects a complete encoding by ordinary active chains; flagged augmented rows remain a possible richer presentation if their theorem is established. R10 does not say opaque interfaces are impossible: the revision uses data and laws in one specification, which is the appropriate prototype to test.}
+\p{Earlier review findings about usable APIs, size, coherent choices, limits/colimits, span diagrams, invariance, duality, and interface growth remain relevant. Their prior “disposed” labels do not mean that the necessary ∞-theorems were proved. The current charter requires construction-specific certificates and treats failed gates as reasons to revise the mathematics.}

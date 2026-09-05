@@ -3,17 +3,17 @@
 \meta{id}{D-CH-04}
 \meta{area}{charter}
 \meta{origin}{design/00-charter.md}
-\meta{status}{frozen}
+\meta{status}{superseded}
 \meta{status-text}{frozen.}
 \meta{supersedes}{none}
-\meta{superseded-by}{none}
+\meta{superseded-by}{dec-ch-0017}
 \tag{decision}
 \tag{area:ch}
-\tag{status:frozen}
+\tag{status:superseded}
 
 \subtree{
   \title{Decision}
-  \p{There is one root definition (→ \ref{dec-rt-0001}). \code{Category} is a monad in \code{Mat(Set)} (→ \ref{dec-rt-0010}). ∞-categories are monads in \code{Mat(Kan)} (→ \ref{dec-sp-0004}). Functors, profunctors, natural transformations are the vertical morphisms, horizontal morphisms, and cells of \code{Mod(-)}. The 2-category \code{Cat} is never defined; it is the vertical 2-category of \code{Mod(Mat Set)}. Universal properties in \code{Cat} are those of the vertical ∞-category of the corresponding VDC∞, hence 2-dimensional automatically.}
+  \p{There is one root definition (→ D-RT-01). \code{Category} is a monad in \code{Mat(Set)} (→ D-RT-10). ∞-categories are monads in \code{Mat(Kan)} (→ \ref{dec-sp-0004}). Functors, profunctors, natural transformations are the vertical morphisms, horizontal morphisms, and cells of \code{Mod(-)}. The 2-category \code{Cat} is never defined; it is the vertical 2-category of \code{Mod(Mat Set)}. Universal properties in \code{Cat} are those of the vertical ∞-category of the corresponding VDC∞, hence 2-dimensional automatically.}
 }
 \subtree{
   \title{Rationale}

@@ -1,13 +1,14 @@
-\title{AT-KR-4 · \code{Θ_1 ≅ Δ}, \code{Θ_2 ≅ Δ ≀ Δ}}
+\title{AT-KR-4 · \\code{Θ_1 ≅ Δ}, \\code{Θ_2 ≅ Δ ≀ Δ}}
 \taxon{Acceptance test}
 \meta{id}{AT-KR-4}
 \meta{area}{kernel}
 \meta{origin}{design/01-kernel.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:kr}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{\code{Θ_1 ≅ Δ}, \code{Θ_2 ≅ Δ ≀ Δ}.}
-\p{Named by: \ref{dec-kr-0003}.}
+\p{and \ref{at-kr-0007} when their clients are scheduled}
+\p{Named by: \ref{dec-kr-0020}.}
 \p{\em{Lean declaration(s):} none yet.}

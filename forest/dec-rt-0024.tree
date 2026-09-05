@@ -1,0 +1,35 @@
+\title{D-RT-24 · \code{Mod} by relative walking diagrams}
+\taxon{Decision}
+\meta{id}{D-RT-24}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional research construction; full proof required before export.}
+\meta{supersedes}{dec-rt-0009}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:rt}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{Work with one coherent choice of \code{R_rd P}. A monad over a label is a vertex of \code{MapRel(N Mnd,P)}. For a walking diagram \code{W_θ}, let \code{B_θ → N W_θ} be the subdiagram containing the copies of the walking monad at all object positions. For selected monads \code{m_x}, define the proposed value by the relative fibre}
+  \p{\code{Mod(P)(θ; (m_x)) = Fib_(m_x)( MapRel(N W_θ,P) → MapRel(B_θ,P) )}.}
+  \p{The notation includes fixed underlying base labels and their structure restrictions. At a point shape, \code{B_pt = N W_pt = N Mnd}, and the fibre over its selected monad is a point. The family \code{B_θ → N W_θ} must be functorial in θ. Prove its restriction maps are fibrations before using strict fibres. Replacement chosen independently at each shape is prohibited. Prove the Segal condition, functoriality on maps, and construction-specific invariance; neither \code{LevelEq} nor \code{VDCEq} invariance is inferred solely from the formula.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Fixing an object label of \code{Mod} fixes its whole monad structure.}
+}
+\subtree{
+  \title{Rejected}
+  \p{The full space of all monads as the value at one chosen monad.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-fd-0008} and \ref{at-rt-0007}, including point, vertical edge, bimodule, binary cell, units, and composition. \ref{at-ft-0003} is the separate equipment-preservation theorem.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional research construction; full proof required before export.}
+}

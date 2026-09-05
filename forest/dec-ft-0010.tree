@@ -1,0 +1,34 @@
+\title{D-FT-10 · Cosmoi}
+\taxon{Decision}
+\meta{id}{D-FT-10}
+\meta{area}{formal theory}
+\meta{origin}{design/04-formal-theory.md}
+\meta{status}{later}
+\meta{status-text}{later (M7+).  AT-FT-1 through AT-FT-7 remain proposed comparison tests with the revised scopes above. AT-FT-8's former arbitrary-root claim is retired. AT-FT-9 remains later. OQ-FT-1 is now the exact coherent restriction/unit transcription. OQ-FT-2 is which specific homotopy-equipment comparisons repay their construction cost; none is mandatory for the direct coherent route.}
+\meta{supersedes}{dec-ft-0005}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:ft}
+\tag{status:later}
+
+\subtree{
+  \title{Decision}
+  \p{A cosmos comparison is optional later work. Specify the enriched model, limits, isofibrations, and module construction precisely, then compare its homotopy 2-category with a proved part of \code{Vert₂} or a suitable module equipment.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Existing formal machinery may help once its hypotheses have been ported.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Assuming a cosmos or its homotopy equipment comes for free from the root.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-ft-0009}, newly stated with exact scope before implementation.}
+}
+\subtree{
+  \title{Status}
+  \p{later (\ref{ms-0007}+).}
+  \p{\ref{at-ft-0001} through \ref{at-ft-0007} remain proposed comparison tests with the revised scopes above. \ref{at-ft-0008}'s former arbitrary-root claim is retired. \ref{at-ft-0009} remains later. \ref{oq-ft-0001} is now the exact coherent restriction/unit transcription. \ref{oq-ft-0002} is which specific homotopy-equipment comparisons repay their construction cost; none is mandatory for the direct coherent route.}
+}

@@ -1,20 +1,9 @@
-\title{M5 · Formal theory}
+\title{M5 · Coherent formal theory}
 \taxon{Milestone}
 \meta{id}{M5}
 \meta{origin}{design/08-roadmap.md}
 \meta{status}{planned}
 \tag{milestone}
 
-\ul{
-  \li{\ref{dec-ft-0001}…\ref{dec-ft-0004} stated; \ref{dec-ft-0003} items proved first in \code{hP}, then coherently (\ref{oq-ft-0002}).}
-  \li{\code{Span(S)} for Segal categories with finite limits (\ref{dec-sp-0005} statement, \ref{at-sp-0004}).}
-  \li{\ref{at-ft-0001}…\ref{at-ft-0003}, 5…8 proved; \ref{at-ft-0004} stated.}
-}
-\subtree{
-  \title{Freeze}
-  \p{Augmented virtual ∞-equipment definition; the theorem list \ref{dec-ft-0003}.}
-}
-\subtree{
-  \title{Exit}
-  \p{The formal theory instantiates to classical statements in \code{Cat} with no separate proofs.}
-}
+\p{State and prove the required restriction/unit and formal-theory comparisons. Develop coherently in the root, using discrete comparisons early; optional homotopy-equipment routes require their own established bridge. Prove \ref{at-ft-0001}/2/3/5/6/7. \ref{at-ft-0008}'s former general claim is retired. Construct the span recipe with its actual indexing and relative boundaries as far as its dependencies permit; \ref{at-sp-0004} must pass before export. \ref{at-ft-0004}'s full double-∞ comparison may follow at \ref{ms-0006} if necessary.}
+\p{\strong{Exit:} every exported formal theorem has the stated hypotheses and its discrete test. \strong{Freeze:} the proved equipment/units definitions and formal theorem signatures.}

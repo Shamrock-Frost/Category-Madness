@@ -1,0 +1,33 @@
+\title{D-UP-10 · Terminal objects and coherent choices}
+\taxon{Decision}
+\meta{id}{D-UP-10}
+\meta{area}{universal properties}
+\meta{origin}{design/03-universal-properties.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional implementation; mathematical specification fixed.}
+\meta{supersedes}{dec-up-0001}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:up}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{\code{IsTerminal t : Prop := ∀ x, Contractible (C(x,t))}, with \code{Terminal C := {t // IsTerminal t}} and \code{HasTerminal C := Nonempty (Terminal C)}. The full subcategory on terminal objects is empty or a contractible ∞-groupoid. For a specified terminal \code{t}, prove that the space of cones with vertex t over any K-diagram maps equivalently to \code{MapCat(K,C)}. At the presentation level, a restriction map is a trivial fibration only after its Kan-fibration hypotheses are proved. Choosing a section coherent over a parameter diagram requires a lifting theorem in that diagram category. Separate pointwise choices are not that theorem.}
+}
+\subtree{
+  \title{Rationale}
+  \p{The universal property supplies uniqueness; existence and model-level lifting are separate premises.}
+}
+\subtree{
+  \title{Rejected}
+  \p{An unconditional claim of contractibility when there may be no witness; trivial fibrancy inferred from an equivalence of abstract spaces alone.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-up-0001}: classical terminal objects and unique isomorphism; \ref{at-fd-0003}; \ref{at-up-0006} for a genuinely coherent parameterized construction.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional implementation; mathematical specification fixed.}
+}

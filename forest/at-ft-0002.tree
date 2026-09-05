@@ -1,13 +1,14 @@
-\title{AT-FT-2 · \code{Mat(Set)} and \code{Cat} are augmented virtual equipments}
+\title{AT-FT-2 · \\code{Mat(Set)} and \\code{Cat} are augmented virtual equipments}
 \taxon{Acceptance test}
 \meta{id}{AT-FT-2}
 \meta{area}{formal theory}
 \meta{origin}{design/04-formal-theory.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:ft}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{\code{Mat(Set)} and \code{Cat} are augmented virtual equipments.}
-\p{Named by: \ref{dec-ft-0001}.}
+\p{for matrices and profunctors}
+\p{Named by: \ref{dec-ft-0006}.}
 \p{\em{Lean declaration(s):} none yet.}

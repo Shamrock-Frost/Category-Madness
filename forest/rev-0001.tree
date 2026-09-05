@@ -1,0 +1,141 @@
+\title{12 · Revision notes — revision 1}
+\taxon{Chapter}
+\meta{origin}{design/12-revision-notes.md}
+\meta{layer}{human}
+\tag{chapter}
+
+\p{\strong{Revision date:} 2026-09-05. \strong{Authorization:} add the foundation feasibility milestone and revise the design in response to the twelve-finding review. \strong{Validation level:} document consistency and archive integrity only; no mathematical claim became a proved Lean theorem in this revision.}
+\subtree{
+  \title{Are the findings fatal?}
+  \p{There is no demonstrated obstruction to the broad goal of a common, sealed categorical library. Several old formulations are unusable as written. The revision repairs or removes those formulations rather than treating them as proof tasks.}
+  \table{
+    \tr{\th{Kind}\th{Findings and response}\th{Consequence}}
+    \tr{\td{Direct specification repairs}\td{Collection universes, reduced object values, whole-structure fibres, bundled data/laws, proper symmetry ambient}\td{Plausible concrete replacements; still require compiled statements and comparisons}}
+    \tr{\td{Architectural changes}\td{Separate relative/categorical maps and raw/categorical vertical parts; remove mandatory generic hP; scope rectification and pasting}\td{Preserves the common ambient goal but changes the API and proof strategy}}
+    \tr{\td{Material research risks}\td{Augmented arities and their diagram model; coherent Mod and its equivalence/categorical comparisons}\td{May require a different root presentation or a smaller first release if \ref{ms-foundation} fails}}
+  }
+  \p{The current ∞-equivalence clauses remain a candidate, not a fully solved new definition. The generic hP requirement is deliberately removed; this revision does not claim a replacement truncation theorem. The augmented row format remains a proposal pending its arity/normalization proof. Those limits are visible in the active decisions and gates.}
+}
+\subtree{
+  \title{What changed}
+  \p{\ref{ms-foundation} now comes between \ref{ms-0000} and \ref{ms-0001}. It includes eleven acceptance gates with evidence, dependencies, counterexamples, and failure responses. The large shape catalogue, geometric substrate, and full retrieval/generator stack follow foundational evidence. Both kernel-backed and stub builds, together with an axiom allowlist, are required before a merge can certify a theorem. Mathematical status is separate from prose status.}
+  \p{The root is a reduced homotopy-Segal candidate; ordinary strict-limit formulas need a comparison theorem. \code{MapRel} and \code{MapCat} have separate clients. \code{VertRaw}, \code{Vert₂}, and \code{VertCore} retain their different meanings. Monads/modules and slices fix their entire selected structures through relative fibres. Formal theory works in coherent cell spaces, using scoped homotopy-equipment comparisons only when proved.}
+  \p{The symmetry track now uses the profunctor ambient for symmetric/braided monoidal category monads, with a discrete action test before the ∞-construction. Spaces-classifier paths and arbitrary maps are distinguished. The universe, unit, weighted/conical-limit, skeleton/coskeleton, and double-nerve wording is corrected. The bibliography now records what a source supplies and what still needs proof in this model.}
+}
+\subtree{
+  \title{Acceptance-test statement changes}
+  \p{All current tests are \strong{proposed}: the supplied design had no linked checked Lean statements. No old validation is inherited. In a future repository, each listed change also requires a new statement version and a fresh checked proof.}
+  \table{
+    \tr{\th{Test}\th{Revision 1 treatment}}
+    \tr{\td{\ref{at-rt-0004}}\td{Retired: the unconditional arbitrary-root hP construction is removed; discrete recovery remains \ref{at-rt-0001}}}
+    \tr{\td{\ref{at-ft-0008}}\td{Retired: no unconditional hP-equipment theorem; specific later comparisons need new tests}}
+    \tr{\td{\ref{at-rt-0005}}\td{Revised equivalence clauses; discrete exact comparison, endpoint transport, and ∞-laws explicitly gated}}
+    \tr{\td{\ref{at-rt-0006}}\td{Relative mapping spaces only; categorical mapping semantics are separately tested by \ref{at-fd-0004}}}
+    \tr{\td{\ref{at-rt-0007}}\td{Whole-monad relative fibres and coherent walking-diagram functoriality required}}
+    \tr{\td{\ref{at-kr-0002}/3/5/6/8/11}\td{Exact arity, pattern, cofibrancy, and reduced-replacement hypotheses; no universal augmented active-chain claim}}
+    \tr{\td{\ref{at-kr-0012}/13/14}\td{Deferred geometric comparisons, with exact categories/morphisms required before stating proofs}}
+    \tr{\td{\ref{at-up-0001}/3/6}\td{Existence, reduced whole-cone fibres, categorical invariance, and parameterized coherence explicit}}
+    \tr{\td{\ref{at-up-0007}}\td{Corrected adjunction direction: sk_n is left adjoint to cosk_n}}
+    \tr{\td{\ref{at-up-0008}}\td{Categorical core ambient, and now a mandatory \ref{ms-0004} exit test}}
+    \tr{\td{\ref{at-ft-0001}/3/4/6/7}\td{Separate units/restrictions; scoped Mod preservation, constructed double nerve, typed conical weight, and named comparison ambient}}
+    \tr{\td{\ref{at-sp-0001}/2/3/4}\td{Classifier semantics, bootstrap bridge, coherent matrix construction, and relative span boundaries explicit}}
+    \tr{\td{\ref{at-sp-0005}}\td{Split categorical object comparison from the stronger augmented-VDC/module comparison}}
+    \tr{\td{\ref{at-sp-0008}}\td{Rigidification to an equivalent strict model; no universal fixed-target surjectivity inferred}}
+    \tr{\td{\ref{at-sp-0009}/10/11/13}\td{Corrected profunctor ambient and explicit equivariance/preservation hypotheses}}
+    \tr{\td{\ref{at-sp-0012}}\td{Index-size bounds explicit; does not by itself supply colimits in Cat_∞}}
+    \tr{\td{\ref{at-fd-0001} through \ref{at-fd-0011}}\td{New foundational gates; none is marked passed by the document revision}}
+  }
+  \p{Other existing test IDs retain their subjects but use the repaired current definitions; this is not permission to reuse a proof of a different statement. The exact proposed scopes are in the active documents. Tooling acceptance includes reproducible checks as well as any mathematical statements required by that gate.}
+}
+\subtree{
+  \title{Decision supersession}
+  \p{Every historical decision whose active text was revised receives a new ID below. The original decision/rationale/rejected text is preserved byte-for-byte in the listed file under \code{history/v0/}. Those old IDs are historical, and the new IDs govern the current candidate or policy. \ref{dec-fd-0001} is newly introduced. A machine-readable crosswalk and original-file hashes are in \code{decision-supersession.json}.}
+  \table{
+    \tr{\th{Historical ID (superseded)}\th{Current ID}\th{Document}}
+    \tr{\td{\code{D-CH-01}}\td{\code{D-CH-14}}\td{\code{00-charter.md}}}
+    \tr{\td{\code{D-CH-02}}\td{\code{D-CH-15}}\td{\code{00-charter.md}}}
+    \tr{\td{\code{D-CH-03}}\td{\code{D-CH-16}}\td{\code{00-charter.md}}}
+    \tr{\td{\code{D-CH-04}}\td{\code{D-CH-17}}\td{\code{00-charter.md}}}
+    \tr{\td{\code{D-CH-05}}\td{\code{D-CH-18}}\td{\code{00-charter.md}}}
+    \tr{\td{\code{D-CH-06}}\td{\code{D-CH-19}}\td{\code{00-charter.md}}}
+    \tr{\td{\code{D-CH-07}}\td{\code{D-CH-20}}\td{\code{00-charter.md}}}
+    \tr{\td{\code{D-CH-08}}\td{\code{D-CH-21}}\td{\code{00-charter.md}}}
+    \tr{\td{\code{D-CH-09}}\td{\code{D-CH-22}}\td{\code{00-charter.md}}}
+    \tr{\td{\code{D-CH-10}}\td{\code{D-CH-23}}\td{\code{00-charter.md}}}
+    \tr{\td{\code{D-CH-11}}\td{\code{D-CH-24}}\td{\code{00-charter.md}}}
+    \tr{\td{\code{D-CH-12}}\td{\code{D-CH-25}}\td{\code{00-charter.md}}}
+    \tr{\td{\code{D-CH-13}}\td{\code{D-CH-26}}\td{\code{00-charter.md}}}
+    \tr{\td{\code{D-KR-01}}\td{\code{D-KR-13}}\td{\code{01-kernel.md}}}
+    \tr{\td{\code{D-KR-02}}\td{\code{D-KR-14}}\td{\code{01-kernel.md}}}
+    \tr{\td{\code{D-KR-03}}\td{\code{D-KR-15}}\td{\code{01-kernel.md}}}
+    \tr{\td{\code{D-KR-04}}\td{\code{D-KR-16}}\td{\code{01-kernel.md}}}
+    \tr{\td{\code{D-KR-05}}\td{\code{D-KR-17}}\td{\code{01-kernel.md}}}
+    \tr{\td{\code{D-KR-06}}\td{\code{D-KR-18}}\td{\code{01-kernel.md}}}
+    \tr{\td{\code{D-KR-07}}\td{\code{D-KR-19}}\td{\code{01-kernel.md}}}
+    \tr{\td{\code{D-KR-08}}\td{\code{D-KR-20}}\td{\code{01-kernel.md}}}
+    \tr{\td{\code{D-KR-09}}\td{\code{D-KR-21}}\td{\code{01-kernel.md}}}
+    \tr{\td{\code{D-KR-10}}\td{\code{D-KR-22}}\td{\code{01-kernel.md}}}
+    \tr{\td{\code{D-KR-11}}\td{\code{D-KR-23}}\td{\code{01-kernel.md}}}
+    \tr{\td{\code{D-KR-12}}\td{\code{D-KR-24}}\td{\code{01-kernel.md}}}
+    \tr{\td{\code{D-RT-01}}\td{\code{D-RT-16}}\td{\code{02-root.md}}}
+    \tr{\td{\code{D-RT-02}}\td{\code{D-RT-17}}\td{\code{02-root.md}}}
+    \tr{\td{\code{D-RT-03}}\td{\code{D-RT-18}}\td{\code{02-root.md}}}
+    \tr{\td{\code{D-RT-04}}\td{\code{D-RT-19}}\td{\code{02-root.md}}}
+    \tr{\td{\code{D-RT-05}}\td{\code{D-RT-20}}\td{\code{02-root.md}}}
+    \tr{\td{\code{D-RT-06}}\td{\code{D-RT-21}}\td{\code{02-root.md}}}
+    \tr{\td{\code{D-RT-07}}\td{\code{D-RT-22}}\td{\code{02-root.md}}}
+    \tr{\td{\code{D-RT-08}}\td{\code{D-RT-23}}\td{\code{02-root.md}}}
+    \tr{\td{\code{D-RT-09}}\td{\code{D-RT-24}}\td{\code{02-root.md}}}
+    \tr{\td{\code{D-RT-10}}\td{\code{D-RT-25}}\td{\code{02-root.md}}}
+    \tr{\td{\code{D-RT-11}}\td{\code{D-RT-26}}\td{\code{02-root.md}}}
+    \tr{\td{\code{D-RT-12}}\td{\code{D-RT-27}}\td{\code{02-root.md}}}
+    \tr{\td{\code{D-RT-13}}\td{\code{D-RT-28}}\td{\code{02-root.md}}}
+    \tr{\td{\code{D-RT-14}}\td{\code{D-RT-29}}\td{\code{02-root.md}}}
+    \tr{\td{\code{D-RT-15}}\td{\code{D-RT-30}}\td{\code{02-root.md}}}
+    \tr{\td{\code{D-UP-01}}\td{\code{D-UP-10}}\td{\code{03-universal-properties.md}}}
+    \tr{\td{\code{D-UP-02}}\td{\code{D-UP-11}}\td{\code{03-universal-properties.md}}}
+    \tr{\td{\code{D-UP-03}}\td{\code{D-UP-12}}\td{\code{03-universal-properties.md}}}
+    \tr{\td{\code{D-UP-04}}\td{\code{D-UP-13}}\td{\code{03-universal-properties.md}}}
+    \tr{\td{\code{D-UP-05}}\td{\code{D-UP-14}}\td{\code{03-universal-properties.md}}}
+    \tr{\td{\code{D-UP-06}}\td{\code{D-UP-15}}\td{\code{03-universal-properties.md}}}
+    \tr{\td{\code{D-UP-07}}\td{\code{D-UP-16}}\td{\code{03-universal-properties.md}}}
+    \tr{\td{\code{D-UP-08}}\td{\code{D-UP-17}}\td{\code{03-universal-properties.md}}}
+    \tr{\td{\code{D-UP-09}}\td{\code{D-UP-18}}\td{\code{03-universal-properties.md}}}
+    \tr{\td{\code{D-FT-01}}\td{\code{D-FT-06}}\td{\code{04-formal-theory.md}}}
+    \tr{\td{\code{D-FT-02}}\td{\code{D-FT-07}}\td{\code{04-formal-theory.md}}}
+    \tr{\td{\code{D-FT-03}}\td{\code{D-FT-08}}\td{\code{04-formal-theory.md}}}
+    \tr{\td{\code{D-FT-04}}\td{\code{D-FT-09}}\td{\code{04-formal-theory.md}}}
+    \tr{\td{\code{D-FT-05}}\td{\code{D-FT-10}}\td{\code{04-formal-theory.md}}}
+    \tr{\td{\code{D-SP-01}}\td{\code{D-SP-10}}\td{\code{05-spaces-enrichment.md}}}
+    \tr{\td{\code{D-SP-02}}\td{\code{D-SP-11}}\td{\code{05-spaces-enrichment.md}}}
+    \tr{\td{\code{D-SP-03}}\td{\code{D-SP-12}}\td{\code{05-spaces-enrichment.md}}}
+    \tr{\td{\code{D-SP-04}}\td{\code{D-SP-13}}\td{\code{05-spaces-enrichment.md}}}
+    \tr{\td{\code{D-SP-05}}\td{\code{D-SP-14}}\td{\code{05-spaces-enrichment.md}}}
+    \tr{\td{\code{D-SP-06}}\td{\code{D-SP-15}}\td{\code{05-spaces-enrichment.md}}}
+    \tr{\td{\code{D-SP-07}}\td{\code{D-SP-16}}\td{\code{05-spaces-enrichment.md}}}
+    \tr{\td{\code{D-SP-08}}\td{\code{D-SP-17}}\td{\code{05-spaces-enrichment.md}}}
+    \tr{\td{\code{D-SP-09}}\td{\code{D-SP-18}}\td{\code{05-spaces-enrichment.md}}}
+    \tr{\td{\code{D-TL-01}}\td{\code{D-TL-12}}\td{\code{06-tooling.md}}}
+    \tr{\td{\code{D-TL-02}}\td{\code{D-TL-13}}\td{\code{06-tooling.md}}}
+    \tr{\td{\code{D-TL-03}}\td{\code{D-TL-14}}\td{\code{06-tooling.md}}}
+    \tr{\td{\code{D-TL-04}}\td{\code{D-TL-15}}\td{\code{06-tooling.md}}}
+    \tr{\td{\code{D-TL-05}}\td{\code{D-TL-16}}\td{\code{06-tooling.md}}}
+    \tr{\td{\code{D-TL-06}}\td{\code{D-TL-17}}\td{\code{06-tooling.md}}}
+    \tr{\td{\code{D-TL-07}}\td{\code{D-TL-18}}\td{\code{06-tooling.md}}}
+    \tr{\td{\code{D-TL-08}}\td{\code{D-TL-19}}\td{\code{06-tooling.md}}}
+    \tr{\td{\code{D-TL-09}}\td{\code{D-TL-20}}\td{\code{06-tooling.md}}}
+    \tr{\td{\code{D-TL-10}}\td{\code{D-TL-21}}\td{\code{06-tooling.md}}}
+    \tr{\td{\code{D-TL-11}}\td{\code{D-TL-22}}\td{\code{06-tooling.md}}}
+    \tr{\td{\code{D-WF-01}}\td{\code{D-WF-08}}\td{\code{07-forest-workflow.md}}}
+    \tr{\td{\code{D-WF-02}}\td{\code{D-WF-09}}\td{\code{07-forest-workflow.md}}}
+    \tr{\td{\code{D-WF-03}}\td{\code{D-WF-10}}\td{\code{07-forest-workflow.md}}}
+    \tr{\td{\code{D-WF-04}}\td{\code{D-WF-11}}\td{\code{07-forest-workflow.md}}}
+    \tr{\td{\code{D-WF-05}}\td{\code{D-WF-12}}\td{\code{07-forest-workflow.md}}}
+    \tr{\td{\code{D-WF-06}}\td{\code{D-WF-13}}\td{\code{07-forest-workflow.md}}}
+    \tr{\td{\code{D-WF-07}}\td{\code{D-WF-14}}\td{\code{07-forest-workflow.md}}}
+  }
+}
+\subtree{
+  \title{Checks performed on the document revision}
+  \p{The archive verification record is generated during delivery. It checks that the original snapshot matches the supplied archive, current decision references resolve, all changed decisions have a supersession entry, decision records contain their required fields, retired acceptance targets are explicit, and the packaged archive round-trips without changes. These checks establish document integrity and traceability. They do not discharge the proposed Lean acceptance tests or prove that the candidate root works.}
+}

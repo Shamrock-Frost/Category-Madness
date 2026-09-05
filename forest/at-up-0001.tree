@@ -1,13 +1,14 @@
-\title{AT-UP-1 · for discrete \code{C}, \code{IsTerminal} is the classical definition and the uniqueness theorem…}
+\title{AT-UP-1 · for discrete \\code{C}, \\code{IsTerminal} is the classical definition and the…}
 \taxon{Acceptance test}
 \meta{id}{AT-UP-1}
 \meta{area}{universal properties}
 \meta{origin}{design/03-universal-properties.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:up}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{for discrete \code{C}, \code{IsTerminal} is the classical definition and the uniqueness theorem is unique-up-to-unique-iso}
-\p{Named by: \ref{dec-up-0001}, \ref{dec-up-0008}.}
+\p{, \ref{at-up-0006}}
+\p{Named by: \ref{dec-ch-0015}, \ref{dec-tl-0015}, \ref{dec-up-0010}, \ref{dec-up-0015}, \ref{dec-up-0017}.}
 \p{\em{Lean declaration(s):} none yet.}

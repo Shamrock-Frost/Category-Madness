@@ -3,13 +3,13 @@
 \meta{id}{D-SP-09}
 \meta{area}{spaces and enrichment}
 \meta{origin}{design/05-spaces-enrichment.md}
-\meta{status}{frozen}
+\meta{status}{superseded}
 \meta{status-text}{frozen at M7 (definition), \code{later} (\code{E_n} for finite \code{n ≥ 3}).}
 \meta{supersedes}{none}
-\meta{superseded-by}{none}
+\meta{superseded-by}{dec-sp-0018}
 \tag{decision}
 \tag{area:sp}
-\tag{status:frozen}
+\tag{status:superseded}
 
 \subtree{
   \title{Decision}

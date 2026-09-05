@@ -1,0 +1,13 @@
+\title{AT-KR-3 · Explicit presentations of Δ, Ω_p, Θ^aug_fc as tree/path categories}
+\taxon{Acceptance test}
+\meta{id}{AT-KR-3}
+\meta{area}{kernel}
+\meta{origin}{design/01-kernel.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:kr}
+\tag{status:unstated}
+
+\p{Explicit presentations of Δ, Ω_p, Θ^aug_fc as tree/path categories.}
+\p{Named by: \ref{dec-kr-0003}, \ref{dec-kr-0006}, \ref{dec-tl-0007}.}
+\p{\em{Lean declaration(s):} none yet.}

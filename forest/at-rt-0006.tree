@@ -1,13 +1,14 @@
-\title{AT-RT-6 · \code{Map} independent of the replacement}
+\title{AT-RT-6 · \\code{Map} independent of the replacement}
 \taxon{Acceptance test}
 \meta{id}{AT-RT-6}
 \meta{area}{root}
 \meta{origin}{design/02-root.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:rt}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{\code{Map} independent of the replacement; discrete case.}
-\p{Named by: \ref{dec-rt-0008}.}
+\p{now concerns only \code{MapRel}: independence up to weak equivalence and strict maps for discrete targets. \ref{at-fd-0004} requires \code{MapCat(1,I)} contractible and \code{MapCat(1,BG) ≃ BG}. No acceptance test identifies these two APIs}
+\p{Named by: \ref{dec-rt-0023}.}
 \p{\em{Lean declaration(s):} none yet.}

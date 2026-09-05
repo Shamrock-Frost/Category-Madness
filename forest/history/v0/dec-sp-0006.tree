@@ -1,0 +1,25 @@
+\title{D-SP-06 · ∞-operads via \code{Ω}}
+\taxon{Decision}
+\meta{id}{D-SP-06}
+\meta{area}{spaces and enrichment}
+\meta{origin}{design/05-spaces-enrichment.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen at M6.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:sp}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{A planar ∞-operad is a Segal presheaf \code{Ω_pᵒᵖ → sSet} with Kan values and the Segal condition (the planar version of Cisinski–Moerdijk's dendroidal Segal spaces); a symmetric ∞-operad is the same on \code{Ω} with the Segal condition and the generalized Reedy conventions of → \ref{dec-kr-0005}. Labelled variants over a set of colours.}
+}
+\subtree{
+  \title{Theorem targets}
+  \p{\ref{at-sp-0006}: the discrete cases are planar/symmetric coloured operads (nerve theorems, instances of \ref{at-kr-0002}); \ref{at-sp-0007}: a planar coloured ∞-operad with colour set \code{A} is a monad in the VDC∞ of \code{Ω_p}-shaped multimatrices over \code{Kan} \strong{(verify: this is the multicategory analogue of \ref{dec-sp-0004})}. The symmetric case is first-class through → \ref{dec-sp-0009}, and the Segal-\code{Ω} form is its comparison target.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen at \ref{ms-0006}.}
+}

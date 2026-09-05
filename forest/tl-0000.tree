@@ -1,18 +1,18 @@
-\title{06 · Tooling}
+\title{06 · Tooling — revision 1}
 \taxon{Chapter}
 \meta{origin}{design/06-tooling.md}
 \meta{layer}{human}
 \tag{chapter}
 
-
-\transclude{dec-tl-0001}
-\transclude{dec-tl-0002}
-\transclude{dec-tl-0003}
-\transclude{dec-tl-0004}
-\transclude{dec-tl-0005}
-\transclude{dec-tl-0009}
-\transclude{dec-tl-0010}
-\transclude{dec-tl-0011}
-\transclude{dec-tl-0006}
-\transclude{dec-tl-0007}
-\transclude{dec-tl-0008}
+\p{Tooling is staged around validated mathematics. \ref{ms-0000} provides inventory and a minimal registry. \ref{ms-foundation} provides a real seal prototype. Broader generators and retrieval follow once there is a meaningful environment to index.}
+\transclude{dec-tl-0012}
+\transclude{dec-tl-0013}
+\transclude{dec-tl-0014}
+\transclude{dec-tl-0015}
+\transclude{dec-tl-0016}
+\transclude{dec-tl-0020}
+\transclude{dec-tl-0021}
+\transclude{dec-tl-0022}
+\transclude{dec-tl-0017}
+\transclude{dec-tl-0018}
+\transclude{dec-tl-0019}

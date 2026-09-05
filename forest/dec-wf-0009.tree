@@ -1,0 +1,33 @@
+\title{D-WF-09 · Decision registry and supersession}
+\taxon{Decision}
+\meta{id}{D-WF-09}
+\meta{area}{forest and workflow}
+\meta{origin}{design/07-forest-workflow.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen policy; current provisional choices remain amendable by recorded decisions.}
+\meta{supersedes}{dec-wf-0002}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:wf}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Each decision has a stable ID, decision/rationale/rejected text, tests, status, affected declarations, and supersession links. Revision 1 gives changed historical decisions new IDs; \code{12-revision-notes.md} is the crosswalk and \code{history/v0/} contains the exact old text. Current references resolve to current IDs; references to history are explicitly marked historical. Future changes to a frozen decision also receive a new ID. A human-authorized design revision may supersede frozen choices; permission is not requested again for the already authorized revision.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Preserve why choices changed without letting old claims govern new proofs.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Reusing a frozen ID for a changed mathematical statement or deleting its rationale.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{Revision crosswalk validation and \ref{ms-0000}/\ref{ms-foundation} registry audit.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen policy; current provisional choices remain amendable by recorded decisions.}
+}

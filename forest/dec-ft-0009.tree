@@ -1,0 +1,33 @@
+\title{D-FT-09 · Optional homotopy-level proof routes}
+\taxon{Decision}
+\meta{id}{D-FT-09}
+\meta{area}{formal theory}
+\meta{origin}{design/04-formal-theory.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen restriction on the proof route; constructions later as justified.}
+\meta{supersedes}{dec-ft-0004}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:ft}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Prove discrete instances early. A nondiscrete proof may use a homotopy 2-category or a module equipment only after a comparison witness is built for that specific ambient. It specifies retained 1-cells, cell components, composition, transport, and the properties reflected by the comparison. Taking the homotopy category of each proved hom ∞-category retains its objects; it is not quotienting all boundary arrows by components. A bicategorical intermediate is acceptable. There is no general export called \code{hP} and no theorem that all universal properties reflect through an arbitrary truncation. Where no comparison exists, prove the result coherently in the root interface.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Boundary monodromy invalidates the former shortcut.}
+}
+\subtree{
+  \title{Rejected}
+  \p{The original schedule “every result in hP first, then lift.”}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-fd-0006}; \ref{at-ft-0008} is retired in its unconditional form. Each concrete homotopy-equipment comparison receives a new test ID and explicit scope.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen restriction on the proof route; constructions later as justified.}
+}

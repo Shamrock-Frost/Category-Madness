@@ -1,0 +1,39 @@
+\title{D-WF-11 · Work loop}
+\taxon{Decision}
+\meta{id}{D-WF-11}
+\meta{area}{forest and workflow}
+\meta{origin}{design/07-forest-workflow.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen policy.}
+\meta{supersedes}{dec-wf-0004}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:wf}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \ol{
+    \li{\ref{ms-0000} records definitions as candidates and tests as proposed. \ref{ms-foundation} states and proves the critical tests, with foundational prerequisites pulled forward as needed.}
+    \li{Failed tests return a concrete counterexample or missing hypothesis. Revise the candidate and all dependent claims before assigning more downstream proof work.}
+    \li{Only freeze a mathematical interface after its mandatory gates pass. Agents then work on stated tests in dependency order; broad automation does not precede the definition-level feasibility checks.}
+    \li{PRs cite active decisions, preserve the complete specification, pass both builds and the axiom audit on the same candidate, and update acceptance/dependency records.}
+    \li{Nightly jobs may rebuild documentation and run extra benchmarks, but cannot be the first kernel-backed validation of a merged foundational change.}
+  }
+}
+\subtree{
+  \title{Rationale}
+  \p{The early task is research and falsification, followed by scalable proof work.}
+}
+\subtree{
+  \title{Rejected}
+  \p{A frozen false statement with unrestricted agents assigned to prove it.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-fd-0011} and the \ref{ms-0003} merge gates.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen policy.}
+}

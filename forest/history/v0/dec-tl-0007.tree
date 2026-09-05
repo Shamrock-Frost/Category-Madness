@@ -1,0 +1,21 @@
+\title{D-TL-07 · Performance rules}
+\taxon{Decision}
+\meta{id}{D-TL-07}
+\meta{area}{tooling}
+\meta{origin}{design/06-tooling.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:tl}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{Sealed constants are \code{opaque} or \code{irreducible} (→ \ref{dec-rt-0013}), so elaboration never unfolds them; instance search depth is capped and every class in the interface is a \code{Prop}-class or a \code{structure} carried explicitly; \code{Space} data is never pattern- matched in \code{Theory/}; large presheaf constructions in the kernel are \code{irreducible} with \code{simp} equations; \code{Fin}-combinatorics stays in the kernel behind \ref{at-kr-0003} presentations. Benchmarks are forest nodes updated in CI.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional.}
+}

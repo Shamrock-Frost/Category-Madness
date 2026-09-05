@@ -1,0 +1,37 @@
+\title{D-RT-09 · Walking structures and \code{Mod}}
+\taxon{Decision}
+\meta{id}{D-RT-09}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen at M3.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:rt}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Set-level (kernel) augmented VDCs embed as discrete VDC∞s (→ \ref{dec-rt-0011}), and in particular the \em{walking} structures do: the walking monad \code{Mnd} (one object, one horizontal endomorphism, nullary unit cell, binary multiplication cell, laws), the walking monad morphism, the walking bimodule, the walking bimodule cell of each arity, and in general the walking θ-diagram \code{W_θ} of monads, monad morphisms, bimodules and cells for each shape \code{θ} of \code{Θ_fc} (labelled by the monads at its object positions).}
+  \ul{
+    \li{A \strong{monad} in \code{P} at \code{x} is a point of \code{Map(N Mnd, P)} over \code{x}.}
+    \li{\code{Mod(P)} is the presheaf \code{θ ↦ Map(N W_θ, P)} on \code{Θ_{fc, Monads(P)}}, where \code{Monads(P)} is the set of monads of \code{P}.}
+  }
+}
+\subtree{
+  \title{Theorem targets}
+  \p{\code{Mod(P)} is a VDC∞ (\ref{at-rt-0007}); \code{Mod} preserves augmented virtual equipments (\ref{at-ft-0003}, the ∞-analogue of Cruttwell–Shulman).}
+}
+\subtree{
+  \title{Rationale}
+  \p{The virtual setting means \code{Mod(P)} needs no coends: bimodules and their cells are maps out of labelled shapes. Composites of bimodules, when they exist, are a theorem, not structure.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Defining monads/bimodules by explicit coherence data. That is what \code{Map(N W, RP)} packages, and packaging it by hand is exactly the coherence bookkeeping the design exists to avoid.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen at \ref{ms-0003}.}
+}

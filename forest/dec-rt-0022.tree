@@ -1,0 +1,33 @@
+\title{D-RT-22 · Reedy replacement}
+\taxon{Decision}
+\meta{id}{D-RT-22}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional until the chosen diagram model is validated.}
+\meta{supersedes}{dec-rt-0007}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:rt}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{\code{ReedyFibrant P} is an explicit property for the proved shape model. A chosen functorial \code{R_rd} must preserve reduced object labels and yield a \code{LevelEq} \code{P → R_rd P}, with the corresponding boundary and Segal conditions. Its existence is \ref{at-kr-0011}. If the chosen shapes do not make all sources cofibrant, relative mapping constructions also specify a cofibrant source replacement. Any categorical replacement is named separately. Standard objects have only the fibrancy certificates actually proved.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Relative mapping invariance uses a specified weak equivalence class.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Claiming Reedy replacement alone implements categorical localization.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-kr-0011}, \ref{at-fd-0003}, \ref{at-fd-0008}.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional until the chosen diagram model is validated.}
+}

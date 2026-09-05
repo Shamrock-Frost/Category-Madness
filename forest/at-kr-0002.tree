@@ -3,11 +3,12 @@
 \meta{id}{AT-KR-2}
 \meta{area}{kernel}
 \meta{origin}{design/01-kernel.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:kr}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{BMW nerve theorem, general form.}
-\p{Named by: \ref{dec-kr-0003}, \ref{dec-kr-0006}, \ref{dec-sp-0006}.}
+\p{Current proposed scope is specified by the active decisions that name this test.}
+\p{Named by: \ref{dec-kr-0015}.}
 \p{\em{Lean declaration(s):} none yet.}

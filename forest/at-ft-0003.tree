@@ -1,13 +1,14 @@
-\title{AT-FT-3 · \code{Mod} preserves augmented virtual (∞-)equipments}
+\title{AT-FT-3 · \\code{Mod} preserves augmented virtual (∞-)equipments}
 \taxon{Acceptance test}
 \meta{id}{AT-FT-3}
 \meta{area}{formal theory}
 \meta{origin}{design/04-formal-theory.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:ft}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{\code{Mod} preserves augmented virtual (∞-)equipments.}
-\p{Named by: \ref{dec-rt-0009}.}
+\p{the precisely stated hypotheses under which \code{Mod} preserves restrictions and supplies units. Its ∞-version is a theorem target, not automatic}
+\p{Named by: \ref{dec-ft-0006}, \ref{dec-rt-0024}.}
 \p{\em{Lean declaration(s):} none yet.}

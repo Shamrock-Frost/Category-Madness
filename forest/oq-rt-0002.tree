@@ -8,5 +8,5 @@
 \tag{area:rt}
 \tag{status:open}
 
-\p{Should \code{Monads(P)} (the label set of \code{Mod(P)}) be the set of \em{points} of \code{Map(N Mnd, RP)} (depends on \code{R}) or the set of strict maps \code{N Mnd → P} (may be too small for non-fibrant \code{P})? Default: points of \code{Map(N Mnd, RP)} for a chosen \code{R}, with the theorem that different choices give DK-equivalent \code{Mod(P)}.}
+\p{which coherent walking-diagram construction proves all of \code{Mod}'s structure and invariance laws? Its relative-fibre semantics is fixed, but the proof route is open. -}
 \p{\em{Resolution:} open. Decided by the human; record the answer as a decision node that this node then cites.}

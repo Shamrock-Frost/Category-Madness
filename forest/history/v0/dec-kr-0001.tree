@@ -1,0 +1,25 @@
+\title{D-KR-01 · What the kernel may contain}
+\taxon{Decision}
+\meta{id}{D-KR-01}
+\meta{area}{kernel}
+\meta{origin}{design/01-kernel.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:kr}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Anything convenient, including a set-level definition of (augmented) virtual double categories and of free ones. These exist \em{only} to construct shape categories and to state the self-hosting theorem; they are not the library's notion of VDC, which is the discrete case of the root (→ \ref{dec-rt-0011}). Kernel files are marked \code{-- KERNEL} and live under \code{Kernel/}.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Weber's construction of shape categories needs the algebras whose free objects the shapes are (→ \ref{dec-kr-0003}). Refusing to write set-level VDCs in the kernel would force an ad hoc tree combinatorics as the \em{definition} of \code{Θ_fc} and make the nerve theorem a correctness gamble instead of an instance of a general theorem.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen.}
+}

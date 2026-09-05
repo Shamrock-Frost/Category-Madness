@@ -1,0 +1,17 @@
+\title{AT-FD-8 · Relative walking constructions and a nondiscrete instance}
+\taxon{Acceptance test}
+\meta{id}{AT-FD-8}
+\meta{area}{foundation feasibility}
+\meta{origin}{design/11-foundation-feasibility.md}
+\meta{status}{proposed}
+\meta{statement-version}{1}
+\tag{acceptance-test}
+\tag{area:fd}
+\tag{status:proposed}
+
+\p{Construct the functorial inclusions \code{B_θ → N W_θ}, fixing entire vertex monads. Prove that the point fibre is a point, and compute vertical-arrow, bimodule, and binary-cell values with all selected structures fixed. Establish the fibrancy or functorial homotopy-fibre mechanism used, Segal comparisons, units, and required composition maps. Prove the needed invariance under \code{LevelEq} and the chosen \code{VDCEq} separately.}
+\p{Use a small matrix-like ambient of explicit spaces including a two-point space and its swap automorphism. Its horizontal classifier must retain that loop and its cells must recover the actual map spaces over chosen boundaries. Specify a collection closed under the operations the example uses; do not assume a finite arbitrary collection is closed. Build a nontrivial monad, module, and cell in it, then exercise \code{Mod} and categorical vertical extraction. This can precede a classifier of \em{all} small spaces and \code{HasColimits Kan}.}
+\p{As a separate slice precursor, fix the whole cone at each vertex and calculate its point and edge fibres; the full slice construction remains \ref{at-up-0003} at \ref{ms-0004}.}
+\p{\strong{Depends on:} \ref{at-fd-0001}, the core parts of \ref{at-fd-0003}/5/7, and the framing portion of \ref{at-fd-0004}. \strong{Evidence:} exact constructions and proofs for this end-to-end instance; the final \ref{at-fd-0004} root check then uses this result. \strong{Failure response:} revise walking diagrams or the root, not just add more pointwise choices.}
+\p{Named by: \ref{dec-ch-0018}, \ref{dec-ch-0026}, \ref{dec-kr-0017}, \ref{dec-kr-0022}, \ref{dec-kr-0023}, \ref{dec-rt-0016}, \ref{dec-rt-0018}, \ref{dec-rt-0022}, \ref{dec-rt-0024}, \ref{dec-sp-0010}, \ref{dec-sp-0011}, \ref{dec-sp-0012}, \ref{dec-sp-0013}, \ref{dec-up-0012}.}
+\p{\em{Lean declaration(s):} none yet.}

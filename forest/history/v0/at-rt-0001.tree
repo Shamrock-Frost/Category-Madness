@@ -1,0 +1,13 @@
+\title{AT-RT-1 · Self-hosting theorem}
+\taxon{Acceptance test}
+\meta{id}{AT-RT-1}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:rt}
+\tag{status:unstated}
+
+\p{Self-hosting theorem.}
+\p{Named by: \ref{dec-ch-0008}, \ref{dec-rt-0001}, \ref{dec-rt-0011}.}
+\p{\em{Lean declaration(s):} none yet.}

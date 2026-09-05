@@ -1,0 +1,29 @@
+\title{D-CH-08 · Three stages}
+\taxon{Decision}
+\meta{id}{D-CH-08}
+\meta{area}{charter}
+\meta{origin}{design/00-charter.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:ch}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \ul{
+    \li{\strong{Kernel} (stage 0, directory \code{Kernel/}): shape categories, presheaves, simplicial sets, Kan machinery, set-level virtual double categories used only to construct shapes. Built on Mathlib's \code{CategoryTheory} and \code{AlgebraicTopology}. Defeq allowed. Nothing exported.}
+    \li{\strong{Root} (stage 1, \code{Root/}): the VDC∞ definition and its immediate constructions, built on the kernel; the discrete embedding and the self-hosting theorem (→ \ref{at-rt-0001}). Also hidden. Its public face is \code{Interface/}.}
+    \li{\strong{Theory} (stage 2, \code{Theory/}): everything else, in interface terms only.}
+  }
+}
+\subtree{
+  \title{Rationale}
+  \p{Compiler bootstrap pattern. The kernel is never rewritten in place, only hidden; a self-hosted replacement is a separate kernel that must pass the same swap test (→ \ref{dec-ch-0012}).}
+}
+\subtree{
+  \title{Status}
+  \p{frozen.}
+}

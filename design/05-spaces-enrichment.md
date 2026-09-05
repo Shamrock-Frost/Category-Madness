@@ -1,214 +1,175 @@
-# 05 · Spaces and enrichment (stage 2, M6)
+# 05 · Spaces and enrichment — revision 1
 
-Post-seal homotopy theory: the ∞-category of spaces, `Mat(Kan)`, ∞-categories as
-monads in it, Segal spaces via `Span(Kan)`, ∞-operads via `Ω`, and the comparison
-milestones. Only the interface `Space` API (→ D-RT-13) and the root are used.
+A small nondiscrete matrix example is required at M-F. The full universe of spaces,
+all needed limits/colimits, and general enrichment are M6 work. These are comparison
+and construction targets, not results established by revising the prose.
 
-### D-SP-01 · The universe
-**Decision.** `U.{v}` is the Kan complex of small Kan fibrations (Kapulkin–Lumsdaine–
-Voevodsky; Cisinski's construction): `U_n` is the set of small Kan fibrations over
-`Δ[n]` with a set-theoretic normalization making it a set, and the universal small Kan
-fibration `Ũ → U`. Theorem: `U` is a Kan complex. Consequence: `U^{Δ[1]} → U × U` and
-the higher `U^{Δ[n]} → U^{∂Δ[n]}` are Kan fibrations (exponential/pushout-product,
-→ D-KR-10). Univalence is optional and out of scope until needed.
-**Rationale.** The universe is the space of objects of `Kan` and the source of the
-boundary fibrancy of `Mat(Kan)` (→ D-RT-01 (2)). It replaces the homotopy coherent nerve
-on the critical path.
-**Acceptance.** AT-SP-1: `U` is a Kan complex (proof strategy chosen at M6: Cisinski's
-argument or Sattler's equivalence extension property; minimal fibrations are the
-fallback).
-**Status.** frozen at M6.
+### D-SP-10 · A classifier and its universal family
+**Decision.** A proposed `U.{v}` classifies small Kan complexes with a universal family
+`Ũ → U`; its simplex sets occupy a larger universe than its small fibres. Give a
+normalization/size construction and prove its Kan and classification properties.
+If paths in U are used to encode equivalences of represented spaces, prove the exact
+path-to-equivalence comparison required; it is not supplied by Kan fibrancy alone.
+Path spaces of U represent equivalences under that comparison, not arbitrary maps.
+The family of maps between fibres is built separately from the universal family and
+must have the required boundary fibration theorem.
+**Rationale.** A classifier is useful but not needed to begin with a small explicit
+space-enriched example, and its paths must have the advertised meaning.
+**Rejected.** Inferring all matrix boundary fibrancy from `U^Δ[1] → U×U` alone;
+assuming a small collection of all small objects without a universe increase.
+**Acceptance.** AT-SP-1: classifier, universality, size, Kan properties, and the exact
+equivalence comparison used by Mat; AT-FD-1 for signatures, AT-FD-8 for a small model.
+**Status.** provisional construction route; full proof M6.
 
-### D-SP-02 · The Segal category `Kan`
-**Decision.** `Kan` is exported as a *fibrant* Segal category with object set the small
-Kan complexes, with the API: `Kan(K, L) ≃ L^K` (homotopy equivalence), composition
-agreeing with composition of maps up to homotopy, and the rectification theorem that
-the strict simplicial category (`Kan(K,L) = L^K`, strict composition) maps to it by a
-DK-equivalence. How the fibrant object is obtained is a kernel choice (OQ-SP-3): either
-the strict simplicial category followed by fibrant replacement, or a fibrant-by-
-construction model in the Rezk/Rasekh style (value at `([n]; K₀…K_n)` the Kan complex
-whose `m`-simplices are left fibrations over `Δ[n] × Δ[m]` that are Kan fibrations in
-the `Δ[m]` direction, with the prescribed vertex fibres), built from the universe
-(→ D-SP-01). Past the seal the difference is invisible. `S` (Cisinski's quasi-category
-of spaces) is a later comparison target (→ D-SP-08), not a prerequisite.
-**Rationale.** No coherent nerve, no necklaces. What Theory needs is fibrancy as a
-property plus rectification (→ D-CH-13), not a particular model.
-**Acceptance.** AT-SP-2: `Kan` is a monad in `Mat(Kan)` (i.e. an ∞-category in the
-library's sense), its homotopy category is the classical homotopy category of Kan
-complexes, and the strict simplicial category rectifies it.
-**Status.** frozen at M6.
+### D-SP-11 · The category of spaces
+**Decision.** Start with the strict simplicial category of small Kan complexes whose
+mapping objects are `L^K`. Construct its categorical Segal/complete presentation using
+the proved framing/comparison of D-RT-23. Export `Kan` with maps equivalent to `L^K`,
+compatible composition, and the actual fibrancy certificates. A second universe-family
+implementation may be compared later. Distinguish Reedy replacement of a presentation
+from categorical completion. Identify this bootstrap `Kan` with the root monad form
+through AT-SP-2/3, rather than defining it circularly using itself.
+**Rationale.** This gives a named construction route and a separately proved self-hosting bridge.
+**Rejected.** Declaring a Kan object classifier already to be the category of spaces;
+using paths between its points as all maps.
+**Acceptance.** AT-SP-2: the root representation and classical homotopy category;
+AT-FD-4 and AT-FD-8 for the early categorical comparison.
+**Status.** provisional; small test early, full category M6.
 
-### D-SP-03 · Enrichment over cartesian `V`
-**Decision.** Before general monoidal enrichment, only *cartesian* value categories
-are supported: `V = Set` (discrete) and `V = Kan`. Cells in `Mat(V)` are families of
-maps out of products. General E1-monoidal `V` is → D-SP-07.
-**Status.** frozen.
+### D-SP-12 · Initial enrichment scope
+**Decision.** Start with cartesian Set and Kan; matrix multicells use products and maps.
+General monoidal enrichment is later. Theories are exported only with universe bounds,
+existence hypotheses, and the appropriate comparison proofs.
+**Rationale.** The matrix examples test the central reuse claim with limited extra structure.
+**Rejected.** Requiring every monoidal base before testing the root.
+**Acceptance.** AT-RT-2, AT-FD-8, AT-RT-8.
+**Status.** frozen initial scope.
 
-### D-SP-04 · `Mat(Kan)` and ∞-categories
-**Decision.** `Mat(Kan.{v})` is the VDC∞ with label set `Type v`, vertical morphisms
-functions, horizontal morphisms `A ⇸ B` the space `∏_{A×B} U` of families of small Kan
-complexes, and cells `(M₁,…,M_n) ⇒ N` over `(f,g)` the spaces of families of maps
-`M₁(a₀,a₁) × ⋯ × M_n(a_{n−1},a_n) → N(f a₀, g a_n)`, built from the universal fibration
-so that boundary maps are Kan fibrations; nullary-target cells as in → D-RT-10 (verify).
-`Mat(Kan)` is exported *fibrant* (→ D-RT-07, D-CH-13) with the same two options as
-D-SP-02 for how (OQ-SP-3), and with its elementary values characterized up to homotopy
-equivalence (`Mat(Kan)(h(A,B)) ≃ ∏_{A×B} U`, cell spaces ≃ products of mapping spaces).
-`InfCategory A := Monad (Mat Kan) A` for a set `A`; `Cat_∞ := Mod(Mat Kan)`.
-**Theorem targets.** `Mat(Kan)` is a VDC∞ and fibrant (AT-RT-8). Monads in `Mat(Kan)`
-at `A` are exactly Segal categories with object set `A` (AT-SP-3, the Gepner–Haugseng
-categorical algebra statement in Segal-category form); since `Mat(Kan)` is fibrant,
-this is an equivalence between strict maps `N Mnd → Mat(Kan)` at `A` and labelled Segal
-presheaves on `Δ_A` up to DK-equivalence, and either side may be used as the working
-form of "∞-category with object set `A`". Rectification (Dwyer–Kan, Bergner): strict
-simplicial categories with object set `A` present every such Segal category
-(AT-SP-8). `Vert(Cat_∞)` is the ∞-category of ∞-categories, functors, and natural
-equivalences; natural transformations are cells (→ D-UP-09).
-**Rationale.** → D-CH-04: ∞-categories are not defined; they are monads in one VDC∞.
-The rectification theorem is what lets anyone write one down.
-**Status.** frozen at M6.
+### D-SP-13 · `Mat(Kan)` and categorical algebras
+**Decision.** For labels all `A : Type u` and small entries at level v, construct a
+matrix root with vertical arrows functions and horizontal space at `(A,B)` modeled by
+families `A×B → U.{v}`. Its collection universes follow D-RT-27. A fibre of a cell
+boundary map is the space of families of maps from the product of input fibres to
+the output fibre. Empty targets use the equality matrix as in the discrete test.
+Build this as one coherent presheaf with the corrected augmented arities; prove the
+boundary fibration, Segal, and required replacement results. Elementary-value formulas
+are comparisons, not a substitute for presheaf functoriality.
+`InfCategory A := Monad (Mat Kan) A`, and `Cat_∞ := Mod(Mat Kan)`, after the coherent
+construction is proved. AT-SP-3 identifies this with the bootstrap Segal-category
+presentation on object set A. `VertCore(Cat_∞)` is the intended (∞,1)-category of
+∞-categories, functors, and natural equivalences; `Vert₂` retains transformations.
+`VertRaw` is not used as that categorical ambient.
+**Rationale.** Correct relative monads and categorical extraction are both necessary.
+**Rejected.** Recovering natural equivalences between different object functions by
+ordinary fixed-label simplicial homotopy alone.
+**Acceptance.** AT-RT-8; AT-SP-3; AT-FD-8's small end-to-end example. AT-SP-8 is the
+specified rigidification theorem to an equivalent strict simplicial category, allowing
+the model to change. Any surjectivity theorem for strict maps into a fixed target is
+separate and is not promised generally.
+**Status.** provisional research construction; M6 full proof after M-F feasibility.
 
-### D-SP-05 · `Span(S)` and Segal spaces
-**Decision.** For a Segal category `S` with finite limits (→ D-UP-04), `Span(S)` is
-defined by shapes, not by choices: the kernel provides for each `θ ∈ Θ_fc` the
-twisted-arrow-type shape `Tw(θ)` in which every composable configuration of spans has
-its pullback squares as *objects*, and `Span(S)(θ)` is the sub-space of `Map(N Tw(θ), S)`
-on diagrams whose designated squares are pullbacks (a property, so functoriality in `θ`
-is restriction). This is Barwick's and Haugseng's construction of iterated spans; that
-`Span(S)` satisfies the Segal condition is their theorem, transposed (AT-SP-4).
-Vertical morphisms are `S(a,b)`, horizontal morphisms spans, cells maps out of the
-pullbacks recorded in the diagram. `Mod(Span Kan)` has as monads the Segal spaces
-(category objects in spaces, Rezk).
-**Rejected.** Choosing pullbacks per shape with `Classical.choose`: choices are not
-compatible under shape maps, so no presheaf results. (Choosing a *section* per D-UP-06
-would work for a single shape but not across the shape category.)
-**Theorem target.** AT-SP-4: `Span(S)` is a VDC∞, fibrant when `S` is; AT-SP-5
-(comparison, Bergner): `Mod(Mat Kan)` and `Mod(Span Kan)` are DK-equivalent VDC∞s —
-families versus spans at the ∞ level.
-**Rationale.** Spans return exactly where objects stop being a set. The comparison is
-the library's version of "Segal categories ≃ Segal spaces".
-**Status.** frozen at M6 (AT-SP-5 is a milestone, not a prerequisite).
+### D-SP-14 · Spans and category objects in spaces
+**Decision.** For S with specified finite-limit existence, construct `Span(S)` from a
+functorial twisted-arrow-type diagram recipe with designated pullback conditions.
+State the variance of `Tw`, label objects and whole boundary spans explicitly, and
+prove preservation of designated squares under each shape map. Values are relative
+diagram spaces over their labelled data, not unrestricted spaces of all diagrams.
+If direct restrictions do not preserve the condition, supply the necessary Kan
+extension construction with coherence. Prove fibrancy where needed and invariance
+under the chosen categorical equivalences. Category objects in spaces arise as monads;
+their complete presentation is a further construction.
+**Rationale.** The span construction is a plausible shape-based approach, but its
+virtual/augmented version needs an actual construction and proof.
+**Rejected.** Arbitrary pullback choices at individual shapes; direct identification of
+all Segal spaces with complete Segal spaces; inheriting a VDC comparison solely from
+a comparison of categories of category objects.
+**Acceptance.** AT-SP-4: span root and its cell/boundary formulas. AT-SP-5 is split into
+(a) the known-model categorical comparison after appropriate localization and
+(b) a full augmented-VDC equivalence with modules and cells, which is a stronger,
+separately proved target.
+**Status.** provisional; construct at M5/M6, full comparison later if necessary.
 
-### D-SP-06 · ∞-operads via `Ω`
-**Decision.** A planar ∞-operad is a Segal presheaf `Ω_pᵒᵖ → sSet` with Kan values and
-the Segal condition (the planar version of Cisinski–Moerdijk's dendroidal Segal spaces);
-a symmetric ∞-operad is the same on `Ω` with the Segal condition and the generalized
-Reedy conventions of → D-KR-05. Labelled variants over a set of colours.
-**Theorem targets.** AT-SP-6: the discrete cases are planar/symmetric coloured operads
-(nerve theorems, instances of AT-KR-2); AT-SP-7: a planar coloured ∞-operad with colour
-set `A` is a monad in the VDC∞ of `Ω_p`-shaped multimatrices over `Kan` **(verify: this
-is the multicategory analogue of D-SP-04)**. The symmetric case is first-class through
-→ D-SP-09, and the Segal-`Ω` form is its comparison target.
-**Status.** frozen at M6.
+### D-SP-15 · Operadic nerve comparisons
+**Decision.** Planar and symmetric Segal-operadic presentations are comparison models
+in Root/ until connected to the root algebra construction. Specify reduced colour
+values or the required completeness/localization, homotopy Segal limits, and the
+actual equivariant/cofibrancy conventions for Ω. Their discrete nerves recover the
+ordinary operads. These are not imposed as a second permanent public definition.
+**Rationale.** A meaningful comparison includes morphisms and equivalences as well as objects.
+**Rejected.** Unqualified strict Segal limits for arbitrary space-valued Ω-presheaves.
+**Acceptance.** AT-SP-6 for discrete nerves; AT-SP-7 for planar root algebras;
+AT-SP-10 for the full symmetric comparison when proved.
+**Status.** later than M-F; staged with the relevant operad construction.
 
-### D-SP-09 · Symmetry via monads on the ambient: the horizontal Kleisli construction
-**Decision.** Symmetry is never baked into the root shapes. It enters, as in
-Cruttwell–Shulman, as a *monad on the ambient equipment*. For a strict monad `T` on a
-VDC∞ `X` (a map `T : X → X` with unit and multiplication satisfying the laws on the
-nose), the **horizontal Kleisli** VDC∞ `H-Kl(T, X)` has the objects and vertical
-morphisms of `X`, horizontal morphisms `A ⇸ B` the `X`-horizontals `A ⇸ TB`, and cells
-with inputs `(M₁,…,Mₙ)` and target `N` the `X`-cells `(M₁, TM₂, T²M₃, …, Tⁿ⁻¹Mₙ) ⇒ N`
-over the vertical boundary obtained by collapsing with the multiplication. `T`-monoids
-in `X` are monads in `H-Kl(T, X)`, and `Mod(H-Kl(T, X))` is Cruttwell–Shulman's
-`KMod(T, X)`: the equipment of `T`-monoids, their functors, and their bimodules.
-The monads used are strict and explicit on `Mat(Kan)`: `T_ℕ` (free monoidal
-category: finite sequences), `T_𝔹` (free braided monoidal category), `T_Σ` (free
-symmetric monoidal category: finite families with bijections), and more generally
-`T_G` for an action operad `G` (Zhang, Gurski). Then, with a set of colours as labels:
-- planar coloured ∞-operads are monads in `H-Kl(T_ℕ, Mat Kan)`,
-- braided ones are monads in `H-Kl(T_𝔹, Mat Kan)`,
-- symmetric ones are monads in `H-Kl(T_Σ, Mat Kan)`,
-and Lawvere theories, PROPs, and other generalized multicategories are the same
-construction with other `T`. The formal theory of → 04 applies to each `KMod(T, X)`
-with no new definitions.
-Symmetric sequences are the one-object corollary: `Mat(Kan)(1, T_Σ 1)` is families
-over finite sets and bijections, and Kleisli composition is the composition product;
-likewise braided and non-symmetric sequences. Construction of the composition product,
-and of the Kleisli VDC∞ in general, needs colimits in `Kan` (→ D-SP-08).
-`E_1`, `E_2`, `E_∞` are the *contractible* single-coloured monads in the three Kleisli
-VDC∞s (Fiedorowicz for the braided case: braided operads with contractible components
-and free `Bₙ`-actions present `E_2`; equivalently the symmetric operad in groupoids
-with `n`-th groupoid having objects `Σₙ` and morphisms braids, whose realizations are
-ordered configuration spaces of the plane). `E_n` for `3 ≤ n < ∞` has no action-operad
-model — configuration spaces of `ℝⁿ` are simply connected but not aspherical
-(`Conf₂(ℝ³) ≃ S²`) — and is a specific monad in `H-Kl(T_Σ, Mat Kan)` given by a
-combinatorial symmetric operad in finite posets: Berger's complete-graph operad `Kₙ`
-with `|Kₙ(k)| ≃ Conf_k(ℝⁿ)`, or Smith's filtration of the Barratt–Eccles operad.
-Algebras over a symmetric operad `P` in a cartesian `V` with colimits (`Kan`, `Cat_∞`)
-are algebras for the monad `A ↦ ⨆ₙ P(n) ×_{hΣₙ} Aⁿ`; symmetric monoidal ∞-categories
-are `E_∞`-algebras in `Cat_∞` in this sense.
-Shapes with symmetry reappear on the *nerve* side only: Ω is Weber's arity category for
-the free `T_Σ`-multicategory monad, so Segal presheaves on Ω (→ D-SP-06) are the nerves
-of monads in `H-Kl(T_Σ, Mat Kan)`, and the comparison is the nerve theorem at ∞.
-**Rejected.** A "symmetric Θ_fc". The inputs of a cell form a path ordered by
-composability, so permuting them does not typecheck except for endomorphisms of one
-object; and any automorphisms in the root shape category would make the root
-generalized Reedy (normal monomorphisms, `Aut`-equivariant fibrancy, elegance lost), a
-permanent tax on `Category` for a benefit only operads want.
-**Not viable, and why.** Presenting `E_n` (`n ≥ 2`) as *non-symmetric* operads (monads
-in `H-Kl(T_ℕ, −)`). The underlying non-symmetric operad of a symmetric operad `P` has
-algebras for the monad `⨆ P(n) × Aⁿ` instead of `⨆ P(n) ×_{hΣₙ} Aⁿ`; for `E_∞` this is
-`E_1`, and for `E_2` it is `E_1` together with pure-braid-group actions on iterated
-products — the braiding `a ⊗ b → b ⊗ a` is exactly the equivariance that was forgotten.
-Braided operads are not non-symmetric operads; they are `T_𝔹`-monoids.
-**Acceptance.** AT-SP-9: for `X = Mat(Set)`, `Mod(H-Kl(T_Σ, X))` is the classical
-equipment of coloured symmetric operads, functors, and bimodules, and `T`-monoids
-agree with the discrete case of D-SP-06; AT-SP-10 (comparison, Haugseng's *∞-operads
-via symmetric sequences*, and the nerve theorem at ∞): monads in `H-Kl(T_Σ, Mat Kan)`
-present Lurie's ∞-operads / dendroidal Segal spaces; AT-SP-11: the three contractible
-monads are `E_1`, `E_2`, `E_∞` (discrete cases: monoids, braided monoidal, symmetric
-monoidal categories as algebras in `Cat`); AT-SP-13: `H-Kl(T, X)` is a VDC∞, fibrant
-when `X` is, and `Mod(H-Kl(T, X))` is an augmented virtual ∞-equipment when `X` is
-(Cruttwell–Shulman's theorem, transposed; the conditions on `T` are part of the task).
-**Status.** frozen at M7 (definition), `later` (`E_n` for finite `n ≥ 3`).
+### D-SP-18 · Symmetry on a profunctor ambient
+**Decision.** The free list/monoid construction may begin on `Mat(V)`. For the free
+symmetric and braided monoidal category constructions use the profunctor ambient
+`Prof(V) := Mod(Mat V)` once its coherent construction has been established.
+For discrete colour categories A, `T_Σ A` is a category with finite lists as objects
+and permutations as morphisms; `T_𝔹 A` retains braids. These are not objects of the
+set-labelled matrix ambient merely by taking their sets of objects.
 
-### D-SP-07 · General E1 enrichment (later)
-**Decision.** An E1-monoidal Segal category is a Segal presheaf on Δ (unlabelled, one
-object) valued in Segal categories; `Mat(V)` for such `V` has cells as maps out of
-unbiased tensors; Gepner–Haugseng's comparison is the acceptance test.
-**Status.** later (M7).
+Implement the horizontal Kleisli construction with the variance conventions of the
+chosen profunctors stated explicitly. In the Cruttwell–Shulman convention its
+horizontals are X-horizontals `A ⇸ T B`; translate that convention through the matrix
+bridge rather than silently changing input/output variance. Define unit, multiplication,
+and cells coherently in the ∞-case; a strict model is allowed with a proved comparison.
+The conditions under which `H-Kl` and its `Mod` have the required restrictions, units,
+or composites are individual theorem hypotheses.
 
-### D-SP-08 · The named mountain, comparisons, model structures
-**Decision.** Model structures are theorems, never definitions.
-The **named mountain** is `HasColimits Kan` (and limits): an interface one-liner whose
-proof is the Segal-category analogue of HTT 4.2.4.1 — homotopy colimits of Kan
-complexes (Bousfield–Kan / Hirschhorn) are colimits in the Segal category `Kan` in the
-sense of → D-UP-04, established through the identification of derived mapping spaces.
-The Segal-native route is Simpson's *Homotopy Theory of Higher Categories* (limits and
-colimits in `nCAT` with discrete object sets). Everything downstream depends on it:
-cocompleteness of `PSh(C)`, coends, composites of profunctors (→ D-FT-02), Kan
-extensions along Yoneda, the Kleisli VDC∞s and composition products of → D-SP-09. It is scheduled by name in → 08.
-Other milestones, in the order they unblock things: Kan–Quillen (from the inventory if
-present); Reedy/Bergner for Segal categories (needed for AT-KR-11 and rectification);
-Segal categories ≃ complete Segal spaces (Bergner) as AT-SP-5; complete Segal spaces ≃
-quasi-categories (Joyal–Tierney) and Cisinski's `S` — optional, opens Kerodon/HTT as a
-source; dendroidal Segal spaces ≃ Lurie's ∞-operads (Heuts–Hinich–Moerdijk) — optional;
-style B ≃ style A for VDC∞ (AT-RT-9) — optional.
-**Status.** frozen list; the mountain and the first two are M6, the rest `later`.
+The one-colour collection category must recover functors from the finite-set groupoid
+with the appropriate variance, hence `Σ_n`-actions in arity n. The braided case recovers
+braid actions. Prove the substitution product, then the algebra/operad comparison.
+Do not assert a general Kleisli composite theorem without the necessary colimits and
+preservation hypotheses. There are virtual-equipment results that do not imply all
+horizontal composites exist.
 
-## Acceptance tests (summary)
+`E_1`, `E_2`, and `E_∞` examples and finite-n configuration-space models are later
+comparisons with stated equivariance/freeness hypotheses. Symmetric monoidal
+∞-categories as algebras in `Cat_∞` additionally need the relevant colimits there;
+`HasColimits Kan` alone is not that theorem.
+**Rationale.** An action needs morphisms in its indexing category, not just labels.
+**Rejected.** The former free symmetric/braided monoidal category monads directly on
+`Mat(Kan)`; treating families over a set as equivariant symmetric sequences.
+**Acceptance.** AT-FD-9: discrete arity-two action test; AT-SP-9: classical symmetric
+operads in the corrected profunctor ambient; AT-SP-10: coherent operadic comparison;
+AT-SP-11: precisely stated E_n examples; AT-SP-13: scoped Kleisli/Mod preservation.
+**Status.** ambient correction adopted; ∞-construction provisional, full development M7.
 
-- AT-SP-1 `U` is a Kan complex.
-- AT-SP-2 `Kan` is an ∞-category in the library's sense; classical homotopy category; rectified by the strict simplicial category.
-- AT-SP-3 Monads in `Mat(Kan)` at `A` are Segal categories with object set `A`.
-- AT-SP-4 `Span(S)` is a VDC∞, fibrant when `S` is.
-- AT-SP-5 `Mod(Mat Kan) ≃ Mod(Span Kan)`.
-- AT-SP-6 Discrete ∞-operads are coloured operads.
-- AT-SP-7 Planar ∞-operads as monads in a multimatrix VDC∞.
-- AT-SP-8 Rectification: strict simplicial categories present all Segal categories.
-- AT-SP-9 `Mod(H-Kl(T_Σ, Mat Set))` is the classical equipment of coloured symmetric operads.
-- AT-SP-10 Monads in `H-Kl(T_Σ, Mat Kan)` present Lurie's ∞-operads (Haugseng; nerve theorem at ∞).
-- AT-SP-11 Contractible monads in the `T_ℕ`/`T_𝔹`/`T_Σ` Kleisli VDC∞s are `E_1`/`E_2`/`E_∞`.
-- AT-SP-13 `H-Kl(T, X)` is a VDC∞ and `Mod(H-Kl(T, X))` is an equipment (Cruttwell–Shulman at ∞).
-- AT-SP-12 `HasColimits Kan` (the mountain).
+### D-SP-16 · General monoidal enrichment
+**Decision.** Define a monoidal Segal-category presentation and its unbiased tensor
+multimaps through the chosen categorical interface. Construct Mat(V) with its explicit
+size, coherence, and map comparisons; identify its monads with enriched categories.
+**Rationale.** Cartesian examples should validate the shared infrastructure first.
+**Rejected.** Treating a weak tensor presentation as a strict functor without comparison.
+**Acceptance.** A precisely stated Gepner–Haugseng comparison, assigned an acceptance
+ID when this later track is activated.
+**Status.** later (M7+).
 
-## Open questions
+### D-SP-17 · Limits, colimits, and model comparisons
+**Decision.** Prove `HasLimits Kan` and `HasColimits Kan` for indexing categories within
+explicit universe bounds. Compare derived homotopy (co)limits with the categorical
+universal properties of D-UP-13. This supports presheaves, coends, and later substitution
+products. It is a substantial M6 theorem target, not an implication of the classifier.
+The small model-theoretic lemmas needed for M-F's `MapCat`, `MapRel`, replacement, and
+walking constructions occur at M-F; their broader reusable packaging may follow at M2.
+General strictification, Kan–Quillen, Bergner/Rezk, Joyal–Tierney, and operadic
+comparisons are scheduled by their actual dependencies. A claimed comparison must
+name its model and precise statement; full style-A comparison remains AT-RT-9.
+**Rationale.** Moving a dependency later on the schedule does not eliminate it.
+**Rejected.** Requiring “model structures are only later theorems” when a current
+construction already needs their lifting or localization results.
+**Acceptance.** AT-SP-12 with sizes explicit; AT-SP-8 for rigidification to an
+equivalent model; scoped AT-SP-5/10 and AT-RT-9 as above.
+**Status.** provisional routes; full (co)completeness M6.
 
-- OQ-SP-1 Universe size bookkeeping: `Mat(Kan.{v})` has values built from
-  `U.{v} : sSet.{v+1}` and labels in an independent `Type u` (→ D-RT-12); confirm the
-  universe pattern and that nothing forces a third universe.
-- OQ-SP-2 Whether to prove AT-SP-1 via Cisinski, Sattler, or minimal fibrations.
-- OQ-SP-3 Whether `Kan` and `Mat(Kan)` are made fibrant by replacement or by
-  construction from the universe (left fibrations over `Δ[n] × Δ[m]`). Kernel choice;
-  invisible past the seal; the by-construction route avoids proving that the
-  replacement preserves the elementary values up to equivalence, the by-replacement
-  route reuses AT-KR-11.
+## Status and open questions
+
+All AT-SP tests are proposed, not proved in this revision. The test numbers retain their
+subjects but their changed scopes are recorded in `12-revision-notes.md`.
+OQ-SP-1: compile classifier/matrix/monad universe signatures, including new collection
+levels. OQ-SP-2: select a precise universe construction at M6. OQ-SP-3: choose the
+full coherent matrix presentation; the small M-F example is mandatory first.
+OQ-SP-4: establish the stronger span/profunctor VDC comparison beyond the categorical
+object comparison. OQ-SP-5: determine the exact monad/preservation hypotheses for the
+∞-Kleisli construction on the corrected profunctor ambient.

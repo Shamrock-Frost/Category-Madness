@@ -1,13 +1,14 @@
-\title{AT-RT-4 · \code{hP} is an augmented VDC}
+\title{AT-RT-4 · \\code{hP} is an augmented VDC}
 \taxon{Acceptance test}
 \meta{id}{AT-RT-4}
 \meta{area}{root}
 \meta{origin}{design/02-root.md}
-\meta{status}{unstated}
+\meta{status}{retired}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:rt}
-\tag{status:unstated}
+\tag{status:retired}
 
-\p{\code{hP} is an augmented VDC; discrete case.}
-\p{Named by: \ref{dec-rt-0005}.}
+\p{is retired in its original general form. Discrete recovery is part of \ref{at-rt-0001}. Any later truncation receives a new acceptance ID}
+\p{Named by: \ref{dec-rt-0020}.}
 \p{\em{Lean declaration(s):} none yet.}

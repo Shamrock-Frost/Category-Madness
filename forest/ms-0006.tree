@@ -1,21 +1,9 @@
-\title{M6 · Spaces and enrichment}
+\title{M6 · Full spaces and enrichment}
 \taxon{Milestone}
 \meta{id}{M6}
 \meta{origin}{design/08-roadmap.md}
 \meta{status}{planned}
 \tag{milestone}
 
-\ul{
-  \li{\ref{dec-sp-0001}…\ref{dec-sp-0006}: \code{U}, \code{Kan} (fibrant, \ref{oq-sp-0003} resolved), \code{Mat(Kan)} (fibrant), \code{InfCategory}, \code{Cat_∞}, \code{Span(Kan)} via \code{Tw} shapes, ∞-operads.}
-  \li{Rectification (\ref{at-sp-0008}) and the closure package for \code{Mat(Kan)}, \code{Span}, limits.}
-  \li{\strong{The mountain}: \code{HasColimits Kan} and \code{HasLimits Kan} (\ref{at-sp-0012}), Simpson's route.}
-  \li{\ref{at-sp-0001}…\ref{at-sp-0004}, 6, 7, 8, 12 and \ref{at-rt-0008} proved; \ref{at-sp-0005} and \ref{at-ft-0004} attempted.}
-}
-\subtree{
-  \title{Freeze}
-  \p{\code{Kan}, \code{Mat(Kan)}, \code{InfCategory}, \code{Span}.}
-}
-\subtree{
-  \title{Exit}
-  \p{An ∞-category is a monad in \code{Mat(Kan)}, the formal theory applies to it with no new definitions, and \code{PSh(C)} is cocomplete.}
-}
+\p{Build the classifier and the full \code{Kan}, \code{Mat(Kan)}, \code{InfCategory}, \code{Cat_∞}, and span instances. Prove size-bounded limits and colimits of spaces (\ref{at-sp-0012}), full matrix comparison (\ref{at-rt-0008}, \ref{at-sp-0002}/3), required rigidification (\ref{at-sp-0008}), and construction closure. Establish \ref{at-sp-0001}/4 and the corresponding presheaf/coend clients. Operadic nerves are introduced when their corrected algebra construction is ready. The full span-module comparison \ref{at-sp-0005}(b), double comparison \ref{at-ft-0004}, and style-A comparison \ref{at-rt-0009} may require separate research submilestones; the narrower mandatory \ref{ms-foundation} categorical tests were not postponed to these comparisons.}
+\p{\strong{Exit:} the full root monad model agrees with the bootstrap Segal-category interface, the formal theory applies, and the claimed presheaf category is cocomplete at stated sizes. \strong{Freeze:} the validated full spaces/enrichment interface.}

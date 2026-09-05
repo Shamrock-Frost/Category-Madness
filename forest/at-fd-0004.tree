@@ -1,0 +1,15 @@
+\title{AT-FD-4 · Categorical maps retain natural equivalences}
+\taxon{Acceptance test}
+\meta{id}{AT-FD-4}
+\meta{area}{foundation feasibility}
+\meta{origin}{design/11-foundation-feasibility.md}
+\meta{status}{proposed}
+\meta{statement-version}{1}
+\tag{acceptance-test}
+\tag{area:fd}
+\tag{status:proposed}
+
+\p{Implement \code{MapRel} and \code{MapCat} with distinct types/specifications. Let I be the ordinary walking isomorphism and G a nontrivial finite group, initially \code{C₂}. Show that the disjoint fixed-label strict-map spaces for \code{1 → I} have two components, whereas \code{MapCat(1,I)} is contractible. Show \code{MapCat(1,BG) ≃ BG}, retaining the automorphism loop. Construct the bridge through a categorical framing/localization or complete presentation, and compare the categorical functor object for ordinary C,D. For the matrix/Mod instance from \ref{at-fd-0008}, verify that \code{VertCore} has these natural equivalences and that \code{VertRaw} is not silently substituted for it.}
+\p{\strong{Depends on:} the selected Segal-category comparison machinery; relative model lemmas; \ref{at-fd-0008} only for the final root-instance check. \strong{Evidence:} the two example computations, the general ordinary-category bridge, and the root-instance comparison. \strong{Failure response:} revise the framing or vertical extraction; Reedy replacement alone is not an alternative proof.}
+\p{Named by: \ref{dec-ch-0017}, \ref{dec-ch-0018}, \ref{dec-rt-0017}, \ref{dec-rt-0018}, \ref{dec-rt-0019}, \ref{dec-rt-0023}, \ref{dec-rt-0030}, \ref{dec-sp-0011}, \ref{dec-up-0011}, \ref{dec-up-0018}.}
+\p{\em{Lean declaration(s):} none yet.}

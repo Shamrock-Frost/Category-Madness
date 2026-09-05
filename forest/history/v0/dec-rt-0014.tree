@@ -1,0 +1,25 @@
+\title{D-RT-14 · Generated thin API for \code{Category}}
+\taxon{Decision}
+\meta{id}{D-RT-14}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen at M3 (contents provisional).}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:rt}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{From the monad structure, a metaprogram generates for \code{Category A}: \code{Hom}, \code{id}, \code{comp} (binary, as an \code{abbrev} of the 2-ary composite), \code{compN} (unbiased), the \code{simp} set (\code{compN} flattening, unit laws, functoriality), \code{ext}-style lemmas, and the corresponding API for \code{Functor}, \code{Profunctor}, \code{NatTrans} from \code{Mod}. The human notation layer (\code{⟶}, \code{≫}, \code{⥤}, \code{⇸}) is generated separately (→ \ref{dec-tl-0002}).}
+}
+\subtree{
+  \title{Rationale}
+  \p{Every basic fact about categories arrives through three layers of instance; the thin API is what makes that invisible, and generating it is what keeps it in sync with the root.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen at \ref{ms-0003} (contents provisional).}
+}

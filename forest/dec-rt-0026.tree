@@ -1,0 +1,33 @@
+\title{D-RT-26 · Discrete nerve comparison}
+\taxon{Decision}
+\meta{id}{D-RT-26}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional; required by M3.}
+\meta{supersedes}{dec-rt-0011}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:rt}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{Prove that the nerve of the kernel's set-level augmented VDC is reduced and satisfies the root conditions; conversely recover a set-level augmented VDC from a discrete root using the nerve theorem, without an arbitrary-root truncation. The equivalence identifies root monads in \code{Mat Set} with classical category structures.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Discrete self-hosting is independent of the invalid general \code{hP} formula.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Using a promised general truncation to justify the discrete inverse.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-rt-0001}, \ref{at-rt-0003}, \ref{at-rt-0010}.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional; required by \ref{ms-0003}.}
+}

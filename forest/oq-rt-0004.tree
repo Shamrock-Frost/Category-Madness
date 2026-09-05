@@ -1,0 +1,12 @@
+\title{OQ-RT-4}
+\taxon{Open question}
+\meta{id}{OQ-RT-4}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{open}
+\tag{open-question}
+\tag{area:rt}
+\tag{status:open}
+
+\p{does the proposed local \code{VDCEq} predicate admit the intended ∞-comparison? A counterexample requires a revised predicate or root; it is not an approved axiom. -}
+\p{\em{Resolution:} open. Decided by the human; record the answer as a decision node that this node then cites.}

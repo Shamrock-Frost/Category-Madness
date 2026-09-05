@@ -1,0 +1,19 @@
+\title{M4 · Universal properties}
+\taxon{Milestone}
+\meta{id}{M4}
+\meta{origin}{design/08-roadmap.md}
+\meta{status}{planned}
+\tag{milestone}
+
+\ul{
+  \li{\ref{dec-up-0001}…\ref{dec-up-0009}; \code{witness_transport} (\ref{dec-tl-0004}) and \code{extend} (\ref{dec-tl-0005}) usable.}
+  \li{\ref{at-up-0001}…\ref{at-up-0007} proved, including the Čech nerve (\ref{at-up-0006}).}
+}
+\subtree{
+  \title{Freeze}
+  \p{\code{IsTerminal}, slices, \code{Limit}, Kan extensions, witness discipline.}
+}
+\subtree{
+  \title{Exit}
+  \p{\ref{at-up-0001}…\ref{at-up-0007} proved; \code{to_dual} produces all colimit-side statements.}
+}

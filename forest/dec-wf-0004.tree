@@ -3,13 +3,13 @@
 \meta{id}{D-WF-04}
 \meta{area}{forest and workflow}
 \meta{origin}{design/07-forest-workflow.md}
-\meta{status}{frozen}
+\meta{status}{superseded}
 \meta{status-text}{frozen.}
 \meta{supersedes}{none}
-\meta{superseded-by}{none}
+\meta{superseded-by}{dec-wf-0011}
 \tag{decision}
 \tag{area:wf}
-\tag{status:frozen}
+\tag{status:superseded}
 
 \subtree{
   \title{Decision}
@@ -18,7 +18,7 @@
     \li{Agents pick \code{stated} acceptance tests and \code{sorry} nodes, in dependency order, preferring nodes that unblock the most dependents.}
     \li{A PR must: cite decisions; add no new sealed constants without a decision; keep the swap test green; regenerate the human layer; leave the forest buildable.}
     \li{Definitions are not agent-editable in \code{frozen} areas; in \code{provisional} areas amendments go through → \ref{dec-tl-0001}.}
-    \li{Nightly: kernel-backed full build (→ \ref{dec-rt-0013} (5)), forest rebuild and publish, benchmark nodes.}
+    \li{Nightly: kernel-backed full build (→ D-RT-13 (5)), forest rebuild and publish, benchmark nodes.}
   }
 }
 \subtree{

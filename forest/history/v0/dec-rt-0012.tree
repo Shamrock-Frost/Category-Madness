@@ -1,0 +1,29 @@
+\title{D-RT-12 · Universe policy}
+\taxon{Decision}
+\meta{id}{D-RT-12}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen (rules provisional).}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:rt}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Full polymorphism, with the label universe and the value universe independent everywhere. \code{VDC∞.{u,v}} has labels in \code{Type u} and values in \code{sSet.{v}}; \code{Θ_{fc,X}} for \code{X : Type u} lives in \code{Type u}. \code{Mat(Set.{v})} is polymorphic in its label universe: \code{Mat.{u,v}(Set.{v}) : VDC∞.{u,v}} has labels the sets \code{A : Type u} (any \code{u}) and horizontal morphisms \code{A → B → Type v}. Hence \code{Category.{u,v} A} for \code{A : Type u} with homs in \code{Type v} — exactly Mathlib's split, which is forced: \code{Set}, \code{Kan}, and \code{Cat} have large object sets and small homs and must be objects of \code{Mat(Kan.{v})}. Rules: no \code{max} in structure fields where a single universe suffices; \code{ULift}-transport lemmas are part of the interface; Yoneda-size questions in the formal theory are handled by augmentation (→ \ref{dec-ft-0001}), which addresses the presheaf object not existing at the same size and nothing else.}
+}
+\subtree{
+  \title{Rationale}
+  \p{The earlier draft offered a single universe and claimed augmentation would absorb size; it does not absorb "large objects, small homs," which is the common case.}
+}
+\subtree{
+  \title{Rejected}
+  \p{A Grothendieck-universe parameter \code{U} in the root. Reconsider at \ref{ms-0006} if \code{Kan} and \code{U} (→ \ref{dec-sp-0001}) make it attractive.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen (rules provisional).}
+}

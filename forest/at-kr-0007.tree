@@ -3,11 +3,12 @@
 \meta{id}{AT-KR-7}
 \meta{area}{kernel}
 \meta{origin}{design/01-kernel.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:kr}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{Ω is EZ generalized Reedy.}
-\p{Named by: \ref{dec-kr-0005}.}
+\p{for Ω when scheduled}
+\p{Named by: \ref{dec-kr-0017}, \ref{dec-kr-0020}.}
 \p{\em{Lean declaration(s):} none yet.}

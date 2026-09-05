@@ -1,0 +1,33 @@
+\title{D-WF-13 · Human prose}
+\taxon{Decision}
+\meta{id}{D-WF-13}
+\meta{area}{forest and workflow}
+\meta{origin}{design/07-forest-workflow.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen policy; port implementation provisional.}
+\meta{supersedes}{dec-wf-0006}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:wf}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Handwritten forest nodes preserve rationale, hypotheses, and unresolved questions. They transclude generated signatures rather than restating them. The current revision's Markdown is authoritative until it is ported; history is ported as history.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Documentation needs both machine-checked statements and their design context.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Treating generated statement text as a replacement for a decision's reasoning.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{ms-0000} port check and the \ref{ms-0001} exporter integration.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen policy; port implementation provisional.}
+}

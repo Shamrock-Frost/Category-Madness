@@ -1,0 +1,21 @@
+\title{D-CH-11 · Dependencies}
+\taxon{Decision}
+\meta{id}{D-CH-11}
+\meta{area}{charter}
+\meta{origin}{design/00-charter.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:ch}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Mathlib only. No Infinity-Cosmos, no other Lean libraries. Their constructions may be ported into the kernel with attribution.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen.}
+}

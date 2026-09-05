@@ -1,0 +1,33 @@
+\title{D-WF-12 · Retrieval service}
+\taxon{Decision}
+\meta{id}{D-WF-12}
+\meta{area}{forest and workflow}
+\meta{origin}{design/07-forest-workflow.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional, expand at M1/M3 as useful.}
+\meta{supersedes}{dec-wf-0005}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:wf}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{Begin with searchable Markdown/registry records and exact declaration lookup. After \ref{ms-foundation}, the optional read-only MCP provides search, get, dependency neighbors, open tasks, decisions, acceptances, and type search over the built environment. Index active nodes by default; historical nodes require an explicit history filter. Hybrid embedding search is an enhancement, not an \ref{ms-0000} mathematical prerequisite.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Retrieval should expose validated work and unresolved dependencies accurately.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Building a large search stack before there is a meaningful proof corpus.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{Current-versus-historical retrieval examples and dependency-order tasks.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional, expand at \ref{ms-0001}/\ref{ms-0003} as useful.}
+}

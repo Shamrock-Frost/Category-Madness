@@ -1,13 +1,14 @@
-\title{AT-UP-4 · each specializes to the classical notion for discrete \code{C}}
+\title{AT-UP-4 · each specializes to the classical notion for discrete \\code{C}}
 \taxon{Acceptance test}
 \meta{id}{AT-UP-4}
 \meta{area}{universal properties}
 \meta{origin}{design/03-universal-properties.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:up}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{each specializes to the classical notion for discrete \code{C}}
-\p{Named by: \ref{dec-up-0004}.}
+\p{discrete comparisons and pointwise Kan-extension formula}
+\p{Named by: \ref{dec-up-0013}.}
 \p{\em{Lean declaration(s):} none yet.}

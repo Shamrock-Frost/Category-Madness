@@ -1,0 +1,82 @@
+\title{09 · Bibliography (annotated, keyed to decisions)}
+\taxon{Chapter}
+\meta{origin}{design/09-bibliography.md}
+\meta{layer}{human}
+\tag{chapter}
+
+\p{Entries give what the library takes from each source. Venues are omitted where not certain; the \ref{ms-0000} agent should complete them in the forest.}
+\subtree{
+  \title{Virtual double categories and formal category theory}
+  \transclude{bib-0001}
+  \transclude{bib-0002}
+  \transclude{bib-0003}
+  \transclude{bib-0004}
+  \transclude{bib-0005}
+  \transclude{bib-0006}
+  \transclude{bib-0007}
+  \transclude{bib-0008}
+}
+\subtree{
+  \title{Shapes, nerves, patterns}
+  \transclude{bib-0009}
+  \transclude{bib-0010}
+  \transclude{bib-0011}
+  \transclude{bib-0012}
+  \transclude{bib-0013}
+  \transclude{bib-0014}
+  \transclude{bib-0015}
+  \transclude{bib-0016}
+  \transclude{bib-0017}
+  \transclude{bib-0018}
+  \transclude{bib-0019}
+  \transclude{bib-0020}
+  \transclude{bib-0021}
+  \transclude{bib-0022}
+}
+\subtree{
+  \title{Homotopy theory and models}
+  \transclude{bib-0023}
+  \transclude{bib-0024}
+  \transclude{bib-0025}
+  \transclude{bib-0026}
+  \transclude{bib-0027}
+  \transclude{bib-0028}
+  \transclude{bib-0029}
+  \transclude{bib-0030}
+  \transclude{bib-0031}
+  \transclude{bib-0032}
+  \transclude{bib-0033}
+  \transclude{bib-0034}
+  \transclude{bib-0035}
+  \transclude{bib-0036}
+  \transclude{bib-0037}
+}
+\subtree{
+  \title{Operads and \code{E_n}}
+  \transclude{bib-0038}
+  \transclude{bib-0039}
+  \transclude{bib-0040}
+  \transclude{bib-0041}
+  \transclude{bib-0042}
+  \transclude{bib-0043}
+}
+\subtree{
+  \title{Pasting diagrams and shapes}
+  \transclude{bib-0044}
+  \transclude{bib-0045}
+  \transclude{bib-0046}
+  \transclude{bib-0047}
+  \transclude{bib-0048}
+  \transclude{bib-0049}
+  \transclude{bib-0050}
+}
+\subtree{
+  \title{Type theory and displayed structures}
+  \transclude{bib-0051}
+  \transclude{bib-0052}
+}
+\subtree{
+  \title{Tooling}
+  \transclude{bib-0053}
+  \transclude{bib-0054}
+}

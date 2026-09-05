@@ -1,0 +1,15 @@
+\title{AT-FD-3 · Reduced labels and homotopy gluing}
+\taxon{Acceptance test}
+\meta{id}{AT-FD-3}
+\meta{area}{foundation feasibility}
+\meta{origin}{design/11-foundation-feasibility.md}
+\meta{status}{proposed}
+\meta{statement-version}{1}
+\tag{acceptance-test}
+\tag{area:fd}
+\tag{status:proposed}
+
+\p{For labelled Δ and then the selected augmented arities, implement terminal object values and full boundary diagrams. Prove the endpoint and cell fibrancy hypotheses needed by the chosen model. Prove that the actual strict Segal core computes the homotopy core where strict limits are used; otherwise keep the homotopy-core implementation and prove the operations it requires. As a negative regression, use the two vertex inclusions into the contractible nerve of the walking isomorphism: their strict pullback is empty and their homotopy pullback is contractible. The old argument from contractibility alone must not certify the gate. Prove the chosen reduced replacement and label reindexing preserve this specification.}
+\p{\strong{Depends on:} \ref{at-kr-0000} inventory, the relevant \ref{at-kr-0010} lemmas, \ref{at-fd-0007} for the augmented instance. \strong{Evidence:} comparison and replacement lemmas, plus the negative example. \strong{Failure response:} strengthen fibrancy or use homotopy limits; changing reduction is an explicit root decision and resets dependent tests.}
+\p{Named by: \ref{dec-ch-0018}, \ref{dec-kr-0016}, \ref{dec-kr-0019}, \ref{dec-kr-0022}, \ref{dec-kr-0023}, \ref{dec-rt-0016}, \ref{dec-rt-0022}, \ref{dec-up-0010}.}
+\p{\em{Lean declaration(s):} none yet.}

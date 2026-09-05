@@ -1,8 +1,8 @@
-\title{Phase −1 · These documents}
+\title{Phase −1 · Revised design}
 \taxon{Milestone}
 \meta{id}{Phase −1}
 \meta{origin}{design/08-roadmap.md}
 \meta{status}{planned}
 \tag{milestone}
 
-\p{Deliverable: this tarball. Exit: human sign-off on the outline and the frozen decisions.}
+\p{Deliverable: this revision with the original snapshot and supersession crosswalk. Exit: the design has explicit candidates, falsification tests, and an authorized plan. This is not mathematical validation of the repaired ∞-root.}

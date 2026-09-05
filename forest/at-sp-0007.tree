@@ -3,11 +3,12 @@
 \meta{id}{AT-SP-7}
 \meta{area}{spaces and enrichment}
 \meta{origin}{design/05-spaces-enrichment.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:sp}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{Planar ∞-operads as monads in a multimatrix VDC∞.}
-\p{Named by: \ref{dec-sp-0006}.}
+\p{for planar root algebras}
+\p{Named by: \ref{dec-sp-0015}.}
 \p{\em{Lean declaration(s):} none yet.}

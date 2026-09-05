@@ -1,0 +1,21 @@
+\title{D-UP-08 · 1-level instances}
+\taxon{Decision}
+\meta{id}{D-UP-08}
+\meta{area}{universal properties}
+\meta{origin}{design/03-universal-properties.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:up}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{For discrete \code{C}, all of the above are proved to coincide with the classical definitions, as theorems in \code{Theory/} (not as separate definitions). These theorems are the acceptance tests \ref{at-up-0001}…\ref{at-up-0007}.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen.}
+}

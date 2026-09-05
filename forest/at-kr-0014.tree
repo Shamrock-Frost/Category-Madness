@@ -1,13 +1,13 @@
-\title{AT-KR-14 · The general pasting theorem restricts to nerve-theorem composites on \code{Θ^aug_fc}}
+\title{AT-KR-14 · The general pasting theorem restricts to nerve-theorem composites on \\code{Θ^aug_fc}}
 \taxon{Acceptance test}
 \meta{id}{AT-KR-14}
 \meta{area}{kernel}
 \meta{origin}{design/01-kernel.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:kr}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{The general pasting theorem restricts to nerve-theorem composites on \code{Θ^aug_fc}.}
-\p{Named by: \ref{dec-kr-0012}.}
+\p{Current proposed scope is specified by the active decisions that name this test.}
 \p{\em{Lean declaration(s):} none yet.}

@@ -1,0 +1,20 @@
+\title{M-F · Foundation feasibility (new; after M0, before M1)}
+\taxon{Milestone}
+\meta{id}{M-F}
+\meta{origin}{design/08-roadmap.md}
+\meta{status}{planned}
+\tag{milestone}
+
+\p{See \code{11-foundation-feasibility.md} for the exact tests and dependencies.}
+\ul{
+  \li{Compile the universe signatures and demonstrate a real bundled seal and swap.}
+  \li{Repair object reduction and prove the boundary/Segal-core comparison actually used.}
+  \li{Establish categorical diagram spaces on ordinary-category examples with natural equivalences, separately from relative presheaf maps.}
+  \li{Test and prove the required discrete/general equivalence clauses, including duplicate horizontals, endpoint transport, and 2-out-of-3 in the proposed root setting.}
+  \li{Eliminate the unsupported truncation from required interfaces; demonstrate boundary monodromy and a coherent-cell route that retains the needed information.}
+  \li{Establish the augmented arities and the actual cofibrancy/replacement machinery used by the prototype; prove the no-horizontal 2-category comparison.}
+  \li{Construct relative monads/modules and one small nondiscrete matrix/Mod example, including whole-object fibres and the natural-equivalence extraction.}
+  \li{Check the corrected symmetry ambient on a discrete action example; scope pasting and rectification accurately; pass the compiled-dependency and axiom audits.}
+}
+\p{\strong{Exit:} \ref{at-fd-0001} through \ref{at-fd-0011} passed: mathematical components have checked proofs of their current statements with approved axioms, and tooling components have reproducible check records. No blocked prerequisite is hidden behind a later milestone. A gate may be revised only with a decision explaining the change and its impact. Failed gates keep the dependent foundation provisional. There is no “all gates passed” status in this document revision: the tests are currently proposed.}
+\p{\strong{Freeze:} only the successfully validated minimal presentation/API fragment. Full root and interface freeze remains \ref{ms-0003}, with the required \ref{ms-foundation} results as prerequisites.}

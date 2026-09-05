@@ -1,13 +1,14 @@
-\title{AT-UP-7 · \code{cosk_n ⊣ sk_n}-style adjunction statements as terminal-object statements}
+\title{AT-UP-7 · \\code{cosk_n ⊣ sk_n}-style adjunction statements as terminal-object statements}
 \taxon{Acceptance test}
 \meta{id}{AT-UP-7}
 \meta{area}{universal properties}
 \meta{origin}{design/03-universal-properties.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:up}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{\code{cosk_n ⊣ sk_n}-style adjunction statements as terminal-object statements}
-\p{Named by: \ref{dec-up-0007}, \ref{dec-up-0008}.}
+\p{the three adjunctions and correct skeleton/coskeleton orientation}
+\p{Named by: \ref{dec-tl-0014}, \ref{dec-tl-0016}, \ref{dec-up-0016}, \ref{dec-up-0017}.}
 \p{\em{Lean declaration(s):} none yet.}

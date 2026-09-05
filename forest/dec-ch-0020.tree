@@ -1,0 +1,33 @@
+\title{D-CH-20 · Layering}
+\taxon{Decision}
+\meta{id}{D-CH-20}
+\meta{area}{charter}
+\meta{origin}{design/00-charter.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen policy; formatting provisional.}
+\meta{supersedes}{dec-ch-0007}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:ch}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Lean declarations, tests, and decision records are primary. Generated notation and declaration documentation are views of them. Handwritten rationale and research questions remain primary prose, and are never regenerated from signatures.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Computation can synchronize signatures; it cannot recover design intent.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Hand-maintained duplicate signatures in documentation.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-kr-0000} and the \ref{ms-0000} export round-trip.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen policy; formatting provisional.}
+}

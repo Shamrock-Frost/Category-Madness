@@ -1,80 +1,91 @@
 # AGENTS.md — operating manual
 
-This repository is built by agents against definitions frozen by a human (D-CH-06,
-D-WF-04). This file says how to work here. It is provisional (D-TL-01): amend it by PR
-if the conventions stop fitting.
+Category Madness is built against an explicit, versioned specification. Design revision
+1 is active. Read `forest/index.tree`, `forest/fd-0000.tree`, and the relevant current
+decision before changing code. D-WF-12 requires retrieval instead of re-derivation.
 
-## 1. Find the decision before you act
+## 1. Active decisions and history
 
-Every design choice is a node in `forest/` with an ID. **Retrieve, do not re-derive**
-(D-WF-05): an agent that cannot find the decision node will re-derive the decision,
-usually differently.
+Decision IDs map directly to forest addresses: D-RT-16 is
+`forest/dec-rt-0016.tree`, AT-FD-1 is `forest/at-fd-0001.tree`, and M-F is
+`forest/ms-foundation.tree`. Search with `python3 mcp/server.py` or inspect
+`forest/registry.json`.
 
-- By ID: `D-RT-03` is `forest/dec-rt-0003.tree`; `AT-KR-2` is `forest/at-kr-0002.tree`;
-  `OQ-SP-1` is `forest/oq-sp-0001.tree`; `M3` is `forest/ms-0003.tree`.
-- By search: `python3 mcp/server.py` is an MCP server (`search`, `get`, `neighbors`,
-  `open_tasks`, `decision`, `acceptance`); `forest/registry.json` is the index behind it.
-- By reading: `forest/index.tree` → chapter trees (`ch-0000`, `krn-0000`, `rt-0000`, …).
+A `frozen` decision changes only through a fresh superseding decision. A `provisional`
+decision may change with recorded rationale and reset evidence. `later` means its named
+milestone has not activated it. Never cite a `superseded` decision as authority. Exact
+historical sources live in `design/history/v0/` and `forest/history/v0/`; they are not
+active work.
 
-Statuses: `frozen` decisions are not editable; change them only by adding a new decision
-node that supersedes them (D-WF-02). `provisional` decisions may be amended by a PR that
-edits the node and applies the change mechanically (D-TL-01). `later` means not before
-the named milestone.
+## 2. Acceptance evidence
 
-## 2. What a PR must do (D-WF-04 (3))
+Acceptance statuses are `proposed`, `stated`, `proved`, `failed`, `blocked`, `deferred`,
+or `retired` (D-WF-10). Only a checked proof of the current statement with approved
+axioms earns `proved`. A scope change increments `statement-version` and resets the
+status. Tooling gates require reproducible check records. Retired tests do not count as
+passed.
 
-1. **Cite the decisions it relies on**, by ID or address, in the PR body. CI
-   (`scripts/check_citations.py`) fails a PR that cites nothing, cites an unknown node,
-   or cites a superseded decision.
-2. **Add no sealed constant without a decision** (D-RT-13, two tiers: constants need a
-   superseding decision; interface lemmas provable in `Root/` do not).
-3. **Keep the swap test green** (`scripts/swap_test.sh`, D-TL-06 (4)).
-4. **Regenerate the human layer**; never hand-edit `Generated/` (D-TL-02).
-5. **Leave the forest buildable**: `python3 scripts/forest_check.py` and
-   `python3 scripts/build_registry.py` (commit the updated `forest/registry.json`).
-6. **Update node status** when you state or prove an acceptance test
-   (`\meta{status}{stated|proved}` on the `at-*` node, D-WF-03), or resolve an open
-   question (record the answer as a decision node; the question then cites it).
+M-F is the current queue. Follow the dependency order in `forest/fd-0000.tree`; do not
+freeze the root or interface based on an unpassed gate.
 
-## 3. The seal (D-CH-09, D-RT-13, D-TL-06)
+## 3. Change requirements
 
-- `Theory/` imports only `Interface.*` and tactic libraries. Never
-  `Mathlib.CategoryTheory.*`, `Mathlib.AlgebraicTopology.*`, `Kernel.*`, `Root.*`.
-- No unfolding of sealed constants in `Theory/`: no `unseal`, `with_unfolding_all`,
-  `delta`, `unfold <sealed>`, `simp [<sealed>]`, `rw [foo_def]`, no `rfl` against an
-  implementation. If a proof closes by `rfl` against an implementation it is wrong for
-  this library (D-CH-01).
-- Universal objects are witnesses of Prop-valued universal properties; theorems
-  quantify over witnesses; no `limit F` constant (D-CH-02, D-UP-06).
-- Limits are shape-indexed and unbiased; no binary coherence (D-CH-03).
-- Everything is universe-polymorphic; `autoImplicit false` (D-RT-12, D-TL-06 (6)).
-- Definitional equality is allowed only in `Kernel/` and `Root/`.
+Every PR and commit body cites the active decisions it relies on. CI rejects missing,
+unknown, or superseded citations. When a change states or proves a test, update its
+forest record in the same revision. Add no sealed constant without an active decision.
+Regenerate `forest/registry.json`, keep the forest checks green, and never hand-edit
+`Generated/`.
 
-## 4. Layout (D-TL-08)
+Before submitting, run:
 
-```
-design/          frozen phase −1 documents (history; do not edit)
-forest/          the forest (primary); one tree per decision / AT / OQ / milestone / reference
-Kernel/          stage 0: Mathlib scaffolding, shapes, Kan machinery      (-- KERNEL)
-Root/            stage 1: VDC∞, Mod, Mat(Set), Category, the self-hosting theorem
-Interface/       the seal: opaque / irreducible constants + API lemmas
-Interface-Stub/  generated: same statements as bodiless axioms (swap test)
-Theory/{UP,FT,SP}  stage 2: everything else, interface vocabulary only
-Generated/       the human layer: notation, abbrevs, thin API (never hand-edited)
-scripts/         linters, forest tooling, the port script
-mcp/             retrieval MCP (read-only)
+```sh
+python3 scripts/forest_check.py
+python3 scripts/check_imports.py
+python3 scripts/check_unfolding.py
+python3 scripts/check_statement_hygiene.py
+python3 mcp/server.py --selftest
 ```
 
-Naming: `Structure.field_property`, snake_case theorems, dot notation, no abbreviations,
-theorems named for their conclusion (D-TL-08).
+When Lean sources exist, also run `lake build` and `bash scripts/swap_test.sh`.
 
-## 5. Picking work (D-WF-04 (2))
+## 4. Seal and trust boundary
 
-Pick `stated` acceptance tests and `sorry` nodes in dependency order, preferring nodes
-that unblock the most dependents: `open_tasks` in the MCP sorts by that. At M0 nothing
-is stated; the open work is listed in `forest/ms-0000.tree` and `forest/wf-0001.tree`.
+`Theory/` imports only `Interface.*` and approved tactic libraries. It may not import
+Mathlib category implementations, `Kernel.*`, or `Root.*`, and it may not unfold sealed
+constants. Universal objects are witnesses of proposition-valued specifications.
+Everything is universe-polymorphic with `autoImplicit false`.
+
+Kernel-backed and stub builds use identical public signatures. Acceptance evidence must
+exclude `sorryAx`, stub axioms in the implementation build, project axioms outside the
+allowlist, and private implementation leaks. Keep negative fixtures outside certified
+imports (D-TL-17, AT-FD-2, AT-FD-11).
+
+## 5. Layout
+
+```text
+design/            active revision source; immutable snapshots under history/
+forest/            primary active forest and derived registry; history/ is excluded
+Prototype/         minimal M-F experiments and negative fixtures
+Kernel/            Mathlib-backed scaffolding, shapes, and homotopy machinery
+Root/              candidate VDC∞, relative constructions, examples
+Interface/         bundled opaque specification and proved public laws
+Interface-Stub/    identical public statements with bodiless test axioms
+Theory/{UP,FT,SP}  clients using Interface vocabulary only
+Generated/         generated notation and thin APIs
+scripts/           validation, porting, seal, citation, and trust tooling
+mcp/               read-only active registry retrieval
+```
+
+Name structures and theorems for their mathematical conclusions. Definitional equality
+is confined to `Kernel/` and `Root/`. Keep generated presentation separate from proved
+mathematical laws.
 
 ## 6. Commit messages
 
-Cite decisions in the body (`Cites: D-KR-06, AT-KR-8`). Do not put model identifiers
-in commits, PR text, or code comments.
+Cite current IDs in the body, for example:
+
+```text
+Cites: D-FD-01, D-WF-10, AT-FD-2
+```
+
+Do not put model identifiers in commits, PR text, or code comments.

@@ -3,17 +3,17 @@
 \meta{id}{D-KR-05}
 \meta{area}{kernel}
 \meta{origin}{design/01-kernel.md}
-\meta{status}{frozen}
+\meta{status}{superseded}
 \meta{status-text}{frozen (the list of which shapes are elegant is provisional until AT-KR-6).}
 \meta{supersedes}{none}
-\meta{superseded-by}{none}
+\meta{superseded-by}{dec-kr-0017}
 \tag{decision}
 \tag{area:kr}
-\tag{status:frozen}
+\tag{status:superseded}
 
 \subtree{
   \title{Decision}
-  \p{Each shape category is equipped with a Reedy structure (degree, \code{Θ⁺} = monomorphisms/faces including active ones, \code{Θ⁻} = degeneracies/collapses). Planar shapes (Δ, Ω_p, Θ_fc, Θ_n, Δ×Δ) are expected to be \strong{elegant} Reedy categories (Bergner–Rezk: every presheaf's degenerate elements are uniquely degeneracies of non-degenerate ones; Reedy cofibrations are monomorphisms; every object is cofibrant). Ω has automorphisms and is a \strong{generalized Reedy} category in the sense of Berger–Moerdijk (EZ category); there the cofibrant objects are the \em{normal} presheaves and Reedy fibrancy involves \code{Aut}-equivariance. Labelled shape categories \code{Θ_{T,X}} (\ref{dec-kr-0007}) inherit the Reedy structure along the discrete fibration to \code{Θ_T}. Machinery: latching/matching objects, skeleta/coskeleta, the Reedy lemma for presheaves valued in \code{sSet}, Reedy fibrancy (→ \ref{dec-rt-0007}).}
+  \p{Each shape category is equipped with a Reedy structure (degree, \code{Θ⁺} = monomorphisms/faces including active ones, \code{Θ⁻} = degeneracies/collapses). Planar shapes (Δ, Ω_p, Θ_fc, Θ_n, Δ×Δ) are expected to be \strong{elegant} Reedy categories (Bergner–Rezk: every presheaf's degenerate elements are uniquely degeneracies of non-degenerate ones; Reedy cofibrations are monomorphisms; every object is cofibrant). Ω has automorphisms and is a \strong{generalized Reedy} category in the sense of Berger–Moerdijk (EZ category); there the cofibrant objects are the \em{normal} presheaves and Reedy fibrancy involves \code{Aut}-equivariance. Labelled shape categories \code{Θ_{T,X}} (\ref{dec-kr-0007}) inherit the Reedy structure along the discrete fibration to \code{Θ_T}. Machinery: latching/matching objects, skeleta/coskeleta, the Reedy lemma for presheaves valued in \code{sSet}, Reedy fibrancy (→ D-RT-07).}
 }
 \subtree{
   \title{Acceptance}

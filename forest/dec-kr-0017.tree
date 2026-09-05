@@ -1,0 +1,33 @@
+\title{D-KR-17 · Diagram model and cofibrancy}
+\taxon{Decision}
+\meta{id}{D-KR-17}
+\meta{area}{kernel}
+\meta{origin}{design/01-kernel.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional and research-gated.}
+\meta{supersedes}{dec-kr-0005}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:kr}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{Prove the Reedy structure required for the adopted augmented shapes. Elegance, if proved, provides the desired monomorphism/cofibrancy results. Until then, any relative mapping-space theorem carries its actual cofibrancy hypotheses. Generalized Reedy and normal presheaves are used for Ω only with their own proved hypotheses. Failure of elegance elsewhere does not imply that this fallback applies. Alternative diagram model structures or explicit cofibrant sources may be proposed at \ref{ms-foundation}, together with the new mapping, restriction, and replacement proofs they require.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Absence of automorphisms does not prove elegance or a model-category theorem.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Generalized Reedy as an automatic remedy for every failed elegance test.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-kr-0006} for the adopted planar shapes; \ref{at-kr-0007} for Ω when scheduled; \ref{at-fd-0007} and \ref{at-fd-0008} for the actual root mapping machinery.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional and research-gated.}
+}

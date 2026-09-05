@@ -1,13 +1,14 @@
-\title{AT-UP-2 · for discrete \code{C} and \code{J}, \code{C_{/F}} is the classical slice/cone category}
+\title{AT-UP-2 · for discrete \\code{C} and \\code{J}, \\code{C_{/F}} is the classical slice/cone category}
 \taxon{Acceptance test}
 \meta{id}{AT-UP-2}
 \meta{area}{universal properties}
 \meta{origin}{design/03-universal-properties.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:up}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{for discrete \code{C} and \code{J}, \code{C_{/F}} is the classical slice/cone category}
-\p{Named by: \ref{dec-up-0003}.}
+\p{/3/6, \ref{at-sp-0004}}
+\p{Named by: \ref{dec-kr-0020}, \ref{dec-up-0012}.}
 \p{\em{Lean declaration(s):} none yet.}

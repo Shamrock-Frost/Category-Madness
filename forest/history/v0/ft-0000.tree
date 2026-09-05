@@ -1,0 +1,41 @@
+\title{04 · Formal category theory (stage 2, \ref{ms-0005})}
+\taxon{Chapter}
+\meta{origin}{design/04-formal-theory.md}
+\meta{layer}{human}
+\tag{chapter}
+
+\p{Formal category theory is developed once, for augmented virtual ∞-equipments, using only the VDC∞ interface. Instances: \code{Cat = Mod(Mat Set)} (discrete), \code{Mod(Mat Kan)} (∞-categories and profunctors, \ref{ms-0006}), \code{Mod(Span S)} (internal, \ref{ms-0005}/\ref{ms-0006}), and \code{Mod(P)} for any equipment \code{P} (→ \ref{at-ft-0003}). This is the layer where "not written down" is the point (→ \ref{dec-ch-0006}): definitions follow Koudenburg's augmented framework and Cruttwell–Shulman, transported to VDC∞s; the acceptance tests are the discrete and non-virtual comparisons.}
+\subtree{
+  \title{Definitions}
+
+  \transclude{dec-ft-0001}
+  \transclude{dec-ft-0002}
+}
+\subtree{
+  \title{The formal theory (targets)}
+
+  \transclude{dec-ft-0003}
+}
+\subtree{
+  \title{Tracks and comparisons}
+
+  \transclude{dec-ft-0004}
+  \transclude{dec-ft-0005}
+}
+\subtree{
+  \title{Acceptance tests (summary)}
+  \transclude{at-ft-0001}
+  \transclude{at-ft-0002}
+  \transclude{at-ft-0003}
+  \transclude{at-ft-0004}
+  \transclude{at-ft-0005}
+  \transclude{at-ft-0006}
+  \transclude{at-ft-0007}
+  \transclude{at-ft-0008}
+  \transclude{at-ft-0009}
+}
+\subtree{
+  \title{Open questions}
+  \transclude{oq-ft-0001}
+  \transclude{oq-ft-0002}
+}

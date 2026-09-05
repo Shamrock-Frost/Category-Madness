@@ -1,0 +1,33 @@
+\title{D-UP-12 · Cone categories and slices}
+\taxon{Decision}
+\meta{id}{D-UP-12}
+\meta{area}{universal properties}
+\meta{origin}{design/03-universal-properties.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional construction; M4 export only after these proofs.}
+\meta{supersedes}{dec-up-0003}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:up}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{For \code{F : Fun(J,C)}, define \code{Cone(C,F)} using a derived fibre over F of \code{Fun(J^leftcone,C) → Fun(J,C)}, where \code{J^leftcone = [0] ⋆ J} and the vertex is the cone apex. Construct a reduced Segal presentation by choosing its object labels to be the cone data, including the restriction identification with F. In a shape formula using \code{[n] ⋆ J}, fix F and the \em{entire selected cone} at each vertex. A fibre that fixes only the apex objects is insufficient. At \code{[0]} the fibre fixing that cone is a point. Use one functorial replacement/framing for the whole restriction diagram; strict fibres require proved fibrations. Define commas by a specified derived comma construction with its own comparison, not an unnamed join.}
+}
+\subtree{
+  \title{Rationale}
+  \p{The slice's objects contain maps as well as objects of C.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Full cone spaces at each chosen cone label; independent fibrant replacement at each simplex.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-up-0002}: classical cone/slice category; \ref{at-up-0003}: reduction, fibrancy, Segal condition, and categorical invariance; the point/edge calculation in \ref{at-fd-0008}.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional construction; \ref{ms-0004} export only after these proofs.}
+}

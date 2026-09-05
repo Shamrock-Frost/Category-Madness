@@ -1,0 +1,25 @@
+\title{D-KR-09 · Cubes}
+\taxon{Decision}
+\meta{id}{D-KR-09}
+\meta{area}{kernel}
+\meta{origin}{design/01-kernel.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen; \code{later} for any use beyond definition.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:kr}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{The cube category with connections is defined by its PRO presentation (Grandis–Mauri: free strict monoidal category on an interval object with connections), included in the kernel as a \em{shape for horn-filling models only} (cubical Kan complexes, cubical (∞,1)-categories after Doherty–Kapulkin–Lindsey–Sattler, and, via connections as companion/conjoint squares, equipments with all companions). It carries no Segal-style structure because it has no spines.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Segal conditions need shapes that contain their own subdivisions (\code{[2] ⊃ [1] ∨ [1]}); cubes only have \code{I^n}. The library's root is Segal-style, so cubes are auxiliary.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen; \code{later} for any use beyond definition.}
+}

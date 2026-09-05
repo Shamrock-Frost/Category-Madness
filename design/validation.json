@@ -1,0 +1,13 @@
+{
+  "original_files_identical": 12,
+  "active_decisions": 82,
+  "supersession_entries": 81,
+  "new_foundation_gates": 11,
+  "errors": [],
+  "lean_proofs_compiled": false,
+  "revision": 1,
+  "date": "2026-09-05",
+  "scope": "Document structure, supersession, original snapshot integrity, and archive byte comparison; not mathematical proof validation.",
+  "current_acceptance_status": "proposed",
+  "archive_roundtrip": "passed"
+}

@@ -1,0 +1,44 @@
+\title{D-RT-28 · Bundled specification and a proved interface}
+\taxon{Decision}
+\meta{id}{D-RT-28}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional mechanism; interface contents freeze after their proofs.}
+\meta{supersedes}{dec-rt-0013}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:rt}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{Use a specification structure containing carriers, operations, and their laws, with universe parameters and internal dependencies made explicit. Seal an inhabitant of that structure, not unrelated operations whose laws were proved about a different implementation. Transparent projections may expose opaque specification fields; the specification structure itself contains no kernel vocabulary. An irreducible implementation with an equivalent audited API is an alternative if the bundle causes practical problems; \ref{at-fd-0002} decides the mechanism.}
+  \p{The initial exported vocabulary is limited to:}
+  \ul{
+    \li{finite shape syntax and proved operations, transparently, only for validated shapes;}
+    \li{sealed spaces, maps, homotopy, fibres, and proved mapping/fibrancy operations;}
+    \li{the validated root, strict maps, \code{VertRaw}, \code{Hor}, and the proved parts of \code{Vert₂} and \code{VertCore}, with names distinguishing the two;}
+    \li{\code{MapRel} and the separately justified Segal-category \code{MapCat}/\code{Fun} interface;}
+    \li{discrete embedding, walking structures, \code{Mod}, \code{Mat Set}, and their proved comparisons;}
+    \li{closure lemmas with explicit hypotheses and the precise equivalence relation used.}
+  }
+  \p{No arbitrary \code{hP}, universal rectification theorem, unvalidated shape, or future slice construction is included merely because a later milestone needs it. Slices and limits are added at \ref{ms-0004} with their proofs. Kernel primitives needed there are tested at \ref{ms-foundation}.}
+  \p{New sealed data or changes to a frozen signature require a superseding decision. Lemmas in interface vocabulary may be added without changing the signature, provided both builds, dependency checks, and the axiom audit pass. The stub preserves transparent specification infrastructure and replaces its implementation package with an axiom of the same specification type. The kernel-backed build contains no such stub axiom.}
+}
+\subtree{
+  \title{Rationale}
+  \p{The consistency witness must inhabit the same dependent specification against which client theorems are proved.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Grep alone for statement hygiene; a vacuous swap test; nightly-only validation of code already merged using stub axioms.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-fd-0002}, \ref{at-fd-0011}; complete \ref{ms-0003} swap test.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional mechanism; interface contents freeze after their proofs.}
+}

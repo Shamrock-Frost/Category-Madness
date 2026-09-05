@@ -1,0 +1,33 @@
+\title{D-CH-18 · Preferred root presentation}
+\taxon{Decision}
+\meta{id}{D-CH-18}
+\meta{area}{charter}
+\meta{origin}{design/00-charter.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional. Changing the model is an allowed M-F outcome.}
+\meta{supersedes}{dec-ch-0005}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:ch}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{The preferred root is a reduced, labelled Segal presheaf on an augmented planar shape category. Object values are terminal simplicial sets; cells may have empty horizontal targets. Kan values and the appropriate homotopy Segal limits are part of the specification. Actual arities, fibrancy, and comparison conditions are proved at \ref{ms-foundation} before this presentation is frozen.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Labels are a useful presentation device. Categorical mapping spaces may still require completion or localization. Ordinary active chains describe only the unaugmented cases for which a presentation theorem has been proved.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Contractible object values as a substitute for a reduced presentation; a blanket rejection of completeness machinery; unproved equivalence with style A.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-fd-0003}, \ref{at-fd-0004}, \ref{at-fd-0007}, \ref{at-fd-0008}; full \ref{at-rt-0009} at \ref{ms-0006}+.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional. Changing the model is an allowed \ref{ms-foundation} outcome.}
+}

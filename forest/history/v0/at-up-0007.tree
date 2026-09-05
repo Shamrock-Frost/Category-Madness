@@ -1,0 +1,13 @@
+\title{AT-UP-7 · \code{cosk_n ⊣ sk_n}-style adjunction statements as terminal-object statements}
+\taxon{Acceptance test}
+\meta{id}{AT-UP-7}
+\meta{area}{universal properties}
+\meta{origin}{design/03-universal-properties.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:up}
+\tag{status:unstated}
+
+\p{\code{cosk_n ⊣ sk_n}-style adjunction statements as terminal-object statements}
+\p{Named by: \ref{dec-up-0007}, \ref{dec-up-0008}.}
+\p{\em{Lean declaration(s):} none yet.}

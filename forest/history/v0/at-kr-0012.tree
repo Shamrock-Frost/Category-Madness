@@ -1,0 +1,13 @@
+\title{AT-KR-12 · Grids ≅ typed leveled 2-molecules}
+\taxon{Acceptance test}
+\meta{id}{AT-KR-12}
+\meta{area}{kernel}
+\meta{origin}{design/01-kernel.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:kr}
+\tag{status:unstated}
+
+\p{Grids ≅ typed leveled 2-molecules.}
+\p{Named by: \ref{dec-kr-0006}, \ref{dec-kr-0012}, \ref{dec-tl-0010}.}
+\p{\em{Lean declaration(s):} none yet.}

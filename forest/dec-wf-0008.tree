@@ -1,0 +1,33 @@
+\title{D-WF-08 · Generated declaration nodes}
+\taxon{Decision}
+\meta{id}{D-WF-08}
+\meta{area}{forest and workflow}
+\meta{origin}{design/07-forest-workflow.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen fields in principle; encoding provisional.}
+\meta{supersedes}{dec-wf-0001}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:wf}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Generate nodes from the Lean environment with qualified name, declaration kind, pretty-printed type, docstring, source position, statement/proof dependencies, reverse dependencies, cited decision IDs, and proof status from the axiom audit. Exported/sealed/kernel/prototype flags are independent of proof status. A declaration using an unapproved axiom is not “proved” for registry purposes. Deterministic addresses include the declaration name; record rename redirects when practical.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Agents need the actual dependency graph and mathematical validation state.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Proof status based only on whether a source body visibly contains \code{sorry}.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{ms-0000} minimal round-trip; complete exporter with real \ref{ms-foundation} declarations at \ref{ms-0001}.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen fields in principle; encoding provisional.}
+}

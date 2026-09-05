@@ -1,0 +1,33 @@
+\title{D-FD-01 · Gate the foundation before scaling it}
+\taxon{Decision}
+\meta{id}{D-FD-01}
+\meta{area}{foundation feasibility}
+\meta{origin}{design/11-foundation-feasibility.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen process policy authorized for this revision; all gate evidence pending.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:fd}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{\ref{ms-foundation} requires the eleven gates below. Each names a mathematical statement or executable check, dependencies, evidence, and a failure response. A mathematical component passes only with a checked Lean proof of its current statement and approved axioms. A tooling component passes only with a reproducible build/check record. Current prose is not proof evidence. No root or interface freeze may assume an unpassed gate.}
+}
+\subtree{
+  \title{Rationale}
+  \p{The initial review found contradictions that a larger proof schedule would not resolve. Test the semantics and implementation boundary before broad reuse.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Freezing an ∞-definition solely on a discrete nerve test; treating a proof assigned to an agent as evidence that its statement is true.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-fd-0001} through \ref{at-fd-0011} and the final dependency audit.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen process policy authorized for this revision; all gate evidence pending.}
+}

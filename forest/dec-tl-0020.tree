@@ -1,0 +1,33 @@
+\title{D-TL-20 · Pasting with an explicit target}
+\taxon{Decision}
+\meta{id}{D-TL-20}
+\meta{area}{tooling}
+\meta{origin}{design/06-tooling.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional; discrete version M3.}
+\meta{supersedes}{dec-tl-0009}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:tl}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{The first \code{paste} handles discrete composites and equal restrictions \code{P(σ)(d) = P(σ')(d)} from the same diagram. It reduces the latter to a proved decidable shape-map equality. For separately chosen weak composites, use comparison lemmas to construct a path, invertible cell, or higher comparison of the correct type; equality of shapes does not supply equality of points. A future ∞-tactic may organize these lemmas, but no general normalization theorem is assumed.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Unbiased syntax still needs coherence when the diagram witnesses differ.}
+}
+\subtree{
+  \title{Rejected}
+  \p{An unconditional reduction of all weak pastings to finite equality.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-fd-0010}, \ref{at-rt-0012}; one nondiscrete comparison example before expanding scope.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional; discrete version \ref{ms-0003}.}
+}

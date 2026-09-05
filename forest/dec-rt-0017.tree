@@ -1,0 +1,33 @@
+\title{D-RT-17 · Presentation versus homotopy theory}
+\taxon{Decision}
+\meta{id}{D-RT-17}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional until the comparisons are formalized.}
+\meta{supersedes}{dec-rt-0002}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:rt}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{A raw root presentation, a Reedy-fibrant presentation, and a categorical localization are distinct objects. Neither horizontal composites nor symmetry are primitive. Their existence or encoding is supplied by additional constructions.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Reedy fibrancy controls mapping and restriction fibrations; it does not identify all diagrams that should be categorically equivalent.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Using one unnamed notion of fibrancy or equivalence for all three roles.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-fd-0004}, \ref{at-fd-0005}.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional until the comparisons are formalized.}
+}

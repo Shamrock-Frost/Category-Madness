@@ -1,0 +1,33 @@
+\title{D-KR-20 · Additional shapes on demand}
+\taxon{Decision}
+\meta{id}{D-KR-20}
+\meta{area}{kernel}
+\meta{origin}{design/01-kernel.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional schedule.}
+\meta{supersedes}{dec-kr-0008}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:kr}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{Δ and the join/comma shapes needed for \ref{ms-foundation}/\ref{ms-0004} come first. The join API for Segal categories includes the necessary derived construction; a category-level join alone is insufficient. Δ₊ and its truncation inclusions support the Čech example. Double nerves use a constructed bisimplicial indexing diagram, not an assumed inclusion \code{Δ×Δ → Θ^aug_fc}. \code{Tw(θ)} for spans is introduced with its variance and pullback-square conditions at \ref{ms-0005}/\ref{ms-0006}. Ω_p, Ω, Θ_n, cubes, and sequence groupoids are scheduled only by actual downstream use. In particular symmetric sequence groupoids are indexing categories, not sets of matrix labels pretending to retain bijections.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Shape operations need functorial definitions and specific clients.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Defining all possible shapes at \ref{ms-0001} because they may eventually be useful.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-up-0002}/3/6, \ref{at-sp-0004}; \ref{at-kr-0004} and \ref{at-kr-0007} when their clients are scheduled.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional schedule.}
+}

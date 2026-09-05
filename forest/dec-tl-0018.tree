@@ -1,0 +1,33 @@
+\title{D-TL-18 · Performance}
+\taxon{Decision}
+\meta{id}{D-TL-18}
+\meta{area}{tooling}
+\meta{origin}{design/06-tooling.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional.}
+\meta{supersedes}{dec-tl-0007}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:tl}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{Benchmark the bundled seal on a nontrivial client. Adjust package granularity if projections or dependencies are expensive, without weakening the specification. Keep object construction explicit and existence classes Prop-valued. Validated finite shape computation may remain transparent in Theory. Measure before adding elaborate API generators or indexing services.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Empty builds cannot detect performance failures through an actual interface.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Performance fixes that silently expose sealed equations.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-fd-0002} performance record and \ref{ms-0003} regression measurements.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional.}
+}

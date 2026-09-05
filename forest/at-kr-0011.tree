@@ -3,11 +3,12 @@
 \meta{id}{AT-KR-11}
 \meta{area}{kernel}
 \meta{origin}{design/01-kernel.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:kr}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{Fibrant replacement.}
-\p{Named by: \ref{dec-kr-0011}, \ref{dec-sp-0008}.}
+\p{, \ref{at-fd-0003}, \ref{at-fd-0008}}
+\p{Named by: \ref{dec-kr-0023}, \ref{dec-rt-0022}.}
 \p{\em{Lean declaration(s):} none yet.}

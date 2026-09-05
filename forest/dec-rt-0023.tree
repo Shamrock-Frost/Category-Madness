@@ -1,0 +1,33 @@
+\title{D-RT-23 · Relative maps and categorical maps}
+\taxon{Decision}
+\meta{id}{D-RT-23}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional until M-F establishes both constructions and their bridge.}
+\meta{supersedes}{dec-rt-0008}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:rt}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{\code{MapRel(A,P; f)} is the simplicial presheaf mapping space over the fixed label function \code{f}, using a coherent Reedy-fibrant target and any required cofibrant source. A relative version fixes a prescribed subdiagram \code{B → A} by taking a fibre of the restriction map. Strict fibres are used when that restriction is a proved Kan fibration; otherwise choose a functorial homotopy-fibre construction for the whole diagram. For Segal categories, \code{MapCat(C,D)} denotes the mapping space of their localization at standard DK-equivalences, implemented by a proved categorical framing or complete-Segal-space comparison. It models the core of \code{Fun(C,D)}. \code{MapCat} has no fixed label function. General mapping spaces of localized VDCs, if needed later, receive a separate definition.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Relative diagram choices and equivalences between functors have different roles.}
+}
+\subtree{
+  \title{Rejected}
+  \p{A disjoint union of fixed-label \code{MapRel} spaces as the definition of \code{MapCat}.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-rt-0006} now concerns only \code{MapRel}: independence up to weak equivalence and strict maps for discrete targets. \ref{at-fd-0004} requires \code{MapCat(1,I)} contractible and \code{MapCat(1,BG) ≃ BG}. No acceptance test identifies these two APIs.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional until \ref{ms-foundation} establishes both constructions and their bridge.}
+}

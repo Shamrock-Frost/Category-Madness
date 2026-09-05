@@ -3,17 +3,17 @@
 \meta{id}{D-UP-01}
 \meta{area}{universal properties}
 \meta{origin}{design/03-universal-properties.md}
-\meta{status}{frozen}
+\meta{status}{superseded}
 \meta{status-text}{frozen.}
 \meta{supersedes}{none}
-\meta{superseded-by}{none}
+\meta{superseded-by}{dec-up-0010}
 \tag{decision}
 \tag{area:up}
-\tag{status:frozen}
+\tag{status:superseded}
 
 \subtree{
   \title{Decision}
-  \p{\code{IsTerminal t : Prop := ∀ x, Contractible (C(x, t))}, with the theorem, proved immediately after, that this is equivalent to the \em{global} form: for every Segal category \code{K}, restriction \code{Map(K ⋆ Δ[0], C)_{t} → Map(K, C)} (cones with vertex \code{t}) is a trivial fibration. The global form is the one used downstream: it is what makes lifts along a diagram of problems coherent, and \code{Classical.choose} is applied to a \em{section} of it, never to the fibres one at a time (→ \ref{dec-up-0006}). The equivalence of the two forms uses boundary fibrancy (→ \ref{dec-rt-0001} (2)): a Kan fibration with contractible fibres over every vertex is a trivial fibration. \code{Terminal C := { t // IsTerminal t }}. Theorem: the full sub-Segal-category of \code{C} on terminal objects is a contractible ∞-groupoid (any two terminal objects are connected by a contractible space of equivalences). Initial objects are dual (→ \ref{dec-up-0005}).}
+  \p{\code{IsTerminal t : Prop := ∀ x, Contractible (C(x, t))}, with the theorem, proved immediately after, that this is equivalent to the \em{global} form: for every Segal category \code{K}, restriction \code{Map(K ⋆ Δ[0], C)_{t} → Map(K, C)} (cones with vertex \code{t}) is a trivial fibration. The global form is the one used downstream: it is what makes lifts along a diagram of problems coherent, and \code{Classical.choose} is applied to a \em{section} of it, never to the fibres one at a time (→ \ref{dec-up-0006}). The equivalence of the two forms uses boundary fibrancy (→ D-RT-01 (2)): a Kan fibration with contractible fibres over every vertex is a trivial fibration. \code{Terminal C := { t // IsTerminal t }}. Theorem: the full sub-Segal-category of \code{C} on terminal objects is a contractible ∞-groupoid (any two terminal objects are connected by a contractible space of equivalences). Initial objects are dual (→ \ref{dec-up-0005}).}
 }
 \subtree{
   \title{Rationale}

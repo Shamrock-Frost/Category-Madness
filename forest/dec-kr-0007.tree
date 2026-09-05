@@ -3,13 +3,13 @@
 \meta{id}{D-KR-07}
 \meta{area}{kernel}
 \meta{origin}{design/01-kernel.md}
-\meta{status}{frozen}
+\meta{status}{superseded}
 \meta{status-text}{frozen.}
 \meta{supersedes}{none}
-\meta{superseded-by}{none}
+\meta{superseded-by}{dec-kr-0019}
 \tag{decision}
 \tag{area:kr}
-\tag{status:frozen}
+\tag{status:superseded}
 
 \subtree{
   \title{Decision}

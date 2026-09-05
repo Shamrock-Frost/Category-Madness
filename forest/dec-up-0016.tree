@@ -1,0 +1,33 @@
+\title{D-UP-16 · Shape extensions}
+\taxon{Decision}
+\meta{id}{D-UP-16}
+\meta{area}{universal properties}
+\meta{origin}{design/03-universal-properties.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional until M4.}
+\meta{supersedes}{dec-up-0007}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:up}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{For a shape inclusion \code{i}, use \code{Lan_i ⊣ i* ⊣ Ran_i} with existence hypotheses. For a full truncation inclusion, \code{sk_n = Lan_i i*} and \code{cosk_n = Ran_i i*} are endofunctors with \code{sk_n ⊣ cosk_n}, not the reverse. The Čech nerve of \code{x → s} is \code{cosk₀} in augmented simplicial objects over s, when the required finite limits exist. Prove its levels, augmentation, simplicial identities, and functoriality in the map. Other shape extensions are added only for established indexing functors.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Shape language packages the result after existence and coherence are proved.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Producing only a family of level objects and calling it a simplicial diagram.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-up-0006}: the Čech construction; \ref{at-up-0007}: the three adjunctions and correct skeleton/coskeleton orientation.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional until \ref{ms-0004}.}
+}

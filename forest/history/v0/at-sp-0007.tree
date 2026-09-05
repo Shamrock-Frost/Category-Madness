@@ -1,0 +1,13 @@
+\title{AT-SP-7 · Planar ∞-operads as monads in a multimatrix VDC∞}
+\taxon{Acceptance test}
+\meta{id}{AT-SP-7}
+\meta{area}{spaces and enrichment}
+\meta{origin}{design/05-spaces-enrichment.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:sp}
+\tag{status:unstated}
+
+\p{Planar ∞-operads as monads in a multimatrix VDC∞.}
+\p{Named by: \ref{dec-sp-0006}.}
+\p{\em{Lean declaration(s):} none yet.}

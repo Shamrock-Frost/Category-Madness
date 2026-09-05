@@ -1,0 +1,21 @@
+\title{D-TL-05 · \code{extend}}
+\taxon{Decision}
+\meta{id}{D-TL-05}
+\meta{area}{tooling}
+\meta{origin}{design/06-tooling.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen (existence), provisional (interface).}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:tl}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{A tactic/command for Kan extension along shape inclusions: given \code{i : J → J'} between shapes and \code{F : N J → C}, produces the pointwise extension statement (limits over slices \code{(j' ↓ i)}), discharges existence from \code{HasLimitsOfShape} hypotheses, and names the witness. Specializations: \code{cosk_n}, \code{sk_n}, Čech (→ \ref{dec-up-0007}). This replaces the coherence tactic of biased designs (→ \ref{dec-ch-0003}).}
+}
+\subtree{
+  \title{Status}
+  \p{frozen (existence), provisional (interface).}
+}

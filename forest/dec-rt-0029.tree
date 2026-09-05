@@ -1,0 +1,33 @@
+\title{D-RT-29 · Thin API}
+\taxon{Decision}
+\meta{id}{D-RT-29}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional; implement after the semantic prototype.}
+\meta{supersedes}{dec-rt-0014}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:rt}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{Generate convenient hom, identity, binary and unbiased composition, functor, profunctor, and transformation APIs from proved interface laws. Human notation is a separate generated view. Do not generate mathematical laws from unproved signatures.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Presentation convenience should not reintroduce implementation dependencies.}
+}
+\subtree{
+  \title{Rejected}
+  \p{A generator that closes client proofs by unfolding root implementations.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-rt-0010}, \ref{at-rt-0012} and the \ref{ms-0003} swap build with a nontrivial client.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional; implement after the semantic prototype.}
+}

@@ -1,0 +1,33 @@
+\title{D-CH-16 · Unbiased and shape-indexed}
+\taxon{Decision}
+\meta{id}{D-CH-16}
+\meta{area}{charter}
+\meta{origin}{design/00-charter.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen policy; computational API provisional.}
+\meta{supersedes}{dec-ch-0003}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:ch}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Use shape-indexed limits and unbiased multimaps. Products are indexed by sets; finite products are the finite case. Čech diagrams are obtained by augmented \code{cosk₀} where the required limits exist. Composition is controlled by shape functoriality and universal cells. Independently chosen composites require comparison paths or cells; shape equality alone handles restrictions from the same diagram.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Unbiased presentations organize coherence; they do not remove its proofs.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Treating weak composites as strictly equal; requiring a general coherence tactic before the mathematical comparison lemmas exist.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-up-0006}, \ref{at-fd-0010}.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen policy; computational API provisional.}
+}

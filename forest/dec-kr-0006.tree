@@ -3,13 +3,13 @@
 \meta{id}{D-KR-06}
 \meta{area}{kernel}
 \meta{origin}{design/01-kernel.md}
-\meta{status}{frozen}
+\meta{status}{superseded}
 \meta{status-text}{frozen (the exact list of incidence relations and the face/degeneracy description are provisional until formalized).}
 \meta{supersedes}{none}
-\meta{superseded-by}{none}
+\meta{superseded-by}{dec-kr-0018}
 \tag{decision}
 \tag{area:kr}
-\tag{status:frozen}
+\tag{status:superseded}
 
 \subtree{
   \title{Decision}

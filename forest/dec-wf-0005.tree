@@ -3,13 +3,13 @@
 \meta{id}{D-WF-05}
 \meta{area}{forest and workflow}
 \meta{origin}{design/07-forest-workflow.md}
-\meta{status}{frozen}
+\meta{status}{superseded}
 \meta{status-text}{frozen (MVP tool list provisional).}
 \meta{supersedes}{none}
-\meta{superseded-by}{none}
+\meta{superseded-by}{dec-wf-0012}
 \tag{decision}
 \tag{area:wf}
-\tag{status:frozen}
+\tag{status:superseded}
 
 \subtree{
   \title{Decision}

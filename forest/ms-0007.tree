@@ -1,13 +1,8 @@
-\title{M7 · Later}
+\title{M7 · Extensions}
 \taxon{Milestone}
 \meta{id}{M7}
 \meta{origin}{design/08-roadmap.md}
 \meta{status}{planned}
 \tag{milestone}
 
-\ul{
-  \li{Self-hosted kernel and the axiom build variant (\ref{dec-ch-0012}).}
-  \li{The strict monads \code{T_ℕ}, \code{T_𝔹}, \code{T_Σ} (and \code{T_G} for action operads) on \code{Mat(Kan)}; the horizontal Kleisli construction \code{H-Kl(T, X)} and Cruttwell–Shulman's equipment theorem at ∞ (\ref{at-sp-0013}); planar/braided/symmetric ∞-operads as monads in the Kleisli VDC∞s; symmetric sequences as the one-object case; \code{E_1}, \code{E_2}, \code{E_∞} as contractible monads (\ref{dec-sp-0009}, \ref{at-sp-0009}…\ref{at-sp-0011}); \code{E_n} for finite \code{n ≥ 3} via Berger's complete-graph operads; symmetric monoidal ∞-categories as \code{E_∞}-algebras in \code{Cat_∞}.}
-  \li{Comparisons of \ref{dec-sp-0008} (Bergner, Joyal–Tierney, HHM, style A).}
-  \li{Cosmoi (\ref{dec-ft-0005}, \ref{at-ft-0009}); general E1 enrichment (\ref{dec-sp-0007}); Θ_n and (∞,n); test categories; categorical logic proper (comprehension categories/CwFs built on the fibration layer, with \code{U} as the universe object).}
-}
+\p{The symmetry/braiding monads on the corrected profunctor ambient, the ∞-Kleisli theorem, symmetric sequences and operads (\ref{at-sp-0009}/10/13), precisely scoped E_n examples (\ref{at-sp-0011}), general monoidal enrichment, cosmoi, additional shapes and geometric substrate, and a self-hosted kernel. Symmetric monoidal ∞-category examples include their actual \code{Cat_∞} colimit prerequisites. Each extension has its own statement and comparison gate.}

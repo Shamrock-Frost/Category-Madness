@@ -3,11 +3,12 @@
 \meta{id}{AT-KR-12}
 \meta{area}{kernel}
 \meta{origin}{design/01-kernel.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:kr}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{Grids ≅ typed leveled 2-molecules.}
-\p{Named by: \ref{dec-kr-0006}, \ref{dec-kr-0012}, \ref{dec-tl-0010}.}
+\p{/13/14 are deferred geometric comparisons, with exact statements required before promotion from proposed to stated}
+\p{Named by: \ref{dec-kr-0024}.}
 \p{\em{Lean declaration(s):} none yet.}

@@ -1,0 +1,13 @@
+\title{AT-RT-9 · Comparison with style A (M6+, optional)}
+\taxon{Acceptance test}
+\meta{id}{AT-RT-9}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:rt}
+\tag{status:unstated}
+
+\p{Comparison with style A (\ref{ms-0006}+, optional).}
+\p{Named by: \ref{dec-rt-0002}, \ref{dec-rt-0006}, \ref{dec-sp-0008}.}
+\p{\em{Lean declaration(s):} none yet.}

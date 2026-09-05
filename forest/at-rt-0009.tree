@@ -3,11 +3,12 @@
 \meta{id}{AT-RT-9}
 \meta{area}{root}
 \meta{origin}{design/02-root.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:rt}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{Comparison with style A (\ref{ms-0006}+, optional).}
-\p{Named by: \ref{dec-rt-0002}, \ref{dec-rt-0006}, \ref{dec-sp-0008}.}
+\p{Current proposed scope is specified by the active decisions that name this test.}
+\p{Named by: \ref{dec-ch-0018}, \ref{dec-rt-0021}, \ref{dec-sp-0017}.}
 \p{\em{Lean declaration(s):} none yet.}

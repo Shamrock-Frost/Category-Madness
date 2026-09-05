@@ -1,0 +1,29 @@
+\title{D-RT-10 · \code{Mat(Set)} and \code{Category}}
+\taxon{Decision}
+\meta{id}{D-RT-10}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen at M3.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:rt}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{\code{Mat(Set.{v})} is the discrete VDC∞ with label set \code{Type v}, vertical morphisms functions, horizontal morphisms \code{A ⇸ B} families \code{A → B → Type v}, \code{n}-ary cells \code{(M₁,…,M_n) ⇒ N} over \code{(f,g)} families of functions \code{M₁(a₀,a₁) → ⋯ → M_n(a_{n−1},a_n) → N(f a₀, g a_n)}, nullary-target cells \code{(M₁,…,M_n) ⇒ ∅} over \code{(f,g)} families of functions into \code{f a₀ = g a_n} \strong{(verify: this is Koudenburg's augmentation of \code{Mat}; the identity matrix is a unit and nullary-target cells are cells into it)}. \code{Category A := Monad (Mat Set) A} for \code{A : Type v}. Unwinding: \code{Hom : A → A → Type v}, \code{n}-ary composites \code{Hom(a₀,a₁) → ⋯ → Hom(a_{n−1},a_n) → Hom(a₀,a_n)} for all \code{n ≥ 0}, compatible under all maps of \code{Δ} — the unbiased families definition, associativity being functoriality (→ \ref{dec-ch-0003}). \code{Cat := Mod(Mat Set)}: functors are vertical morphisms, profunctors horizontal morphisms, natural transformations vertical 2-cells, cells of profunctors the cells.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Families rather than spans: composability by typing. \code{Mat} rather than \code{Span} at the discrete level because \code{Span(Set)} needs pullbacks and yields the component-wise presentation (→ \ref{dec-sp-0005} for where spans return).}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-rt-0002}; \ref{at-rt-0010}: \code{Category A} is equivalent (as a type, over \code{A}) to the classical \code{{Hom, id, comp, laws}} structure and to Segal presheaves on \code{Δ_A} (→ \ref{at-kr-0009}); \ref{at-rt-0011}: the vertical 2-category of \code{Cat} is the classical one.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen at \ref{ms-0003}.}
+}

@@ -1,0 +1,33 @@
+\title{D-SP-10 · A classifier and its universal family}
+\taxon{Decision}
+\meta{id}{D-SP-10}
+\meta{area}{spaces and enrichment}
+\meta{origin}{design/05-spaces-enrichment.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional construction route; full proof M6.}
+\meta{supersedes}{dec-sp-0001}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:sp}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{A proposed \code{U.{v}} classifies small Kan complexes with a universal family \code{Ũ → U}; its simplex sets occupy a larger universe than its small fibres. Give a normalization/size construction and prove its Kan and classification properties. If paths in U are used to encode equivalences of represented spaces, prove the exact path-to-equivalence comparison required; it is not supplied by Kan fibrancy alone. Path spaces of U represent equivalences under that comparison, not arbitrary maps. The family of maps between fibres is built separately from the universal family and must have the required boundary fibration theorem.}
+}
+\subtree{
+  \title{Rationale}
+  \p{A classifier is useful but not needed to begin with a small explicit space-enriched example, and its paths must have the advertised meaning.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Inferring all matrix boundary fibrancy from \code{U^Δ[1] → U×U} alone; assuming a small collection of all small objects without a universe increase.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-sp-0001}: classifier, universality, size, Kan properties, and the exact equivalence comparison used by Mat; \ref{at-fd-0001} for signatures, \ref{at-fd-0008} for a small model.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional construction route; full proof \ref{ms-0006}.}
+}

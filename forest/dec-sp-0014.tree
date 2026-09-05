@@ -1,0 +1,33 @@
+\title{D-SP-14 · Spans and category objects in spaces}
+\taxon{Decision}
+\meta{id}{D-SP-14}
+\meta{area}{spaces and enrichment}
+\meta{origin}{design/05-spaces-enrichment.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional; construct at M5/M6, full comparison later if necessary.}
+\meta{supersedes}{dec-sp-0005}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:sp}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{For S with specified finite-limit existence, construct \code{Span(S)} from a functorial twisted-arrow-type diagram recipe with designated pullback conditions. State the variance of \code{Tw}, label objects and whole boundary spans explicitly, and prove preservation of designated squares under each shape map. Values are relative diagram spaces over their labelled data, not unrestricted spaces of all diagrams. If direct restrictions do not preserve the condition, supply the necessary Kan extension construction with coherence. Prove fibrancy where needed and invariance under the chosen categorical equivalences. Category objects in spaces arise as monads; their complete presentation is a further construction.}
+}
+\subtree{
+  \title{Rationale}
+  \p{The span construction is a plausible shape-based approach, but its virtual/augmented version needs an actual construction and proof.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Arbitrary pullback choices at individual shapes; direct identification of all Segal spaces with complete Segal spaces; inheriting a VDC comparison solely from a comparison of categories of category objects.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-sp-0004}: span root and its cell/boundary formulas. \ref{at-sp-0005} is split into (a) the known-model categorical comparison after appropriate localization and (b) a full augmented-VDC equivalence with modules and cells, which is a stronger, separately proved target.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional; construct at \ref{ms-0005}/\ref{ms-0006}, full comparison later if necessary.}
+}

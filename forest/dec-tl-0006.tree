@@ -3,13 +3,13 @@
 \meta{id}{D-TL-06}
 \meta{area}{tooling}
 \meta{origin}{design/06-tooling.md}
-\meta{status}{frozen}
+\meta{status}{superseded}
 \meta{status-text}{frozen.}
 \meta{supersedes}{none}
-\meta{superseded-by}{none}
+\meta{superseded-by}{dec-tl-0017}
 \tag{decision}
 \tag{area:tl}
-\tag{status:frozen}
+\tag{status:superseded}
 
 \subtree{
   \title{Decision}
@@ -18,7 +18,7 @@
     \li{\strong{Import ban.} No file under \code{Theory/} imports \code{Mathlib.CategoryTheory.*}, \code{Mathlib.AlgebraicTopology.*}, \code{Kernel.*}, \code{Root.*}. \code{Mathlib.Tactic.*} and friends allowed.}
     \li{\strong{Unfolding ban.} In \code{Theory/}: no \code{unseal}, \code{with_unfolding_all}, \code{delta}, \code{unfold <sealed>}, \code{simp [<sealed>]}, \code{dsimp only [<sealed>]}, \code{rw [<x>_def]}, \code{show} that changes a sealed head symbol, \code{cast}/\code{▸}/\code{HEq} on sealed types, \code{decide} on sealed props (the transparent shape types of \ref{dec-tl-0010} are exempt), \code{rfl}/\code{Eq.refl}-closed goals whose sides differ syntactically at a sealed head. Implementation: a Lean linter over syntax plus an \code{Expr}-level check that no proof term in \code{Theory/} references a \code{_def} lemma or a kernel constant.}
     \li{\strong{Statement hygiene.} \code{Interface/} statements mention only interface constants.}
-    \li{\strong{Swap test.} Build \code{Theory/} against \code{Interface-Stub/} (bodiless axioms with the same statements). Green means no leak; it is the operational content of → \ref{dec-ch-0012}.}
+    \li{\strong{Swap test.} Build \code{Theory/} against \code{Interface-Stub/} (bodiless axioms with the same statements). Green means no leak; it is the operational content of → D-CH-12.}
     \li{\strong{Sorry accounting.} \code{collectAxioms} over every declaration; \code{sorryAx} is reported per node in the forest (→ \ref{dec-wf-0001}) and blocks merges to \code{main} outside \code{wip/}.}
     \li{\strong{Universe test.} \code{Theory/} builds with \code{autoImplicit false} and no universe annotations beyond declared ones.}
     \li{\strong{Regeneration.} Generated human-layer files match their generators.}

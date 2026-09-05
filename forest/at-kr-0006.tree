@@ -3,11 +3,12 @@
 \meta{id}{AT-KR-6}
 \meta{area}{kernel}
 \meta{origin}{design/01-kernel.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:kr}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{Elegance of Δ, Ω_p, Θ^aug_fc.}
-\p{Named by: \ref{dec-kr-0005}, \ref{dec-kr-0006}.}
+\p{for the adopted planar shapes}
+\p{Named by: \ref{dec-kr-0017}.}
 \p{\em{Lean declaration(s):} none yet.}

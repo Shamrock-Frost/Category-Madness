@@ -1,0 +1,33 @@
+\title{D-CH-23 · Full universe polymorphism}
+\taxon{Decision}
+\meta{id}{D-CH-23}
+\meta{area}{charter}
+\meta{origin}{design/00-charter.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen policy; concrete signatures validated at M-F.}
+\meta{supersedes}{dec-ch-0010}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:ch}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Separate object and hom universes in category APIs. Root label collections, entry types, and spaces of matrices are not required to occupy the same universe. Universe maxima and successor levels required by Lean are explicit (\ref{dec-rt-0027}).}
+}
+\subtree{
+  \title{Rationale}
+  \p{Large collections of small objects remain large collections.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Using augmentation or \code{ULift} as universe lowering.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-fd-0001}.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen policy; concrete signatures validated at \ref{ms-foundation}.}
+}

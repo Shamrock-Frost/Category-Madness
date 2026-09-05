@@ -1,0 +1,33 @@
+\title{D-TL-14 · Duality tooling}
+\taxon{Decision}
+\meta{id}{D-TL-14}
+\meta{area}{tooling}
+\meta{origin}{design/06-tooling.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional, M4; simple prototypes may precede it.}
+\meta{supersedes}{dec-tl-0003}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:tl}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{Build \code{to_dual} for a registered collection of proved duality operations and transport laws. Automatically generate the supported Segal-category cases. Record hand-proved duals outside that domain; report unsupported transformations explicitly.}
+}
+\subtree{
+  \title{Rationale}
+  \p{The scope follows actual mathematical dualities.}
+}
+\subtree{
+  \title{Rejected}
+  \p{A total transformation on augmented roots without a valid vertical opposite.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-up-0005} and \ref{at-up-0007} after the underlying operations are proved.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional, \ref{ms-0004}; simple prototypes may precede it.}
+}

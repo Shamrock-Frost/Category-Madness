@@ -3,13 +3,13 @@
 \meta{id}{D-UP-03}
 \meta{area}{universal properties}
 \meta{origin}{design/03-universal-properties.md}
-\meta{status}{frozen}
+\meta{status}{superseded}
 \meta{status-text}{frozen (the exact join used for commas is provisional).}
 \meta{supersedes}{none}
-\meta{superseded-by}{none}
+\meta{superseded-by}{dec-up-0012}
 \tag{decision}
 \tag{area:up}
-\tag{status:frozen}
+\tag{status:superseded}
 
 \subtree{
   \title{Decision}

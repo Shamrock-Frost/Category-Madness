@@ -8,5 +8,5 @@
 \tag{area:up}
 \tag{status:open}
 
-\p{Do we want \code{HasLimitsOfShape J C} as a Prop-class for instance search, or always explicit hypotheses? Default: Prop-classes are allowed (they are propositions), never data-classes.}
+\p{Prop-valued existence classes are allowed; chosen witnesses are passed explicitly. No data-valued chosen-limit instance is introduced.}
 \p{\em{Resolution:} open. Decided by the human; record the answer as a decision node that this node then cites.}

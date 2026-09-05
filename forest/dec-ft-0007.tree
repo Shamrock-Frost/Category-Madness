@@ -1,0 +1,33 @@
+\title{D-FT-07 · Horizontal composites and the double nerve}
+\taxon{Decision}
+\meta{id}{D-FT-07}
+\meta{area}{formal theory}
+\meta{origin}{design/04-formal-theory.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional. The set-level instance precedes the full ∞-comparison.}
+\meta{supersedes}{dec-ft-0002}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:ft}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{\code{HasComposites P} is existence of the required opcartesian universal cells, including specified treatment of the empty path. When the hypotheses hold, construct a double Segal nerve by coherent diagrams of paths and composite witnesses. Prove that its witness choices are contractible and that it has the relevant invariance and comparison with a double ∞-category model. This is a construction, not restriction along an assumed inclusion of \code{Δ×Δ} into the virtual arity category.}
+}
+\subtree{
+  \title{Rationale}
+  \p{A virtual path can have many horizontal arrows but no specified composite.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Obtaining a double nerve merely by saying horizontal composites exist.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-ft-0004}: comparison with the precisely named Ruit model after any required completion; \ref{at-ft-0005}: ordinary profunctor coends and their classical double category.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional. The set-level instance precedes the full ∞-comparison.}
+}

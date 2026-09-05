@@ -1,0 +1,33 @@
+\title{D-KR-22 · Kan machinery and relative maps}
+\taxon{Decision}
+\meta{id}{D-KR-22}
+\meta{area}{kernel}
+\meta{origin}{design/01-kernel.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional inventory-dependent implementation; needed fragments at M-F.}
+\meta{supersedes}{dec-kr-0010}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:kr}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{Reuse or prove Kan complexes and fibrations, anodyne maps, weak equivalences, mapping complexes, path-space homotopy fibres, and the pushout-product lemmas needed by the selected diagram model. A Kan fibration with contractible fibres over all vertices is a trivial fibration; coherent sections use a proved lifting theorem. Relative mapping restrictions are Kan fibrations only with the specified source cofibration and fibrant target hypotheses. Homotopy invariance is first proved for levelwise weak equivalences in that model. Categorical invariance is a separate theorem. Keep boundary representatives when forming fibres; there is no path-independent transport theorem for arbitrary Kan fibrations.}
+}
+\subtree{
+  \title{Rationale}
+  \p{These are the exact tools used by the repaired \code{MapRel} and \code{Mod}.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Generic claims of cartesian closure or replacement for an unspecified model.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-kr-0010}, \ref{at-fd-0003}, \ref{at-fd-0006}, \ref{at-fd-0008}.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional inventory-dependent implementation; needed fragments at \ref{ms-foundation}.}
+}

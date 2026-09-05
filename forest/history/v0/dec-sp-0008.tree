@@ -1,0 +1,21 @@
+\title{D-SP-08 · The named mountain, comparisons, model structures}
+\taxon{Decision}
+\meta{id}{D-SP-08}
+\meta{area}{spaces and enrichment}
+\meta{origin}{design/05-spaces-enrichment.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen list; the mountain and the first two are M6, the rest \code{later}.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:sp}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Model structures are theorems, never definitions. The \strong{named mountain} is \code{HasColimits Kan} (and limits): an interface one-liner whose proof is the Segal-category analogue of HTT 4.2.4.1 — homotopy colimits of Kan complexes (Bousfield–Kan / Hirschhorn) are colimits in the Segal category \code{Kan} in the sense of → \ref{dec-up-0004}, established through the identification of derived mapping spaces. The Segal-native route is Simpson's \em{Homotopy Theory of Higher Categories} (limits and colimits in \code{nCAT} with discrete object sets). Everything downstream depends on it: cocompleteness of \code{PSh(C)}, coends, composites of profunctors (→ \ref{dec-ft-0002}), Kan extensions along Yoneda, the Kleisli VDC∞s and composition products of → \ref{dec-sp-0009}. It is scheduled by name in → \ref{rm-0000}. Other milestones, in the order they unblock things: Kan–Quillen (from the inventory if present); Reedy/Bergner for Segal categories (needed for \ref{at-kr-0011} and rectification); Segal categories ≃ complete Segal spaces (Bergner) as \ref{at-sp-0005}; complete Segal spaces ≃ quasi-categories (Joyal–Tierney) and Cisinski's \code{S} — optional, opens Kerodon/HTT as a source; dendroidal Segal spaces ≃ Lurie's ∞-operads (Heuts–Hinich–Moerdijk) — optional; style B ≃ style A for VDC∞ (\ref{at-rt-0009}) — optional.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen list; the mountain and the first two are \ref{ms-0006}, the rest \code{later}.}
+}

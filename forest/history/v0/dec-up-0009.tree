@@ -1,0 +1,34 @@
+\title{D-UP-09 · 2-level: universal properties in \code{Cat}}
+\taxon{Decision}
+\meta{id}{D-UP-09}
+\meta{area}{universal properties}
+\meta{origin}{design/03-universal-properties.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:up}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{\code{Vert P} sees vertical morphisms only: \code{Vert(Cat)} is the 1-category of categories and functors, and \code{Vert(Mod(Mat Kan))} has as mapping spaces the ∞-groupoids of functors and natural \em{equivalences}. Natural transformations are nullary cells into units and live in the equipment, not in \code{Vert}. Consequently:}
+  \ul{
+    \li{(∞,1)-universal properties in \code{Vert(Cat_∞)} are used for products, pullbacks, exponentials (functor objects), and cotensors with \code{[1]}. They suffice for these because the core of \code{Fun(E, −)} for all \code{E} (including \code{E × [1]}) detects the full ∞-category \code{Fun(E, −)}; a functor object is "an exponential in \code{Vert(Cat_∞)}", a localization "a functor with the universal property in \code{Vert(Cat_∞)}", and the concrete \code{[C, D]}, \code{C[W⁻¹]} are witnesses provided by constructions.}
+    \li{Anything lax or 2-categorical — comma objects as 2-limits, Kleisli objects, lax monoidal structure, mates — is stated in the equipment \code{Mod(Mat Kan)} using cells (→ \ref{ft-0000}), never in \code{Vert}.}
+  }
+  \p{1-categorical universal properties in a strict \code{Cat} are never used.}
+}
+\subtree{
+  \title{Rationale}
+  \p{The earlier draft called \code{Vert} "2-dimensional"; it is not. The 2-dimensional data is in the cells, and the (∞,1)-part is enough exactly for the constructions listed.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-up-0008}: for discrete \code{C, D}, the exponential in \code{Vert(Cat)} is the functor category and its universal property is the classical one on cores.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen.}
+}

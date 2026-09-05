@@ -3,17 +3,17 @@
 \meta{id}{D-KR-01}
 \meta{area}{kernel}
 \meta{origin}{design/01-kernel.md}
-\meta{status}{frozen}
+\meta{status}{superseded}
 \meta{status-text}{frozen.}
 \meta{supersedes}{none}
-\meta{superseded-by}{none}
+\meta{superseded-by}{dec-kr-0013}
 \tag{decision}
 \tag{area:kr}
-\tag{status:frozen}
+\tag{status:superseded}
 
 \subtree{
   \title{Decision}
-  \p{Anything convenient, including a set-level definition of (augmented) virtual double categories and of free ones. These exist \em{only} to construct shape categories and to state the self-hosting theorem; they are not the library's notion of VDC, which is the discrete case of the root (→ \ref{dec-rt-0011}). Kernel files are marked \code{-- KERNEL} and live under \code{Kernel/}.}
+  \p{Anything convenient, including a set-level definition of (augmented) virtual double categories and of free ones. These exist \em{only} to construct shape categories and to state the self-hosting theorem; they are not the library's notion of VDC, which is the discrete case of the root (→ D-RT-11). Kernel files are marked \code{-- KERNEL} and live under \code{Kernel/}.}
 }
 \subtree{
   \title{Rationale}

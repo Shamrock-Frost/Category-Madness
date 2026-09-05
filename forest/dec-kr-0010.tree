@@ -3,17 +3,17 @@
 \meta{id}{D-KR-10}
 \meta{area}{kernel}
 \meta{origin}{design/01-kernel.md}
-\meta{status}{frozen}
+\meta{status}{superseded}
 \meta{status-text}{frozen.}
 \meta{supersedes}{none}
-\meta{superseded-by}{none}
+\meta{superseded-by}{dec-kr-0022}
 \tag{decision}
 \tag{area:kr}
-\tag{status:frozen}
+\tag{status:superseded}
 
 \subtree{
   \title{Decision}
-  \p{The kernel provides: Kan complexes; Kan fibrations and trivial fibrations as lifting properties; anodyne maps; simplicial homotopy (an equivalence relation on maps into Kan complexes); homotopy equivalences; \code{π₀}; contractibility; mapping spaces \code{L^K} and the exponential law; the pushout-product lemma (needed for \code{U^{Δ[1]} → U × U} fibrations, → \ref{dec-sp-0001}); homotopy fibre products via path spaces and the lemma that a strict fibre product along a fibration is a homotopy fibre product; Reedy fibrancy for \code{sSet}-valued presheaves on the shapes of \ref{dec-kr-0005}; the fact that discrete presheaves are Reedy fibrant and every map of discrete simplicial sets is a Kan fibration. Sourced from Mathlib wherever the inventory (\ref{dec-kr-0002}) finds it. The \strong{closure package} (→ \ref{dec-ch-0013}), proved here and exported through the interface: mapping spaces of presheaves \code{Map(A, P)} for \code{A ↪ B} a monomorphism and \code{P} Reedy fibrant give Kan fibrations \code{Map(B,P) → Map(A,P)}; exponentials of Reedy fibrant objects by cofibrant ones are Reedy fibrant; fibre products along Reedy fibrations are Reedy fibrant; a Kan fibration with contractible fibres over every vertex is a trivial fibration; homotopy invariance of \code{Map} in both variables among cofibrant sources and fibrant targets.}
+  \p{The kernel provides: Kan complexes; Kan fibrations and trivial fibrations as lifting properties; anodyne maps; simplicial homotopy (an equivalence relation on maps into Kan complexes); homotopy equivalences; \code{π₀}; contractibility; mapping spaces \code{L^K} and the exponential law; the pushout-product lemma (needed for \code{U^{Δ[1]} → U × U} fibrations, → \ref{dec-sp-0001}); homotopy fibre products via path spaces and the lemma that a strict fibre product along a fibration is a homotopy fibre product; Reedy fibrancy for \code{sSet}-valued presheaves on the shapes of \ref{dec-kr-0005}; the fact that discrete presheaves are Reedy fibrant and every map of discrete simplicial sets is a Kan fibration. Sourced from Mathlib wherever the inventory (\ref{dec-kr-0002}) finds it. The \strong{closure package} (→ D-CH-13), proved here and exported through the interface: mapping spaces of presheaves \code{Map(A, P)} for \code{A ↪ B} a monomorphism and \code{P} Reedy fibrant give Kan fibrations \code{Map(B,P) → Map(A,P)}; exponentials of Reedy fibrant objects by cofibrant ones are Reedy fibrant; fibre products along Reedy fibrations are Reedy fibrant; a Kan fibration with contractible fibres over every vertex is a trivial fibration; homotopy invariance of \code{Map} in both variables among cofibrant sources and fibrant targets.}
 }
 \subtree{
   \title{Rationale}

@@ -1,24 +1,14 @@
-\title{07 · Forest and workflow}
+\title{07 · Forest and workflow — revision 1}
 \taxon{Chapter}
 \meta{origin}{design/07-forest-workflow.md}
 \meta{layer}{human}
 \tag{chapter}
 
-\p{The forester (v5) forest is the bookkeeping system and, after \ref{ms-0000}, the primary human-facing document. Every non-private Lean declaration has a node. Design decisions, acceptance tests, milestones, and open questions are nodes. Human prose is a layer of nodes that transclude the generated ones (→ \ref{dec-ch-0007}).}
-\transclude{dec-wf-0001}
-\transclude{dec-wf-0002}
-\transclude{dec-wf-0003}
-\transclude{dec-wf-0004}
-\transclude{dec-wf-0005}
-\transclude{dec-wf-0006}
-\transclude{dec-wf-0007}
-\subtree{
-  \title{Porting instructions (phase −1 → \ref{ms-0000})}
-  \ol{
-    \li{Create the forest skeleton with the address scheme; one tree per document section marked \code{D-}, \code{AT-}, \code{OQ-}, plus one tree per milestone in → \ref{rm-0000}.}
-    \li{Preserve \em{Rationale} and \em{Rejected} verbatim; they are what future agents will search for.}
-    \li{Implement \code{forest-export} (\ref{dec-wf-0001}) against an empty Lean project so the pipeline exists before any mathematics does.}
-    \li{Stand up the MCP MVP (\ref{dec-wf-0005}) over the ported forest.}
-    \li{Report gaps: any decision that could not be expressed as a node with the fields of \ref{dec-wf-0002} is an open question for the human.}
-  }
-}
+\p{The decision registry starts at \ref{ms-0000}. The full forest export and retrieval service expand after \ref{ms-foundation}, when declarations and proofs provide useful content. Historical decisions remain immutable and are not active work items.}
+\transclude{dec-wf-0008}
+\transclude{dec-wf-0009}
+\transclude{dec-wf-0010}
+\transclude{dec-wf-0011}
+\transclude{dec-wf-0012}
+\transclude{dec-wf-0013}
+\transclude{dec-wf-0014}

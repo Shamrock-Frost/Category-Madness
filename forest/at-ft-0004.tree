@@ -3,11 +3,12 @@
 \meta{id}{AT-FT-4}
 \meta{area}{formal theory}
 \meta{origin}{design/04-formal-theory.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:ft}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{With composites, an equipment is a Ruit ∞-equipment.}
-\p{Named by: \ref{dec-ft-0002}.}
+\p{comparison with the precisely named Ruit model after any required completion}
+\p{Named by: \ref{dec-ft-0007}.}
 \p{\em{Lean declaration(s):} none yet.}

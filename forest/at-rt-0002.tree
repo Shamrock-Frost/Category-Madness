@@ -1,13 +1,14 @@
-\title{AT-RT-2 · \code{Mat(Set)} is a VDC∞}
+\title{AT-RT-2 · \\code{Mat(Set)} is a VDC∞}
 \taxon{Acceptance test}
 \meta{id}{AT-RT-2}
 \meta{area}{root}
 \meta{origin}{design/02-root.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:rt}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{\code{Mat(Set)} is a VDC∞.}
-\p{Named by: \ref{dec-rt-0001}, \ref{dec-rt-0010}.}
+\p{, \ref{at-fd-0008}, \ref{at-rt-0008}}
+\p{Named by: \ref{dec-rt-0025}, \ref{dec-sp-0012}.}
 \p{\em{Lean declaration(s):} none yet.}

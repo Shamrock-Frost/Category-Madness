@@ -1,0 +1,13 @@
+\title{AT-KR-1 · \code{Θ_T(free category) ≅ SimplexCategory}}
+\taxon{Acceptance test}
+\meta{id}{AT-KR-1}
+\meta{area}{kernel}
+\meta{origin}{design/01-kernel.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:kr}
+\tag{status:unstated}
+
+\p{\code{Θ_T(free category) ≅ SimplexCategory}.}
+\p{Named by: \ref{dec-kr-0003}.}
+\p{\em{Lean declaration(s):} none yet.}

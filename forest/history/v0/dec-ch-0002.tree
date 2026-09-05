@@ -1,0 +1,29 @@
+\title{D-CH-02 · "A, not the"}
+\taxon{Decision}
+\meta{id}{D-CH-02}
+\meta{area}{charter}
+\meta{origin}{design/00-charter.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:ch}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Every universal object is \em{a} witness of a Prop-valued universal property. No global choice functions (\code{limit F}, \code{X ⨯ Y}) exist. \code{lift}-style operations are \code{Classical.choose} on unique existence or contractibility. Theorems quantify over witnesses. Witnesses of a given universal property form a contractible space (1-level: a contractible groupoid), and transport between witnesses is functoriality in the witness.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Definitional uniqueness is a lie about mathematics; contractibility of the witness space is the truth, and it is the statement that survives the passage to ∞.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Data-valued universal properties with \code{Subsingleton} instances (keeps a constructive door open, but reintroduces the temptation to unfold \code{lift}). Chosen-limit typeclasses (instance diamonds).}
+}
+\subtree{
+  \title{Status}
+  \p{frozen.}
+}

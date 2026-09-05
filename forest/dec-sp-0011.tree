@@ -1,0 +1,33 @@
+\title{D-SP-11 · The category of spaces}
+\taxon{Decision}
+\meta{id}{D-SP-11}
+\meta{area}{spaces and enrichment}
+\meta{origin}{design/05-spaces-enrichment.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional; small test early, full category M6.}
+\meta{supersedes}{dec-sp-0002}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:sp}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{Start with the strict simplicial category of small Kan complexes whose mapping objects are \code{L^K}. Construct its categorical Segal/complete presentation using the proved framing/comparison of \ref{dec-rt-0023}. Export \code{Kan} with maps equivalent to \code{L^K}, compatible composition, and the actual fibrancy certificates. A second universe-family implementation may be compared later. Distinguish Reedy replacement of a presentation from categorical completion. Identify this bootstrap \code{Kan} with the root monad form through \ref{at-sp-0002}/3, rather than defining it circularly using itself.}
+}
+\subtree{
+  \title{Rationale}
+  \p{This gives a named construction route and a separately proved self-hosting bridge.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Declaring a Kan object classifier already to be the category of spaces; using paths between its points as all maps.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-sp-0002}: the root representation and classical homotopy category; \ref{at-fd-0004} and \ref{at-fd-0008} for the early categorical comparison.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional; small test early, full category \ref{ms-0006}.}
+}

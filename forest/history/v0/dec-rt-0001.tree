@@ -1,0 +1,40 @@
+\title{D-RT-01 · Virtual double ∞-category}
+\taxon{Decision}
+\meta{id}{D-RT-01}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen at M3.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:rt}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{A VDC∞ with label set \code{X} is a presheaf \code{P : Θᵒᵖ → sSet} such that}
+  \ol{
+    \li{\strong{(Kan)} every \code{P(θ)} is a Kan complex;}
+    \li{\strong{(boundary fibrancy)} for every elementary cell shape \code{c} (with or without output), the restriction map \code{P(c) → lim_{∂c} P} to the product of the values on its boundary edges is a Kan fibration;}
+    \li{\strong{(Segal)} for every non-elementary \code{θ}, the map \code{P(θ) → lim_{Sc(θ)} P} to the strict limit over the Segal core (→ \ref{dec-kr-0004}) is a homotopy equivalence;}
+    \li{\strong{(unit)} every \code{P(pt x)} is contractible.}
+  }
+  \p{The strict limit in (3) is a homotopy limit because of (2) and because all gluing over object positions is along discrete sets (labels).}
+}
+\subtree{
+  \title{Rationale}
+  \p{Conditions (1)–(4) are properties, stated with the kernel's vocabulary only (→ \ref{dec-kr-0010}). Objects are a set, so no completeness condition. Cells are E1. Augmented cells are in the shape category, so augmentation is not an extra axiom.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Requiring Reedy fibrancy in the definition. Strict examples (strict simplicial categories, \code{Mat(Kan)}, any algebraic model) are never Reedy fibrant: the matching map at a composite shape is the graph of composition, which is not a fibration. Fibrancy is a class with a replacement theorem (→ \ref{dec-rt-0007}). Stating (3) with homotopy limits via path spaces instead of (2): equivalent, uglier; (2) holds in every example we intend and for all discrete presheaves.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-rt-0001} (discrete case, → \ref{dec-rt-0011}); \ref{at-rt-0002} (\code{Mat(Set)} is a VDC∞); \ref{at-rt-0003} (nerves of set-level VDCs satisfy (1)–(4)); \ref{at-rt-0008} (\code{Mat(Kan)}, at \ref{ms-0006}).}
+}
+\subtree{
+  \title{Status}
+  \p{frozen at \ref{ms-0003}.}
+}

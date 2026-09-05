@@ -1,0 +1,33 @@
+\title{D-KR-24 · Geometric substrate}
+\taxon{Decision}
+\meta{id}{D-KR-24}
+\meta{area}{kernel}
+\meta{origin}{design/01-kernel.md}
+\meta{status}{later}
+\meta{status-text}{later (after M3, specific clients determine priority).}
+\meta{supersedes}{dec-kr-0012}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:kr}
+\tag{status:later}
+
+\subtree{
+  \title{Decision}
+  \p{Oriented graded posets, molecules, joins, Gray products, and geometric pasting are optional presentations and tools after the algebraic root is validated. Every proposed equivalence between a geometric category and an arity category specifies morphisms as well as objects. A geometric presentation does not determine the root by itself. A renderer can begin with the validated elementary syntax.}
+}
+\subtree{
+  \title{Rationale}
+  \p{A large general substrate should follow evidence that it helps the chosen model.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Making the general pasting theorem and all geometric shape comparisons prerequisites for the first nondiscrete root example.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-kr-0012}/13/14 are deferred geometric comparisons, with exact statements required before promotion from proposed to stated.}
+}
+\subtree{
+  \title{Status}
+  \p{later (after \ref{ms-0003}, specific clients determine priority).}
+}

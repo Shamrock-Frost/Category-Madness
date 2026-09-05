@@ -1,0 +1,33 @@
+\title{D-CH-19 · Definitions and validation}
+\taxon{Decision}
+\meta{id}{D-CH-19}
+\meta{area}{charter}
+\meta{origin}{design/00-charter.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen policy.}
+\meta{supersedes}{dec-ch-0006}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:ch}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Definition-level decisions name acceptance tests with exact domains and comparison targets. Tests progress through proposed, stated, and proved. A revised statement invalidates prior validation until its proof is rechecked. Foundation choices remain provisional until \ref{ms-foundation}; a false test requires revising the definition or the advertised claim, not adding an axiom.}
+}
+\subtree{
+  \title{Rationale}
+  \p{This project includes mathematical research as well as proof production.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Freezing conjectural definitions solely because proofs are scheduled.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{All AT-FD tests and the registry audit in \ref{dec-wf-0010}.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen policy.}
+}

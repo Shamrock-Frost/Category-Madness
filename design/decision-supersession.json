@@ -1,0 +1,515 @@
+{
+  "revision": 1,
+  "date": "2026-09-05",
+  "base_archive_sha256": "5a960b01ad52e207779e4b1365f96da04654ce2714ac510078f1102f3f31462e",
+  "mathematical_validation": "No Lean proofs or implementations supplied; current tests are proposed.",
+  "supersession": [
+    {
+      "superseded": "D-CH-01",
+      "current": "D-CH-14",
+      "document": "00-charter.md",
+      "historical_document": "history/v0/00-charter.md"
+    },
+    {
+      "superseded": "D-CH-02",
+      "current": "D-CH-15",
+      "document": "00-charter.md",
+      "historical_document": "history/v0/00-charter.md"
+    },
+    {
+      "superseded": "D-CH-03",
+      "current": "D-CH-16",
+      "document": "00-charter.md",
+      "historical_document": "history/v0/00-charter.md"
+    },
+    {
+      "superseded": "D-CH-04",
+      "current": "D-CH-17",
+      "document": "00-charter.md",
+      "historical_document": "history/v0/00-charter.md"
+    },
+    {
+      "superseded": "D-CH-05",
+      "current": "D-CH-18",
+      "document": "00-charter.md",
+      "historical_document": "history/v0/00-charter.md"
+    },
+    {
+      "superseded": "D-CH-06",
+      "current": "D-CH-19",
+      "document": "00-charter.md",
+      "historical_document": "history/v0/00-charter.md"
+    },
+    {
+      "superseded": "D-CH-07",
+      "current": "D-CH-20",
+      "document": "00-charter.md",
+      "historical_document": "history/v0/00-charter.md"
+    },
+    {
+      "superseded": "D-CH-08",
+      "current": "D-CH-21",
+      "document": "00-charter.md",
+      "historical_document": "history/v0/00-charter.md"
+    },
+    {
+      "superseded": "D-CH-09",
+      "current": "D-CH-22",
+      "document": "00-charter.md",
+      "historical_document": "history/v0/00-charter.md"
+    },
+    {
+      "superseded": "D-CH-10",
+      "current": "D-CH-23",
+      "document": "00-charter.md",
+      "historical_document": "history/v0/00-charter.md"
+    },
+    {
+      "superseded": "D-CH-11",
+      "current": "D-CH-24",
+      "document": "00-charter.md",
+      "historical_document": "history/v0/00-charter.md"
+    },
+    {
+      "superseded": "D-CH-12",
+      "current": "D-CH-25",
+      "document": "00-charter.md",
+      "historical_document": "history/v0/00-charter.md"
+    },
+    {
+      "superseded": "D-CH-13",
+      "current": "D-CH-26",
+      "document": "00-charter.md",
+      "historical_document": "history/v0/00-charter.md"
+    },
+    {
+      "superseded": "D-FT-01",
+      "current": "D-FT-06",
+      "document": "04-formal-theory.md",
+      "historical_document": "history/v0/04-formal-theory.md"
+    },
+    {
+      "superseded": "D-FT-02",
+      "current": "D-FT-07",
+      "document": "04-formal-theory.md",
+      "historical_document": "history/v0/04-formal-theory.md"
+    },
+    {
+      "superseded": "D-FT-03",
+      "current": "D-FT-08",
+      "document": "04-formal-theory.md",
+      "historical_document": "history/v0/04-formal-theory.md"
+    },
+    {
+      "superseded": "D-FT-04",
+      "current": "D-FT-09",
+      "document": "04-formal-theory.md",
+      "historical_document": "history/v0/04-formal-theory.md"
+    },
+    {
+      "superseded": "D-FT-05",
+      "current": "D-FT-10",
+      "document": "04-formal-theory.md",
+      "historical_document": "history/v0/04-formal-theory.md"
+    },
+    {
+      "superseded": "D-KR-01",
+      "current": "D-KR-13",
+      "document": "01-kernel.md",
+      "historical_document": "history/v0/01-kernel.md"
+    },
+    {
+      "superseded": "D-KR-02",
+      "current": "D-KR-14",
+      "document": "01-kernel.md",
+      "historical_document": "history/v0/01-kernel.md"
+    },
+    {
+      "superseded": "D-KR-03",
+      "current": "D-KR-15",
+      "document": "01-kernel.md",
+      "historical_document": "history/v0/01-kernel.md"
+    },
+    {
+      "superseded": "D-KR-04",
+      "current": "D-KR-16",
+      "document": "01-kernel.md",
+      "historical_document": "history/v0/01-kernel.md"
+    },
+    {
+      "superseded": "D-KR-05",
+      "current": "D-KR-17",
+      "document": "01-kernel.md",
+      "historical_document": "history/v0/01-kernel.md"
+    },
+    {
+      "superseded": "D-KR-06",
+      "current": "D-KR-18",
+      "document": "01-kernel.md",
+      "historical_document": "history/v0/01-kernel.md"
+    },
+    {
+      "superseded": "D-KR-07",
+      "current": "D-KR-19",
+      "document": "01-kernel.md",
+      "historical_document": "history/v0/01-kernel.md"
+    },
+    {
+      "superseded": "D-KR-08",
+      "current": "D-KR-20",
+      "document": "01-kernel.md",
+      "historical_document": "history/v0/01-kernel.md"
+    },
+    {
+      "superseded": "D-KR-09",
+      "current": "D-KR-21",
+      "document": "01-kernel.md",
+      "historical_document": "history/v0/01-kernel.md"
+    },
+    {
+      "superseded": "D-KR-10",
+      "current": "D-KR-22",
+      "document": "01-kernel.md",
+      "historical_document": "history/v0/01-kernel.md"
+    },
+    {
+      "superseded": "D-KR-11",
+      "current": "D-KR-23",
+      "document": "01-kernel.md",
+      "historical_document": "history/v0/01-kernel.md"
+    },
+    {
+      "superseded": "D-KR-12",
+      "current": "D-KR-24",
+      "document": "01-kernel.md",
+      "historical_document": "history/v0/01-kernel.md"
+    },
+    {
+      "superseded": "D-RT-01",
+      "current": "D-RT-16",
+      "document": "02-root.md",
+      "historical_document": "history/v0/02-root.md"
+    },
+    {
+      "superseded": "D-RT-02",
+      "current": "D-RT-17",
+      "document": "02-root.md",
+      "historical_document": "history/v0/02-root.md"
+    },
+    {
+      "superseded": "D-RT-03",
+      "current": "D-RT-18",
+      "document": "02-root.md",
+      "historical_document": "history/v0/02-root.md"
+    },
+    {
+      "superseded": "D-RT-04",
+      "current": "D-RT-19",
+      "document": "02-root.md",
+      "historical_document": "history/v0/02-root.md"
+    },
+    {
+      "superseded": "D-RT-05",
+      "current": "D-RT-20",
+      "document": "02-root.md",
+      "historical_document": "history/v0/02-root.md"
+    },
+    {
+      "superseded": "D-RT-06",
+      "current": "D-RT-21",
+      "document": "02-root.md",
+      "historical_document": "history/v0/02-root.md"
+    },
+    {
+      "superseded": "D-RT-07",
+      "current": "D-RT-22",
+      "document": "02-root.md",
+      "historical_document": "history/v0/02-root.md"
+    },
+    {
+      "superseded": "D-RT-08",
+      "current": "D-RT-23",
+      "document": "02-root.md",
+      "historical_document": "history/v0/02-root.md"
+    },
+    {
+      "superseded": "D-RT-09",
+      "current": "D-RT-24",
+      "document": "02-root.md",
+      "historical_document": "history/v0/02-root.md"
+    },
+    {
+      "superseded": "D-RT-10",
+      "current": "D-RT-25",
+      "document": "02-root.md",
+      "historical_document": "history/v0/02-root.md"
+    },
+    {
+      "superseded": "D-RT-11",
+      "current": "D-RT-26",
+      "document": "02-root.md",
+      "historical_document": "history/v0/02-root.md"
+    },
+    {
+      "superseded": "D-RT-12",
+      "current": "D-RT-27",
+      "document": "02-root.md",
+      "historical_document": "history/v0/02-root.md"
+    },
+    {
+      "superseded": "D-RT-13",
+      "current": "D-RT-28",
+      "document": "02-root.md",
+      "historical_document": "history/v0/02-root.md"
+    },
+    {
+      "superseded": "D-RT-14",
+      "current": "D-RT-29",
+      "document": "02-root.md",
+      "historical_document": "history/v0/02-root.md"
+    },
+    {
+      "superseded": "D-RT-15",
+      "current": "D-RT-30",
+      "document": "02-root.md",
+      "historical_document": "history/v0/02-root.md"
+    },
+    {
+      "superseded": "D-SP-01",
+      "current": "D-SP-10",
+      "document": "05-spaces-enrichment.md",
+      "historical_document": "history/v0/05-spaces-enrichment.md"
+    },
+    {
+      "superseded": "D-SP-02",
+      "current": "D-SP-11",
+      "document": "05-spaces-enrichment.md",
+      "historical_document": "history/v0/05-spaces-enrichment.md"
+    },
+    {
+      "superseded": "D-SP-03",
+      "current": "D-SP-12",
+      "document": "05-spaces-enrichment.md",
+      "historical_document": "history/v0/05-spaces-enrichment.md"
+    },
+    {
+      "superseded": "D-SP-04",
+      "current": "D-SP-13",
+      "document": "05-spaces-enrichment.md",
+      "historical_document": "history/v0/05-spaces-enrichment.md"
+    },
+    {
+      "superseded": "D-SP-05",
+      "current": "D-SP-14",
+      "document": "05-spaces-enrichment.md",
+      "historical_document": "history/v0/05-spaces-enrichment.md"
+    },
+    {
+      "superseded": "D-SP-06",
+      "current": "D-SP-15",
+      "document": "05-spaces-enrichment.md",
+      "historical_document": "history/v0/05-spaces-enrichment.md"
+    },
+    {
+      "superseded": "D-SP-07",
+      "current": "D-SP-16",
+      "document": "05-spaces-enrichment.md",
+      "historical_document": "history/v0/05-spaces-enrichment.md"
+    },
+    {
+      "superseded": "D-SP-08",
+      "current": "D-SP-17",
+      "document": "05-spaces-enrichment.md",
+      "historical_document": "history/v0/05-spaces-enrichment.md"
+    },
+    {
+      "superseded": "D-SP-09",
+      "current": "D-SP-18",
+      "document": "05-spaces-enrichment.md",
+      "historical_document": "history/v0/05-spaces-enrichment.md"
+    },
+    {
+      "superseded": "D-TL-01",
+      "current": "D-TL-12",
+      "document": "06-tooling.md",
+      "historical_document": "history/v0/06-tooling.md"
+    },
+    {
+      "superseded": "D-TL-02",
+      "current": "D-TL-13",
+      "document": "06-tooling.md",
+      "historical_document": "history/v0/06-tooling.md"
+    },
+    {
+      "superseded": "D-TL-03",
+      "current": "D-TL-14",
+      "document": "06-tooling.md",
+      "historical_document": "history/v0/06-tooling.md"
+    },
+    {
+      "superseded": "D-TL-04",
+      "current": "D-TL-15",
+      "document": "06-tooling.md",
+      "historical_document": "history/v0/06-tooling.md"
+    },
+    {
+      "superseded": "D-TL-05",
+      "current": "D-TL-16",
+      "document": "06-tooling.md",
+      "historical_document": "history/v0/06-tooling.md"
+    },
+    {
+      "superseded": "D-TL-06",
+      "current": "D-TL-17",
+      "document": "06-tooling.md",
+      "historical_document": "history/v0/06-tooling.md"
+    },
+    {
+      "superseded": "D-TL-07",
+      "current": "D-TL-18",
+      "document": "06-tooling.md",
+      "historical_document": "history/v0/06-tooling.md"
+    },
+    {
+      "superseded": "D-TL-08",
+      "current": "D-TL-19",
+      "document": "06-tooling.md",
+      "historical_document": "history/v0/06-tooling.md"
+    },
+    {
+      "superseded": "D-TL-09",
+      "current": "D-TL-20",
+      "document": "06-tooling.md",
+      "historical_document": "history/v0/06-tooling.md"
+    },
+    {
+      "superseded": "D-TL-10",
+      "current": "D-TL-21",
+      "document": "06-tooling.md",
+      "historical_document": "history/v0/06-tooling.md"
+    },
+    {
+      "superseded": "D-TL-11",
+      "current": "D-TL-22",
+      "document": "06-tooling.md",
+      "historical_document": "history/v0/06-tooling.md"
+    },
+    {
+      "superseded": "D-UP-01",
+      "current": "D-UP-10",
+      "document": "03-universal-properties.md",
+      "historical_document": "history/v0/03-universal-properties.md"
+    },
+    {
+      "superseded": "D-UP-02",
+      "current": "D-UP-11",
+      "document": "03-universal-properties.md",
+      "historical_document": "history/v0/03-universal-properties.md"
+    },
+    {
+      "superseded": "D-UP-03",
+      "current": "D-UP-12",
+      "document": "03-universal-properties.md",
+      "historical_document": "history/v0/03-universal-properties.md"
+    },
+    {
+      "superseded": "D-UP-04",
+      "current": "D-UP-13",
+      "document": "03-universal-properties.md",
+      "historical_document": "history/v0/03-universal-properties.md"
+    },
+    {
+      "superseded": "D-UP-05",
+      "current": "D-UP-14",
+      "document": "03-universal-properties.md",
+      "historical_document": "history/v0/03-universal-properties.md"
+    },
+    {
+      "superseded": "D-UP-06",
+      "current": "D-UP-15",
+      "document": "03-universal-properties.md",
+      "historical_document": "history/v0/03-universal-properties.md"
+    },
+    {
+      "superseded": "D-UP-07",
+      "current": "D-UP-16",
+      "document": "03-universal-properties.md",
+      "historical_document": "history/v0/03-universal-properties.md"
+    },
+    {
+      "superseded": "D-UP-08",
+      "current": "D-UP-17",
+      "document": "03-universal-properties.md",
+      "historical_document": "history/v0/03-universal-properties.md"
+    },
+    {
+      "superseded": "D-UP-09",
+      "current": "D-UP-18",
+      "document": "03-universal-properties.md",
+      "historical_document": "history/v0/03-universal-properties.md"
+    },
+    {
+      "superseded": "D-WF-01",
+      "current": "D-WF-08",
+      "document": "07-forest-workflow.md",
+      "historical_document": "history/v0/07-forest-workflow.md"
+    },
+    {
+      "superseded": "D-WF-02",
+      "current": "D-WF-09",
+      "document": "07-forest-workflow.md",
+      "historical_document": "history/v0/07-forest-workflow.md"
+    },
+    {
+      "superseded": "D-WF-03",
+      "current": "D-WF-10",
+      "document": "07-forest-workflow.md",
+      "historical_document": "history/v0/07-forest-workflow.md"
+    },
+    {
+      "superseded": "D-WF-04",
+      "current": "D-WF-11",
+      "document": "07-forest-workflow.md",
+      "historical_document": "history/v0/07-forest-workflow.md"
+    },
+    {
+      "superseded": "D-WF-05",
+      "current": "D-WF-12",
+      "document": "07-forest-workflow.md",
+      "historical_document": "history/v0/07-forest-workflow.md"
+    },
+    {
+      "superseded": "D-WF-06",
+      "current": "D-WF-13",
+      "document": "07-forest-workflow.md",
+      "historical_document": "history/v0/07-forest-workflow.md"
+    },
+    {
+      "superseded": "D-WF-07",
+      "current": "D-WF-14",
+      "document": "07-forest-workflow.md",
+      "historical_document": "history/v0/07-forest-workflow.md"
+    }
+  ],
+  "new_decisions": [
+    "D-FD-01"
+  ],
+  "retired_tests": [
+    "AT-RT-4",
+    "AT-FT-8"
+  ],
+  "historical_files_sha256": {
+    "00-charter.md": "4fd9472e03e2342d40b30a78573bf7eae6f1a2645de1920a03aa7407ccf05584",
+    "01-kernel.md": "adea825d6411ac2ff4ef2259def3bc659277cb7bd7df47dd59d60c930fa04d9a",
+    "02-root.md": "eb7ef4b36b18432a72fcb6828bdfa9c698471655aeefd476276f0d203ea43cc0",
+    "03-universal-properties.md": "62dec34764a29b23b3690b8e8f73c2b0d9351bb632518b3045ee63107797fe0e",
+    "04-formal-theory.md": "6bddfbce6322befd657b03741b34fd319ee50f697a33bbcadcf4955c0cc8515d",
+    "05-spaces-enrichment.md": "ff12b979b53be119f53713bbf12f334b918fc7a5d9607359998bfae6076f6823",
+    "06-tooling.md": "c5c6aa35da25c4349e0e66c0fb798afee28d964b5147bc72b41cca5b146657c3",
+    "07-forest-workflow.md": "8fdb1cc132eeb6080fb2310a2e4014b5475ec886f8746f872037cf0491c4b002",
+    "08-roadmap.md": "77727aa59854794d9c84e5c372697de2f4bf87f0ca37131642e3452595bb8f1c",
+    "09-bibliography.md": "0370c43a9c1f0b8ec5c05e1a279f8b423b5850cd5272ca68abd8458240fcc5f5",
+    "10-adversarial-review.md": "c86d136bda88718915a28aca3ec0ad72e7809c2cbe976e93e21a5f09bde89efa",
+    "README.md": "0fcbeb879979f9c604d0ea19c5788abc05460a78051bfcbd13fad3962a1aee64"
+  }
+}

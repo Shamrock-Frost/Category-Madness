@@ -1,0 +1,33 @@
+\title{D-KR-16 · Patterns and homotopy Segal cores}
+\taxon{Decision}
+\meta{id}{D-KR-16}
+\meta{area}{kernel}
+\meta{origin}{design/01-kernel.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional until each shape's proof.}
+\meta{supersedes}{dec-kr-0004}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:kr}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{Give each adopted shape category its own proved active–inert structure and elementary objects. In the discrete case the core is a colimit presentation of an arity and the nerve condition is an ordinary limit condition. In the homotopy case use the homotopy limit over the actual elementary inert diagram, including its incidences. Using a strict limit is a theorem under a specified fibrancy condition.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Limits over overlapping cells involve boundaries, not just independent products.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Identifying general BMW recognition with a particular elementary pattern without checking the arity decomposition.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-kr-0005} for Δ; \ref{at-fd-0003} and \ref{at-fd-0007} for the root.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional until each shape's proof.}
+}

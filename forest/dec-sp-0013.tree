@@ -1,0 +1,33 @@
+\title{D-SP-13 · \code{Mat(Kan)} and categorical algebras}
+\taxon{Decision}
+\meta{id}{D-SP-13}
+\meta{area}{spaces and enrichment}
+\meta{origin}{design/05-spaces-enrichment.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional research construction; M6 full proof after M-F feasibility.}
+\meta{supersedes}{dec-sp-0004}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:sp}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{For labels all \code{A : Type u} and small entries at level v, construct a matrix root with vertical arrows functions and horizontal space at \code{(A,B)} modeled by families \code{A×B → U.{v}}. Its collection universes follow \ref{dec-rt-0027}. A fibre of a cell boundary map is the space of families of maps from the product of input fibres to the output fibre. Empty targets use the equality matrix as in the discrete test. Build this as one coherent presheaf with the corrected augmented arities; prove the boundary fibration, Segal, and required replacement results. Elementary-value formulas are comparisons, not a substitute for presheaf functoriality. \code{InfCategory A := Monad (Mat Kan) A}, and \code{Cat_∞ := Mod(Mat Kan)}, after the coherent construction is proved. \ref{at-sp-0003} identifies this with the bootstrap Segal-category presentation on object set A. \code{VertCore(Cat_∞)} is the intended (∞,1)-category of ∞-categories, functors, and natural equivalences; \code{Vert₂} retains transformations. \code{VertRaw} is not used as that categorical ambient.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Correct relative monads and categorical extraction are both necessary.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Recovering natural equivalences between different object functions by ordinary fixed-label simplicial homotopy alone.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-rt-0008}; \ref{at-sp-0003}; \ref{at-fd-0008}'s small end-to-end example. \ref{at-sp-0008} is the specified rigidification theorem to an equivalent strict simplicial category, allowing the model to change. Any surjectivity theorem for strict maps into a fixed target is separate and is not promised generally.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional research construction; \ref{ms-0006} full proof after \ref{ms-foundation} feasibility.}
+}

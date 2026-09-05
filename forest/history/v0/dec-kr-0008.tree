@@ -1,0 +1,27 @@
+\title{D-KR-08 · Other shapes}
+\taxon{Decision}
+\meta{id}{D-KR-08}
+\meta{area}{kernel}
+\meta{origin}{design/01-kernel.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:kr}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \ul{
+    \li{Δ₊ (augmented simplices) with its join monoidal structure; joins and slices of simplicial sets (needed for → \ref{dec-up-0003}).}
+    \li{Δ×Δ for double (non-virtual) structures; used when composites exist (→ \ref{dec-ft-0002}).}
+    \li{Θ_n by Berger's wreath product, defined in \ref{ms-0001} and unused until (∞,n) work.}
+    \li{Twisted-arrow-type shapes \code{Tw(θ)} for each \code{θ ∈ Θ_fc} (Barwick, Haugseng), in which the pullbacks of composable spans are objects; needed for \code{Span(S)} (→ \ref{dec-sp-0005}). Defined at \ref{ms-0001} with the others; their Segal theory is \ref{ms-0006}. Joins and the shapes of slices come from the geometric substrate's join operation (→ \ref{dec-kr-0012}).}
+    \li{The groupoids \code{Σ_A}, \code{𝔹_A}, \code{ℕ_A} of finite \code{A}-coloured sets with bijections, braids, and identities, as the indexing categories of symmetric, braided, and non-symmetric sequences (→ \ref{dec-sp-0009}).}
+  }
+}
+\subtree{
+  \title{Status}
+  \p{frozen.}
+}

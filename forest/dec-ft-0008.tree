@@ -1,0 +1,43 @@
+\title{D-FT-08 · Coherent theorem targets}
+\taxon{Decision}
+\meta{id}{D-FT-08}
+\meta{area}{formal theory}
+\meta{origin}{design/04-formal-theory.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional theorem list; exact Lean statements required before proof assignment.}
+\meta{supersedes}{dec-ft-0003}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:ft}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{The targets below use explicit witness spaces and only the hypotheses needed by each item. Every statement is compared with its discrete counterpart.}
+  \ol{
+    \li{Representable horizontals, companion/conjoint cells, and the relation between equivalence of companions and invertible vertical 2-cells.}
+    \li{Yoneda embeddings with the relevant augmented universal cells. Their existence is an additional property; presheaf targets and allowable sizes are explicit.}
+    \li{Extensions and liftings of horizontals, with pointwise and absolute versions distinguished through restriction and stability properties.}
+    \li{Weighted limits and colimits as representability of the appropriate modules. A conical limit uses the constant terminal-valued weight with the correctly typed variance, not an unspecified identity profunctor called a unit weight.}
+    \li{Adjunctions via companions and conjoints, with the correct equivalence notion for adjunction data; mates retain noninvertible vertical 2-cells.}
+    \li{Root monads, Kleisli and Eilenberg–Moore witnesses, and monadicity under the required composite and existence hypotheses.}
+    \li{Full faithfulness and other justified properties of vertical morphisms through their universal cells; no general essential-surjectivity characterization is assumed without its hypotheses and comparison.}
+    \li{Absolute liftings and the comparison of formal limits with the cone-terminal limits of \ref{dec-up-0013}, in the specified vertical categorical ambient.}
+  }
+}
+\subtree{
+  \title{Rationale}
+  \p{A common cell-space API is a plausible route to reuse, but each claim still needs a precise theorem and a valid instance.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Inferring all coherent universal properties from equality on \code{π₀}.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-ft-0001} for the discrete statements; \ref{at-ft-0006} for conical weights; \ref{at-ft-0007} for absolute-lifting/cone comparison, with model hypotheses stated.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional theorem list; exact Lean statements required before proof assignment.}
+}

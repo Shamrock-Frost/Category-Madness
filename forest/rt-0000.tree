@@ -1,56 +1,42 @@
-\title{02 · Root (stage 1)}
+\title{02 · Root — revision 1}
 \taxon{Chapter}
 \meta{origin}{design/02-root.md}
 \meta{layer}{human}
 \tag{chapter}
 
-\p{The root is the single definition everything else instantiates, together with the constructions that must be made before the seal because they need the kernel: maps, equivalences, fibrant replacement, derived mapping spaces, walking structures and \code{Mod}, \code{Mat(Set)}, \code{Category}, the discrete embedding, and the interface itself.}
-\p{Throughout, \code{X : Type u} is a label set and \code{Θ := Θ^aug_{fc,X}} (→ \ref{dec-kr-0006}, \ref{dec-kr-0007}). Elementary shapes: \code{pt(x)}, \code{v(x,y)}, \code{h(x,y)}, \code{c_n(x₀…x_n; y₀,y₁)}, \code{c_n^∅(x₀…x_n; y)}.}
+\p{This is the current candidate specification. New decision IDs and the immutable original are tracked in \code{12-revision-notes.md}. No theorem marked as a target below is claimed proved by this document. \ref{ms-foundation} selects a workable root and its comparisons before \ref{ms-0003} freezes the full interface.}
 \subtree{
-  \title{The definition}
+  \title{Presentation, cells, and equivalences}
 
-  \transclude{dec-rt-0001}
-  \transclude{dec-rt-0002}
-  \transclude{dec-rt-0003}
-  \transclude{dec-rt-0004}
-  \transclude{dec-rt-0005}
-  \transclude{dec-rt-0006}
-  \transclude{dec-rt-0007}
-  \transclude{dec-rt-0008}
+  \transclude{dec-rt-0016}
+  \transclude{dec-rt-0017}
+  \transclude{dec-rt-0018}
+  \transclude{dec-rt-0019}
+  \transclude{dec-rt-0020}
+  \transclude{dec-rt-0021}
+  \transclude{dec-rt-0022}
+  \transclude{dec-rt-0023}
 }
 \subtree{
-  \title{Constructions}
+  \title{Walking structures and examples}
 
-  \transclude{dec-rt-0009}
-  \transclude{dec-rt-0010}
-  \transclude{dec-rt-0011}
-  \transclude{dec-rt-0012}
+  \transclude{dec-rt-0024}
+  \transclude{dec-rt-0025}
+  \transclude{dec-rt-0026}
+  \transclude{dec-rt-0027}
 }
 \subtree{
-  \title{The seal}
+  \title{Seal and API}
 
-  \transclude{dec-rt-0013}
-  \transclude{dec-rt-0015}
-  \transclude{dec-rt-0014}
+  \transclude{dec-rt-0028}
+  \transclude{dec-rt-0030}
+  \transclude{dec-rt-0029}
 }
 \subtree{
-  \title{Acceptance tests (summary)}
-  \transclude{at-rt-0001}
-  \transclude{at-rt-0002}
-  \transclude{at-rt-0003}
-  \transclude{at-rt-0004}
-  \transclude{at-rt-0005}
-  \transclude{at-rt-0006}
-  \transclude{at-rt-0007}
-  \transclude{at-rt-0008}
-  \transclude{at-rt-0009}
-  \transclude{at-rt-0010}
-  \transclude{at-rt-0011}
-  \transclude{at-rt-0012}
+  \title{Acceptance-test status}
+  \p{All tests in this revision are proposed until a Lean statement and checked proof are recorded. \ref{at-rt-0001}/2/3/7/8/10/11/12 retain their comparison goals with the repaired constructions. \ref{at-rt-0004} is retired. \ref{at-rt-0005} uses the revised equivalence specification; \ref{at-rt-0006} is explicitly relative. \ref{at-rt-0009} is the full external ∞-comparison. The small \ref{ms-foundation} comparisons are mandatory even if that full theorem is scheduled later.}
 }
 \subtree{
   \title{Open questions}
-  \transclude{oq-rt-0001}
-  \transclude{oq-rt-0002}
-  \transclude{oq-rt-0003}
+
 }

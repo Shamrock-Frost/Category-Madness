@@ -1,19 +1,9 @@
-\title{M2 · Kan machinery}
+\title{M2 · Package the needed homotopy machinery}
 \taxon{Milestone}
 \meta{id}{M2}
 \meta{origin}{design/08-roadmap.md}
 \meta{status}{planned}
 \tag{milestone}
 
-\ul{
-  \li{Everything in \ref{dec-kr-0010} (\ref{at-kr-0010}), Reedy fibrancy for \code{sSet}-presheaves on the shapes, homotopy fibre products, mapping spaces, exponential/pushout-product lemmas.}
-  \li{Fibrant replacement for Segal presheaves on elegant shapes (\ref{dec-kr-0011}, \ref{at-kr-0011}).}
-}
-\subtree{
-  \title{Freeze}
-  \p{The \code{Space} API of the interface.}
-}
-\subtree{
-  \title{Exit}
-  \p{\ref{at-kr-0010}, \ref{at-kr-0011} proved.}
-}
+\p{Generalize \ref{ms-foundation}'s Kan, diagram, reduced replacement, and relative-mapping lemmas into the exportable Space/diagram API (\ref{at-kr-0010}/11). Complete categorical \code{MapCat}/\code{Fun} bootstrap bridges needed by \ref{ms-0003}/\ref{ms-0004}. Do not assume the category of all VDCs has an already-proved localization model merely because Segal categories do.}
+\p{\strong{Exit:} all hypotheses of the \ref{ms-0003} constructions are supplied by checked lemmas. \strong{Freeze:} the proved Space and diagram primitives, not future construction promises.}

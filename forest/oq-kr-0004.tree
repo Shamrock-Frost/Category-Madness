@@ -1,0 +1,12 @@
+\title{OQ-KR-4}
+\taxon{Open question}
+\meta{id}{OQ-KR-4}
+\meta{area}{kernel}
+\meta{origin}{design/01-kernel.md}
+\meta{status}{open}
+\tag{open-question}
+\tag{area:kr}
+\tag{status:open}
+
+\p{if root elegance fails, identify an actual alternative with sufficient cofibrancy/replacement theorems, or revise the root model at \ref{ms-foundation}.}
+\p{\em{Resolution:} open. Decided by the human; record the answer as a decision node that this node then cites.}

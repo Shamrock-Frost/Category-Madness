@@ -1,13 +1,14 @@
-\title{AT-SP-2 · \code{Kan} is an ∞-category in the library's sense}
+\title{AT-SP-2 · \\code{Kan} is an ∞-category in the library's sense}
 \taxon{Acceptance test}
 \meta{id}{AT-SP-2}
 \meta{area}{spaces and enrichment}
 \meta{origin}{design/05-spaces-enrichment.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:sp}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{\code{Kan} is an ∞-category in the library's sense; classical homotopy category; rectified by the strict simplicial category.}
-\p{Named by: \ref{dec-sp-0002}.}
+\p{the root representation and classical homotopy category}
+\p{Named by: \ref{dec-sp-0011}.}
 \p{\em{Lean declaration(s):} none yet.}

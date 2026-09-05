@@ -3,13 +3,13 @@
 \meta{id}{D-TL-02}
 \meta{area}{tooling}
 \meta{origin}{design/06-tooling.md}
-\meta{status}{provisional}
+\meta{status}{superseded}
 \meta{status-text}{provisional (mechanism frozen, contents provisional).}
 \meta{supersedes}{none}
-\meta{superseded-by}{none}
+\meta{superseded-by}{dec-tl-0013}
 \tag{decision}
 \tag{area:tl}
-\tag{status:provisional}
+\tag{status:superseded}
 
 \subtree{
   \title{Decision}
@@ -17,7 +17,7 @@
 }
 \subtree{
   \title{Rationale}
-  \p{→ \ref{dec-ch-0007}. The human layer is a view.}
+  \p{→ D-CH-07. The human layer is a view.}
 }
 \subtree{
   \title{Status}

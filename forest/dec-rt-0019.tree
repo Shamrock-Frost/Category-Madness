@@ -1,0 +1,33 @@
+\title{D-RT-19 · Raw paths and categorical parts}
+\taxon{Decision}
+\meta{id}{D-RT-19}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{provisional}
+\meta{status-text}{raw restriction provisional implementation; categorical extraction research-gated at M-F.}
+\meta{supersedes}{dec-rt-0004}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:rt}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{\code{VertRaw(P)} restricts to vertical path shapes. \code{HorizontalObjects(P,a,b)} is \code{P(h(a,b))}. \code{Hor(P,a,b)} is the Segal-category presentation whose objects are horizontal arrows and whose morphisms are unary cells with identity vertical sides; it is not the same object as \code{HorizontalObjects}. \code{Vert₂(P)} uses vertical arrows and the augmented \code{(0,0)} cells, retaining noninvertible 2-cells. \code{VertCore(P)} denotes the (∞,1)-category obtained by retaining equivalences in its hom ∞-categories, after the requisite coherent construction is proved. In particular, \code{VertRaw(Cat)} is the ordinary category of categories and strict functors, while \code{VertCore(Cat)} has groupoids of functors and natural isomorphisms as mapping spaces. Neither an equality nor a general equivalence \code{VertRaw(P) ≃ VertCore(P)} is asserted.}
+}
+\subtree{
+  \title{Rationale}
+  \p{The distinction already matters for two isomorphic target objects.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Calling raw vertical mapping spaces the spaces of functors and natural equivalences.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-fd-0004}, \ref{at-rt-0011}, \ref{at-rt-0012}, \ref{at-up-0008}.}
+}
+\subtree{
+  \title{Status}
+  \p{raw restriction provisional implementation; categorical extraction research-gated at \ref{ms-foundation}.}
+}

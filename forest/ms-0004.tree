@@ -5,15 +5,5 @@
 \meta{status}{planned}
 \tag{milestone}
 
-\ul{
-  \li{\ref{dec-up-0001}…\ref{dec-up-0009}; \code{witness_transport} (\ref{dec-tl-0004}) and \code{extend} (\ref{dec-tl-0005}) usable.}
-  \li{\ref{at-up-0001}…\ref{at-up-0007} proved, including the Čech nerve (\ref{at-up-0006}).}
-}
-\subtree{
-  \title{Freeze}
-  \p{\code{IsTerminal}, slices, \code{Limit}, Kan extensions, witness discipline.}
-}
-\subtree{
-  \title{Exit}
-  \p{\ref{at-up-0001}…\ref{at-up-0007} proved; \code{to_dual} produces all colimit-side statements.}
-}
+\p{Construct categorical diagrams, derived cone/comma categories, limits, witness transport, and shape extensions. Prove \ref{at-up-0001} through \ref{at-up-0008}, including the corrected \code{sk_n ⊣ cosk_n} orientation and the Čech diagram's coherence. Add slice/functor/limit closure certificates with their implementations, not as earlier axioms.}
+\p{\strong{Exit:} all eight tests, duality scope, and nontrivial witness/extension clients pass. \strong{Freeze:} the validated universal-property definitions and API.}

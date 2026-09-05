@@ -1,13 +1,14 @@
-\title{AT-SP-9 · \code{Mod(H-Kl(T_Σ, Mat Set))} is the classical equipment of coloured symmetric operads}
+\title{AT-SP-9 · \\code{Mod(H-Kl(T_Σ, Mat Set))} is the classical equipment of coloured symmetric operads}
 \taxon{Acceptance test}
 \meta{id}{AT-SP-9}
 \meta{area}{spaces and enrichment}
 \meta{origin}{design/05-spaces-enrichment.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:sp}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{\code{Mod(H-Kl(T_Σ, Mat Set))} is the classical equipment of coloured symmetric operads.}
-\p{Named by: \ref{dec-sp-0009}.}
+\p{classical symmetric operads in the corrected profunctor ambient}
+\p{Named by: \ref{dec-sp-0018}.}
 \p{\em{Lean declaration(s):} none yet.}

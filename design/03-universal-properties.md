@@ -1,147 +1,128 @@
-# 03 · Universal properties (stage 2, M4)
+# 03 · Universal properties — revision 1
 
-Everything here is stated for a Segal category `C` with object set `X` — i.e. a monad
-in `Mat(Kan)` once that exists (→ D-SP-04), and before that for `Vert P` of any VDC∞ and
-for discrete `C : Category A`. Only interface vocabulary is used: mapping spaces,
-homotopy equivalence, contractibility, derived maps, joins.
+This layer uses the sealed Segal-category interface and categorical functor objects.
+Its bootstrap implementation is in Root/; agreement with monads in `Mat(Kan)` is
+AT-SP-3. `MapCat` is the core of a categorical functor object. `MapRel` is used only
+inside explicit presentation-level constructions and comparison proofs.
 
-## The root notion
+### D-UP-10 · Terminal objects and coherent choices
+**Decision.** `IsTerminal t : Prop := ∀ x, Contractible (C(x,t))`, with
+`Terminal C := {t // IsTerminal t}` and `HasTerminal C := Nonempty (Terminal C)`.
+The full subcategory on terminal objects is empty or a contractible ∞-groupoid.
+For a specified terminal `t`, prove that the space of cones with vertex t over any
+K-diagram maps equivalently to `MapCat(K,C)`. At the presentation level, a restriction
+map is a trivial fibration only after its Kan-fibration hypotheses are proved.
+Choosing a section coherent over a parameter diagram requires a lifting theorem in
+that diagram category. Separate pointwise choices are not that theorem.
+**Rationale.** The universal property supplies uniqueness; existence and model-level
+lifting are separate premises.
+**Rejected.** An unconditional claim of contractibility when there may be no witness;
+trivial fibrancy inferred from an equivalence of abstract spaces alone.
+**Acceptance.** AT-UP-1: classical terminal objects and unique isomorphism; AT-FD-3;
+AT-UP-6 for a genuinely coherent parameterized construction.
+**Status.** provisional implementation; mathematical specification fixed.
 
-### D-UP-01 · Terminal objects
-**Decision.** `IsTerminal t : Prop := ∀ x, Contractible (C(x, t))`, with the
-theorem, proved immediately after, that this is equivalent to the *global* form: for
-every Segal category `K`, restriction `Map(K ⋆ Δ[0], C)_{t} → Map(K, C)` (cones with
-vertex `t`) is a trivial fibration. The global form is the one used downstream: it is
-what makes lifts along a diagram of problems coherent, and `Classical.choose` is applied
-to a *section* of it, never to the fibres one at a time (→ D-UP-06). The equivalence
-of the two forms uses boundary fibrancy (→ D-RT-01 (2)): a Kan fibration with
-contractible fibres over every vertex is a trivial fibration.
-`Terminal C := { t // IsTerminal t }`. Theorem: the full sub-Segal-category of `C` on
-terminal objects is a contractible ∞-groupoid (any two terminal objects are connected
-by a contractible space of equivalences). Initial objects are dual (→ D-UP-05).
-**Rationale.** This is the one universal property. It is a proposition, it survives every
-level (1-categories: singleton hom-sets; ∞: contractible mapping spaces), and it needs no
-data beyond the mapping spaces. The trivial-fibration form is the same statement with
-the coherence of lifts built in.
-**Acceptance.** AT-UP-1: for discrete `C`, `IsTerminal` is the classical definition and
-the uniqueness theorem is unique-up-to-unique-iso.
-**Status.** frozen.
+### D-UP-11 · Diagrams
+**Decision.** A diagram is an object of the categorical functor object `Fun(J,C)`;
+its core is `MapCat(J,C)`. A chosen strict presentation may represent that diagram
+through a proved comparison with relative maps. Natural equivalences between diagrams
+are retained, including equivalences between functors with different object functions.
+**Rationale.** Discrete source and target categories can still have nontrivial diagram cores.
+**Rejected.** A fixed-label presheaf mapping space as the entire diagram ∞-groupoid.
+**Acceptance.** AT-FD-4; the discrete functor-category comparison.
+**Status.** provisional until the bootstrap `Fun` comparison is proved at M-F.
 
-### D-UP-02 · Diagrams
-**Decision.** For a category `J` (discrete, i.e. `J : Category`) and a Segal category
-`C`, a `J`-diagram in `C` is a point of `Map(N J, C)` (→ D-RT-08 applied to the Segal
-categories `N J` and `C` viewed inside `Mat(Kan)`; before M6, inside `Vert` of the
-ambient VDC∞). Diagrams of shape a Segal category `K` are points of `Map(K, C)`.
-**Status.** frozen.
+### D-UP-12 · Cone categories and slices
+**Decision.** For `F : Fun(J,C)`, define `Cone(C,F)` using a derived fibre over F of
+`Fun(J^leftcone,C) → Fun(J,C)`, where `J^leftcone = [0] ⋆ J` and the vertex is the
+cone apex. Construct a reduced Segal presentation by choosing its object labels to
+be the cone data, including the restriction identification with F.
+In a shape formula using `[n] ⋆ J`, fix F and the *entire selected cone* at each
+vertex. A fibre that fixes only the apex objects is insufficient. At `[0]` the fibre
+fixing that cone is a point. Use one functorial replacement/framing for the whole
+restriction diagram; strict fibres require proved fibrations. Define commas by a
+specified derived comma construction with its own comparison, not an unnamed join.
+**Rationale.** The slice's objects contain maps as well as objects of C.
+**Rejected.** Full cone spaces at each chosen cone label; independent fibrant
+replacement at each simplex.
+**Acceptance.** AT-UP-2: classical cone/slice category; AT-UP-3: reduction, fibrancy,
+Segal condition, and categorical invariance; the point/edge calculation in AT-FD-8.
+**Status.** provisional construction; M4 export only after these proofs.
 
-### D-UP-03 · Joins and slices
-**Decision.** For a diagram `F : N J → C`, the slice `C_{/F}` is the Segal category with
-object set `{(x, cone) | cone : N([0] ⋆ J) → C restricting to F}` and value at
-`([n]; x₀…x_n)` the fibre over `F` of the restriction map
-`Map(N([n] ⋆ J), C) → Map(N J, C)` with the given labels — a Kan complex, since the
-restriction is a Kan fibration (inclusion of a sub-presheaf into a cofibrant object,
-fibrant target). Joins come from the kernel through the interface (→ D-KR-08).
-`F ↓ y` and comma constructions are the same recipe with `[n] ⋆ J` replaced by the
-appropriate join/comma shape.
-**Rationale.** Lurie's definition of slices transposed to Segal categories; it uses
-only joins, derived mapping spaces and fibres along fibrations.
-**Acceptance.** AT-UP-2: for discrete `C` and `J`, `C_{/F}` is the classical slice/cone
-category; AT-UP-3: `C_{/F}` is a Segal category (Segal condition holds).
-**Status.** frozen (the exact join used for commas is provisional).
+### D-UP-13 · Limits and related witnesses
+**Decision.** `Limit F := Terminal (Cone(C,F))`, with `HasLimit F := Nonempty (Limit F)`.
+Products use discrete indexing categories. Representability uses a terminal object in
+the relevant category of elements. `RightAdjointAt F y` uses a terminal object of
+`F ↓ y`; constructing a whole right adjoint from these witnesses requires the proved
+coherent-choice argument. Pointwise right Kan extensions use limits over `(j' ↓ i)`;
+left extensions use the dual comma orientation and colimits.
+All diagram-size bounds, functoriality, and existence hypotheses are explicit.
+**Rationale.** Many universal properties can share terminal-object theory after the
+appropriate witness category has been constructed.
+**Rejected.** Treating pointwise existence alone as already a coherent functor;
+unspecified universe-size quantification over all diagram categories.
+**Acceptance.** AT-UP-4: discrete comparisons and pointwise Kan-extension formula.
+**Status.** provisional until M4 proofs.
 
-### D-UP-04 · Limits, and everything else, as terminal objects
-**Decision.**
-- `Limit F := Terminal (C_{/F})`; `HasLimit F : Prop := Nonempty (Limit F)`.
-- `Product (x_i)_{i ∈ I}` for a set `I` is `Limit` of the discrete diagram; there is no
-  binary-product API at this layer (binary is an `abbrev` in the human layer, → D-TL-02).
-- `Representation P := Terminal (El P)` for a presheaf `P` (a profunctor `C ⇸ 1`; the
-  profunctor form is → D-FT-03).
-- `RightAdjointAt F y := Terminal (F ↓ y)`; an adjunction is a family of these together
-  with the induced functor, and in the formal theory it is `companion ≃ conjoint` (→ D-FT-03).
-- Right Kan extension along `i : J → J'` of `F : N J → C` at `j'`: `Limit` of the
-  restriction of `F` to the slice `(j' ↓ i)`; pointwise by definition; existence
-  propositions as `Nonempty`.
-**Rationale.** One universal property, many witness categories. Uniqueness, transport and
-the contractibility of witnesses are inherited from D-UP-01 in every case.
-**Acceptance.** AT-UP-4: each specializes to the classical notion for discrete `C`.
-**Status.** frozen.
+### D-UP-14 · Duality
+**Decision.** Generate dual statements for Segal categories where the registered `op`
+and transport lemmas apply. Horizontal opposite is available for the augmented planar
+root once its shape operation is proved. Vertical opposite and transpose are not
+assumed to preserve the augmented virtual presentation. Hand-proved dual results in
+the equipment theory may be registered as corresponding statements.
+**Rationale.** A translation tool needs a mathematical duality with proved laws.
+**Rejected.** A total automatic duality for structures whose shapes are not closed under it.
+**Acceptance.** AT-UP-5: generated classical colimit comparison and involution transport.
+**Status.** provisional tool scope; mathematical domains explicit.
 
-### D-UP-05 · Duality
-**Decision.** Within Segal categories (this document), colimits, initial objects, left
-Kan extensions, left adjoints are obtained by the `to_dual` attribute (→ D-TL-03),
-which acts by `op` on shapes and on the ambient Segal category. No dual notion at this
-layer is defined by hand. Scope: `to_dual` is total on Segal categories and on the
-*horizontal* op of VDC∞s (reversal of inputs); the vertical op is not available for
-augmented VDC∞s (nullary-target cells have no nullary-source dual) and transpose is not
-available for virtual ones, so in → 04 some dual statements will be proved by hand and
-the attribute records that they are duals rather than generating them.
-`Cᵒᵖᵒᵖ ≃ C` is an equivalence, never an identity, past the seal; `to_dual`'s
-transport lemmas along it are part of the attribute's output.
-**Acceptance.** AT-UP-5: `to_dual` of `Limit` is a colimit in the classical sense for discrete `C`.
-**Status.** frozen (scope clause provisional).
+### D-UP-15 · Witness discipline
+**Decision.** Quantify over witnesses. An operation using a universal witness provides
+functoriality on its witness category, and equivalences between outputs follow from
+that functoriality. Choice bridges may choose an object from proved nonemptiness or a
+section from proved lifting. Coherence across a diagram of problems is established in
+the parameterized construction before choice is applied; it is not inferred from
+one independently chosen section for each parameter.
+**Rationale.** Contractibility controls choices only in the correctly constructed space.
+**Rejected.** Global chosen-limit constants and hidden data typeclass choices.
+**Acceptance.** AT-UP-1, AT-UP-6; the witness-transport client at M4.
+**Status.** frozen policy; instances proved individually.
 
-## Witnesses
+### D-UP-16 · Shape extensions
+**Decision.** For a shape inclusion `i`, use `Lan_i ⊣ i* ⊣ Ran_i` with existence
+hypotheses. For a full truncation inclusion, `sk_n = Lan_i i*` and `cosk_n = Ran_i i*`
+are endofunctors with `sk_n ⊣ cosk_n`, not the reverse. The Čech nerve of `x → s` is
+`cosk₀` in augmented simplicial objects over s, when the required finite limits exist.
+Prove its levels, augmentation, simplicial identities, and functoriality in the map.
+Other shape extensions are added only for established indexing functors.
+**Rationale.** Shape language packages the result after existence and coherence are proved.
+**Rejected.** Producing only a family of level objects and calling it a simplicial diagram.
+**Acceptance.** AT-UP-6: the Čech construction; AT-UP-7: the three adjunctions and
+correct skeleton/coskeleton orientation.
+**Status.** provisional until M4.
 
-### D-UP-06 · Witness discipline
-**Decision.** Theorems about universal objects quantify over witnesses: `∀ (L : Limit F), …`.
-`Classical.choose` appears only in the bridge lemmas `Nonempty (Limit F) → Limit F`
-and in choosing *sections* of the trivial fibrations of D-UP-01 (global lifts,
-functorial `cosk_n`, coherent families of limits over a diagram of diagrams); both live
-in one file. No `limit F` constant exists. Any construction `Φ` that takes a witness
-must come with its functoriality in the witness (a map between the contractible witness
-spaces induces a canonical equivalence `Φ L ≃ Φ L'`), and the `witness_transport`
-tactic (→ D-TL-04) discharges the routine cases.
-**Rationale.** → D-CH-02. The functoriality requirement is the categorical replacement for
-definitional uniqueness; choosing sections rather than points is what makes chosen
-lifts coherent along diagrams without any coherence bookkeeping.
-**Status.** frozen.
+### D-UP-17 · Discrete comparisons
+**Decision.** Compare the general theory with ordinary terminal objects, cone categories,
+limits, adjoints, and Kan extensions. The comparison is through the exported interface,
+with kernel implementations used only to establish the bridge.
+**Rationale.** The discrete test checks meaning and the swap build checks abstraction.
+**Rejected.** Treating either check as a substitute for the other.
+**Acceptance.** AT-UP-1 through AT-UP-7.
+**Status.** required M4 acceptance suite.
 
-### D-UP-07 · Extend along a shape inclusion
-**Decision.** The primary *operation* of this layer is Kan extension along inclusions of
-shape categories: `sk_n`, `cosk_n`, restriction/extension along `Δ_{≤n} → Δ`,
-`Δ₊,≤0 → Δ₊`, `Ω_p → Ω`, and along inert inclusions of sub-shapes. Worked example and
-acceptance test: the Čech nerve of `f : x → s` is `cosk₀` in augmented simplicial
-objects over `s`; its `n`-th term is a limit over the appropriate shape; it exists when
-the relevant limits do; it is unique up to contractible choice; it is functorial in `f`.
-This is the "extend to the Amitsur diagram" of → D-CH-03.
-**Acceptance.** AT-UP-6 (Čech nerve as above); AT-UP-7: `cosk_n ⊣ sk_n`-style
-adjunction statements as terminal-object statements.
-**Status.** frozen.
+### D-UP-18 · Universal properties involving categories
+**Decision.** Use `VertCore(Cat)` and later `VertCore(Cat_∞)` for categorical mapping
+spaces and (∞,1)-universal properties. For ordinary categories these mapping spaces are
+cores of functor categories. Construct exponentials/functor objects and verify their
+core-valued universal property; use their full functor categories when 2-dimensional
+information is required. Products and homotopy pullbacks here are understood in the
+(∞,1)-sense. A lax comma object is a separate 2-dimensional construction in `Vert₂`
+or the equipment. Do not identify it with a strict or homotopy pullback by terminology.
+**Rationale.** The ambient dimension determines the universal property being asserted.
+**Rejected.** Calling `VertRaw(Cat)` mapping spaces functor cores.
+**Acceptance.** AT-UP-8: for ordinary C,D the chosen exponential is the functor category
+and `MapCat(E,Fun(C,D)) ≃ MapCat(E×C,D)`, naturally in E; AT-FD-4's walking-isomorphism test.
+**Status.** provisional until M4; AT-UP-8 is mandatory in its exit criteria.
 
-## Specializations
-
-### D-UP-08 · 1-level instances
-**Decision.** For discrete `C`, all of the above are proved to coincide with the
-classical definitions, as theorems in `Theory/` (not as separate definitions). These
-theorems are the acceptance tests AT-UP-1…7.
-**Status.** frozen.
-
-### D-UP-09 · 2-level: universal properties in `Cat`
-**Decision.** `Vert P` sees vertical morphisms only: `Vert(Cat)` is the 1-category of
-categories and functors, and `Vert(Mod(Mat Kan))` has as mapping spaces the
-∞-groupoids of functors and natural *equivalences*. Natural transformations are nullary
-cells into units and live in the equipment, not in `Vert`. Consequently:
-- (∞,1)-universal properties in `Vert(Cat_∞)` are used for products, pullbacks,
-  exponentials (functor objects), and cotensors with `[1]`. They suffice for these because
-  the core of `Fun(E, −)` for all `E` (including `E × [1]`) detects the full ∞-category
-  `Fun(E, −)`; a functor object is "an exponential in `Vert(Cat_∞)`", a localization "a
-  functor with the universal property in `Vert(Cat_∞)`", and the concrete `[C, D]`,
-  `C[W⁻¹]` are witnesses provided by constructions.
-- Anything lax or 2-categorical — comma objects as 2-limits, Kleisli objects, lax
-  monoidal structure, mates — is stated in the equipment `Mod(Mat Kan)` using cells (→ 04),
-  never in `Vert`.
-1-categorical universal properties in a strict `Cat` are never used.
-**Rationale.** The earlier draft called `Vert` "2-dimensional"; it is not. The
-2-dimensional data is in the cells, and the (∞,1)-part is enough exactly for the
-constructions listed.
-**Acceptance.** AT-UP-8: for discrete `C, D`, the exponential in `Vert(Cat)` is the
-functor category and its universal property is the classical one on cores.
-**Status.** frozen.
-
-## Open questions
-
-- OQ-UP-1 Comma shapes: use the simplicial join throughout, or a dedicated comma
-  shape in the kernel? Default: join.
-- OQ-UP-2 Do we want `HasLimitsOfShape J C` as a Prop-class for instance search, or
-  always explicit hypotheses? Default: Prop-classes are allowed (they are propositions),
-  never data-classes.
+OQ-UP-1: choose the concrete derived comma/framing construction and prove its discrete
+comparison. OQ-UP-2: Prop-valued existence classes are allowed; chosen witnesses are
+passed explicitly. No data-valued chosen-limit instance is introduced.

@@ -3,11 +3,12 @@
 \meta{id}{AT-RT-5}
 \meta{area}{root}
 \meta{origin}{design/02-root.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:rt}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{DK-equivalences: 2-out-of-3, composition, discrete case.}
-\p{Named by: \ref{dec-rt-0006}.}
+\p{in its revised scope. \ref{at-rt-0009} remains the full external comparison}
+\p{Named by: \ref{dec-rt-0021}.}
 \p{\em{Lean declaration(s):} none yet.}

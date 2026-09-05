@@ -1,0 +1,38 @@
+\title{D-RT-21 · Two equivalence predicates}
+\taxon{Decision}
+\meta{id}{D-RT-21}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional. M-F may change these local clauses if their tests fail.}
+\meta{supersedes}{dec-rt-0006}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:rt}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{Keep the following separate.}
+  \ul{
+    \li{\code{LevelEq} compares fixed-label presentations by levelwise weak equivalences. It is the relation used for Reedy replacement and relative presheaf mapping invariance.}
+    \li{\code{VDCEq} is the candidate categorical equivalence of augmented VDC presentations. Its provisional local specification requires equivalences on raw vertical hom spaces and on cell spaces over every fixed source boundary, and \em{simultaneous} essential surjectivity: choose object representatives with vertical equivalences, and for each target horizontal choose a source horizontal and an invertible unary cell over those chosen endpoint equivalences. Invertibility and compatibility are formulated through coherent unary-cell diagrams, not through the deleted \code{hP}.}
+  }
+  \p{There is no requirement that \code{P(h) → Q(h)} be a weak equivalence. In the discrete case the comparison target is Koudenburg's equivalence in \code{AugVirtDblCat} (with vertical isomorphisms). For Segal categories themselves use their standard DK-equivalence. The complete ∞-clause list and its relation to other VDC models remain \ref{ms-foundation} research obligations; the provisional predicate is not exported as a settled definition.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Equivalent presentations may have different sets of isomorphic horizontals. Different endpoint representatives must work together for all cells.}
+}
+\subtree{
+  \title{Rejected}
+  \p{The original horizontal-object bijection condition; checking horizontals only at literal image endpoints; deriving the ∞-comparison from the discrete case alone.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-fd-0005}: duplicate horizontals, endpoint transport, and 2-out-of-3; \ref{at-rt-0005} in its revised scope. \ref{at-rt-0009} remains the full external comparison.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional. \ref{ms-foundation} may change these local clauses if their tests fail.}
+}

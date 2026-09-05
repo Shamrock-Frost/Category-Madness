@@ -1,0 +1,29 @@
+\title{D-KR-11 · Fibrant replacement (statement here, proof at M2)}
+\taxon{Decision}
+\meta{id}{D-KR-11}
+\meta{area}{kernel}
+\meta{origin}{design/01-kernel.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional (proof strategy to be chosen at M2: Bergner-style small object argument along the elementary boundary inclusions is the default).}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:kr}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{For elegant shapes, there is a functorial Reedy-fibrant replacement of Segal presheaves that preserves the label set and is a levelwise homotopy equivalence on elementary values; for \code{Δ_X} this is Bergner's fibrant replacement for Segal categories. The kernel proves the version needed by → \ref{dec-rt-0007}.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Natural examples (strict simplicial categories, \code{Mat(Kan)}) are Segal but not Reedy fibrant; derived mapping spaces need a fibrant target.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-kr-0011}: replacement exists and is a DK-equivalence (→ \ref{dec-rt-0006}).}
+}
+\subtree{
+  \title{Status}
+  \p{provisional (proof strategy to be chosen at \ref{ms-0002}: Bergner-style small object argument along the elementary boundary inclusions is the default).}
+}

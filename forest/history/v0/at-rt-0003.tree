@@ -1,0 +1,13 @@
+\title{AT-RT-3 · Nerves of set-level augmented VDCs are VDC∞s}
+\taxon{Acceptance test}
+\meta{id}{AT-RT-3}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:rt}
+\tag{status:unstated}
+
+\p{Nerves of set-level augmented VDCs are VDC∞s.}
+\p{Named by: \ref{dec-rt-0001}, \ref{dec-rt-0011}.}
+\p{\em{Lean declaration(s):} none yet.}

@@ -3,13 +3,13 @@
 \meta{id}{D-SP-05}
 \meta{area}{spaces and enrichment}
 \meta{origin}{design/05-spaces-enrichment.md}
-\meta{status}{frozen}
+\meta{status}{superseded}
 \meta{status-text}{frozen at M6 (AT-SP-5 is a milestone, not a prerequisite).}
 \meta{supersedes}{none}
-\meta{superseded-by}{none}
+\meta{superseded-by}{dec-sp-0014}
 \tag{decision}
 \tag{area:sp}
-\tag{status:frozen}
+\tag{status:superseded}
 
 \subtree{
   \title{Decision}

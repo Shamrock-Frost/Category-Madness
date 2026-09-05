@@ -1,0 +1,33 @@
+\title{D-CH-22 · Hard seal}
+\taxon{Decision}
+\meta{id}{D-CH-22}
+\meta{area}{charter}
+\meta{origin}{design/00-charter.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen policy.}
+\meta{supersedes}{dec-ch-0009}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:ch}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Theory cannot directly import Kernel/, Root/, or Mathlib category theory and algebraic topology. Compiled statement and proof dependencies are audited; a source import grep is only a preliminary check. Tactics are allowed if their proof terms respect the boundary. Both stub and kernel-backed builds run on each merge candidate.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Imports and tactics can introduce transitive dependencies.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Treating a passing stub build as a consistency proof.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-fd-0002}, \ref{at-fd-0011}.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen policy.}
+}

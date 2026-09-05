@@ -1,0 +1,12 @@
+\title{AT-KR-0 · Mathlib inventory node exists and is verified}
+\taxon{Acceptance test}
+\meta{id}{AT-KR-0}
+\meta{area}{kernel}
+\meta{origin}{design/01-kernel.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:kr}
+\tag{status:unstated}
+
+\p{Mathlib inventory node exists and is verified.}
+\p{\em{Lean declaration(s):} none yet.}

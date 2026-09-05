@@ -1,0 +1,39 @@
+\title{11 · \ref{ms-foundation}: foundation feasibility}
+\taxon{Chapter}
+\meta{origin}{design/11-foundation-feasibility.md}
+\meta{layer}{human}
+\tag{chapter}
+
+\p{\strong{Position:} after \ref{ms-0000}, before \ref{ms-0001}. \strong{Current state:} proposed; no Lean implementation or proof was added by this document revision. \strong{Purpose:} establish a viable small path through the foundation before expanding the library or freezing its conjectural root.}
+\p{This milestone can be substantial. “Small” means one root, a few decisive examples, and only their necessary machinery; it does not mean a finite checklist magically proves a new ∞-categorical nerve theorem. Definitions of shapes, diagrams, and replacement needed by these gates are pulled forward from \ref{ms-0001}/\ref{ms-0002}.}
+\transclude{dec-fd-0001}
+\subtree{
+  \title{Gate definitions}
+
+  \transclude{at-fd-0001}
+  \transclude{at-fd-0002}
+  \transclude{at-fd-0003}
+  \transclude{at-fd-0004}
+  \transclude{at-fd-0005}
+  \transclude{at-fd-0006}
+  \transclude{at-fd-0007}
+  \transclude{at-fd-0008}
+  \transclude{at-fd-0009}
+  \transclude{at-fd-0010}
+  \transclude{at-fd-0011}
+}
+\subtree{
+  \title{Work order without circular gates}
+  \ol{
+    \li{Inventory, universe and seal prototypes; small discrete category/groupoid examples.}
+    \li{Augmented algebra/shapes and their required diagram-model lemmas (\ref{at-fd-0007}).}
+    \li{Reduced gluing/replacement and the standalone categorical framing (core parts of \ref{at-fd-0003}/4), plus monodromy and the discrete equivalence tests.}
+    \li{State/prove the remaining equivalence laws; build relative walking constructions and the nondiscrete example (\ref{at-fd-0005}/8).}
+    \li{Check that example's categorical extraction to finish \ref{at-fd-0004}; finish the scoped pasting, symmetry, and final audit gates.}
+  }
+  \p{The subparts of \ref{at-fd-0004} are deliberately separated: its framing is a prerequisite of the example, while its final root comparison is a client of that example. A gate-level mutual reference does not authorize a circular Lean proof.}
+}
+\subtree{
+  \title{Interpreting failures}
+  \p{Universe offsets, object reduction, and specification packaging have direct candidate repairs. The old unconditional \code{hP} is removed from required architecture, so failure to recover it is not failure of \ref{ms-foundation}. The material research risks are the augmented arity/model theory, coherent \code{Mod}, and the intended equivalence/categorical comparison. A negative result for those could require a different root presentation or a smaller first release. It would not by itself refute the broader goal of a common, interface-driven categorical library.}
+}

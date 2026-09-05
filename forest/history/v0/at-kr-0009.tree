@@ -1,0 +1,13 @@
+\title{AT-KR-9 · Labelled Δ characterizes categories with a given object set}
+\taxon{Acceptance test}
+\meta{id}{AT-KR-9}
+\meta{area}{kernel}
+\meta{origin}{design/01-kernel.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:kr}
+\tag{status:unstated}
+
+\p{Labelled Δ characterizes categories with a given object set.}
+\p{Named by: \ref{dec-kr-0007}, \ref{dec-rt-0010}.}
+\p{\em{Lean declaration(s):} none yet.}

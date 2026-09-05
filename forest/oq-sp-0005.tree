@@ -1,0 +1,12 @@
+\title{OQ-SP-5}
+\taxon{Open question}
+\meta{id}{OQ-SP-5}
+\meta{area}{spaces and enrichment}
+\meta{origin}{design/05-spaces-enrichment.md}
+\meta{status}{open}
+\tag{open-question}
+\tag{area:sp}
+\tag{status:open}
+
+\p{determine the exact monad/preservation hypotheses for the ∞-Kleisli construction on the corrected profunctor ambient.}
+\p{\em{Resolution:} open. Decided by the human; record the answer as a decision node that this node then cites.}

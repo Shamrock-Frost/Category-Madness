@@ -1,0 +1,29 @@
+\title{D-RT-08 · Derived mapping spaces}
+\taxon{Decision}
+\meta{id}{D-RT-08}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen at M3.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:rt}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{For VDC∞s \code{Q, P} with a fixed map on labels, \code{Map(Q, P)} is the simplicial mapping space of strict maps \code{Q → RP} over that label map. It is a Kan complex (every \code{Q} is cofibrant by elegance, \code{RP} is fibrant), and independent of the choice of \code{RP} up to homotopy equivalence.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Strict maps into a fibrant object model homotopy-coherent maps; this is the whole reason to have fibrant replacement.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-rt-0006}: independence of \code{R}; for discrete \code{Q, P}, \code{π₀ Map(Q,P)} is the set of maps.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen at \ref{ms-0003}.}
+}

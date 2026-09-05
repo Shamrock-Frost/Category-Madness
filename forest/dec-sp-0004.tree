@@ -3,17 +3,17 @@
 \meta{id}{D-SP-04}
 \meta{area}{spaces and enrichment}
 \meta{origin}{design/05-spaces-enrichment.md}
-\meta{status}{frozen}
+\meta{status}{superseded}
 \meta{status-text}{frozen at M6.}
 \meta{supersedes}{none}
-\meta{superseded-by}{none}
+\meta{superseded-by}{dec-sp-0013}
 \tag{decision}
 \tag{area:sp}
-\tag{status:frozen}
+\tag{status:superseded}
 
 \subtree{
   \title{Decision}
-  \p{\code{Mat(Kan.{v})} is the VDC∞ with label set \code{Type v}, vertical morphisms functions, horizontal morphisms \code{A ⇸ B} the space \code{∏_{A×B} U} of families of small Kan complexes, and cells \code{(M₁,…,M_n) ⇒ N} over \code{(f,g)} the spaces of families of maps \code{M₁(a₀,a₁) × ⋯ × M_n(a_{n−1},a_n) → N(f a₀, g a_n)}, built from the universal fibration so that boundary maps are Kan fibrations; nullary-target cells as in → \ref{dec-rt-0010} (verify). \code{Mat(Kan)} is exported \em{fibrant} (→ \ref{dec-rt-0007}, \ref{dec-ch-0013}) with the same two options as \ref{dec-sp-0002} for how (\ref{oq-sp-0003}), and with its elementary values characterized up to homotopy equivalence (\code{Mat(Kan)(h(A,B)) ≃ ∏_{A×B} U}, cell spaces ≃ products of mapping spaces). \code{InfCategory A := Monad (Mat Kan) A} for a set \code{A}; \code{Cat_∞ := Mod(Mat Kan)}.}
+  \p{\code{Mat(Kan.{v})} is the VDC∞ with label set \code{Type v}, vertical morphisms functions, horizontal morphisms \code{A ⇸ B} the space \code{∏_{A×B} U} of families of small Kan complexes, and cells \code{(M₁,…,M_n) ⇒ N} over \code{(f,g)} the spaces of families of maps \code{M₁(a₀,a₁) × ⋯ × M_n(a_{n−1},a_n) → N(f a₀, g a_n)}, built from the universal fibration so that boundary maps are Kan fibrations; nullary-target cells as in → D-RT-10 (verify). \code{Mat(Kan)} is exported \em{fibrant} (→ D-RT-07, D-CH-13) with the same two options as \ref{dec-sp-0002} for how (\ref{oq-sp-0003}), and with its elementary values characterized up to homotopy equivalence (\code{Mat(Kan)(h(A,B)) ≃ ∏_{A×B} U}, cell spaces ≃ products of mapping spaces). \code{InfCategory A := Monad (Mat Kan) A} for a set \code{A}; \code{Cat_∞ := Mod(Mat Kan)}.}
 }
 \subtree{
   \title{Theorem targets}
@@ -21,7 +21,7 @@
 }
 \subtree{
   \title{Rationale}
-  \p{→ \ref{dec-ch-0004}: ∞-categories are not defined; they are monads in one VDC∞. The rectification theorem is what lets anyone write one down.}
+  \p{→ D-CH-04: ∞-categories are not defined; they are monads in one VDC∞. The rectification theorem is what lets anyone write one down.}
 }
 \subtree{
   \title{Status}

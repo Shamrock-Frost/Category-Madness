@@ -1,0 +1,15 @@
+\title{AT-FD-9 · Correct symmetry ambient}
+\taxon{Acceptance test}
+\meta{id}{AT-FD-9}
+\meta{area}{foundation feasibility}
+\meta{origin}{design/11-foundation-feasibility.md}
+\meta{status}{proposed}
+\meta{statement-version}{1}
+\tag{acceptance-test}
+\tag{area:fd}
+\tag{status:proposed}
+
+\p{In the discrete setting construct the relevant fragment of the free symmetric monoidal category on the terminal discrete category inside \code{Prof(Set)}. In arity two its automorphism group is \code{Σ₂}; identify the corresponding one-colour collections with sets carrying a \code{Σ₂}-action (and equivariant maps). Compare this with indexing over a discrete object set, which loses that action data. Fix profunctor variance explicitly. No full ∞-operad construction is required at this gate.}
+\p{\strong{Depends on:} the discrete matrix/profunctor prototype; no spaces colimits. \strong{Evidence:} arity-two action and morphism comparison. \strong{Failure response:} revise the ambient or the indexing mechanism before asserting symmetric-sequence equivalence.}
+\p{Named by: \ref{dec-sp-0018}.}
+\p{\em{Lean declaration(s):} none yet.}

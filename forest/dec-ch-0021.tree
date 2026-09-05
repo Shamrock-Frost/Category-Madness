@@ -1,0 +1,33 @@
+\title{D-CH-21 · Three stages}
+\taxon{Decision}
+\meta{id}{D-CH-21}
+\meta{area}{charter}
+\meta{origin}{design/00-charter.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen layout policy.}
+\meta{supersedes}{dec-ch-0008}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:ch}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Kernel/ uses Mathlib freely for shapes and homotopy machinery. Root/ builds and validates the common definitions and exposes Interface/. Theory/ imports only that interface. Prototype/ holds \ref{ms-foundation} experiments and is not part of the public interface.}
+}
+\subtree{
+  \title{Rationale}
+  \p{The logical stages are separate from implementation milestones; small pieces of later kernel work may be pulled forward into \ref{ms-foundation}.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Waiting until \ref{ms-0006} to exercise the ∞-semantics of a root frozen at \ref{ms-0003}.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-fd-0002} and \ref{ms-0003}'s full swap build.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen layout policy.}
+}

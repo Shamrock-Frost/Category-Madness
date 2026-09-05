@@ -3,11 +3,12 @@
 \meta{id}{AT-KR-10}
 \meta{area}{kernel}
 \meta{origin}{design/01-kernel.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:kr}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{Closure properties of Kan/trivial fibrations.}
-\p{Named by: \ref{dec-kr-0010}.}
+\p{, \ref{at-fd-0003}, \ref{at-fd-0006}, \ref{at-fd-0008}}
+\p{Named by: \ref{dec-kr-0022}.}
 \p{\em{Lean declaration(s):} none yet.}

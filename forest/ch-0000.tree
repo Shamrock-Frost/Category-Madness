@@ -1,67 +1,33 @@
-\title{00 · Charter}
+\title{00 · Charter — revision 1}
 \taxon{Chapter}
 \meta{origin}{design/00-charter.md}
 \meta{layer}{human}
 \tag{chapter}
 
-
-\subtree{
-  \title{Purpose}
-  \p{A Lean 4 library of category theory whose only primitive is the virtual double ∞-category, built so that ordinary categories, ∞-categories, enriched and internal categories, and equipments are instances of one definition rather than parallel developments, and so that every theorem is proved once against an interface and never against an implementation.}
-  \p{The library is built by agents against definitions frozen by a human. The definitions, their acceptance tests, and the interface are the product. Proofs are the cost of goods.}
-}
-\subtree{
-  \title{Non-goals}
-  \ul{
-    \li{Not a general-purpose mathematics library. Algebra, analysis, and topology are out of scope; "spaces" are Kan complexes and geometric realization is never needed.}
-    \li{Not a contribution to Mathlib. Mathlib is scaffolding (→ \ref{dec-ch-0008}) and is hidden after the seal.}
-    \li{Not constructive. Universal properties are propositions and witnesses are chosen classically (→ \ref{dec-ch-0002}).}
-    \li{Not a home for defeq-based ergonomics. If a proof closes by \code{rfl} against an implementation, it is wrong for this library (→ \ref{dec-ch-0001}).}
-    \li{Not a library of strict higher category theory. Strict ω-categories, computads, orientals, and rewriting exist in the kernel only, to build shape categories; nothing strict survives the seal.}
-  }
-}
+\p{The goal is a Lean 4 library in which augmented virtual double ∞-categories provide a common ambient language for ordinary, enriched, internal, and ∞-categorical theory. Definitions, comparison theorems, and an implementation-independent interface are the product. The exact ∞-root remains provisional until the foundation gates in \code{11-foundation-feasibility.md} pass. Revision history and supersession are recorded in \code{12-revision-notes.md}; the original documents are preserved verbatim in \code{history/v0/}.}
 \subtree{
   \title{Principles}
 
-  \transclude{dec-ch-0001}
-  \transclude{dec-ch-0002}
-  \transclude{dec-ch-0003}
-  \transclude{dec-ch-0004}
-  \transclude{dec-ch-0005}
-  \transclude{dec-ch-0013}
-  \transclude{dec-ch-0006}
-  \transclude{dec-ch-0007}
+  \transclude{dec-ch-0014}
+  \transclude{dec-ch-0015}
+  \transclude{dec-ch-0016}
+  \transclude{dec-ch-0017}
+  \transclude{dec-ch-0018}
+  \transclude{dec-ch-0026}
+  \transclude{dec-ch-0019}
+  \transclude{dec-ch-0020}
 }
 \subtree{
-  \title{The bootstrap}
+  \title{Bootstrap and scope}
 
-  \transclude{dec-ch-0008}
-  \transclude{dec-ch-0009}
-  \transclude{dec-ch-0010}
-  \transclude{dec-ch-0011}
-  \transclude{dec-ch-0012}
+  \transclude{dec-ch-0021}
+  \transclude{dec-ch-0022}
+  \transclude{dec-ch-0023}
+  \transclude{dec-ch-0024}
+  \transclude{dec-ch-0025}
 }
 \subtree{
   \title{Success criteria}
-  \ol{
-    \li{The swap test (→ \ref{dec-tl-0006}) is green: \code{Theory/} builds against a stub interface whose constants are bodiless axioms.}
-    \li{The self-hosting theorem (→ \ref{at-rt-0001}) is proved: discrete VDC∞s are exactly set-level augmented virtual double categories, and the discrete \code{Category} is exactly the classical one.}
-    \li{Yoneda, weighted limits, Kan extensions, adjunctions, and monads are each stated once for augmented virtual ∞-equipments (→ \ref{ft-0000}) and their discrete specializations coincide with Cruttwell–Shulman and Koudenburg (→ \ref{at-ft-0001}).}
-    \li{Segal categories, i.e. monads in \code{Mat(Kan)}, are the ∞-categories of the library, with no separate definition (→ \ref{at-sp-0002}).}
-  }
-}
-\subtree{
-  \title{Glossary}
-  \ul{
-    \li{\strong{VDC∞} — virtual double ∞-category, the root object (→ \ref{dec-rt-0001}).}
-    \li{\strong{Labelled} — objects are a set \code{X}; shapes carry labels in \code{X} at object positions.}
-    \li{\strong{Augmented} — cells may have empty horizontal target (Koudenburg).}
-    \li{\strong{E1} — inputs of cells are ordered; no symmetries at the root.}
-    \li{\strong{Segal condition} — the value at a shape is the (homotopy) limit of values at its elementary sub-shapes.}
-    \li{\strong{DK-equivalence} — Dwyer–Kan equivalence: essentially surjective and fully faithful, spelled out in → \ref{dec-rt-0006}.}
-    \li{\strong{Sealed} — visible only through \code{Interface/}; unfolding forbidden by mechanism.}
-    \li{\strong{Witness} — an inhabitant of \code{{x // universalProperty x}}.}
-    \li{\strong{Acceptance test} — a Lean statement whose proof is evidence a definition is right.}
-    \li{\strong{Shape} — an object of one of the kernel's shape categories (Δ, Ω_p, Θ_fc, …). For \code{Θ_fc}, a pasting scheme: a leveled grid of cells, i.e. a chain of active maps in Δ.}
-  }
+  \p{The seal has a real implementation and passes the swap test; discrete instances recover classical categories and augmented VDCs; categorical maps detect natural equivalences; the coherent formal theory specializes correctly; monads in the spaces matrix ambient agree with Segal categories. These are separate tests, not consequences of one slogan.}
+  \p{Algebra, analysis, geometric realization, general strict higher-category libraries, and self-hosting are outside the immediate critical path. The geometric substrate and additional shape families are optional extensions after \ref{ms-foundation}.}
 }

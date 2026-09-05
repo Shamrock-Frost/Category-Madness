@@ -1,0 +1,34 @@
+\title{D-WF-05 · Retrieval MCP}
+\taxon{Decision}
+\meta{id}{D-WF-05}
+\meta{area}{forest and workflow}
+\meta{origin}{design/07-forest-workflow.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen (MVP tool list provisional).}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:wf}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Yes. A read-only MCP server (\code{mcp/}) over the built forest and the Lean environment, run locally by agents and humans, rebuilt in CI. Tools (MVP):}
+  \ul{
+    \li{\code{search(query, k, filter)}: hybrid lexical + embedding search over node bodies (generated and handwritten), docstrings, decision text; filters by taxon/status/area;}
+    \li{\code{get(address)}: full node;}
+    \li{\code{neighbors(address, direction)}: dependencies / dependents / cited decisions;}
+    \li{\code{open_tasks(area, kind)}: \code{stated}/\code{sorry} nodes, sorted by unblocked-dependents;}
+    \li{\code{decision(id)} and \code{acceptance(id)}: registry lookups with status;}
+    \li{\code{type_search(pattern)}: Loogle-style search over the environment for the project's namespaces.}
+  }
+  \p{No write tools; changes go through PRs. Index sources: \code{build/forest/} plus the handwritten \code{forest/}. The server is a thin wrapper; the forest is the index.}
+}
+\subtree{
+  \title{Rationale}
+  \p{An agent that cannot find the decision node will re-derive the decision, usually differently. Retrieval at task time is how frozen decisions actually bind. Grepping thirteen million lines is not a plan.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen (MVP tool list provisional).}
+}

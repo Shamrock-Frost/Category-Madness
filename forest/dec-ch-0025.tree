@@ -1,0 +1,33 @@
+\title{D-CH-25 · Sealing a specification}
+\taxon{Decision}
+\meta{id}{D-CH-25}
+\meta{area}{charter}
+\meta{origin}{design/00-charter.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen policy; prototype required before architecture freeze.}
+\meta{supersedes}{dec-ch-0012}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:ch}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Seal data together with their laws, using an opaque inhabitant of a specification structure or an explicitly audited irreducible implementation. The kernel-backed implementation inhabits the complete specification. An axiom stub may replace that implementation for fast client builds; its axioms are prohibited in the kernel-backed build. A future self-hosted kernel must inhabit the same specification.}
+}
+\subtree{
+  \title{Rationale}
+  \p{\code{opaque n : Nat := 0} alone does not export \code{n = 0}.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Independently opaque operations with unconnected postulated laws.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-fd-0002}, \ref{at-fd-0011}.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen policy; prototype required before architecture freeze.}
+}

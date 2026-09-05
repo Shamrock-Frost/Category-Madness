@@ -1,43 +1,49 @@
-# Design documents — phase −1
+# Design documents — revision 1
 
-Working name: **TBD** (placeholder: "the library"). Lean 4 + Mathlib (pinned at M0).
+**Current state:** revised research design; no Lean implementation or proof is included.
+**Main change:** M-F, a foundation feasibility milestone between M0 and M1, now gates
+root and interface freezing. See `11-foundation-feasibility.md` first for the tests,
+and `12-revision-notes.md` for changes, supersession, and unresolved risks.
 
-These documents are the phase −1 artifact: human-written markdown, to be ported by an
-agent into a forester v5 forest at M0 (see `07-forest-workflow.md`). After the port the
-forest is primary and these files are frozen as history.
+The design still aims at a common augmented virtual double ∞-category interface, with
+categories and enriched categories obtained through matrices and `Mod`. It now separates
+relative and categorical mapping spaces, removes the unsupported generic `hP`, uses
+reduced object values, corrects collection universes, fixes whole structure labels in
+walking constructions, and places symmetry on the profunctor ambient.
 
-## How to read
+## Contents
 
-- `00-charter.md` — principles, the three-stage bootstrap, the seal, layering. Read first.
-- `01-kernel.md` — stage 0: mathlib scaffolding, shape categories, patterns, Reedy/EZ, Kan machinery.
-- `02-root.md` — stage 1: the VDC∞ definition, `Mod`/`Mat`, `Category` as an instance, the seal.
-- `03-universal-properties.md` — terminal objects, slices, limits, Kan extensions, witnesses.
-- `04-formal-theory.md` — augmented virtual ∞-equipments and formal category theory.
-- `05-spaces-enrichment.md` — universe, the Segal category of spaces, `Mat(Kan)`, ∞-operads.
-- `06-tooling.md` — generated APIs, attributes, tactics, the seal linter.
-- `07-forest-workflow.md` — forester forest, generated nodes, decision registry, retrieval MCP, agent loop.
-- `08-roadmap.md` — milestones, freezes, acceptance criteria, risk register.
-- `09-bibliography.md` — annotated references keyed to decisions.
-- `10-adversarial-review.md` — the adversarial pass on the design and how each item was disposed into decisions.
+- `00-charter.md`: goals, corrected principles, and the specification seal.
+- `01-kernel.md`: explicit arity hypotheses, augmented shapes, and homotopy machinery.
+- `02-root.md`: the candidate root, equivalences, maps, relative Mod, and the interface.
+- `03-universal-properties.md`: categorical diagrams, slices, witnesses, and extensions.
+- `04-formal-theory.md`: coherent cell-space theory with optional scoped truncations.
+- `05-spaces-enrichment.md`: classifier, matrices, spans, and corrected symmetry track.
+- `06-tooling.md`: scoped automation, real swap tests, and the axiom allowlist.
+- `07-forest-workflow.md`: registry, versioned acceptance evidence, and staged retrieval.
+- `08-roadmap.md`: revised milestone order and risks.
+- `09-bibliography.md`: primary-source routes and limits of their applicability.
+- `10-adversarial-review.md`: disposition of the twelve review findings.
+- `11-foundation-feasibility.md`: M-F tests, dependencies, evidence, and failure responses.
+- `12-revision-notes.md`: change record and decision-ID crosswalk.
+- `decision-supersession.json`: machine-readable decision lineage and original-file hashes.
+- `history/v0/`: the twelve original files, preserved verbatim and excluded from active indexing.
 
 ## Conventions
 
-- **Decisions** carry IDs `D-<AREA>-<nn>` (CH charter, KR kernel, RT root, UP universal
-  properties, FT formal theory, SP spaces, TL tooling, WF workflow, RM roadmap). Each has
-  *Decision / Rationale / Rejected / Acceptance / Status*.
-- **Status** is `frozen` (changes require a superseding decision), `provisional`
-  (agents may propose amendments, see D-TL-01), or `later` (not before the stated milestone).
-- **Acceptance tests** carry IDs `AT-<AREA>-<n>`. An acceptance test is a Lean statement
-  (or a small family of them) whose proof is the evidence that a definition is right.
-  Every definition-level decision names at least one.
-- **Open questions** for the human are marked `OQ`.
-- Cross-references are written `→ D-RT-03`, `→ AT-KR-2`.
-- Mathematical claims marked **(verify)** are expected but not yet checked against the
-  literature or by proof; they are tasks, not facts.
+Current decisions have fresh IDs when their prior text changed; the crosswalk records
+which old IDs they supersede. Frozen *process policies* do not mean provisional
+mathematical candidates are validated. Tests retain their subject IDs where useful,
+but changed informal scopes are recorded and all current proof statuses are reset to
+proposed. Retired tests are not counted as passed. A future changed Lean statement
+gets a new statement version and cannot inherit proof status.
 
-## Porting instructions (for the M0 agent)
+A mathematical acceptance test needs a Lean statement and checked proof with approved
+axioms. Tooling gates need reproducible build/check records. No gate has passed merely
+because this archive contains its specification. M-F failure can trigger a model change;
+it cannot be bypassed with an unapproved axiom or an undisclosed weaker test.
 
-One tree per decision, per acceptance test, per milestone, per open question. Map
-`D-RT-03` to the nested address scheme in `07-forest-workflow.md`. Preserve rationale
-and rejected alternatives verbatim; they are the part agents will most need later.
-Do not check in build artifacts.
+Revision 1 is ported into the active forest. The forest is primary for agent work; this
+Markdown remains the checked-in source and audit trail for that port. Preserve the
+immutable history, do not index it as active work, and do not check build artifacts into
+the source repository.

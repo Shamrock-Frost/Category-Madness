@@ -1,0 +1,33 @@
+\title{D-RT-18 · Strict maps}
+\taxon{Decision}
+\meta{id}{D-RT-18}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional.}
+\meta{supersedes}{dec-rt-0003}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:rt}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{A strict map has a function on object labels and a presheaf map into the corresponding reindexing of its target, respecting reduction. These form a category of presentations. Reindexing's preservation of the required fibrancy is a theorem.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Strict maps are convenient input syntax; their interpretation in a localization needs a comparison theorem.}
+}
+\subtree{
+  \title{Rejected}
+  \p{The claim that ordinary presheaf enrichment already gives all categorical maps.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-fd-0004}, \ref{at-fd-0008}.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional.}
+}

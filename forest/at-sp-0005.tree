@@ -1,13 +1,14 @@
-\title{AT-SP-5 · \code{Mod(Mat Kan) ≃ Mod(Span Kan)}}
+\title{AT-SP-5 · \\code{Mod(Mat Kan) ≃ Mod(Span Kan)}}
 \taxon{Acceptance test}
 \meta{id}{AT-SP-5}
 \meta{area}{spaces and enrichment}
 \meta{origin}{design/05-spaces-enrichment.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:sp}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{\code{Mod(Mat Kan) ≃ Mod(Span Kan)}.}
-\p{Named by: \ref{dec-sp-0005}, \ref{dec-sp-0008}.}
+\p{Current proposed scope is specified by the active decisions that name this test.}
+\p{Named by: \ref{dec-sp-0014}, \ref{dec-sp-0017}.}
 \p{\em{Lean declaration(s):} none yet.}

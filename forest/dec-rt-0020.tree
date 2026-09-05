@@ -1,0 +1,33 @@
+\title{D-RT-20 · Truncation is an optional comparison}
+\taxon{Decision}
+\meta{id}{D-RT-20}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen removal of the unsupported requirement; general truncation later.}
+\meta{supersedes}{dec-rt-0005}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:rt}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{There is no unconditional public \code{hP}. For a discrete root the nerve comparison recovers its ordinary augmented VDC. For a nondiscrete root, any homotopy 2-category or equipment comparison must specify retained objects/arrows, cell truncation, transport, and composition, with proofs of compatibility. A general comparison may be bicategorical. \ref{dec-ft-0009} governs when it may be used.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Taking components of boundary spaces forgets monodromy. Fibres of a Kan fibration have transport along paths, not path-independent canonical bijections.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Selecting representatives of \code{π₀ P(v)} and \code{π₀ P(h)} and declaring the resulting fibre components a canonical VDC.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-fd-0006}; \ref{at-rt-0004} is retired in its original general form. Discrete recovery is part of \ref{at-rt-0001}. Any later truncation receives a new acceptance ID.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen removal of the unsupported requirement; general truncation later.}
+}

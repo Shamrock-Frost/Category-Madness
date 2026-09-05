@@ -1,0 +1,13 @@
+\title{AT-FT-5 · \code{Cat} has composites}
+\taxon{Acceptance test}
+\meta{id}{AT-FT-5}
+\meta{area}{formal theory}
+\meta{origin}{design/04-formal-theory.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:ft}
+\tag{status:unstated}
+
+\p{\code{Cat} has composites; classical double category of profunctors.}
+\p{Named by: \ref{dec-ft-0002}.}
+\p{\em{Lean declaration(s):} none yet.}

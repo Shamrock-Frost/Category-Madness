@@ -1,0 +1,33 @@
+\title{D-KR-15 · Arity recipe with separate hypotheses}
+\taxon{Decision}
+\meta{id}{D-KR-15}
+\meta{area}{kernel}
+\meta{origin}{design/01-kernel.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional implementation strategy; hypotheses must be proved before use.}
+\meta{supersedes}{dec-kr-0003}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:kr}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{Formalize the general BMW nerve theorem for a monad equipped with a proved arity presentation. Separately establish the hypotheses providing canonical arities and generic/free factorization when used, such as the relevant strongly cartesian conditions. A free-algebra construction alone supplies neither. For each chosen monad record: base presheaf category, arity family, density/recognition result, factorization theorem, elementary core presentation, and any Reedy/EZ structure. The first examples are free categories (Δ) and the free augmented-VDC construction. The general reusable theorem may initially be preceded by a specialized proof if that is the shortest way to validate the root. Ω_p, Ω, and Θ_n follow only when needed.}
+}
+\subtree{
+  \title{Rationale}
+  \p{The general nerve theorem, the pattern, and Reedy properties are distinct results.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Automatic active–inert factorization for every monad with arities; requiring five shape families before validating the central one.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-kr-0001}, \ref{at-kr-0002}, \ref{at-kr-0008}, \ref{at-fd-0007}; \ref{at-kr-0003}/4 for later presentations.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional implementation strategy; hypotheses must be proved before use.}
+}

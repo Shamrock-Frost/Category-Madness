@@ -1,0 +1,33 @@
+\title{D-TL-16 · Shape extension}
+\taxon{Decision}
+\meta{id}{D-TL-16}
+\meta{area}{tooling}
+\meta{origin}{design/06-tooling.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional, M4.}
+\meta{supersedes}{dec-tl-0005}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:tl}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{An extension command states the relevant pointwise universal property, uses proved existence/coherence theorems, and names a witness. It does not invent an extension from a collection of pointwise choices. Its primary example is Čech \code{cosk₀}.}
+}
+\subtree{
+  \title{Rationale}
+  \p{The command packages a construction already justified by the interface.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Closing coherence obligations solely by generated syntax.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-up-0006} and \ref{at-up-0007}.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional, \ref{ms-0004}.}
+}

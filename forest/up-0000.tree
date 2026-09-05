@@ -1,33 +1,16 @@
-\title{03 · Universal properties (stage 2, \ref{ms-0004})}
+\title{03 · Universal properties — revision 1}
 \taxon{Chapter}
 \meta{origin}{design/03-universal-properties.md}
 \meta{layer}{human}
 \tag{chapter}
 
-\p{Everything here is stated for a Segal category \code{C} with object set \code{X} — i.e. a monad in \code{Mat(Kan)} once that exists (→ \ref{dec-sp-0004}), and before that for \code{Vert P} of any VDC∞ and for discrete \code{C : Category A}. Only interface vocabulary is used: mapping spaces, homotopy equivalence, contractibility, derived maps, joins.}
-\subtree{
-  \title{The root notion}
-
-  \transclude{dec-up-0001}
-  \transclude{dec-up-0002}
-  \transclude{dec-up-0003}
-  \transclude{dec-up-0004}
-  \transclude{dec-up-0005}
-}
-\subtree{
-  \title{Witnesses}
-
-  \transclude{dec-up-0006}
-  \transclude{dec-up-0007}
-}
-\subtree{
-  \title{Specializations}
-
-  \transclude{dec-up-0008}
-  \transclude{dec-up-0009}
-}
-\subtree{
-  \title{Open questions}
-  \transclude{oq-up-0001}
-  \transclude{oq-up-0002}
-}
+\p{This layer uses the sealed Segal-category interface and categorical functor objects. Its bootstrap implementation is in Root/; agreement with monads in \code{Mat(Kan)} is \ref{at-sp-0003}. \code{MapCat} is the core of a categorical functor object. \code{MapRel} is used only inside explicit presentation-level constructions and comparison proofs.}
+\transclude{dec-up-0010}
+\transclude{dec-up-0011}
+\transclude{dec-up-0012}
+\transclude{dec-up-0013}
+\transclude{dec-up-0014}
+\transclude{dec-up-0015}
+\transclude{dec-up-0016}
+\transclude{dec-up-0017}
+\transclude{dec-up-0018}

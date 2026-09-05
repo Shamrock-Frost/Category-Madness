@@ -1,0 +1,29 @@
+\title{D-UP-03 · Joins and slices}
+\taxon{Decision}
+\meta{id}{D-UP-03}
+\meta{area}{universal properties}
+\meta{origin}{design/03-universal-properties.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen (the exact join used for commas is provisional).}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:up}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{For a diagram \code{F : N J → C}, the slice \code{C_{/F}} is the Segal category with object set \code{{(x, cone) | cone : N([0] ⋆ J) → C restricting to F}} and value at \code{([n]; x₀…x_n)} the fibre over \code{F} of the restriction map \code{Map(N([n] ⋆ J), C) → Map(N J, C)} with the given labels — a Kan complex, since the restriction is a Kan fibration (inclusion of a sub-presheaf into a cofibrant object, fibrant target). Joins come from the kernel through the interface (→ \ref{dec-kr-0008}). \code{F ↓ y} and comma constructions are the same recipe with \code{[n] ⋆ J} replaced by the appropriate join/comma shape.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Lurie's definition of slices transposed to Segal categories; it uses only joins, derived mapping spaces and fibres along fibrations.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-up-0002}: for discrete \code{C} and \code{J}, \code{C_{/F}} is the classical slice/cone category; \ref{at-up-0003}: \code{C_{/F}} is a Segal category (Segal condition holds).}
+}
+\subtree{
+  \title{Status}
+  \p{frozen (the exact join used for commas is provisional).}
+}

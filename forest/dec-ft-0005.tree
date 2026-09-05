@@ -3,13 +3,13 @@
 \meta{id}{D-FT-05}
 \meta{area}{formal theory}
 \meta{origin}{design/04-formal-theory.md}
-\meta{status}{later}
+\meta{status}{superseded}
 \meta{status-text}{later (M7).}
 \meta{supersedes}{none}
-\meta{superseded-by}{none}
+\meta{superseded-by}{dec-ft-0010}
 \tag{decision}
 \tag{area:ft}
-\tag{status:later}
+\tag{status:superseded}
 
 \subtree{
   \title{Decision}

@@ -1,13 +1,14 @@
-\title{AT-SP-11 · Contractible monads in the \code{T_ℕ}/\code{T_𝔹}/\code{T_Σ} Kleisli VDC∞s are \code{E_1}/\code{E_2}/\code{E_∞}}
+\title{AT-SP-11 · Contractible monads in the \\code{T_ℕ}/\\code{T_𝔹}/\\code{T_Σ} Kleisli VDC∞s are…}
 \taxon{Acceptance test}
 \meta{id}{AT-SP-11}
 \meta{area}{spaces and enrichment}
 \meta{origin}{design/05-spaces-enrichment.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:sp}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{Contractible monads in the \code{T_ℕ}/\code{T_𝔹}/\code{T_Σ} Kleisli VDC∞s are \code{E_1}/\code{E_2}/\code{E_∞}.}
-\p{Named by: \ref{dec-sp-0009}.}
+\p{precisely stated E_n examples}
+\p{Named by: \ref{dec-sp-0018}.}
 \p{\em{Lean declaration(s):} none yet.}

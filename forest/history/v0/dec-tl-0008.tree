@@ -1,0 +1,21 @@
+\title{D-TL-08 · Naming and layout (provisional)}
+\taxon{Decision}
+\meta{id}{D-TL-08}
+\meta{area}{tooling}
+\meta{origin}{design/06-tooling.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:tl}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{\code{Kernel/}, \code{Root/}, \code{Interface/}, \code{Interface-Stub/}, \code{Theory/{UP, FT, SP, …}}, \code{Generated/}, \code{forest/}, \code{scripts/}, \code{mcp/}. Declarations: \code{Structure.field_property}, snake_case theorems, dot notation, no abbreviations in names, statement-shaped names (\code{Limit.isTerminal_of_isTerminal}), theorems named for their conclusion. Subject to → \ref{dec-tl-0001}.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional.}
+}

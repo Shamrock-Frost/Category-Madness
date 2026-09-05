@@ -1,0 +1,25 @@
+\title{D-RT-03 · Maps and the 1-category \code{VDC∞}}
+\taxon{Decision}
+\meta{id}{D-RT-03}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen at M3.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:rt}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{A map \code{P → Q} of VDC∞s with label sets \code{X, Y} is a function \code{f : X → Y} together with a map of presheaves \code{P → f^* Q} over \code{Θ_{fc,X}}, where \code{f^* Q} is restriction along \code{Θ_{fc,X} → Θ_{fc,Y}}. Composition is evident. \code{VDC∞.{u,v}} is a 1-category (a Grothendieck construction over \code{Type u}). The ∞-category of VDC∞s is not defined at this stage.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Strict maps are the right maps for the homotopy theory once the target is fibrant (→ \ref{dec-rt-0008}); before that they are the only maps we can write.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen at \ref{ms-0003}.}
+}

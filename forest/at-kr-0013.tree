@@ -3,11 +3,11 @@
 \meta{id}{AT-KR-13}
 \meta{area}{kernel}
 \meta{origin}{design/01-kernel.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:kr}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{Δ and □ as joins and Gray powers in the geometric substrate.}
-\p{Named by: \ref{dec-kr-0012}, \ref{dec-tl-0010}.}
+\p{Current proposed scope is specified by the active decisions that name this test.}
 \p{\em{Lean declaration(s):} none yet.}

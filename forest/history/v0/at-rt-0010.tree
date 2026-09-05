@@ -1,0 +1,13 @@
+\title{AT-RT-10 · \code{Category A} ≃ classical structure ≃ Segal presheaves on \code{Δ_A}}
+\taxon{Acceptance test}
+\meta{id}{AT-RT-10}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:rt}
+\tag{status:unstated}
+
+\p{\code{Category A} ≃ classical structure ≃ Segal presheaves on \code{Δ_A}.}
+\p{Named by: \ref{dec-rt-0010}.}
+\p{\em{Lean declaration(s):} none yet.}

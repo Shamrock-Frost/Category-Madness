@@ -1,12 +1,13 @@
-\title{08 · Roadmap}
+\title{08 · Roadmap — revision 1}
 \taxon{Chapter}
 \meta{origin}{design/08-roadmap.md}
 \meta{layer}{human}
 \tag{chapter}
 
-\p{Milestones are defined by what gets \strong{frozen} and which \strong{acceptance tests} must be \code{proved}. Order within a milestone is dependency order; agents choose. Dates are not part of this document.}
+\p{Milestones are evidence gates, not dates. \ref{ms-foundation} is new and sits between \ref{ms-0000} and \ref{ms-0001}. It pulls forward the pieces of shape, Kan, and categorical comparison machinery needed to test the root. Later milestones package and generalize those pieces; they are not prerequisites that have been scheduled after their clients.}
 \transclude{ms-design}
 \transclude{ms-0000}
+\transclude{ms-foundation}
 \transclude{ms-0001}
 \transclude{ms-0002}
 \transclude{ms-0003}
@@ -17,18 +18,18 @@
 \subtree{
   \title{Risk register}
   \table{
-    \tr{\th{Risk}\th{Impact}\th{Mitigation}}
-    \tr{\td{\code{Θ^aug_fc} not elegant (\ref{at-kr-0006} fails)}\td{Reedy cofibrancy of all objects lost; derived maps need cofibrant replacement}\td{Fall back to generalized Reedy + normal objects, as for Ω; \code{Map} restricted to normal sources}}
-    \tr{\td{Fibrant replacement theorem (\ref{at-kr-0011}) harder than Bergner's}\td{Blocks \code{Map}, \code{Mod}, all of \ref{ms-0003}}\td{Prove for \code{Δ_X} first (literature), then extend; interim: define \code{Map} only for fibrant targets}}
-    \tr{\td{DK-equivalence clauses wrong (\ref{at-rt-0005} or style-A comparison fails)}\td{Homotopy theory of VDC∞s wrong}\td{Clauses are provisional until \ref{at-rt-0005}; style-A comparison at \ref{ms-0006}+ is the external check}}
-    \tr{\td{Boundary fibrancy (2) fails for a needed example}\td{Definition too strict}\td{\ref{oq-rt-0001} fallback: path-space homotopy limits}}
-    \tr{\td{Augmentation axioms transcribed wrongly (\ref{dec-ft-0001})}\td{Formal theory diverges from Koudenburg}\td{\ref{at-ft-0001} is exactly this check; do it before \ref{dec-ft-0003}}}
-    \tr{\td{Elaboration performance through three instance layers}\td{Unusable API}\td{\ref{dec-rt-0014} thin API; \ref{dec-tl-0007}; benchmarks as nodes}}
-    \tr{\td{Mathlib bump breaks kernel}\td{Blocks everything until \ref{ms-0007}}\td{Pin; inventory node per bump; after \ref{ms-0003} only \code{Kernel/} is affected}}
-    \tr{\td{Agents redefine instead of retrieving}\td{Definition drift}\td{Retrieval MCP (\ref{dec-wf-0005}); PR must cite decisions}}
-    \tr{\td{\code{HasColimits Kan} (\ref{at-sp-0012}) stalls}\td{No \code{PSh}, no coends, no composites, no \code{SymSeq}}\td{It is scheduled by name; Simpson's route is Segal-native; fallback is the Joyal–Tierney comparison and HTT 4.2.4.1 through Cisinski's \code{S}}}
-    \tr{\td{Rectification (\ref{at-sp-0008}) missing}\td{Fibrant world cannot be populated by hand}\td{Dwyer–Kan/Bergner is literature; interim: work only with standard objects exported fibrant}}
-    \tr{\td{Closure package (\ref{dec-ch-0013}) incomplete at the seal}\td{\code{Theory/} cannot prove fibrancy of its own constructions}\td{Two-tier extension policy (\ref{dec-rt-0013}): lemmas are agent-proposable}}
-    \tr{\td{\code{Vert} used where cells are needed}\td{Lax notions silently wrong}\td{\ref{dec-up-0009} as amended; \ref{at-up-0008}}}
+    \tr{\th{Risk}\th{Consequence}\th{Evidence required / response}}
+    \tr{\td{Augmented arities do not have the proposed presentation}\td{Root construction changes}\td{\ref{at-fd-0007}; revise the algebraic/shape model before freezing formats}}
+    \tr{\td{Required diagram model unavailable}\td{Relative maps and Mod blocked}\td{Prove an actual model/cofibrant-source alternative; generalized Reedy is not automatic}}
+    \tr{\td{\code{VDCEq} clauses fail}\td{Invariance and comparison claims blocked}\td{\ref{at-fd-0005} counterexample and revised clauses; no frozen false predicate}}
+    \tr{\td{Relative and categorical maps confused}\td{Natural equivalences disappear}\td{\ref{at-fd-0004}; distinct names and clients}}
+    \tr{\td{Boundary gluing fails}\td{Cell fibres/Segal semantics wrong}\td{\ref{at-fd-0003}; use proved reduction/fibrancy or homotopy limits}}
+    \tr{\td{Boundary monodromy}\td{General hP shortcut invalid}\td{\ref{at-fd-0006}; coherent-cell route, optional scoped truncation}}
+    \tr{\td{Mod fibres or coherence fail}\td{Shared category/operad construction blocked}\td{\ref{at-fd-0008}; revise walking diagrams or the root model}}
+    \tr{\td{Fixed-target rectification overstated}\td{Construction interface unsound}\td{\ref{at-fd-0010}; state allowed replacements and exact domains}}
+    \tr{\td{Classifier or spaces colimits stall}\td{Full enrichment delayed}\td{\ref{at-sp-0001}/12; small nondiscrete evidence already required at \ref{ms-foundation}}}
+    \tr{\td{Seal/performance fails}\td{Implementation abstraction unusable}\td{\ref{at-fd-0002}; adjust specification packaging before broad clients}}
+    \tr{\td{Unapproved axiom enters implementation}\td{Acceptance status invalid}\td{\ref{at-fd-0011}; allowlist and same-revision kernel-backed build}}
+    \tr{\td{Extra infrastructure dominates}\td{Foundation remains untested}\td{Additional shapes, geometric substrate, and large retrieval deferred}}
   }
 }

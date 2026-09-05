@@ -1,0 +1,33 @@
+\title{D-UP-11 · Diagrams}
+\taxon{Decision}
+\meta{id}{D-UP-11}
+\meta{area}{universal properties}
+\meta{origin}{design/03-universal-properties.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional until the bootstrap \code{Fun} comparison is proved at M-F.}
+\meta{supersedes}{dec-up-0002}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:up}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{A diagram is an object of the categorical functor object \code{Fun(J,C)}; its core is \code{MapCat(J,C)}. A chosen strict presentation may represent that diagram through a proved comparison with relative maps. Natural equivalences between diagrams are retained, including equivalences between functors with different object functions.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Discrete source and target categories can still have nontrivial diagram cores.}
+}
+\subtree{
+  \title{Rejected}
+  \p{A fixed-label presheaf mapping space as the entire diagram ∞-groupoid.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-fd-0004}; the discrete functor-category comparison.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional until the bootstrap \code{Fun} comparison is proved at \ref{ms-foundation}.}
+}

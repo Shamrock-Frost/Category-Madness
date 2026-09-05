@@ -3,13 +3,13 @@
 \meta{id}{D-SP-02}
 \meta{area}{spaces and enrichment}
 \meta{origin}{design/05-spaces-enrichment.md}
-\meta{status}{frozen}
+\meta{status}{superseded}
 \meta{status-text}{frozen at M6.}
 \meta{supersedes}{none}
-\meta{superseded-by}{none}
+\meta{superseded-by}{dec-sp-0011}
 \tag{decision}
 \tag{area:sp}
-\tag{status:frozen}
+\tag{status:superseded}
 
 \subtree{
   \title{Decision}
@@ -17,7 +17,7 @@
 }
 \subtree{
   \title{Rationale}
-  \p{No coherent nerve, no necklaces. What Theory needs is fibrancy as a property plus rectification (→ \ref{dec-ch-0013}), not a particular model.}
+  \p{No coherent nerve, no necklaces. What Theory needs is fibrancy as a property plus rectification (→ D-CH-13), not a particular model.}
 }
 \subtree{
   \title{Acceptance}

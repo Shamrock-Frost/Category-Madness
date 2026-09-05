@@ -1,0 +1,13 @@
+\title{AT-FT-7 · Absolute-lifting limits agree with slice-terminal limits}
+\taxon{Acceptance test}
+\meta{id}{AT-FT-7}
+\meta{area}{formal theory}
+\meta{origin}{design/04-formal-theory.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:ft}
+\tag{status:unstated}
+
+\p{Absolute-lifting limits agree with slice-terminal limits.}
+\p{Named by: \ref{dec-ft-0003}.}
+\p{\em{Lean declaration(s):} none yet.}

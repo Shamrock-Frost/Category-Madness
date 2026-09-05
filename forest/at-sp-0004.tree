@@ -1,13 +1,14 @@
-\title{AT-SP-4 · \code{Span(S)} is a VDC∞, fibrant when \code{S} is}
+\title{AT-SP-4 · \\code{Span(S)} is a VDC∞, fibrant when \\code{S} is}
 \taxon{Acceptance test}
 \meta{id}{AT-SP-4}
 \meta{area}{spaces and enrichment}
 \meta{origin}{design/05-spaces-enrichment.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:sp}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{\code{Span(S)} is a VDC∞, fibrant when \code{S} is.}
-\p{Named by: \ref{dec-sp-0005}.}
+\p{span root and its cell/boundary formulas. \ref{at-sp-0005} is split into (a) the known-model categorical comparison after appropriate localization and (b) a full augmented-VDC equivalence with modules and cells, which is a stronger, separately proved target}
+\p{Named by: \ref{dec-kr-0020}, \ref{dec-sp-0014}.}
 \p{\em{Lean declaration(s):} none yet.}

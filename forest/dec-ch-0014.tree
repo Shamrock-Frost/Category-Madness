@@ -1,0 +1,33 @@
+\title{D-CH-14 · Interface over implementation}
+\taxon{Decision}
+\meta{id}{D-CH-14}
+\meta{area}{charter}
+\meta{origin}{design/00-charter.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen policy; mechanism validated only by AT-FD-2.}
+\meta{supersedes}{dec-ch-0001}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:ch}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Theory depends on exported operations and laws. Implementations may use Mathlib and definitional equality internally. Transparent finite shape syntax and the logical infrastructure of a bundled interface may compute; sealed categorical data may not.}
+}
+\subtree{
+  \title{Rationale}
+  \p{An abstraction boundary supports model changes. It does not by itself prove that a theorem generalizes: the interface hypotheses and comparison theorems do that.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Depending on implementation equations in Theory; claiming every use of \code{rfl} is mathematically wrong. Reflexivity on interface expressions is legitimate.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-fd-0002}, the nonempty seal prototype and adversarial client.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen policy; mechanism validated only by \ref{at-fd-0002}.}
+}

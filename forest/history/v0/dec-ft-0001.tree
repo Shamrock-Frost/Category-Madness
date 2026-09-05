@@ -1,0 +1,34 @@
+\title{D-FT-01 · Augmented virtual ∞-equipment}
+\taxon{Decision}
+\meta{id}{D-FT-01}
+\meta{area}{formal theory}
+\meta{origin}{design/04-formal-theory.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen at M5 (axiom transcription provisional).}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:ft}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{A VDC∞ \code{P} is an augmented virtual ∞-equipment when:}
+  \ol{
+    \li{\strong{Restrictions.} For vertical \code{f : a → c}, \code{g : b → d} and horizontal \code{M : c ⇸ d}, there is a horizontal \code{M(f,g) : a ⇸ b} with a unary \em{cartesian} cell \code{M(f,g) ⇒ M} over \code{(f,g)}: cartesian means that for every path \code{(M₁,…,M_n)} and vertical \code{(h,k)} factoring through \code{(f,g)}, precomposition with the cartesian cell is a homotopy equivalence between the space of cells \code{(M₁,…,M_n) ⇒ M(f,g)} over \code{(h,k)} and the space of cells \code{(M₁,…,M_n) ⇒ M} over \code{(f h, g k)}. Universality is a proposition; \code{M(f,g)} is a witness.}
+    \li{\strong{Units.} For every object \code{a}, a horizontal \code{U_a : a ⇸ a} with a nullary \em{opcartesian} cell \code{() ⇒ U_a} (postcomposition with it is a homotopy equivalence on cell spaces with a gap at \code{a}). In the augmented setting units are not required to exist; where they do not, the nullary-target cells carry the universal properties Koudenburg assigns to them. \strong{(verify: transcribe Koudenburg's axioms for AVDCs exactly; this is a task, not a fact.)}}
+  }
+  \p{Companions \code{f_* := U_b(f, 1)} and conjoints \code{f^* := U_b(1, f)} when units exist; otherwise as Koudenburg defines them through nullary-target cells.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Cartesian/opcartesian universality is "terminal in a witness Segal category" (→ \ref{dec-up-0001}) applied to cells; so the whole formal theory rests on the same root as → \ref{up-0000}.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-ft-0001} (discrete case is Koudenburg's/Cruttwell–Shulman's definition); \ref{at-ft-0002} (\code{Mat(Set)} and \code{Cat} are augmented virtual equipments).}
+}
+\subtree{
+  \title{Status}
+  \p{frozen at \ref{ms-0005} (axiom transcription provisional).}
+}

@@ -3,13 +3,13 @@
 \meta{id}{D-SP-01}
 \meta{area}{spaces and enrichment}
 \meta{origin}{design/05-spaces-enrichment.md}
-\meta{status}{frozen}
+\meta{status}{superseded}
 \meta{status-text}{frozen at M6.}
 \meta{supersedes}{none}
-\meta{superseded-by}{none}
+\meta{superseded-by}{dec-sp-0010}
 \tag{decision}
 \tag{area:sp}
-\tag{status:frozen}
+\tag{status:superseded}
 
 \subtree{
   \title{Decision}
@@ -17,7 +17,7 @@
 }
 \subtree{
   \title{Rationale}
-  \p{The universe is the space of objects of \code{Kan} and the source of the boundary fibrancy of \code{Mat(Kan)} (→ \ref{dec-rt-0001} (2)). It replaces the homotopy coherent nerve on the critical path.}
+  \p{The universe is the space of objects of \code{Kan} and the source of the boundary fibrancy of \code{Mat(Kan)} (→ D-RT-01 (2)). It replaces the homotopy coherent nerve on the critical path.}
 }
 \subtree{
   \title{Acceptance}

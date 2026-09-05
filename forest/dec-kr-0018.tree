@@ -1,0 +1,35 @@
+\title{D-KR-18 · Augmented arities}
+\taxon{Decision}
+\meta{id}{D-KR-18}
+\meta{area}{kernel}
+\meta{origin}{design/01-kernel.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional research definition, not frozen pending an omitted relation list.}
+\meta{supersedes}{dec-kr-0006}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:kr}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{Begin from the precise set-level augmented-VDC operations and equations. The generating graph signature has objects, vertical and horizontal edges, and cells with ordered input paths and either one or zero horizontal outputs, including \code{(0,0)} cells. Write all incidence maps, both vertical-cell compositions, identities, and substitution equations before constructing the free monad. Prove monadicity/arity hypotheses if the BMW route is used.}
+  \p{Unaugmented substitution has a useful row description with shared vertical sides; where proved, a row corresponds to an active map \code{[k] → [n]}. This does not extend to all augmented shapes as an ordinary active chain: an input path of length one and empty output has no associated active \code{[0] → [1]}. Candidate augmented data therefore records the full input/output paths, cells including empty-output cells, vertical boundaries, and their incidence/substitution structure. Rows with output flags are a proposed serialization only. Their valid composites, normalization, morphisms, and arity theorem must be proved before they become the canonical format. A specialized algebraic presentation remains acceptable if rows fail.}
+  \p{The early examples include \code{c₁^∅}, \code{(0,0)} cells and both compositions, nullary inputs, shared-side compositions, and mixed rows. The no-horizontal fragment must recover 2-categories by the discrete nerve comparison.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Augmentation changes the combinatorics; serialization cannot establish it.}
+}
+\subtree{
+  \title{Rejected}
+  \p{The previous assertion that all augmented arities are chains of active maps in ordinary Δ; inferring a general pasting theorem from a row picture.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-fd-0007}, \ref{at-kr-0008}; \ref{at-kr-0003} only after the explicit presentation exists.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional research definition, not frozen pending an omitted relation list.}
+}

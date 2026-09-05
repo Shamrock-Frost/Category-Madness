@@ -1,0 +1,13 @@
+\title{AT-KR-5 · Pattern structure on Δ is the classical one}
+\taxon{Acceptance test}
+\meta{id}{AT-KR-5}
+\meta{area}{kernel}
+\meta{origin}{design/01-kernel.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:kr}
+\tag{status:unstated}
+
+\p{Pattern structure on Δ is the classical one.}
+\p{Named by: \ref{dec-kr-0004}.}
+\p{\em{Lean declaration(s):} none yet.}

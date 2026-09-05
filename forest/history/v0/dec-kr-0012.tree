@@ -1,0 +1,33 @@
+\title{D-KR-12 · Geometric substrate: regular directed complexes}
+\taxon{Decision}
+\meta{id}{D-KR-12}
+\meta{area}{kernel}
+\meta{origin}{design/01-kernel.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen (scope of the formalized core provisional: definitions through the pasting theorem and the three operations; the rest of the book is \code{later}).}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:kr}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Alongside Weber's algebraic recipe (→ \ref{dec-kr-0003}) the kernel formalizes the core of Hadzihasanovic's \em{Combinatorics of Higher-Categorical Diagrams}: oriented graded posets, molecules (generated inductively by pasting and the atom construction), regular directed complexes, the pasting theorem proved once for all regular molecules (Power's theorem is the 2-dimensional case), and joins, Gray products, and duals as operations on shapes. Shape categories are \em{defined} algebraically (Weber) and \em{presented} geometrically, with the presentation theorems as acceptance tests: Δ as iterated joins of the point, □ as Gray powers of the interval, globes and positive opetopes as atoms, \code{Θ^aug_fc} as typed leveled 2-molecules (\ref{at-kr-0012}), joins for \code{Tw(θ)} and slices. A VDC cell is a 2-atom with input boundary \code{M₁…Mₙ g} and output boundary \code{f N} in a 2-coloured directed complex; VDC pasting schemes are the 2-molecules all of whose intermediate composites are well-typed (horizontal path, vertical) ⇒ (vertical, horizontal), which is exactly the leveling of \ref{dec-kr-0006}. When composites exist (→ \ref{dec-ft-0002}) the same typing is the Dawson–Paré theory of double-categorical pasting, where the pinwheel is a valid 2-molecule that is not a double-categorical composite.}
+}
+\subtree{
+  \title{Rationale}
+  \p{One geometric theory for every shape we have and every shape the (∞,2) layer will need (Gray products and duals for lax structures and modifications), written to be formalized, with finite decidable data throughout; and a rendering and serialization precedent (\code{rewalt}, → \ref{dec-tl-0010}).}
+}
+\subtree{
+  \title{Rejected}
+  \p{Making molecules the root's shape category. Molecules are shapes up to isomorphism with no canonical names, whereas the root needs normal forms with decidable equality (→ \ref{dec-tl-0009}); diagrammatic-set composition is filler-style rather than Segal-style, and the active maps come from the algebra, not from shape maps; and there is no double or virtual-double variant of diagrammatic sets to build on. Chanavat– Hadzihasanovic's model structures for diagrammatic (∞,n)-categories are a comparison target for the (∞,2) layer, not a foundation.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-kr-0012} (grids ≅ typed leveled 2-molecules); \ref{at-kr-0013} (Δ ≅ joins of the point, □ ≅ Gray powers of the interval, as categories); \ref{at-kr-0014} (the general pasting theorem restricts to the nerve-theorem composites on \code{Θ^aug_fc}).}
+}
+\subtree{
+  \title{Status}
+  \p{frozen (scope of the formalized core provisional: definitions through the pasting theorem and the three operations; the rest of the book is \code{later}).}
+}

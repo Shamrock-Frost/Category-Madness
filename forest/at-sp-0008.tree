@@ -3,11 +3,12 @@
 \meta{id}{AT-SP-8}
 \meta{area}{spaces and enrichment}
 \meta{origin}{design/05-spaces-enrichment.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:sp}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{Rectification: strict simplicial categories present all Segal categories.}
-\p{Named by: \ref{dec-sp-0004}.}
+\p{for rigidification to an equivalent model; scoped \ref{at-sp-0005}/10 and \ref{at-rt-0009} as above}
+\p{Named by: \ref{dec-sp-0013}, \ref{dec-sp-0017}.}
 \p{\em{Lean declaration(s):} none yet.}

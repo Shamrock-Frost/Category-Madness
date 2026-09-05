@@ -1,0 +1,33 @@
+\title{D-SP-05 · \code{Span(S)} and Segal spaces}
+\taxon{Decision}
+\meta{id}{D-SP-05}
+\meta{area}{spaces and enrichment}
+\meta{origin}{design/05-spaces-enrichment.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen at M6 (AT-SP-5 is a milestone, not a prerequisite).}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:sp}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{For a Segal category \code{S} with finite limits (→ \ref{dec-up-0004}), \code{Span(S)} is defined by shapes, not by choices: the kernel provides for each \code{θ ∈ Θ_fc} the twisted-arrow-type shape \code{Tw(θ)} in which every composable configuration of spans has its pullback squares as \em{objects}, and \code{Span(S)(θ)} is the sub-space of \code{Map(N Tw(θ), S)} on diagrams whose designated squares are pullbacks (a property, so functoriality in \code{θ} is restriction). This is Barwick's and Haugseng's construction of iterated spans; that \code{Span(S)} satisfies the Segal condition is their theorem, transposed (\ref{at-sp-0004}). Vertical morphisms are \code{S(a,b)}, horizontal morphisms spans, cells maps out of the pullbacks recorded in the diagram. \code{Mod(Span Kan)} has as monads the Segal spaces (category objects in spaces, Rezk).}
+}
+\subtree{
+  \title{Rejected}
+  \p{Choosing pullbacks per shape with \code{Classical.choose}: choices are not compatible under shape maps, so no presheaf results. (Choosing a \em{section} per \ref{dec-up-0006} would work for a single shape but not across the shape category.)}
+}
+\subtree{
+  \title{Theorem target}
+  \p{\ref{at-sp-0004}: \code{Span(S)} is a VDC∞, fibrant when \code{S} is; \ref{at-sp-0005} (comparison, Bergner): \code{Mod(Mat Kan)} and \code{Mod(Span Kan)} are DK-equivalent VDC∞s — families versus spans at the ∞ level.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Spans return exactly where objects stop being a set. The comparison is the library's version of "Segal categories ≃ Segal spaces".}
+}
+\subtree{
+  \title{Status}
+  \p{frozen at \ref{ms-0006} (\ref{at-sp-0005} is a milestone, not a prerequisite).}
+}

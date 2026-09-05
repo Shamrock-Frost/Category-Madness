@@ -3,21 +3,21 @@
 \meta{id}{D-CH-05}
 \meta{area}{charter}
 \meta{origin}{design/00-charter.md}
-\meta{status}{frozen}
+\meta{status}{superseded}
 \meta{status-text}{frozen.}
 \meta{supersedes}{none}
-\meta{superseded-by}{none}
+\meta{superseded-by}{dec-ch-0018}
 \tag{decision}
 \tag{area:ch}
-\tag{status:frozen}
+\tag{status:superseded}
 
 \subtree{
   \title{Decision}
-  \p{The root is defined at the ∞ level from the start, as a Segal presheaf on a shape category ("style B"): a Kan-complex-valued presheaf on the labelled, augmented shape category \code{Θ^aug_{fc,X}} satisfying a Segal condition (→ \ref{dec-rt-0001}). Objects form a \em{set} (labels); vertical morphisms, horizontal morphisms, and cells form spaces. Cells have ordered inputs (E1/planar); there is no symmetric variant at the root. Cells may have empty target (augmented, after Koudenburg).}
+  \p{The root is defined at the ∞ level from the start, as a Segal presheaf on a shape category ("style B"): a Kan-complex-valued presheaf on the labelled, augmented shape category \code{Θ^aug_{fc,X}} satisfying a Segal condition (→ D-RT-01). Objects form a \em{set} (labels); vertical morphisms, horizontal morphisms, and cells form spaces. Cells have ordered inputs (E1/planar); there is no symmetric variant at the root. Cells may have empty target (augmented, after Koudenburg).}
 }
 \subtree{
   \title{Rationale}
-  \p{Style B has honest shapes (leveled grids: chains of active maps in Δ, once the shared-sides rule of virtual composition is taken seriously, → \ref{dec-kr-0006}), strict maps as the right maps, and levelwise-combinatorial equivalences; it plugs directly into the Reedy/EZ machinery of the kernel. Labels make Segal conditions over objects into products and remove the need for a completeness condition (Segal-category style, Hirschowitz–Simpson/Bergner). Augmentation makes Yoneda for large objects a structural fact rather than a universe hack (→ \ref{dec-rt-0012}).}
+  \p{Style B has honest shapes (leveled grids: chains of active maps in Δ, once the shared-sides rule of virtual composition is taken seriously, → \ref{dec-kr-0006}), strict maps as the right maps, and levelwise-combinatorial equivalences; it plugs directly into the Reedy/EZ machinery of the kernel. Labels make Segal conditions over objects into products and remove the need for a completeness condition (Segal-category style, Hirschowitz–Simpson/Bergner). Augmentation makes Yoneda for large objects a structural fact rather than a universe hack (→ D-RT-12).}
 }
 \subtree{
   \title{Rejected}

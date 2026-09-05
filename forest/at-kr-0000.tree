@@ -3,10 +3,12 @@
 \meta{id}{AT-KR-0}
 \meta{area}{kernel}
 \meta{origin}{design/01-kernel.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:kr}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{Mathlib inventory node exists and is verified.}
+\p{and the \ref{ms-0000} export round-trip}
+\p{Named by: \ref{dec-ch-0020}, \ref{dec-ch-0024}, \ref{dec-kr-0014}.}
 \p{\em{Lean declaration(s):} none yet.}

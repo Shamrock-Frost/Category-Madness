@@ -1,0 +1,33 @@
+\title{D-CH-26 · Construction-specific closure}
+\taxon{Decision}
+\meta{id}{D-CH-26}
+\meta{area}{charter}
+\meta{origin}{design/00-charter.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen export policy; mathematical instances provisional until proved.}
+\meta{supersedes}{dec-ch-0013}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:ch}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Every exported construction has explicit input hypotheses, an output specification, its relevant invariance theorem, and any required fibrancy theorem. There is no blanket fixed-target rectification theorem. A comparison may replace a model by an equivalent strict model; strict maps into the original model are a stronger, separately stated claim. No \code{hP} truncation is assumed for arbitrary roots.}
+}
+\subtree{
+  \title{Rationale}
+  \p{A named future theorem is not evidence that its hypotheses hold.}
+}
+\subtree{
+  \title{Rejected}
+  \p{A universal closure checklist whose individual entries have not been formulated; silently using levelwise invariance as categorical invariance.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-fd-0005}, \ref{at-fd-0006}, \ref{at-fd-0008}, \ref{at-fd-0010}.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen export policy; mathematical instances provisional until proved.}
+}

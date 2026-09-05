@@ -1,0 +1,33 @@
+\title{D-CH-17 · One ambient language, explicit comparisons}
+\taxon{Decision}
+\meta{id}{D-CH-17}
+\meta{area}{charter}
+\meta{origin}{design/00-charter.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen objective; ∞-identification provisional until proved.}
+\meta{supersedes}{dec-ch-0004}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:ch}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{\code{Category} is a monad in \code{Mat(Set)}; the intended \code{InfCategory} is a monad in \code{Mat(Kan)}. Functors, profunctors, and transformations come from \code{Mod}. A bootstrap Segal-category presentation is allowed in Kernel/Root and behind a sealed interface; its identification with the monad construction is a required theorem, not a second permanent public definition. Vertical 2-cells and the groupoids they generate are retained when extracting categorical mapping spaces.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Reuse is a theorem about a sufficiently strong interface, not a ban on intermediate presentations needed to build that interface.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Identifying raw vertical paths with functors and natural equivalences; claiming that every universal property of an underlying (∞,1)-category is a lax 2-limit.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-rt-0010}, \ref{at-rt-0012}, \ref{at-sp-0003}, \ref{at-fd-0004}.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen objective; ∞-identification provisional until proved.}
+}

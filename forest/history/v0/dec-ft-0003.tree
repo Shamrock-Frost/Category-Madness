@@ -1,0 +1,28 @@
+\title{D-FT-03 · Theorem list, stated once}
+\taxon{Decision}
+\meta{id}{D-FT-03}
+\meta{area}{formal theory}
+\meta{origin}{design/04-formal-theory.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen list; each item provisional until stated in Lean.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:ft}
+\tag{status:frozen}
+
+\p{Each item is stated for an augmented virtual ∞-equipment \code{P} and proved with the VDC∞ API only. Discrete specializations are acceptance tests (\ref{at-ft-0001} covers all of them).}
+\ol{
+  \li{\strong{Representable horizontals} and the characterization of companions and conjoints by their unit/counit cells; \code{f_* ≃ g_*} implies \code{f ≃ g} vertically.}
+  \li{\strong{Yoneda.} Koudenburg's Yoneda embeddings in augmented VDCs: a vertical \code{y : a → â} with the universal nullary/unary cell structure such that restriction along \code{y} induces equivalences of the relevant cell spaces \strong{(verify exact form)}. Existence of Yoneda embeddings is a \em{property} of \code{P} ("has Yoneda embeddings"), holding in \code{Cat} with \code{â} the presheaf category of the next universe (→ \ref{dec-rt-0012}).}
+  \li{\strong{Right and left extensions and liftings} of horizontals along horizontals (Kan extensions inside the equipment), with the pointwise/absolute distinction stated through restriction.}
+  \li{\strong{Weighted limits and colimits} of a diagram \code{d : j → a} weighted by \code{W : j ⇸ k} (resp. \code{k ⇸ j}), as representability of the appropriate restriction; conical limits as the unit-weighted case; comparison with → \ref{dec-up-0004} (\ref{at-ft-0006}).}
+  \li{\strong{Adjunctions.} \code{f ⊣ g} iff \code{f_* ≃ g^*}; the space of adjunction data over a given \code{f} is contractible or empty; mates.}
+  \li{\strong{Monads} in \code{P} as in → \ref{dec-rt-0009}; Kleisli and Eilenberg–Moore objects by universal property; monadicity in the formal sense (Street) where composites exist.}
+  \li{\strong{Fully faithful / essentially surjective} vertical morphisms via companions; equivalences as vertical morphisms with a companion that is also a conjoint of an inverse.}
+  \li{\strong{Absolute liftings} and the formal definition of limits in the vertical ∞-category through them (the Riehl–Verity form), compared with 4 (\ref{at-ft-0007}).}
+}
+\subtree{
+  \title{Status}
+  \p{frozen list; each item provisional until stated in Lean.}
+}

@@ -1,13 +1,14 @@
-\title{AT-RT-8 · \code{Mat(Kan)} is a VDC∞ (M6)}
+\title{AT-RT-8 · \\code{Mat(Kan)} is a VDC∞ (M6)}
 \taxon{Acceptance test}
 \meta{id}{AT-RT-8}
 \meta{area}{root}
 \meta{origin}{design/02-root.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:rt}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{\code{Mat(Kan)} is a VDC∞ (\ref{ms-0006}).}
-\p{Named by: \ref{dec-rt-0001}, \ref{dec-sp-0004}.}
+\p{}
+\p{Named by: \ref{dec-sp-0012}, \ref{dec-sp-0013}.}
 \p{\em{Lean declaration(s):} none yet.}

@@ -1,0 +1,15 @@
+\title{AT-FD-11 · Trust and dependency audit}
+\taxon{Acceptance test}
+\meta{id}{AT-FD-11}
+\meta{area}{foundation feasibility}
+\meta{origin}{design/11-foundation-feasibility.md}
+\meta{status}{proposed}
+\meta{statement-version}{1}
+\tag{acceptance-test}
+\tag{area:fd}
+\tag{status:proposed}
+
+\p{Run kernel-backed and stub builds against the identical prototype revision. Check elaborated interface/proof dependencies, explicit universe examples, the axiom allowlist, and active decision references. Deliberately inject a project axiom of False in a negative-test target and show its use is rejected as acceptance evidence; likewise reject \code{sorryAx}, stub axioms in the implementation build, and a private implementation leak. Keep these test fixtures outside certified imports. Produce an acyclic dependency graph at the granularity of the actual lemmas, including those pulled forward from the originally later milestones.}
+\p{\strong{Depends on:} all prior gate outputs and the seal prototype. \strong{Evidence:} build/check logs, allowlist, negative tests, and dependency graph. \strong{Failure response:} do not certify or freeze the foundation until the failure is resolved.}
+\p{Named by: \ref{dec-ch-0022}, \ref{dec-ch-0024}, \ref{dec-ch-0025}, \ref{dec-fd-0001}, \ref{dec-rt-0028}, \ref{dec-tl-0012}, \ref{dec-tl-0017}, \ref{dec-wf-0011}.}
+\p{\em{Lean declaration(s):} none yet.}

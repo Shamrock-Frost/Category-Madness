@@ -4,9 +4,9 @@ cited nodes exist and are not superseded.
 
 Usage:
     python3 scripts/check_citations.py <file-with-PR-body-or-commit-messages>
-    git log --format=%B origin/main..HEAD | python3 scripts/check_citations.py -
+    git log --format=%B origin/prima-materia..HEAD | python3 scripts/check_citations.py -
 
-Citations are recognised in either form: the identifier (D-RT-03, AT-KR-2, OQ-SP-1, M3)
+Citations are recognised in either form: the identifier (D-RT-16, AT-FD-1, OQ-SP-1, M-F)
 or the forest address (dec-rt-0003, at-kr-0002, …). At least one decision citation is
 required; unknown or superseded citations fail.
 """
@@ -22,7 +22,8 @@ ROOT = Path(__file__).resolve().parent.parent
 REGISTRY = ROOT / "forest" / "registry.json"
 
 ID_RE = re.compile(r"\b(?:D|AT|OQ)-[A-Z]{2}-\d+\b")
-ADDR_RE = re.compile(r"\b(?:dec|at|oq)-[a-z]{2}-\d{4}\b|\bms-(?:\d{4}|design)\b")
+MILESTONE_RE = re.compile(r"\bM(?:-F|[0-7])\b")
+ADDR_RE = re.compile(r"\b(?:dec|at|oq)-[a-z]{2}-\d{4}\b|\bms-(?:\d{4}|design|foundation)\b")
 
 
 def normalise_id(ident: str) -> str:
@@ -46,6 +47,8 @@ def main() -> int:
             cited.add(addr)
         else:
             unknown.append(ident)
+    for ident in MILESTONE_RE.findall(text):
+        cited.add("ms-foundation" if ident == "M-F" else f"ms-{int(ident[1:]):04d}")
     unknown += [a for a in cited if a not in nodes]
     superseded = [a for a in cited if a in nodes and nodes[a]["status"] == "superseded"]
     decisions = [a for a in cited if a in nodes and nodes[a]["taxon"] == "Decision"]

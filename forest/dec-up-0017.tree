@@ -1,0 +1,33 @@
+\title{D-UP-17 · Discrete comparisons}
+\taxon{Decision}
+\meta{id}{D-UP-17}
+\meta{area}{universal properties}
+\meta{origin}{design/03-universal-properties.md}
+\meta{status}{provisional}
+\meta{status-text}{required M4 acceptance suite.}
+\meta{supersedes}{dec-up-0008}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:up}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{Compare the general theory with ordinary terminal objects, cone categories, limits, adjoints, and Kan extensions. The comparison is through the exported interface, with kernel implementations used only to establish the bridge.}
+}
+\subtree{
+  \title{Rationale}
+  \p{The discrete test checks meaning and the swap build checks abstraction.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Treating either check as a substitute for the other.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-up-0001} through \ref{at-up-0007}.}
+}
+\subtree{
+  \title{Status}
+  \p{required \ref{ms-0004} acceptance suite.}
+}

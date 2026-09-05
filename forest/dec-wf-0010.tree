@@ -1,0 +1,33 @@
+\title{D-WF-10 · Acceptance records}
+\taxon{Decision}
+\meta{id}{D-WF-10}
+\meta{area}{forest and workflow}
+\meta{origin}{design/07-forest-workflow.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen policy.}
+\meta{supersedes}{dec-wf-0003}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:wf}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Each acceptance test records its informal scope, exact Lean declarations when available, dependencies, statement version, and status: proposed, stated, proved, failed, blocked, deferred, or retired. Only a checked proof of the current statement with approved axioms gives proved status. Revising a test's scope resets its validation; old statements remain in history. The acceptance IDs in the phase −1 text did not yet name checked Lean declarations; changed scopes in revision 1 are explicitly listed. A decision is validated only when all tests required for its current export have passed.}
+}
+\subtree{
+  \title{Rationale}
+  \p{A renamed or weakened statement is not evidence for the original claim.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Counting a retired false target as passed or silently inheriting proof status.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{All AT-FD records and the \ref{ms-foundation} exit audit.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen policy.}
+}

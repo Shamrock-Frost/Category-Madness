@@ -3,11 +3,12 @@
 \meta{id}{AT-RT-1}
 \meta{area}{root}
 \meta{origin}{design/02-root.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:rt}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{Self-hosting theorem.}
-\p{Named by: \ref{dec-ch-0008}, \ref{dec-rt-0001}, \ref{dec-rt-0011}.}
+\p{, \ref{at-rt-0003}, \ref{at-rt-0010}}
+\p{Named by: \ref{dec-kr-0013}, \ref{dec-rt-0016}, \ref{dec-rt-0020}, \ref{dec-rt-0026}.}
 \p{\em{Lean declaration(s):} none yet.}

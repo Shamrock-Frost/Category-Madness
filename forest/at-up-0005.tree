@@ -1,13 +1,14 @@
-\title{AT-UP-5 · \code{to_dual} of \code{Limit} is a colimit in the classical sense for discrete \code{C}}
+\title{AT-UP-5 · \\code{to_dual} of \\code{Limit} is a colimit in the classical sense for discrete \\code{C}}
 \taxon{Acceptance test}
 \meta{id}{AT-UP-5}
 \meta{area}{universal properties}
 \meta{origin}{design/03-universal-properties.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:up}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{\code{to_dual} of \code{Limit} is a colimit in the classical sense for discrete \code{C}}
-\p{Named by: \ref{dec-up-0005}.}
+\p{generated classical colimit comparison and involution transport}
+\p{Named by: \ref{dec-tl-0014}, \ref{dec-up-0014}.}
 \p{\em{Lean declaration(s):} none yet.}

@@ -1,21 +1,9 @@
-\title{M0 · Skeleton}
+\title{M0 · Minimal skeleton}
 \taxon{Milestone}
 \meta{id}{M0}
 \meta{origin}{design/08-roadmap.md}
 \meta{status}{planned}
 \tag{milestone}
 
-\ul{
-  \li{Repo layout (→ \ref{dec-tl-0008}); Mathlib pinned; CI with the import ban and swap-test scaffolding (→ \ref{dec-tl-0006}) running against empty directories.}
-  \li{Forest skeleton, port of these documents (→ \ref{wf-0000} porting instructions), \code{forest-export}, retrieval MCP MVP (→ \ref{dec-wf-0005}).}
-  \li{Mathlib inventory node (\ref{at-kr-0000}).}
-  \li{\code{to_dual} skeleton (→ \ref{dec-tl-0003}).}
-}
-\subtree{
-  \title{Freeze}
-  \p{Charter (all D-CH), \ref{dec-kr-0001}/02, \ref{dec-wf-0001}…\ref{dec-wf-0006}, \ref{dec-tl-0006}.}
-}
-\subtree{
-  \title{Exit}
-  \p{\ref{at-kr-0000} verified; a \code{sorry}-only Lean file round-trips through export, forest, MCP.}
-}
+\p{Pin Lean/Mathlib and inventory \ref{at-kr-0000}. Create the repository/Prototype layout, minimal registry, test statuses, and CI scaffolding. Round-trip one stated WIP theorem through the minimal exporter. A full retrieval MCP and broad API generators are not exit gates. Freeze workflow/trust policies, not the conjectural mathematical foundation.}
+\p{\strong{Exit:} \ref{at-kr-0000} verified and the minimal registry/toolchain operates.}

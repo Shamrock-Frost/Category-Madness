@@ -1,280 +1,184 @@
-# 01 · Kernel (stage 0)
+# 01 · Kernel — revision 1
 
-The kernel builds the combinatorial raw material — shape categories, presheaves,
-simplicial sets, Kan machinery — on top of Mathlib. It is scaffolding: defeq is
-allowed, Mathlib's `CategoryTheory` is used freely, and nothing here is visible past the
-seal. The kernel is judged only by whether `Root/` can be built on it and whether the
-acceptance tests below are proved.
+Kernel/ may use Mathlib and definitional equality. Prototype/ pulls forward only the
+prerequisites needed for M-F; the general machinery follows after the foundation gates.
 
-## Rules
+### D-KR-13 · Allowed scaffolding
+**Decision.** Set-level augmented VDCs and their free constructions may be defined in
+Kernel/ to build arities and state comparison theorems. They are not a second public
+notion. Their discrete nerve is compared with the root before the seal.
+**Rationale.** Explicit algebraic scaffolding makes the intended nerve testable.
+**Rejected.** An ad hoc shape category with no discrete recognition theorem.
+**Acceptance.** AT-KR-8, AT-RT-1.
+**Status.** frozen policy.
 
-### D-KR-01 · What the kernel may contain
-**Decision.** Anything convenient, including a set-level definition of (augmented)
-virtual double categories and of free ones. These exist *only* to construct shape
-categories and to state the self-hosting theorem; they are not the library's notion of
-VDC, which is the discrete case of the root (→ D-RT-11). Kernel files are marked
-`-- KERNEL` and live under `Kernel/`.
-**Rationale.** Weber's construction of shape categories needs the algebras whose free
-objects the shapes are (→ D-KR-03). Refusing to write set-level VDCs in the kernel would
-force an ad hoc tree combinatorics as the *definition* of `Θ_fc` and make the nerve
-theorem a correctness gamble instead of an instance of a general theorem.
-**Status.** frozen.
+### D-KR-14 · Mathlib inventory
+**Decision.** Pin Lean and Mathlib at M0. Record exact available declarations and gaps
+for category theory, simplicial sets, Kan fibrations, weak equivalences, mapping spaces,
+model structures, and Reedy machinery. Every proof route names the required inventory
+entries or explicit new lemmas. Refresh the inventory on version changes.
+**Rationale.** Existence in the literature is not availability in a pinned Lean dependency.
+**Rejected.** Scheduling a construction on the assumption that a vaguely named Mathlib
+module contains the needed theorem.
+**Acceptance.** AT-KR-0: verified names, signatures, gaps, and dependency versions.
+**Status.** frozen policy.
 
-### D-KR-02 · Mathlib inventory (M0 task, AT-KR-0)
-**Decision.** Before M1, produce a verified inventory of what Mathlib (pinned version)
-provides, with exact names. Expected candidates, none assumed:
-`CategoryTheory.{Category, Functor, NatTrans, Limits, Comma, Grothendieck, MorphismProperty}`,
-lifting properties and the small object argument (Riou), `SimplexCategory`,
-`SimplicialObject`, `SSet` with `boundary`/`horn`, `SSet.KanComplex`, `Nerve`,
-truncations and skeleta, `Quasicategory`, joins/slices if present, any Kan–Quillen
-model structure material, `Fin` combinatorics and `omega`. Record for each: name,
-statement as we need it, gaps. The inventory is a forest node and is updated at each Mathlib bump.
-**Rationale.** Every earlier plan in this design assumed Mathlib content that had to be
-hedged. The inventory converts hedges into tasks.
-**Status.** frozen.
+### D-KR-15 · Arity recipe with separate hypotheses
+**Decision.** Formalize the general BMW nerve theorem for a monad equipped with a proved
+arity presentation. Separately establish the hypotheses providing canonical arities and
+generic/free factorization when used, such as the relevant strongly cartesian conditions.
+A free-algebra construction alone supplies neither. For each chosen monad record:
+base presheaf category, arity family, density/recognition result, factorization theorem,
+elementary core presentation, and any Reedy/EZ structure.
+The first examples are free categories (Δ) and the free augmented-VDC construction.
+The general reusable theorem may initially be preceded by a specialized proof if that
+is the shortest way to validate the root. Ω_p, Ω, and Θ_n follow only when needed.
+**Rationale.** The general nerve theorem, the pattern, and Reedy properties are distinct results.
+**Rejected.** Automatic active–inert factorization for every monad with arities;
+requiring five shape families before validating the central one.
+**Acceptance.** AT-KR-1, AT-KR-2, AT-KR-8, AT-FD-7; AT-KR-3/4 for later presentations.
+**Status.** provisional implementation strategy; hypotheses must be proved before use.
 
-## Shapes
+### D-KR-16 · Patterns and homotopy Segal cores
+**Decision.** Give each adopted shape category its own proved active–inert structure and
+elementary objects. In the discrete case the core is a colimit presentation of an arity
+and the nerve condition is an ordinary limit condition. In the homotopy case use the
+homotopy limit over the actual elementary inert diagram, including its incidences.
+Using a strict limit is a theorem under a specified fibrancy condition.
+**Rationale.** Limits over overlapping cells involve boundaries, not just independent products.
+**Rejected.** Identifying general BMW recognition with a particular elementary pattern
+without checking the arity decomposition.
+**Acceptance.** AT-KR-5 for Δ; AT-FD-3 and AT-FD-7 for the root.
+**Status.** provisional until each shape's proof.
 
-### D-KR-03 · One recipe: monads with arities
-**Decision.** Shape categories are defined uniformly as Weber's `Θ_T`: for a monad `T`
-with arities (Berger–Melliès–Weber) on a presheaf category `PSh(G)`, `Θ_T` is the full
-subcategory of `T`-algebras on the free algebras `T(E_t)` over the arities `E_t`
-(equivalently, the full subcategory of the Kleisli category on the arities). Weber's
-generic/free factorization on `Θ_T` is the active/inert factorization; the elementary
-objects are the free algebras on the representables of `G`. The nerve theorem (BMW) is
-formalized **once**: the nerve `T-Alg → PSh(Θ_T)` is fully faithful, with essential
-image the presheaves satisfying the Segal condition (→ D-KR-04). Each shape's nerve
-theorem is an instance.
+### D-KR-17 · Diagram model and cofibrancy
+**Decision.** Prove the Reedy structure required for the adopted augmented shapes.
+Elegance, if proved, provides the desired monomorphism/cofibrancy results. Until then,
+any relative mapping-space theorem carries its actual cofibrancy hypotheses.
+Generalized Reedy and normal presheaves are used for Ω only with their own proved
+hypotheses. Failure of elegance elsewhere does not imply that this fallback applies.
+Alternative diagram model structures or explicit cofibrant sources may be proposed at
+M-F, together with the new mapping, restriction, and replacement proofs they require.
+**Rationale.** Absence of automorphisms does not prove elegance or a model-category theorem.
+**Rejected.** Generalized Reedy as an automatic remedy for every failed elegance test.
+**Acceptance.** AT-KR-6 for the adopted planar shapes; AT-KR-7 for Ω when scheduled;
+AT-FD-7 and AT-FD-8 for the actual root mapping machinery.
+**Status.** provisional and research-gated.
 
-| Shape | `G` (generating shapes) | `T` | Expected `Θ_T` |
-|---|---|---|---|
-| Δ | graphs (vertex, edge) | free category | Δ (identified with `SimplexCategory`, AT-KR-1) |
-| Ω_p | planar multigraphs | free planar (non-symmetric) coloured operad | planar dendroidal category (Moerdijk–Weiss `Ω_p`) |
-| Ω | symmetric multigraphs | free symmetric coloured operad | dendroidal category `Ω` **(verify BMW applies; fallback: Moerdijk–Weiss's definition directly)** |
-| Θ^aug_fc | double graphs `G_fc` | free augmented VDC | leveled grids = chains of active maps in Δ (D-KR-06) |
-| Θ_n | — | — | defined by Berger's wreath product `Δ ≀ Θ_{n−1}` (→ D-KR-08); identification with `Θ_T` for the free strict `n`-category monad is optional |
+### D-KR-18 · Augmented arities
+**Decision.** Begin from the precise set-level augmented-VDC operations and equations.
+The generating graph signature has objects, vertical and horizontal edges, and cells
+with ordered input paths and either one or zero horizontal outputs, including `(0,0)`
+cells. Write all incidence maps, both vertical-cell compositions, identities, and
+substitution equations before constructing the free monad. Prove monadicity/arity
+hypotheses if the BMW route is used.
 
-**Rationale.** One theorem, five shapes. The recipe also fixes *what the shapes are*
-without any tree combinatorics being taken on faith: the explicit tree descriptions are
-theorems (AT-KR-3), needed for Reedy structures but not for correctness.
-**Rejected.** Ad hoc inductive tree categories as definitions. Rejected as definitions,
-retained as presentations.
-**Acceptance.** AT-KR-1 (Δ ≅ `SimplexCategory`), AT-KR-2 (BMW nerve theorem, general),
-AT-KR-3 (explicit presentations), AT-KR-4 (`Θ_1 ≅ Δ`, `Θ_2 ≅ Δ ≀ Δ`).
-**Status.** frozen for Δ, Ω_p, Θ^aug_fc; provisional for Ω (pending the BMW check).
+Unaugmented substitution has a useful row description with shared vertical sides;
+where proved, a row corresponds to an active map `[k] → [n]`. This does not extend to
+all augmented shapes as an ordinary active chain: an input path of length one and
+empty output has no associated active `[0] → [1]`.
+Candidate augmented data therefore records the full input/output paths, cells including
+empty-output cells, vertical boundaries, and their incidence/substitution structure.
+Rows with output flags are a proposed serialization only. Their valid composites,
+normalization, morphisms, and arity theorem must be proved before they become the
+canonical format. A specialized algebraic presentation remains acceptable if rows fail.
 
-### D-KR-04 · Patterns and Segal cores
-**Decision.** Every shape category carries an *algebraic pattern* structure in the
-sense of Chu–Haugseng: an inert/active factorization system (`Θ⁻` degeneracies are
-separate, see D-KR-05) and a class of elementary objects. For a shape `θ`, the Segal
-core `Sc(θ)` is the diagram of elementary inert sub-shapes of `θ`. A presheaf `P` (in
-sets or in `sSet`) satisfies the **Segal condition** at `θ` when the canonical map
-`P(θ) → lim_{Sc(θ)} P` is an isomorphism (sets) or a homotopy equivalence (spaces,
-→ D-RT-01 for the precise form). For `Θ_T` the inert maps are Weber's free maps and the
-Segal core is the canonical presentation of the arity `E_t` as a colimit of representables.
-**Rationale.** This is exactly the hypothesis of the BMW nerve theorem in the discrete
-case and of Chu–Haugseng's Segal-space machinery in the homotopical case; using their
-vocabulary keeps our comparisons honest.
-**Acceptance.** AT-KR-5: for Δ, inert = interval inclusions, active = endpoint-preserving,
-elementary = `[0],[1]`, and the Segal condition is the usual one.
-**Status.** frozen.
+The early examples include `c₁^∅`, `(0,0)` cells and both compositions, nullary inputs,
+shared-side compositions, and mixed rows. The no-horizontal fragment must recover
+2-categories by the discrete nerve comparison.
+**Rationale.** Augmentation changes the combinatorics; serialization cannot establish it.
+**Rejected.** The previous assertion that all augmented arities are chains of active
+maps in ordinary Δ; inferring a general pasting theorem from a row picture.
+**Acceptance.** AT-FD-7, AT-KR-8; AT-KR-3 only after the explicit presentation exists.
+**Status.** provisional research definition, not frozen pending an omitted relation list.
 
-### D-KR-05 · Reedy, elegant, generalized Reedy
-**Decision.** Each shape category is equipped with a Reedy structure (degree,
-`Θ⁺` = monomorphisms/faces including active ones, `Θ⁻` = degeneracies/collapses).
-Planar shapes (Δ, Ω_p, Θ_fc, Θ_n, Δ×Δ) are expected to be **elegant** Reedy categories
-(Bergner–Rezk: every presheaf's degenerate elements are uniquely degeneracies of
-non-degenerate ones; Reedy cofibrations are monomorphisms; every object is cofibrant).
-Ω has automorphisms and is a **generalized Reedy** category in the sense of
-Berger–Moerdijk (EZ category); there the cofibrant objects are the *normal*
-presheaves and Reedy fibrancy involves `Aut`-equivariance.
-Labelled shape categories `Θ_{T,X}` (D-KR-07) inherit the Reedy structure along the
-discrete fibration to `Θ_T`.
-Machinery: latching/matching objects, skeleta/coskeleta, the Reedy lemma for
-presheaves valued in `sSet`, Reedy fibrancy (→ D-RT-07).
-**Acceptance.** AT-KR-6: elegance of Δ, Ω_p, Θ^aug_fc **(verify for Θ_fc; expected)**;
-AT-KR-7: Ω is EZ/dualizable generalized Reedy.
-**Status.** frozen (the list of which shapes are elegant is provisional until AT-KR-6).
+### D-KR-19 · Labels and reduction
+**Decision.** Once object positions are defined functorially, labelled shapes are the
+category of elements of `θ ↦ (ob θ → X)`. Label reindexing and inherited structural
+properties are proved. A reduced presheaf has terminal values at labelled object
+positions; the category-of-elements construction alone imposes no such condition.
+**Rationale.** External labels do not force a presheaf's object values to be discrete.
+**Rejected.** Contractibility as sufficient justification for strict object gluing.
+**Acceptance.** AT-KR-9 for Δ_X, AT-FD-3 for root boundaries and label reindexing.
+**Status.** provisional until the underlying arity category and reduction are checked.
 
-### D-KR-06 · `G_fc` and `Θ^aug_fc`
-**Decision.** The category of double graphs is `PSh(G_fc)` where `G_fc` has objects
-`pt`, `v` (vertical edge), `h` (horizontal edge), `c_n` (cell with `n ≥ 0` inputs and one
-output), `c_n^∅` (cell with `n ≥ 0` inputs and empty output, the augmented cells), and
-generating maps `s,t : pt → v`, `s,t : pt → h`, `in_i : h → c_n` (`1 ≤ i ≤ n`),
-`out : h → c_n`, `l, r : v → c_n` (left and right sides), the same for `c_n^∅` without
-`out`, subject to the incidence relations (input `i` ends where input `i+1` starts; the
-left side runs from the start of input 1 to the start of the output; the right side from
-the end of input `n` to the end of the output; for `n = 0` the single input object is
-shared by both sides; for `c_n^∅` both sides end at the same object).
-A set-level augmented VDC is a double graph with vertical composition of vertical edges,
-multicategorical composition of cells (including Koudenburg's rule for cells with empty
-target), unit vertical edges, unit cells, and the associativity/unit laws. The free
-augmented VDC on a double graph is constructed explicitly.
-`Θ^aug_fc := Θ_T` for this `T`.
+### D-KR-20 · Additional shapes on demand
+**Decision.** Δ and the join/comma shapes needed for M-F/M4 come first. The join API for
+Segal categories includes the necessary derived construction; a category-level join
+alone is insufficient. Δ₊ and its truncation inclusions support the Čech example.
+Double nerves use a constructed bisimplicial indexing diagram, not an assumed inclusion
+`Δ×Δ → Θ^aug_fc`. `Tw(θ)` for spans is introduced with its variance and pullback-square
+conditions at M5/M6. Ω_p, Ω, Θ_n, cubes, and sequence groupoids are scheduled only by
+actual downstream use. In particular symmetric sequence groupoids are indexing
+categories, not sets of matrix labels pretending to retain bijections.
+**Rationale.** Shape operations need functorial definitions and specific clients.
+**Rejected.** Defining all possible shapes at M1 because they may eventually be useful.
+**Acceptance.** AT-UP-2/3/6, AT-SP-4; AT-KR-4 and AT-KR-7 when their clients are scheduled.
+**Status.** provisional schedule.
 
-**Expected description (AT-KR-3): leveled grids, not trees.** Composition of cells
-requires adjacent children to *share* vertical sides (`α_i`'s right side is `α_{i+1}`'s
-left side). In a free VDC a generating cell has generating sides, so it can never sit
-next to an identity cell (identity sides) or next to a composite (sides of length ≥ 2).
-Hence in the arities every node has all inputs filled or none, all leaves are at the same
-depth, and a pasting scheme is a stack of **rows**: a path of `n` horizontal edges,
-partitioned into consecutive blocks with one cell per block, producing the next path,
-down to a single output (or, augmented, no output). A block of size 0 is a nullary-input
-cell in a gap; a block without output is a Koudenburg cell. The vertical data is
-determined: one vertical edge per block boundary per row. Equivalently a cell shape is a
-composable chain of *active* maps in Δ (a row with `k` blocks on a path of length `n` is
-an endpoint-preserving monotone `[k] → [n]`), which is why style A lives over `Δᵒᵖ`.
-Objects of `Θ^aug_fc`: `pt`, `v^n` (`n ≥ 1`), `h`, and grids. Faces: sub-grids (a row
-interval times a column interval closed under blocks; inert) and merging of consecutive
-rows (active); degeneracies: inserting identity rows and collapsing vertical edges.
-Everything is Δ-data with no automorphisms, which makes elegance (AT-KR-6) expected
-rather than hoped. **(verify: the shared-sides argument is Cruttwell–Shulman's
-definition read literally; the exact face/degeneracy description is a task.)**
-Note that `Ω_p` trees are *not* leveled: multicategory cells have no sides. The earlier
-draft's "planar trees of cells with vertical sides" was wrong for exactly this reason.
-**Rationale.** The shapes are what the algebra says they are. Their simplicity is a
-feature: the canonical form is a list of rows of block sizes (→ D-TL-10), and the
-pasting calculus is decidable equality of such data (→ D-TL-09).
-**Acceptance.** AT-KR-8: the nerve theorem for augmented VDCs is an instance of AT-KR-2
-and its essential image is characterized by the Segal condition of D-KR-04. AT-KR-12:
-typed leveled 2-molecules of the geometric substrate (→ D-KR-12) are exactly the grids
-(both directions).
-**Status.** frozen (the exact list of incidence relations and the face/degeneracy
-description are provisional until formalized).
+### D-KR-21 · Cubes
+**Decision.** Cubical shapes and comparison models are optional later work. Their
+presentation, equations, decidable equality, and connection conventions are stated
+before any cubical construction is exported. No claim about all possible cubical
+Segal formalisms is needed for the current root choice.
+**Rationale.** Cubes do not resolve the identified root feasibility questions.
+**Rejected.** Putting a cubical theory on the immediate critical path.
+**Acceptance.** A new client-specific acceptance test is required before implementation.
+**Status.** later (M7+).
 
-### D-KR-07 · Labelled shapes `Θ_{T,X}`
-**Decision.** For `X : Type u`, `Θ_{T,X} := ∫_{Θ_T} X^{ob(−)}`, the category of elements
-of the presheaf `θ ↦ (ob θ → X)` where `ob : Θ_T → Set` gives the object positions of a
-shape. Objects are labelled shapes, morphisms are shape maps preserving labels.
-A function `X → Y` induces `Θ_{T,X} → Θ_{T,Y}`.
-**Rationale.** Gepner–Haugseng's `Δ_X` generalized. Labels discretize objects: Segal
-conditions over object positions become products.
-**Acceptance.** AT-KR-9: `Δ_X` agrees with the labelled simplex construction; the
-Segal condition on `Δ_X` characterizes categories with object set `X` (unbiased form).
-**Status.** frozen.
+### D-KR-24 · Geometric substrate
+**Decision.** Oriented graded posets, molecules, joins, Gray products, and geometric
+pasting are optional presentations and tools after the algebraic root is validated.
+Every proposed equivalence between a geometric category and an arity category specifies
+morphisms as well as objects. A geometric presentation does not determine the root by
+itself. A renderer can begin with the validated elementary syntax.
+**Rationale.** A large general substrate should follow evidence that it helps the chosen model.
+**Rejected.** Making the general pasting theorem and all geometric shape comparisons
+prerequisites for the first nondiscrete root example.
+**Acceptance.** AT-KR-12/13/14 are deferred geometric comparisons, with exact statements
+required before promotion from proposed to stated.
+**Status.** later (after M3, specific clients determine priority).
 
-### D-KR-08 · Other shapes
-**Decision.**
-- Δ₊ (augmented simplices) with its join monoidal structure; joins and slices of
-  simplicial sets (needed for → D-UP-03).
-- Δ×Δ for double (non-virtual) structures; used when composites exist (→ D-FT-02).
-- Θ_n by Berger's wreath product, defined in M1 and unused until (∞,n) work.
-- Twisted-arrow-type shapes `Tw(θ)` for each `θ ∈ Θ_fc` (Barwick, Haugseng), in which
-  the pullbacks of composable spans are objects; needed for `Span(S)` (→ D-SP-05).
-  Defined at M1 with the others; their Segal theory is M6. Joins and the shapes of
-  slices come from the geometric substrate's join operation (→ D-KR-12).
-- The groupoids `Σ_A`, `𝔹_A`, `ℕ_A` of finite `A`-coloured sets with bijections, braids,
-  and identities, as the indexing categories of symmetric, braided, and non-symmetric
-  sequences (→ D-SP-09).
-**Status.** frozen.
+### D-KR-22 · Kan machinery and relative maps
+**Decision.** Reuse or prove Kan complexes and fibrations, anodyne maps, weak equivalences,
+mapping complexes, path-space homotopy fibres, and the pushout-product lemmas needed
+by the selected diagram model. A Kan fibration with contractible fibres over all
+vertices is a trivial fibration; coherent sections use a proved lifting theorem.
+Relative mapping restrictions are Kan fibrations only with the specified source
+cofibration and fibrant target hypotheses. Homotopy invariance is first proved for
+levelwise weak equivalences in that model. Categorical invariance is a separate theorem.
+Keep boundary representatives when forming fibres; there is no path-independent
+transport theorem for arbitrary Kan fibrations.
+**Rationale.** These are the exact tools used by the repaired `MapRel` and `Mod`.
+**Rejected.** Generic claims of cartesian closure or replacement for an unspecified model.
+**Acceptance.** AT-KR-10, AT-FD-3, AT-FD-6, AT-FD-8.
+**Status.** provisional inventory-dependent implementation; needed fragments at M-F.
 
-### D-KR-09 · Cubes
-**Decision.** The cube category with connections is defined by its PRO presentation
-(Grandis–Mauri: free strict monoidal category on an interval object with connections),
-included in the kernel as a *shape for horn-filling models only* (cubical Kan
-complexes, cubical (∞,1)-categories after Doherty–Kapulkin–Lindsey–Sattler, and, via
-connections as companion/conjoint squares, equipments with all companions). It carries
-no Segal-style structure because it has no spines.
-**Rationale.** Segal conditions need shapes that contain their own subdivisions
-(`[2] ⊃ [1] ∨ [1]`); cubes only have `I^n`. The library's root is Segal-style, so cubes
-are auxiliary.
-**Status.** frozen; `later` for any use beyond definition.
+### D-KR-23 · Reduced Reedy replacement
+**Decision.** Construct a functorial replacement in the selected diagram model,
+relative to reduced object values. Prove levelwise equivalence, the appropriate
+fibrancy, preservation of the homotopy Segal conditions, and compatibility with label
+reindexing used by the root. This is distinct from categorical completion of Segal
+categories. If a replacement is needed for a whole diagram of walking structures,
+perform it coherently on that diagram.
+**Rationale.** A collection of pointwise replacements does not define a functor.
+**Rejected.** Treating Bergner's Segal-category results as a proof for arbitrary
+augmented shapes; calling every replacement a DK-equivalence without comparison.
+**Acceptance.** AT-KR-11, AT-FD-3, AT-FD-8.
+**Status.** provisional; the root instance is an M-F gate, general packaging M2.
 
-### D-KR-12 · Geometric substrate: regular directed complexes
-**Decision.** Alongside Weber's algebraic recipe (→ D-KR-03) the kernel formalizes the
-core of Hadzihasanovic's *Combinatorics of Higher-Categorical Diagrams*: oriented graded
-posets, molecules (generated inductively by pasting and the atom construction), regular
-directed complexes, the pasting theorem proved once for all regular molecules (Power's
-theorem is the 2-dimensional case), and joins, Gray products, and duals as operations on
-shapes. Shape categories are *defined* algebraically (Weber) and *presented*
-geometrically, with the presentation theorems as acceptance tests: Δ as iterated joins of
-the point, □ as Gray powers of the interval, globes and positive opetopes as atoms,
-`Θ^aug_fc` as typed leveled 2-molecules (AT-KR-12), joins for `Tw(θ)` and slices.
-A VDC cell is a 2-atom with input boundary `M₁…Mₙ g` and output boundary `f N` in a
-2-coloured directed complex; VDC pasting schemes are the 2-molecules all of whose
-intermediate composites are well-typed (horizontal path, vertical) ⇒ (vertical,
-horizontal), which is exactly the leveling of D-KR-06. When composites exist
-(→ D-FT-02) the same typing is the Dawson–Paré theory of double-categorical pasting,
-where the pinwheel is a valid 2-molecule that is not a double-categorical composite.
-**Rationale.** One geometric theory for every shape we have and every shape the (∞,2)
-layer will need (Gray products and duals for lax structures and modifications), written
-to be formalized, with finite decidable data throughout; and a rendering and
-serialization precedent (`rewalt`, → D-TL-10).
-**Rejected.** Making molecules the root's shape category. Molecules are shapes up to
-isomorphism with no canonical names, whereas the root needs normal forms with decidable
-equality (→ D-TL-09); diagrammatic-set composition is filler-style rather than
-Segal-style, and the active maps come from the algebra, not from shape maps; and there is
-no double or virtual-double variant of diagrammatic sets to build on. Chanavat–
-Hadzihasanovic's model structures for diagrammatic (∞,n)-categories are a comparison
-target for the (∞,2) layer, not a foundation.
-**Acceptance.** AT-KR-12 (grids ≅ typed leveled 2-molecules); AT-KR-13 (Δ ≅ joins of
-the point, □ ≅ Gray powers of the interval, as categories); AT-KR-14 (the general pasting
-theorem restricts to the nerve-theorem composites on `Θ^aug_fc`).
-**Status.** frozen (scope of the formalized core provisional: definitions through the
-pasting theorem and the three operations; the rest of the book is `later`).
+## Acceptance catalogue and open questions
 
-## Kan machinery
+AT-KR-0 is the inventory; 1 is Δ comparison; 2 is the general nerve theorem with its
+hypotheses; 3 is explicit presentations; 4 is Θ_n; 5 is Δ's pattern; 6 is elegance for
+named adopted shapes; 7 is Ω's generalized-Reedy structure; 8 is the augmented discrete
+nerve theorem; 9 is labelled Δ; 10 is the exact Kan closure list; 11 is reduced Reedy
+replacement; 12/13/14 are deferred geometric comparisons. All are proposed until
+linked to Lean statements and proofs. M-F gates specify the subset needed early.
 
-### D-KR-10 · Spaces are Kan complexes
-**Decision.** The kernel provides: Kan complexes; Kan fibrations and trivial fibrations
-as lifting properties; anodyne maps; simplicial homotopy (an equivalence relation on
-maps into Kan complexes); homotopy equivalences; `π₀`; contractibility; mapping spaces
-`L^K` and the exponential law; the pushout-product lemma (needed for `U^{Δ[1]} → U × U`
-fibrations, → D-SP-01); homotopy fibre products via path spaces and the lemma that a
-strict fibre product along a fibration is a homotopy fibre product; Reedy fibrancy for
-`sSet`-valued presheaves on the shapes of D-KR-05; the fact that discrete presheaves are
-Reedy fibrant and every map of discrete simplicial sets is a Kan fibration. Sourced from
-Mathlib wherever the inventory (D-KR-02) finds it.
-The **closure package** (→ D-CH-13), proved here and exported through the interface:
-mapping spaces of presheaves `Map(A, P)` for `A ↪ B` a monomorphism and `P` Reedy
-fibrant give Kan fibrations `Map(B,P) → Map(A,P)`; exponentials of Reedy fibrant
-objects by cofibrant ones are Reedy fibrant; fibre products along Reedy fibrations are
-Reedy fibrant; a Kan fibration with contractible fibres over every vertex is a trivial
-fibration; homotopy invariance of `Map` in both variables among cofibrant sources and
-fibrant targets.
-**Rationale.** Every definition in `Root/` is stated with these words and nothing
-heavier. Model structures are not needed for definitions and appear only as theorems
-(→ D-SP-08). The closure package is what lets `Theory/` prove that its own
-constructions preserve fibrancy without seeing the kernel.
-**Acceptance.** AT-KR-10: the standard closure properties (composition, pullback,
-retract, exponentials) for Kan and trivial fibrations, as a Lean theorem list.
-**Status.** frozen.
-
-### D-KR-11 · Fibrant replacement (statement here, proof at M2)
-**Decision.** For elegant shapes, there is a functorial Reedy-fibrant replacement of
-Segal presheaves that preserves the label set and is a levelwise homotopy equivalence
-on elementary values; for `Δ_X` this is Bergner's fibrant replacement for Segal
-categories. The kernel proves the version needed by → D-RT-07.
-**Rationale.** Natural examples (strict simplicial categories, `Mat(Kan)`) are Segal but
-not Reedy fibrant; derived mapping spaces need a fibrant target.
-**Acceptance.** AT-KR-11: replacement exists and is a DK-equivalence (→ D-RT-06).
-**Status.** provisional (proof strategy to be chosen at M2: Bergner-style small object
-argument along the elementary boundary inclusions is the default).
-
-## Acceptance tests (summary)
-
-- AT-KR-0 Mathlib inventory node exists and is verified.
-- AT-KR-1 `Θ_T(free category) ≅ SimplexCategory`.
-- AT-KR-2 BMW nerve theorem, general form.
-- AT-KR-3 Explicit presentations of Δ, Ω_p, Θ^aug_fc as tree/path categories.
-- AT-KR-4 `Θ_1 ≅ Δ`, `Θ_2 ≅ Δ ≀ Δ`.
-- AT-KR-5 Pattern structure on Δ is the classical one.
-- AT-KR-6 Elegance of Δ, Ω_p, Θ^aug_fc.
-- AT-KR-7 Ω is EZ generalized Reedy.
-- AT-KR-8 Nerve theorem for augmented VDCs with Segal characterization.
-- AT-KR-9 Labelled Δ characterizes categories with a given object set.
-- AT-KR-10 Closure properties of Kan/trivial fibrations.
-- AT-KR-11 Fibrant replacement.
-- AT-KR-12 Grids ≅ typed leveled 2-molecules.
-- AT-KR-13 Δ and □ as joins and Gray powers in the geometric substrate.
-- AT-KR-14 The general pasting theorem restricts to nerve-theorem composites on `Θ^aug_fc`.
-
-## Open questions
-
-- OQ-KR-1 Does BMW's framework cover the free symmetric operad monad directly, or
-  do we define Ω à la Moerdijk–Weiss and prove the nerve theorem separately? (M1)
-- OQ-KR-2 Should `G_fc` include a separate `c_n^∅` for each `n`, or is augmentation
-  better encoded as an extra object "empty target" with cells targeting it? (Affects the
-  explicit tree presentation; decide when formalizing D-KR-06.)
-- OQ-KR-3 Which Reedy-fibrancy convention for Ω (Berger–Moerdijk projective on
-  `Aut`-objects is the default).
+OQ-KR-1: choose the symmetric-operad arity proof when Ω is needed.
+OQ-KR-2: establish an augmented arity presentation that handles empty outputs and
+vertical 2-cells; do not freeze the row encoding in advance.
+OQ-KR-3: choose the Ω equivariant model separately from the root diagram model.
+OQ-KR-4: if root elegance fails, identify an actual alternative with sufficient
+cofibrancy/replacement theorems, or revise the root model at M-F.

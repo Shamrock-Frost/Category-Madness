@@ -7,7 +7,7 @@
     superseded-by) and its status is one of frozen / provisional / later / superseded;
   * nothing references a superseded decision (D-WF-02: "CI checks that cited nodes exist
     and are not superseded");
-  * every Acceptance test node has a status in unstated / stated / proved;
+  * every Acceptance test node has a revision-aware lifecycle status;
   * forest/registry.json is up to date with the trees.
 """
 
@@ -26,7 +26,7 @@ META_RE = re.compile(r"^\\meta\{([^}]+)\}\{(.*)\}$", re.M)
 TAXON_RE = re.compile(r"^\\taxon\{(.*)\}$", re.M)
 
 DECISION_STATUSES = {"frozen", "provisional", "later", "superseded"}
-AT_STATUSES = {"unstated", "stated", "proved"}
+AT_STATUSES = {"proposed", "stated", "proved", "failed", "blocked", "deferred", "retired"}
 REQUIRED_DECISION_META = {"id", "status", "origin", "supersedes", "superseded-by"}
 
 

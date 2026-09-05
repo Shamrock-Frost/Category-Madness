@@ -1,0 +1,25 @@
+\title{D-CH-13 · Closure and invariance}
+\taxon{Decision}
+\meta{id}{D-CH-13}
+\meta{area}{charter}
+\meta{origin}{design/00-charter.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:ch}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{The interface is closed under the constructions it offers, in the sense quasi-category theory is: fibrancy is an exported property, standard objects are exported fibrant, and every exported construction (\code{Mod}, slices, functor objects, limits, \code{Span}) comes with (a) a fibrancy-preservation theorem, (b) a DK-invariance theorem, and (c) where it produces mapping spaces, a rectification theorem saying strict maps into strict models hit every component. Definitions in 02–05 are chosen so that (a)–(c) are provable.}
+}
+\subtree{
+  \title{Rationale}
+  \p{In a strict-model design nothing is invariant or fibrant by construction. Quasi-category theory is usable because its toolkit (horn filling, \code{Fun}, joins, mapping spaces) is closed and rectification populates it; the same list, transposed, is what makes this library usable rather than merely correct.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen.}
+}

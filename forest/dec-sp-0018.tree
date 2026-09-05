@@ -1,0 +1,36 @@
+\title{D-SP-18 · Symmetry on a profunctor ambient}
+\taxon{Decision}
+\meta{id}{D-SP-18}
+\meta{area}{spaces and enrichment}
+\meta{origin}{design/05-spaces-enrichment.md}
+\meta{status}{provisional}
+\meta{status-text}{ambient correction adopted; ∞-construction provisional, full development M7.}
+\meta{supersedes}{dec-sp-0009}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:sp}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{The free list/monoid construction may begin on \code{Mat(V)}. For the free symmetric and braided monoidal category constructions use the profunctor ambient \code{Prof(V) := Mod(Mat V)} once its coherent construction has been established. For discrete colour categories A, \code{T_Σ A} is a category with finite lists as objects and permutations as morphisms; \code{T_𝔹 A} retains braids. These are not objects of the set-labelled matrix ambient merely by taking their sets of objects.}
+  \p{Implement the horizontal Kleisli construction with the variance conventions of the chosen profunctors stated explicitly. In the Cruttwell–Shulman convention its horizontals are X-horizontals \code{A ⇸ T B}; translate that convention through the matrix bridge rather than silently changing input/output variance. Define unit, multiplication, and cells coherently in the ∞-case; a strict model is allowed with a proved comparison. The conditions under which \code{H-Kl} and its \code{Mod} have the required restrictions, units, or composites are individual theorem hypotheses.}
+  \p{The one-colour collection category must recover functors from the finite-set groupoid with the appropriate variance, hence \code{Σ_n}-actions in arity n. The braided case recovers braid actions. Prove the substitution product, then the algebra/operad comparison. Do not assert a general Kleisli composite theorem without the necessary colimits and preservation hypotheses. There are virtual-equipment results that do not imply all horizontal composites exist.}
+  \p{\code{E_1}, \code{E_2}, and \code{E_∞} examples and finite-n configuration-space models are later comparisons with stated equivariance/freeness hypotheses. Symmetric monoidal ∞-categories as algebras in \code{Cat_∞} additionally need the relevant colimits there; \code{HasColimits Kan} alone is not that theorem.}
+}
+\subtree{
+  \title{Rationale}
+  \p{An action needs morphisms in its indexing category, not just labels.}
+}
+\subtree{
+  \title{Rejected}
+  \p{The former free symmetric/braided monoidal category monads directly on \code{Mat(Kan)}; treating families over a set as equivariant symmetric sequences.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-fd-0009}: discrete arity-two action test; \ref{at-sp-0009}: classical symmetric operads in the corrected profunctor ambient; \ref{at-sp-0010}: coherent operadic comparison; \ref{at-sp-0011}: precisely stated E_n examples; \ref{at-sp-0013}: scoped Kleisli/Mod preservation.}
+}
+\subtree{
+  \title{Status}
+  \p{ambient correction adopted; ∞-construction provisional, full development \ref{ms-0007}.}
+}

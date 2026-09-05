@@ -1,0 +1,29 @@
+\title{D-RT-05 · The homotopy VDC \code{hP}}
+\taxon{Decision}
+\meta{id}{D-RT-05}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen at M3.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:rt}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{\code{hP} is the set-level augmented VDC with the same objects, vertical morphisms \code{π₀ P(v(x,y))}, horizontal morphisms \code{π₀ P(h(x,y))}, and cells the path components of the fibres of the boundary maps of (2) over chosen representatives (well defined up to canonical bijection since those maps are Kan fibrations). Composition is induced from the Segal maps of (3).}
+}
+\subtree{
+  \title{Rationale}
+  \p{\code{hP} is where Riehl–Verity-style arguments live (→ \ref{dec-ft-0004}); it is also the vocabulary in which DK-equivalence is stated.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-rt-0004}: \code{hP} is an augmented VDC; for discrete \code{P}, \code{hP ≅ P}.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen at \ref{ms-0003}.}
+}

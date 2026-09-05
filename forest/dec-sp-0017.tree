@@ -1,0 +1,33 @@
+\title{D-SP-17 · Limits, colimits, and model comparisons}
+\taxon{Decision}
+\meta{id}{D-SP-17}
+\meta{area}{spaces and enrichment}
+\meta{origin}{design/05-spaces-enrichment.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional routes; full (co)completeness M6.}
+\meta{supersedes}{dec-sp-0008}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:sp}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{Prove \code{HasLimits Kan} and \code{HasColimits Kan} for indexing categories within explicit universe bounds. Compare derived homotopy (co)limits with the categorical universal properties of \ref{dec-up-0013}. This supports presheaves, coends, and later substitution products. It is a substantial \ref{ms-0006} theorem target, not an implication of the classifier. The small model-theoretic lemmas needed for \ref{ms-foundation}'s \code{MapCat}, \code{MapRel}, replacement, and walking constructions occur at \ref{ms-foundation}; their broader reusable packaging may follow at \ref{ms-0002}. General strictification, Kan–Quillen, Bergner/Rezk, Joyal–Tierney, and operadic comparisons are scheduled by their actual dependencies. A claimed comparison must name its model and precise statement; full style-A comparison remains \ref{at-rt-0009}.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Moving a dependency later on the schedule does not eliminate it.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Requiring “model structures are only later theorems” when a current construction already needs their lifting or localization results.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-sp-0012} with sizes explicit; \ref{at-sp-0008} for rigidification to an equivalent model; scoped \ref{at-sp-0005}/10 and \ref{at-rt-0009} as above.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional routes; full (co)completeness \ref{ms-0006}.}
+}

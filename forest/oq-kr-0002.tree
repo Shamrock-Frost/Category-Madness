@@ -8,5 +8,5 @@
 \tag{area:kr}
 \tag{status:open}
 
-\p{Should \code{G_fc} include a separate \code{c_n^∅} for each \code{n}, or is augmentation better encoded as an extra object "empty target" with cells targeting it? (Affects the explicit tree presentation; decide when formalizing \ref{dec-kr-0006}.)}
+\p{establish an augmented arity presentation that handles empty outputs and vertical 2-cells; do not freeze the row encoding in advance.}
 \p{\em{Resolution:} open. Decided by the human; record the answer as a decision node that this node then cites.}

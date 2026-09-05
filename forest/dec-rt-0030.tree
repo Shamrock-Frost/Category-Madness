@@ -1,0 +1,33 @@
+\title{D-RT-30 · Vertical 2-cells and pasting}
+\taxon{Decision}
+\meta{id}{D-RT-30}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{provisional}
+\meta{status-text}{discrete implementation provisional; ∞-comparison research-gated.}
+\meta{supersedes}{dec-rt-0015}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:rt}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{The augmented \code{(0,0)} cells define the vertical 2-dimensional part. Horizontal units, when present, give the equivalent presentation by cells into a unit; they are not required for vertical cells to exist. Prove the discrete 2-category laws and the classical \code{Vert₂(Cat)} comparison. The ∞-version retains coherent composition and is compared with the chosen (∞,2)-model at \ref{ms-foundation}. \code{paste} initially handles discrete composites and restrictions from one coherent diagram.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Augmentation already carries transformations, including for nonunital objects.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Delaying all vertical 2-cells until unit factorization is available.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-rt-0012}, \ref{at-fd-0004}, \ref{at-fd-0007}, \ref{at-fd-0010}.}
+}
+\subtree{
+  \title{Status}
+  \p{discrete implementation provisional; ∞-comparison research-gated.}
+}

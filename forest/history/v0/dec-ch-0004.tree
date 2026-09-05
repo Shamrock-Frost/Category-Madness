@@ -1,0 +1,25 @@
+\title{D-CH-04 · Nothing special-cased}
+\taxon{Decision}
+\meta{id}{D-CH-04}
+\meta{area}{charter}
+\meta{origin}{design/00-charter.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:ch}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{There is one root definition (→ \ref{dec-rt-0001}). \code{Category} is a monad in \code{Mat(Set)} (→ \ref{dec-rt-0010}). ∞-categories are monads in \code{Mat(Kan)} (→ \ref{dec-sp-0004}). Functors, profunctors, natural transformations are the vertical morphisms, horizontal morphisms, and cells of \code{Mod(-)}. The 2-category \code{Cat} is never defined; it is the vertical 2-category of \code{Mod(Mat Set)}. Universal properties in \code{Cat} are those of the vertical ∞-category of the corresponding VDC∞, hence 2-dimensional automatically.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Every special case is a place where a theorem gets proved twice and the two copies drift. The formal theory (→ \ref{ft-0000}) is stated once for augmented virtual ∞-equipments.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen.}
+}

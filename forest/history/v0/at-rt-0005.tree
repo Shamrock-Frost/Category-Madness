@@ -1,0 +1,13 @@
+\title{AT-RT-5 · DK-equivalences}
+\taxon{Acceptance test}
+\meta{id}{AT-RT-5}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:rt}
+\tag{status:unstated}
+
+\p{DK-equivalences: 2-out-of-3, composition, discrete case.}
+\p{Named by: \ref{dec-rt-0006}.}
+\p{\em{Lean declaration(s):} none yet.}

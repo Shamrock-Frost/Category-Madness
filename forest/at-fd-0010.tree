@@ -1,0 +1,15 @@
+\title{AT-FD-10 · Scope coherence and rectification}
+\taxon{Acceptance test}
+\meta{id}{AT-FD-10}
+\meta{area}{foundation feasibility}
+\meta{origin}{design/11-foundation-feasibility.md}
+\meta{status}{proposed}
+\meta{statement-version}{1}
+\tag{acceptance-test}
+\tag{area:fd}
+\tag{status:proposed}
+
+\p{State the prototype's actual rectification theorem, including permitted model changes, source conditions, fixed boundary data, and the equivalence relation on maps. Verify that no generic fixed-target surjectivity statement appears as an unproved export. For pasting, prove a shared-diagram restriction equality and a nondiscrete comparison between chosen composites, with the latter typed as a path/cell as appropriate. This gate certifies the stated scope, not an unproved universal normalization theorem.}
+\p{\strong{Depends on:} the relevant shape, cell, and mapping constructions. \strong{Evidence:} exact scoped theorems, the two pasting clients, export audit. \strong{Failure response:} narrow the export or build the missing comparison theorem; never replace a path comparison with strict equality merely for tactic convenience.}
+\p{Named by: \ref{dec-ch-0016}, \ref{dec-ch-0026}, \ref{dec-rt-0030}, \ref{dec-tl-0020}.}
+\p{\em{Lean declaration(s):} none yet.}

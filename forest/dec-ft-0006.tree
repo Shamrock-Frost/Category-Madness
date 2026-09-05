@@ -1,0 +1,33 @@
+\title{D-FT-06 · Restrictions, units, and equipments}
+\taxon{Decision}
+\meta{id}{D-FT-06}
+\meta{area}{formal theory}
+\meta{origin}{design/04-formal-theory.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional until transcribed and proved; no unspecified axioms are frozen.}
+\meta{supersedes}{dec-ft-0001}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:ft}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{Specify a cartesian restriction by the equivalences it induces on cell spaces over every admissible boundary. \code{HasRestrictions P} asserts existence of the required unary restrictions. \code{HasUnitAt P a} is a separate property, with the augmented nullary-restriction characterization and its equivalence to the appropriate universal unit cell proved in the discrete test and then coherently. An augmented virtual equipment need not have all units. A unital augmented virtual equipment has both properties. State each theorem's actual unitality requirements. Companions and conjoints are represented by the appropriate nullary restrictions; when a target unit exists, compare them with its ordinary restrictions.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Missing units are part of the point of augmentation and its size handling.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Simultaneously requiring units in the definition and allowing them to be absent.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-ft-0001}: exact discrete comparison; \ref{at-ft-0002} for matrices and profunctors; \ref{at-ft-0003}: the precisely stated hypotheses under which \code{Mod} preserves restrictions and supplies units. Its ∞-version is a theorem target, not automatic.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional until transcribed and proved; no unspecified axioms are frozen.}
+}

@@ -1,0 +1,29 @@
+\title{D-SP-02 · The Segal category \code{Kan}}
+\taxon{Decision}
+\meta{id}{D-SP-02}
+\meta{area}{spaces and enrichment}
+\meta{origin}{design/05-spaces-enrichment.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen at M6.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:sp}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{\code{Kan} is exported as a \em{fibrant} Segal category with object set the small Kan complexes, with the API: \code{Kan(K, L) ≃ L^K} (homotopy equivalence), composition agreeing with composition of maps up to homotopy, and the rectification theorem that the strict simplicial category (\code{Kan(K,L) = L^K}, strict composition) maps to it by a DK-equivalence. How the fibrant object is obtained is a kernel choice (\ref{oq-sp-0003}): either the strict simplicial category followed by fibrant replacement, or a fibrant-by- construction model in the Rezk/Rasekh style (value at \code{([n]; K₀…K_n)} the Kan complex whose \code{m}-simplices are left fibrations over \code{Δ[n] × Δ[m]} that are Kan fibrations in the \code{Δ[m]} direction, with the prescribed vertex fibres), built from the universe (→ \ref{dec-sp-0001}). Past the seal the difference is invisible. \code{S} (Cisinski's quasi-category of spaces) is a later comparison target (→ \ref{dec-sp-0008}), not a prerequisite.}
+}
+\subtree{
+  \title{Rationale}
+  \p{No coherent nerve, no necklaces. What Theory needs is fibrancy as a property plus rectification (→ \ref{dec-ch-0013}), not a particular model.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-sp-0002}: \code{Kan} is a monad in \code{Mat(Kan)} (i.e. an ∞-category in the library's sense), its homotopy category is the classical homotopy category of Kan complexes, and the strict simplicial category rectifies it.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen at \ref{ms-0006}.}
+}

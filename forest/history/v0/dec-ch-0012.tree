@@ -1,0 +1,25 @@
+\title{D-CH-12 · Self-hosting and axiom-wlog}
+\taxon{Decision}
+\meta{id}{D-CH-12}
+\meta{area}{charter}
+\meta{origin}{design/00-charter.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:ch}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{After the seal, the interface is a set of \code{opaque} constants with an inhabitation witness from the kernel. A self-hosted kernel (no Mathlib) is on the roadmap (\ref{ms-0007}). A build variant may replace the kernel by axioms for speed; the kernel-backed build remains the consistency witness and runs in CI.}
+}
+\subtree{
+  \title{Rationale}
+  \p{\code{opaque} is Lean's native "axiom without loss of consistency": the body is invisible to the elaborator and the kernel alike, so the theory literally cannot depend on it.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen.}
+}

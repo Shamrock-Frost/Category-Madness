@@ -8,5 +8,5 @@
 \tag{area:up}
 \tag{status:open}
 
-\p{Comma shapes: use the simplicial join throughout, or a dedicated comma shape in the kernel? Default: join.}
+\p{choose the concrete derived comma/framing construction and prove its discrete comparison.}
 \p{\em{Resolution:} open. Decided by the human; record the answer as a decision node that this node then cites.}

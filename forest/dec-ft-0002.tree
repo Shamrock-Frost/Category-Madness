@@ -3,17 +3,17 @@
 \meta{id}{D-FT-02}
 \meta{area}{formal theory}
 \meta{origin}{design/04-formal-theory.md}
-\meta{status}{frozen}
+\meta{status}{superseded}
 \meta{status-text}{frozen at M5.}
 \meta{supersedes}{none}
-\meta{superseded-by}{none}
+\meta{superseded-by}{dec-ft-0007}
 \tag{decision}
 \tag{area:ft}
-\tag{status:frozen}
+\tag{status:superseded}
 
 \subtree{
   \title{Decision}
-  \p{\code{P} \em{has composites} when for every path \code{(M₁,…,M_n)} there is a horizontal \code{M₁ ⊙ ⋯ ⊙ M_n} with an opcartesian \code{n}-ary cell. Then \code{P} restricted to the \code{Δ×Δ}-shapes (→ \ref{dec-kr-0008}) is a double ∞-category, and if \code{P} is an equipment it is an ∞-equipment in Ruit's sense \strong{(verify: this is the statement of \ref{at-ft-0004}; the precise notion of "Ruit's sense" transported to Segal-style double ∞-categories is part of the task)}. Composites are a property with witnesses, never structure (→ \ref{dec-ch-0002}).}
+  \p{\code{P} \em{has composites} when for every path \code{(M₁,…,M_n)} there is a horizontal \code{M₁ ⊙ ⋯ ⊙ M_n} with an opcartesian \code{n}-ary cell. Then \code{P} restricted to the \code{Δ×Δ}-shapes (→ \ref{dec-kr-0008}) is a double ∞-category, and if \code{P} is an equipment it is an ∞-equipment in Ruit's sense \strong{(verify: this is the statement of \ref{at-ft-0004}; the precise notion of "Ruit's sense" transported to Segal-style double ∞-categories is part of the task)}. Composites are a property with witnesses, never structure (→ D-CH-02).}
 }
 \subtree{
   \title{Acceptance}

@@ -1,110 +1,145 @@
-# 08 · Roadmap
+# 08 · Roadmap — revision 1
 
-Milestones are defined by what gets **frozen** and which **acceptance tests** must be
-`proved`. Order within a milestone is dependency order; agents choose. Dates are not
-part of this document.
+Milestones are evidence gates, not dates. M-F is new and sits between M0 and M1.
+It pulls forward the pieces of shape, Kan, and categorical comparison machinery needed
+to test the root. Later milestones package and generalize those pieces; they are not
+prerequisites that have been scheduled after their clients.
 
-### Phase −1 · These documents
-Deliverable: this tarball. Exit: human sign-off on the outline and the frozen decisions.
+### Phase −1 · Revised design
 
-### M0 · Skeleton
-- Repo layout (→ D-TL-08); Mathlib pinned; CI with the import ban and swap-test
-  scaffolding (→ D-TL-06) running against empty directories.
-- Forest skeleton, port of these documents (→ 07 porting instructions), `forest-export`,
-  retrieval MCP MVP (→ D-WF-05).
-- Mathlib inventory node (AT-KR-0).
-- `to_dual` skeleton (→ D-TL-03).
-**Freeze.** Charter (all D-CH), D-KR-01/02, D-WF-01…06, D-TL-06.
-**Exit.** AT-KR-0 verified; a `sorry`-only Lean file round-trips through export, forest, MCP.
+Deliverable: this revision with the original snapshot and supersession crosswalk.
+Exit: the design has explicit candidates, falsification tests, and an authorized plan.
+This is not mathematical validation of the repaired ∞-root.
 
-### M1 · Shapes and patterns
-- BMW "monads with arities" and the general nerve theorem (AT-KR-2).
-- Δ ≅ `SimplexCategory` (AT-KR-1); Δ₊ and joins; `Δ_X` (AT-KR-9).
-- `G_fc`, set-level augmented VDCs, free augmented VDCs, `Θ^aug_fc`, `Θ_{fc,X}`
-  (D-KR-06/07), explicit presentation (AT-KR-3), nerve theorem instance (AT-KR-8).
-- Ω_p, Ω (D-KR-03; OQ-KR-1 resolved), Δ×Δ, Θ_n (AT-KR-4), □ (D-KR-09).
-- Pattern structures and Segal cores (D-KR-04, AT-KR-5).
-- Reedy/elegance/EZ (D-KR-05, AT-KR-6, AT-KR-7).
-- Geometric substrate core (D-KR-12): oriented graded posets, molecules, regular directed
-  complexes, the pasting theorem, joins/Gray/duals; presentations AT-KR-12…14.
-- Shape formats and the rows DSL (D-TL-10, D-TL-11 (1)); rendering for the forest.
-**Freeze.** Shape definitions and their pattern structures; the shape part of the interface
-list; the canonical shape formats.
-**Exit.** AT-KR-1…9 and AT-KR-12…14 proved.
+### M0 · Minimal skeleton
 
-### M2 · Kan machinery
-- Everything in D-KR-10 (AT-KR-10), Reedy fibrancy for `sSet`-presheaves on the shapes,
-  homotopy fibre products, mapping spaces, exponential/pushout-product lemmas.
-- Fibrant replacement for Segal presheaves on elegant shapes (D-KR-11, AT-KR-11).
-**Freeze.** The `Space` API of the interface.
-**Exit.** AT-KR-10, AT-KR-11 proved.
+Pin Lean/Mathlib and inventory AT-KR-0. Create the repository/Prototype layout, minimal
+registry, test statuses, and CI scaffolding. Round-trip one stated WIP theorem through
+the minimal exporter. A full retrieval MCP and broad API generators are not exit gates.
+Freeze workflow/trust policies, not the conjectural mathematical foundation.
 
-### M3 · The root and the seal
-- D-RT-01…12 stated and proved: VDC∞, maps, `Vert`/`Hor`, `hP`, DK-equivalence,
-  fibrancy, `Map`, walking structures, `Mod`, `Mat(Set)`, `Category`, `Cat`, discrete embedding.
-- AT-RT-1 (self-hosting), AT-RT-2…7, AT-RT-10, AT-RT-11 proved.
-- `Vert₂`, unit factorization, and 2-categorical pasting for `Mod(P)` (D-RT-15, AT-RT-12);
-  the `paste` tactic (D-TL-09) usable for discrete `P`.
-- The closure and rectification package of D-RT-13 for the M3 objects: `Mod` preserves
-  fibrancy, slices and functor objects preserve fibrancy, DK-invariance of `Mod`/`Vert`/
-  `Hor`/`hP`, rectification for discrete targets (trivial) with the general statement
-  stated for M6.
-- `Interface/` v1 written (D-RT-13), `Interface-Stub/` generated, swap test green,
-  thin API generator (D-RT-14) running, human notation layer generated (D-TL-02).
-**Freeze.** The root definition, DK-equivalence clauses, the interface list v1, the
-two-tier extension policy.
-**Exit.** Hard seal on. From here `Kernel/` and `Root/` are invisible.
+**Exit:** AT-KR-0 verified and the minimal registry/toolchain operates.
+
+### M-F · Foundation feasibility (new; after M0, before M1)
+
+See `11-foundation-feasibility.md` for the exact tests and dependencies.
+
+- Compile the universe signatures and demonstrate a real bundled seal and swap.
+- Repair object reduction and prove the boundary/Segal-core comparison actually used.
+- Establish categorical diagram spaces on ordinary-category examples with natural
+  equivalences, separately from relative presheaf maps.
+- Test and prove the required discrete/general equivalence clauses, including duplicate
+  horizontals, endpoint transport, and 2-out-of-3 in the proposed root setting.
+- Eliminate the unsupported truncation from required interfaces; demonstrate boundary
+  monodromy and a coherent-cell route that retains the needed information.
+- Establish the augmented arities and the actual cofibrancy/replacement machinery used
+  by the prototype; prove the no-horizontal 2-category comparison.
+- Construct relative monads/modules and one small nondiscrete matrix/Mod example,
+  including whole-object fibres and the natural-equivalence extraction.
+- Check the corrected symmetry ambient on a discrete action example; scope pasting and
+  rectification accurately; pass the compiled-dependency and axiom audits.
+
+**Exit:** AT-FD-1 through AT-FD-11 passed: mathematical components have checked proofs
+of their current statements with approved axioms, and tooling components have reproducible
+check records. No blocked prerequisite is hidden behind a later milestone. A gate
+may be revised only with a decision explaining the change and its impact. Failed gates
+keep the dependent foundation provisional. There is no “all gates passed” status in
+this document revision: the tests are currently proposed.
+
+**Freeze:** only the successfully validated minimal presentation/API fragment. Full
+root and interface freeze remains M3, with the required M-F results as prerequisites.
+
+### M1 · Generalize the validated shape work
+
+Package the arity and nerve results into the general reusable theory (AT-KR-1/2/5/8/9),
+complete the root presentations needed by the public interface, and implement validated
+shape syntax/rendering. Add a shape family only when a scheduled client needs it.
+Expand the forest exporter and retrieval against the now nonempty environment.
+
+**Exit:** the named shape/arity/core tests required for M3 are proved. Ω, Θ_n, cubes,
+and geometric presentations have their own later exits and do not block this one.
+**Freeze:** those adopted shapes and formats whose presentation proofs have passed.
+
+### M2 · Package the needed homotopy machinery
+
+Generalize M-F's Kan, diagram, reduced replacement, and relative-mapping lemmas into the
+exportable Space/diagram API (AT-KR-10/11). Complete categorical `MapCat`/`Fun` bootstrap
+bridges needed by M3/M4. Do not assume the category of all VDCs has an already-proved
+localization model merely because Segal categories do.
+
+**Exit:** all hypotheses of the M3 constructions are supplied by checked lemmas.
+**Freeze:** the proved Space and diagram primitives, not future construction promises.
+
+### M3 · Full root and seal
+
+Complete the repaired root, relative walking structures and `Mod`, the matrix/discrete
+category path, and vertical 2-cell/categorical-core extraction. Prove AT-RT-1/2/3/5/6/7/
+10/11/12 in their revised scopes. AT-RT-4 is retired. Complete the specific closure and
+invariance theorems of each export. Run both builds, axiom audit, nontrivial client,
+performance checks, and thin API generation. Discrete `paste` is usable.
+
+**Exit:** the full exported specification has an implementation and passes the swap test.
+**Freeze:** that root/signature and its proved comparisons. General `hP`, arbitrary
+fixed-target rectification, and unvalidated shapes are absent from the frozen interface.
 
 ### M4 · Universal properties
-- D-UP-01…09; `witness_transport` (D-TL-04) and `extend` (D-TL-05) usable.
-- AT-UP-1…7 proved, including the Čech nerve (AT-UP-6).
-**Freeze.** `IsTerminal`, slices, `Limit`, Kan extensions, witness discipline.
-**Exit.** AT-UP-1…7 proved; `to_dual` produces all colimit-side statements.
 
-### M5 · Formal theory
-- D-FT-01…04 stated; D-FT-03 items proved first in `hP`, then coherently (OQ-FT-2).
-- `Span(S)` for Segal categories with finite limits (D-SP-05 statement, AT-SP-4).
-- AT-FT-1…3, 5…8 proved; AT-FT-4 stated.
-**Freeze.** Augmented virtual ∞-equipment definition; the theorem list D-FT-03.
-**Exit.** The formal theory instantiates to classical statements in `Cat` with no
-separate proofs.
+Construct categorical diagrams, derived cone/comma categories, limits, witness
+transport, and shape extensions. Prove AT-UP-1 through AT-UP-8, including the corrected
+`sk_n ⊣ cosk_n` orientation and the Čech diagram's coherence. Add slice/functor/limit
+closure certificates with their implementations, not as earlier axioms.
 
-### M6 · Spaces and enrichment
-- D-SP-01…06: `U`, `Kan` (fibrant, OQ-SP-3 resolved), `Mat(Kan)` (fibrant),
-  `InfCategory`, `Cat_∞`, `Span(Kan)` via `Tw` shapes, ∞-operads.
-- Rectification (AT-SP-8) and the closure package for `Mat(Kan)`, `Span`, limits.
-- **The mountain**: `HasColimits Kan` and `HasLimits Kan` (AT-SP-12), Simpson's route.
-- AT-SP-1…4, 6, 7, 8, 12 and AT-RT-8 proved; AT-SP-5 and AT-FT-4 attempted.
-**Freeze.** `Kan`, `Mat(Kan)`, `InfCategory`, `Span`.
-**Exit.** An ∞-category is a monad in `Mat(Kan)`, the formal theory applies to it with
-no new definitions, and `PSh(C)` is cocomplete.
+**Exit:** all eight tests, duality scope, and nontrivial witness/extension clients pass.
+**Freeze:** the validated universal-property definitions and API.
 
-### M7 · Later
-- Self-hosted kernel and the axiom build variant (D-CH-12).
-- The strict monads `T_ℕ`, `T_𝔹`, `T_Σ` (and `T_G` for action operads) on `Mat(Kan)`;
-  the horizontal Kleisli construction `H-Kl(T, X)` and Cruttwell–Shulman's equipment
-  theorem at ∞ (AT-SP-13); planar/braided/symmetric ∞-operads as monads in the
-  Kleisli VDC∞s; symmetric sequences as the one-object case; `E_1`, `E_2`, `E_∞` as
-  contractible monads (D-SP-09, AT-SP-9…11); `E_n` for finite `n ≥ 3` via Berger's
-  complete-graph operads; symmetric monoidal ∞-categories as `E_∞`-algebras in `Cat_∞`.
-- Comparisons of D-SP-08 (Bergner, Joyal–Tierney, HHM, style A).
-- Cosmoi (D-FT-05, AT-FT-9); general E1 enrichment (D-SP-07); Θ_n and (∞,n); test
-  categories; categorical logic proper (comprehension categories/CwFs built on the
-  fibration layer, with `U` as the universe object).
+### M5 · Coherent formal theory
+
+State and prove the required restriction/unit and formal-theory comparisons. Develop
+coherently in the root, using discrete comparisons early; optional homotopy-equipment
+routes require their own established bridge. Prove AT-FT-1/2/3/5/6/7. AT-FT-8's former
+general claim is retired. Construct the span recipe with its actual indexing and
+relative boundaries as far as its dependencies permit; AT-SP-4 must pass before export.
+AT-FT-4's full double-∞ comparison may follow at M6 if necessary.
+
+**Exit:** every exported formal theorem has the stated hypotheses and its discrete test.
+**Freeze:** the proved equipment/units definitions and formal theorem signatures.
+
+### M6 · Full spaces and enrichment
+
+Build the classifier and the full `Kan`, `Mat(Kan)`, `InfCategory`, `Cat_∞`, and span
+instances. Prove size-bounded limits and colimits of spaces (AT-SP-12), full matrix
+comparison (AT-RT-8, AT-SP-2/3), required rigidification (AT-SP-8), and construction
+closure. Establish AT-SP-1/4 and the corresponding presheaf/coend clients. Operadic
+nerves are introduced when their corrected algebra construction is ready.
+The full span-module comparison AT-SP-5(b), double comparison AT-FT-4, and style-A
+comparison AT-RT-9 may require separate research submilestones; the narrower mandatory
+M-F categorical tests were not postponed to these comparisons.
+
+**Exit:** the full root monad model agrees with the bootstrap Segal-category interface,
+the formal theory applies, and the claimed presheaf category is cocomplete at stated sizes.
+**Freeze:** the validated full spaces/enrichment interface.
+
+### M7 · Extensions
+
+The symmetry/braiding monads on the corrected profunctor ambient, the ∞-Kleisli theorem,
+symmetric sequences and operads (AT-SP-9/10/13), precisely scoped E_n examples (AT-SP-11),
+general monoidal enrichment, cosmoi, additional shapes and geometric substrate, and a
+self-hosted kernel. Symmetric monoidal ∞-category examples include their actual
+`Cat_∞` colimit prerequisites. Each extension has its own statement and comparison gate.
 
 ## Risk register
 
-| Risk | Impact | Mitigation |
+| Risk | Consequence | Evidence required / response |
 |---|---|---|
-| `Θ^aug_fc` not elegant (AT-KR-6 fails) | Reedy cofibrancy of all objects lost; derived maps need cofibrant replacement | Fall back to generalized Reedy + normal objects, as for Ω; `Map` restricted to normal sources |
-| Fibrant replacement theorem (AT-KR-11) harder than Bergner's | Blocks `Map`, `Mod`, all of M3 | Prove for `Δ_X` first (literature), then extend; interim: define `Map` only for fibrant targets |
-| DK-equivalence clauses wrong (AT-RT-5 or style-A comparison fails) | Homotopy theory of VDC∞s wrong | Clauses are provisional until AT-RT-5; style-A comparison at M6+ is the external check |
-| Boundary fibrancy (2) fails for a needed example | Definition too strict | OQ-RT-1 fallback: path-space homotopy limits |
-| Augmentation axioms transcribed wrongly (D-FT-01) | Formal theory diverges from Koudenburg | AT-FT-1 is exactly this check; do it before D-FT-03 |
-| Elaboration performance through three instance layers | Unusable API | D-RT-14 thin API; D-TL-07; benchmarks as nodes |
-| Mathlib bump breaks kernel | Blocks everything until M7 | Pin; inventory node per bump; after M3 only `Kernel/` is affected |
-| Agents redefine instead of retrieving | Definition drift | Retrieval MCP (D-WF-05); PR must cite decisions |
-| `HasColimits Kan` (AT-SP-12) stalls | No `PSh`, no coends, no composites, no `SymSeq` | It is scheduled by name; Simpson's route is Segal-native; fallback is the Joyal–Tierney comparison and HTT 4.2.4.1 through Cisinski's `S` |
-| Rectification (AT-SP-8) missing | Fibrant world cannot be populated by hand | Dwyer–Kan/Bergner is literature; interim: work only with standard objects exported fibrant |
-| Closure package (D-CH-13) incomplete at the seal | `Theory/` cannot prove fibrancy of its own constructions | Two-tier extension policy (D-RT-13): lemmas are agent-proposable |
-| `Vert` used where cells are needed | Lax notions silently wrong | D-UP-09 as amended; AT-UP-8 |
+| Augmented arities do not have the proposed presentation | Root construction changes | AT-FD-7; revise the algebraic/shape model before freezing formats |
+| Required diagram model unavailable | Relative maps and Mod blocked | Prove an actual model/cofibrant-source alternative; generalized Reedy is not automatic |
+| `VDCEq` clauses fail | Invariance and comparison claims blocked | AT-FD-5 counterexample and revised clauses; no frozen false predicate |
+| Relative and categorical maps confused | Natural equivalences disappear | AT-FD-4; distinct names and clients |
+| Boundary gluing fails | Cell fibres/Segal semantics wrong | AT-FD-3; use proved reduction/fibrancy or homotopy limits |
+| Boundary monodromy | General hP shortcut invalid | AT-FD-6; coherent-cell route, optional scoped truncation |
+| Mod fibres or coherence fail | Shared category/operad construction blocked | AT-FD-8; revise walking diagrams or the root model |
+| Fixed-target rectification overstated | Construction interface unsound | AT-FD-10; state allowed replacements and exact domains |
+| Classifier or spaces colimits stall | Full enrichment delayed | AT-SP-1/12; small nondiscrete evidence already required at M-F |
+| Seal/performance fails | Implementation abstraction unusable | AT-FD-2; adjust specification packaging before broad clients |
+| Unapproved axiom enters implementation | Acceptance status invalid | AT-FD-11; allowlist and same-revision kernel-backed build |
+| Extra infrastructure dominates | Foundation remains untested | Additional shapes, geometric substrate, and large retrieval deferred |

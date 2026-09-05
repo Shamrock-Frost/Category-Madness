@@ -1,0 +1,33 @@
+\title{D-KR-14 · Mathlib inventory}
+\taxon{Decision}
+\meta{id}{D-KR-14}
+\meta{area}{kernel}
+\meta{origin}{design/01-kernel.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen policy.}
+\meta{supersedes}{dec-kr-0002}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:kr}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Pin Lean and Mathlib at \ref{ms-0000}. Record exact available declarations and gaps for category theory, simplicial sets, Kan fibrations, weak equivalences, mapping spaces, model structures, and Reedy machinery. Every proof route names the required inventory entries or explicit new lemmas. Refresh the inventory on version changes.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Existence in the literature is not availability in a pinned Lean dependency.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Scheduling a construction on the assumption that a vaguely named Mathlib module contains the needed theorem.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-kr-0000}: verified names, signatures, gaps, and dependency versions.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen policy.}
+}

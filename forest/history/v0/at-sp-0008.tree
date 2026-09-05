@@ -1,0 +1,13 @@
+\title{AT-SP-8 · Rectification}
+\taxon{Acceptance test}
+\meta{id}{AT-SP-8}
+\meta{area}{spaces and enrichment}
+\meta{origin}{design/05-spaces-enrichment.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:sp}
+\tag{status:unstated}
+
+\p{Rectification: strict simplicial categories present all Segal categories.}
+\p{Named by: \ref{dec-sp-0004}.}
+\p{\em{Lean declaration(s):} none yet.}

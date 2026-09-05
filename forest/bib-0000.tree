@@ -1,12 +1,21 @@
-\title{09 · Bibliography (annotated, keyed to decisions)}
+\title{09 · Bibliography and proof routes — revision 1}
 \taxon{Chapter}
 \meta{origin}{design/09-bibliography.md}
 \meta{layer}{human}
 \tag{chapter}
 
-\p{Entries give what the library takes from each source. Venues are omitted where not certain; the \ref{ms-0000} agent should complete them in the forest.}
+\p{These references supply definitions and comparison routes. A source about ordinary VDCs, Segal categories, or a different model does not prove the corresponding theorem for the candidate augmented ∞-root. The full original annotated bibliography is preserved in \code{history/v0/09-bibliography.md}; the active routes and their limits follow.}
+\table{
+  \tr{\th{Primary source}\th{What is used}\th{Boundary of the claim}}
+  \tr{\td{Koudenburg, [Augmented virtual double categories](https://arxiv.org/pdf/1910.11189), published TAC 2020; arXiv v4 includes later corrections}\td{Exact discrete augmentation, restrictions, units, vertical cells, and equivalence comparison for \ref{dec-kr-0018}, \ref{dec-rt-0021}, \ref{dec-ft-0006}}\td{The augmented ∞-arity/model construction is new work. Pin the version used when transcribing axioms.}}
+  \tr{\td{Cruttwell–Shulman, [A unified framework for generalized multicategories](https://arxiv.org/pdf/0907.2460)}\td{Discrete Mod/Kleisli definitions and scoped preservation results}\td{Examples 3.12–3.14 distinguish list monads on matrices from symmetric/braided monoidal category monads on profunctors. No ∞-preservation theorem is inferred by changing the word “category.”}}
+  \tr{\td{Berger–Melliès–Weber, [Monads with arities and their associated theories](https://arxiv.org/pdf/1101.3064)}\td{General nerve recognition; separately, canonical arity results under stronger hypotheses}\td{\ref{dec-kr-0015}/04 record actual hypotheses for arities, generic factorization, and the chosen elementary cores. Reedy structure is additional.}}
+  \tr{\td{Bergner, [Complete Segal spaces arising from simplicial categories](https://arxiv.org/html/0704.1624v2)}\td{Distinguish strict/relative diagram maps from categorical presentations; ordinary-category comparisons in \ref{at-fd-0004}}\td{Reedy replacement and categorical completion have different roles. This is not a construction of the candidate VDC∞ localization.}}
+  \tr{\td{Lean, [Definitions reference](https://lean-lang.org/doc/reference/latest/Definitions/Definitions/)}\td{Opaque declarations and specification packaging for \ref{dec-rt-0028}}\td{Prototype against the pinned Lean version. An opaque body alone does not export implementation-specific laws.}}
+  \tr{\td{Lean, [Validating a Lean Proof](https://lean-lang.org/doc/reference/latest/ValidatingProofs/)}\td{Dependency and axiom inspection for \ref{dec-tl-0017}}\td{A stub build checks clients under assumptions; the matching implementation and axiom audit are still required.}}
+}
 \subtree{
-  \title{Virtual double categories and formal category theory}
+  \title{Additional named routes to pin when activated}
   \transclude{bib-0001}
   \transclude{bib-0002}
   \transclude{bib-0003}
@@ -15,9 +24,6 @@
   \transclude{bib-0006}
   \transclude{bib-0007}
   \transclude{bib-0008}
-}
-\subtree{
-  \title{Shapes, nerves, patterns}
   \transclude{bib-0009}
   \transclude{bib-0010}
   \transclude{bib-0011}
@@ -25,58 +31,4 @@
   \transclude{bib-0013}
   \transclude{bib-0014}
   \transclude{bib-0015}
-  \transclude{bib-0016}
-  \transclude{bib-0017}
-  \transclude{bib-0018}
-  \transclude{bib-0019}
-  \transclude{bib-0020}
-  \transclude{bib-0021}
-  \transclude{bib-0022}
-}
-\subtree{
-  \title{Homotopy theory and models}
-  \transclude{bib-0023}
-  \transclude{bib-0024}
-  \transclude{bib-0025}
-  \transclude{bib-0026}
-  \transclude{bib-0027}
-  \transclude{bib-0028}
-  \transclude{bib-0029}
-  \transclude{bib-0030}
-  \transclude{bib-0031}
-  \transclude{bib-0032}
-  \transclude{bib-0033}
-  \transclude{bib-0034}
-  \transclude{bib-0035}
-  \transclude{bib-0036}
-  \transclude{bib-0037}
-}
-\subtree{
-  \title{Operads and \code{E_n}}
-  \transclude{bib-0038}
-  \transclude{bib-0039}
-  \transclude{bib-0040}
-  \transclude{bib-0041}
-  \transclude{bib-0042}
-  \transclude{bib-0043}
-}
-\subtree{
-  \title{Pasting diagrams and shapes}
-  \transclude{bib-0044}
-  \transclude{bib-0045}
-  \transclude{bib-0046}
-  \transclude{bib-0047}
-  \transclude{bib-0048}
-  \transclude{bib-0049}
-  \transclude{bib-0050}
-}
-\subtree{
-  \title{Type theory and displayed structures}
-  \transclude{bib-0051}
-  \transclude{bib-0052}
-}
-\subtree{
-  \title{Tooling}
-  \transclude{bib-0053}
-  \transclude{bib-0054}
 }

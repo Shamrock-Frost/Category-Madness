@@ -1,0 +1,35 @@
+\title{D-RT-06 · DK-equivalence}
+\taxon{Decision}
+\meta{id}{D-RT-06}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen at M3 (the clause list is provisional until AT-RT-5 is proved).}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:rt}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{A map \code{(f, φ) : P → Q} is a DK-equivalence when}
+  \ol{
+    \li{it is essentially surjective on objects: every \code{y : Y} is vertically equivalent in \code{hQ} to some \code{f x} (vertical equivalence = isomorphism in the vertical category of \code{hQ});}
+    \li{it is fully faithful on vertical morphisms: \code{P(v(x,x')) → Q(v(fx,fx'))} is a homotopy equivalence;}
+    \li{it is essentially surjective on horizontal morphisms: every \code{N : fx ⇸ fx'} is isomorphic in \code{Hor Q} (via an invertible unary cell) to \code{φ(M)} for some \code{M};}
+    \li{it is fully faithful on horizontal morphisms and cells: \code{P(h) → Q(h)} and every \code{P(c) → Q(c)} are homotopy equivalences over the boundary (equivalences on fibres of the maps of (2)).}
+  }
+}
+\subtree{
+  \title{Rationale}
+  \p{This is the Segal-category transcription of "equivalence of ∞-categories over \code{Δᵒᵖ} fibrewise" in style A. It is combinatorial: homotopy equivalences of Kan complexes and isomorphisms in a 1-category.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-rt-0005}: DK-equivalences satisfy 2-out-of-3 and are closed under composition; for discrete \code{P, Q} they are the equivalences of augmented VDCs; \strong{(verify at \ref{ms-0006}+)} agreement with style-A equivalences under the comparison of \ref{at-rt-0009}.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen at \ref{ms-0003} (the clause list is provisional until \ref{at-rt-0005} is proved).}
+}

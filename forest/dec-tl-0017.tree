@@ -1,0 +1,42 @@
+\title{D-TL-17 · Seal, axiom audit, and CI}
+\taxon{Decision}
+\meta{id}{D-TL-17}
+\meta{area}{tooling}
+\meta{origin}{design/06-tooling.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen policy; implementation required at M-F and completed for M3.}
+\meta{supersedes}{dec-tl-0006}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:tl}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{The checks below are required before merge once their code exists.}
+  \ol{
+    \li{Check direct imports and elaborated statement/proof dependencies. Ban Theory references to private implementation constants. Audit transitive dependency routes; approved interface laws may have kernel-backed proofs behind the seal.}
+    \li{Guard sealed unfolding with syntax checks, then use the stub build as the semantic client-independence check. Do not ban ordinary equality transport or reflexivity merely for mentioning a sealed type. Transparent specification projections and shape syntax are explicitly allowed.}
+    \li{Check interface types by elaborated constants, including implicit arguments and typeclass instances; a grep alone is insufficient.}
+    \li{Build the same merge candidate against the bundled implementation and its stub. Preserve transparent infrastructure in the stub. Audit the implementation of every exported operation and law through the complete specification witness.}
+    \li{Run \code{collectAxioms} over acceptance tests and exported declarations. In the kernel-backed build allow only the explicitly audited standard Lean axiom set for the pinned toolchain (normally \code{propext}, \code{Classical.choice}, \code{Quot.sound}). Reject \code{sorryAx}, stub axioms, and unapproved project axioms. WIP declarations are visibly unvalidated and cannot certify an acceptance test or enter the public dependency path.}
+    \li{Compile the explicit universe examples with \code{autoImplicit false}; that option alone is not a universe-polymorphism test.}
+    \li{Check decision/test cross-references, supersession, and adopted generators.}
+  }
+}
+\subtree{
+  \title{Rationale}
+  \p{A stub tests abstraction; the kernel-backed build and axiom audit test that its assumed specification has a legitimate implementation.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Nightly-only implementation checks; reporting only \code{sorryAx}; superficial syntax bans as the entire protection against definition leaks.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-fd-0002} and \ref{at-fd-0011}, including deliberately invalid clients and axioms.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen policy; implementation required at \ref{ms-foundation} and completed for \ref{ms-0003}.}
+}

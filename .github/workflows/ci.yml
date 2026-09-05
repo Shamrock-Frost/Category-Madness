@@ -8,7 +8,7 @@ name: ci
 
 on:
   push:
-    branches: [main]
+    branches: [prima-materia]
   pull_request:
 
 jobs:

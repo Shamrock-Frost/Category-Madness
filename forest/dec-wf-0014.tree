@@ -1,0 +1,33 @@
+\title{D-WF-14 · Addresses}
+\taxon{Decision}
+\meta{id}{D-WF-14}
+\meta{area}{forest and workflow}
+\meta{origin}{design/07-forest-workflow.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional formatting.}
+\meta{supersedes}{dec-wf-0007}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:wf}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{Keep human decision/test IDs stable and map them to forest addresses. Generated declaration addresses may be hashed, with full names retained as metadata. Milestones include \ref{ms-foundation} between \ref{ms-0000} and \ref{ms-0001}. The exact forester v5 syntax is checked against the pinned tool before generating the forest.}
+}
+\subtree{
+  \title{Rationale}
+  \p{IDs used in proof work must resolve independently of a documentation tool's layout.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Guessing unsupported address syntax before testing the pinned implementation.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{ms-0000} ID round-trip; revision crosswalk check.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional formatting.}
+}

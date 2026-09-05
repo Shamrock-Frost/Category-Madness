@@ -1,0 +1,29 @@
+\title{D-CH-01 · Interface over implementation}
+\taxon{Decision}
+\meta{id}{D-CH-01}
+\meta{area}{charter}
+\meta{origin}{design/00-charter.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen.}
+\meta{supersedes}{none}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:ch}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Theory files see only sealed interfaces. No theorem in the theory layer may depend on how any sealed object unfolds. Definitional equalities are permitted only inside the kernel and root stages, which are hidden.}
+}
+\subtree{
+  \title{Rationale}
+  \p{A proof that goes through by unfolding is a proof about a model. It cannot be instantiated in an enriched, internal, or ∞ setting where the composite unfolds to nothing. Mathlib's category theory is saturated with such proofs, which is why its 1-categorical results are re-proved rather than instantiated in its own enriched and quasi-category developments.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Soft discipline (docs and code review). Rejected because agents will find and exploit every unfolding that typechecks; the seal must be mechanical (→ \ref{dec-rt-0013}, \ref{dec-tl-0006}).}
+}
+\subtree{
+  \title{Status}
+  \p{frozen.}
+}

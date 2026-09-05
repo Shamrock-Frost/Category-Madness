@@ -1,0 +1,33 @@
+\title{D-KR-23 · Reduced Reedy replacement}
+\taxon{Decision}
+\meta{id}{D-KR-23}
+\meta{area}{kernel}
+\meta{origin}{design/01-kernel.md}
+\meta{status}{provisional}
+\meta{status-text}{provisional; the root instance is an M-F gate, general packaging M2.}
+\meta{supersedes}{dec-kr-0011}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:kr}
+\tag{status:provisional}
+
+\subtree{
+  \title{Decision}
+  \p{Construct a functorial replacement in the selected diagram model, relative to reduced object values. Prove levelwise equivalence, the appropriate fibrancy, preservation of the homotopy Segal conditions, and compatibility with label reindexing used by the root. This is distinct from categorical completion of Segal categories. If a replacement is needed for a whole diagram of walking structures, perform it coherently on that diagram.}
+}
+\subtree{
+  \title{Rationale}
+  \p{A collection of pointwise replacements does not define a functor.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Treating Bergner's Segal-category results as a proof for arbitrary augmented shapes; calling every replacement a DK-equivalence without comparison.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-kr-0011}, \ref{at-fd-0003}, \ref{at-fd-0008}.}
+}
+\subtree{
+  \title{Status}
+  \p{provisional; the root instance is an \ref{ms-foundation} gate, general packaging \ref{ms-0002}.}
+}

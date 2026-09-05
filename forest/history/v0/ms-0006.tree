@@ -1,0 +1,21 @@
+\title{M6 · Spaces and enrichment}
+\taxon{Milestone}
+\meta{id}{M6}
+\meta{origin}{design/08-roadmap.md}
+\meta{status}{planned}
+\tag{milestone}
+
+\ul{
+  \li{\ref{dec-sp-0001}…\ref{dec-sp-0006}: \code{U}, \code{Kan} (fibrant, \ref{oq-sp-0003} resolved), \code{Mat(Kan)} (fibrant), \code{InfCategory}, \code{Cat_∞}, \code{Span(Kan)} via \code{Tw} shapes, ∞-operads.}
+  \li{Rectification (\ref{at-sp-0008}) and the closure package for \code{Mat(Kan)}, \code{Span}, limits.}
+  \li{\strong{The mountain}: \code{HasColimits Kan} and \code{HasLimits Kan} (\ref{at-sp-0012}), Simpson's route.}
+  \li{\ref{at-sp-0001}…\ref{at-sp-0004}, 6, 7, 8, 12 and \ref{at-rt-0008} proved; \ref{at-sp-0005} and \ref{at-ft-0004} attempted.}
+}
+\subtree{
+  \title{Freeze}
+  \p{\code{Kan}, \code{Mat(Kan)}, \code{InfCategory}, \code{Span}.}
+}
+\subtree{
+  \title{Exit}
+  \p{An ∞-category is a monad in \code{Mat(Kan)}, the formal theory applies to it with no new definitions, and \code{PSh(C)} is cocomplete.}
+}

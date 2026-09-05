@@ -8,5 +8,5 @@
 \tag{area:kr}
 \tag{status:open}
 
-\p{Does BMW's framework cover the free symmetric operad monad directly, or do we define Ω à la Moerdijk–Weiss and prove the nerve theorem separately? (\ref{ms-0001})}
+\p{choose the symmetric-operad arity proof when Ω is needed.}
 \p{\em{Resolution:} open. Decided by the human; record the answer as a decision node that this node then cites.}

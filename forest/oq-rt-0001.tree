@@ -8,5 +8,5 @@
 \tag{area:rt}
 \tag{status:open}
 
-\p{Is boundary fibrancy (2) the right fibrancy to bake in, or should (2) be dropped and (3) stated with path-space homotopy limits? Default: keep (2).}
+\p{can strict-core limits implement the homotopy-core specification under the corrected augmented shape hypotheses? Keep homotopy limits if the proof fails. -}
 \p{\em{Resolution:} open. Decided by the human; record the answer as a decision node that this node then cites.}

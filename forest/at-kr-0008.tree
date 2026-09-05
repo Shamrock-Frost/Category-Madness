@@ -3,11 +3,12 @@
 \meta{id}{AT-KR-8}
 \meta{area}{kernel}
 \meta{origin}{design/01-kernel.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:kr}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{Nerve theorem for augmented VDCs with Segal characterization.}
-\p{Named by: \ref{dec-kr-0006}, \ref{dec-rt-0011}, \ref{dec-rt-0015}.}
+\p{, \ref{at-rt-0001}}
+\p{Named by: \ref{dec-kr-0013}, \ref{dec-kr-0015}, \ref{dec-kr-0018}.}
 \p{\em{Lean declaration(s):} none yet.}

@@ -1,290 +1,271 @@
-# 02 · Root (stage 1)
+# 02 · Root — revision 1
 
-The root is the single definition everything else instantiates, together with the
-constructions that must be made before the seal because they need the kernel: maps,
-equivalences, fibrant replacement, derived mapping spaces, walking structures and
-`Mod`, `Mat(Set)`, `Category`, the discrete embedding, and the interface itself.
+This is the current candidate specification. New decision IDs and the immutable original
+are tracked in `12-revision-notes.md`. No theorem marked as a target below is claimed
+proved by this document. M-F selects a workable root and its comparisons before M3
+freezes the full interface.
 
-Throughout, `X : Type u` is a label set and `Θ := Θ^aug_{fc,X}` (→ D-KR-06, D-KR-07).
-Elementary shapes: `pt(x)`, `v(x,y)`, `h(x,y)`, `c_n(x₀…x_n; y₀,y₁)`, `c_n^∅(x₀…x_n; y)`.
+## Presentation, cells, and equivalences
 
-## The definition
+### D-RT-16 · Reduced augmented Segal presentation
+**Decision.** For `X : Type ℓ`, use the labelled augmented arity category
+`Θ^aug_{fc,X}` once its arity and Segal-core theorems have been established. A candidate
+`VDC∞.{ℓ,s}` is a presheaf into `sSet.{s}` with:
+1. a specified reduced presentation: every `P(pt x)` is the terminal simplicial set;
+2. Kan values;
+3. Kan fibrations from elementary cell values to their full boundary limits;
+4. Segal comparison equivalences from `P(θ)` to the homotopy limit of its elementary
+   inert subshape diagram.
+The edge-to-object endpoint maps also occur in boundary diagrams; reduced object
+values make their targets terminal. Strict Segal-core limits may implement (4) only
+after the comparison with the homotopy limits is proved. No strict-limit assertion is
+inferred from contractibility of object values.
+**Rationale.** This supplies genuinely discrete object data and preserves the intended
+cell fibres. It leaves room to correct the shape or fibrancy hypotheses at M-F.
+**Rejected.** The earlier contractible-object axiom and its strict-gluing justification.
+**Acceptance.** AT-FD-3, AT-FD-7, AT-RT-1, AT-RT-3; AT-FD-8 for a nondiscrete example.
+**Status.** provisional; freeze only after M-F and the full M3 comparisons.
 
-### D-RT-01 · Virtual double ∞-category
-**Decision.** A VDC∞ with label set `X` is a presheaf `P : Θᵒᵖ → sSet` such that
-1. **(Kan)** every `P(θ)` is a Kan complex;
-2. **(boundary fibrancy)** for every elementary cell shape `c` (with or without output),
-   the restriction map `P(c) → lim_{∂c} P` to the product of the values on its boundary
-   edges is a Kan fibration;
-3. **(Segal)** for every non-elementary `θ`, the map `P(θ) → lim_{Sc(θ)} P` to the
-   strict limit over the Segal core (→ D-KR-04) is a homotopy equivalence;
-4. **(unit)** every `P(pt x)` is contractible.
-The strict limit in (3) is a homotopy limit because of (2) and because all gluing over
-object positions is along discrete sets (labels).
-**Rationale.** Conditions (1)–(4) are properties, stated with the kernel's vocabulary
-only (→ D-KR-10). Objects are a set, so no completeness condition. Cells are E1.
-Augmented cells are in the shape category, so augmentation is not an extra axiom.
-**Rejected.** Requiring Reedy fibrancy in the definition. Strict examples (strict
-simplicial categories, `Mat(Kan)`, any algebraic model) are never Reedy fibrant: the
-matching map at a composite shape is the graph of composition, which is not a fibration.
-Fibrancy is a class with a replacement theorem (→ D-RT-07). Stating (3) with homotopy
-limits via path spaces instead of (2): equivalent, uglier; (2) holds in every example we
-intend and for all discrete presheaves.
-**Acceptance.** AT-RT-1 (discrete case, → D-RT-11); AT-RT-2 (`Mat(Set)` is a VDC∞);
-AT-RT-3 (nerves of set-level VDCs satisfy (1)–(4)); AT-RT-8 (`Mat(Kan)`, at M6).
-**Status.** frozen at M3.
+### D-RT-17 · Presentation versus homotopy theory
+**Decision.** A raw root presentation, a Reedy-fibrant presentation, and a categorical
+localization are distinct objects. Neither horizontal composites nor symmetry are
+primitive. Their existence or encoding is supplied by additional constructions.
+**Rationale.** Reedy fibrancy controls mapping and restriction fibrations; it does not
+identify all diagrams that should be categorically equivalent.
+**Rejected.** Using one unnamed notion of fibrancy or equivalence for all three roles.
+**Acceptance.** AT-FD-4, AT-FD-5.
+**Status.** provisional until the comparisons are formalized.
 
-### D-RT-02 · Non-definition: what a VDC∞ is not
-A VDC∞ is not Reedy fibrant, not a fibration over `N(Δᵒᵖ)`, not a double ∞-category
-(no horizontal composites), not symmetric. Each of those is either a class inside the
-definition (fibrant), a comparison target (style A, → AT-RT-9 at M6+), or a derived
-structure when extra properties hold (composites, → D-FT-02).
+### D-RT-18 · Strict maps
+**Decision.** A strict map has a function on object labels and a presheaf map into the
+corresponding reindexing of its target, respecting reduction. These form a category of
+presentations. Reindexing's preservation of the required fibrancy is a theorem.
+**Rationale.** Strict maps are convenient input syntax; their interpretation in a
+localization needs a comparison theorem.
+**Rejected.** The claim that ordinary presheaf enrichment already gives all categorical maps.
+**Acceptance.** AT-FD-4, AT-FD-8.
+**Status.** provisional.
 
-### D-RT-03 · Maps and the 1-category `VDC∞`
-**Decision.** A map `P → Q` of VDC∞s with label sets `X, Y` is a function `f : X → Y`
-together with a map of presheaves `P → f^* Q` over `Θ_{fc,X}`, where `f^* Q` is
-restriction along `Θ_{fc,X} → Θ_{fc,Y}`. Composition is evident. `VDC∞.{u,v}` is a
-1-category (a Grothendieck construction over `Type u`). The ∞-category of VDC∞s is not
-defined at this stage.
-**Rationale.** Strict maps are the right maps for the homotopy theory once the target
-is fibrant (→ D-RT-08); before that they are the only maps we can write.
-**Status.** frozen at M3.
+### D-RT-19 · Raw paths and categorical parts
+**Decision.** `VertRaw(P)` restricts to vertical path shapes. `HorizontalObjects(P,a,b)`
+is `P(h(a,b))`. `Hor(P,a,b)` is the Segal-category presentation whose objects are
+horizontal arrows and whose morphisms are unary cells with identity vertical sides;
+it is not the same object as `HorizontalObjects`.
+`Vert₂(P)` uses vertical arrows and the augmented `(0,0)` cells, retaining noninvertible
+2-cells. `VertCore(P)` denotes the (∞,1)-category obtained by retaining equivalences in
+its hom ∞-categories, after the requisite coherent construction is proved. In particular,
+`VertRaw(Cat)` is the ordinary category of categories and strict functors, while
+`VertCore(Cat)` has groupoids of functors and natural isomorphisms as mapping spaces.
+Neither an equality nor a general equivalence `VertRaw(P) ≃ VertCore(P)` is asserted.
+**Rationale.** The distinction already matters for two isomorphic target objects.
+**Rejected.** Calling raw vertical mapping spaces the spaces of functors and natural equivalences.
+**Acceptance.** AT-FD-4, AT-RT-11, AT-RT-12, AT-UP-8.
+**Status.** raw restriction provisional implementation; categorical extraction research-gated at M-F.
 
-### D-RT-04 · Vertical and horizontal parts
-**Decision.** `Vert P` is the Segal category with object set `X` obtained by restricting
-`P` to the vertical-path shapes (the copy of `Δ_X` inside `Θ`); it is an ∞-category in
-the sense of → D-SP-04 and is the "underlying ∞-category of objects and functors". For
-`x, y : X`, `Hor P (x,y)` is the space `P(h(x,y))` of horizontal morphisms, and unary
-cells with identity vertical boundary give the Segal category `Hor P` fibred over `X × X`.
-**Status.** frozen at M3.
+### D-RT-20 · Truncation is an optional comparison
+**Decision.** There is no unconditional public `hP`. For a discrete root the nerve
+comparison recovers its ordinary augmented VDC. For a nondiscrete root, any homotopy
+2-category or equipment comparison must specify retained objects/arrows, cell
+truncation, transport, and composition, with proofs of compatibility. A general
+comparison may be bicategorical. D-FT-09 governs when it may be used.
+**Rationale.** Taking components of boundary spaces forgets monodromy. Fibres of a Kan
+fibration have transport along paths, not path-independent canonical bijections.
+**Rejected.** Selecting representatives of `π₀ P(v)` and `π₀ P(h)` and declaring the
+resulting fibre components a canonical VDC.
+**Acceptance.** AT-FD-6; AT-RT-4 is retired in its original general form. Discrete
+recovery is part of AT-RT-1. Any later truncation receives a new acceptance ID.
+**Status.** frozen removal of the unsupported requirement; general truncation later.
 
-### D-RT-05 · The homotopy VDC `hP`
-**Decision.** `hP` is the set-level augmented VDC with the same objects, vertical
-morphisms `π₀ P(v(x,y))`, horizontal morphisms `π₀ P(h(x,y))`, and cells the
-path components of the fibres of the boundary maps of (2) over chosen representatives
-(well defined up to canonical bijection since those maps are Kan fibrations).
-Composition is induced from the Segal maps of (3).
-**Rationale.** `hP` is where Riehl–Verity-style arguments live (→ D-FT-04); it is also
-the vocabulary in which DK-equivalence is stated.
-**Acceptance.** AT-RT-4: `hP` is an augmented VDC; for discrete `P`, `hP ≅ P`.
-**Status.** frozen at M3.
+### D-RT-21 · Two equivalence predicates
+**Decision.** Keep the following separate.
+- `LevelEq` compares fixed-label presentations by levelwise weak equivalences. It is
+  the relation used for Reedy replacement and relative presheaf mapping invariance.
+- `VDCEq` is the candidate categorical equivalence of augmented VDC presentations.
+  Its provisional local specification requires equivalences on raw vertical hom
+  spaces and on cell spaces over every fixed source boundary, and *simultaneous*
+  essential surjectivity: choose object representatives with vertical equivalences,
+  and for each target horizontal choose a source horizontal and an invertible unary
+  cell over those chosen endpoint equivalences. Invertibility and compatibility are
+  formulated through coherent unary-cell diagrams, not through the deleted `hP`.
+There is no requirement that `P(h) → Q(h)` be a weak equivalence. In the discrete
+case the comparison target is Koudenburg's equivalence in `AugVirtDblCat` (with vertical
+isomorphisms). For Segal categories themselves use their standard DK-equivalence.
+The complete ∞-clause list and its relation to other VDC models remain M-F research
+obligations; the provisional predicate is not exported as a settled definition.
+**Rationale.** Equivalent presentations may have different sets of isomorphic horizontals.
+Different endpoint representatives must work together for all cells.
+**Rejected.** The original horizontal-object bijection condition; checking horizontals
+only at literal image endpoints; deriving the ∞-comparison from the discrete case alone.
+**Acceptance.** AT-FD-5: duplicate horizontals, endpoint transport, and 2-out-of-3;
+AT-RT-5 in its revised scope. AT-RT-9 remains the full external comparison.
+**Status.** provisional. M-F may change these local clauses if their tests fail.
 
-### D-RT-06 · DK-equivalence
-**Decision.** A map `(f, φ) : P → Q` is a DK-equivalence when
-1. it is essentially surjective on objects: every `y : Y` is vertically equivalent in `hQ`
-   to some `f x` (vertical equivalence = isomorphism in the vertical category of `hQ`);
-2. it is fully faithful on vertical morphisms: `P(v(x,x')) → Q(v(fx,fx'))` is a homotopy equivalence;
-3. it is essentially surjective on horizontal morphisms: every `N : fx ⇸ fx'` is
-   isomorphic in `Hor Q` (via an invertible unary cell) to `φ(M)` for some `M`;
-4. it is fully faithful on horizontal morphisms and cells: `P(h) → Q(h)` and every
-   `P(c) → Q(c)` are homotopy equivalences over the boundary (equivalences on fibres of the maps of (2)).
-**Rationale.** This is the Segal-category transcription of "equivalence of ∞-categories
-over `Δᵒᵖ` fibrewise" in style A. It is combinatorial: homotopy equivalences of Kan
-complexes and isomorphisms in a 1-category.
-**Acceptance.** AT-RT-5: DK-equivalences satisfy 2-out-of-3 and are closed under
-composition; for discrete `P, Q` they are the equivalences of augmented VDCs;
-**(verify at M6+)** agreement with style-A equivalences under the comparison of AT-RT-9.
-**Status.** frozen at M3 (the clause list is provisional until AT-RT-5 is proved).
+### D-RT-22 · Reedy replacement
+**Decision.** `ReedyFibrant P` is an explicit property for the proved shape model.
+A chosen functorial `R_rd` must preserve reduced object labels and yield a `LevelEq`
+`P → R_rd P`, with the corresponding boundary and Segal conditions. Its existence
+is AT-KR-11. If the chosen shapes do not make all sources cofibrant, relative mapping
+constructions also specify a cofibrant source replacement. Any categorical replacement
+is named separately. Standard objects have only the fibrancy certificates actually proved.
+**Rationale.** Relative mapping invariance uses a specified weak equivalence class.
+**Rejected.** Claiming Reedy replacement alone implements categorical localization.
+**Acceptance.** AT-KR-11, AT-FD-3, AT-FD-8.
+**Status.** provisional until the chosen diagram model is validated.
 
-### D-RT-07 · Fibrant objects and replacement
-**Decision.** `P` is *fibrant* when it is Reedy fibrant for the elegant Reedy structure
-on `Θ` (→ D-KR-05). Theorem (from → D-KR-11): every VDC∞ admits a fibrant replacement
-`P → RP`, a DK-equivalence that is the identity on labels. A fibrant replacement is a
-witness (→ D-CH-02): theorems never depend on which one.
-Fibrancy is an *exported property*: standard objects (`Mat Set`, later `Mat Kan`,
-`Mod` of fibrant objects, slices, functor objects) are exported together with proofs
-that they are fibrant, so that `R` is invoked in `Theory/` only for user-built objects.
-Whether a standard object is fibrant by construction or by replacement in the kernel is
-invisible past the seal (→ D-CH-13, OQ-SP-3).
-**Status.** frozen at M3.
+### D-RT-23 · Relative maps and categorical maps
+**Decision.** `MapRel(A,P; f)` is the simplicial presheaf mapping space over the fixed
+label function `f`, using a coherent Reedy-fibrant target and any required cofibrant
+source. A relative version fixes a prescribed subdiagram `B → A` by taking a fibre of
+the restriction map. Strict fibres are used when that restriction is a proved Kan
+fibration; otherwise choose a functorial homotopy-fibre construction for the whole diagram.
+For Segal categories, `MapCat(C,D)` denotes the mapping space of their localization at
+standard DK-equivalences, implemented by a proved categorical framing or complete-Segal-space
+comparison. It models the core of `Fun(C,D)`. `MapCat` has no fixed label function.
+General mapping spaces of localized VDCs, if needed later, receive a separate definition.
+**Rationale.** Relative diagram choices and equivalences between functors have different roles.
+**Rejected.** A disjoint union of fixed-label `MapRel` spaces as the definition of `MapCat`.
+**Acceptance.** AT-RT-6 now concerns only `MapRel`: independence up to weak equivalence
+and strict maps for discrete targets. AT-FD-4 requires `MapCat(1,I)` contractible and
+`MapCat(1,BG) ≃ BG`. No acceptance test identifies these two APIs.
+**Status.** provisional until M-F establishes both constructions and their bridge.
 
-### D-RT-08 · Derived mapping spaces
-**Decision.** For VDC∞s `Q, P` with a fixed map on labels, `Map(Q, P)` is the
-simplicial mapping space of strict maps `Q → RP` over that label map. It is a Kan
-complex (every `Q` is cofibrant by elegance, `RP` is fibrant), and independent of the
-choice of `RP` up to homotopy equivalence.
-**Rationale.** Strict maps into a fibrant object model homotopy-coherent maps; this is
-the whole reason to have fibrant replacement.
-**Acceptance.** AT-RT-6: independence of `R`; for discrete `Q, P`, `π₀ Map(Q,P)` is the
-set of maps.
-**Status.** frozen at M3.
+## Walking structures and examples
 
-## Constructions
+### D-RT-24 · `Mod` by relative walking diagrams
+**Decision.** Work with one coherent choice of `R_rd P`. A monad over a label is a
+vertex of `MapRel(N Mnd,P)`. For a walking diagram `W_θ`, let `B_θ → N W_θ` be the
+subdiagram containing the copies of the walking monad at all object positions.
+For selected monads `m_x`, define the proposed value by the relative fibre
 
-### D-RT-09 · Walking structures and `Mod`
-**Decision.** Set-level (kernel) augmented VDCs embed as discrete VDC∞s (→ D-RT-11),
-and in particular the *walking* structures do: the walking monad `Mnd` (one object, one
-horizontal endomorphism, nullary unit cell, binary multiplication cell, laws), the walking
-monad morphism, the walking bimodule, the walking bimodule cell of each arity, and in
-general the walking θ-diagram `W_θ` of monads, monad morphisms, bimodules and cells for
-each shape `θ` of `Θ_fc` (labelled by the monads at its object positions).
-- A **monad** in `P` at `x` is a point of `Map(N Mnd, P)` over `x`.
-- `Mod(P)` is the presheaf `θ ↦ Map(N W_θ, P)` on `Θ_{fc, Monads(P)}`, where
-  `Monads(P)` is the set of monads of `P`.
-**Theorem targets.** `Mod(P)` is a VDC∞ (AT-RT-7); `Mod` preserves augmented virtual
-equipments (AT-FT-3, the ∞-analogue of Cruttwell–Shulman).
-**Rationale.** The virtual setting means `Mod(P)` needs no coends: bimodules and their
-cells are maps out of labelled shapes. Composites of bimodules, when they exist, are a
-theorem, not structure.
-**Rejected.** Defining monads/bimodules by explicit coherence data. That is what
-`Map(N W, RP)` packages, and packaging it by hand is exactly the coherence bookkeeping
-the design exists to avoid.
-**Status.** frozen at M3.
+`Mod(P)(θ; (m_x)) = Fib_(m_x)( MapRel(N W_θ,P) → MapRel(B_θ,P) )`.
 
-### D-RT-10 · `Mat(Set)` and `Category`
-**Decision.** `Mat(Set.{v})` is the discrete VDC∞ with label set `Type v`, vertical
-morphisms functions, horizontal morphisms `A ⇸ B` families `A → B → Type v`, `n`-ary
-cells `(M₁,…,M_n) ⇒ N` over `(f,g)` families of functions
-`M₁(a₀,a₁) → ⋯ → M_n(a_{n−1},a_n) → N(f a₀, g a_n)`, nullary-target cells
-`(M₁,…,M_n) ⇒ ∅` over `(f,g)` families of functions into `f a₀ = g a_n`
-**(verify: this is Koudenburg's augmentation of `Mat`; the identity matrix is a unit and
-nullary-target cells are cells into it)**.
-`Category A := Monad (Mat Set) A` for `A : Type v`. Unwinding: `Hom : A → A → Type v`,
-`n`-ary composites `Hom(a₀,a₁) → ⋯ → Hom(a_{n−1},a_n) → Hom(a₀,a_n)` for all `n ≥ 0`,
-compatible under all maps of `Δ` — the unbiased families definition, associativity
-being functoriality (→ D-CH-03).
-`Cat := Mod(Mat Set)`: functors are vertical morphisms, profunctors horizontal
-morphisms, natural transformations vertical 2-cells, cells of profunctors the cells.
-**Rationale.** Families rather than spans: composability by typing. `Mat` rather than
-`Span` at the discrete level because `Span(Set)` needs pullbacks and yields the
-component-wise presentation (→ D-SP-05 for where spans return).
-**Acceptance.** AT-RT-2; AT-RT-10: `Category A` is equivalent (as a type, over `A`) to
-the classical `{Hom, id, comp, laws}` structure and to Segal presheaves on `Δ_A`
-(→ AT-KR-9); AT-RT-11: the vertical 2-category of `Cat` is the classical one.
-**Status.** frozen at M3.
+The notation includes fixed underlying base labels and their structure restrictions.
+At a point shape, `B_pt = N W_pt = N Mnd`, and the fibre over its selected monad is a
+point. The family `B_θ → N W_θ` must be functorial in θ. Prove its restriction maps
+are fibrations before using strict fibres. Replacement chosen independently at each
+shape is prohibited. Prove the Segal condition, functoriality on maps, and construction-specific
+invariance; neither `LevelEq` nor `VDCEq` invariance is inferred solely from the formula.
+**Rationale.** Fixing an object label of `Mod` fixes its whole monad structure.
+**Rejected.** The full space of all monads as the value at one chosen monad.
+**Acceptance.** AT-FD-8 and AT-RT-7, including point, vertical edge, bimodule, binary
+cell, units, and composition. AT-FT-3 is the separate equipment-preservation theorem.
+**Status.** provisional research construction; full proof required before export.
 
-### D-RT-11 · Discrete embedding and the self-hosting theorem
-**Decision.** A set-level augmented VDC `V` (kernel) has a nerve `N V : Θᵒᵖ → Set ⊂ sSet`
-(→ AT-KR-8); `N V` is a discrete VDC∞ (AT-RT-3). Conversely a VDC∞ whose values are
-discrete is `N` of its `hP`. **Self-hosting theorem (AT-RT-1):** this is an equivalence
-between the kernel's category of augmented VDCs and the full subcategory of discrete
-VDC∞s, under which `Category A` (D-RT-10) corresponds to Mathlib's `Category A` up to
-the evident equivalence. After the seal, "set-level VDC" *means* "discrete VDC∞", and
-the kernel's definition is invisible.
-**Rationale.** This is the theorem that licenses hiding the kernel: everything the
-kernel knew about set-level structures is recoverable from the root.
-**Status.** frozen at M3.
+### D-RT-25 · `Mat(Set)` and `Category`
+**Decision.** For object types `A B : Type u` and entries in `Type v`, horizontals are
+families `A → B → Type v`. Vertical arrows are functions. Multicells are families of
+functions from input products to the target family. Empty-target cells have target
+`f a₀ = g a_n`, corresponding to cells into the equality matrix. This augmentation
+is checked against the unital-to-augmented construction, including all unit laws.
+`Category.{u,v} A := Monad (Mat(Set.{v};u)) A`. Export its classical hom, identity,
+composition, and laws by the discrete comparison. `Cat := Mod(Mat Set)` includes
+functors, profunctors, and augmented transformation cells. Its different vertical
+extractions are those of D-RT-19.
+**Rationale.** The matrix example provides a small exact test of the entire discrete path.
+**Rejected.** Identifying natural transformations with paths of strict functor maps.
+**Acceptance.** AT-FD-1, AT-RT-2, AT-RT-10, AT-RT-11, AT-RT-12.
+**Status.** provisional until M-F's discrete prototype and the complete M3 comparison.
 
-### D-RT-12 · Universe policy
-**Decision.** Full polymorphism, with the label universe and the value universe
-independent everywhere. `VDC∞.{u,v}` has labels in `Type u` and values in `sSet.{v}`;
-`Θ_{fc,X}` for `X : Type u` lives in `Type u`. `Mat(Set.{v})` is polymorphic in its
-label universe: `Mat.{u,v}(Set.{v}) : VDC∞.{u,v}` has labels the sets `A : Type u` (any
-`u`) and horizontal morphisms `A → B → Type v`. Hence `Category.{u,v} A` for `A : Type u`
-with homs in `Type v` — exactly Mathlib's split, which is forced: `Set`, `Kan`, and `Cat`
-have large object sets and small homs and must be objects of `Mat(Kan.{v})`. Rules: no
-`max` in structure fields where a single universe suffices; `ULift`-transport lemmas are
-part of the interface; Yoneda-size questions in the formal theory are handled by
-augmentation (→ D-FT-01), which addresses the presheaf object not existing at the same
-size and nothing else.
-**Rationale.** The earlier draft offered a single universe and claimed augmentation
-would absorb size; it does not absorb "large objects, small homs," which is the common case.
-**Rejected.** A Grothendieck-universe parameter `U` in the root. Reconsider at M6 if
-`Kan` and `U` (→ D-SP-01) make it attractive.
-**Status.** frozen (rules provisional).
+### D-RT-26 · Discrete nerve comparison
+**Decision.** Prove that the nerve of the kernel's set-level augmented VDC is reduced
+and satisfies the root conditions; conversely recover a set-level augmented VDC from
+a discrete root using the nerve theorem, without an arbitrary-root truncation.
+The equivalence identifies root monads in `Mat Set` with classical category structures.
+**Rationale.** Discrete self-hosting is independent of the invalid general `hP` formula.
+**Rejected.** Using a promised general truncation to justify the discrete inverse.
+**Acceptance.** AT-RT-1, AT-RT-3, AT-RT-10.
+**Status.** provisional; required by M3.
 
-## The seal
+### D-RT-27 · Universe policy
+**Decision.** In `VDC∞.{ℓ,s}`, `ℓ` measures the type of labels and `s` the simplex
+sets of presheaf values. A matrix ambient for `A : Type u` and entries in `Type v`
+uses labels `Type u : Type (u+1)` and matrix values in `Type (max u (v+1))`:
 
-### D-RT-13 · Interface and mechanism
-**Decision.** `Interface/` exports, and `Theory/` may use, exactly:
-- **Shapes, transparently**: the objects and morphisms of Δ, Δ₊, Ω_p, Ω, Θ^aug_fc, Θ_n,
-  Δ×Δ, □, `Tw(θ)` are exported as *transparent* inductive types with `DecidableEq` and
-  computable composition (→ D-TL-10): rows of block sizes for `Θ^aug_fc`, monotone `Fin`
-  maps for Δ, nested lists for Ω_p and Θ_n, and so on. What is sealed is their
-  `Category` structure in the sense of D-RT-10 (with generating morphisms, inert/active
-  factorization, degrees, Segal cores, labelled variants as API) and the bridge lemma
-  identifying the transparent hom-types with the sealed ones. This is the one deliberate
-  exposure of computation past the seal: a pasting proof is a tree-map equality decided
-  on finite data (→ D-TL-09), not a fact about how a categorical notion unfolds, so
-  D-CH-01 is not violated; the linter's `decide` ban (→ D-TL-06) exempts these types.
-- **Spaces**: `Space` (Kan complexes), maps, homotopy, homotopy equivalence, `π₀`,
-  contractibility, fibrations and fibre products, mapping spaces — sealed.
-- **Root**: `VDC∞`, maps, `Vert`, `Hor`, `hP`, DK-equivalence, fibrant, fibrant
-  replacement (existence), `Map`.
-- **Constructions**: `N` (discrete embedding), walking structures, `Monad`, `Bimodule`,
-  `Mod`, `Mat Set`, `Category`, `Cat`, the self-hosting theorem.
-- **Closure and rectification** (→ D-CH-13), as theorems: `Mat Set` is fibrant (trivially);
-  `Mod` preserves fibrancy; slices, functor objects (mapping Segal categories), and
-  fibre products along fibrations preserve fibrancy; exponentials of fibrant objects by
-  cofibrant ones are fibrant; the pushout-product and Reedy lemmas needed to prove such
-  statements in `Theory/`; DK-invariance of `Mod`, `Vert`, `Hor`, `hP`; rectification:
-  for a strict (Segal, not necessarily fibrant) `P`, strict maps `N W → P` composed with
-  `P → RP` hit every component of `Map(N W, P)` (Dwyer–Kan/Bergner rigidification in
-  the case `P = Mat Kan`, → D-SP-04). Later interface versions add the same package for
-  `Mat Kan`, `Span`, and limits.
-- **Nothing else.** No `SSet`, no `SimplexCategory`, no Mathlib `Functor`.
+`Mat(Set.{v};u) : VDC∞.{u+1, max u (v+1)}`.
 
-Extension policy, two tiers:
-- **Constants** (new sealed data or new shapes) are frozen-tier: a superseding decision.
-- **Lemmas** statable in interface vocabulary and provable in `Root/` are
-  provisional-tier: an agent may add them by PR without a decision, subject to the
-  statement-hygiene check (3). This is expected to be the dominant kind of change after
-  M3, and making it cheap is what keeps the seal from making the human the bottleneck.
+This is an intended elaboratable signature, to be tested in Lean. Its category
+projection still has `A : Type u` and `Hom : A → A → Type v`. The analogous spaces
+ambient has a classifier of small spaces in `sSet.{v+1}` and family collections at
+least `max u (v+1)`. Constructions involving all objects, monads, or diagrams explicitly
+compute any additional maxima or successors. No ban on necessary `max` expressions;
+`ULift` only raises universes. Yoneda's presheaf target and the allowable diagram sizes
+are stated explicitly and are not solved by augmentation.
+**Rationale.** Entry size and collection size are different.
+**Rejected.** The former `Mat.{u,v} : VDC∞.{u,v}` signature with labels `Type u`.
+**Acceptance.** AT-FD-1, including `u<v`, `u=v`, `u>v`, and category-size examples.
+**Status.** corrected proposal; signatures not yet compiled.
 
-Mechanism:
-1. Data whose definitional equations are never needed in `Theory/` are `opaque`
-   constants with their kernel implementation as the inhabitation witness.
-2. Data whose equations *are* needed as API are `@[irreducible]` definitions with
-   equation lemmas `foo_def` that are `private` to `Root/`; the exported API consists of
-   theorems proved in `Root/` using those lemmas.
-3. Every exported theorem is stated purely in interface vocabulary. A CI grep enforces
-   that `Interface/` mentions no kernel or Mathlib category-theory names in statements.
-4. The **swap test** (→ D-TL-06): a second `Interface-Stub/` in which every constant is a
-   bodiless `axiom` with the same statement; `Theory/` must build against it.
-5. A build variant that uses the stub instead of the kernel for speed; the kernel build is
-   the consistency witness and runs nightly.
-**Rationale.** `opaque` is the hard seal; `@[irreducible]` + private equations is the
-soft seal that still allows API lemmas to be proved once; the swap test is the proof that
-no leak exists, and it is what "axiom wlog" (→ D-CH-12) means operationally.
-**Status.** frozen; the interface *list* is frozen at M3 ("Interface v1") and extended
-only by superseding decisions.
+## Seal and API
 
-### D-RT-15 · `Vert₂`, unit factorization, and 2-categorical pasting (M3)
-**Decision.** For a VDC∞ `P` with units (every `Mod(P)` has them), `Vert₂(P)` is the
-(∞,2)-categorical structure with objects, vertical morphisms, and 2-cells the nullary
-cells `() ⇒ U_b` over `(f, g)`; horizontal composition of 2-cells goes through the
-opcartesian unit cell (a nullary cell with a gap at `b` factors uniquely through it).
-The 2-categorical pasting theorem for `Vert₂(P)` is a corollary of the nerve theorem
-(AT-KR-8) plus unit factorization; mates and whiskering are instances. This is built at
-M3 for `Cat = Mod(Mat Set)` rather than waiting for the formal theory at M5.
-**Rationale.** Natural transformations exist at M3 as cells, but pasting them needs the
-unit's universal property; without `Vert₂` at M3, `Cat` is usable only as a 1-category.
-**Acceptance.** AT-RT-12: `Vert₂(Cat)` is the classical 2-category of categories,
-functors, and natural transformations, and its pasting theorem is Power's.
-**Status.** frozen at M3.
+### D-RT-28 · Bundled specification and a proved interface
+**Decision.** Use a specification structure containing carriers, operations, and their
+laws, with universe parameters and internal dependencies made explicit. Seal an
+inhabitant of that structure, not unrelated operations whose laws were proved about a
+different implementation. Transparent projections may expose opaque specification
+fields; the specification structure itself contains no kernel vocabulary.
+An irreducible implementation with an equivalent audited API is an alternative if the
+bundle causes practical problems; AT-FD-2 decides the mechanism.
 
-### D-RT-14 · Generated thin API for `Category`
-**Decision.** From the monad structure, a metaprogram generates for `Category A`:
-`Hom`, `id`, `comp` (binary, as an `abbrev` of the 2-ary composite), `compN` (unbiased),
-the `simp` set (`compN` flattening, unit laws, functoriality), `ext`-style lemmas, and the
-corresponding API for `Functor`, `Profunctor`, `NatTrans` from `Mod`. The human notation
-layer (`⟶`, `≫`, `⥤`, `⇸`) is generated separately (→ D-TL-02).
-**Rationale.** Every basic fact about categories arrives through three layers of
-instance; the thin API is what makes that invisible, and generating it is what keeps it
-in sync with the root.
-**Status.** frozen at M3 (contents provisional).
+The initial exported vocabulary is limited to:
+- finite shape syntax and proved operations, transparently, only for validated shapes;
+- sealed spaces, maps, homotopy, fibres, and proved mapping/fibrancy operations;
+- the validated root, strict maps, `VertRaw`, `Hor`, and the proved parts of `Vert₂` and
+  `VertCore`, with names distinguishing the two;
+- `MapRel` and the separately justified Segal-category `MapCat`/`Fun` interface;
+- discrete embedding, walking structures, `Mod`, `Mat Set`, and their proved comparisons;
+- closure lemmas with explicit hypotheses and the precise equivalence relation used.
+No arbitrary `hP`, universal rectification theorem, unvalidated shape, or future slice
+construction is included merely because a later milestone needs it. Slices and limits
+are added at M4 with their proofs. Kernel primitives needed there are tested at M-F.
 
-## Acceptance tests (summary)
+New sealed data or changes to a frozen signature require a superseding decision.
+Lemmas in interface vocabulary may be added without changing the signature, provided
+both builds, dependency checks, and the axiom audit pass. The stub preserves transparent
+specification infrastructure and replaces its implementation package with an axiom of
+the same specification type. The kernel-backed build contains no such stub axiom.
+**Rationale.** The consistency witness must inhabit the same dependent specification
+against which client theorems are proved.
+**Rejected.** Grep alone for statement hygiene; a vacuous swap test; nightly-only
+validation of code already merged using stub axioms.
+**Acceptance.** AT-FD-2, AT-FD-11; complete M3 swap test.
+**Status.** provisional mechanism; interface contents freeze after their proofs.
 
-- AT-RT-1 Self-hosting theorem.
-- AT-RT-2 `Mat(Set)` is a VDC∞.
-- AT-RT-3 Nerves of set-level augmented VDCs are VDC∞s.
-- AT-RT-4 `hP` is an augmented VDC; discrete case.
-- AT-RT-5 DK-equivalences: 2-out-of-3, composition, discrete case.
-- AT-RT-6 `Map` independent of the replacement; discrete case.
-- AT-RT-7 `Mod(P)` is a VDC∞.
-- AT-RT-8 `Mat(Kan)` is a VDC∞ (M6).
-- AT-RT-9 Comparison with style A (M6+, optional).
-- AT-RT-10 `Category A` ≃ classical structure ≃ Segal presheaves on `Δ_A`.
-- AT-RT-11 Vertical 2-category of `Cat` is the classical one.
-- AT-RT-12 `Vert₂(Cat)` with its pasting theorem is the classical 2-category.
+### D-RT-30 · Vertical 2-cells and pasting
+**Decision.** The augmented `(0,0)` cells define the vertical 2-dimensional part.
+Horizontal units, when present, give the equivalent presentation by cells into a unit;
+they are not required for vertical cells to exist. Prove the discrete 2-category laws
+and the classical `Vert₂(Cat)` comparison. The ∞-version retains coherent composition
+and is compared with the chosen (∞,2)-model at M-F. `paste` initially handles discrete
+composites and restrictions from one coherent diagram.
+**Rationale.** Augmentation already carries transformations, including for nonunital objects.
+**Rejected.** Delaying all vertical 2-cells until unit factorization is available.
+**Acceptance.** AT-RT-12, AT-FD-4, AT-FD-7, AT-FD-10.
+**Status.** discrete implementation provisional; ∞-comparison research-gated.
+
+### D-RT-29 · Thin API
+**Decision.** Generate convenient hom, identity, binary and unbiased composition,
+functor, profunctor, and transformation APIs from proved interface laws. Human notation
+is a separate generated view. Do not generate mathematical laws from unproved signatures.
+**Rationale.** Presentation convenience should not reintroduce implementation dependencies.
+**Rejected.** A generator that closes client proofs by unfolding root implementations.
+**Acceptance.** AT-RT-10, AT-RT-12 and the M3 swap build with a nontrivial client.
+**Status.** provisional; implement after the semantic prototype.
+
+## Acceptance-test status
+
+All tests in this revision are proposed until a Lean statement and checked proof are
+recorded. AT-RT-1/2/3/7/8/10/11/12 retain their comparison goals with the repaired
+constructions. AT-RT-4 is retired. AT-RT-5 uses the revised equivalence specification;
+AT-RT-6 is explicitly relative. AT-RT-9 is the full external ∞-comparison. The small
+M-F comparisons are mandatory even if that full theorem is scheduled later.
 
 ## Open questions
 
-- OQ-RT-1 Is boundary fibrancy (2) the right fibrancy to bake in, or should (2) be
-  dropped and (3) stated with path-space homotopy limits? Default: keep (2).
-- OQ-RT-2 Should `Monads(P)` (the label set of `Mod(P)`) be the set of *points* of
-  `Map(N Mnd, RP)` (depends on `R`) or the set of strict maps `N Mnd → P` (may be too
-  small for non-fibrant `P`)? Default: points of `Map(N Mnd, RP)` for a chosen `R`, with
-  the theorem that different choices give DK-equivalent `Mod(P)`.
-- OQ-RT-3 Exact augmentation structure on `Mat(Set)` (D-RT-10, verify).
+- OQ-RT-1: can strict-core limits implement the homotopy-core specification under the
+  corrected augmented shape hypotheses? Keep homotopy limits if the proof fails.
+- OQ-RT-2: which coherent walking-diagram construction proves all of `Mod`'s structure
+  and invariance laws? Its relative-fibre semantics is fixed, but the proof route is open.
+- OQ-RT-3: establish the full augmentation/unit correspondence for the matrix example.
+- OQ-RT-4: does the proposed local `VDCEq` predicate admit the intended ∞-comparison?
+  A counterexample requires a revised predicate or root; it is not an approved axiom.
+- OQ-RT-5: choose and implement the categorical framing for `MapCat` and `VertCore`.

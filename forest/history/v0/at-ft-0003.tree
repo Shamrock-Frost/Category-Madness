@@ -1,0 +1,13 @@
+\title{AT-FT-3 · \code{Mod} preserves augmented virtual (∞-)equipments}
+\taxon{Acceptance test}
+\meta{id}{AT-FT-3}
+\meta{area}{formal theory}
+\meta{origin}{design/04-formal-theory.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:ft}
+\tag{status:unstated}
+
+\p{\code{Mod} preserves augmented virtual (∞-)equipments.}
+\p{Named by: \ref{dec-rt-0009}.}
+\p{\em{Lean declaration(s):} none yet.}

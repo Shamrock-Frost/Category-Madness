@@ -1,0 +1,13 @@
+\title{AT-RT-4 · \code{hP} is an augmented VDC}
+\taxon{Acceptance test}
+\meta{id}{AT-RT-4}
+\meta{area}{root}
+\meta{origin}{design/02-root.md}
+\meta{status}{unstated}
+\tag{acceptance-test}
+\tag{area:rt}
+\tag{status:unstated}
+
+\p{\code{hP} is an augmented VDC; discrete case.}
+\p{Named by: \ref{dec-rt-0005}.}
+\p{\em{Lean declaration(s):} none yet.}

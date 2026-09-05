@@ -3,13 +3,13 @@
 \meta{id}{D-TL-08}
 \meta{area}{tooling}
 \meta{origin}{design/06-tooling.md}
-\meta{status}{provisional}
+\meta{status}{superseded}
 \meta{status-text}{provisional.}
 \meta{supersedes}{none}
-\meta{superseded-by}{none}
+\meta{superseded-by}{dec-tl-0019}
 \tag{decision}
 \tag{area:tl}
-\tag{status:provisional}
+\tag{status:superseded}
 
 \subtree{
   \title{Decision}

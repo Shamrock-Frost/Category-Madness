@@ -1,0 +1,33 @@
+\title{D-CH-15 · Witnesses of universal properties}
+\taxon{Decision}
+\meta{id}{D-CH-15}
+\meta{area}{charter}
+\meta{origin}{design/00-charter.md}
+\meta{status}{frozen}
+\meta{status-text}{frozen policy; coherence constructions provisional until proved.}
+\meta{supersedes}{dec-ch-0002}
+\meta{superseded-by}{none}
+\tag{decision}
+\tag{area:ch}
+\tag{status:frozen}
+
+\subtree{
+  \title{Decision}
+  \p{Universal properties are propositions. Existence is a separate proposition; when witnesses exist, their appropriate groupoid or space is contractible. Theorems quantify over witnesses. Choice is confined to explicit bridge operations, including sections of proved trivial fibrations where coherent choices are needed. There is no global chosen-limit operation in the public theory.}
+}
+\subtree{
+  \title{Rationale}
+  \p{Uniqueness is categorical and does not identify Lean terms.}
+}
+\subtree{
+  \title{Rejected}
+  \p{Chosen-limit data typeclasses; inferring existence from uniqueness; inferring a coherent section from pointwise choices alone.}
+}
+\subtree{
+  \title{Acceptance}
+  \p{\ref{at-up-0001}, \ref{at-up-0006}.}
+}
+\subtree{
+  \title{Status}
+  \p{frozen policy; coherence constructions provisional until proved.}
+}

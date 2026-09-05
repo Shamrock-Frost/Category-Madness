@@ -3,11 +3,12 @@
 \meta{id}{AT-FT-9}
 \meta{area}{formal theory}
 \meta{origin}{design/04-formal-theory.md}
-\meta{status}{unstated}
+\meta{status}{proposed}
+\meta{statement-version}{1}
 \tag{acceptance-test}
 \tag{area:ft}
-\tag{status:unstated}
+\tag{status:proposed}
 
-\p{Cosmos comparison (\ref{ms-0007}).}
-\p{Named by: \ref{dec-ft-0005}.}
+\p{, newly stated with exact scope before implementation}
+\p{Named by: \ref{dec-ft-0010}.}
 \p{\em{Lean declaration(s):} none yet.}
