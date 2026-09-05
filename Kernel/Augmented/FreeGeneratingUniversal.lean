@@ -51,7 +51,7 @@ variable {K} (B : SkeletonAssignment G K) {Q : CellGraph.{u,v,h,c} D K}
 
 abbrev CellAssignment := ∀ {n ε} (x : G.Cell n ε), Q.Cell (B.baseMap.boundary (G.freeBoundary x))
 
-private theorem generator_transport {n ε} (x : G.Cell n ε)
+theorem freeGenerator_transport {n ε} (x : G.Cell n ε)
     {f g : Side (Paths G.Objects)} {b : Boundary G.freeHorizontal f g}
     (e : (G.freeBoundary x).frame = b.frame) :
     CellGraph.transport (G := G.freeCellGenerators) e ⟨⟨n, ε, x⟩, rfl⟩ = ⟨⟨n, ε, x⟩, e⟩ := by
@@ -75,7 +75,7 @@ def cellAssignmentEquiv : CellAssignment G B (Q := Q) ≃ CellGraph.Map G.freeCe
     intro f g b φ
     rcases φ with ⟨⟨n, ε, x⟩, e⟩
     have E := F.transport e (⟨⟨n, ε, x⟩, rfl⟩ : G.freeCellGenerators.Cell (G.freeBoundary x))
-    rw [generator_transport G x e, B.baseMap.pullback_transport] at E
+    rw [freeGenerator_transport G x e, B.baseMap.pullback_transport] at E
     exact E.symm
 
 /-- Generator assignments extend uniquely to operation-preserving maps over the induced base functor. -/

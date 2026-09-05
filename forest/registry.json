@@ -559,6 +559,7 @@
         "augmented-comparison",
         "augmented-free-cells",
         "augmented-generating",
+        "augmented-global-adjunction",
         "augmented-transport",
         "dec-ch-0018",
         "dec-kr-0015",
@@ -579,6 +580,7 @@
         "augmented-comparison",
         "augmented-free-cells",
         "augmented-generating",
+        "augmented-global-adjunction",
         "augmented-transport",
         "dec-ch-0018",
         "dec-kr-0015",
@@ -2588,6 +2590,7 @@
       "refs": [
         "at-fd-0007",
         "augmented-free-cells",
+        "augmented-global-adjunction",
         "dec-kr-0015",
         "dec-kr-0018",
         "dec-rt-0030",
@@ -2600,6 +2603,37 @@
         "at-fd-0007",
         "at-kr-0002",
         "augmented-free-cells",
+        "augmented-global-adjunction",
+        "dec-kr-0018",
+        "ms-foundation"
+      ]
+    },
+    "augmented-global-adjunction": {
+      "id": "augmented-global-adjunction",
+      "taxon": "Development",
+      "title": "Augmented global free/forgetful adjunction",
+      "tags": [
+        "foundation",
+        "augmented"
+      ],
+      "meta": {
+        "layer": "human",
+        "source": "Kernel/Augmented/FreeGeneratingAdjunction.lean"
+      },
+      "status": null,
+      "refs": [
+        "at-fd-0007",
+        "augmented-generating",
+        "dec-kr-0015",
+        "dec-kr-0018",
+        "dec-rt-0030",
+        "dec-wf-0008",
+        "dec-wf-0010"
+      ],
+      "file": "forest/augmented-global-adjunction.tree",
+      "backlinks": [
+        "at-fd-0007",
+        "augmented-generating",
         "dec-kr-0018",
         "ms-foundation"
       ]
@@ -4693,6 +4727,7 @@
         "augmented-comparison",
         "augmented-free-cells",
         "augmented-generating",
+        "augmented-global-adjunction",
         "bib-0000",
         "krn-0000"
       ]
@@ -4802,6 +4837,7 @@
         "augmented-comparison",
         "augmented-free-cells",
         "augmented-generating",
+        "augmented-global-adjunction",
         "augmented-transport"
       ],
       "file": "forest/dec-kr-0018.tree",
@@ -4818,6 +4854,7 @@
         "augmented-comparison",
         "augmented-free-cells",
         "augmented-generating",
+        "augmented-global-adjunction",
         "augmented-transport",
         "bib-0000",
         "krn-0000"
@@ -6098,6 +6135,7 @@
         "augmented-comparison",
         "augmented-free-cells",
         "augmented-generating",
+        "augmented-global-adjunction",
         "augmented-transport",
         "rt-0000"
       ]
@@ -8267,6 +8305,7 @@
         "augmented-comparison",
         "augmented-free-cells",
         "augmented-generating",
+        "augmented-global-adjunction",
         "augmented-transport",
         "index",
         "lean-theory-unproved-0a649efa",
@@ -8333,6 +8372,7 @@
         "augmented-comparison",
         "augmented-free-cells",
         "augmented-generating",
+        "augmented-global-adjunction",
         "augmented-transport",
         "dec-ch-0019",
         "index",
@@ -8995,6 +9035,7 @@
         "augmented-comparison",
         "augmented-free-cells",
         "augmented-generating",
+        "augmented-global-adjunction",
         "augmented-transport",
         "ms-0003"
       ],

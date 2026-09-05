@@ -204,9 +204,37 @@ cell generators extend uniquely to operation-preserving maps into any target
 algebra over the induced base map. Thus the construction now allows objects
 and both kinds of edges to vary.
 
-This does not yet package the categorical free/forgetful adjunction or prove
-monadicity on the generating presheaf category. Neither finite raw-term leaves
-nor the global mapping property establishes arity density or nerve recognition.
+## Global adjunction and monadicity comparison
+
+`BundledAlgebra` forms the category of small augmented algebras in a chosen
+universe. A global map includes a vertical functor, a horizontal edge map and
+a map of cells with their complete boundaries attached. Both identity-cell
+and substitution preservation are ordinary equalities of these attached cells.
+Internal typed comparison adapters still use heterogeneous equality.
+
+`BundledAlgebra.forget` is the functor to generating incidence graphs.
+`Generating.Graph.lift` and restriction along the generator unit are inverse,
+with naturality proved. `BundledAlgebra.freeForgetAdjunction` packages the actual
+free/forgetful adjunction, and `generatingMonad` is its induced monad. The unit
+and counit have checked formulas. Ordered path positions and reconstruction
+lemmas ensure the mapping property retains every vertex and edge, including
+empty input/output boundaries.
+
+The forgetful functor and `generatingComparison` are faithful.
+`comparisonHomEquiv` characterizes comparison morphisms as graph maps that
+commute with evaluation of all free expressions. This condition yields the
+vertical functor, complete-boundary cell map, graph-map round trip, evaluation
+factorization and preservation of both identity cells. `generatorCell`,
+`generatorRow` and `generatorOuter` choose free representatives of whole
+substitution inputs, preserving shared sides. Their evaluation laws prove
+`comparisonCells_substitute`, so `comparisonMap` preserves arbitrary
+substitution as well. The concrete comparison is fully faithful, and the
+generating forgetful functor reflects isomorphisms.
+
+Monadicity still requires reconstruction of an augmented algebra from every
+generating-monad algebra, proving essential surjectivity of the comparison.
+Neither finite raw-term leaves nor the adjunction
+establishes arity density or nerve recognition.
 
 ## Reusable nerve recognition step
 
@@ -259,9 +287,9 @@ cell/hom round trips, arbitrary substitution compatibility and discrete hom
 nerves are checked. The next construction is the free augmented algebra and
 its arities; the full augmented arity nerve is still open.
 
-The relative free cell algebra and global free mapping property are checked.
-Categorical adjunction/monadicity, the arity category and nerve hypotheses remain
-to be proved.
+The relative free cell algebra, global free mapping property and categorical
+free/forgetful adjunction are checked. Monadicity, the arity category and nerve
+hypotheses remain to be proved.
 `Row` is incident syntax, not a
 canonical arity presentation; no normalization, monadicity, generic/free
 factorization or Reedy/elegance theorem is asserted by its definition.

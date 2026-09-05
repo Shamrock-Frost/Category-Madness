@@ -8,6 +8,7 @@
     "Kernel/Augmented/Algebra.lean": "0972cbac26837865ddcb03385972d4e760c67a7e547327dabc35331e6d188308",
     "Kernel/Augmented/AlgebraExamples.lean": "2d04a60158fcecd6a0f974f91d9ee166c9557c6846f8ec88c9b05a28f8ee7177",
     "Kernel/Augmented/AlgebraMaps.lean": "d14e4438a3489e1d71b42636e04cd4e5a68a25582f527574c8ab96bfb1824e3a",
+    "Kernel/Augmented/BaseMapComposition.lean": "c8bca9b40b4be0a8241a0c531503e4677aa76c92d7f7241f513ac345afbff880",
     "Kernel/Augmented/BaseMaps.lean": "1c2292b57fc5be48c911850f22359f5b719ef61fe43de4490642d4b35d6325e0",
     "Kernel/Augmented/CellMapSections.lean": "1aea8bf234a5bda7a908823be73aaccc8f63e23cad8e292ad055ea437b2f1e80",
     "Kernel/Augmented/CellMaps.lean": "6bc8e33b8160184dd63a8da873f7c1552dcd6a4d96b8acd540d8620f46365fc2",
@@ -22,16 +23,39 @@
     "Kernel/Augmented/Examples.lean": "17859c29ec1d96ded93f4aa277d4e1a830ee365039718c3a73ff593f74411da2",
     "Kernel/Augmented/FreeCellUniversal.lean": "43bca2f0b85b60740672a4bfe0af5fb6c127a48081bec01aff9cfd3becba3423",
     "Kernel/Augmented/FreeCells.lean": "d33ca47d705c6a8db14c272278cfac736765916a7ebbe62d117c83c0f6df121d",
+    "Kernel/Augmented/FreeGeneratingAdjunction.lean": "d35807c454f60bd8ffd8fcc229c72169907287da6b8868ca20f96ad3510c80ce",
+    "Kernel/Augmented/FreeGeneratingBase.lean": "8df62834df36278785a406252481363e6749d7dd12d14170c0ac17fcda496bf8",
     "Kernel/Augmented/FreeGeneratingGraph.lean": "cd670168a01d755633fa9710bb7011fd29813994d3f07fa3f0849ff12e1fa910",
-    "Kernel/Augmented/FreeGeneratingUniversal.lean": "03598526ba3f6ecdd42bb7b39742b44e8f70c38a5e3e3689e45ae5a170e2971c",
+    "Kernel/Augmented/FreeGeneratingLift.lean": "f4d75517deb0e8f2f6f3ea8c54d36d67cb590f8317f703f14e419855996f2cdc",
+    "Kernel/Augmented/FreeGeneratingUnique.lean": "ae20a3e29f0c8251b3cb91d312ba056c8d244ad4b56917d412617a7e1be0324e",
+    "Kernel/Augmented/FreeGeneratingUnit.lean": "8ea4d5a71f4a0a049189b42a9f2665e1fb336b2b282267a232bde32bf47862d8",
+    "Kernel/Augmented/FreeGeneratingUniversal.lean": "02190136821ada5149b84ee14b1d5f68ea0aab0642d0bc12ddd9f720eef5bc16",
     "Kernel/Augmented/FromCat.lean": "ee06fc92abe002c88b9948f6d9978b2989bdcac38104063bb74d2254dd8ceb2f",
     "Kernel/Augmented/FromTwoCategory.lean": "fcf2cb109b22a5265056f323375c73716aaa2e41954160469f1cf7737a3186d2",
     "Kernel/Augmented/FromTwoCategoryAlgebra.lean": "702d514262c8a0a8800cdf67c49ba0cdc213d0c2f9f97e3722cf13632abc379b",
     "Kernel/Augmented/FromTwoCategoryLaws.lean": "c93e7ac39ada419bf57015818e5a074e24f9bbf2433f748440d4535667ccdb27",
+    "Kernel/Augmented/GeneratingBoundaryMaps.lean": "b07c57bfba55265f88455047b46c88e78f99df02d3aa7a9e9412d6413b144fd0",
     "Kernel/Augmented/GeneratingCategory.lean": "1c777e7a7cff29315657f631020a5123552b19de984450653d92d29e8fd85364",
     "Kernel/Augmented/GeneratingCells.lean": "f8f91a4be86f1f75b20784ac85348090f361d5f81b319bc7906578363a7bd4a0",
+    "Kernel/Augmented/GeneratingComparisonBase.lean": "ff3dc071937d9431a00e8bba0ea7954bef690a7a1b504ed06c38026719910143",
+    "Kernel/Augmented/GeneratingComparisonCells.lean": "c4ca351145487744801fa9316f13a0d1d88070da24bf749e68500a9ca7fab598",
+    "Kernel/Augmented/GeneratingComparisonIdentities.lean": "566e3438bb27aab7d4e25963a9a32f1462f0c69967d1cb59707375793a665f36",
+    "Kernel/Augmented/GeneratingComparisonSubstitution.lean": "ade71e1a314535bffb1afadaae40c3d3346f6b0a444053464345e57ef73454f5",
+    "Kernel/Augmented/GeneratingEvaluation.lean": "c859223fe37e35a3383e0d8307a9bd7ea8d138ee9457086252e7ca447ae5221d",
+    "Kernel/Augmented/GeneratingGraphMaps.lean": "d3a00a119b1592740d92fcae1dab5d254da3fb15f6ccbd456bda00a4c1d2b1cf",
     "Kernel/Augmented/GeneratingPresheaves.lean": "492558999b6442c1e2ec244602c4bc7c84aafa6e96279fe285d0bb00e6cca13d",
+    "Kernel/Augmented/GeneratingSection.lean": "4d266ef7a7c28078bb0063a5e29274b412bb1a4d51adb0cef2d080044c61a68b",
+    "Kernel/Augmented/GeneratingSectionRows.lean": "81b8919b49e08f506b11f76964066bf5b2759be5475a1d4f7cd6ba13ffccfab5",
+    "Kernel/Augmented/GeneratingSectionSubstitution.lean": "5ad218b34e66807aeedcbf561577dc600165a5d619ddfc822cc2188d1ea1d836",
     "Kernel/Augmented/GeneratingShapes.lean": "cd3d03a08b383bb1961c112a1718611e0d8279ad4fabbc0a3725d66fa7e22d8c",
+    "Kernel/Augmented/GlobalAlgebras.lean": "62373b12465241eb130b76b29739de6b9d297c06e50437bfd6f1442f3a7147ec",
+    "Kernel/Augmented/GlobalCellMaps.lean": "071f33828413a4052fc42554e980431779c8f4a6269f0e1d7c1e29018d93f5e0",
+    "Kernel/Augmented/GlobalForgetful.lean": "f68c51ea203100ae83214803080521a57058fd86dfde0ac42f84a939d3f7a9f0",
+    "Kernel/Augmented/GlobalForgetfulFaithful.lean": "949ff1360d0058d1bc89d97fbdb7f4b31f974694919807dc91decc951cd4939a",
+    "Kernel/Augmented/GlobalMapExt.lean": "d73ccf3b0ac7637ddc9031b33fb642132504a7fa3581d4255448b2b768b4fbc5",
+    "Kernel/Augmented/GlobalMapFromPullback.lean": "715a3731dcfc84da9da4d4098c72bf7e379ea970414d8ae5af18e3e4901d9cb9",
+    "Kernel/Augmented/GlobalMapToPullback.lean": "78d559cd79de0e0f57e687ea0958929438b5927ff875b339c4fb2b0b2c14310c",
+    "Kernel/Augmented/GlobalSubstitutionMaps.lean": "dfecb92daaaa922604fb3e3270541cc0943b8964609ed31dbc2753dfa3c631f3",
     "Kernel/Augmented/Incidence.lean": "d68f03e1b362d13c21f52624a5c9b839e8782a7b7b0f7ccbee683fc888f02528",
     "Kernel/Augmented/NerveMonadMap.lean": "aea5061059a1e422b9b3f6d783e06a6598ed99416d686ecb6e042e37ecd4a0b9",
     "Kernel/Augmented/NerveRecognition.lean": "62fb4ef0fa91809a49e405a393d010a660afcab30f34631c84b21aef09cee6e7",
@@ -42,6 +66,8 @@
     "Kernel/Augmented/OperationMaps.lean": "06e2e0ef13bbbce8c943e9da9de35698a4f086efe0812b4ea9f6c3cbdedc3bfa",
     "Kernel/Augmented/OperationSignature.lean": "5bbec17bebb2eba2a1dcdf02326f5b8cbd8054108a061c3d339c5123ab54b5fb",
     "Kernel/Augmented/Operations.lean": "75cf8d39d0804c914f53a15c6f2662aa2fcdee782bceb83157f1103df1c5f514",
+    "Kernel/Augmented/PathPositionExt.lean": "a962ea3a748c737f900e099c26116383d189a67804290963aa80420b12c72859",
+    "Kernel/Augmented/PathPositions.lean": "384419b4accb22aa95006ac7574e8305c2fad6ee6e933a7d23c38b55597bcbf9",
     "Kernel/Augmented/PullbackIdentityRows.lean": "580dc268a60d5741c8e7bf3e97e5cd610117a4af7e8b30732e9f4a029f41befd",
     "Kernel/Augmented/PullbackLaws.lean": "9ea990013627cf9a63fa2ab4f793ddc506987558be05af4fe696705dd34696b5",
     "Kernel/Augmented/PullbackOperations.lean": "44f771e5b60bd26f8309d572eacedcfc500a1bf9b0443f332e2bb95b285a9622",
@@ -52,12 +78,14 @@
     "Kernel/Augmented/SignatureOperations.lean": "6a7a40018e66a611e023def2779ba085b8d81703cccdf47d11b9dc89f8591f25",
     "Kernel/Augmented/SimplexObstruction.lean": "29aa462d17a0550c6065afcd8726dbdf358086c846cfc5ab50a75034bb672c98",
     "Kernel/Augmented/Substitution.lean": "8fad8666b2238abbe3fab7e71e0886b21bce1599454ec9f4b65212e4726c448a",
+    "Kernel/Augmented/SubstitutionCongruence.lean": "9af2ea2fdd927e180d6fb672804c5073efab0c63fabf3d27c72e793b7e7dc676",
     "Kernel/Augmented/SubstitutionExamples.lean": "999c2851e38fb167d6f39e1de1424be2601fe35cae90f99b50c4ca23c68dfddf",
     "Kernel/Augmented/TermSupport.lean": "00d577eab883a039c06c71dae6446149a477cfb54b7aaed669eab82c886d9f06",
     "Kernel/Augmented/Transport.lean": "6b1d223390cf027c33303e5f0ceec1068eb841c8b45408309824654ac280c683",
     "Kernel/Augmented/TwoCategoryComparison.lean": "62675bb8bbfc8a6d80b8099671833235f7ebeeb39f1a867b3adfd4d0d50ac578",
     "Kernel/Augmented/TwoCategoryNerve.lean": "c5ac31702ded76d32208ccf40f6b14bb9372e0456a8ed8d59ed34c686c64a7da",
     "Kernel/Augmented/TwoCategorySubstitution.lean": "87196eb425826dd6651985fb15fdfe28fb2e878f7a8cbff904866692614df089",
+    "Kernel/Augmented/UnderlyingGeneratingGraph.lean": "40835b8d062c9a1236d41d27ef4cb1a9777f4dbbd81235457ee011ce39f9d78c",
     "Kernel/Augmented/Vertical.lean": "21abba90bfa5a643883d8ceaeb7ca57ee425120b3a35bf08482831d585f86013",
     "Kernel/Augmented/VerticalTwoCategory.lean": "24092a2f8fda4cb9994163748ac7ff906dfc2aac3ade9a0aaa47af860743ace2",
     "Kernel/Foundations/Examples.lean": "8120870258faedd230ba6fb29a1d6ac238e75a2af382b2faf4f957e833fc059a",
@@ -86,79 +114,79 @@
   "checks": [
     {
       "check": "real-build",
-      "seconds": 1.553,
+      "seconds": 1.568,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "real-audit",
-      "seconds": 2.028,
+      "seconds": 2.022,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "real-opaque-equation",
-      "seconds": 0.281,
+      "seconds": 0.247,
       "exit_code": 1,
       "expected_rejection": "Type mismatch"
     },
     {
       "check": "stub-build",
-      "seconds": 1.046,
+      "seconds": 0.946,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "stub-audit",
-      "seconds": 2.066,
+      "seconds": 2.042,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "stub-opaque-equation",
-      "seconds": 0.218,
+      "seconds": 0.311,
       "exit_code": 1,
       "expected_rejection": "Type mismatch"
     },
     {
       "check": "stub-in-real-audit",
-      "seconds": 1.756,
+      "seconds": 1.796,
       "exit_code": 1,
       "expected_rejection": "AXIOM_REJECTED"
     },
     {
       "check": "ProjectAxiom-compile",
-      "seconds": 0.558,
+      "seconds": 0.258,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "ProjectAxiom-audit",
-      "seconds": 2.107,
+      "seconds": 2.081,
       "exit_code": 1,
       "expected_rejection": "AXIOM_REJECTED"
     },
     {
       "check": "Sorry-compile",
-      "seconds": 0.268,
+      "seconds": 0.266,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "Sorry-audit",
-      "seconds": 1.794,
+      "seconds": 1.813,
       "exit_code": 1,
       "expected_rejection": "AXIOM_REJECTED"
     },
     {
       "check": "PrivateLeak-compile",
-      "seconds": 0.437,
+      "seconds": 0.421,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "PrivateLeak-audit",
-      "seconds": 1.986,
+      "seconds": 1.917,
       "exit_code": 1,
       "expected_rejection": "SEAL_LEAK"
     }
