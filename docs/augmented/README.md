@@ -180,6 +180,57 @@ objects or horizontal graph, or establish a global arity category. Finite inputs
 and finite term support do not prove density or nerve recognition. Those are
 separate obligations under D-KR-15 and D-KR-18.
 
+## Global generating incidence and free mapping property
+
+`Generating.Shape` is the small category of elementary generator boundaries:
+objects, vertical edges, horizontal edges and cells of each arity, with the
+endpoint incidence relations. `Generating.Graph.presheafEquiv` proves round
+trips between explicit generating data and presheaves on that category. This
+object equivalence extends to `presheafEquivalence`, with graph maps defined
+as incidence-natural families. `elementaryDensity` expresses each generating
+presheaf as the canonical colimit of its elementary representables. This base
+density alone does not establish the monad arity condition.
+
+`Generating.Graph.boundary` retains every object, edge and outside side of a
+cell generator. `freeAlgebra` adjoins vertical paths and then the free cell
+quotient. `BaseMap.pullbackAlgebra` proves all five laws survive change of the
+vertical category and horizontal graph. These public law statements remain
+ordinary equalities after complete-boundary transport; internal comparison
+adapters use heterogeneous equality.
+
+`SkeletonAssignment.baseMap_unique` proves uniqueness of the vertical path
+extension. `cellAssignmentEquiv` and `freeMapEquiv` prove that assignments of
+cell generators extend uniquely to operation-preserving maps into any target
+algebra over the induced base map. Thus the construction now allows objects
+and both kinds of edges to vary.
+
+This does not yet package the categorical free/forgetful adjunction or prove
+monadicity on the generating presheaf category. Neither finite raw-term leaves
+nor the global mapping property establishes arity density or nerve recognition.
+
+## Reusable nerve recognition step
+
+`Nerve.MonadMap` gives a comparison between monads over a functor between base
+categories, with unit and multiplication compatibility. `lift` constructs the
+induced algebra functor. It is faithful when the base functor is faithful, and
+full when the base is fully faithful and the comparison maps are epimorphisms.
+With invertible comparison, `essImage_iff` proves that an algebra descends
+exactly when its underlying object lies in the base functor's essential image.
+
+`NerveSquare` transfers these conclusions through supplied category
+equivalences and a compatible comparison square. `restriction_essImage_iff`
+expresses recognition in terms of the original restriction functor. These are
+checked proofs of the algebra-recognition step in
+[Berger–Melliès–Weber](https://arxiv.org/pdf/1101.3064), Proposition 1.3 and the
+exact-square argument. They assume the monad comparisons and their stated
+properties, not the desired full-faithfulness or recognition conclusion.
+
+The augmented application still has to construct its monadic equivalences,
+choose and prove its arity presentation, and establish the required comparison
+is invertible. These files do not claim the complete BMW theorem or an augmented
+nerve theorem. In particular, the elementary generators of the presheaf base
+have not been declared arities for the free augmented construction.
+
 ## A nontrivial lawful model
 
 `AdditiveModel.algebra` works over any supplied vertical category, horizontal
@@ -208,8 +259,9 @@ cell/hom round trips, arbitrary substitution compatibility and discrete hom
 nerves are checked. The next construction is the free augmented algebra and
 its arities; the full augmented arity nerve is still open.
 
-The relative free cell algebra is checked. The global free construction, arity
-category and nerve hypotheses remain to be proved.
+The relative free cell algebra and global free mapping property are checked.
+Categorical adjunction/monadicity, the arity category and nerve hypotheses remain
+to be proved.
 `Row` is incident syntax, not a
 canonical arity presentation; no normalization, monadicity, generic/free
 factorization or Reedy/elegance theorem is asserted by its definition.
@@ -249,6 +301,5 @@ After intentional audited-source changes, regenerate this evidence with
 `python3 scripts/build_registry.py`. The seal is checked independently; this
 slice adds no public sealed constants.
 
-Current checkpoint: the full build has 1549 jobs; the inventory has 1351 entries
-(1296 project declarations and 55 dependency entries). The axiom audit, seal and
-swap checks pass. All 39 public seal signatures remain identical.
+The generated inventory and seal evidence record the checked declaration counts,
+source hashes and signatures for the current checkpoint.

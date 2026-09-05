@@ -8,4 +8,7 @@ import Kernel.Augmented.FromTwoCategoryAlgebra
 import Kernel.Augmented.TwoCategoryNerve
 import Kernel.Augmented.FreeCellUniversal
 import Kernel.Augmented.TermSupport
+import Kernel.Augmented.FreeGeneratingUniversal
+import Kernel.Augmented.GeneratingCategory
+import Kernel.Augmented.NerveSquare
 /-! Augmented incidence and its checked prerequisites (D-KR-18, AT-FD-7). -/
