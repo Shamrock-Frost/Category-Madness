@@ -1,4 +1,4 @@
-import Kernel.Augmented.Incidence
+import Kernel.Augmented.RowShapes
 
 /-! Incident rows and boundaries of substitution.
 Reference: Koudenburg, arXiv:1910.11189v4, Definition 1.2, diagrams (3) and (4).
@@ -13,13 +13,12 @@ namespace CellGraph.Row
 variable {C : Type u} [Quiver.{v} C] {H : C → C → Type h}
   {G : CellGraph.{u,v,h,c} C H} {f g k : Side C}
 
-def input {f : Side C} : {g : Side C} → G.Row f g → HPath H f.source g.source
-  | _, .nil => .nil
-  | _, .cons r e => (input r).comp e.1.input
+/-- The boundary is computed from the shape, without inspecting its cell labels. -/
+def input {f g : Side C} (r : G.Row f g) : HPath H f.source g.source :=
+  RowShape.input (shape r)
 
-def output {f : Side C} : {g : Side C} → G.Row f g → HPath H f.target g.target
-  | _, .nil => .nil
-  | _, .cons r e => (output r).comp e.1.output.val
+def output {f g : Side C} (r : G.Row f g) : HPath H f.target g.target :=
+  RowShape.output (shape r)
 
 @[simp] theorem input_nil (f : Side C) :
     input (G := G) (.nil : G.Row f f) = .nil := rfl
@@ -119,4 +118,38 @@ def compositeBoundary (r : G.NonemptyRow f g) (h : f.target ⟶ a)
     (compositeBoundary r h k L).output = L := rfl
 
 end CellGraph.Row
+namespace RowShape
+variable {C : Type u} [Quiver.{v} C] {H : C → C → Type h}
+  {G : CellGraph.{u,v,h,c} C H}
+
+@[simp] theorem join_input {f g : Side C} (s : RowShape H f g) (labels : Labels G s) :
+    CellGraph.Row.input (join s labels) = s.input := by
+  induction s with
+  | nil => rfl
+  | cons s e ih => exact congrArg (fun p => p.comp e.1.input) (ih labels.1)
+
+@[simp] theorem join_output {f g : Side C} (s : RowShape H f g) (labels : Labels G s) :
+    CellGraph.Row.output (join s labels) = s.output := by
+  induction s with
+  | nil => rfl
+  | cons s e ih => exact congrArg (fun p => p.comp e.1.output.val) (ih labels.1)
+
+end RowShape
+
+namespace CellGraph.Row
+variable {C : Type u} [Quiver.{v} C] {H : C → C → Type h}
+  {G : CellGraph.{u,v,h,c} C H}
+
+@[simp] theorem shape_input {f g : Side C} (r : G.Row f g) : (shape r).input = input r := by
+  induction r with
+  | nil => rfl
+  | cons r e ih => exact congrArg (fun p => p.comp e.1.input) ih
+
+@[simp] theorem shape_output {f g : Side C} (r : G.Row f g) : (shape r).output = output r := by
+  induction r with
+  | nil => rfl
+  | cons r e ih => exact congrArg (fun p => p.comp e.1.output.val) ih
+
+end CellGraph.Row
+
 end Kernel.Augmented

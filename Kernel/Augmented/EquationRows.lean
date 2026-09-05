@@ -9,19 +9,6 @@ open CategoryTheory
 namespace Kernel.Augmented
 universe u v h c
 
-namespace CellGraph
-variable {C : Type u} [Quiver.{v} C] {H : C → C → Type h}
-  {G : CellGraph.{u,v,h,c} C H} {f g : Side C}
-
-/-- Transport only the input path, keeping all other incidence fixed. -/
-def castInput {J K : HPath H f.source g.source} {L : ShortPath H f.target g.target}
-    (e : J = K) (φ : G.Cell (⟨J, L⟩ : Boundary H f g)) :
-    G.Cell (⟨K, L⟩ : Boundary H f g) :=
-  (congrArg (fun p => G.Cell (⟨p, L⟩ : Boundary H f g)) e).mp φ
-
-@[simp] theorem castInput_refl {b : Boundary H f g} (φ : G.Cell b) :
-    castInput rfl φ = φ := rfl
-end CellGraph
 
 namespace Operations
 variable {C : Type u} [Category.{v} C] {H : C → C → Type h}

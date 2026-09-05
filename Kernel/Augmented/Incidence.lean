@@ -104,6 +104,25 @@ theorem vertical_parallel (b : Boundary H left right) (hb : b.arity = (0, 0)) :
 
 end Boundary
 
+namespace Boundary
+variable {C : Type u} [Quiver.{v} C] {H : C → C → Type h}
+
+/-- Bundle the sides too when comparing dependent boundaries. -/
+def frame {f g : Side C} (b : Boundary H f g) :
+    Σ f : Side C, Σ g : Side C, Boundary H f g := ⟨f, g, b⟩
+
+theorem frame_eq {f g f' g' : Side C} {b : Boundary H f g} {b' : Boundary H f' g'}
+    (hf : f = f') (hg : g = g') (hi : HEq b.input b'.input)
+    (ho : HEq b.output b'.output) : b.frame = b'.frame := by
+  cases hf
+  cases hg
+  cases b
+  cases b'
+  cases eq_of_heq hi
+  cases eq_of_heq ho
+  rfl
+end Boundary
+
 /-- Cell generators indexed by their full boundary; no cell equations are assumed. -/
 structure CellGraph (C : Type u) [Quiver.{v} C] (H : C → C → Type h) where
   Cell : {left right : Side C} → Boundary H left right → Type c

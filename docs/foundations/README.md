@@ -110,6 +110,9 @@ No certified target imports it.
 
 The current task is the augmented algebra/shapes and required diagram-model
 lemmas under AT-FD-7. Its [current implementation](../augmented/README.md)
-adds incidence, the equation families, a lawful additive-label algebra and binary
-cell comparisons to the same compiled inventory and axiom audit. The complete
-gate, M-F milestone and root/interface freeze remain open.
+adds incidence, the equation families, a lawful additive-label algebra, shape/label
+separation, explicit boundary transport and strict 2-category extraction to the same
+compiled inventory and axiom audit. Reverse operation data and its substitution
+formula are checked; reverse algebra laws, comparison round trips and the discrete
+nerve remain open before the free/arity work. The complete gate, M-F milestone and
+root/interface freeze remain open.

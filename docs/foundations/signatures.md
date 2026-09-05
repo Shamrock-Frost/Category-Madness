@@ -24,3 +24,4 @@ These are minimal type contracts. Their semantic construction obligations are de
 | Root.Foundations.RelativeMappingSpace | l, s | Type ((max l s) + 1) |
 | Root.Foundations.RootSignature | l, s | (S : Kernel.Foundations.ShapeSignature) → ((X : Type l) → Kernel.Foundations.Diagram.{l, s} S X → Prop) → Type (max (l + 1) (s + 1)) |
 | Root.Foundations.WalkingSignature | l, s | Kernel.Foundations.ShapeSignature → Type l → Type (max l (s + 1)) |
+| Kernel.Augmented.CellGraph.Row.labels | u, v, h, c | {C : Type u} → [inst : Quiver.{v, u} C] → {H : C → C → Type h} → {G : Kernel.Augmented.CellGraph.{u, v, h, c} C H} → {f g : Kernel.Augmented.Side.{u, v} C} → (r : Kernel.Augmented.CellGraph.Row.{u, v, h, c} G f g) → Kernel.Augmented.RowShape.Labels.{u, v, h, c} G (Kernel.Augmented.CellGraph.Row.shape.{u, v, h, c} r) |

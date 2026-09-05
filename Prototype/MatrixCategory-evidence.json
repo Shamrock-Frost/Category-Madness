@@ -4,18 +4,27 @@
     "Interface/FunctionCategory.lean": "938f7da036e14d194b7257b341e70d6c6770fed451decbc5e72e68b8ecf722de",
     "Interface-Stub/FunctionCategory.lean": "695a2138d63b08736887620b6148e1f63852fd527199c0f40cbc40bc753cbb4e",
     "Interface.lean": "71a15074dafc564b490ced6de5bdd25565a05ed3ea46f7d2405386f494ca71ad",
-    "Kernel/Augmented/AdditiveModel.lean": "405715090764459b85f083b212272e33f840002df995ac1ddc40758c1cb40d1b",
-    "Kernel/Augmented/Algebra.lean": "c32047210d6d6e6ae2b4f135c7a432871c7ae02c8848096020ed0f8fd8dd59b1",
-    "Kernel/Augmented/AlgebraExamples.lean": "0ee63c1e06c293a04ec5dc11ab1150ccad75d000c4e99cf6bf767321b26e89cb",
-    "Kernel/Augmented/EquationRows.lean": "475c208c7cb66a2b239405e2a81404806059cc5c66e4cc45ba0fab048ca898c6",
+    "Kernel/Augmented/AdditiveModel.lean": "a7416d85ebc2a9ae54f2c818680433993533f037031fcca606b2bf8e81b68658",
+    "Kernel/Augmented/Algebra.lean": "0972cbac26837865ddcb03385972d4e760c67a7e547327dabc35331e6d188308",
+    "Kernel/Augmented/AlgebraExamples.lean": "2d04a60158fcecd6a0f974f91d9ee166c9557c6846f8ec88c9b05a28f8ee7177",
+    "Kernel/Augmented/ComparisonTransport.lean": "6eb7e5372e2e4e37a580e6551271d4cc98b01d70e677b3fd5c10ce2536c919b9",
+    "Kernel/Augmented/EquationRows.lean": "889d306df4ffc42b0579ec1f5ba0a0b211e1a4e36b2a4902ca81e78dee550086",
     "Kernel/Augmented/Examples.lean": "17859c29ec1d96ded93f4aa277d4e1a830ee365039718c3a73ff593f74411da2",
     "Kernel/Augmented/FromCat.lean": "ee06fc92abe002c88b9948f6d9978b2989bdcac38104063bb74d2254dd8ceb2f",
     "Kernel/Augmented/FromTwoCategory.lean": "fcf2cb109b22a5265056f323375c73716aaa2e41954160469f1cf7737a3186d2",
-    "Kernel/Augmented/Incidence.lean": "8a64f41fc62d8124bc60a575c094ae66f1a198a8a24ece21d8c5654d8020fba9",
+    "Kernel/Augmented/FromTwoCategoryAlgebra.lean": "702d514262c8a0a8800cdf67c49ba0cdc213d0c2f9f97e3722cf13632abc379b",
+    "Kernel/Augmented/Incidence.lean": "d68f03e1b362d13c21f52624a5c9b839e8782a7b7b0f7ccbee683fc888f02528",
     "Kernel/Augmented/NestedRows.lean": "65ff7daf7a56526796c572da3f6b92dad86bdb6194dfa882b7cecef858b5296c",
-    "Kernel/Augmented/Operations.lean": "fcb5ba94a001d3ca008aa86a009e719bb606357de24042e2cb395094e8d69ee0",
-    "Kernel/Augmented/Rows.lean": "999983f26446295acc184b728f3c6181f600d533dd65361432ad7b48428ee56b",
+    "Kernel/Augmented/NoHorizontalRows.lean": "3d0b502b14f3321c96cf118146d11dff51bbb1098317edd9b9e039b5a03cf0c9",
+    "Kernel/Augmented/Operations.lean": "75cf8d39d0804c914f53a15c6f2662aa2fcdee782bceb83157f1103df1c5f514",
+    "Kernel/Augmented/RowShapes.lean": "1d610468c4af4e6ab7b105cbbea5811162c3d43c85b83cd10f7a7d725d25460f",
+    "Kernel/Augmented/Rows.lean": "7ba976a94ba4990b9a2a810b5ea799f4b56acadf59327652d29d2b38a17e5ce6",
     "Kernel/Augmented/SimplexObstruction.lean": "29aa462d17a0550c6065afcd8726dbdf358086c846cfc5ab50a75034bb672c98",
+    "Kernel/Augmented/Substitution.lean": "d9eed5c3784f19c0e6e1eb99ed119c8036031224761e81e0b9197a2ab97b204b",
+    "Kernel/Augmented/SubstitutionExamples.lean": "999c2851e38fb167d6f39e1de1424be2601fe35cae90f99b50c4ca23c68dfddf",
+    "Kernel/Augmented/Transport.lean": "6b1d223390cf027c33303e5f0ceec1068eb841c8b45408309824654ac280c683",
+    "Kernel/Augmented/Vertical.lean": "dea7bd802fa57d797abfa7c4f5385bc959680361f37f50b0d550356abbd9d115",
+    "Kernel/Augmented/VerticalTwoCategory.lean": "24092a2f8fda4cb9994163748ac7ff906dfc2aac3ade9a0aaa47af860743ace2",
     "Kernel/Foundations/Examples.lean": "8120870258faedd230ba6fb29a1d6ac238e75a2af382b2faf4f957e833fc059a",
     "Kernel/Foundations/Inventory.lean": "e3ce4c8a960d16010852822218d9d4f49c94353dca4dfc83283ec9b6db2dcf52",
     "Kernel/Foundations/Signatures.lean": "1fdaacd73050f8173f71ca2be76c6588747ede7747fb61819edb84bda6458425",
@@ -42,79 +51,79 @@
   "checks": [
     {
       "check": "real-build",
-      "seconds": 1.715,
+      "seconds": 1.49,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "real-audit",
-      "seconds": 1.918,
+      "seconds": 2.053,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "real-opaque-equation",
-      "seconds": 0.488,
+      "seconds": 0.272,
       "exit_code": 1,
       "expected_rejection": "Type mismatch"
     },
     {
       "check": "stub-build",
-      "seconds": 1.05,
+      "seconds": 0.943,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "stub-audit",
-      "seconds": 1.861,
+      "seconds": 2.263,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "stub-opaque-equation",
-      "seconds": 0.223,
+      "seconds": 0.278,
       "exit_code": 1,
       "expected_rejection": "Type mismatch"
     },
     {
       "check": "stub-in-real-audit",
-      "seconds": 2.041,
+      "seconds": 1.915,
       "exit_code": 1,
       "expected_rejection": "AXIOM_REJECTED"
     },
     {
       "check": "ProjectAxiom-compile",
-      "seconds": 0.291,
+      "seconds": 0.275,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "ProjectAxiom-audit",
-      "seconds": 1.779,
+      "seconds": 2.061,
       "exit_code": 1,
       "expected_rejection": "AXIOM_REJECTED"
     },
     {
       "check": "Sorry-compile",
-      "seconds": 0.223,
+      "seconds": 0.258,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "Sorry-audit",
-      "seconds": 1.713,
+      "seconds": 2.248,
       "exit_code": 1,
       "expected_rejection": "AXIOM_REJECTED"
     },
     {
       "check": "PrivateLeak-compile",
-      "seconds": 0.533,
+      "seconds": 0.259,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "PrivateLeak-audit",
-      "seconds": 1.916,
+      "seconds": 1.865,
       "exit_code": 1,
       "expected_rejection": "SEAL_LEAK"
     }

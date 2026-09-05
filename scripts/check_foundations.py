@@ -118,7 +118,7 @@ def gap_records() -> list[dict]:
         {"id": "relative-derived-mapping", "status": "project-obligation",
          "consequence": "SSet.RelativeMorphism is a strict relative map with a homotopy-class API. It is not the fixed-label derived MapRel or categorical MapCat required by D-RT-23. Available restriction fibrations require an explicit mono and Kan target."},
         {"id": "augmented-arities", "status": "project-obligation",
-         "consequence": "Category-of-elements machinery is available. Kernel.Augmented implements incidence, the set-level equation families, a lawful additive-label algebra, an active-map obstruction, and a supplied 2-category's binary cell model. Extending that binary model to an augmented algebra and proving the general 2-category/discrete-nerve comparison, free/arity and nerve presentation, labelled diagram model, walking nerves, coherent Mod, and small-space classifier laws remain construction obligations (AT-FD-7 and dependent gates)."},
+         "consequence": "Category-of-elements machinery is available. Kernel.Augmented implements incidence, explicit boundary-transport equations, lossless shape/label separation, a lawful additive-label algebra, the active-map obstruction, and strict 2-category extraction from any algebra. The supplied strict 2-category has defined substitutions with a checked row-fold formula; its full algebra laws, comparison round trips and discrete nerve, free/arity and nerve presentation, labelled diagram model, walking nerves, coherent Mod, and small-space classifier laws remain construction obligations (AT-FD-7 and dependent gates)."},
     ]
     return records
 
