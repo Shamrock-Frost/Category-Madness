@@ -35,7 +35,8 @@ def run(args: list[str], cwd: Path, label: str, *, expect: str | None = None,
 
 
 def audit(cwd: Path, mode: str) -> dict:
-    path = cwd / "SealAudit.lean"
+    path = cwd / "build" / "seal" / "Audit.lean"
+    path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text('import Prototype.Audit\nimport Theory\nimport Prototype.Universes\n'
                     f'#audit_seal "{mode}"\n', encoding="utf-8")
     report = OUT / f"{mode}.json"

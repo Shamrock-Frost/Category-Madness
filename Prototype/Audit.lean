@@ -16,7 +16,7 @@ def moduleOf (env : Environment) (name : Name) : Name :=
 def forbidden (env : Environment) (name : Name) : Bool :=
   let mod := moduleOf env name
   #[`Kernel, `Root, `Mathlib.CategoryTheory, `Mathlib.AlgebraicTopology].any fun p =>
-    p.isPrefixOf mod || p.isPrefixOf name
+    p.isPrefixOf mod || p.isPrefixOf (privateToUserName name)
 
 -- Generated recursors can be cyclic; inspect each dependency once.
 partial def checkDependencies (env : Environment) (pending : List Name)
