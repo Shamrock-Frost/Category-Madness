@@ -3,12 +3,16 @@
 \meta{id}{AT-KR-0}
 \meta{area}{kernel}
 \meta{origin}{design/01-kernel.md}
-\meta{status}{proposed}
+\meta{status}{proved}
 \meta{statement-version}{1}
+\meta{evidence}{docs/foundations/README.md, docs/foundations/inventory.json}
 \tag{acceptance-test}
 \tag{area:kr}
-\tag{status:proposed}
+\tag{status:proved}
 
-\p{and the \ref{ms-0000} export round-trip}
+\p{The pinned Mathlib inventory and the \ref{ms-0000} minimal export round-trip are verified.}
 \p{Named by: \ref{dec-ch-0020}, \ref{dec-ch-0024}, \ref{dec-kr-0014}.}
-\p{\em{Lean declaration(s):} none yet.}
+\p{\em{Evidence:} \code{docs/foundations/inventory.json}, the generated universe table, and \code{docs/foundations/README.md}. Reproduce with \code{python3 scripts/check_foundations.py}; the checker builds its targets, verifies exact dependency names and types from the Lean environment, checks source hashes and pins, audits transitive axioms, checks upstream gap evidence, and round-trips an unfinished theorem through the forest parser.}
+\p{\em{Lean witnesses:} \code{Kernel.Foundations.Inventory.mappingSpace_kan}, \code{restriction_fibration}, and \code{nerve_strictSegal}. The checked import closure lacks simplicial-set weak-equivalence/model-category instances and a groupoid-nerve Kan instance. The pinned source explicitly marks the full simplicial-set and Reedy diagram model structures as TODOs.}
+\p{\em{Export safety:} the existing quarantined \code{Theory.unproved} fixture remains stated because its axiom closure contains \code{sorryAx}. It is never imported by certified targets. This is tooling evidence, not a proof of its statement. The foundation audit accepts only \code{propext}, \code{Classical.choice}, and \code{Quot.sound}.}
+\p{The statement remains version 1. This verifies availability and gaps; it does not discharge the missing mathematical constructions.}

@@ -3,11 +3,16 @@
 # Bumping the pin is a deliberate act: update both files together and refresh the
 # Mathlib inventory node (AT-KR-0, D-KR-02) in the same PR.
 name = "CategoryMadness"
-defaultTargets = ["Kernel", "Root", "Interface", "Theory", "Prototype"]
+defaultTargets = ["Kernel", "Root", "Interface", "Theory", "Prototype", "Foundations"]
 
 [leanOptions]
 autoImplicit = false          # D-TL-06 (6): universe test
 relaxedAutoImplicit = false
+
+# Initial dependency inventory and minimal universe contracts (AT-KR-0, AT-FD-1).
+[[lean_lib]]
+name = "Foundations"
+roots = ["Foundations"]
 
 # M-F experiments are checked without exporting a sealed interface (D-FD-01).
 [[lean_lib]]

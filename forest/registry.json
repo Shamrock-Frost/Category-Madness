@@ -7,7 +7,7 @@
     "chapter": "<area>-0000 (ch, krn, rt, up, ft, sp, tl, wf, rm, bib, rev, fd)",
     "reference": "bib-<nnnn> in document order",
     "workflow-notes": "wf-<nnnn> (wf-0001 is the porting report)",
-    "generated-declaration": "lean-<hash8> (D-WF-08, not yet produced)",
+    "generated-declaration": "lean-<name-slug>-<hash8> (D-WF-08 minimal exporter)",
     "history": "forest/history/<revision>/ (excluded from the active registry)"
   },
   "id-to-address": {
@@ -280,18 +280,18 @@
       "tags": [
         "acceptance-test",
         "area:fd",
-        "status:proposed"
+        "status:proved"
       ],
       "meta": {
         "id": "AT-FD-1",
         "area": "foundation feasibility",
         "origin": "design/11-foundation-feasibility.md",
-        "status": "proposed",
+        "status": "proved",
         "statement-version": "1",
-        "evidence": "Prototype/Universes/README.md",
-        "lean-modules": "Prototype.Universes.Matrix, Prototype.Universes.Reindex, Prototype.Universes.Examples"
+        "evidence": "docs/foundations/README.md, docs/foundations/inventory.json, docs/foundations/signatures.md",
+        "lean-modules": "Kernel.Foundations.Signatures, Root.Foundations.Signatures, Root.Foundations.UniverseChecks"
       },
-      "status": "proposed",
+      "status": "proved",
       "refs": [
         "dec-ch-0023",
         "dec-fd-0001",
@@ -355,6 +355,7 @@
         "dec-tl-0017",
         "dec-tl-0018",
         "fd-0000",
+        "ms-foundation",
         "rev-0000",
         "rm-0000"
       ]
@@ -578,6 +579,7 @@
         "dec-rt-0030",
         "dec-tl-0021",
         "fd-0000",
+        "ms-foundation",
         "rev-0000",
         "rm-0000"
       ]
@@ -1016,16 +1018,17 @@
       "tags": [
         "acceptance-test",
         "area:kr",
-        "status:proposed"
+        "status:proved"
       ],
       "meta": {
         "id": "AT-KR-0",
         "area": "kernel",
         "origin": "design/01-kernel.md",
-        "status": "proposed",
-        "statement-version": "1"
+        "status": "proved",
+        "statement-version": "1",
+        "evidence": "docs/foundations/README.md, docs/foundations/inventory.json"
       },
-      "status": "proposed",
+      "status": "proved",
       "refs": [
         "dec-ch-0020",
         "dec-ch-0024",
@@ -1039,7 +1042,9 @@
         "dec-ch-0024",
         "dec-kr-0014",
         "krn-0000",
-        "ms-0000"
+        "lean-theory-unproved-0a649efa",
+        "ms-0000",
+        "ms-foundation"
       ]
     },
     "at-kr-0001": {
@@ -5770,7 +5775,7 @@
         "area": "root",
         "origin": "design/02-root.md",
         "status": "provisional",
-        "status-text": "corrected proposal; signatures not yet compiled.",
+        "status-text": "minimal universe signatures compiled under AT-FD-1; semantic constructions remain provisional.",
         "supersedes": "dec-rt-0012",
         "superseded-by": "none"
       },
@@ -8061,6 +8066,7 @@
       "acceptance": [],
       "backlinks": [
         "index",
+        "lean-theory-unproved-0a649efa",
         "wf-0000"
       ]
     },
@@ -8122,6 +8128,7 @@
       "backlinks": [
         "dec-ch-0019",
         "index",
+        "lean-theory-unproved-0a649efa",
         "wf-0000"
       ]
     },
@@ -8397,6 +8404,33 @@
         "index"
       ]
     },
+    "lean-theory-unproved-0a649efa": {
+      "id": "lean-theory-unproved-0a649efa",
+      "taxon": "Lean declaration",
+      "title": "Theory.unproved · quarantined exporter fixture",
+      "tags": [
+        "generated",
+        "negative-fixture"
+      ],
+      "meta": {
+        "lean-name": "Theory.unproved",
+        "status": "stated",
+        "kind": "theorem",
+        "type": "False",
+        "axioms": "sorryAx",
+        "quarantined": "true",
+        "source": "Prototype/Negative/Sorry.lean",
+        "generator": "scripts/check_foundations.py"
+      },
+      "status": "stated",
+      "refs": [
+        "at-kr-0000",
+        "dec-wf-0008",
+        "dec-wf-0010"
+      ],
+      "file": "forest/lean-theory-unproved-0a649efa.tree",
+      "backlinks": []
+    },
     "ms-0000": {
       "id": "M0",
       "taxon": "Milestone",
@@ -8407,9 +8441,9 @@
       "meta": {
         "id": "M0",
         "origin": "design/08-roadmap.md",
-        "status": "planned"
+        "status": "complete"
       },
-      "status": "planned",
+      "status": "complete",
       "refs": [
         "at-kr-0000"
       ],
@@ -8740,12 +8774,15 @@
       "meta": {
         "id": "M-F",
         "origin": "design/08-roadmap.md",
-        "status": "planned"
+        "status": "in-progress"
       },
-      "status": "planned",
+      "status": "in-progress",
       "refs": [
         "at-fd-0001",
+        "at-fd-0002",
+        "at-fd-0007",
         "at-fd-0011",
+        "at-kr-0000",
         "ms-0003"
       ],
       "file": "forest/ms-foundation.tree",

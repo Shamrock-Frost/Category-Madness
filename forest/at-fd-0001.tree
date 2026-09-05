@@ -3,19 +3,19 @@
 \meta{id}{AT-FD-1}
 \meta{area}{foundation feasibility}
 \meta{origin}{design/11-foundation-feasibility.md}
-\meta{status}{proposed}
+\meta{status}{proved}
 \meta{statement-version}{1}
-\meta{evidence}{Prototype/Universes/README.md}
-\meta{lean-modules}{Prototype.Universes.Matrix, Prototype.Universes.Reindex, Prototype.Universes.Examples}
+\meta{evidence}{docs/foundations/README.md, docs/foundations/inventory.json, docs/foundations/signatures.md}
+\meta{lean-modules}{Kernel.Foundations.Signatures, Root.Foundations.Signatures, Root.Foundations.UniverseChecks}
 \tag{acceptance-test}
 \tag{area:fd}
-\tag{status:proposed}
+\tag{status:proved}
 
 \p{State the Lean universes of the root, labelled shapes, matrix families, walking structures, monad collection, \code{Mod}, and projected category API. Check the intended matrix signature from \ref{dec-rt-0027} and the individual entry/collection levels. Compile examples with object/entry levels \code{(0,1)}, \code{(1,1)}, and \code{(1,0)}, plus the intended \code{Set}, small-space, and category collections. Provide necessary lifts and prove their comparison lemmas; no universe-lowering axiom is allowed.}
 \p{\strong{Depends on:} \ref{ms-0000} toolchain; minimal types only. \strong{Evidence:} actual declarations, compiled examples, universe table. \strong{Failure response:} increase collection universes or separate parameters; do not weaken the category API by silently forcing \code{u=v}.}
 \p{Named by: \ref{dec-ch-0023}, \ref{dec-fd-0001}, \ref{dec-rt-0025}, \ref{dec-rt-0027}, \ref{dec-sp-0010}.}
-\p{\em{Partial Lean declarations:} \code{Prototype.Universes.Matrix}, its \code{Map}, \code{liftEntries}, \code{liftMap}, and \code{lowerMap} operations, and the seven laws in \code{Prototype/Universes/Matrix.lean}. Explicit matrix universe examples and theorem axiom reports are in \code{Prototype/Universes/Examples.lean}.}
-\p{\em{Object-label comparisons:} \code{Prototype/Universes/Reindex.lean} defines \code{reindex}, \code{reindexMap}, \code{liftLabels}, \code{lowerLabels}, \code{liftLabelsMap}, and \code{lowerLabelsMap} in the same matrix namespace, with twelve laws for reindexing, inverse comparisons, and commutation with entry lifting. The examples include all three object/entry orderings and a mixed lift at four distinct levels.}
-\p{\em{Evidence and scope:} \code{Prototype/Universes/README.md} records the universe table and validation results. This covers matrix families, reindexing, and object/entry lifts; the remaining root, shape, walking, monad, \code{Mod}, space, and category signatures and necessary comparisons are still outstanding. The complete statement is unchanged at version 1 and remains proposed.}
-
-\p{\em{Discrete category signatures:} \code{Kernel.Matrix.Monad}, \code{Interface.Category}, and the conversions in \code{Root.MatrixCategory} compile at all three object/entry orderings in \code{Prototype/MatrixCategoryExamples.lean}. \code{Kernel.Matrix.functions} has object level \code{u+1} and entry level \code{u}. Other root and construction signatures remain outstanding.}
+\p{\em{Checked declarations:} \code{Kernel.Foundations.ShapeSignature}, \code{labels}, \code{Labelled}, \code{Diagram}, \code{SmallSpace}, and \code{ClassifierData}; \code{Root.Foundations.RootSignature}, \code{WalkingSignature}, \code{RelativeChoice}, \code{MonadNerves}, \code{MonadCollection}, \code{RelativeMappingSpace}, \code{ModSignature}, \code{CategoryOn}, and \code{CategoryCollection}. The exact universe table is generated from these declarations, not maintained separately.}
+\p{\em{Compiled examples:} \code{Root/Foundations/UniverseChecks.lean} checks all three object/entry orderings, the intended ambient offsets from \ref{dec-rt-0027}, and the Set, small-space, classifier-data, and category collections. It reuses the existing matrix family, entry/label lift, and projected-category checks unchanged.}
+\p{\em{Comparisons:} \code{Kernel.Foundations.liftLabelsEquivalence} proves that raising labels preserves the indexing category up to equivalence. \code{liftSSetHomEquiv}, the inverse map comparisons, and identity/composition laws compare specified simplex lifts. No arbitrary object is lowered. Existing matrix entry and label comparisons are included in the transitive axiom audit.}
+\p{\em{Scope:} this passes the unchanged version-1 minimal-types statement. The shape category and position functor are explicit small inputs; root conditions are an explicit proposition-valued parameter; walking nerves are supplied inputs to the collection signatures. These declarations do not assert an augmented shape presentation, a semantic root, a derived relative mapping space, coherent Mod, or classifier laws. Those remain obligations of their later gates. In particular, collecting all diagram maps can raise both label and simplex levels to their maximum.}
+\p{\em{Reproduction:} \code{lake build} and \code{python3 scripts/check_foundations.py}. Evidence contains exact declarations, source hashes, dependency versions, and transitive axiom closures. The only approved axioms are \code{propext}, \code{Classical.choice}, and \code{Quot.sound}.}
