@@ -23,6 +23,6 @@
 }
 \subtree{
   \title{Remaining nerve obligations}
-  \p{The global free mapping property is checked, but a free/forgetful adjunction and its monadicity on the generating presheaf category are not yet packaged or proved. The arity family, density and augmented nerve recognition, any generic/free factorization used, and elementary core presentation remain open. Finite raw-term leaves do not establish preservation of filtered colimits. No canonical pasting or Reedy/EZ assertion follows from this construction. The labelled diagram model has not started.}
+  \p{\ref{augmented-global-adjunction} packages the global free mapping property as a checked free/forgetful adjunction and induced monad on generating graphs. Its monadicity remains open. The arity family, density and augmented nerve recognition, any generic/free factorization used, and elementary core presentation remain open. Finite raw-term leaves do not establish preservation of filtered colimits. No canonical pasting or Reedy/EZ assertion follows from this construction. The labelled diagram model has not started.}
 }
 \p{Reproduce with \code{lake build Augmented} and \code{python3 scripts/check_foundations.py}; see \code{docs/augmented/README.md}. Cites: \ref{dec-rt-0030}, \ref{dec-wf-0008}, \ref{dec-wf-0010}.}

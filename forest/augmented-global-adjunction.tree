@@ -1,0 +1,15 @@
+\title{Augmented global free/forgetful adjunction}
+\taxon{Development}
+\meta{layer}{human}
+\meta{source}{Kernel/Augmented/FreeGeneratingAdjunction.lean}
+\tag{foundation}
+\tag{augmented}
+
+\p{This continues \ref{augmented-generating} under \ref{dec-kr-0018} and \ref{at-fd-0007}. The global adjunction and its induced monad are checked. Monadicity is the next construction obligation.}
+\p{\code{BaseMap} now has checked identities and composition, including their action on complete boundary frames. \code{CellGraph.OverMap} retains each cell with its full boundary. Its typed cell and row maps preserve incidence; the identity and composition laws are checked. \code{Operations.OverMap} adds preservation of both identities and substitution as ordinary equalities of cells with their boundaries attached. These form the checked category \code{BundledAlgebra}.}
+\p{\code{BundledAlgebra.forget} is the checked functor to generating incidence graphs. Cells are sorted by their actual input and zero/one output lengths. Ordered vertex/edge getters and their path reconstruction lemmas retain every incidence, including empty boundaries. Naturality identifies a graph map's generator assignments with their complete typed boundaries.}
+\p{\code{Generating.Graph.lift} extends graph maps to global algebra maps; \code{unit_lift} and \code{lift_restrictMap} prove its two inverse laws. \code{homEquiv_naturality} packages the mapping equivalence into \code{BundledAlgebra.free}, \code{freeForgetAdjunction} and \code{generatingMonad}. The unit and counit formulas are checked. The adjunction is global: objects and both kinds of arrows vary.}
+\p{\code{forget} and \code{generatingComparison} are faithful. \code{comparisonHomEquiv} characterizes comparison morphisms as graph maps commuting with evaluation of every free expression. From that equation, \code{comparisonVertical} recovers vertical identity/composition preservation, and \code{comparisonCells} recovers the full boundary-preserving cell map, its graph-map round trip and evaluation factorization. Both identity-cell preservation laws are proved.}
+\p{\strong{Remaining:} preservation of arbitrary substitution for the reconstructed comparison map, reconstruction of an augmented algebra from an arbitrary generating-monad algebra, and the resulting comparison equivalence. Thus monadicity is not yet proved. The augmented arity theorem, its density/recognition hypotheses and labelled diagram model remain open. No gate status or statement is changed. Public map-preservation laws use ordinary equality of cells with their complete boundaries; internal typed adapters still use heterogeneous equality.}
+\p{Reproduce with \code{lake build Augmented}, the foundation axiom inventory and seal/swap checks. This adds no sealed constant.}
+\p{Cites: \ref{dec-kr-0015}, \ref{dec-rt-0030}, \ref{dec-wf-0008}, \ref{dec-wf-0010}.}
