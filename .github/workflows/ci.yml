@@ -1,7 +1,7 @@
-# CI — the seal linter and forest checks (D-TL-06, D-WF-02). All jobs are blocking.
+# CI — seal, active forest, and revision lineage (D-TL-17, D-WF-09/10).
 #
 # At M0 the Lean directories are empty, so the seal jobs run against empty directories
-# and pass (D-TL-06 is frozen at M0; the *mechanism* exists before any mathematics does).
+# and pass (D-TL-17 is frozen at M0; the *mechanism* exists before any mathematics does).
 # The Lean build itself is gated on the presence of Lean sources.
 
 name: ci
@@ -11,36 +11,47 @@ on:
     branches: [prima-materia]
   pull_request:
 
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   seal:
     name: seal linter (import ban, unfolding ban, statement hygiene)
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - run: python3 scripts/check_imports.py           # D-TL-06 (1)
-      - run: python3 scripts/check_unfolding.py         # D-TL-06 (2), syntax level
-      - run: python3 scripts/check_statement_hygiene.py # D-TL-06 (3)
+      - run: python3 scripts/check_imports.py           # D-TL-17 (1)
+      - run: python3 scripts/check_unfolding.py         # D-TL-17 (2), syntax level
+      - run: python3 scripts/check_statement_hygiene.py # D-TL-17 (3)
 
   forest:
     name: forest (references, registry, decision fields)
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - run: python3 scripts/forest_check.py            # D-WF-02, D-WF-03
+      - run: python3 scripts/forest_check.py            # D-WF-09, D-WF-10
+      - run: python3 scripts/check_revision.py          # D-WF-09, D-WF-10
       - name: MCP smoke test
-        run: python3 mcp/server.py --selftest            # D-WF-05
+        run: python3 mcp/server.py --selftest            # D-WF-12
 
   citations:
-    # D-WF-04 (3): a PR must cite the decision nodes it relies on.
+    # D-WF-11: a PR must cite current decision nodes.
     name: PR cites decisions
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -53,9 +64,10 @@ jobs:
         run: printf '%s\n%s\n' "$PR_TITLE" "$PR_BODY" | python3 scripts/check_citations.py -
 
   lean:
-    # D-TL-06 (4)–(6): build, swap test, universe test. Skipped while there is no Lean.
+    # D-TL-17 (4)–(6): build, swap test, universe test. Skipped while there is no Lean.
     name: lake build + swap test
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - id: sources

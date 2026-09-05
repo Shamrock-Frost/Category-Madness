@@ -15,7 +15,7 @@ design/07-forest-workflow.md and design/README.md:
 
 Address scheme (D-WF-14, recorded here and in wf-0002):
 
-  D-RT-03  -> dec-rt-0003      AT-KR-2 -> at-kr-0002      OQ-SP-1 -> oq-sp-0001
+  D-RT-18  -> dec-rt-0003      AT-KR-2 -> at-kr-0002      OQ-SP-1 -> oq-sp-0001
   M3       -> ms-0003          M-F -> ms-foundation          phase −1 -> ms-design
   bibliography entries -> bib-NNNN (in document order)
 
@@ -136,7 +136,7 @@ def code_span(s: str) -> str:
     # Braces inside \code{...} must balance; a backslash would be read as a command.
     if s.count("{") != s.count("}"):
         raise ValueError(f"unbalanced braces in code span: {s!r}")
-    s = s.replace("\\", "")  # only occurrence: `\transclude` in D-WF-06
+    s = s.replace("\\", "")  # only occurrence: `\transclude` in D-WF-13
     return "\\code{" + s + "}"
 
 
@@ -574,9 +574,9 @@ def main() -> None:
                 st = status_level(runs)
                 stt = status_text(runs)
                 if st is None:
-                    # D-RT-02 ("what a VDC∞ is not") carries no Status field in the source.
-                    # It is a clarification of D-RT-01 and inherits its freeze; recorded in wf-0001.
-                    st, stt = "frozen", "not stated in the source; frozen with D-RT-01 (port judgment call)."
+                    # D-RT-17 ("what a VDC∞ is not") carries no Status field in the source.
+                    # It is a clarification of D-RT-16 and inherits its freeze; recorded in wf-0001.
+                    st, stt = "frozen", "not stated in the source; frozen with D-RT-16 (port judgment call)."
                 meta = {
                     "id": ident,
                     "area": AREA_NAMES[a],

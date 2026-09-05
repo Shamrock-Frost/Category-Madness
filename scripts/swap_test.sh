@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# The swap test (D-TL-06 (4), D-CH-12, D-RT-13 (4)).
+# The swap test (D-TL-17 (4), D-CH-25, D-RT-28 (4)).
 #
 # Build Theory/ against Interface-Stub/, a copy of Interface/ in which every constant is
 # a bodiless `axiom` with the same statement. Green means Theory/ depends on nothing but

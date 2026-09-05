@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Seal linter, job 3: statement hygiene (D-RT-13 (3), D-TL-06 (3)).
+"""Seal linter, job 3: statement hygiene (D-RT-28 (3), D-TL-17 (3)).
 
 Every exported theorem in Interface/ is stated purely in interface vocabulary: a CI grep
 enforces that Interface/ mentions no kernel or Mathlib category-theory names in

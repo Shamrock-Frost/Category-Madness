@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""D-WF-02 / D-WF-04 (3): PRs must cite the decision nodes they rely on; CI checks that the
+"""D-WF-09 / D-WF-11 (3): PRs must cite the decision nodes they rely on; CI checks that the
 cited nodes exist and are not superseded.
 
 Usage:
@@ -59,7 +59,7 @@ def main() -> int:
     for a in superseded:
         print(f"error: cited decision is superseded: {a} -> {nodes[a]['meta'].get('superseded-by')}", file=sys.stderr)
     if not decisions:
-        print("error: no decision node cited (D-WF-04 (3): a PR must cite the decisions it relies on)", file=sys.stderr)
+        print("error: no decision node cited (D-WF-11 (3): a PR must cite the decisions it relies on)", file=sys.stderr)
     print("cited:", ", ".join(sorted(cited)) or "nothing")
     return 0 if ok else 1
 

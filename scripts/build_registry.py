@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build forest/registry.json from the trees in forest/ (the decision registry, D-WF-02).
+"""Build forest/registry.json from the trees in forest/ (the decision registry, D-WF-09).
 
 The trees are primary; this file is a derived index for CI (scripts/forest_check.py,
 scripts/check_citations.py) and for the retrieval MCP (mcp/). CI verifies that the
@@ -33,7 +33,7 @@ ADDRESS_SCHEME = {
     "chapter": "<area>-0000 (ch, krn, rt, up, ft, sp, tl, wf, rm, bib, rev, fd)",
     "reference": "bib-<nnnn> in document order",
     "workflow-notes": "wf-<nnnn> (wf-0001 is the porting report)",
-    "generated-declaration": "lean-<hash8> (D-WF-01, not yet produced)",
+    "generated-declaration": "lean-<hash8> (D-WF-08, not yet produced)",
     "history": "forest/history/<revision>/ (excluded from the active registry)",
 }
 
@@ -72,7 +72,7 @@ def parse_tree(path: Path) -> dict:
 
 def build() -> dict:
     nodes = {p.stem: parse_tree(p) for p in sorted(FOREST.glob("*.tree"))}
-    # reverse index (dependents / backlinks), D-WF-02 "affected declarations" will join this
+    # reverse index (dependents / backlinks), D-WF-09 "affected declarations" will join this
     backlinks: dict[str, list[str]] = {a: [] for a in nodes}
     for a, n in nodes.items():
         for r in n["refs"]:

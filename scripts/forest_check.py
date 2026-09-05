@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Structural checks on the forest (D-WF-02, D-WF-03). Run in CI.
+"""Structural checks on the forest (D-WF-09, D-WF-10). Run in CI.
 
   * every \\ref / \\transclude target exists;
   * braces balance in every tree (forester would reject the file otherwise);
-  * every Decision node carries the D-WF-02 fields (id, status, origin, supersedes,
+  * every Decision node carries the D-WF-09 fields (id, status, origin, supersedes,
     superseded-by) and its status is one of frozen / provisional / later / superseded;
-  * nothing references a superseded decision (D-WF-02: "CI checks that cited nodes exist
+  * nothing references a superseded decision (D-WF-09: "CI checks that cited nodes exist
     and are not superseded");
   * every Acceptance test node has a revision-aware lifecycle status;
   * forest/registry.json is up to date with the trees.

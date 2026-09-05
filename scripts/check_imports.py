@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Seal linter, job 1: the import ban (D-CH-09, D-TL-06 (1)).
+"""Seal linter, job 1: the import ban (D-CH-22, D-TL-17 (1)).
 
 No file under Theory/ may import Mathlib.CategoryTheory.*, Mathlib.AlgebraicTopology.*,
 Kernel.*, or Root.*. Tactic imports (Mathlib.Tactic.*, Aesop, …) are allowed everywhere.
 
-Additionally (D-CH-08 layering): Interface/ may import Kernel/Root (it is their public
+Additionally (D-CH-21 layering): Interface/ may import Kernel/Root (it is their public
 face) but Theory/ may import only Interface.* and tactic libraries; Interface-Stub/ may
-import nothing from Kernel/Root at all (it must be bodiless axioms, D-RT-13 (4)).
+import nothing from Kernel/Root at all (it must be bodiless axioms, D-RT-28 (4)).
 
 Runs against empty directories at M0 and simply passes.
 """
@@ -48,8 +48,8 @@ def scan(directory: Path, prefixes: tuple[str, ...], label: str) -> list[str]:
 
 
 def main() -> int:
-    errors = scan(ROOT / "Theory", BANNED_IN_THEORY, "Theory/ (sealed, D-CH-09)")
-    errors += scan(ROOT / "Interface-Stub", BANNED_IN_STUB, "Interface-Stub/ (must be bodiless, D-RT-13)")
+    errors = scan(ROOT / "Theory", BANNED_IN_THEORY, "Theory/ (sealed, D-CH-22)")
+    errors += scan(ROOT / "Interface-Stub", BANNED_IN_STUB, "Interface-Stub/ (must be bodiless, D-RT-28)")
     for e in errors:
         print("error:", e, file=sys.stderr)
     print(f"check_imports: {len(errors)} violation(s)")

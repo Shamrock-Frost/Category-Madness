@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Retrieval MCP, MVP (D-WF-05): a read-only MCP server over the forest registry.
+"""Retrieval MCP, MVP (D-WF-12): a read-only MCP server over the forest registry.
 
 Dependency-free (stdlib only): speaks MCP over stdio as JSON-RPC 2.0 with the
-2024-11-05 protocol version. Tools (D-WF-05 MVP list; lexical search only for now,
+2024-11-05 protocol version. Tools (D-WF-12 MVP list; lexical search only for now,
 embeddings and the Lean-environment `type_search` arrive with forest-export at M0/M3):
 
   search(query, k, filter)      lexical search over node titles, bodies, tags
@@ -169,7 +169,7 @@ TOOLS = [
      "inputSchema": {"type": "object", "properties": {"query": {"type": "string"}, "k": {"type": "integer", "default": 10},
                      "filter": {"type": "object", "properties": {"taxon": {"type": "string"}, "status": {"type": "string"}, "area": {"type": "string"}}}},
                      "required": ["query"]}},
-    {"name": "get", "description": "Full node by address (dec-rt-0003) or identifier (D-RT-03, AT-KR-2, OQ-SP-1, M3).",
+    {"name": "get", "description": "Full node by address (dec-rt-0003) or identifier (D-RT-18, AT-KR-2, OQ-SP-1, M3).",
      "inputSchema": {"type": "object", "properties": {"address": {"type": "string"}}, "required": ["address"]}},
     {"name": "neighbors", "description": "Nodes linked from/to a node. direction: refs | backlinks | decisions.",
      "inputSchema": {"type": "object", "properties": {"address": {"type": "string"}, "direction": {"type": "string", "default": "refs"}}, "required": ["address"]}},

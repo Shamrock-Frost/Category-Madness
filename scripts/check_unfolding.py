@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Seal linter, job 2: the unfolding ban (D-TL-06 (2)) — syntax-level approximation.
+"""Seal linter, job 2: the unfolding ban (D-TL-17 (2)) — syntax-level approximation.
 
-D-TL-06 (2) calls for a Lean linter over syntax plus an Expr-level check that no proof
+D-TL-17 (2) calls for a Lean linter over syntax plus an Expr-level check that no proof
 term in Theory/ references a `_def` lemma or a kernel constant. The Lean linter does not
 exist yet (it is Lean code, scheduled with the seal at M3). Until then this script rejects
 the textual forms that can never be legitimate in Theory/:
@@ -11,7 +11,7 @@ the textual forms that can never be legitimate in Theory/:
     set_option … in ways that defeat the seal (e.g. `pp.all`-style is fine; unfolding is not)
 
 Sealed names are read from Interface/SEALED (one constant per line, generated with the
-interface at M3; empty now). The Expr-level check remains a TODO owned by D-TL-06.
+interface at M3; empty now). The Expr-level check remains a TODO owned by D-TL-17.
 """
 
 from __future__ import annotations
