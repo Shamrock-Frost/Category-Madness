@@ -8,6 +8,7 @@
     "Kernel/Augmented/Algebra.lean": "0972cbac26837865ddcb03385972d4e760c67a7e547327dabc35331e6d188308",
     "Kernel/Augmented/AlgebraExamples.lean": "2d04a60158fcecd6a0f974f91d9ee166c9557c6846f8ec88c9b05a28f8ee7177",
     "Kernel/Augmented/AlgebraMaps.lean": "d14e4438a3489e1d71b42636e04cd4e5a68a25582f527574c8ab96bfb1824e3a",
+    "Kernel/Augmented/BaseMaps.lean": "1c2292b57fc5be48c911850f22359f5b719ef61fe43de4490642d4b35d6325e0",
     "Kernel/Augmented/CellMapSections.lean": "1aea8bf234a5bda7a908823be73aaccc8f63e23cad8e292ad055ea437b2f1e80",
     "Kernel/Augmented/CellMaps.lean": "6bc8e33b8160184dd63a8da873f7c1552dcd6a4d96b8acd540d8620f46365fc2",
     "Kernel/Augmented/CellQuotient.lean": "f91ce15cd89b0a291203e3ce548da5492f94f45640565cb34bfcff9b155ef221",
@@ -21,17 +22,30 @@
     "Kernel/Augmented/Examples.lean": "17859c29ec1d96ded93f4aa277d4e1a830ee365039718c3a73ff593f74411da2",
     "Kernel/Augmented/FreeCellUniversal.lean": "43bca2f0b85b60740672a4bfe0af5fb6c127a48081bec01aff9cfd3becba3423",
     "Kernel/Augmented/FreeCells.lean": "d33ca47d705c6a8db14c272278cfac736765916a7ebbe62d117c83c0f6df121d",
+    "Kernel/Augmented/FreeGeneratingGraph.lean": "cd670168a01d755633fa9710bb7011fd29813994d3f07fa3f0849ff12e1fa910",
+    "Kernel/Augmented/FreeGeneratingUniversal.lean": "03598526ba3f6ecdd42bb7b39742b44e8f70c38a5e3e3689e45ae5a170e2971c",
     "Kernel/Augmented/FromCat.lean": "ee06fc92abe002c88b9948f6d9978b2989bdcac38104063bb74d2254dd8ceb2f",
     "Kernel/Augmented/FromTwoCategory.lean": "fcf2cb109b22a5265056f323375c73716aaa2e41954160469f1cf7737a3186d2",
     "Kernel/Augmented/FromTwoCategoryAlgebra.lean": "702d514262c8a0a8800cdf67c49ba0cdc213d0c2f9f97e3722cf13632abc379b",
     "Kernel/Augmented/FromTwoCategoryLaws.lean": "c93e7ac39ada419bf57015818e5a074e24f9bbf2433f748440d4535667ccdb27",
+    "Kernel/Augmented/GeneratingCategory.lean": "1c777e7a7cff29315657f631020a5123552b19de984450653d92d29e8fd85364",
+    "Kernel/Augmented/GeneratingCells.lean": "f8f91a4be86f1f75b20784ac85348090f361d5f81b319bc7906578363a7bd4a0",
+    "Kernel/Augmented/GeneratingPresheaves.lean": "492558999b6442c1e2ec244602c4bc7c84aafa6e96279fe285d0bb00e6cca13d",
+    "Kernel/Augmented/GeneratingShapes.lean": "cd3d03a08b383bb1961c112a1718611e0d8279ad4fabbc0a3725d66fa7e22d8c",
     "Kernel/Augmented/Incidence.lean": "d68f03e1b362d13c21f52624a5c9b839e8782a7b7b0f7ccbee683fc888f02528",
+    "Kernel/Augmented/NerveMonadMap.lean": "aea5061059a1e422b9b3f6d783e06a6598ed99416d686ecb6e042e37ecd4a0b9",
+    "Kernel/Augmented/NerveRecognition.lean": "62fb4ef0fa91809a49e405a393d010a660afcab30f34631c84b21aef09cee6e7",
+    "Kernel/Augmented/NerveSquare.lean": "92fe650365c8a3e4f1c24d9632d7615873480adf662dfc8a4ee343d0e68105be",
     "Kernel/Augmented/NestedRows.lean": "65ff7daf7a56526796c572da3f6b92dad86bdb6194dfa882b7cecef858b5296c",
     "Kernel/Augmented/NoHorizontalNested.lean": "c5c69fe0e3e5eff9eaa2d6846cc7f6b55b4ccdeb65ee5ed794278b14b05b8fe2",
     "Kernel/Augmented/NoHorizontalRows.lean": "79603cd71f0887bb3b496ce60232315e90f259126bb7bb1efa25978cb65a3337",
     "Kernel/Augmented/OperationMaps.lean": "06e2e0ef13bbbce8c943e9da9de35698a4f086efe0812b4ea9f6c3cbdedc3bfa",
     "Kernel/Augmented/OperationSignature.lean": "5bbec17bebb2eba2a1dcdf02326f5b8cbd8054108a061c3d339c5123ab54b5fb",
     "Kernel/Augmented/Operations.lean": "75cf8d39d0804c914f53a15c6f2662aa2fcdee782bceb83157f1103df1c5f514",
+    "Kernel/Augmented/PullbackIdentityRows.lean": "580dc268a60d5741c8e7bf3e97e5cd610117a4af7e8b30732e9f4a029f41befd",
+    "Kernel/Augmented/PullbackLaws.lean": "9ea990013627cf9a63fa2ab4f793ddc506987558be05af4fe696705dd34696b5",
+    "Kernel/Augmented/PullbackOperations.lean": "44f771e5b60bd26f8309d572eacedcfc500a1bf9b0443f332e2bb95b285a9622",
+    "Kernel/Augmented/PullbackRows.lean": "ffb16369df40f461927b4fdd3dcc2fe2b448dad77a044bba8f73edbdea9c8cdb",
     "Kernel/Augmented/RowPositions.lean": "750c5c9d57be9ead5090df67ddcce8f9e67c5868c63d803360e8bbd303f18b1c",
     "Kernel/Augmented/RowShapes.lean": "f034c6a963cd98c8f6ed1ee6b8a4641b88ebf208a5617585c852a173c5a04b3d",
     "Kernel/Augmented/Rows.lean": "7ba976a94ba4990b9a2a810b5ea799f4b56acadf59327652d29d2b38a17e5ce6",
@@ -72,79 +86,79 @@
   "checks": [
     {
       "check": "real-build",
-      "seconds": 1.474,
+      "seconds": 1.553,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "real-audit",
-      "seconds": 2.233,
+      "seconds": 2.028,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "real-opaque-equation",
-      "seconds": 0.326,
+      "seconds": 0.281,
       "exit_code": 1,
       "expected_rejection": "Type mismatch"
     },
     {
       "check": "stub-build",
-      "seconds": 1.148,
+      "seconds": 1.046,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "stub-audit",
-      "seconds": 2.029,
+      "seconds": 2.066,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "stub-opaque-equation",
-      "seconds": 0.251,
+      "seconds": 0.218,
       "exit_code": 1,
       "expected_rejection": "Type mismatch"
     },
     {
       "check": "stub-in-real-audit",
-      "seconds": 1.868,
+      "seconds": 1.756,
       "exit_code": 1,
       "expected_rejection": "AXIOM_REJECTED"
     },
     {
       "check": "ProjectAxiom-compile",
-      "seconds": 0.238,
+      "seconds": 0.558,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "ProjectAxiom-audit",
-      "seconds": 2.001,
+      "seconds": 2.107,
       "exit_code": 1,
       "expected_rejection": "AXIOM_REJECTED"
     },
     {
       "check": "Sorry-compile",
-      "seconds": 0.262,
+      "seconds": 0.268,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "Sorry-audit",
-      "seconds": 2.132,
+      "seconds": 1.794,
       "exit_code": 1,
       "expected_rejection": "AXIOM_REJECTED"
     },
     {
       "check": "PrivateLeak-compile",
-      "seconds": 0.294,
+      "seconds": 0.437,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "PrivateLeak-audit",
-      "seconds": 1.941,
+      "seconds": 1.986,
       "exit_code": 1,
       "expected_rejection": "SEAL_LEAK"
     }

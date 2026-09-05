@@ -1,0 +1,28 @@
+\title{Augmented generating incidence and global free mapping property}
+\taxon{Development}
+\meta{layer}{human}
+\meta{source}{Kernel/Augmented/FreeGeneratingUniversal.lean}
+\tag{foundation}
+\tag{augmented}
+
+\p{This extends \ref{augmented-free-cells} under \ref{dec-kr-0015}, \ref{dec-kr-0018}, \ref{dec-tl-0021} and \ref{at-fd-0007}. Objects and both kinds of generating edges now vary. The full acceptance statement and proposed status are unchanged.}
+\subtree{
+  \title{Checked generating base}
+  \p{\code{Generating.Shape} is a small category of objects, vertical edges, horizontal edges and cell generators of each input/output arity. Its composition imposes the endpoint incidence equations. Zero inputs and outputs retain their shared endpoint objects. \code{Generating.Graph.presheafEquiv} proves both round trips between the explicit generating data and presheaves on this category; \code{presheafEquivalence} extends this to a categorical equivalence with graph maps defined as incidence-natural families. \code{elementaryDensity} realizes every generating presheaf as the canonical colimit of its elementary representables; this does not establish the monad arity condition.}
+  \p{\code{Generating.Graph.boundary} realizes each generator as its complete dependent boundary. \code{boundary_arity} checks the input length and zero/one output length. \code{freeAlgebra} adjoins vertical paths, then the lawful generated-congruence quotient of free cells.}
+}
+\subtree{
+  \title{Checked change of base and universal property}
+  \p{\code{BaseMap} maps a vertical category by a functor and horizontal edges over its object map. It maps complete boundaries, rows and nested rows. \code{pullbackAlgebra} proves all five laws for the pulled-back cells; the law statements use ordinary equality with explicit complete-boundary transport. Internal comparison proofs still use heterogeneous equality.}
+  \p{\code{SkeletonAssignment.baseMap_unique} proves that an assignment of generating vertical edges determines its extension to vertical paths. \code{cellAssignmentEquiv} identifies raw cell assignments with boundary-preserving generator maps. \code{freeMapEquiv} proves that these extend uniquely to operation-preserving maps into a target algebra, allowing its objects and edges to differ from the source.}
+}
+\subtree{
+  \title{Reusable nerve recognition step}
+  \p{\code{Nerve.MonadMap} specifies a comparison between monads over a base functor, with unit and multiplication compatibility. \code{lift} constructs its functor on Eilenberg–Moore algebras. Faithfulness transfers from the base; fullness additionally uses a fully faithful base and pointwise epimorphic comparison. With invertible comparison, \code{essImage_iff} proves that an algebra descends exactly when its underlying object lies in the base functor's essential image.}
+  \p{\code{square_faithful}, \code{square_full} and \code{restriction_essImage_iff} transfer these conclusions through supplied categorical equivalences and a compatible comparison square. This proves the algebra-recognition step used in Berger–Melliès–Weber, Proposition 1.3 and the exact-square argument. The augmented application must still construct the monadic equivalences, arity family and invertible comparison; these are hypotheses, not conclusions certified here.}
+}
+\subtree{
+  \title{Remaining nerve obligations}
+  \p{The global free mapping property is checked, but a free/forgetful adjunction and its monadicity on the generating presheaf category are not yet packaged or proved. The arity family, density and augmented nerve recognition, any generic/free factorization used, and elementary core presentation remain open. Finite raw-term leaves do not establish preservation of filtered colimits. No canonical pasting or Reedy/EZ assertion follows from this construction. The labelled diagram model has not started.}
+}
+\p{Reproduce with \code{lake build Augmented} and \code{python3 scripts/check_foundations.py}; see \code{docs/augmented/README.md}. Cites: \ref{dec-rt-0030}, \ref{dec-wf-0008}, \ref{dec-wf-0010}.}
