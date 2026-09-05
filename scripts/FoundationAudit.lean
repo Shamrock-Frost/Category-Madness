@@ -1,9 +1,10 @@
 import Lean
 import Foundations
+import Augmented
 import Theory.Category
 
 /-! Minimal environment exporter and scoped foundation axiom audit.
-Cites: D-KR-14, D-CH-20, D-WF-08, D-WF-10, AT-KR-0, AT-FD-1.
+Cites: D-KR-14, D-KR-18, D-CH-20, D-WF-08, D-WF-10, AT-KR-0, AT-FD-1, AT-FD-7.
 -/
 
 open Lean Elab Command
@@ -14,7 +15,7 @@ def approvedAxioms : Array Name :=
   #["propext", "Classical.choice", "Quot.sound"].map String.toName
 
 def foundationName (n : Name) : Bool :=
-  ["Kernel.Foundations.", "Root.Foundations.", "Prototype.Universes."].any
+  ["Kernel.Foundations.", "Root.Foundations.", "Kernel.Augmented.", "Prototype.Universes."].any
     (fun p => n.toString.startsWith p)
 
 def namesJson (ns : List Name) : Json :=
@@ -90,7 +91,14 @@ run_cmd do
     "HomotopicalAlgebra.WeakEquivalence", "HomotopicalAlgebra.ModelCategory",
     "HomotopicalAlgebra.PathObject", "HomotopicalAlgebra.ReedyStructure",
     "HomotopicalAlgebra.ReedyStructure.op",
-    "HomotopicalAlgebra.ReedyStructure.mapFactorizationData"] : Array String).map String.toName
+    "HomotopicalAlgebra.ReedyStructure.mapFactorizationData",
+    "Quiver.Path", "Quiver.Path.comp", "Quiver.Path.comp_assoc",
+    "Quiver.Path.length_comp", "Quiver.Path.eq_of_length_zero",
+    "SimplexCategory.Hom.toOrderHom",
+    "CategoryTheory.Bicategory", "CategoryTheory.Bicategory.Strict",
+    "CategoryTheory.Bicategory.whisker_exchange",
+    "CategoryTheory.Bicategory.Strict.associator_eqToIso",
+    "CategoryTheory.conj_eqToHom_iff_heq"] : Array String).map String.toName
   let project := (← getEnv).constants.toList.filterMap fun (n, _) =>
     if FoundationExport.foundationName n then some n else none
   for n in project do

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Verify the pinned inventory, axiom audit, and minimal forest export round-trip.
-Cites: D-KR-14, D-CH-20, D-WF-08, D-WF-10, AT-KR-0, AT-FD-1.
+Cites: D-KR-14, D-KR-18, D-CH-20, D-WF-08, D-WF-10, AT-KR-0, AT-FD-1, AT-FD-7.
 
 Builds the audited targets. --write refreshes derived evidence; the default checks it.
 The existing sorry fixture is elaborated in a separate temporary source, never
@@ -118,7 +118,7 @@ def gap_records() -> list[dict]:
         {"id": "relative-derived-mapping", "status": "project-obligation",
          "consequence": "SSet.RelativeMorphism is a strict relative map with a homotopy-class API. It is not the fixed-label derived MapRel or categorical MapCat required by D-RT-23. Available restriction fibrations require an explicit mono and Kan target."},
         {"id": "augmented-arities", "status": "project-obligation",
-         "consequence": "Category-of-elements machinery is available. The repository's augmented incidence algebra, labelled arity model, walking nerves, coherent Mod, and small-space classifier laws are later construction obligations, not supplied by the minimal signature records."},
+         "consequence": "Category-of-elements machinery is available. Kernel.Augmented implements generating incidence, operation types, an active-map obstruction, and a supplied 2-category's cell/composition model. The full augmented algebra equations, comparison with that algebra, free/arity and nerve presentation, labelled diagram model, walking nerves, coherent Mod, and small-space classifier laws remain construction obligations (AT-FD-7 and dependent gates)."},
     ]
     return records
 
@@ -187,7 +187,7 @@ def main() -> None:
     parser.add_argument("--write", action="store_true")
     args = parser.parse_args()
     OUT.mkdir(parents=True, exist_ok=True)
-    run("lake", "build", "Foundations", "Theory")
+    run("lake", "build", "Foundations", "Augmented", "Theory")
     manifest = json.loads((ROOT / "lake-manifest.json").read_text())
     pin = next(p for p in manifest["packages"] if p["name"] == "mathlib")
     revision = run("git", "-C", str(MATHLIB), "rev-parse", "HEAD").strip()
@@ -205,15 +205,23 @@ def main() -> None:
     rows = finalize(json.loads((OUT / "raw.json").read_text()))
     if not all(r["approvedAxioms"] and set(r["axioms"]) <= ALLOWED for r in rows):
         raise RuntimeError("Unapproved dependency or project axiom in inventory")
+    # These implementation modules each declare audited constants. An omitted
+    # aggregate import or stale aggregate artifact must not silently skip one.
+    augmented_modules = {str(p.relative_to(ROOT).with_suffix("")).replace("/", ".")
+                         for p in (ROOT / "Kernel/Augmented").glob("*.lean")}
+    missing_modules = augmented_modules - {r["module"] for r in rows}
+    if missing_modules:
+        raise RuntimeError(f"Augmented implementation missing from audit: {sorted(missing_modules)}; "
+                           "check Augmented.lean imports and rebuild stale artifacts")
     sources = set([
-        "lean-toolchain", "lakefile.toml", "lake-manifest.json", "Foundations.lean",
+        "lean-toolchain", "lakefile.toml", "lake-manifest.json", "Foundations.lean", "Augmented.lean",
         "scripts/FoundationAudit.lean", "scripts/check_foundations.py",
         "Prototype/Negative/Sorry.lean", "Interface/CategorySpec.lean",
         "Kernel/Matrix.lean", "Root/MatrixCategory.lean", "Prototype/MatrixCategoryExamples.lean",
         "Prototype/Universes/Matrix.lean", "Prototype/Universes/Reindex.lean",
         "Prototype/Universes/Examples.lean",
     ])
-    sources.update(str(p.relative_to(ROOT)) for d in ["Kernel/Foundations", "Root/Foundations"]
+    sources.update(str(p.relative_to(ROOT)) for d in ["Kernel/Foundations", "Root/Foundations", "Kernel/Augmented"]
                    for p in (ROOT / d).glob("*.lean"))
     hashes = {p: digest((ROOT / p).read_bytes()) for p in sorted(sources)}
     dependencies = {r["source"] for r in rows if r["flags"]["dependency"]}
@@ -228,10 +236,10 @@ def main() -> None:
         "dependencySourceSha256": dep_hashes, "declarations": rows,
         "gaps": gap_records(), "sourceScan": source_scan(),
         "exportRoundtrip": fixture_roundtrip(args.write),
-        "checks": ["compiled foundational signatures and examples", "scoped transitive axiom audit",
+        "checks": ["compiled foundational signatures, augmented incidence and examples", "scoped transitive axiom audit",
                    "exact declaration names and types from environment", "dependency pins and source hashes",
                    "bounded upstream gap evidence", "stated theorem export/parse round-trip"],
-        "scope": "Initial foundation work only. Root/walking/Mod/classifier records are minimal type contracts with explicit inputs, not completed semantic constructions.",
+        "scope": "Initial foundation work and the first AT-FD-7 implementation slice. Augmented incidence and operation types do not establish the full algebra, arity/nerve presentation or diagram model. Root/walking/Mod/classifier records remain minimal type contracts with explicit inputs.",
     }
     compare_or_write(SNAPSHOT, serialized(evidence), args.write)
     signature_names = {
