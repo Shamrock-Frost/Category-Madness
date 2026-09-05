@@ -3,7 +3,7 @@
 # Bumping the pin is a deliberate act: update both files together and refresh the
 # Mathlib inventory node (AT-KR-0, D-KR-02) in the same PR.
 name = "CategoryMadness"
-defaultTargets = ["Kernel", "Root", "Interface", "Theory", "Prototype", "Foundations"]
+defaultTargets = ["Kernel", "Root", "Interface", "Theory", "Prototype", "Foundations", "Augmented"]
 
 [leanOptions]
 autoImplicit = false          # D-TL-06 (6): universe test
@@ -13,6 +13,11 @@ relaxedAutoImplicit = false
 [[lean_lib]]
 name = "Foundations"
 roots = ["Foundations"]
+
+# Incident generators and rows for the augmented shape gate (D-KR-18, AT-FD-7).
+[[lean_lib]]
+name = "Augmented"
+roots = ["Augmented"]
 
 # M-F experiments are checked without exporting a sealed interface (D-FD-01).
 [[lean_lib]]

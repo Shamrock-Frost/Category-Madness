@@ -4,6 +4,13 @@
     "Interface/FunctionCategory.lean": "938f7da036e14d194b7257b341e70d6c6770fed451decbc5e72e68b8ecf722de",
     "Interface-Stub/FunctionCategory.lean": "695a2138d63b08736887620b6148e1f63852fd527199c0f40cbc40bc753cbb4e",
     "Interface.lean": "71a15074dafc564b490ced6de5bdd25565a05ed3ea46f7d2405386f494ca71ad",
+    "Kernel/Augmented/Examples.lean": "17859c29ec1d96ded93f4aa277d4e1a830ee365039718c3a73ff593f74411da2",
+    "Kernel/Augmented/FromCat.lean": "ee06fc92abe002c88b9948f6d9978b2989bdcac38104063bb74d2254dd8ceb2f",
+    "Kernel/Augmented/FromTwoCategory.lean": "ae570c34fff22ad4ada5f8ffd78ce320eff45e2e9ce2906dc6fa7f24ba718001",
+    "Kernel/Augmented/Incidence.lean": "07dbaf3a76f31c8277266eeaf430a2763d0837d4a180483c26cfe10f61cd125b",
+    "Kernel/Augmented/Operations.lean": "c6f71823eeaca6ec448e539d57e52c4f523edcfa0c500a4c556e0ba270c27a46",
+    "Kernel/Augmented/Rows.lean": "999983f26446295acc184b728f3c6181f600d533dd65361432ad7b48428ee56b",
+    "Kernel/Augmented/SimplexObstruction.lean": "29aa462d17a0550c6065afcd8726dbdf358086c846cfc5ab50a75034bb672c98",
     "Kernel/Foundations/Examples.lean": "8120870258faedd230ba6fb29a1d6ac238e75a2af382b2faf4f957e833fc059a",
     "Kernel/Foundations/Inventory.lean": "e3ce4c8a960d16010852822218d9d4f49c94353dca4dfc83283ec9b6db2dcf52",
     "Kernel/Foundations/Signatures.lean": "1fdaacd73050f8173f71ca2be76c6588747ede7747fb61819edb84bda6458425",
@@ -19,7 +26,7 @@
     "Root.lean": "efa8b75eb73b8e62fcf23692dc85b64dd38e7ae4feff84c90e407188db827469",
     "Theory/Category.lean": "be6cc7d1b64704220348ce96609878241dcbd246a6c87e4b2beddf5252f84b00",
     "Theory.lean": "0ef89f127f9035be2ccd148cc09e79b3ba3ef31c1e9ab3209c62118388b52cb6",
-    "lakefile.toml": "456e5d9df44907f22875de0ddd2b9a2e0cde541d7779cc647a6281078053220a",
+    "lakefile.toml": "1c7cbb15f61908d9b528e46791cb9e68420f6eefcf172d3d775366a9c4709bfd",
     "lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71",
     "scripts/SealAudit.lean": "e50872ddc042c8133c37f62ac7013745231e286c1406938a8963780464c77d45",
     "scripts/check_seal.py": "379e5c316e8865728e865e4a34087d6649c1dbbfd6b0388d75664f91015ca766",
@@ -30,79 +37,79 @@
   "checks": [
     {
       "check": "real-build",
-      "seconds": 1.365,
+      "seconds": 1.471,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "real-audit",
-      "seconds": 1.96,
+      "seconds": 2.23,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "real-opaque-equation",
-      "seconds": 0.246,
+      "seconds": 0.226,
       "exit_code": 1,
       "expected_rejection": "Type mismatch"
     },
     {
       "check": "stub-build",
-      "seconds": 1.052,
+      "seconds": 0.836,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "stub-audit",
-      "seconds": 2.073,
+      "seconds": 1.803,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "stub-opaque-equation",
-      "seconds": 0.252,
+      "seconds": 0.228,
       "exit_code": 1,
       "expected_rejection": "Type mismatch"
     },
     {
       "check": "stub-in-real-audit",
-      "seconds": 1.959,
+      "seconds": 1.64,
       "exit_code": 1,
       "expected_rejection": "AXIOM_REJECTED"
     },
     {
       "check": "ProjectAxiom-compile",
-      "seconds": 0.247,
+      "seconds": 0.499,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "ProjectAxiom-audit",
-      "seconds": 1.962,
+      "seconds": 1.935,
       "exit_code": 1,
       "expected_rejection": "AXIOM_REJECTED"
     },
     {
       "check": "Sorry-compile",
-      "seconds": 0.245,
+      "seconds": 0.624,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "Sorry-audit",
-      "seconds": 1.86,
+      "seconds": 1.982,
       "exit_code": 1,
       "expected_rejection": "AXIOM_REJECTED"
     },
     {
       "check": "PrivateLeak-compile",
-      "seconds": 0.235,
+      "seconds": 0.515,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "PrivateLeak-audit",
-      "seconds": 1.727,
+      "seconds": 1.966,
       "exit_code": 1,
       "expected_rejection": "SEAL_LEAK"
     }

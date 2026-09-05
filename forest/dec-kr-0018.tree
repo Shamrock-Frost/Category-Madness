@@ -32,4 +32,5 @@
 \subtree{
   \title{Status}
   \p{provisional research definition, not frozen pending an omitted relation list.}
+  \p{The first implementation slice is in \code{Kernel/Augmented/}, with source and equation obligations recorded in \code{docs/augmented/README.md}. It checks incidence, operation types, ordinary-active obstruction and a supplied 2-category's binary cell laws. The complete algebra, arity presentation, no-horizontal discrete-nerve comparison and diagram model remain open under \ref{at-fd-0007}; this does not freeze the decision.}
 }
