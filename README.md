@@ -6,10 +6,11 @@ a reduced augmented virtual double ∞-category. Design revision 1 keeps that ro
 provisional until a focused foundation-feasibility milestone tests its semantics and
 implementation boundary.
 
-**Status: M0 complete; M-F started.** The first Lean prototype covers matrix-family
-universes, reindexing, and independent object and entry lifts. See
-`Prototype/Universes/README.md` for its scope and check
-record. No complete foundation gate is marked proved.
+**Status: M-F implementation underway; AT-FD-2 passed.** Discrete matrix monads
+now convert to ordinary category structures and back, with a concrete types/functions
+model. An opaque category package supports a law-based inverse-uniqueness client,
+checked against both implementation and stub. See `Prototype/MatrixCategory.md`.
+The higher root and the remaining foundation gates are still provisional.
 
 ## Start here
 
@@ -28,8 +29,8 @@ record. No complete foundation gate is marked proved.
 
 Historical decisions remain resolvable with status `superseded`, but active searches
 omit them and CI rejects them as citations. Current decisions have fresh IDs recorded in
-`design/decision-supersession.json`. Every acceptance record is statement version 1 and
-starts at `proposed`, except retired AT-RT-4 and AT-FT-8.
+`design/decision-supersession.json`. Acceptance records retain statement version 1. AT-FD-2 is now `proved`;
+the remaining active tests are `proposed`, and AT-RT-4 and AT-FT-8 are retired.
 
 ## Working here
 

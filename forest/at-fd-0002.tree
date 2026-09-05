@@ -3,13 +3,15 @@
 \meta{id}{AT-FD-2}
 \meta{area}{foundation feasibility}
 \meta{origin}{design/11-foundation-feasibility.md}
-\meta{status}{proposed}
+\meta{status}{proved}
 \meta{statement-version}{1}
+\meta{evidence}{Prototype/MatrixCategory.md, Prototype/MatrixCategory-evidence.json}
 \tag{acceptance-test}
 \tag{area:fd}
-\tag{status:proposed}
+\tag{status:proved}
 
 \p{Build one dependent specification containing a carrier, nontrivial operations, and laws; provide its kernel-backed inhabitant. Expose an opaque package with transparent logical projections, or the precisely audited alternative from \ref{dec-rt-0028}. Prove a client theorem that uses the laws. Build the identical client against a stub package. Also supply a client depending on an implementation equation and show the checking pipeline rejects it. Confirm both builds use the same public signatures and record a small performance measurement. The prototype does not need the whole root.}
 \p{\strong{Depends on:} \ref{ms-0000}; \ref{at-fd-0001} if universes are shared. \strong{Evidence:} both successful builds, negative-test failure, dependency audit, and timing. \strong{Failure response:} revise the seal packaging before creating broad Theory clients.}
 \p{Named by: \ref{dec-ch-0014}, \ref{dec-ch-0021}, \ref{dec-ch-0022}, \ref{dec-ch-0025}, \ref{dec-rt-0028}, \ref{dec-tl-0017}, \ref{dec-tl-0018}.}
-\p{\em{Lean declaration(s):} none yet.}
+\p{\em{Lean declarations:} \code{Interface.CategorySpec}, \code{Interface.functionCategory}, \code{Theory.inverse_unique}, and \code{Theory.function_inverse_unique}. The inhabitant is built from \code{Kernel.Matrix.functions} through \code{Root.MatrixCategory.toCategory}.}
+\p{\em{Checked evidence:} fresh implementation and stub builds of identical clients; matching elaborated public signatures; an implementation-equation rejection in both modes; compiled dependency and axiom audits; and recorded timings. Reproduce with \code{bash scripts/swap_test.sh}. The statement remains version 1; this passes only the scoped nonempty-seal gate, not the full foundation.}

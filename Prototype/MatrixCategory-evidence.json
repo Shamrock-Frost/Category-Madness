@@ -1,0 +1,105 @@
+{
+  "source_sha256": {
+    "Interface/CategorySpec.lean": "741db58e40414cc574b00b5633473f6913b700ca077084dce1154abd6090dc58",
+    "Interface/FunctionCategory.lean": "938f7da036e14d194b7257b341e70d6c6770fed451decbc5e72e68b8ecf722de",
+    "Interface-Stub/FunctionCategory.lean": "695a2138d63b08736887620b6148e1f63852fd527199c0f40cbc40bc753cbb4e",
+    "Interface.lean": "71a15074dafc564b490ced6de5bdd25565a05ed3ea46f7d2405386f494ca71ad",
+    "Kernel/Matrix.lean": "05d337d42f617f652b3d51e21fb28ad8078f9c6f59cdb2dda0199fad1db98340",
+    "Kernel.lean": "1da733fcc869f8ea6512e6292d63e872ba3463f0c78d7eb5a1ee1b4d644cce3f",
+    "Prototype/Negative/ImplementationEquation.lean": "7f8aa7c982ca13c6bd97125a21064fe293783cf9ccefae30533104531205b057",
+    "Prototype/Negative/PrivateLeak.lean": "9cc301b8094f34ec94c6b59b01b8a423f1ee63b32525b8f7ae7cf695df95053c",
+    "Prototype/Negative/ProjectAxiom.lean": "f0931f9c949337115c4dd4cc9e31d44455950aa9734c8a06a3bef6ccd42f6131",
+    "Prototype/Negative/Sorry.lean": "b9f617d1c3b30df9fcd89ae0b9a53c77ec3033771e91166417268d19ec9accc7",
+    "Root/MatrixCategory.lean": "08ab1e23847a1c4481dab1a2580dd8e3c31bb33824ef89984902ee208f2166a9",
+    "Root.lean": "efa8b75eb73b8e62fcf23692dc85b64dd38e7ae4feff84c90e407188db827469",
+    "Theory/Category.lean": "be6cc7d1b64704220348ce96609878241dcbd246a6c87e4b2beddf5252f84b00",
+    "Theory.lean": "0ef89f127f9035be2ccd148cc09e79b3ba3ef31c1e9ab3209c62118388b52cb6",
+    "lakefile.toml": "8947f93bc4a9b0babe0388b376bc64c9688071491fe87ee27a24d9340ee98183",
+    "lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71",
+    "scripts/SealAudit.lean": "e50872ddc042c8133c37f62ac7013745231e286c1406938a8963780464c77d45",
+    "scripts/check_seal.py": "379e5c316e8865728e865e4a34087d6649c1dbbfd6b0388d75664f91015ca766",
+    "scripts/swap_test.sh": "dadd6a0dead9f073f1edc42ff513620fe12a5e6992d1f7066b4d1f03b6a85750"
+  },
+  "public_signature_count": 39,
+  "public_signature_sha256": "fe813e0fa1f418330d8382c59da415c1cae9e9d2bf9f587c507719621c74fc08",
+  "checks": [
+    {
+      "check": "real-build",
+      "seconds": 1.365,
+      "exit_code": 0,
+      "expected_rejection": null
+    },
+    {
+      "check": "real-audit",
+      "seconds": 1.861,
+      "exit_code": 0,
+      "expected_rejection": null
+    },
+    {
+      "check": "real-opaque-equation",
+      "seconds": 0.219,
+      "exit_code": 1,
+      "expected_rejection": "Type mismatch"
+    },
+    {
+      "check": "stub-build",
+      "seconds": 0.942,
+      "exit_code": 0,
+      "expected_rejection": null
+    },
+    {
+      "check": "stub-audit",
+      "seconds": 1.884,
+      "exit_code": 0,
+      "expected_rejection": null
+    },
+    {
+      "check": "stub-opaque-equation",
+      "seconds": 0.236,
+      "exit_code": 1,
+      "expected_rejection": "Type mismatch"
+    },
+    {
+      "check": "stub-in-real-audit",
+      "seconds": 1.838,
+      "exit_code": 1,
+      "expected_rejection": "AXIOM_REJECTED"
+    },
+    {
+      "check": "ProjectAxiom-compile",
+      "seconds": 0.424,
+      "exit_code": 0,
+      "expected_rejection": null
+    },
+    {
+      "check": "ProjectAxiom-audit",
+      "seconds": 1.855,
+      "exit_code": 1,
+      "expected_rejection": "AXIOM_REJECTED"
+    },
+    {
+      "check": "Sorry-compile",
+      "seconds": 0.25,
+      "exit_code": 0,
+      "expected_rejection": null
+    },
+    {
+      "check": "Sorry-audit",
+      "seconds": 1.918,
+      "exit_code": 1,
+      "expected_rejection": "AXIOM_REJECTED"
+    },
+    {
+      "check": "PrivateLeak-compile",
+      "seconds": 0.224,
+      "exit_code": 0,
+      "expected_rejection": null
+    },
+    {
+      "check": "PrivateLeak-audit",
+      "seconds": 1.861,
+      "exit_code": 1,
+      "expected_rejection": "SEAL_LEAK"
+    }
+  ]
+}

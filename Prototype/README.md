@@ -13,3 +13,8 @@ explicit universe examples in `Universes/Examples.lean`. It covers entry lifts,
 object-label lifts, and their comparisons. See `Universes/README.md` for its universe
 table, validation commands, and remaining AT-FD-1 work. `lake build` includes all three
 modules.
+
+The implementation now lives in Kernel/Root/Interface/Theory.
+`MatrixCategoryExamples.lean` checks its concrete behavior and universe parameters;
+`MatrixCategory.md` records the construction and seal evidence. Negative fixtures
+under `Negative/` are compiled only by the isolated seal checker.

@@ -64,17 +64,17 @@ python3 mcp/server.py --selftest
 bash scripts/swap_test.sh
 ```
 
-`Prototype` is the default Lake target while the four planned layer libraries have
-no Lean modules. Their library declarations remain available for subsequent work.
+The default Lake build now includes Kernel, Root, Interface, Theory, and Prototype.
+The matrix-universe examples remain supporting checks for the discrete implementation.
 `lake-manifest.json` records the resolved pinned dependency revisions. This prototype
 does not require Mathlib's compiled cache; on a first setup, the optional download
 can be skipped with `MATHLIB_NO_CACHE_ON_UPDATE=1 lake update`.
 
 The examples print the axiom dependencies of all nineteen theorems. These reports are
 local evidence for the matrix lemmas; the complete AT-FD-11 dependency audit remains
-outstanding. The swap script currently skips because there are no Theory clients.
+outstanding. The swap script now checks the discrete seal described in `../MatrixCategory.md`.
 
-## Check record
+## Initial matrix-only check record
 
 Checked on 2026-09-05 with Lean 4.33.1, release commit
 `819816b2e0a3bf405af45ae5c7af2491d8f5bee6`:

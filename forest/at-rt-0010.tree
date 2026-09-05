@@ -5,10 +5,11 @@
 \meta{origin}{design/02-root.md}
 \meta{status}{proposed}
 \meta{statement-version}{1}
+\meta{evidence}{Prototype/MatrixCategory.md}
 \tag{acceptance-test}
 \tag{area:rt}
 \tag{status:proposed}
 
 \p{, \ref{at-rt-0012}, \ref{at-sp-0003}, \ref{at-fd-0004}}
 \p{Named by: \ref{dec-ch-0017}, \ref{dec-rt-0025}, \ref{dec-rt-0026}, \ref{dec-rt-0029}.}
-\p{\em{Lean declaration(s):} none yet.}
+\p{\em{Partial Lean declarations:} \code{Root.MatrixCategory.toCategory}, \code{ofCategory}, \code{toCategory_ofCategory}, and \code{ofCategory_toCategory} establish the discrete matrix-monad/ordinary-structure comparison. The augmented root and Segal-presheaf comparison are not yet implemented; the full test remains proposed.}

@@ -3,8 +3,7 @@
 # Bumping the pin is a deliberate act: update both files together and refresh the
 # Mathlib inventory node (AT-KR-0, D-KR-02) in the same PR.
 name = "CategoryMadness"
-# The planned layer targets below have no Lean modules yet.
-defaultTargets = ["Prototype"]
+defaultTargets = ["Kernel", "Root", "Interface", "Theory", "Prototype"]
 
 [leanOptions]
 autoImplicit = false          # D-TL-06 (6): universe test

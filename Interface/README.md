@@ -1,13 +1,10 @@
-# Interface/ — the seal (D-RT-13)
+# Interface — bundled specification and seal
 
-Exactly the list in D-RT-13 (`dec-rt-0013`), nothing else: shapes as categories, `Space`,
-the root, the constructions, the closure and rectification package. Constants are
-`opaque` (inhabited from the kernel) or `@[irreducible]` with private equation lemmas;
-every exported theorem is stated in interface vocabulary only (scripts/check_statement_hygiene.py).
+`CategorySpec.lean` is transparent logical infrastructure. `FunctionCategory.lean`
+seals an inhabited package containing an object carrier, hom family, operations,
+and laws. `SEALED` lists this initial package. Its API remains provisional.
 
-Two-tier extension policy: new constants need a superseding decision; lemmas statable in
-interface vocabulary and provable in `Root/` may be added by PR.
+Clients use its projections and proved laws; the implementation-only carrier
+equation is deliberately unavailable. See `Prototype/MatrixCategory.md`.
 
-`SEALED` (to be generated at M3) lists the sealed constant names for scripts/check_unfolding.py.
-
-Empty at M0. Interface v1 is frozen at M3.
+Cites: D-CH-14, D-CH-25, D-RT-28, AT-FD-2.

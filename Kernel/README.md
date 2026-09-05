@@ -1,8 +1,7 @@
-# Kernel/ — stage 0 (D-CH-08, D-KR-01)
+# Kernel — discrete matrix implementation
 
-Shape categories, presheaves, simplicial sets, Kan machinery, and set-level (augmented)
-virtual double categories used only to construct shapes. Built on Mathlib's
-`CategoryTheory` and `AlgebraicTopology`. Definitional equality is allowed here; nothing
-is exported past the seal (D-RT-13). Files are marked `-- KERNEL`.
+`Matrix.lean` defines families, equality-unit cells, binary multicells, monad laws,
+and the types/functions model. It currently needs only Lean Init. Future shape and
+homotopy machinery can use pinned Mathlib. See `Prototype/MatrixCategory.md`.
 
-Empty at M0. Filled from M1 (see the milestone node `ms-0001`).
+Cites: D-RT-25, D-RT-27, D-FD-01.

@@ -323,16 +323,17 @@
       "tags": [
         "acceptance-test",
         "area:fd",
-        "status:proposed"
+        "status:proved"
       ],
       "meta": {
         "id": "AT-FD-2",
         "area": "foundation feasibility",
         "origin": "design/11-foundation-feasibility.md",
-        "status": "proposed",
-        "statement-version": "1"
+        "status": "proved",
+        "statement-version": "1",
+        "evidence": "Prototype/MatrixCategory.md, Prototype/MatrixCategory-evidence.json"
       },
-      "status": "proposed",
+      "status": "proved",
       "refs": [
         "at-fd-0001",
         "dec-ch-0014",
@@ -724,7 +725,8 @@
         "area": "foundation feasibility",
         "origin": "design/11-foundation-feasibility.md",
         "status": "proposed",
-        "statement-version": "1"
+        "statement-version": "1",
+        "evidence": "Prototype/MatrixCategory.md"
       },
       "status": "proposed",
       "refs": [
@@ -1742,7 +1744,8 @@
         "area": "root",
         "origin": "design/02-root.md",
         "status": "proposed",
-        "statement-version": "1"
+        "statement-version": "1",
+        "evidence": "Prototype/MatrixCategory.md"
       },
       "status": "proposed",
       "refs": [

@@ -1,9 +1,11 @@
-# Interface-Stub/ — the swap test (D-TL-06 (4), D-CH-12)
+# Interface stub overlay
 
-A generated copy of `Interface/` in which every constant is a bodiless `axiom` with the
-same statement. `Theory/` must build against it (scripts/swap_test.sh); green is the
-proof that no definitional equality leaks through the seal. It is also the fast build
-variant (D-RT-13 (5)); the kernel-backed build remains the consistency witness and
-runs nightly.
+For the M-F seal check, `FunctionCategory.lean` replaces only the opaque package
+with an axiom of the same specification type. `scripts/check_seal.py` overlays it
+on a fresh copy of Interface, preserving the transparent specification.
 
-Never hand-edited. Generated at M3.
+The stub is test-only and its axiom is rejected by the implementation audit. Both
+builds run in CI via `scripts/swap_test.sh`; neither modifies the working tree.
+Broad stub generation remains future work. See `Prototype/MatrixCategory.md`.
+
+Cites: D-CH-25, D-RT-28, D-TL-17, AT-FD-2.
