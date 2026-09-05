@@ -59,3 +59,6 @@ python3 scripts/forest_check.py
 The Lean toolchain remains pinned in `lean-toolchain` and `lakefile.toml`. Run
 `lake build` to check the default targets, including `Prototype`. CI runs on
 `prima-materia`; its source detection includes M-F prototypes.
+
+For container-specific Lean setup and Forester 5 prerequisites, see
+[`docs/CONTAINER_SETUP.md`](docs/CONTAINER_SETUP.md).
