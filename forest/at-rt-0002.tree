@@ -1,4 +1,4 @@
-\title{AT-RT-2 · \\code{Mat(Set)} is a VDC∞}
+\title{AT-RT-2 · \code{Mat(Set)} is a VDC∞}
 \taxon{Acceptance test}
 \meta{id}{AT-RT-2}
 \meta{area}{root}
@@ -9,6 +9,6 @@
 \tag{area:rt}
 \tag{status:proposed}
 
-\p{, \ref{at-fd-0008}, \ref{at-rt-0008}}
+\p{\code{Mat(Set)} is a VDC∞.}
 \p{Named by: \ref{dec-rt-0025}, \ref{dec-sp-0012}.}
 \p{\em{Lean declaration(s):} none yet.}

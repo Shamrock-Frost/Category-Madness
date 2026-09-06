@@ -392,8 +392,6 @@
         "at-fd-0007",
         "at-fd-0008",
         "at-kr-0009",
-        "at-kr-0010",
-        "at-kr-0011",
         "dec-ch-0018",
         "dec-kr-0016",
         "dec-kr-0019",
@@ -441,8 +439,6 @@
       "backlinks": [
         "at-fd-0008",
         "at-rt-0006",
-        "at-rt-0010",
-        "at-rt-0012",
         "bib-0000",
         "dec-ch-0017",
         "dec-ch-0018",
@@ -521,7 +517,6 @@
       ],
       "file": "forest/at-fd-0006.tree",
       "backlinks": [
-        "at-kr-0010",
         "dec-ch-0026",
         "dec-ft-0009",
         "dec-kr-0022",
@@ -564,8 +559,6 @@
       "backlinks": [
         "at-fd-0003",
         "at-fd-0005",
-        "at-kr-0001",
-        "at-rt-0012",
         "dec-ch-0018",
         "dec-kr-0015",
         "dec-kr-0016",
@@ -622,9 +615,6 @@
         "at-fd-0004",
         "at-fd-0005",
         "at-fd-0007",
-        "at-kr-0010",
-        "at-kr-0011",
-        "at-rt-0002",
         "at-up-0003",
         "dec-ch-0018",
         "dec-ch-0026",
@@ -697,8 +687,6 @@
       ],
       "file": "forest/at-fd-0010.tree",
       "backlinks": [
-        "at-rt-0012",
-        "at-up-0006",
         "dec-ch-0016",
         "dec-ch-0026",
         "dec-rt-0030",
@@ -789,7 +777,7 @@
     "at-ft-0002": {
       "id": "AT-FT-2",
       "taxon": "Acceptance test",
-      "title": "AT-FT-2 · \\Mat(Set) and \\Cat are augmented virtual equipments",
+      "title": "AT-FT-2 · Mat(Set) and Cat are augmented virtual equipments",
       "tags": [
         "acceptance-test",
         "area:ft",
@@ -815,7 +803,7 @@
     "at-ft-0003": {
       "id": "AT-FT-3",
       "taxon": "Acceptance test",
-      "title": "AT-FT-3 · \\Mod preserves augmented virtual (∞-)equipments",
+      "title": "AT-FT-3 · Mod preserves augmented virtual (∞-)equipments",
       "tags": [
         "acceptance-test",
         "area:ft",
@@ -871,7 +859,7 @@
     "at-ft-0005": {
       "id": "AT-FT-5",
       "taxon": "Acceptance test",
-      "title": "AT-FT-5 · \\Cat has composites",
+      "title": "AT-FT-5 · Cat has composites",
       "tags": [
         "acceptance-test",
         "area:ft",
@@ -951,7 +939,7 @@
     "at-ft-0008": {
       "id": "AT-FT-8",
       "taxon": "Acceptance test",
-      "title": "AT-FT-8 · \\hP is an augmented virtual equipment",
+      "title": "AT-FT-8 · hP is an augmented virtual equipment",
       "tags": [
         "acceptance-test",
         "area:ft",
@@ -997,7 +985,8 @@
       },
       "status": "proposed",
       "refs": [
-        "dec-ft-0010"
+        "dec-ft-0010",
+        "ms-0007"
       ],
       "file": "forest/at-ft-0009.tree",
       "backlinks": [
@@ -1041,7 +1030,7 @@
     "at-kr-0001": {
       "id": "AT-KR-1",
       "taxon": "Acceptance test",
-      "title": "AT-KR-1 · \\Θ_T(free category) ≅ SimplexCategory",
+      "title": "AT-KR-1 · Θ_T(free category) ≅ SimplexCategory",
       "tags": [
         "acceptance-test",
         "area:kr",
@@ -1056,9 +1045,6 @@
       },
       "status": "proposed",
       "refs": [
-        "at-fd-0007",
-        "at-kr-0002",
-        "at-kr-0008",
         "dec-kr-0015"
       ],
       "file": "forest/at-kr-0001.tree",
@@ -1090,7 +1076,6 @@
       ],
       "file": "forest/at-kr-0002.tree",
       "backlinks": [
-        "at-kr-0001",
         "dec-kr-0003",
         "dec-kr-0006",
         "dec-kr-0015",
@@ -1134,7 +1119,7 @@
     "at-kr-0004": {
       "id": "AT-KR-4",
       "taxon": "Acceptance test",
-      "title": "AT-KR-4 · \\Θ_1 ≅ Δ, \\Θ_2 ≅ Δ ≀ Δ",
+      "title": "AT-KR-4 · Θ_1 ≅ Δ, Θ_2 ≅ Δ ≀ Δ",
       "tags": [
         "acceptance-test",
         "area:kr",
@@ -1258,14 +1243,12 @@
       },
       "status": "proposed",
       "refs": [
-        "at-rt-0001",
         "dec-kr-0013",
         "dec-kr-0015",
         "dec-kr-0018"
       ],
       "file": "forest/at-kr-0008.tree",
       "backlinks": [
-        "at-kr-0001",
         "dec-kr-0006",
         "dec-kr-0013",
         "dec-kr-0015",
@@ -1320,9 +1303,6 @@
       },
       "status": "proposed",
       "refs": [
-        "at-fd-0003",
-        "at-fd-0006",
-        "at-fd-0008",
         "dec-kr-0022"
       ],
       "file": "forest/at-kr-0010.tree",
@@ -1351,8 +1331,6 @@
       },
       "status": "proposed",
       "refs": [
-        "at-fd-0003",
-        "at-fd-0008",
         "dec-kr-0023",
         "dec-rt-0022"
       ],
@@ -1420,7 +1398,7 @@
     "at-kr-0014": {
       "id": "AT-KR-14",
       "taxon": "Acceptance test",
-      "title": "AT-KR-14 · The general pasting theorem restricts to nerve-theorem composites on \\Θ^aug_fc",
+      "title": "AT-KR-14 · The general pasting theorem restricts to nerve-theorem composites on Θ^aug_fc",
       "tags": [
         "acceptance-test",
         "area:kr",
@@ -1458,8 +1436,6 @@
       },
       "status": "proposed",
       "refs": [
-        "at-rt-0003",
-        "at-rt-0010",
         "dec-kr-0013",
         "dec-rt-0016",
         "dec-rt-0020",
@@ -1467,7 +1443,6 @@
       ],
       "file": "forest/at-rt-0001.tree",
       "backlinks": [
-        "at-kr-0008",
         "at-rt-0004",
         "dec-ch-0008",
         "dec-kr-0013",
@@ -1484,7 +1459,7 @@
     "at-rt-0002": {
       "id": "AT-RT-2",
       "taxon": "Acceptance test",
-      "title": "AT-RT-2 · \\Mat(Set) is a VDC∞",
+      "title": "AT-RT-2 · Mat(Set) is a VDC∞",
       "tags": [
         "acceptance-test",
         "area:rt",
@@ -1499,8 +1474,6 @@
       },
       "status": "proposed",
       "refs": [
-        "at-fd-0008",
-        "at-rt-0008",
         "dec-rt-0025",
         "dec-sp-0012"
       ],
@@ -1535,7 +1508,6 @@
       ],
       "file": "forest/at-rt-0003.tree",
       "backlinks": [
-        "at-rt-0001",
         "dec-rt-0001",
         "dec-rt-0011",
         "dec-rt-0016",
@@ -1545,7 +1517,7 @@
     "at-rt-0004": {
       "id": "AT-RT-4",
       "taxon": "Acceptance test",
-      "title": "AT-RT-4 · \\hP is an augmented VDC",
+      "title": "AT-RT-4 · hP is an augmented VDC",
       "tags": [
         "acceptance-test",
         "area:rt",
@@ -1605,7 +1577,7 @@
     "at-rt-0006": {
       "id": "AT-RT-6",
       "taxon": "Acceptance test",
-      "title": "AT-RT-6 · \\Map independent of the replacement",
+      "title": "AT-RT-6 · Map independent of the replacement",
       "tags": [
         "acceptance-test",
         "area:rt",
@@ -1634,7 +1606,7 @@
     "at-rt-0007": {
       "id": "AT-RT-7",
       "taxon": "Acceptance test",
-      "title": "AT-RT-7 · \\Mod(P) is a VDC∞",
+      "title": "AT-RT-7 · Mod(P) is a VDC∞",
       "tags": [
         "acceptance-test",
         "area:rt",
@@ -1661,7 +1633,7 @@
     "at-rt-0008": {
       "id": "AT-RT-8",
       "taxon": "Acceptance test",
-      "title": "AT-RT-8 · \\Mat(Kan) is a VDC∞ (M6)",
+      "title": "AT-RT-8 · Mat(Kan) is a VDC∞ (M6)",
       "tags": [
         "acceptance-test",
         "area:rt",
@@ -1677,11 +1649,11 @@
       "status": "proposed",
       "refs": [
         "dec-sp-0012",
-        "dec-sp-0013"
+        "dec-sp-0013",
+        "ms-0006"
       ],
       "file": "forest/at-rt-0008.tree",
       "backlinks": [
-        "at-rt-0002",
         "dec-rt-0001",
         "dec-sp-0004",
         "dec-sp-0012",
@@ -1729,7 +1701,7 @@
     "at-rt-0010": {
       "id": "AT-RT-10",
       "taxon": "Acceptance test",
-      "title": "AT-RT-10 · \\Category A ≃ classical structure ≃ Segal presheaves on \\Δ_A",
+      "title": "AT-RT-10 · Category A ≃ classical structure ≃ Segal presheaves on Δ_A",
       "tags": [
         "acceptance-test",
         "area:rt",
@@ -1744,9 +1716,6 @@
       },
       "status": "proposed",
       "refs": [
-        "at-fd-0004",
-        "at-rt-0012",
-        "at-sp-0003",
         "dec-ch-0017",
         "dec-rt-0025",
         "dec-rt-0026",
@@ -1754,7 +1723,6 @@
       ],
       "file": "forest/at-rt-0010.tree",
       "backlinks": [
-        "at-rt-0001",
         "dec-ch-0017",
         "dec-rt-0010",
         "dec-rt-0025",
@@ -1765,7 +1733,7 @@
     "at-rt-0011": {
       "id": "AT-RT-11",
       "taxon": "Acceptance test",
-      "title": "AT-RT-11 · Vertical 2-category of \\Cat is the classical one",
+      "title": "AT-RT-11 · Vertical 2-category of Cat is the classical one",
       "tags": [
         "acceptance-test",
         "area:rt",
@@ -1793,7 +1761,7 @@
     "at-rt-0012": {
       "id": "AT-RT-12",
       "taxon": "Acceptance test",
-      "title": "AT-RT-12 · \\Vert₂(Cat) with its pasting theorem is the classical 2-category",
+      "title": "AT-RT-12 · Vert₂(Cat) with its pasting theorem is the classical 2-category",
       "tags": [
         "acceptance-test",
         "area:rt",
@@ -1808,9 +1776,6 @@
       },
       "status": "proposed",
       "refs": [
-        "at-fd-0004",
-        "at-fd-0007",
-        "at-fd-0010",
         "dec-ch-0017",
         "dec-rt-0019",
         "dec-rt-0025",
@@ -1820,7 +1785,6 @@
       ],
       "file": "forest/at-rt-0012.tree",
       "backlinks": [
-        "at-rt-0010",
         "dec-ch-0017",
         "dec-rt-0015",
         "dec-rt-0019",
@@ -1833,7 +1797,7 @@
     "at-sp-0001": {
       "id": "AT-SP-1",
       "taxon": "Acceptance test",
-      "title": "AT-SP-1 · \\U is a Kan complex",
+      "title": "AT-SP-1 · U is a Kan complex",
       "tags": [
         "acceptance-test",
         "area:sp",
@@ -1862,7 +1826,7 @@
     "at-sp-0002": {
       "id": "AT-SP-2",
       "taxon": "Acceptance test",
-      "title": "AT-SP-2 · \\Kan is an ∞-category in the library's sense",
+      "title": "AT-SP-2 · Kan is an ∞-category in the library's sense",
       "tags": [
         "acceptance-test",
         "area:sp",
@@ -1889,7 +1853,7 @@
     "at-sp-0003": {
       "id": "AT-SP-3",
       "taxon": "Acceptance test",
-      "title": "AT-SP-3 · Monads in \\Mat(Kan) at \\A are Segal categories with object set \\A",
+      "title": "AT-SP-3 · Monads in Mat(Kan) at A are Segal categories with object set A",
       "tags": [
         "acceptance-test",
         "area:sp",
@@ -1909,7 +1873,6 @@
       ],
       "file": "forest/at-sp-0003.tree",
       "backlinks": [
-        "at-rt-0010",
         "dec-ch-0017",
         "dec-sp-0004",
         "dec-sp-0013",
@@ -1919,7 +1882,7 @@
     "at-sp-0004": {
       "id": "AT-SP-4",
       "taxon": "Acceptance test",
-      "title": "AT-SP-4 · \\Span(S) is a VDC∞, fibrant when \\S is",
+      "title": "AT-SP-4 · Span(S) is a VDC∞, fibrant when S is",
       "tags": [
         "acceptance-test",
         "area:sp",
@@ -1950,7 +1913,7 @@
     "at-sp-0005": {
       "id": "AT-SP-5",
       "taxon": "Acceptance test",
-      "title": "AT-SP-5 · \\Mod(Mat Kan) ≃ Mod(Span Kan)",
+      "title": "AT-SP-5 · Mod(Mat Kan) ≃ Mod(Span Kan)",
       "tags": [
         "acceptance-test",
         "area:sp",
@@ -2067,7 +2030,7 @@
     "at-sp-0009": {
       "id": "AT-SP-9",
       "taxon": "Acceptance test",
-      "title": "AT-SP-9 · \\Mod(H-Kl(T_Σ, Mat Set)) is the classical equipment of coloured symmetric operads",
+      "title": "AT-SP-9 · Mod(H-Kl(T_Σ, Mat Set)) is the classical equipment of coloured symmetric operads",
       "tags": [
         "acceptance-test",
         "area:sp",
@@ -2095,7 +2058,7 @@
     "at-sp-0010": {
       "id": "AT-SP-10",
       "taxon": "Acceptance test",
-      "title": "AT-SP-10 · Monads in \\H-Kl(T_Σ, Mat Kan) present Lurie's ∞-operads (Haugseng",
+      "title": "AT-SP-10 · Monads in H-Kl(T_Σ, Mat Kan) present Lurie's ∞-operads (Haugseng",
       "tags": [
         "acceptance-test",
         "area:sp",
@@ -2123,7 +2086,7 @@
     "at-sp-0011": {
       "id": "AT-SP-11",
       "taxon": "Acceptance test",
-      "title": "AT-SP-11 · Contractible monads in the \\T_ℕ/\\T_𝔹/\\T_Σ Kleisli VDC∞s are…",
+      "title": "AT-SP-11 · Contractible monads in the T_ℕ/T_𝔹/T_Σ Kleisli VDC∞s are E_1/E_2/E_∞",
       "tags": [
         "acceptance-test",
         "area:sp",
@@ -2150,7 +2113,7 @@
     "at-sp-0012": {
       "id": "AT-SP-12",
       "taxon": "Acceptance test",
-      "title": "AT-SP-12 · \\HasColimits Kan (the mountain)",
+      "title": "AT-SP-12 · HasColimits Kan (the mountain)",
       "tags": [
         "acceptance-test",
         "area:sp",
@@ -2177,7 +2140,7 @@
     "at-sp-0013": {
       "id": "AT-SP-13",
       "taxon": "Acceptance test",
-      "title": "AT-SP-13 · \\H-Kl(T, X) is a VDC∞ and \\Mod(H-Kl(T, X)) is an equipment…",
+      "title": "AT-SP-13 · H-Kl(T, X) is a VDC∞ and Mod(H-Kl(T, X)) is an equipment (Cruttwell–Shulman at ∞)",
       "tags": [
         "acceptance-test",
         "area:sp",
@@ -2203,7 +2166,7 @@
     "at-up-0001": {
       "id": "AT-UP-1",
       "taxon": "Acceptance test",
-      "title": "AT-UP-1 · for discrete \\C, \\IsTerminal is the classical definition and the…",
+      "title": "AT-UP-1 · for discrete C, IsTerminal is the classical definition and the uniqueness theorem…",
       "tags": [
         "acceptance-test",
         "area:up",
@@ -2218,7 +2181,6 @@
       },
       "status": "proposed",
       "refs": [
-        "at-up-0006",
         "dec-ch-0015",
         "dec-tl-0015",
         "dec-up-0010",
@@ -2241,7 +2203,7 @@
     "at-up-0002": {
       "id": "AT-UP-2",
       "taxon": "Acceptance test",
-      "title": "AT-UP-2 · for discrete \\C and \\J, \\\\code{C_{/F}} is the classical slice/cone category",
+      "title": "AT-UP-2 · for discrete C and J, \\code{C_{/F}} is the classical slice/cone category",
       "tags": [
         "acceptance-test",
         "area:up",
@@ -2270,7 +2232,7 @@
     "at-up-0003": {
       "id": "AT-UP-3",
       "taxon": "Acceptance test",
-      "title": "AT-UP-3 · \\\\code{C_{/F}} is a Segal category (Segal condition holds)",
+      "title": "AT-UP-3 · \\code{C_{/F}} is a Segal category (Segal condition holds)",
       "tags": [
         "acceptance-test",
         "area:up",
@@ -2299,7 +2261,7 @@
     "at-up-0004": {
       "id": "AT-UP-4",
       "taxon": "Acceptance test",
-      "title": "AT-UP-4 · each specializes to the classical notion for discrete \\C",
+      "title": "AT-UP-4 · each specializes to the classical notion for discrete C",
       "tags": [
         "acceptance-test",
         "area:up",
@@ -2325,7 +2287,7 @@
     "at-up-0005": {
       "id": "AT-UP-5",
       "taxon": "Acceptance test",
-      "title": "AT-UP-5 · \\to_dual of \\Limit is a colimit in the classical sense for discrete \\C",
+      "title": "AT-UP-5 · to_dual of Limit is a colimit in the classical sense for discrete C",
       "tags": [
         "acceptance-test",
         "area:up",
@@ -2368,7 +2330,6 @@
       },
       "status": "proposed",
       "refs": [
-        "at-fd-0010",
         "dec-ch-0015",
         "dec-ch-0016",
         "dec-tl-0016",
@@ -2378,7 +2339,6 @@
       ],
       "file": "forest/at-up-0006.tree",
       "backlinks": [
-        "at-up-0001",
         "dec-ch-0015",
         "dec-ch-0016",
         "dec-tl-0016",
@@ -2391,7 +2351,7 @@
     "at-up-0007": {
       "id": "AT-UP-7",
       "taxon": "Acceptance test",
-      "title": "AT-UP-7 · \\cosk_n ⊣ sk_n-style adjunction statements as terminal-object statements",
+      "title": "AT-UP-7 · cosk_n ⊣ sk_n-style adjunction statements as terminal-object statements",
       "tags": [
         "acceptance-test",
         "area:up",
@@ -2425,7 +2385,7 @@
     "at-up-0008": {
       "id": "AT-UP-8",
       "taxon": "Acceptance test",
-      "title": "AT-UP-8 · for discrete \\C, D, the exponential in \\Vert(Cat) is the functor category…",
+      "title": "AT-UP-8 · for discrete C, D, the exponential in Vert(Cat) is the functor category and its…",
       "tags": [
         "acceptance-test",
         "area:up",
@@ -8646,6 +8606,7 @@
       ],
       "file": "forest/ms-0006.tree",
       "backlinks": [
+        "at-rt-0008",
         "dec-ch-0018",
         "dec-ch-0021",
         "dec-kr-0008",
@@ -8692,6 +8653,7 @@
       ],
       "file": "forest/ms-0007.tree",
       "backlinks": [
+        "at-ft-0009",
         "dec-ch-0012",
         "dec-ft-0005",
         "dec-ft-0010",

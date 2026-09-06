@@ -29,6 +29,26 @@ DECISION_STATUSES = {"frozen", "provisional", "later", "superseded"}
 AT_STATUSES = {"proposed", "stated", "proved", "failed", "blocked", "deferred", "retired"}
 REQUIRED_DECISION_META = {"id", "status", "origin", "supersedes", "superseded-by"}
 
+TITLE_RE = re.compile(r"^\\title\{(.*)\}$", re.M)
+BODY_RE = re.compile(r"^\\p\{(.*)\}$", re.M)
+# The generated trailer paragraphs, which are not a node's informal scope.
+TRAILER_PREFIXES = ("Named by:", "\\em{Lean declaration", "\\em{Partial Lean", "\\strong{")
+
+
+def scope_paragraph(text: str) -> str | None:
+    """The node's informal scope under D-WF-10, or None if it states none.
+
+    A scope is normally the first body paragraph, but a test with several
+    numbered obligations (AT-FD-5) states it as a list instead.
+    """
+    if re.search(r"^\\(?:ol|ul)\{", text, re.M):
+        return "(list)"
+    for body in BODY_RE.findall(text):
+        if body.startswith(TRAILER_PREFIXES):
+            continue
+        return body
+    return None
+
 
 def main() -> int:
     errors: list[str] = []
@@ -69,6 +89,25 @@ def main() -> int:
                 errors.append(f"{addr}: superseded decision must name superseded-by")
         if taxon == "Acceptance test" and meta.get("status") not in AT_STATUSES:
             errors.append(f"{addr}: acceptance-test status {meta.get('status')!r} not in {sorted(AT_STATUSES)}")
+        # D-WF-10 requires every acceptance test to record an informal scope. A node
+        # carrying a statement-version but no statement claims a version of nothing.
+        # scripts/port_design.py used to emit the tail of a bare "**Acceptance.**"
+        # ID list as the scope, leaving "\p{, \ref{...}}" or "\p{}" behind.
+        if taxon == "Acceptance test":
+            scope = scope_paragraph(text)
+            if scope is None or not scope.strip():
+                errors.append(f"{addr}: acceptance test has no informal scope (D-WF-10)")
+            elif scope.lstrip().startswith(","):
+                errors.append(f"{addr}: informal scope is a stray reference-list tail: {scope[:60]!r}")
+        # Forester markup that has been escaped a second time renders as literal
+        # text. v0 titles are already markup; running them back through the
+        # markdown translator produced "\\code{...}".
+        title = TITLE_RE.search(text)
+        if title and "\\\\" in title.group(1):
+            errors.append(f"{addr}: double-escaped markup in title: {title.group(1)[:60]!r}")
+        for body in BODY_RE.findall(text):
+            if "\\\\" in body:
+                errors.append(f"{addr}: double-escaped markup in body: {body[:60]!r}")
         for target in REF_RE.findall(text):
             if target not in trees:
                 errors.append(f"{addr}: reference to unknown node {target}")

@@ -1,4 +1,4 @@
-\title{AT-RT-10 · \\code{Category A} ≃ classical structure ≃ Segal presheaves on \\code{Δ_A}}
+\title{AT-RT-10 · \code{Category A} ≃ classical structure ≃ Segal presheaves on \code{Δ_A}}
 \taxon{Acceptance test}
 \meta{id}{AT-RT-10}
 \meta{area}{root}
@@ -9,6 +9,6 @@
 \tag{area:rt}
 \tag{status:proposed}
 
-\p{, \ref{at-rt-0012}, \ref{at-sp-0003}, \ref{at-fd-0004}}
+\p{\code{Category A} ≃ classical structure ≃ Segal presheaves on \code{Δ_A}.}
 \p{Named by: \ref{dec-ch-0017}, \ref{dec-rt-0025}, \ref{dec-rt-0026}, \ref{dec-rt-0029}.}
 \p{\em{Lean declaration(s):} none yet.}

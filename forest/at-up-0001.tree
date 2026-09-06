@@ -1,4 +1,4 @@
-\title{AT-UP-1 · for discrete \\code{C}, \\code{IsTerminal} is the classical definition and the…}
+\title{AT-UP-1 · for discrete \code{C}, \code{IsTerminal} is the classical definition and the uniqueness theorem…}
 \taxon{Acceptance test}
 \meta{id}{AT-UP-1}
 \meta{area}{universal properties}
@@ -9,6 +9,6 @@
 \tag{area:up}
 \tag{status:proposed}
 
-\p{, \ref{at-up-0006}}
+\p{Classical terminal objects and unique isomorphism: for discrete \code{C}, \code{IsTerminal} is the classical definition and the uniqueness theorem is unique-up-to-unique-iso. Revision 1 states the scope as the first clause (\ref{dec-up-0015}); the remainder is the subject retained from the phase −1 catalogue.}
 \p{Named by: \ref{dec-ch-0015}, \ref{dec-tl-0015}, \ref{dec-up-0010}, \ref{dec-up-0015}, \ref{dec-up-0017}.}
 \p{\em{Lean declaration(s):} none yet.}

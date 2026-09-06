@@ -22,8 +22,13 @@ Address scheme (D-WF-14, recorded here and in wf-0002):
 The identifiers stay embedded in the address so that agents never need a lookup table
 to go from a citation in a PR to the node.
 
-The script is deterministic and idempotent for the checked-in revision. Historical
-sources and the pre-revision forest are retained below design/history/ and
+The script is deterministic, but it is NOT idempotent against the checked-in forest and
+must not be run as a regenerator. It seeds a revision; the trees are then amended by
+hand, and those amendments — acceptance evidence, proved statuses, exact Lean
+declarations — are the authority. Re-running overwrites all of it. So the default is a
+dry run that reports what would change, and --write is required to touch anything.
+
+Historical sources and the pre-revision forest are retained below design/history/ and
 forest/history/; neither directory is indexed as active work.
 """
 
@@ -38,6 +43,29 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 DESIGN = ROOT / "design"
 FOREST = ROOT / "forest"
+
+# Addresses whose title / informal scope is carried over from the v0 snapshot and is
+# therefore forester markup already. Translating markdown twice escapes its own
+# backslashes, so these bypass inline().
+FORESTER_TITLES: set[str] = set()
+FORESTER_SCOPES: set[str] = set()
+
+WRITE = False
+CHANGED: list[str] = []
+REMOVED: list[str] = []
+
+
+def write_tree(path: Path, text: str) -> None:
+    """Write a tree, or under a dry run just record that it would change.
+
+    Every generated tree goes through here so that the default invocation cannot
+    silently discard hand-maintained evidence (see the module docstring).
+    """
+    if path.exists() and path.read_text(encoding="utf-8") == text:
+        return
+    CHANGED.append(path.stem)
+    if WRITE:
+        path.write_text(text, encoding="utf-8")
 
 AREA_NAMES = {
     "CH": "charter",
@@ -412,9 +440,13 @@ class Node:
 def main() -> None:
     FOREST.mkdir(exist_ok=True)
     # Bibliography addresses are positional. Remove the previous active set so entries
-    # deleted by a revision do not remain searchable; history/v0 retains them.
+    # deleted by a revision do not remain searchable; history/v0 retains them. This is
+    # a write like any other and must not happen under a dry run.
     for path in FOREST.glob("bib-[0-9][0-9][0-9][0-9].tree"):
-        path.unlink()
+        if WRITE:
+            path.unlink()
+        else:
+            REMOVED.append(path.stem)
     nodes: dict[str, Node] = {}
     chapters: list[tuple[str, str, str]] = []  # (addr, title, body)
 
@@ -423,6 +455,7 @@ def main() -> None:
     # ---- pass 1: discover every identifier so references can be validated ----
     at_informal: dict[str, str] = {}
     at_titles: dict[str, str] = {}
+    at_v0_subject: dict[str, str] = {}
     at_source_lines: dict[str, list[str]] = {}
     oq_informal: dict[str, tuple[str, str]] = {}
     for name, _title, secs in docs:
@@ -461,9 +494,18 @@ def main() -> None:
     for path in sorted((FOREST / "history" / "v0").glob("at-*.tree")):
         addr = path.stem
         KNOWN_IDS.add(addr)
-        title = re.search(r"^\\title\{[^}]+ · (.*)\}$", path.read_text(encoding="utf-8"), re.M)
+        source = path.read_text(encoding="utf-8")
+        title = re.search(r"^\\title\{[^}]+ · (.*)\}$", source, re.M)
         if title:
+            # Already forester markup; see FORESTER_TITLES below.
             at_titles.setdefault(addr, title.group(1))
+            FORESTER_TITLES.add(addr)
+        # The v0 subject paragraph is the retained subject of this ID (D-WF-10) and
+        # is the fallback scope when revision 1 names the test without describing it.
+        for line in source.splitlines():
+            if line.startswith("\\p{") and not line.startswith(("\\p{Named by:", "\\p{\\em{")):
+                at_v0_subject.setdefault(addr, line[3:-1])
+                break
     for m in re.finditer(r"\bOQ-([A-Z]{2})-(\d+)\b", text_all):
         addr = oq_addr(m.group(1), int(m.group(2)))
         if addr not in KNOWN_IDS:
@@ -489,14 +531,25 @@ def main() -> None:
 
     # informal statements for ATs not in a summary list: taken from the Acceptance field
     # of the decision that names them ("AT-UP-1: …; AT-UP-2: …").
+    # An "**Acceptance.**" field takes two shapes. It either describes each test
+    # ("AT-UP-1: the cone exists; AT-UP-2: …") or merely lists the tests the
+    # decision depends on ("AT-KR-11, AT-FD-3, AT-FD-8."). Only the first states a
+    # scope, and only the first uses a colon. Matching the second as though its
+    # leading ID introduced prose assigned the rest of the *list* as that test's
+    # scope, which is where "\p{, \ref{at-fd-0003}, \ref{at-fd-0008}}" came from.
     for m in re.finditer(r"\*\*Acceptance\.\*\*\s*(.*?)(?=\n\*\*|\n###|\n\n|\Z)", text_all, re.S):
         chunk = " ".join(m.group(1).split())
         for seg in re.split(r";\s*(?=AT-)", chunk):
-            ms = re.match(r"AT-([A-Z]{2})-(\d+)[:]?\s*(.*)$", seg)
+            ms = re.match(r"AT-([A-Z]{2})-(\d+):\s*(\S.*)$", seg)
             if ms:
                 addr = at_addr(ms.group(1), int(ms.group(2)))
                 at_informal.setdefault(addr, ms.group(3).rstrip("."))
     at_informal.setdefault(at_addr("KR", 0), "Mathlib inventory and compatibility report.")
+    # Revision 1 names many tests without restating them. Their subject is retained
+    # from v0 rather than replaced by a placeholder that says nothing.
+    for addr, subject in at_v0_subject.items():
+        at_informal.setdefault(addr, subject)
+        FORESTER_SCOPES.add(addr)
     for addr in sorted(a for a in KNOWN_IDS if a.startswith("at-")):
         at_informal.setdefault(addr, "Current proposed scope is specified by the active decisions that name this test.")
 
@@ -556,8 +609,9 @@ def main() -> None:
                         body = f"\\p{{{inline(entry)}}}"
                         meta = {"origin": f"design/{name}", "section": s.heading}
                         nodes[addr] = Node(addr, addr, title, "Reference", None, f"design/{name}", body=body)
-                        (FOREST / f"{addr}.tree").write_text(
-                            tree(addr, inline(title), "Reference", meta, ["reference"], body), encoding="utf-8"
+                        write_tree(
+                            FOREST / f"{addr}.tree",
+                            tree(addr, inline(title), "Reference", meta, ["reference"], body),
                         )
                         emit(f"  \\transclude{{{addr}}}")
                     continue
@@ -592,7 +646,7 @@ def main() -> None:
                 meta["superseded-by"] = "none"
                 tags = ["decision", f"area:{a.lower()}", f"status:{st or 'unspecified'}"]
                 text = tree(addr, inline(f"{ident} · {title}", link=False), "Decision", meta, tags, body)
-                (FOREST / f"{addr}.tree").write_text(text, encoding="utf-8")
+                write_tree(FOREST / f"{addr}.tree", text)
                 node = Node(addr, ident, title, "Decision", a, f"design/{name}", st, stt, body)
                 node.refs = sorted(set(re.findall(r"\\ref\{([^}]+)\}", text)))
                 node.acceptance = sorted(set(r for r in node.refs if r.startswith("at-")))
@@ -615,7 +669,7 @@ def main() -> None:
                 body = render_fields(runs)
                 meta = {"id": ident, "origin": f"design/{name}", "status": "planned"}
                 text = tree(addr, inline(f"{ident} · {title}", link=False), "Milestone", meta, ["milestone"], body)
-                (FOREST / f"{addr}.tree").write_text(text, encoding="utf-8")
+                write_tree(FOREST / f"{addr}.tree", text)
                 node = Node(addr, ident, title, "Milestone", None, f"design/{name}", "planned", body=body)
                 node.refs = sorted(set(re.findall(r"\\ref\{([^}]+)\}", text)))
                 nodes[addr] = node
@@ -636,6 +690,10 @@ def main() -> None:
         citing = sorted(d.addr for d in nodes.values() if d.taxon == "Decision" and addr in d.refs)
         if addr in at_source_lines:
             body_lines = [render_blocks(parse_blocks(at_source_lines[addr]))]
+        elif addr in FORESTER_SCOPES:
+            # Carried over from v0, already forester; translating it again would
+            # escape its own backslashes.
+            body_lines = [f"\\p{{{link_ids(informal)}}}"]
         else:
             body_lines = [f"\\p{{{inline(informal)}}}"]
         if citing:
@@ -654,9 +712,14 @@ def main() -> None:
         short = at_titles.get(addr, re.split(r"[.;:]", informal, maxsplit=1)[0].strip())
         if len(short) > 90:
             short = short[:87].rsplit(" ", 1)[0] + "…"
+        # A v0 title is forester already; only a title built here from markdown
+        # prose needs translating. Escaping the former turned "\code" into
+        # "\\code", which forester renders as literal text.
+        if addr not in FORESTER_TITLES:
+            short = inline(short, link=False)
         status = meta["status"]
-        text = tree(addr, inline(f"{ident} · {short}", link=False), "Acceptance test", meta, ["acceptance-test", f"area:{a.lower()}", f"status:{status}"], body)
-        (FOREST / f"{addr}.tree").write_text(text, encoding="utf-8")
+        text = tree(addr, f"{inline(ident, link=False)} · {short}", "Acceptance test", meta, ["acceptance-test", f"area:{a.lower()}", f"status:{status}"], body)
+        write_tree(FOREST / f"{addr}.tree", text)
         node = Node(addr, ident, informal, "Acceptance test", a, meta["origin"], status, body=body, informal=informal)
         node.refs = citing
         nodes[addr] = node
@@ -670,7 +733,7 @@ def main() -> None:
         origin = [nm for nm, (c, ar) in CHAPTERS.items() if c == chap][0]
         meta = {"id": ident, "area": AREA_NAMES[a], "origin": f"design/{origin}", "status": "open"}
         text = tree(addr, ident, "Open question", meta, ["open-question", f"area:{a.lower()}", "status:open"], body)
-        (FOREST / f"{addr}.tree").write_text(text, encoding="utf-8")
+        write_tree(FOREST / f"{addr}.tree", text)
         node = Node(addr, ident, informal, "Open question", a, meta["origin"], "open", body=body, informal=informal)
         node.refs = sorted(set(re.findall(r"\\ref\{([^}]+)\}", text)))
         nodes[addr] = node
@@ -678,7 +741,7 @@ def main() -> None:
     # ---- chapter trees ----
     for chap, title, body in chapters:
         text = tree(chap, inline(title), "Chapter", {"origin": "design/" + [n for n, (c, _) in CHAPTERS.items() if c == chap][0], "layer": "human"}, ["chapter"], body)
-        (FOREST / f"{chap}.tree").write_text(text, encoding="utf-8")
+        write_tree(FOREST / f"{chap}.tree", text)
 
     # Keep historical decisions addressable, but make their lineage explicit. Their
     # byte-for-byte pre-revision forms are retained under forest/history/v0/.
@@ -693,7 +756,7 @@ def main() -> None:
         text = re.sub(r"^\\meta\{status\}\{.*\}$", r"\\meta{status}{superseded}", text, count=1, flags=re.M)
         text = re.sub(r"^\\meta\{superseded-by\}\{.*\}$", rf"\\meta{{superseded-by}}{{{new_addr}}}", text, count=1, flags=re.M)
         text = re.sub(r"^\\tag\{status:[^}]+\}$", r"\\tag{status:superseded}", text, count=1, flags=re.M)
-        path.write_text(text, encoding="utf-8")
+        write_tree(path, text)
 
     # A few retained acceptance and open-question subjects are catalogued only by
     # abbreviation in revision 1. Redirect their active links without altering the
@@ -710,15 +773,29 @@ def main() -> None:
             new_addr = dec_addr(new_area, int(new_n))
             text = text.replace(f"\\ref{{{old_addr}}}", f"\\ref{{{new_addr}}}")
             text = text.replace(f"\\transclude{{{old_addr}}}", f"\\transclude{{{new_addr}}}")
-        path.write_text(text, encoding="utf-8")
+        write_tree(path, text)
 
     if UNRESOLVED:
         print("UNRESOLVED references (left as plain text):", sorted(set(UNRESOLVED)), file=sys.stderr)
     counts: dict[str, int] = {}
     for n in nodes.values():
         counts[n.taxon] = counts.get(n.taxon, 0) + 1
-    print("wrote", len(nodes), "nodes +", len(chapters), "chapters:", counts)
+    verb = "wrote" if WRITE else "would write"
+    print(verb, len(nodes), "nodes +", len(chapters), "chapters:", counts)
+    if REMOVED:
+        print(f"{len(REMOVED)} positional bibliography tree(s) would be removed and rewritten")
+    if CHANGED:
+        print(f"{len(CHANGED)} tree(s) differ from the checked-in forest:")
+        for addr in sorted(set(CHANGED)):
+            print(f"  {addr}")
+        if not WRITE:
+            print(
+                "dry run: re-run with --write only if you intend to discard the"
+                " hand-maintained content of those trees",
+                file=sys.stderr,
+            )
 
 
 if __name__ == "__main__":
+    WRITE = "--write" in sys.argv[1:]
     main()

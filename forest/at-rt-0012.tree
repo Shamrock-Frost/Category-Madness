@@ -1,4 +1,4 @@
-\title{AT-RT-12 · \\code{Vert₂(Cat)} with its pasting theorem is the classical 2-category}
+\title{AT-RT-12 · \code{Vert₂(Cat)} with its pasting theorem is the classical 2-category}
 \taxon{Acceptance test}
 \meta{id}{AT-RT-12}
 \meta{area}{root}
@@ -9,6 +9,6 @@
 \tag{area:rt}
 \tag{status:proposed}
 
-\p{, \ref{at-fd-0004}, \ref{at-fd-0007}, \ref{at-fd-0010}}
+\p{\code{Vert₂(Cat)} with its pasting theorem is the classical 2-category.}
 \p{Named by: \ref{dec-ch-0017}, \ref{dec-rt-0019}, \ref{dec-rt-0025}, \ref{dec-rt-0029}, \ref{dec-rt-0030}, \ref{dec-tl-0020}.}
 \p{\em{Lean declaration(s):} none yet.}

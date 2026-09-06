@@ -1,4 +1,4 @@
-\title{AT-RT-8 · \\code{Mat(Kan)} is a VDC∞ (M6)}
+\title{AT-RT-8 · \code{Mat(Kan)} is a VDC∞ (M6)}
 \taxon{Acceptance test}
 \meta{id}{AT-RT-8}
 \meta{area}{root}
@@ -9,6 +9,6 @@
 \tag{area:rt}
 \tag{status:proposed}
 
-\p{}
+\p{\code{Mat(Kan)} is a VDC∞ (\ref{ms-0006}).}
 \p{Named by: \ref{dec-sp-0012}, \ref{dec-sp-0013}.}
 \p{\em{Lean declaration(s):} none yet.}

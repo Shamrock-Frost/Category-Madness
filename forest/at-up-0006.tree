@@ -9,6 +9,6 @@
 \tag{area:up}
 \tag{status:proposed}
 
-\p{, \ref{at-fd-0010}}
+\p{The Čech construction: the Čech nerve of \code{f : x → s} is \code{cosk₀} in augmented simplicial objects over \code{s}; its \code{n}-th term is a limit over the appropriate shape; it exists when the relevant limits do; it is unique up to contractible choice; and it is functorial in \code{f} (\ref{dec-up-0016}). Revision 1 states the scope as the first clause; the remainder is the subject retained from the phase −1 catalogue.}
 \p{Named by: \ref{dec-ch-0015}, \ref{dec-ch-0016}, \ref{dec-tl-0016}, \ref{dec-up-0010}, \ref{dec-up-0015}, \ref{dec-up-0016}.}
 \p{\em{Lean declaration(s):} none yet.}
