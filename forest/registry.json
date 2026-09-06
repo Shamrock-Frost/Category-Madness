@@ -560,6 +560,7 @@
         "augmented-free-cells",
         "augmented-generating",
         "augmented-global-adjunction",
+        "augmented-monad-vertical",
         "augmented-transport",
         "dec-ch-0018",
         "dec-kr-0015",
@@ -581,6 +582,7 @@
         "augmented-free-cells",
         "augmented-generating",
         "augmented-global-adjunction",
+        "augmented-monad-vertical",
         "augmented-transport",
         "dec-ch-0018",
         "dec-kr-0015",
@@ -1108,6 +1110,7 @@
       "status": "proposed",
       "refs": [
         "augmented-generating",
+        "augmented-monad-vertical",
         "dec-kr-0015"
       ],
       "file": "forest/at-kr-0002.tree",
@@ -2624,6 +2627,7 @@
       "refs": [
         "at-fd-0007",
         "augmented-generating",
+        "augmented-monad-vertical",
         "dec-kr-0015",
         "dec-kr-0018",
         "dec-rt-0030",
@@ -2634,6 +2638,38 @@
       "backlinks": [
         "at-fd-0007",
         "augmented-generating",
+        "augmented-monad-vertical",
+        "dec-kr-0018",
+        "ms-foundation"
+      ]
+    },
+    "augmented-monad-vertical": {
+      "id": "augmented-monad-vertical",
+      "taxon": "Development",
+      "title": "Vertical reconstruction from generating-monad algebras",
+      "tags": [
+        "foundation",
+        "augmented"
+      ],
+      "meta": {
+        "layer": "human",
+        "source": "Kernel/Augmented/GeneratingPathAction.lean"
+      },
+      "status": null,
+      "refs": [
+        "at-fd-0007",
+        "augmented-global-adjunction",
+        "dec-kr-0015",
+        "dec-kr-0018",
+        "dec-rt-0030",
+        "dec-wf-0008",
+        "dec-wf-0010"
+      ],
+      "file": "forest/augmented-monad-vertical.tree",
+      "backlinks": [
+        "at-fd-0007",
+        "at-kr-0002",
+        "augmented-global-adjunction",
         "dec-kr-0018",
         "ms-foundation"
       ]
@@ -4728,6 +4764,7 @@
         "augmented-free-cells",
         "augmented-generating",
         "augmented-global-adjunction",
+        "augmented-monad-vertical",
         "bib-0000",
         "krn-0000"
       ]
@@ -4838,6 +4875,7 @@
         "augmented-free-cells",
         "augmented-generating",
         "augmented-global-adjunction",
+        "augmented-monad-vertical",
         "augmented-transport"
       ],
       "file": "forest/dec-kr-0018.tree",
@@ -4855,6 +4893,7 @@
         "augmented-free-cells",
         "augmented-generating",
         "augmented-global-adjunction",
+        "augmented-monad-vertical",
         "augmented-transport",
         "bib-0000",
         "krn-0000"
@@ -6136,6 +6175,7 @@
         "augmented-free-cells",
         "augmented-generating",
         "augmented-global-adjunction",
+        "augmented-monad-vertical",
         "augmented-transport",
         "rt-0000"
       ]
@@ -8306,6 +8346,7 @@
         "augmented-free-cells",
         "augmented-generating",
         "augmented-global-adjunction",
+        "augmented-monad-vertical",
         "augmented-transport",
         "index",
         "lean-theory-unproved-0a649efa",
@@ -8373,6 +8414,7 @@
         "augmented-free-cells",
         "augmented-generating",
         "augmented-global-adjunction",
+        "augmented-monad-vertical",
         "augmented-transport",
         "dec-ch-0019",
         "index",
@@ -9036,6 +9078,7 @@
         "augmented-free-cells",
         "augmented-generating",
         "augmented-global-adjunction",
+        "augmented-monad-vertical",
         "augmented-transport",
         "ms-0003"
       ],

@@ -14,3 +14,5 @@
 \p{\strong{Remaining:} reconstruction of an augmented algebra from an arbitrary generating-monad algebra, and the resulting essential surjectivity/comparison equivalence. Thus monadicity is not yet proved. The augmented arity theorem, its density/recognition hypotheses and labelled diagram model remain open. No gate status or statement is changed. Public map-preservation laws use ordinary equality of cells with their complete boundaries; internal typed adapters still use heterogeneous equality.}
 \p{Reproduce with \code{lake build Augmented}, the foundation axiom inventory and seal/swap checks. This adds no sealed constant.}
 \p{Cites: \ref{dec-kr-0015}, \ref{dec-rt-0030}, \ref{dec-wf-0008}, \ref{dec-wf-0010}.}
+
+\p{\strong{Monad-algebra reconstruction evidence:} \ref{augmented-monad-vertical} reconstructs vertical categories and functors from arbitrary generating-monad algebras, retains the horizontal graph and proves a natural equivalence recovering each existing augmented algebra's vertical category. Cell operations and their laws, the comparison action identification and essential surjectivity remain open; monadicity is not yet proved.}

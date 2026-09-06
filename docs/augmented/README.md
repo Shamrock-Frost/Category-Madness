@@ -236,6 +236,35 @@ generating-monad algebra, proving essential surjectivity of the comparison.
 Neither finite raw-term leaves nor the adjunction
 establishes arity density or nerve recognition.
 
+## Vertical reconstruction from arbitrary monad algebras
+
+`GeneratingMonadAlgebra` begins the object reconstruction needed for monadicity.
+It takes an arbitrary algebra for `BundledAlgebra.generatingMonad`, with only
+its unit and associativity laws. `action_object` proves that the action fixes
+objects, and `evalPath` evaluates vertical paths at their original endpoints.
+`evalPath_single` and `evalPath_flatten` derive the singleton and two-path
+flattening laws from the monad laws, including empty paths.
+
+`PathEvaluation.category` recovers identities and associative composition from
+those two laws, with the object and arrow universes independent. Its evaluation
+functor agrees with ordinary path composition. `GeneratingMonadAlgebra.Vertical`
+applies this construction to the actual generating monad. `map_evalPath` proves
+that monad-algebra morphisms commute with all path evaluations; `verticalFunctor`
+therefore gives an actual functor from the Eilenberg–Moore category to `Cat`.
+The horizontal graph is retained, `action_horizontal` checks its generator
+retraction, and `evaluationBase` packages vertical/horizontal base evaluation.
+
+For any existing augmented algebra, `BundledAlgebra.verticalHomEquiv` recovers
+its original arrows from their full incidence fibres. `verticalToOriginal` and
+`verticalFromOriginal` preserve identities and composition, and
+`verticalComparisonEquivalence` proves both round trips. The recovery commutes
+with every augmented-algebra map by `verticalToOriginal_naturality`.
+
+This reconstructs the vertical/horizontal base. Reconstructing cells and their
+operations over that base, proving all five algebra equations, and identifying
+the resulting monad action remain necessary for essential surjectivity. Neither
+monadicity nor an augmented arity theorem is claimed here.
+
 ## Reusable nerve recognition step
 
 `Nerve.MonadMap` gives a comparison between monads over a functor between base
@@ -284,12 +313,15 @@ An empty inner substitution row is also rejected, alongside positive controls.
 
 The full gate statement is unchanged. The strict 2-category reconstruction,
 cell/hom round trips, arbitrary substitution compatibility and discrete hom
-nerves are checked. The next construction is the free augmented algebra and
-its arities; the full augmented arity nerve is still open.
+nerves are checked. The global free augmented algebra and its adjunction are
+constructed; object reconstruction for monadicity and the arity presentation
+remain open.
 
 The relative free cell algebra, global free mapping property and categorical
 free/forgetful adjunction are checked. Monadicity, the arity category and nerve
-hypotheses remain to be proved.
+hypotheses remain to be proved. Vertical reconstruction from arbitrary monad
+algebras is checked; cell operations and their laws are the next reconstruction
+step.
 `Row` is incident syntax, not a
 canonical arity presentation; no normalization, monadicity, generic/free
 factorization or Reedy/elegance theorem is asserted by its definition.

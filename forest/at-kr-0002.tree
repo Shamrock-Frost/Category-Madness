@@ -14,3 +14,5 @@
 \p{\em{Lean declaration(s):} the general theorem remains unstated; partial comparison lemmas are indexed below.}
 
 \p{\strong{Partial implementation evidence:} \ref{augmented-generating} records the checked monad algebra-lifting and essential-image lemma and its transfer through supplied monadic comparisons. The general arity-to-exactness argument is not yet proved; this does not pass or weaken the gate.}
+
+\p{\strong{Monad-algebra reconstruction evidence:} \ref{augmented-monad-vertical} reconstructs vertical categories and functors from arbitrary generating-monad algebras, retains the horizontal graph and proves a natural equivalence recovering each existing augmented algebra's vertical category. Cell operations and their laws, the comparison action identification and essential surjectivity remain open; monadicity is not yet proved.}
