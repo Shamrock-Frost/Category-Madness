@@ -1,0 +1,12 @@
+\title{Monadicity of the generating forgetful functor}
+\taxon{Development}
+\meta{layer}{human}
+\meta{source}{Kernel/Augmented/GeneratingMonadicity.lean}
+\tag{foundation}
+\tag{augmented}
+
+\p{This completes the object reconstruction begun in \ref{augmented-monad-vertical} and \ref{augmented-monad-cells}, under \ref{dec-kr-0015}, \ref{dec-kr-0018} and \ref{at-fd-0007}. The input is an arbitrary algebra for the actual generating monad; no augmented algebra laws are assumed on its reconstructed cells.}
+\p{\code{leftUnit_law}, \code{rightUnit_law}, \code{verticalIdentity_stack_law}, \code{insertion_law} and \code{assoc_law} transfer all five equation families from free representatives. Whole rows and nested rows retain every shared vertical side, both horizontal paths and empty-output cells. Identity insertion allows either neighboring row to be empty. \code{GeneratingMonadAlgebra.algebra} bundles the proved laws and \code{reconstructed} gives the resulting augmented algebra.}
+\p{\code{reconstructionUnit} is an isomorphism of generating incidence graphs, including the complete cell arity and boundary fibres. \code{reconstruction_action} identifies reconstructed evaluation with the supplied monad action under that isomorphism. \code{reconstructionIso} is therefore an isomorphism of monad algebras. The already fully faithful \code{generatingComparison} is now essentially surjective. \code{generatingMonadicEquivalence} and the \code{MonadicRightAdjoint} instance prove monadicity of \code{BundledAlgebra.forget}.}
+\p{\ref{augmented-arity-nerve} connects this equivalence to the actual free-arity nerve square. Choosing the composite arities, proving their density and exactness, and constructing the required labelled diagram model remain open. No canonical row normalization, generic/free factorization or Reedy/elegance result follows just from monadicity. AT-FD-7 and AT-KR-2 retain their full statements, versions and proposed statuses.}
+\p{Reproduce with \code{lake build}, \code{python3 scripts/check_foundations.py} and \code{bash scripts/swap_test.sh}. This adds no sealed constant. Cites: \ref{dec-rt-0030}, \ref{dec-wf-0008}, \ref{dec-wf-0010}.}

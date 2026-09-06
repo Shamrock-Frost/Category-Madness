@@ -231,10 +231,75 @@ substitution inputs, preserving shared sides. Their evaluation laws prove
 substitution as well. The concrete comparison is fully faithful, and the
 generating forgetful functor reflects isomorphisms.
 
-Monadicity still requires reconstruction of an augmented algebra from every
-generating-monad algebra, proving essential surjectivity of the comparison.
-Neither finite raw-term leaves nor the adjunction
-establishes arity density or nerve recognition.
+The reconstruction below proves essential surjectivity and monadicity. The
+separate arity density and exactness hypotheses remain to be proved.
+
+## Vertical reconstruction from arbitrary monad algebras
+
+`GeneratingMonadAlgebra` begins the object reconstruction needed for monadicity.
+It takes an arbitrary algebra for `BundledAlgebra.generatingMonad`, with only
+its unit and associativity laws. `action_object` proves that the action fixes
+objects, and `evalPath` evaluates vertical paths at their original endpoints.
+`evalPath_single` and `evalPath_flatten` derive the singleton and two-path
+flattening laws from the monad laws, including empty paths.
+
+`PathEvaluation.category` recovers identities and associative composition from
+those two laws, with the object and arrow universes independent. Its evaluation
+functor agrees with ordinary path composition. `GeneratingMonadAlgebra.Vertical`
+applies this construction to the actual generating monad. `map_evalPath` proves
+that monad-algebra morphisms commute with all path evaluations; `verticalFunctor`
+therefore gives an actual functor from the Eilenberg–Moore category to `Cat`.
+The horizontal graph is retained, `action_horizontal` checks its generator
+retraction, and `evaluationBase` packages vertical/horizontal base evaluation.
+
+For any existing augmented algebra, `BundledAlgebra.verticalHomEquiv` recovers
+its original arrows from their full incidence fibres. `verticalToOriginal` and
+`verticalFromOriginal` preserve identities and composition, and
+`verticalComparisonEquivalence` proves both round trips. The recovery commutes
+with every augmented-algebra map by `verticalToOriginal_naturality`.
+
+## Cells and operations from arbitrary monad algebras
+
+`GeneratingMonadAlgebra.cells` recovers the generating cells at their exact
+boundaries over the reconstructed category. `action_boundary` proves that the
+monad action preserves both vertical sides and every ordered horizontal edge,
+including the endpoints of empty paths. `evaluationCells` packages this as a
+cell map over `evaluationBase`.
+
+`generatorCell` and `generatorRow` choose free representatives. Their evaluation
+theorems recover the original incident cells and whole rows, with shared sides
+and both input and output paths intact. `evaluationCells_surjective` proves
+surjectivity on cells together with their full boundaries. `generatorOuter`
+also represents each outer cell at the chosen row's output.
+
+`operations` reconstructs both identity cells and arbitrary nonempty-row
+substitution by evaluating free operations and transporting along proved
+full-boundary equalities. `evaluationCells_multiplication` derives the cell
+flattening equation from the monad associativity law. The free action commutes
+with the chosen cell and row representatives, yielding
+`evaluationCells_horizontalIdentity`, `evaluationCells_verticalIdentity` and
+`evaluationCells_substitute`. Thus `evaluationOperations` preserves every
+primitive operation, including substitution with nullary cells, empty outputs
+and mixed rows. None of these proofs assumes a lawful augmented algebra on the
+reconstructed cells.
+
+## Reconstructed laws and monadicity
+
+`leftUnit_law`, `rightUnit_law`, `verticalIdentity_stack_law`, `insertion_law`
+and `assoc_law` prove all five equation families for `operations`. Free
+representatives of identity rows, inserted rows and nested rows retain the
+shared sides at both levels. The proofs evaluate the corresponding free laws
+and transport along complete-boundary equalities. Either neighboring row in
+identity insertion may be empty; mixed rows and empty-output cells remain
+within the universally quantified domains.
+
+`algebra` bundles these laws, and `reconstructed` is the resulting augmented
+algebra. `reconstructionUnit` is an isomorphism on all generating graph sorts,
+including the cell arity and boundary fibres. `reconstruction_action` identifies
+its evaluation with the supplied action, and `reconstructionIso` gives an
+isomorphism of monad algebras. Thus `generatingComparison` is essentially
+surjective as well as fully faithful. `generatingMonadicEquivalence` proves the
+comparison equivalence, and `BundledAlgebra.forget` is a `MonadicRightAdjoint`.
 
 ## Reusable nerve recognition step
 
@@ -253,11 +318,76 @@ checked proofs of the algebra-recognition step in
 exact-square argument. They assume the monad comparisons and their stated
 properties, not the desired full-faithfulness or recognition conclusion.
 
-The augmented application still has to construct its monadic equivalences,
-choose and prove its arity presentation, and establish the required comparison
-is invertible. These files do not claim the complete BMW theorem or an augmented
-nerve theorem. In particular, the elementary generators of the presheaf base
-have not been declared arities for the free augmented construction.
+## Actual free-arity nerve square
+
+For any supplied small arity functor `i` into generating graphs, `Nerve.Theory i`
+is the full category of free augmented algebras on those arities. `baseNerve`,
+`algebraNerve` and `restriction` give the actual presheaf square, with the
+adjunction supplying `restrictionIso`. Restriction is monadic: its left adjoint
+is left Kan extension, it preserves reflexive coequalizers, and its identity on
+objects lets it reflect isomorphisms. `restrictionMonadicEquivalence` supplies
+the second concrete equivalence required by the recognition argument.
+
+`arityMonadMap` constructs the canonical comparison, including its unit and
+multiplication laws. `arityComparisonIso` proves compatibility with both monadic
+comparisons. `algebraNerve_full` and `algebraNerve_essImage_iff` then prove the
+conditional augmented nerve theorem: if `i` is dense and that canonical
+comparison is pointwise invertible, the augmented nerve is fully faithful,
+and a presheaf is in its image exactly when its restriction is a base nerve.
+The monadic equivalences and comparison square are constructed, not assumed.
+
+`freeNerveComparison` expresses the canonical monad comparison as the restriction
+of the mate of the free/forgetful unit. `freeNerveComparison_eq` identifies this
+mate with the representable Kan-extension isomorphism on each object of a fully
+faithful arity family. Thus the canonical comparison is invertible on the arities
+themselves. Extending this conclusion to every generating graph requires a
+separate argument, supplied below under filtered-colimit preservation.
+
+## Finite incidence supports and candidate family
+
+`Generating.Face` enumerates every face of an elementary generating boundary,
+including its own generator, all vertices, both vertical sides and all horizontal
+edges. `faceArrow_surjective` proves that this finite list covers every incidence
+arrow. Empty inputs and outputs still retain their endpoint vertices and sides.
+
+`finiteSupport` closes a finite collection of generators under all incidence
+maps. The total support is finite across all object, edge and cell sorts combined.
+`presheafIsFinite_iff_finite_elements` proves that finite generation is equivalent
+to finite total incidence in this base; `finite_range_elements` proves maps from
+finite incidence data have finite images.
+
+`finiteSupportIsColimit` proves that every generating presheaf is the filtered
+colimit of these finite incidence closures. Single-generator supports cover every
+element, and finite unions identify overlaps. `finitelyPresentable_iff_finite_elements`
+characterizes the finitely presentable presheaves exactly as those with finite
+total incidence. One direction uses the finite category-of-elements presentation
+by representables; the other factors the identity through a finite support.
+
+`FiniteIncidence` is a small model of the full category of finite incidence
+presheaves. `finiteIncidenceGraphs` is its fully faithful dense inclusion into
+explicit generating graphs. Applied to this candidate, `finiteIncidenceNerve_full`
+and `finiteIncidenceNerve_essImage_iff` require only pointwise invertibility of
+the specific canonical comparison. Density is now proved for this family.
+
+`GeneratingFiniteNerve` proves that this base nerve preserves filtered colimits.
+Maps out of finite arities factor through finite supports, and equality of two
+such maps is witnessed at a common finite stage. `isIso_of_finiteIncidence`
+proves that transformations between filtered-colimit-preserving functors are
+invertible if they are invertible on the small finite family.
+
+`finiteIncidence_exactness_iff_finitary` proves that the canonical comparison is
+invertible on all generating graphs **if and only if** the actual generating
+monad preserves filtered colimits. The forward direction uses the fully faithful
+base nerve to reflect preservation; the reverse combines finite-support detection
+with the proved representable comparison. `finiteIncidenceNerve_full_of_finitary`
+and `finiteIncidenceNerve_essImage_iff_of_finitary` give the augmented nerve theorem
+under this single remaining hypothesis.
+
+The remaining arity obligation is filtered-colimit preservation by the augmented
+monad. This still needs proof, including the incidence and equation-witness arguments that
+finite raw cell-term leaves do not supply. This family uses all finite incidence
+diagrams and every incidence-preserving map. It supplies no canonical minimal
+pasting syntax, normalization, generic/free factorization or Reedy structure.
 
 ## A nontrivial lawful model
 
@@ -284,15 +414,14 @@ An empty inner substitution row is also rejected, alongside positive controls.
 
 The full gate statement is unchanged. The strict 2-category reconstruction,
 cell/hom round trips, arbitrary substitution compatibility and discrete hom
-nerves are checked. The next construction is the free augmented algebra and
-its arities; the full augmented arity nerve is still open.
+nerves are checked. The global free augmented algebra, adjunction, monadicity
+and conditional free-arity nerve theorem are now proved.
 
-The relative free cell algebra, global free mapping property and categorical
-free/forgetful adjunction are checked. Monadicity, the arity category and nerve
-hypotheses remain to be proved.
-`Row` is incident syntax, not a
-canonical arity presentation; no normalization, monadicity, generic/free
-factorization or Reedy/elegance theorem is asserted by its definition.
+A small dense candidate category of finite incidence diagrams is now constructed.
+Its canonical-comparison invertibility is now equivalent to the remaining
+finitarity obligation. Still open is any canonical
+geometric arity presentation required by a later model construction. `Row` alone
+proves neither normalization nor generic/free factorization.
 
 The required labelled diagram model must still supply the actual cofibrant
 sources, relative restriction and replacement lemmas. The

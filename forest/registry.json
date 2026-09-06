@@ -556,10 +556,15 @@
         "at-fd-0003",
         "at-fd-0008",
         "augmented-algebra",
+        "augmented-arity-nerve",
         "augmented-comparison",
+        "augmented-finite-incidence",
         "augmented-free-cells",
         "augmented-generating",
         "augmented-global-adjunction",
+        "augmented-monad-cells",
+        "augmented-monad-vertical",
+        "augmented-monadicity",
         "augmented-transport",
         "dec-ch-0018",
         "dec-kr-0015",
@@ -577,10 +582,15 @@
         "at-kr-0001",
         "at-rt-0012",
         "augmented-algebra",
+        "augmented-arity-nerve",
         "augmented-comparison",
+        "augmented-finite-incidence",
         "augmented-free-cells",
         "augmented-generating",
         "augmented-global-adjunction",
+        "augmented-monad-cells",
+        "augmented-monad-vertical",
+        "augmented-monadicity",
         "augmented-transport",
         "dec-ch-0018",
         "dec-kr-0015",
@@ -1107,12 +1117,19 @@
       },
       "status": "proposed",
       "refs": [
+        "augmented-arity-nerve",
+        "augmented-finite-incidence",
         "augmented-generating",
+        "augmented-monad-cells",
+        "augmented-monad-vertical",
+        "augmented-monadicity",
         "dec-kr-0015"
       ],
       "file": "forest/at-kr-0002.tree",
       "backlinks": [
         "at-kr-0001",
+        "augmented-arity-nerve",
+        "augmented-finite-incidence",
         "dec-kr-0003",
         "dec-kr-0006",
         "dec-kr-0015",
@@ -1281,6 +1298,8 @@
       "status": "proposed",
       "refs": [
         "at-rt-0001",
+        "augmented-arity-nerve",
+        "augmented-finite-incidence",
         "dec-kr-0013",
         "dec-kr-0015",
         "dec-kr-0018"
@@ -1288,6 +1307,8 @@
       "file": "forest/at-kr-0008.tree",
       "backlinks": [
         "at-kr-0001",
+        "augmented-arity-nerve",
+        "augmented-finite-incidence",
         "dec-kr-0006",
         "dec-kr-0013",
         "dec-kr-0015",
@@ -2505,6 +2526,43 @@
         "ms-foundation"
       ]
     },
+    "augmented-arity-nerve": {
+      "id": "augmented-arity-nerve",
+      "taxon": "Development",
+      "title": "Free-arity nerve and its explicit exactness obligation",
+      "tags": [
+        "foundation",
+        "augmented"
+      ],
+      "meta": {
+        "layer": "human",
+        "source": "Kernel/Augmented/ArityNerveComparison.lean"
+      },
+      "status": null,
+      "refs": [
+        "at-fd-0007",
+        "at-kr-0002",
+        "at-kr-0008",
+        "augmented-finite-incidence",
+        "augmented-monadicity",
+        "dec-kr-0015",
+        "dec-kr-0018",
+        "dec-rt-0030",
+        "dec-wf-0008",
+        "dec-wf-0010"
+      ],
+      "file": "forest/augmented-arity-nerve.tree",
+      "backlinks": [
+        "at-fd-0007",
+        "at-kr-0002",
+        "at-kr-0008",
+        "augmented-finite-incidence",
+        "augmented-generating",
+        "augmented-global-adjunction",
+        "augmented-monadicity",
+        "dec-kr-0018"
+      ]
+    },
     "augmented-comparison": {
       "id": "augmented-comparison",
       "taxon": "Development",
@@ -2538,6 +2596,40 @@
         "augmented-transport",
         "dec-kr-0018",
         "ms-foundation"
+      ]
+    },
+    "augmented-finite-incidence": {
+      "id": "augmented-finite-incidence",
+      "taxon": "Development",
+      "title": "Finite incidence supports and a small dense candidate family",
+      "tags": [
+        "foundation",
+        "augmented"
+      ],
+      "meta": {
+        "layer": "human",
+        "source": "Kernel/Augmented/GeneratingFiniteExactness.lean"
+      },
+      "status": null,
+      "refs": [
+        "at-fd-0007",
+        "at-kr-0002",
+        "at-kr-0008",
+        "augmented-arity-nerve",
+        "dec-kr-0015",
+        "dec-kr-0018",
+        "dec-rt-0030",
+        "dec-wf-0008",
+        "dec-wf-0010"
+      ],
+      "file": "forest/augmented-finite-incidence.tree",
+      "backlinks": [
+        "at-fd-0007",
+        "at-kr-0002",
+        "at-kr-0008",
+        "augmented-arity-nerve",
+        "augmented-generating",
+        "dec-kr-0018"
       ]
     },
     "augmented-free-cells": {
@@ -2589,8 +2681,11 @@
       "status": null,
       "refs": [
         "at-fd-0007",
+        "augmented-arity-nerve",
+        "augmented-finite-incidence",
         "augmented-free-cells",
         "augmented-global-adjunction",
+        "augmented-monadicity",
         "dec-kr-0015",
         "dec-kr-0018",
         "dec-rt-0030",
@@ -2623,7 +2718,11 @@
       "status": null,
       "refs": [
         "at-fd-0007",
+        "augmented-arity-nerve",
         "augmented-generating",
+        "augmented-monad-cells",
+        "augmented-monad-vertical",
+        "augmented-monadicity",
         "dec-kr-0015",
         "dec-kr-0018",
         "dec-rt-0030",
@@ -2634,8 +2733,113 @@
       "backlinks": [
         "at-fd-0007",
         "augmented-generating",
+        "augmented-monad-vertical",
         "dec-kr-0018",
         "ms-foundation"
+      ]
+    },
+    "augmented-monad-cells": {
+      "id": "augmented-monad-cells",
+      "taxon": "Development",
+      "title": "Cells and operations from generating-monad algebras",
+      "tags": [
+        "foundation",
+        "augmented"
+      ],
+      "meta": {
+        "layer": "human",
+        "source": "Kernel/Augmented/GeneratingCellSubstitution.lean"
+      },
+      "status": null,
+      "refs": [
+        "at-fd-0007",
+        "augmented-monad-vertical",
+        "augmented-monadicity",
+        "dec-kr-0015",
+        "dec-kr-0018",
+        "dec-rt-0030",
+        "dec-wf-0008",
+        "dec-wf-0010"
+      ],
+      "file": "forest/augmented-monad-cells.tree",
+      "backlinks": [
+        "at-fd-0007",
+        "at-kr-0002",
+        "augmented-global-adjunction",
+        "augmented-monad-vertical",
+        "augmented-monadicity",
+        "dec-kr-0018"
+      ]
+    },
+    "augmented-monad-vertical": {
+      "id": "augmented-monad-vertical",
+      "taxon": "Development",
+      "title": "Vertical reconstruction from generating-monad algebras",
+      "tags": [
+        "foundation",
+        "augmented"
+      ],
+      "meta": {
+        "layer": "human",
+        "source": "Kernel/Augmented/GeneratingPathAction.lean"
+      },
+      "status": null,
+      "refs": [
+        "at-fd-0007",
+        "augmented-global-adjunction",
+        "augmented-monad-cells",
+        "augmented-monadicity",
+        "dec-kr-0015",
+        "dec-kr-0018",
+        "dec-rt-0030",
+        "dec-wf-0008",
+        "dec-wf-0010"
+      ],
+      "file": "forest/augmented-monad-vertical.tree",
+      "backlinks": [
+        "at-fd-0007",
+        "at-kr-0002",
+        "augmented-global-adjunction",
+        "augmented-monad-cells",
+        "augmented-monadicity",
+        "dec-kr-0018",
+        "ms-foundation"
+      ]
+    },
+    "augmented-monadicity": {
+      "id": "augmented-monadicity",
+      "taxon": "Development",
+      "title": "Monadicity of the generating forgetful functor",
+      "tags": [
+        "foundation",
+        "augmented"
+      ],
+      "meta": {
+        "layer": "human",
+        "source": "Kernel/Augmented/GeneratingMonadicity.lean"
+      },
+      "status": null,
+      "refs": [
+        "at-fd-0007",
+        "augmented-arity-nerve",
+        "augmented-monad-cells",
+        "augmented-monad-vertical",
+        "dec-kr-0015",
+        "dec-kr-0018",
+        "dec-rt-0030",
+        "dec-wf-0008",
+        "dec-wf-0010"
+      ],
+      "file": "forest/augmented-monadicity.tree",
+      "backlinks": [
+        "at-fd-0007",
+        "at-kr-0002",
+        "augmented-arity-nerve",
+        "augmented-generating",
+        "augmented-global-adjunction",
+        "augmented-monad-cells",
+        "augmented-monad-vertical",
+        "dec-kr-0018"
       ]
     },
     "augmented-transport": {
@@ -4724,10 +4928,15 @@
         "at-kr-0002",
         "at-kr-0003",
         "at-kr-0008",
+        "augmented-arity-nerve",
         "augmented-comparison",
+        "augmented-finite-incidence",
         "augmented-free-cells",
         "augmented-generating",
         "augmented-global-adjunction",
+        "augmented-monad-cells",
+        "augmented-monad-vertical",
+        "augmented-monadicity",
         "bib-0000",
         "krn-0000"
       ]
@@ -4834,10 +5043,15 @@
         "at-kr-0003",
         "at-kr-0008",
         "augmented-algebra",
+        "augmented-arity-nerve",
         "augmented-comparison",
+        "augmented-finite-incidence",
         "augmented-free-cells",
         "augmented-generating",
         "augmented-global-adjunction",
+        "augmented-monad-cells",
+        "augmented-monad-vertical",
+        "augmented-monadicity",
         "augmented-transport"
       ],
       "file": "forest/dec-kr-0018.tree",
@@ -4851,10 +5065,15 @@
         "at-kr-0003",
         "at-kr-0008",
         "augmented-algebra",
+        "augmented-arity-nerve",
         "augmented-comparison",
+        "augmented-finite-incidence",
         "augmented-free-cells",
         "augmented-generating",
         "augmented-global-adjunction",
+        "augmented-monad-cells",
+        "augmented-monad-vertical",
+        "augmented-monadicity",
         "augmented-transport",
         "bib-0000",
         "krn-0000"
@@ -6132,10 +6351,15 @@
         "at-fd-0010",
         "at-rt-0012",
         "augmented-algebra",
+        "augmented-arity-nerve",
         "augmented-comparison",
+        "augmented-finite-incidence",
         "augmented-free-cells",
         "augmented-generating",
         "augmented-global-adjunction",
+        "augmented-monad-cells",
+        "augmented-monad-vertical",
+        "augmented-monadicity",
         "augmented-transport",
         "rt-0000"
       ]
@@ -8302,10 +8526,15 @@
       "acceptance": [],
       "backlinks": [
         "augmented-algebra",
+        "augmented-arity-nerve",
         "augmented-comparison",
+        "augmented-finite-incidence",
         "augmented-free-cells",
         "augmented-generating",
         "augmented-global-adjunction",
+        "augmented-monad-cells",
+        "augmented-monad-vertical",
+        "augmented-monadicity",
         "augmented-transport",
         "index",
         "lean-theory-unproved-0a649efa",
@@ -8369,10 +8598,15 @@
       "acceptance": [],
       "backlinks": [
         "augmented-algebra",
+        "augmented-arity-nerve",
         "augmented-comparison",
+        "augmented-finite-incidence",
         "augmented-free-cells",
         "augmented-generating",
         "augmented-global-adjunction",
+        "augmented-monad-cells",
+        "augmented-monad-vertical",
+        "augmented-monadicity",
         "augmented-transport",
         "dec-ch-0019",
         "index",
@@ -9036,6 +9270,7 @@
         "augmented-free-cells",
         "augmented-generating",
         "augmented-global-adjunction",
+        "augmented-monad-vertical",
         "augmented-transport",
         "ms-0003"
       ],

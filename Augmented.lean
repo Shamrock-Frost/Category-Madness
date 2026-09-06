@@ -13,4 +13,8 @@ import Kernel.Augmented.GeneratingCategory
 import Kernel.Augmented.NerveSquare
 import Kernel.Augmented.GeneratingComparisonIdentities
 import Kernel.Augmented.GeneratingComparisonSubstitution
+import Kernel.Augmented.GeneratingVerticalComparison
+import Kernel.Augmented.GeneratingCellSubstitution
+import Kernel.Augmented.ArityNerveComparison
+import Kernel.Augmented.GeneratingFiniteExactness
 /-! Augmented incidence and its checked prerequisites (D-KR-18, AT-FD-7). -/

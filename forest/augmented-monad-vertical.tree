@@ -1,0 +1,14 @@
+\title{Vertical reconstruction from generating-monad algebras}
+\taxon{Development}
+\meta{layer}{human}
+\meta{source}{Kernel/Augmented/GeneratingPathAction.lean}
+\tag{foundation}
+\tag{augmented}
+
+\p{This continues \ref{augmented-global-adjunction} under \ref{dec-kr-0015}, \ref{dec-kr-0018} and \ref{at-fd-0007}. The input is an arbitrary algebra for the actual generating monad, with only its unit and associativity laws. No augmented algebra or vertical category is assumed.}
+\p{\code{GeneratingMonadAlgebra.action_object} proves that the action fixes objects. \code{evalPath} retains the original source and target of every vertical path. \code{evalPath_single} and \code{evalPath_flatten} derive the generator and two-path flattening laws from the monad laws, including empty paths. \code{Generating.Graph.free_map_path} identifies the free functor's action on every vertical edge of a path.}
+\p{\code{PathEvaluation.category} derives both identity laws and associativity from these path-evaluation laws, with independent object and arrow universes. Its evaluation functor agrees with ordinary path composition. \code{GeneratingMonadAlgebra.Vertical} applies it to the generating monad. \code{map_evalPath} proves compatibility with arbitrary monad-algebra morphisms, and \code{verticalFunctor} constructs the functor from the Eilenberg–Moore category to \code{Cat}.}
+\p{The horizontal graph is retained over the reconstructed vertical category. \code{action_horizontal} proves the horizontal-generator retraction and \code{evaluationBase} packages the complete vertical/horizontal base evaluation for the next cell construction.}
+\p{For every supplied augmented algebra, \code{BundledAlgebra.verticalHomEquiv} identifies the reconstructed arrow fibres with the original arrows. \code{verticalToOriginal}, \code{verticalFromOriginal} and \code{verticalComparisonEquivalence} preserve identities and composition and prove both round trips. \code{verticalToOriginal_naturality} checks compatibility with every global augmented-algebra map.}
+\p{\strong{Cell reconstruction:} \ref{augmented-monad-cells} now reconstructs incident cells and all primitive operations, with a surjective full-boundary evaluation map preserving both identities and arbitrary substitution. \ref{augmented-monadicity} completes all five laws and the action identification, proving essential surjectivity and monadicity. The arity family, density/recognition hypotheses and labelled diagram model remain open. AT-FD-7 and AT-KR-2 retain their statements, versions and proposed statuses.}
+\p{Reproduce with \code{lake build Augmented}, \code{python3 scripts/check_foundations.py} and the seal/swap checks. This adds no sealed constant. Cites: \ref{dec-rt-0030}, \ref{dec-wf-0008}, \ref{dec-wf-0010}.}

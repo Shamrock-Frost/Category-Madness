@@ -115,6 +115,20 @@ separation, explicit boundary transport and strict 2-category extraction to the 
 compiled inventory and axiom audit. The reverse algebra laws, cell/hom round trips,
 arbitrary substitution compatibility and discrete hom nerves are now checked.
 The relative free cell algebra now has proved quotient laws, a universal mapping
-equivalence and finite raw-term support. The global free/arity presentation and
-augmented nerve remain open. The complete gate, M-F milestone and
+equivalence and finite raw-term support. The global free/forgetful adjunction
+and fully faithful comparison are checked. Arbitrary generating-monad algebras
+now yield vertical categories, incident cells and primitive operations, with a
+surjective full-boundary evaluation map preserving identities and substitution.
+All five reconstructed equation families and action identification now prove
+essential surjectivity and monadicity. The actual free-arity nerve square, both
+monadic comparisons and the canonical monad map are constructed. The conditional
+nerve theorem assumes density of the selected arities and invertibility of that
+specific comparison. Finite incidence supports, their filtered-colimit presentation and the equivalence
+between finite incidence and finite presentability are now proved. A small dense
+candidate family of finite incidence diagrams is constructed. Its base nerve
+preserves filtered colimits, and the canonical monad comparison is invertible on
+the finite arities. Global comparison invertibility is proved equivalent to
+filtered-colimit preservation by the generating monad. This finitarity obligation,
+the unconditional augmented nerve theorem and the labelled diagram
+model remain open. The complete gate, M-F milestone and
 root/interface freeze remain open.
