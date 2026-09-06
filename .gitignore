@@ -16,3 +16,6 @@ forest/.forester-cache/
 .DS_Store
 __pycache__/
 *.pyc
+
+# nix build's default symlink into the store
+/result
