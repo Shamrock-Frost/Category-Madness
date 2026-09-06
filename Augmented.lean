@@ -16,5 +16,5 @@ import Kernel.Augmented.GeneratingComparisonSubstitution
 import Kernel.Augmented.GeneratingVerticalComparison
 import Kernel.Augmented.GeneratingCellSubstitution
 import Kernel.Augmented.ArityNerveComparison
-import Kernel.Augmented.GeneratingFiniteFamily
+import Kernel.Augmented.GeneratingFiniteExactness
 /-! Augmented incidence and its checked prerequisites (D-KR-18, AT-FD-7). -/

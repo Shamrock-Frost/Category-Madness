@@ -125,7 +125,10 @@ monadic comparisons and the canonical monad map are constructed. The conditional
 nerve theorem assumes density of the selected arities and invertibility of that
 specific comparison. Finite incidence supports, their filtered-colimit presentation and the equivalence
 between finite incidence and finite presentability are now proved. A small dense
-candidate family of finite incidence diagrams is constructed. Its monad comparison
-invertibility, the unconditional augmented nerve theorem and the labelled diagram
+candidate family of finite incidence diagrams is constructed. Its base nerve
+preserves filtered colimits, and the canonical monad comparison is invertible on
+the finite arities. Global comparison invertibility is proved equivalent to
+filtered-colimit preservation by the generating monad. This finitarity obligation,
+the unconditional augmented nerve theorem and the labelled diagram
 model remain open. The complete gate, M-F milestone and
 root/interface freeze remain open.

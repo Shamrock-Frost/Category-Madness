@@ -336,11 +336,12 @@ comparison is pointwise invertible, the augmented nerve is fully faithful,
 and a presheaf is in its image exactly when its restriction is a base nerve.
 The monadic equivalences and comparison square are constructed, not assumed.
 
-The finite incidence family below supplies one concrete dense candidate.
-Invertibility of its canonical comparison remains to be proved. This conditional
-result does not yet establish the monad arity condition or the full BMW
-arity-to-exactness theorem. Elementary generators of the presheaf base have
-not been declared arities for the free augmented construction.
+`freeNerveComparison` expresses the canonical monad comparison as the restriction
+of the mate of the free/forgetful unit. `freeNerveComparison_eq` identifies this
+mate with the representable Kan-extension isomorphism on each object of a fully
+faithful arity family. Thus the canonical comparison is invertible on the arities
+themselves. Extending this conclusion to every generating graph requires a
+separate argument, supplied below under filtered-colimit preservation.
 
 ## Finite incidence supports and candidate family
 
@@ -368,9 +369,22 @@ explicit generating graphs. Applied to this candidate, `finiteIncidenceNerve_ful
 and `finiteIncidenceNerve_essImage_iff` require only pointwise invertibility of
 the specific canonical comparison. Density is now proved for this family.
 
-The remaining arity obligation is monad exactness. The filtered-colimit
-presentation just proved is in the base; preservation by the augmented monad
-still needs proof, including the incidence and equation-witness arguments that
+`GeneratingFiniteNerve` proves that this base nerve preserves filtered colimits.
+Maps out of finite arities factor through finite supports, and equality of two
+such maps is witnessed at a common finite stage. `isIso_of_finiteIncidence`
+proves that transformations between filtered-colimit-preserving functors are
+invertible if they are invertible on the small finite family.
+
+`finiteIncidence_exactness_iff_finitary` proves that the canonical comparison is
+invertible on all generating graphs **if and only if** the actual generating
+monad preserves filtered colimits. The forward direction uses the fully faithful
+base nerve to reflect preservation; the reverse combines finite-support detection
+with the proved representable comparison. `finiteIncidenceNerve_full_of_finitary`
+and `finiteIncidenceNerve_essImage_iff_of_finitary` give the augmented nerve theorem
+under this single remaining hypothesis.
+
+The remaining arity obligation is filtered-colimit preservation by the augmented
+monad. This still needs proof, including the incidence and equation-witness arguments that
 finite raw cell-term leaves do not supply. This family uses all finite incidence
 diagrams and every incidence-preserving map. It supplies no canonical minimal
 pasting syntax, normalization, generic/free factorization or Reedy structure.
@@ -404,7 +418,8 @@ nerves are checked. The global free augmented algebra, adjunction, monadicity
 and conditional free-arity nerve theorem are now proved.
 
 A small dense candidate category of finite incidence diagrams is now constructed.
-Its canonical-comparison invertibility remains open, as does any canonical
+Its canonical-comparison invertibility is now equivalent to the remaining
+finitarity obligation. Still open is any canonical
 geometric arity presentation required by a later model construction. `Row` alone
 proves neither normalization nor generic/free factorization.
 

@@ -114,8 +114,11 @@ canonical comparison for the actual free-arity nerve square. Its conditional
 recognition theorem requires density and comparison invertibility for the
 selected arities. `forest/augmented-finite-incidence.tree` adds finite incidence
 supports, their filtered-colimit presentation, finite presentability and a small
-dense candidate family. Provisional status is retained because its monad
-exactness, any required canonical geometric arity presentation, and the labelled
+dense candidate family. Its base nerve preserves filtered colimits, and its
+canonical monad comparison is invertible on the finite arities. Global exactness
+is now proved equivalent to filtered-colimit preservation by the generating monad.
+Provisional status is retained because that finitarity proof, any required
+canonical geometric arity presentation, and the labelled
 diagram model required by AT-FD-7 remain open.
 
 ### D-KR-19 · Labels and reduction

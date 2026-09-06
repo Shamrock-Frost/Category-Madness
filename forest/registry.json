@@ -2608,7 +2608,7 @@
       ],
       "meta": {
         "layer": "human",
-        "source": "Kernel/Augmented/GeneratingFiniteFamily.lean"
+        "source": "Kernel/Augmented/GeneratingFiniteExactness.lean"
       },
       "status": null,
       "refs": [
