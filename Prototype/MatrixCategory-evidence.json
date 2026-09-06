@@ -8,6 +8,8 @@
     "Kernel/Augmented/Algebra.lean": "0972cbac26837865ddcb03385972d4e760c67a7e547327dabc35331e6d188308",
     "Kernel/Augmented/AlgebraExamples.lean": "2d04a60158fcecd6a0f974f91d9ee166c9557c6846f8ec88c9b05a28f8ee7177",
     "Kernel/Augmented/AlgebraMaps.lean": "d14e4438a3489e1d71b42636e04cd4e5a68a25582f527574c8ab96bfb1824e3a",
+    "Kernel/Augmented/ArityNerveComparison.lean": "5cceb918e7b246a51e2c0ce58d7c7cd8ef8b1655b6b4cabbe05840294b6e9f3f",
+    "Kernel/Augmented/ArityRestrictionMonadicity.lean": "34c026b72cd1d92d5cdaafed2b6ab590487ebd131e0744400266fb91dc55c1e4",
     "Kernel/Augmented/BaseMapComposition.lean": "c8bca9b40b4be0a8241a0c531503e4677aa76c92d7f7241f513ac345afbff880",
     "Kernel/Augmented/BaseMaps.lean": "1c2292b57fc5be48c911850f22359f5b719ef61fe43de4490642d4b35d6325e0",
     "Kernel/Augmented/CellMapSections.lean": "1aea8bf234a5bda7a908823be73aaccc8f63e23cad8e292ad055ea437b2f1e80",
@@ -21,6 +23,7 @@
     "Kernel/Augmented/ComparisonTransport.lean": "6eb7e5372e2e4e37a580e6551271d4cc98b01d70e677b3fd5c10ce2536c919b9",
     "Kernel/Augmented/EquationRows.lean": "889d306df4ffc42b0579ec1f5ba0a0b211e1a4e36b2a4902ca81e78dee550086",
     "Kernel/Augmented/Examples.lean": "17859c29ec1d96ded93f4aa277d4e1a830ee365039718c3a73ff593f74411da2",
+    "Kernel/Augmented/FreeArityNerve.lean": "586bb40ee752249e844f10ea06b39d276409e181408d54c19004c9cbe58d4a67",
     "Kernel/Augmented/FreeCellUniversal.lean": "43bca2f0b85b60740672a4bfe0af5fb6c127a48081bec01aff9cfd3becba3423",
     "Kernel/Augmented/FreeCells.lean": "d33ca47d705c6a8db14c272278cfac736765916a7ebbe62d117c83c0f6df121d",
     "Kernel/Augmented/FreeGeneratingAdjunction.lean": "d35807c454f60bd8ffd8fcc229c72169907287da6b8868ca20f96ad3510c80ce",
@@ -34,13 +37,14 @@
     "Kernel/Augmented/FromTwoCategory.lean": "fcf2cb109b22a5265056f323375c73716aaa2e41954160469f1cf7737a3186d2",
     "Kernel/Augmented/FromTwoCategoryAlgebra.lean": "702d514262c8a0a8800cdf67c49ba0cdc213d0c2f9f97e3722cf13632abc379b",
     "Kernel/Augmented/FromTwoCategoryLaws.lean": "c93e7ac39ada419bf57015818e5a074e24f9bbf2433f748440d4535667ccdb27",
+    "Kernel/Augmented/GeneratingAssociativityLaw.lean": "a2b02ed9737458548f48c8182099ccf88b1c8df2893f57262ae228cba1ea1587",
     "Kernel/Augmented/GeneratingBoundaryMaps.lean": "b07c57bfba55265f88455047b46c88e78f99df02d3aa7a9e9412d6413b144fd0",
     "Kernel/Augmented/GeneratingCategory.lean": "1c777e7a7cff29315657f631020a5123552b19de984450653d92d29e8fd85364",
     "Kernel/Augmented/GeneratingCellAction.lean": "d597180914c323b2ce3bbe8b3f0399a62bdb45181df842f9c12855ba93e4ca85",
     "Kernel/Augmented/GeneratingCellActionSection.lean": "c4c1498e2e3bef2bbe8231fde7d99922e5657fb60808070b865b3d6b3d3cf10f",
     "Kernel/Augmented/GeneratingCellMultiplication.lean": "e4a97b73e24522029da9a3ba2c474343952f5aff0e804ac53fd77d39e0024d02",
     "Kernel/Augmented/GeneratingCellOperations.lean": "36197fc143e101bfdc2756362971533a88fe18bbf7f259a8b27edce591024cfe",
-    "Kernel/Augmented/GeneratingCellSection.lean": "79d3405be7f1f104aecd721c9fc899d466b9ae76c47666848c4888e2d320cf95",
+    "Kernel/Augmented/GeneratingCellSection.lean": "cee4aeeedbdc95dc45eaa7fc4be0b1b460bece5075a196417b087a0f43038047",
     "Kernel/Augmented/GeneratingCellSubstitution.lean": "309f38f55f9c792480b2e8ade3f4015ec30aba026c9406e2286f307d40d9026a",
     "Kernel/Augmented/GeneratingCells.lean": "f8f91a4be86f1f75b20784ac85348090f361d5f81b319bc7906578363a7bd4a0",
     "Kernel/Augmented/GeneratingComparisonBase.lean": "ff3dc071937d9431a00e8bba0ea7954bef690a7a1b504ed06c38026719910143",
@@ -49,12 +53,17 @@
     "Kernel/Augmented/GeneratingComparisonSubstitution.lean": "ade71e1a314535bffb1afadaae40c3d3346f6b0a444053464345e57ef73454f5",
     "Kernel/Augmented/GeneratingEvaluation.lean": "c859223fe37e35a3383e0d8307a9bd7ea8d138ee9457086252e7ca447ae5221d",
     "Kernel/Augmented/GeneratingGraphMaps.lean": "d3a00a119b1592740d92fcae1dab5d254da3fb15f6ccbd456bda00a4c1d2b1cf",
+    "Kernel/Augmented/GeneratingInsertionLaw.lean": "f989598757e0216979591ad92c50059d1343b281c83bb7bb7dd0786c277e216c",
+    "Kernel/Augmented/GeneratingMonadicity.lean": "3b9898608745a18e50f988d79600f3803f302a6e33df88b3b17b95714a9e0583",
+    "Kernel/Augmented/GeneratingNestedSection.lean": "1a7f5b9005d5f878d03e86074c427da452ba511a00374941fdfcabdb56057619",
     "Kernel/Augmented/GeneratingPathAction.lean": "612e768e399cc231e55a7a5b23b793f38d1c91f7706bc182ece3184b3ffdcec7",
     "Kernel/Augmented/GeneratingPresheaves.lean": "492558999b6442c1e2ec244602c4bc7c84aafa6e96279fe285d0bb00e6cca13d",
+    "Kernel/Augmented/GeneratingReconstructionGraph.lean": "304e136224a186b36ccb8f019e2666f585ce1d05dba8c388cead70fe07252ca2",
     "Kernel/Augmented/GeneratingSection.lean": "4d266ef7a7c28078bb0063a5e29274b412bb1a4d51adb0cef2d080044c61a68b",
     "Kernel/Augmented/GeneratingSectionRows.lean": "81b8919b49e08f506b11f76964066bf5b2759be5475a1d4f7cd6ba13ffccfab5",
     "Kernel/Augmented/GeneratingSectionSubstitution.lean": "5ad218b34e66807aeedcbf561577dc600165a5d619ddfc822cc2188d1ea1d836",
     "Kernel/Augmented/GeneratingShapes.lean": "cd3d03a08b383bb1961c112a1718611e0d8279ad4fabbc0a3725d66fa7e22d8c",
+    "Kernel/Augmented/GeneratingUnitLaws.lean": "b9ec1c6392f4126c1b345d4b2c912a98a55d0a02c16b5c1b07ec419454dc9020",
     "Kernel/Augmented/GeneratingVerticalComparison.lean": "8365a74d6652670685062b71d1482c3093e3a80004dc62db267275d4e21893f2",
     "Kernel/Augmented/GeneratingVerticalFunctor.lean": "99c5711733262479affa577e432aada645c87d43661b1920818faa8ee07b17e1",
     "Kernel/Augmented/GlobalAlgebras.lean": "62373b12465241eb130b76b29739de6b9d297c06e50437bfd6f1442f3a7147ec",
@@ -64,8 +73,10 @@
     "Kernel/Augmented/GlobalMapExt.lean": "d73ccf3b0ac7637ddc9031b33fb642132504a7fa3581d4255448b2b768b4fbc5",
     "Kernel/Augmented/GlobalMapFromPullback.lean": "715a3731dcfc84da9da4d4098c72bf7e379ea970414d8ae5af18e3e4901d9cb9",
     "Kernel/Augmented/GlobalMapToPullback.lean": "78d559cd79de0e0f57e687ea0958929438b5927ff875b339c4fb2b0b2c14310c",
+    "Kernel/Augmented/GlobalOperationImages.lean": "8f46da80b6cbd70d5027482c7a2cdf0e068b90b53889287f746c6781b2882bcb",
     "Kernel/Augmented/GlobalSubstitutionMaps.lean": "dfecb92daaaa922604fb3e3270541cc0943b8964609ed31dbc2753dfa3c631f3",
     "Kernel/Augmented/Incidence.lean": "d68f03e1b362d13c21f52624a5c9b839e8782a7b7b0f7ccbee683fc888f02528",
+    "Kernel/Augmented/NerveAdjunctionComparison.lean": "f7d8db7880897c834e8c7abfd605f87e4f472a94294fb70bacaafd941b314f01",
     "Kernel/Augmented/NerveMonadMap.lean": "aea5061059a1e422b9b3f6d783e06a6598ed99416d686ecb6e042e37ecd4a0b9",
     "Kernel/Augmented/NerveRecognition.lean": "62fb4ef0fa91809a49e405a393d010a660afcab30f34631c84b21aef09cee6e7",
     "Kernel/Augmented/NerveSquare.lean": "92fe650365c8a3e4f1c24d9632d7615873480adf662dfc8a4ee343d0e68105be",
@@ -124,79 +135,79 @@
   "checks": [
     {
       "check": "real-build",
-      "seconds": 1.35,
+      "seconds": 1.678,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "real-audit",
-      "seconds": 2.275,
+      "seconds": 2.344,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "real-opaque-equation",
-      "seconds": 0.231,
+      "seconds": 0.275,
       "exit_code": 1,
       "expected_rejection": "Type mismatch"
     },
     {
       "check": "stub-build",
-      "seconds": 1.253,
+      "seconds": 0.947,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "stub-audit",
-      "seconds": 2.017,
+      "seconds": 1.974,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "stub-opaque-equation",
-      "seconds": 0.246,
+      "seconds": 0.231,
       "exit_code": 1,
       "expected_rejection": "Type mismatch"
     },
     {
       "check": "stub-in-real-audit",
-      "seconds": 2.012,
+      "seconds": 2.134,
       "exit_code": 1,
       "expected_rejection": "AXIOM_REJECTED"
     },
     {
       "check": "ProjectAxiom-compile",
-      "seconds": 0.253,
+      "seconds": 0.279,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "ProjectAxiom-audit",
-      "seconds": 1.839,
+      "seconds": 1.902,
       "exit_code": 1,
       "expected_rejection": "AXIOM_REJECTED"
     },
     {
       "check": "Sorry-compile",
-      "seconds": 0.534,
+      "seconds": 0.256,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "Sorry-audit",
-      "seconds": 1.798,
+      "seconds": 1.999,
       "exit_code": 1,
       "expected_rejection": "AXIOM_REJECTED"
     },
     {
       "check": "PrivateLeak-compile",
-      "seconds": 0.22,
+      "seconds": 0.249,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "PrivateLeak-audit",
-      "seconds": 1.744,
+      "seconds": 1.969,
       "exit_code": 1,
       "expected_rejection": "SEAL_LEAK"
     }

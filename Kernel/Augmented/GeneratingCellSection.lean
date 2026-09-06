@@ -63,6 +63,13 @@ theorem generatorCell_evaluation {f g : Side (Vertical A)} {b : Boundary (horizo
   exact (CellGraph.pack_transport (G := cells A) e (A.A.generator x)).symm.trans
     (congrArg CellGraph.pack (generator_transport A x e))
 
+theorem pack_cell_generator {f g : Side (Vertical A)} {b : Boundary (horizontal A) f g}
+    (φ : (cells A).Cell b) :
+    CellGraph.pack φ = CellGraph.pack (G := cells A) (A.A.generator φ.val.2.2) :=
+  (generatorCell_evaluation A φ).symm.trans
+    ((congrArg (evaluationCells A).total (pack_generatorCell A φ)).trans
+      (evaluationCells_generator A φ.val.2.2))
+
 theorem generatorSide_evaluation (f : Side (Vertical A)) :
     (evaluationBase A).side (generatorSide A f) = f := by
   cases f with
@@ -100,6 +107,12 @@ theorem generatorRow_length {f g : Side (Vertical A)} (r : (cells A).Row f g) :
   induction r with
   | nil => rfl
   | cons r e ih => exact congrArg Nat.succ ih
+
+theorem generatorRow_comp {f g k : Side (Vertical A)} (p : (cells A).Row f g) (q : (cells A).Row g k) :
+    generatorRow A (p.comp q) = (generatorRow A p).comp (generatorRow A q) := by
+  induction q with
+  | nil => rfl
+  | cons q e ih => exact congrArg (fun r => r.cons ⟨generatorBoundary A e.1, generatorCell A e.2⟩) ih
 
 theorem generatorRow_input {f g : Side (Vertical A)} (r : (cells A).Row f g) :
     CellGraph.Row.input (generatorRow A r) = CellGraph.Row.input r := by

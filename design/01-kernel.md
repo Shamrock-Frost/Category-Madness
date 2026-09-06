@@ -107,8 +107,14 @@ cell/hom round trips, arbitrary substitution compatibility and discrete hom nerv
 proved quotient laws and universal property over fixed vertical/horizontal incidence.
 `forest/augmented-generating.tree` adds the generating presheaf base, free vertical
 paths, change of base for lawful algebras and a global free mapping property.
-Provisional status is retained because categorical adjunction/monadicity, arity
-recognition and the labelled diagram model required by AT-FD-7 remain open.
+`forest/augmented-monadicity.tree` records the categorical adjunction, all five
+reconstructed law families, action identification and comparison equivalence.
+`forest/augmented-arity-nerve.tree` constructs both monadic comparisons and the
+canonical comparison for the actual free-arity nerve square. Its conditional
+recognition theorem requires density and comparison invertibility for the
+selected arities. Provisional status is retained because the actual arity
+presentation and its exactness proof, and the labelled diagram model required
+by AT-FD-7, remain open.
 
 ### D-KR-19 · Labels and reduction
 **Decision.** Once object positions are defined functorially, labelled shapes are the

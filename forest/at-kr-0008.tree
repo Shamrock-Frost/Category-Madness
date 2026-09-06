@@ -12,3 +12,5 @@
 \p{, \ref{at-rt-0001}}
 \p{Named by: \ref{dec-kr-0013}, \ref{dec-kr-0015}, \ref{dec-kr-0018}.}
 \p{\em{Lean declaration(s):} none yet.}
+
+\p{\strong{Partial implementation evidence:} \ref{augmented-arity-nerve} constructs the actual free-arity theory, both monadic comparisons and their canonical comparison square. \code{algebraNerve_full} and \code{algebraNerve_essImage_iff} prove conditional fullness and recognition under density of the supplied arities and pointwise invertibility of that canonical comparison. Choosing and proving an augmented arity family and its Segal characterization remain open; this does not pass or weaken the gate.}

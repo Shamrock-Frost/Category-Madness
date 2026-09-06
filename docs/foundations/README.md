@@ -119,6 +119,10 @@ equivalence and finite raw-term support. The global free/forgetful adjunction
 and fully faithful comparison are checked. Arbitrary generating-monad algebras
 now yield vertical categories, incident cells and primitive operations, with a
 surjective full-boundary evaluation map preserving identities and substitution.
-The reconstructed algebra equations, essential surjectivity, arity presentation
-and augmented nerve remain open. The complete gate, M-F milestone and
+All five reconstructed equation families and action identification now prove
+essential surjectivity and monadicity. The actual free-arity nerve square, both
+monadic comparisons and the canonical monad map are constructed. The conditional
+nerve theorem assumes density of the selected arities and invertibility of that
+specific comparison. Choosing and proving the diagram arities, the resulting
+unconditional augmented nerve theorem and the labelled diagram model remain open. The complete gate, M-F milestone and
 root/interface freeze remain open.

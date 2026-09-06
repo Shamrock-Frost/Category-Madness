@@ -231,10 +231,8 @@ substitution inputs, preserving shared sides. Their evaluation laws prove
 substitution as well. The concrete comparison is fully faithful, and the
 generating forgetful functor reflects isomorphisms.
 
-Monadicity still requires reconstruction of an augmented algebra from every
-generating-monad algebra, proving essential surjectivity of the comparison.
-Neither finite raw-term leaves nor the adjunction
-establishes arity density or nerve recognition.
+The reconstruction below proves essential surjectivity and monadicity. The
+separate arity density and exactness hypotheses remain to be proved.
 
 ## Vertical reconstruction from arbitrary monad algebras
 
@@ -285,10 +283,23 @@ primitive operation, including substitution with nullary cells, empty outputs
 and mixed rows. None of these proofs assumes a lawful augmented algebra on the
 reconstructed cells.
 
-The next obligation is to transfer all five augmented equation families to
-`operations`, then bundle the reconstructed algebra and identify its comparison
-action with the supplied monad action. Essential surjectivity, monadicity and
-the augmented arity theorem remain open.
+## Reconstructed laws and monadicity
+
+`leftUnit_law`, `rightUnit_law`, `verticalIdentity_stack_law`, `insertion_law`
+and `assoc_law` prove all five equation families for `operations`. Free
+representatives of identity rows, inserted rows and nested rows retain the
+shared sides at both levels. The proofs evaluate the corresponding free laws
+and transport along complete-boundary equalities. Either neighboring row in
+identity insertion may be empty; mixed rows and empty-output cells remain
+within the universally quantified domains.
+
+`algebra` bundles these laws, and `reconstructed` is the resulting augmented
+algebra. `reconstructionUnit` is an isomorphism on all generating graph sorts,
+including the cell arity and boundary fibres. `reconstruction_action` identifies
+its evaluation with the supplied action, and `reconstructionIso` gives an
+isomorphism of monad algebras. Thus `generatingComparison` is essentially
+surjective as well as fully faithful. `generatingMonadicEquivalence` proves the
+comparison equivalence, and `BundledAlgebra.forget` is a `MonadicRightAdjoint`.
 
 ## Reusable nerve recognition step
 
@@ -307,11 +318,31 @@ checked proofs of the algebra-recognition step in
 exact-square argument. They assume the monad comparisons and their stated
 properties, not the desired full-faithfulness or recognition conclusion.
 
-The augmented application still has to construct its monadic equivalences,
-choose and prove its arity presentation, and establish the required comparison
-is invertible. These files do not claim the complete BMW theorem or an augmented
-nerve theorem. In particular, the elementary generators of the presheaf base
-have not been declared arities for the free augmented construction.
+## Actual free-arity nerve square
+
+For any supplied small arity functor `i` into generating graphs, `Nerve.Theory i`
+is the full category of free augmented algebras on those arities. `baseNerve`,
+`algebraNerve` and `restriction` give the actual presheaf square, with the
+adjunction supplying `restrictionIso`. Restriction is monadic: its left adjoint
+is left Kan extension, it preserves reflexive coequalizers, and its identity on
+objects lets it reflect isomorphisms. `restrictionMonadicEquivalence` supplies
+the second concrete equivalence required by the recognition argument.
+
+`arityMonadMap` constructs the canonical comparison, including its unit and
+multiplication laws. `arityComparisonIso` proves compatibility with both monadic
+comparisons. `algebraNerve_full` and `algebraNerve_essImage_iff` then prove the
+conditional augmented nerve theorem: if `i` is dense and that canonical
+comparison is pointwise invertible, the augmented nerve is fully faithful,
+and a presheaf is in its image exactly when its restriction is a base nerve.
+The monadic equivalences and comparison square are constructed, not assumed.
+
+The next work is the actual diagram-arity presentation: choose the composite
+generating diagrams and their maps, then prove density and invertibility of
+this specific comparison. Their incidence must retain ordered paths, every
+shared side, nullary inputs, empty outputs and `(0,0)` cells. This conditional
+result does not yet prove a suitable arity family exists or the full BMW
+arity-to-exactness theorem. Elementary generators of the presheaf base have
+not been declared arities for the free augmented construction.
 
 ## A nontrivial lawful model
 
@@ -338,18 +369,12 @@ An empty inner substitution row is also rejected, alongside positive controls.
 
 The full gate statement is unchanged. The strict 2-category reconstruction,
 cell/hom round trips, arbitrary substitution compatibility and discrete hom
-nerves are checked. The global free augmented algebra and its adjunction are
-constructed; object reconstruction for monadicity and the arity presentation
-remain open.
+nerves are checked. The global free augmented algebra, adjunction, monadicity
+and conditional free-arity nerve theorem are now proved.
 
-The relative free cell algebra, global free mapping property and categorical
-free/forgetful adjunction are checked. Monadicity, the arity category and nerve
-hypotheses remain to be proved. Vertical reconstruction from arbitrary monad
-algebras is checked; cell operations and their laws are the next reconstruction
-step.
-`Row` is incident syntax, not a
-canonical arity presentation; no normalization, monadicity, generic/free
-factorization or Reedy/elegance theorem is asserted by its definition.
+The actual arity category, its density and canonical-comparison invertibility
+remain open. `Row` supplies incident syntax; its definition does not prove a
+canonical arity presentation, normalization or generic/free factorization.
 
 The required labelled diagram model must still supply the actual cofibrant
 sources, relative restriction and replacement lemmas. The
