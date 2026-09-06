@@ -112,9 +112,11 @@ reconstructed law families, action identification and comparison equivalence.
 `forest/augmented-arity-nerve.tree` constructs both monadic comparisons and the
 canonical comparison for the actual free-arity nerve square. Its conditional
 recognition theorem requires density and comparison invertibility for the
-selected arities. Provisional status is retained because the actual arity
-presentation and its exactness proof, and the labelled diagram model required
-by AT-FD-7, remain open.
+selected arities. `forest/augmented-finite-incidence.tree` adds finite incidence
+supports, their filtered-colimit presentation, finite presentability and a small
+dense candidate family. Provisional status is retained because its monad
+exactness, any required canonical geometric arity presentation, and the labelled
+diagram model required by AT-FD-7 remain open.
 
 ### D-KR-19 · Labels and reduction
 **Decision.** Once object positions are defined functorially, labelled shapes are the

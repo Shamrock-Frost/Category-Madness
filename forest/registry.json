@@ -558,6 +558,7 @@
         "augmented-algebra",
         "augmented-arity-nerve",
         "augmented-comparison",
+        "augmented-finite-incidence",
         "augmented-free-cells",
         "augmented-generating",
         "augmented-global-adjunction",
@@ -583,6 +584,7 @@
         "augmented-algebra",
         "augmented-arity-nerve",
         "augmented-comparison",
+        "augmented-finite-incidence",
         "augmented-free-cells",
         "augmented-generating",
         "augmented-global-adjunction",
@@ -1116,6 +1118,7 @@
       "status": "proposed",
       "refs": [
         "augmented-arity-nerve",
+        "augmented-finite-incidence",
         "augmented-generating",
         "augmented-monad-cells",
         "augmented-monad-vertical",
@@ -1126,6 +1129,7 @@
       "backlinks": [
         "at-kr-0001",
         "augmented-arity-nerve",
+        "augmented-finite-incidence",
         "dec-kr-0003",
         "dec-kr-0006",
         "dec-kr-0015",
@@ -1295,6 +1299,7 @@
       "refs": [
         "at-rt-0001",
         "augmented-arity-nerve",
+        "augmented-finite-incidence",
         "dec-kr-0013",
         "dec-kr-0015",
         "dec-kr-0018"
@@ -1303,6 +1308,7 @@
       "backlinks": [
         "at-kr-0001",
         "augmented-arity-nerve",
+        "augmented-finite-incidence",
         "dec-kr-0006",
         "dec-kr-0013",
         "dec-kr-0015",
@@ -2537,6 +2543,7 @@
         "at-fd-0007",
         "at-kr-0002",
         "at-kr-0008",
+        "augmented-finite-incidence",
         "augmented-monadicity",
         "dec-kr-0015",
         "dec-kr-0018",
@@ -2549,6 +2556,7 @@
         "at-fd-0007",
         "at-kr-0002",
         "at-kr-0008",
+        "augmented-finite-incidence",
         "augmented-generating",
         "augmented-global-adjunction",
         "augmented-monadicity",
@@ -2588,6 +2596,40 @@
         "augmented-transport",
         "dec-kr-0018",
         "ms-foundation"
+      ]
+    },
+    "augmented-finite-incidence": {
+      "id": "augmented-finite-incidence",
+      "taxon": "Development",
+      "title": "Finite incidence supports and a small dense candidate family",
+      "tags": [
+        "foundation",
+        "augmented"
+      ],
+      "meta": {
+        "layer": "human",
+        "source": "Kernel/Augmented/GeneratingFiniteFamily.lean"
+      },
+      "status": null,
+      "refs": [
+        "at-fd-0007",
+        "at-kr-0002",
+        "at-kr-0008",
+        "augmented-arity-nerve",
+        "dec-kr-0015",
+        "dec-kr-0018",
+        "dec-rt-0030",
+        "dec-wf-0008",
+        "dec-wf-0010"
+      ],
+      "file": "forest/augmented-finite-incidence.tree",
+      "backlinks": [
+        "at-fd-0007",
+        "at-kr-0002",
+        "at-kr-0008",
+        "augmented-arity-nerve",
+        "augmented-generating",
+        "dec-kr-0018"
       ]
     },
     "augmented-free-cells": {
@@ -2640,6 +2682,7 @@
       "refs": [
         "at-fd-0007",
         "augmented-arity-nerve",
+        "augmented-finite-incidence",
         "augmented-free-cells",
         "augmented-global-adjunction",
         "augmented-monadicity",
@@ -4887,6 +4930,7 @@
         "at-kr-0008",
         "augmented-arity-nerve",
         "augmented-comparison",
+        "augmented-finite-incidence",
         "augmented-free-cells",
         "augmented-generating",
         "augmented-global-adjunction",
@@ -5001,6 +5045,7 @@
         "augmented-algebra",
         "augmented-arity-nerve",
         "augmented-comparison",
+        "augmented-finite-incidence",
         "augmented-free-cells",
         "augmented-generating",
         "augmented-global-adjunction",
@@ -5022,6 +5067,7 @@
         "augmented-algebra",
         "augmented-arity-nerve",
         "augmented-comparison",
+        "augmented-finite-incidence",
         "augmented-free-cells",
         "augmented-generating",
         "augmented-global-adjunction",
@@ -6307,6 +6353,7 @@
         "augmented-algebra",
         "augmented-arity-nerve",
         "augmented-comparison",
+        "augmented-finite-incidence",
         "augmented-free-cells",
         "augmented-generating",
         "augmented-global-adjunction",
@@ -8481,6 +8528,7 @@
         "augmented-algebra",
         "augmented-arity-nerve",
         "augmented-comparison",
+        "augmented-finite-incidence",
         "augmented-free-cells",
         "augmented-generating",
         "augmented-global-adjunction",
@@ -8552,6 +8600,7 @@
         "augmented-algebra",
         "augmented-arity-nerve",
         "augmented-comparison",
+        "augmented-finite-incidence",
         "augmented-free-cells",
         "augmented-generating",
         "augmented-global-adjunction",

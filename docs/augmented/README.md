@@ -336,13 +336,44 @@ comparison is pointwise invertible, the augmented nerve is fully faithful,
 and a presheaf is in its image exactly when its restriction is a base nerve.
 The monadic equivalences and comparison square are constructed, not assumed.
 
-The next work is the actual diagram-arity presentation: choose the composite
-generating diagrams and their maps, then prove density and invertibility of
-this specific comparison. Their incidence must retain ordered paths, every
-shared side, nullary inputs, empty outputs and `(0,0)` cells. This conditional
-result does not yet prove a suitable arity family exists or the full BMW
+The finite incidence family below supplies one concrete dense candidate.
+Invertibility of its canonical comparison remains to be proved. This conditional
+result does not yet establish the monad arity condition or the full BMW
 arity-to-exactness theorem. Elementary generators of the presheaf base have
 not been declared arities for the free augmented construction.
+
+## Finite incidence supports and candidate family
+
+`Generating.Face` enumerates every face of an elementary generating boundary,
+including its own generator, all vertices, both vertical sides and all horizontal
+edges. `faceArrow_surjective` proves that this finite list covers every incidence
+arrow. Empty inputs and outputs still retain their endpoint vertices and sides.
+
+`finiteSupport` closes a finite collection of generators under all incidence
+maps. The total support is finite across all object, edge and cell sorts combined.
+`presheafIsFinite_iff_finite_elements` proves that finite generation is equivalent
+to finite total incidence in this base; `finite_range_elements` proves maps from
+finite incidence data have finite images.
+
+`finiteSupportIsColimit` proves that every generating presheaf is the filtered
+colimit of these finite incidence closures. Single-generator supports cover every
+element, and finite unions identify overlaps. `finitelyPresentable_iff_finite_elements`
+characterizes the finitely presentable presheaves exactly as those with finite
+total incidence. One direction uses the finite category-of-elements presentation
+by representables; the other factors the identity through a finite support.
+
+`FiniteIncidence` is a small model of the full category of finite incidence
+presheaves. `finiteIncidenceGraphs` is its fully faithful dense inclusion into
+explicit generating graphs. Applied to this candidate, `finiteIncidenceNerve_full`
+and `finiteIncidenceNerve_essImage_iff` require only pointwise invertibility of
+the specific canonical comparison. Density is now proved for this family.
+
+The remaining arity obligation is monad exactness. The filtered-colimit
+presentation just proved is in the base; preservation by the augmented monad
+still needs proof, including the incidence and equation-witness arguments that
+finite raw cell-term leaves do not supply. This family uses all finite incidence
+diagrams and every incidence-preserving map. It supplies no canonical minimal
+pasting syntax, normalization, generic/free factorization or Reedy structure.
 
 ## A nontrivial lawful model
 
@@ -372,9 +403,10 @@ cell/hom round trips, arbitrary substitution compatibility and discrete hom
 nerves are checked. The global free augmented algebra, adjunction, monadicity
 and conditional free-arity nerve theorem are now proved.
 
-The actual arity category, its density and canonical-comparison invertibility
-remain open. `Row` supplies incident syntax; its definition does not prove a
-canonical arity presentation, normalization or generic/free factorization.
+A small dense candidate category of finite incidence diagrams is now constructed.
+Its canonical-comparison invertibility remains open, as does any canonical
+geometric arity presentation required by a later model construction. `Row` alone
+proves neither normalization nor generic/free factorization.
 
 The required labelled diagram model must still supply the actual cofibrant
 sources, relative restriction and replacement lemmas. The

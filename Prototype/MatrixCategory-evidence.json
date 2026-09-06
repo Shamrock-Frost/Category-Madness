@@ -52,6 +52,10 @@
     "Kernel/Augmented/GeneratingComparisonIdentities.lean": "566e3438bb27aab7d4e25963a9a32f1462f0c69967d1cb59707375793a665f36",
     "Kernel/Augmented/GeneratingComparisonSubstitution.lean": "ade71e1a314535bffb1afadaae40c3d3346f6b0a444053464345e57ef73454f5",
     "Kernel/Augmented/GeneratingEvaluation.lean": "c859223fe37e35a3383e0d8307a9bd7ea8d138ee9457086252e7ca447ae5221d",
+    "Kernel/Augmented/GeneratingFiniteFamily.lean": "519b4d03ebed5392bc7a7a3236519d1dde8d4b53f48908f1e65856e5de4bd5b5",
+    "Kernel/Augmented/GeneratingFiniteIncidence.lean": "77ce45cebd2a038c846bd86519ce4a0521e318f1e3470f110af70a2b3bc4021d",
+    "Kernel/Augmented/GeneratingFinitePresentability.lean": "1b718ebb9db7dc6487eca2da7d21149413a58ac87fc0d74b124633527f63d981",
+    "Kernel/Augmented/GeneratingFiniteSupport.lean": "47c5d2d28c5d9be5ab9287a2c17fe7324c9ad7ba46e862be08647492397e1037",
     "Kernel/Augmented/GeneratingGraphMaps.lean": "d3a00a119b1592740d92fcae1dab5d254da3fb15f6ccbd456bda00a4c1d2b1cf",
     "Kernel/Augmented/GeneratingInsertionLaw.lean": "f989598757e0216979591ad92c50059d1343b281c83bb7bb7dd0786c277e216c",
     "Kernel/Augmented/GeneratingMonadicity.lean": "3b9898608745a18e50f988d79600f3803f302a6e33df88b3b17b95714a9e0583",
@@ -63,6 +67,7 @@
     "Kernel/Augmented/GeneratingSectionRows.lean": "81b8919b49e08f506b11f76964066bf5b2759be5475a1d4f7cd6ba13ffccfab5",
     "Kernel/Augmented/GeneratingSectionSubstitution.lean": "5ad218b34e66807aeedcbf561577dc600165a5d619ddfc822cc2188d1ea1d836",
     "Kernel/Augmented/GeneratingShapes.lean": "cd3d03a08b383bb1961c112a1718611e0d8279ad4fabbc0a3725d66fa7e22d8c",
+    "Kernel/Augmented/GeneratingSupportColimit.lean": "bbfbb83f0d0e283ae53815952196835565defcc3e4daf4d2a1fec8977a184716",
     "Kernel/Augmented/GeneratingUnitLaws.lean": "b9ec1c6392f4126c1b345d4b2c912a98a55d0a02c16b5c1b07ec419454dc9020",
     "Kernel/Augmented/GeneratingVerticalComparison.lean": "8365a74d6652670685062b71d1482c3093e3a80004dc62db267275d4e21893f2",
     "Kernel/Augmented/GeneratingVerticalFunctor.lean": "99c5711733262479affa577e432aada645c87d43661b1920818faa8ee07b17e1",
@@ -135,79 +140,79 @@
   "checks": [
     {
       "check": "real-build",
-      "seconds": 1.678,
+      "seconds": 3.274,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "real-audit",
-      "seconds": 2.344,
+      "seconds": 5.608,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "real-opaque-equation",
-      "seconds": 0.275,
+      "seconds": 0.865,
       "exit_code": 1,
       "expected_rejection": "Type mismatch"
     },
     {
       "check": "stub-build",
-      "seconds": 0.947,
+      "seconds": 2.295,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "stub-audit",
-      "seconds": 1.974,
+      "seconds": 5.403,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "stub-opaque-equation",
-      "seconds": 0.231,
+      "seconds": 0.623,
       "exit_code": 1,
       "expected_rejection": "Type mismatch"
     },
     {
       "check": "stub-in-real-audit",
-      "seconds": 2.134,
+      "seconds": 4.955,
       "exit_code": 1,
       "expected_rejection": "AXIOM_REJECTED"
     },
     {
       "check": "ProjectAxiom-compile",
-      "seconds": 0.279,
+      "seconds": 0.672,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "ProjectAxiom-audit",
-      "seconds": 1.902,
+      "seconds": 3.762,
       "exit_code": 1,
       "expected_rejection": "AXIOM_REJECTED"
     },
     {
       "check": "Sorry-compile",
-      "seconds": 0.256,
+      "seconds": 0.349,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "Sorry-audit",
-      "seconds": 1.999,
+      "seconds": 3.11,
       "exit_code": 1,
       "expected_rejection": "AXIOM_REJECTED"
     },
     {
       "check": "PrivateLeak-compile",
-      "seconds": 0.249,
+      "seconds": 0.345,
       "exit_code": 0,
       "expected_rejection": null
     },
     {
       "check": "PrivateLeak-audit",
-      "seconds": 1.969,
+      "seconds": 3.238,
       "exit_code": 1,
       "expected_rejection": "SEAL_LEAK"
     }
