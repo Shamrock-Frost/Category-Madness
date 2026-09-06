@@ -260,10 +260,35 @@ its original arrows from their full incidence fibres. `verticalToOriginal` and
 `verticalComparisonEquivalence` proves both round trips. The recovery commutes
 with every augmented-algebra map by `verticalToOriginal_naturality`.
 
-This reconstructs the vertical/horizontal base. Reconstructing cells and their
-operations over that base, proving all five algebra equations, and identifying
-the resulting monad action remain necessary for essential surjectivity. Neither
-monadicity nor an augmented arity theorem is claimed here.
+## Cells and operations from arbitrary monad algebras
+
+`GeneratingMonadAlgebra.cells` recovers the generating cells at their exact
+boundaries over the reconstructed category. `action_boundary` proves that the
+monad action preserves both vertical sides and every ordered horizontal edge,
+including the endpoints of empty paths. `evaluationCells` packages this as a
+cell map over `evaluationBase`.
+
+`generatorCell` and `generatorRow` choose free representatives. Their evaluation
+theorems recover the original incident cells and whole rows, with shared sides
+and both input and output paths intact. `evaluationCells_surjective` proves
+surjectivity on cells together with their full boundaries. `generatorOuter`
+also represents each outer cell at the chosen row's output.
+
+`operations` reconstructs both identity cells and arbitrary nonempty-row
+substitution by evaluating free operations and transporting along proved
+full-boundary equalities. `evaluationCells_multiplication` derives the cell
+flattening equation from the monad associativity law. The free action commutes
+with the chosen cell and row representatives, yielding
+`evaluationCells_horizontalIdentity`, `evaluationCells_verticalIdentity` and
+`evaluationCells_substitute`. Thus `evaluationOperations` preserves every
+primitive operation, including substitution with nullary cells, empty outputs
+and mixed rows. None of these proofs assumes a lawful augmented algebra on the
+reconstructed cells.
+
+The next obligation is to transfer all five augmented equation families to
+`operations`, then bundle the reconstructed algebra and identify its comparison
+action with the supplied monad action. Essential surjectivity, monadicity and
+the augmented arity theorem remain open.
 
 ## Reusable nerve recognition step
 

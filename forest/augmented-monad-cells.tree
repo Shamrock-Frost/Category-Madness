@@ -1,0 +1,13 @@
+\title{Cells and operations from generating-monad algebras}
+\taxon{Development}
+\meta{layer}{human}
+\meta{source}{Kernel/Augmented/GeneratingCellSubstitution.lean}
+\tag{foundation}
+\tag{augmented}
+
+\p{This continues \ref{augmented-monad-vertical} under \ref{dec-kr-0015}, \ref{dec-kr-0018} and \ref{at-fd-0007}. The input remains an arbitrary algebra for the actual generating monad. No lawful augmented cell operations are assumed on its reconstructed base.}
+\p{\code{GeneratingMonadAlgebra.cells} recovers incident cells. \code{action_boundary} identifies the action's complete boundary: both vertical arrows and every ordered horizontal edge, with endpoints retained for empty paths. \code{evaluationCells} is a full-boundary cell map over the recovered base functor.}
+\p{\code{generatorCell_evaluation}, \code{generatorRow_evaluation} and \code{generatorOuter_evaluation} recover complete cells, shared-side rows and outer cells from their free representatives. \code{evaluationCells_surjective} proves surjectivity on cells together with their full boundaries. The section preserves row lengths and both input and output paths.}
+\p{\code{operations} constructs both identity cells and arbitrary nonempty-row substitution by evaluating free operations and transporting along complete-boundary equalities. \code{evaluationCells_multiplication} derives cell flattening from monad associativity. The free action agrees with the chosen representatives of evaluated cells and rows. \code{evaluationOperations} consequently preserves both identities and arbitrary substitution, including nullary cells, empty outputs and mixed rows. Its preservation statements are ordinary equalities of packed incident cells; internal typed adapters use heterogeneous equality.}
+\p{\strong{Remaining:} transfer all five augmented equation families to these operations, bundle the reconstructed algebra, and identify its comparison action with the supplied monad action. Essential surjectivity and monadicity remain open. The arity family, density/recognition hypotheses and labelled diagram model remain open. AT-FD-7 and AT-KR-2 retain their statements, versions and proposed statuses.}
+\p{Reproduce with \code{lake build Augmented}, \code{python3 scripts/check_foundations.py} and the seal/swap checks. This adds no sealed constant. Cites: \ref{dec-rt-0030}, \ref{dec-wf-0008}, \ref{dec-wf-0010}.}

@@ -26,3 +26,25 @@ theorem substituteImage_congr (F : G.OverMap Q) (O : Operations Q)
   rfl
 
 end Kernel.Augmented.CellGraph.OverMap
+
+namespace Kernel.Augmented.Operations
+universe w
+variable {C : Type w} [Category.{w} C] {H : C → C → Type w} {G : CellGraph.{w,w,w,w} C H}
+
+/-- Packed substitution is insensitive to equality of all incident data, including outer endpoints. -/
+theorem pack_substitute_heq (O : Operations G)
+    {f g f' g' : Side C} {r : G.NonemptyRow f g} {r' : G.NonemptyRow f' g'}
+    {a b a' b' : C} {h : f.target ⟶ a} {k : g.target ⟶ b}
+    {h' : f'.target ⟶ a'} {k' : g'.target ⟶ b'} {L : ShortPath H a b} {L' : ShortPath H a' b'}
+    {ψ : G.Cell (CellGraph.Row.outerBoundary r h k L)}
+    {ψ' : G.Cell (CellGraph.Row.outerBoundary r' h' k' L')}
+    (hf : f = f') (hg : g = g') (hr : HEq r.val r'.val) (ha : a = a') (hb : b = b')
+    (hh : HEq h h') (hk : HEq k k') (hL : HEq L L') (hψ : HEq ψ ψ') :
+    CellGraph.pack (O.substitute r h k L ψ) = CellGraph.pack (O.substitute r' h' k' L' ψ') := by
+  cases hf; cases hg; cases ha; cases hb
+  cases Subtype.ext (eq_of_heq hr)
+  cases eq_of_heq hh; cases eq_of_heq hk
+  cases eq_of_heq hL; cases eq_of_heq hψ
+  rfl
+
+end Kernel.Augmented.Operations

@@ -115,6 +115,10 @@ separation, explicit boundary transport and strict 2-category extraction to the 
 compiled inventory and axiom audit. The reverse algebra laws, cell/hom round trips,
 arbitrary substitution compatibility and discrete hom nerves are now checked.
 The relative free cell algebra now has proved quotient laws, a universal mapping
-equivalence and finite raw-term support. The global free/arity presentation and
-augmented nerve remain open. The complete gate, M-F milestone and
+equivalence and finite raw-term support. The global free/forgetful adjunction
+and fully faithful comparison are checked. Arbitrary generating-monad algebras
+now yield vertical categories, incident cells and primitive operations, with a
+surjective full-boundary evaluation map preserving identities and substitution.
+The reconstructed algebra equations, essential surjectivity, arity presentation
+and augmented nerve remain open. The complete gate, M-F milestone and
 root/interface freeze remain open.

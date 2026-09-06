@@ -560,6 +560,7 @@
         "augmented-free-cells",
         "augmented-generating",
         "augmented-global-adjunction",
+        "augmented-monad-cells",
         "augmented-monad-vertical",
         "augmented-transport",
         "dec-ch-0018",
@@ -582,6 +583,7 @@
         "augmented-free-cells",
         "augmented-generating",
         "augmented-global-adjunction",
+        "augmented-monad-cells",
         "augmented-monad-vertical",
         "augmented-transport",
         "dec-ch-0018",
@@ -1110,6 +1112,7 @@
       "status": "proposed",
       "refs": [
         "augmented-generating",
+        "augmented-monad-cells",
         "augmented-monad-vertical",
         "dec-kr-0015"
       ],
@@ -2627,6 +2630,7 @@
       "refs": [
         "at-fd-0007",
         "augmented-generating",
+        "augmented-monad-cells",
         "augmented-monad-vertical",
         "dec-kr-0015",
         "dec-kr-0018",
@@ -2641,6 +2645,37 @@
         "augmented-monad-vertical",
         "dec-kr-0018",
         "ms-foundation"
+      ]
+    },
+    "augmented-monad-cells": {
+      "id": "augmented-monad-cells",
+      "taxon": "Development",
+      "title": "Cells and operations from generating-monad algebras",
+      "tags": [
+        "foundation",
+        "augmented"
+      ],
+      "meta": {
+        "layer": "human",
+        "source": "Kernel/Augmented/GeneratingCellSubstitution.lean"
+      },
+      "status": null,
+      "refs": [
+        "at-fd-0007",
+        "augmented-monad-vertical",
+        "dec-kr-0015",
+        "dec-kr-0018",
+        "dec-rt-0030",
+        "dec-wf-0008",
+        "dec-wf-0010"
+      ],
+      "file": "forest/augmented-monad-cells.tree",
+      "backlinks": [
+        "at-fd-0007",
+        "at-kr-0002",
+        "augmented-global-adjunction",
+        "augmented-monad-vertical",
+        "dec-kr-0018"
       ]
     },
     "augmented-monad-vertical": {
@@ -2659,6 +2694,7 @@
       "refs": [
         "at-fd-0007",
         "augmented-global-adjunction",
+        "augmented-monad-cells",
         "dec-kr-0015",
         "dec-kr-0018",
         "dec-rt-0030",
@@ -2670,6 +2706,7 @@
         "at-fd-0007",
         "at-kr-0002",
         "augmented-global-adjunction",
+        "augmented-monad-cells",
         "dec-kr-0018",
         "ms-foundation"
       ]
@@ -4764,6 +4801,7 @@
         "augmented-free-cells",
         "augmented-generating",
         "augmented-global-adjunction",
+        "augmented-monad-cells",
         "augmented-monad-vertical",
         "bib-0000",
         "krn-0000"
@@ -4875,6 +4913,7 @@
         "augmented-free-cells",
         "augmented-generating",
         "augmented-global-adjunction",
+        "augmented-monad-cells",
         "augmented-monad-vertical",
         "augmented-transport"
       ],
@@ -4893,6 +4932,7 @@
         "augmented-free-cells",
         "augmented-generating",
         "augmented-global-adjunction",
+        "augmented-monad-cells",
         "augmented-monad-vertical",
         "augmented-transport",
         "bib-0000",
@@ -6175,6 +6215,7 @@
         "augmented-free-cells",
         "augmented-generating",
         "augmented-global-adjunction",
+        "augmented-monad-cells",
         "augmented-monad-vertical",
         "augmented-transport",
         "rt-0000"
@@ -8346,6 +8387,7 @@
         "augmented-free-cells",
         "augmented-generating",
         "augmented-global-adjunction",
+        "augmented-monad-cells",
         "augmented-monad-vertical",
         "augmented-transport",
         "index",
@@ -8414,6 +8456,7 @@
         "augmented-free-cells",
         "augmented-generating",
         "augmented-global-adjunction",
+        "augmented-monad-cells",
         "augmented-monad-vertical",
         "augmented-transport",
         "dec-ch-0019",

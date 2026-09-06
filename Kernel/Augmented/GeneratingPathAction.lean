@@ -89,7 +89,8 @@ private theorem edge_comp {C : Type w} [Category.{w} C]
   have hi : g = g' := eq_of_heq (Sigma.mk.inj (eq_of_heq (Sigma.mk.inj hg).2)).2
   cases he; cases hi; rfl
 
-private theorem free_action_single {a b : A.A.Objects} (p : Quiver.Path a b) :
+/-- Applying the free action to a path generator gives the singleton evaluated arrow. -/
+theorem free_action_single {a b : A.A.Objects} (p : Quiver.Path a b) :
     FinPath.mapEdge (BundledAlgebra.free.map A.a).base.vertical.toPrefunctor
       ⟨a, b, (Paths.of (BundledAlgebra.forget.obj A.A.freeObject).Objects).map (A.A.freeObject.arrowGenerators.map p)⟩ =
       (⟨a, b, (evalPath A p).toPath⟩ : FinPath.Edge (Paths A.A.Objects)) := by
